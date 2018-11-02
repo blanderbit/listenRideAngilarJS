@@ -22,8 +22,9 @@ angular.module('settings',[]).component('settings', {
     '$mdDialog',
     'authentication',
     'voucher',
+    'notification',
     function SettingsController($localStorage, $window, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
-      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher) {
+      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification) {
 
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -96,6 +97,7 @@ angular.module('settings',[]).component('settings', {
         settings.updateUser = updateUser;
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
+        settings.updateNewsletter = updateNewsletter;
 
         // invocations
       }
@@ -228,7 +230,7 @@ angular.module('settings',[]).component('settings', {
             cleanBillingInputs()
           },
           function (error) {
-
+            notification.show(error, 'error');
           }
         )
       }
@@ -255,7 +257,7 @@ angular.module('settings',[]).component('settings', {
             settings.business = response.data;
           },
           function(error) {
-
+            notification.show(error, 'error');
           }
         );
       }
@@ -346,12 +348,7 @@ angular.module('settings',[]).component('settings', {
         }).then(
           function (success) {
             loadingDialog.close();
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.update-profile-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.update-profile-success');
             settings.user = success.data;
             if (success.data.phone_number) updatePrivatePhoneNumber(success.data.phone_number);
             settings.user.has_billing = !!success.data.locations.billing;
@@ -362,12 +359,7 @@ angular.module('settings',[]).component('settings', {
           },
           function (error) {
             loadingDialog.close();
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -455,24 +447,14 @@ angular.module('settings',[]).component('settings', {
 
         api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.add-payout-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.add-payout-success');
             // TODO: Properly configure API to output payout method details and use those instead of making another call to the user
             userApi.getUserData().then(function (response) {
               settings.user.current_payout_method = response.data.current_payout_method;
             });
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -488,22 +470,11 @@ angular.module('settings',[]).component('settings', {
 
         api.put("/businesses/" + settings.user.business.id, data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.update-profile-success'))
-                .hideDelay(4000)
-                .position('top center')
-            );
-
+            notification.show(success, null, 'toasts.update-profile-success');
             settings.user.business = true;
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.error'))
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -535,6 +506,7 @@ angular.module('settings',[]).component('settings', {
                 });
               },
               function(error) {
+                notification.show(error, 'error');
               }
             );
           },
@@ -561,7 +533,7 @@ angular.module('settings',[]).component('settings', {
             settings.user.current_payment_method = response.data;
           },
           function(error) {
-
+            notification.show(error, 'error');
           }
         );
       };
@@ -570,6 +542,23 @@ angular.module('settings',[]).component('settings', {
         voucher.addVoucher(settings.voucherCode);
         settings.voucherCode = "";
       };
+      
+      function updateNewsletter() {
+        var data = {
+          'notification_preference': {
+            'newsletter': settings.user.notification_preference.newsletter
+          }
+        };
+
+        api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(
+          function (success) {
+            notification.show(success, null, 'toasts.update-profile-success');
+          },
+          function (error) {
+            notification.show(error, 'error');
+          }
+        );
+      }
 
       // ===================
       // ==== HOURS TAB ====
@@ -779,20 +768,10 @@ angular.module('settings',[]).component('settings', {
         api.post('/opening_hours', data).then(
           function (success) {
             settings.openingHoursId = success.data.id;
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.opening-hours-success');
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
@@ -800,20 +779,10 @@ angular.module('settings',[]).component('settings', {
       function updateOpeningHours(data) {
         api.put("/opening_hours/" + settings.openingHoursId, data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.opening-hours-success');
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
