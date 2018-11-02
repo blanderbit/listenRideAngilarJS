@@ -456,7 +456,7 @@ var lnrHelper = {
       if (ride.size === 0) {
         var readableSize = 'Unisize';
       } else {
-        var readableSize = basicInfo.sizeText + ' ' + ride.size + ' cm - ' + parseInt(ride.size + 10) + ' cm';
+        var readableSize = ' ' + ride.size + '-' + parseInt(ride.size + 10) + ' cm';
       }
 
       // bikes grid html
@@ -616,7 +616,7 @@ var lnrHelper = {
         defaultSize = lnrConstants.sizes[userId].available[0];
         // if this first available size is '0' translate it to 'Unisize'
         // else add range and cm
-        defaultSize = defaultSize === 0 ? 'Unisize' : defaultSize + ' cm - ' + parseInt(defaultSize + 10) + ' cm';
+        defaultSize = defaultSize === 0 ? 'Unisize' : defaultSize + '-' + parseInt(defaultSize + 10) + ' cm';
       }
       sizeButton.innerHTML = defaultSize + '<div class="dropdown-caret" style="float: right"></div>';
     }
