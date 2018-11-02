@@ -320,11 +320,11 @@
                 </div>
               </div>
             </div>
-
-            <br>
-            <md-divider></md-divider>
-            <br>
           </form>
+
+          <br>
+          <md-divider></md-divider>
+          <br>
 
           <form name="settingsForm">
             <div layout="row" layout-xs="column">
@@ -466,6 +466,36 @@
                     </md-button>
                   </md-input-container>
                 </div>
+              </div>
+            </div>
+
+            <br>
+            <md-divider></md-divider>
+            <br>
+
+            <div layout="row" layout-xs="column">
+              <div flex-gt-xs layout-margin>
+                <div class="md-body-2">{{ 'settings.newsletter' | translate }}</div>
+              </div>
+              <div flex-gt-xs="70" layout="column" layout-margin>
+                <p>{{ 'settings.newsletter-description' | translate }}</p>
+                <div layout="row" layout-xs="column">
+                  <div flex layout="row" layout-align="start center" class="lnr-mb">
+                    <md-checkbox
+                      ng-model="settings.user.notification-preference.newsletter"
+                      aria-label="terms"
+                      style="margin-bottom: 0"
+                    >
+                    </md-checkbox>
+                    <div data-ng-bind-html="'settings.newsletter-subscribe' | translate"></div>
+                  </div>
+                  <div layout="row" flex-gt-xs="45" flex="100">
+                    <md-button flex class="md-raised md-primary lnr-btn-mobile" ng-click="settings.updateNewsletter()">
+                      {{ 'shared.update' | translate }}
+                    </md-button>
+                  </div>
+                </div>
+                <p class="md-caption" data-ng-bind-html="'forms.newsletter-privacy-policy' | translate"></p>
               </div>
             </div>
 

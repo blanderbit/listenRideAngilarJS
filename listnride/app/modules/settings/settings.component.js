@@ -96,6 +96,7 @@ angular.module('settings',[]).component('settings', {
         settings.updateUser = updateUser;
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
+        settings.updateNewsletter = updateNewsletter;
 
         // invocations
       }
@@ -570,6 +571,33 @@ angular.module('settings',[]).component('settings', {
         voucher.addVoucher(settings.voucherCode);
         settings.voucherCode = "";
       };
+      
+      function updateNewsletter() {
+        var data = {
+          'notification_preference': {
+            'newsletter': settings.user.notification_preference.newsletter
+          }
+        };
+
+        api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(
+          function (success) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.update-profile-success'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+          },
+          function (error) {
+            $mdToast.show(
+              $mdToast.simple()
+                .textContent($translate.instant('toasts.error'))
+                .hideDelay(4000)
+                .position('top center')
+            );
+          }
+        );
+      }
 
       // ===================
       // ==== HOURS TAB ====
