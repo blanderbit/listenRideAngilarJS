@@ -42,8 +42,8 @@ angular.module('user',[]).component('user', {
       );
 
       function generateMetaDescription(isCompany) {
-        var title = isCompany ? "user.company-meta-title" : "user.meta-title";
-        var description = isCompany ? "user.company-meta-description" : "user.meta-description";
+        var title = "user.meta-title";
+        var description = "user.meta-description";
         // var params = isCompany ? { company: user.user.business.company_name } : { name: user.user.first_name };
         var params = { name: user.user.first_name };
 
