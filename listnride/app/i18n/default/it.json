@@ -1,6 +1,10 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Credit card"
+    },
     "map": "Mappa",
     "bike-type": "Tipo di bici",
     "filter-by": "Filtra per",
@@ -551,6 +555,19 @@
   },
   "settings": {
     "settings": "Impostazioni",
+    "newsletter-subscribe": "Sì, per favore inviami la newsletter mensile di listnride",
+    "newsletter-description": "Iscriviti e ricevi la nostra newsletter  nella tua casella di posta. La nostra newsletter ti informa sui nuovi marchi, sulle nuove e utili funzioni su listnride.it, su ciò che accade nella community, sulle destinazioni di viaggio con biciclette presenti in piattaforma e gli eventi ciclistici.\nAbbiamo detto che è realizzata con molto amore e dedizione? Perchè lo è.\nPuoi disiscriverti in qualsiasi momento, ovviamente.",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Inserisci il nome della tua azienda.",
+      "minlength-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri",
+      "required-vat": "Si prega di inserire il numero di partita IVA.",
+      "minlength-vat": "L'IVA dovrebbe essere più lunga di 2 caratteri"
+    },
+    "pick-payment-method": "Please pick a payment method",
+    "change-payment-method": "Change payment method",
+    "your-payment-method": "Your payment method:",
+    "pay-pal-account": "PayPal",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
     "account": "Conto",
@@ -1038,6 +1055,7 @@
       },
       "5": {
         "pedelec": "Bicicletta a pedalata assistita",
+        "event-bike": "Biciclette per eventi",
         "e-bike": "Bicicletta elettrica",
         "cargo-bike": "Bici da Carico",
         "bike-trailer": "Rimorchio per Bici",

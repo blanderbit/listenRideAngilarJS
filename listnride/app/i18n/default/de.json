@@ -1,6 +1,10 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Credit card"
+    },
     "map": "Karte",
     "bike-type": "Fahrradtyp",
     "filter-by": "Filtern nach",
@@ -560,6 +564,19 @@
   },
   "settings": {
     "settings": "Einstellungen",
+    "newsletter-subscribe": "Ja, bitte sendet mir monatlichen listnride-Newsletter",
+    "newsletter-description": "Abonniere unseren Newsletter und erhalte jede Ausgabe frisch in deinen Posteingang. Unser Newsletter informiert dich über die neuesten Marken, nützliche und neue Funktionen auf listnride.de, was in der Community passiert, sowie über Reiseziele mit gelisteten Fahrrädern und natürlich jede menge Fahrrad-Events.\nHaben wir schon erwähnt, dass der Newsletter mit viel Liebe und Hingabe gefertigt wird? Wird er.\nDu kannst den Newsletter natürlich jederzeit abbestellen.",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Bitte gib den Namen deiner Firma ein.",
+      "minlength-company-name": "Der Firmenname sollte länger als 2 Zeichen sein",
+      "required-vat": "Bitte geben Sie Ihre Umsatzsteuer-Identifikationsnummer ein.",
+      "minlength-vat": "Die Mehrwertsteuer sollte länger als 2 Zeichen sein"
+    },
+    "pick-payment-method": "Please pick a payment method",
+    "change-payment-method": "Change payment method",
+    "your-payment-method": "Your payment method:",
+    "pay-pal-account": "PayPal",
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
@@ -1049,6 +1066,7 @@
       },
       "5": {
         "pedelec": "Pedelec",
+        "event-bike": "Event-Bike",
         "e-bike": "E-Bike",
         "cargo-bike": "Lastenrad",
         "bike-trailer": "Radanhänger",
