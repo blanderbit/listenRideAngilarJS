@@ -1,6 +1,10 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Credit card"
+    },
     "map": "Kaart",
     "bike-type": "Fietstype",
     "filter-by": "Filteren op",
@@ -447,7 +451,7 @@
     "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
-      "call-us": "Heeft u een vraag? Bel ons:\n<a href=\"tel:+49030120870330\">+49 (0) 30 120870330 </a>\n. Of\n<a href=\"mailto:contact@listnride.com\">schrijf ons </a>.",
+      "call-us": "Heeft u vragen? Bel ons:\n<a href=\"tel:+49030120870330\">+49 (0) 30 120870330 </a>\nOf\n<a href=\"mailto:contact@listnride.com\">mail ons </a>.",
       "email-us": "Of stuur ons een email",
       "support": "listnride Support"
     },
@@ -555,6 +559,19 @@
   },
   "settings": {
     "settings": "Instellingen",
+    "newsletter-subscribe": "Subscribe EXAMPLE",
+    "newsletter-description": "Newsletter subscription EXAMPLE",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Vul alstublieft uw bedrijfsnaam in.",
+      "minlength-company-name": "Bedrijfsnaam moet langer zijn dan 2 tekens.",
+      "required-vat": "Voer uw btw-nummer in.",
+      "minlength-vat": "De btw moet langer zijn dan 2 tekens."
+    },
+    "pick-payment-method": "Please pick a payment method",
+    "change-payment-method": "Change payment method",
+    "your-payment-method": "Your payment method:",
+    "pay-pal-account": "PayPal",
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",
@@ -1039,6 +1056,7 @@
       },
       "5": {
         "pedelec": "Speed Pedelec",
+        "event-bike": "Eventfietsen",
         "e-bike": "Elektrische fiets",
         "cargo-bike": "Bakfiets",
         "bike-trailer": "Fietsaanhanger",

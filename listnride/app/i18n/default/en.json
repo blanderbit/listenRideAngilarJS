@@ -1,6 +1,10 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Credit card"
+    },
     "map": "Map",
     "bike-type": "Bike type",
     "filter-by": "Filter by",
@@ -455,7 +459,7 @@
     "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": "Having a Questions? Call us:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a>\n. Or\n<a href=\"mailto:contact@listnride.com\">write us</a>.",
+      "call-us": "Need help? Call us:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a>\nOr\n<a href=\"mailto:contact@listnride.com\">write us</a>.",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },
@@ -563,12 +567,25 @@
   },
   "settings": {
     "settings": "Settings",
+    "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
+    "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Please enter your company name.",
+      "minlength-company-name": "Company name should be longer than 2 characters",
+      "required-vat": "Please enter your VAT number.",
+      "minlength-vat": "The VAT should be longer than 2 characters"
+    },
+    "pick-payment-method": "Please pick a payment method",
+    "change-payment-method": "Change payment method",
+    "your-payment-method": "Your payment method:",
+    "pay-pal-account": "PayPal",
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
     "contact-to-update": "To change your name or email address please contact us\nvia e-mail at: contact@listnride.com",
     "delete-account": "Deactivate Account",
-    "delete-account-description": "Here you can dactivate your listnride account. This step can not be undone.",
+    "delete-account-description": "Here you can deactivate your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
     "delete-account-sure-description": "This step can not be undone.",
     "delete-account-yes": "Yes, deactivate",
@@ -1052,6 +1069,7 @@
       },
       "5": {
         "pedelec": "Pedelec",
+        "event-bike": "Event Bike",
         "e-bike": "E-Bike",
         "cargo-bike": "Cargo Bike",
         "bike-trailer": "Bike Trailer",

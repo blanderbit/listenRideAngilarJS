@@ -1,6 +1,10 @@
 {
   "shared": {
     "learn-more": "Leer más",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Credit card"
+    },
     "map": "Mapa",
     "bike-type": "Tipo de bicicleta",
     "filter-by": "Filtrar por",
@@ -173,8 +177,8 @@
       "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
     },
     "vatternrundan": {
-      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Alquila una bici de carretera para el Vätternrundan 2019 | listnride",
+      "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para el Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
     }
   },
   "lister": {
@@ -555,6 +559,19 @@
   },
   "settings": {
     "settings": "Configuración",
+    "newsletter-subscribe": "Sí, por favor envíeme el boletín de noticias mensual",
+    "newsletter-description": "Deseo suscribirme a la newsletter y formar parte de la comunidad listnride para estar al día de todas las novedades relacionadas al ciclismo, nuevos destinos para ciclistas, eventos y recibir cupones de descuento para mi próximo alquiler.",
+    "newsletter": "Newsletter ",
+    "errors": {
+      "required-company-name": "Introduce el nombre de tu empresa",
+      "minlength-company-name": "El nombre de la empresa no debe exceder los 20 caracteres",
+      "required-vat": "Por favor, especifica tu número de IVA.",
+      "minlength-vat": "El IVA debe ser superior a 2 caracteres."
+    },
+    "pick-payment-method": "Please pick a payment method",
+    "change-payment-method": "Change payment method",
+    "your-payment-method": "Your payment method:",
+    "pay-pal-account": "PayPal",
     "profile": "Perfil",
     "invite": "Invitar a amigos",
     "account": "Cuenta",
@@ -878,7 +895,7 @@
     "list-your-bike": "Registra tu bici",
     "back": "Anterior",
     "next": "Siguiente",
-    "list-bike": "Registrar mi bici",
+    "list-bike": "Publicar bici",
     "category": {
       "header": "¿Cuál es la categoría de tu bici?",
       "event": "Bicicletas de evento",
@@ -1042,6 +1059,7 @@
       },
       "5": {
         "pedelec": "Pedelec",
+        "event-bike": "Bicicleta de evento",
         "e-bike": "Bici eléctrica",
         "cargo-bike": "Bicicleta de carga",
         "bike-trailer": "Remolque para bicicleta",
@@ -1077,10 +1095,10 @@
     "list-a-bike": "Publica una bicicleta",
     "show-as-list": "Mostrar como lista",
     "duplicate": {
-      "duplicate": "Duplicada",
+      "duplicate": "Duplicar",
       "duplication-status": "Estado de duplicación",
       "how_many": "¿Cuántas bicis?",
-      "header": "Bicicleta duplicada",
+      "header": "Duplicar Bici",
       "number_bikes": "Número de bicicletas",
       "maxlength": "Funciona para un máximo de 99 bicicletas",
       "required": "Número de bicicletas que se requiere"
@@ -1096,7 +1114,7 @@
     "delete-bike": "Borrar",
     "cancel": "Cancelar",
     "delete": "Borrar",
-    "duplicate": "Duplicada",
+    "duplicate": "Duplicar",
     "dialog-title": "¿Seguro que quieres eliminar tu bici?",
     "dialog-subtitle": "La bici se eliminará permanentemente de la plataforma. Las solicitudes actuales no se ven afectadas por esto."
   },
