@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 /*
-// #5FC693: Primary Color
+// #5FC693: Primary Color (green color)
 // #f3f3f3: Preload Color
 // #DD2C00: Error color
 // #7ab2f8: Blue color
@@ -487,6 +487,10 @@ md-tooltip .md-content {
   line-height: 24px;
 }
 
+.lnr-color-primary {
+  color: #5fc693;
+}
+
 .lnr-black {
   color: rgba(85, 85, 85, 1.0);
 }
@@ -510,6 +514,16 @@ md-tooltip .md-content {
 .lnr-pos-r {
   position: relative;
 }
+
+.lnr-off-selection::selection {
+  background: transparent;
+}
+
+.lnr-off-selection::-moz-selection {
+  background: transparent;
+}
+
+
 
 /* ALIGNMENTS */
 
@@ -544,6 +558,11 @@ md-tooltip .md-content {
 .lnr-mv {
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.lnr-mv-reset {
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 .lnr-mv-x2 {

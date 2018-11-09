@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
       '$timeout', '$analytics', 'ENV', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'countryCodeTranslator', 'calendarHelper', 'notification',
+      'api', 'price', 'voucher', 'calendarHelper', 'notification',
       function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, $analytics,
-        ENV, $translate, $filter, authentication, api, price, voucher, countryCodeTranslator, calendarHelper, notification) {
+        ENV, $translate, $filter, authentication, api, price, voucher, calendarHelper, notification) {
         var booking = this;
         var btAuthorization = ENV.btKey;
         var btClient;
@@ -40,11 +40,8 @@ angular.module('booking', [])
         booking.user.balance = 0;
         booking.insuranceCountries = ['DE', 'AT'];
         booking.isOpeningHoursLoaded = false;
-
-        var oldExpiryDateLength = 0;
-        var expiryDateLength = 0;
-        var month = 0;
-        var year = 0;
+        booking.creditCardData = {}
+        booking.paymentDescription = '';
 
         var getLister = function() {
           api.get('/users/' + booking.bike.user.id).then(
@@ -270,16 +267,20 @@ angular.module('booking', [])
             method: 'post',
             data: {
               creditCard: {
-                number: booking.creditCardNumber,
-                expirationDate: booking.expiryDate,
-                cvv: booking.securityNumber
+                number: booking.creditCardData.creditCardNumber,
+                expirationDate: booking.creditCardData.expiryDate,
+                cvv: booking.creditCardData.securityNumber
               }
             }
           }, function (err, response) {
             if (!err) {
               var data = {
-                "payment_method_nonce": response.creditCards[0].nonce,
-                "last_four": response.creditCards[0].details.lastFour
+                "payment_method": {
+                  "payment_method_nonce": response.creditCards[0].nonce,
+                  "last_four": response.creditCards[0].details.lastFour,
+                  "card_type": response.creditCards[0].details.cardType,
+                  "payment_type": "credit-card"
+                }
               };
               api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
                 function (success) {
@@ -301,7 +302,11 @@ angular.module('booking', [])
                 return;
               }
               var data = {
-                "payment_method_nonce": payload.nonce
+                 "payment_method": {
+                   "payment_method_nonce": payload.nonce,
+                   "email": payload.details.email,
+                   "payment_type": "paypal-account"
+                 }
               };
               api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
                 function (success) {
@@ -319,6 +324,7 @@ angular.module('booking', [])
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               var oldUser = booking.user;
+
               booking.user = success.data;
               booking.user.firstName = success.data.first_name;
               booking.user.lastName = success.data.last_name;
@@ -331,6 +337,10 @@ angular.module('booking', [])
                 booking.phone_number = '+' + success.data.phone_number;
               }
 
+              if (booking.user.payment_method) {
+                booking.paymentDescription = getPaymentShortDescription();
+              }
+
               // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
                 setFirstTab();
               // }
@@ -338,20 +348,24 @@ angular.module('booking', [])
               $timeout(function () {
                 booking.hidden = false;
               }, 120);
-              api.get('/users/' + $localStorage.userId + '/current_payment').then(
-                function(response) {
-                  booking.user.current_payment_method = response.data;
-                },
-                function(error) {
-                  notification.show(error, 'error');
-                }
-              );
             },
             function (error) {
               notification.show(error, 'error');
             }
           );
         };
+
+        function getPaymentShortDescription() {
+          switch (booking.user.payment_method.payment_type) {
+            case 'credit-card':
+              return '**** **** **** ' + booking.user.payment_method.last_four;
+            case 'paypal-account':
+              return booking.user.payment_method.email;
+            default:
+              notification.show(null, null, 'shared.errors.unexpected-payment-type');
+              return false;
+          }
+        }
 
         function setFirstTab() {
           if (!booking.shopBooking || booking.selectedIndex > 0) {
@@ -471,39 +485,6 @@ angular.module('booking', [])
             case 3: $analytics.eventTrack('load', {category: 'Request Bike', label: 'Summary Tab'}); break;
           }
         }
-
-        booking.updateExpiryDate = function () {
-          expiryDateLength = booking.expiryDate.toString().length;
-          month = booking.expiryDate.toString().split("/")[0];
-          year = booking.expiryDate.toString().split("/")[1];
-          if (expiryDateLength == 1 && oldExpiryDateLength != 2 && parseInt(month) > 1) {
-            booking.expiryDate = "0" + booking.expiryDate + "/";
-          }
-          if (expiryDateLength == 2 && oldExpiryDateLength < 2) {
-            booking.expiryDate += "/";
-          }
-          if (oldExpiryDateLength == 4 && expiryDateLength == 3) {
-            booking.expiryDate = month;
-          }
-          oldExpiryDateLength = expiryDateLength;
-        };
-
-        booking.validateExpiryDate = function() {
-          var dateInput = booking.paymentForm.expiryDate;
-          if (expiryDateLength != 5) {
-            dateInput.$setValidity('dateFormat', false);
-          } else {
-            if (year > 18 && year < 25 && month >= 1 && month <= 12) {
-              dateInput.$setValidity('dateFormat', true);
-            }
-            else if (year == 18 && month >= 2 && month <= 12) {
-              dateInput.$setValidity('dateFormat', true);
-            }
-            else {
-              dateInput.$setValidity('dateFormat', false);
-            }
-          }
-        };
 
         // TODO: This needs to be refactored, rootScopes are very bad practice
         // go to next tab on user create success
