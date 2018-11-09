@@ -3,8 +3,10 @@
     "learn-more": "Meer info",
     "payment-type": {
       "pay-pal-account": "Paypal",
-      "credit-card": "Credit card"
+      "credit-card": "Credit card",
+      "paypal-account": "Paypal account"
     },
+    "change": "Change",
     "map": "Kaart",
     "bike-type": "Fietstype",
     "filter-by": "Filteren op",
@@ -20,6 +22,7 @@
     "please-select": "Ajb. selecteren",
     "errors": {
       "email-required": "Vul een geldig emailadres in",
+      "unexpected-payment-type": "Unexpected payment type",
       "email-not-valid": "Vul een geldig emailadres in",
       "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
       "phone-required": "Voer je telefoonnummer in. "
@@ -572,6 +575,7 @@
     "change-payment-method": "Change payment method",
     "your-payment-method": "Your payment method:",
     "pay-pal-account": "PayPal",
+    "pick-payment-method-new": "Please pick a new method",
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",

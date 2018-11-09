@@ -3,8 +3,10 @@
     "learn-more": "Per saperne di più",
     "payment-type": {
       "pay-pal-account": "Paypal",
-      "credit-card": "Credit card"
+      "credit-card": "Credit card",
+      "paypal-account": "Paypal account"
     },
+    "change": "Change",
     "map": "Mappa",
     "bike-type": "Tipo di bici",
     "filter-by": "Filtra per",
@@ -20,6 +22,7 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
+      "unexpected-payment-type": "Unexpected payment type",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
       "phone-required": "Per favore inserisci il tuo numero di telefono, questo campo è obbligatorio"
@@ -568,6 +571,7 @@
     "change-payment-method": "Change payment method",
     "your-payment-method": "Your payment method:",
     "pay-pal-account": "PayPal",
+    "pick-payment-method-new": "Please pick a new method",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
     "account": "Conto",
