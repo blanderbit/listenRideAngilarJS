@@ -7,16 +7,13 @@ angular.module('booking', [])
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
     controller: [
-      '$localStorage', '$rootScope', '$scope', '$state', '$stateParams', '$mdToast',
-      '$timeout', '$analytics', 'ENV', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper', 'notification',
+      '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
+      '$timeout', '$analytics', '$translate', '$filter', 'authentication',
+      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper',
       function BookingController(
-        $localStorage, $rootScope, $scope, $state, $stateParams, $mdToast, $timeout, $analytics,
-        ENV, $translate, $filter, authentication, api, price, voucher, calendarHelper, notification) {
+        $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
+        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper) {
         var booking = this;
-        var btAuthorization = ENV.btKey;
-        var btClient;
-        var btPpInstance;
 
         booking.bikeId = $stateParams.bikeId;
         booking.shopBooking = $stateParams.shop;
@@ -85,11 +82,18 @@ angular.module('booking', [])
 
         // on lifecycle initialization
         booking.$onInit = function () {
-          booking.calendarHelper = calendarHelper;
-          booking.authentication = authentication;
+          // VARIABLES
           booking.showConfirmButton = true;
           booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
           booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+
+          // METHODS
+          booking.calendarHelper = calendarHelper;
+          booking.authentication = authentication;
+          booking.savePaymentOption = savePaymentOption;
+
+          // INVOCATIONS
+          paymentHelper.setupBraintreeClient();
         };
 
         booking.resetPassword = function() {
@@ -165,19 +169,30 @@ angular.module('booking', [])
           if (!booking.shopBooking) {
             switch (booking.selectedIndex) {
               case 0: return false;
-              case 1: return !(booking.phoneConfirmed === 'success' && booking.validAddress && booking.verificationForm.$valid && !booking.processing);
-              case 2: return !booking.paymentForm.$valid;
+              case 1: return !checkValidDetails();
+              case 2: return !checkValidPayment();
               case 3: return false;
             }
           } else {
             switch (booking.selectedIndex) {
               case 0: return !validDates();
-              case 1: return !(booking.phoneConfirmed === 'success' && booking.validAddress && booking.detailsForm.$valid && booking.verificationForm.$valid);
-              case 2: return !booking.paymentForm.$valid;
+              case 1: return !checkValidDetails();
+              case 2: return !checkValidPayment();
               case 3: return false;
             }
           }
         };
+
+        function checkValidDetails() {
+          return booking.phoneConfirmed === 'success' &&
+                 booking.validAddress &&
+                 booking.verificationForm.$valid &&
+                 !booking.processing
+        }
+
+        function checkValidPayment() {
+          return booking.paymentMethod === 'current' || booking.paymentForm.$valid;
+        }
 
         function updatePrices() {
           var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium);
@@ -211,28 +226,11 @@ angular.module('booking', [])
                 booking.goNext(); break;
               }
             case 1: booking.saveAddress(); break;
-            case 2: booking.tokenizeCard(); break;
+            case 2: booking.savePaymentOption(); break;
             case 3: booking.book(); break;
             default: booking.goNext(); break;
           }
         };
-
-        // Braintree Client Setup
-        braintree.client.create({
-          authorization: btAuthorization
-        }, function (err, client) {
-          if (err) {
-            // TODO: show braintree errors. Find documentation
-            return;
-          }
-          btClient = client;
-          braintree.paypal.create(
-            {client: btClient},
-            function (ppErr, ppInstance) {
-              btPpInstance = ppInstance;
-            }
-          );
-        });
 
         booking.saveAddress = function() {
           booking.processing = true;
@@ -260,65 +258,36 @@ angular.module('booking', [])
         };
 
         booking.tokenizeCard = function() {
-          notification.show(null, null, 'booking.payment.getting-saved');
-
-          btClient.request({
-            endpoint: 'payment_methods/credit_cards',
-            method: 'post',
-            data: {
-              creditCard: {
-                number: booking.creditCardData.creditCardNumber,
-                expirationDate: booking.creditCardData.expiryDate,
-                cvv: booking.creditCardData.securityNumber
-              }
-            }
-          }, function (err, response) {
-            if (!err) {
-              var data = {
-                "payment_method": {
-                  "payment_method_nonce": response.creditCards[0].nonce,
-                  "last_four": response.creditCards[0].details.lastFour,
-                  "card_type": response.creditCards[0].details.cardType,
-                  "payment_type": "credit-card"
-                }
-              };
-              api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
-                function (success) {
-                  booking.reloadUser();
-                },
-                function (error) {
-                  notification.show(error, 'error');
-                }
-              );
-            }
-            // Send response.creditCards[0].nonce to your server
-          });
+          paymentHelper.btPostCreditCard(booking.creditCardData, onSuccessPaymentValidation);
         };
 
         booking.openPaypal = function() {
-          btPpInstance.tokenize({ flow: 'vault' },
-            function (tokenizeErr, payload) {
-              if (tokenizeErr) {
-                return;
-              }
-              var data = {
-                 "payment_method": {
-                   "payment_method_nonce": payload.nonce,
-                   "email": payload.details.email,
-                   "payment_type": "paypal-account"
-                 }
-              };
-              api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
-                function (success) {
-                  booking.reloadUser();
-                },
-                function (error) {
-                  notification.show(error, 'error');
-                }
-              );
-            }
-          );
+          paymentHelper.btPostPaypal(onSuccessPaymentValidation);
         };
+
+        booking.savePaymentOption = function() {
+          if (booking.paymentMethod === 'current') {
+            booking.nextTab();
+          } else {
+            booking.tokenizeCard();
+          }
+        }
+
+        function onSuccessPaymentValidation(data) {
+          updatePaymentInformation(data);
+          // reset form and data after success
+          booking.creditCardData = {}
+          booking.paymentForm.$setPristine();
+          booking.paymentForm.$setUntouched();
+          // go to next tab
+          booking.nextTab();
+        }
+
+        function updatePaymentInformation(data) {
+          booking.user.payment_method = paymentHelper.updatePaymentUserData(booking.user.payment_method, data);
+          booking.paymentDescription = paymentHelper.getPaymentShortDescription(booking.user.payment_method);
+          booking.paymentMethod = booking.user.payment_method ? 'current' : '';
+        }
 
         booking.reloadUser = function() {
           api.get('/users/' + $localStorage.userId).then(
@@ -330,6 +299,8 @@ angular.module('booking', [])
               booking.user.lastName = success.data.last_name;
               booking.creditCardHolderName = booking.user.first_name + " " + booking.user.last_name;
 
+              booking.paymentMethod = booking.user.payment_method ? 'current' : '';
+
               // Autocomplete phone number if it's confirmed already
               if (booking.user.has_phone_number) {
                 booking.phoneConfirmed = 'success';
@@ -338,7 +309,7 @@ angular.module('booking', [])
               }
 
               if (booking.user.payment_method) {
-                booking.paymentDescription = getPaymentShortDescription();
+                booking.paymentDescription = paymentHelper.getPaymentShortDescription(booking.user.payment_method);
               }
 
               // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
@@ -354,18 +325,6 @@ angular.module('booking', [])
             }
           );
         };
-
-        function getPaymentShortDescription() {
-          switch (booking.user.payment_method.payment_type) {
-            case 'credit-card':
-              return '**** **** **** ' + booking.user.payment_method.last_four;
-            case 'paypal-account':
-              return booking.user.payment_method.email;
-            default:
-              notification.show(null, null, 'shared.errors.unexpected-payment-type');
-              return false;
-          }
-        }
 
         function setFirstTab() {
           if (!booking.shopBooking || booking.selectedIndex > 0) {
@@ -414,12 +373,7 @@ angular.module('booking', [])
           booking.toggleConfirmButton();
           api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
             function (success) {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent($translate.instant("booking.details.sms-confirmation-message"))
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(success, null, 'booking.details.sms-confirmation-message');
             },
             function (error) {
               notification.show(error, 'error');
@@ -458,7 +412,7 @@ angular.module('booking', [])
                 setFirstTab();
               }
             case 2:
-              booking.tokenizeCard(); break;
+              booking.savePaymentOption(); break;
             default:
               booking.nextTab(); break
           }

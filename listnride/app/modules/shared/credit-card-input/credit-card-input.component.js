@@ -4,7 +4,8 @@ angular.module('creditCardInput', []).component('creditCardInput', {
   templateUrl: 'app/modules/shared/credit-card-input/credit-card-input.template.html',
   controllerAs: 'creditCardInput',
   bindings: {
-    data: '='
+    data: '=',
+    reset: '<'
   },
   controller: ['$scope',
     function СreditCardInput($scope) {
@@ -61,6 +62,7 @@ angular.module('creditCardInput', []).component('creditCardInput', {
           }
         }
       };
+
     }
   ]
 });

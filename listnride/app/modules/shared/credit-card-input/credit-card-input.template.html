@@ -30,7 +30,7 @@
       type="text"
       cc-number cc-eager-type ng-required="true" maxlength="16" />
     <div
-      ng-show="creditCardForm.creditCardNumber.$invalid"
+      ng-show="creditCardInput.data.creditCardNumber && creditCardForm.creditCardNumber.$invalid"
       ng-messages="creditCardForm.creditCardNumber.$error"
       role="alert">
       <div ng-message="required">{{ 'booking.payment.invalid-card' | translate }}</div>
