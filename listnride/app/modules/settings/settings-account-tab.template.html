@@ -68,43 +68,33 @@
               ng-click="settingsAccount.parent.showPaymentChangeForm = !settingsAccount.parent.showPaymentChangeForm">
                 {{ 'settings.change-payment-method' | translate }}
             </span>
-            <md-radio-group ng-if="settingsAccount.parent.showPaymentChangeForm" ng-model="settingsAccount.parent.payoutMethod.family" layout="row" class="lnr-mh lnr-mt-x2">
-              <md-radio-button value="1">{{ 'shared.payment-type.credit-card' | translate }}</md-radio-button>
-              <md-radio-button value="2">{{ 'settings.paypal' | translate }}</md-radio-button>
+            <md-radio-group
+              ng-if="settingsAccount.parent.showPaymentChangeForm"
+              ng-model="settingsAccount.parent.paymentMethod"
+              layout="row"
+              class="lnr-mh lnr-mt-x2">
+              <md-radio-button value="credit-card">{{ 'shared.payment-type.credit-card' | translate }}</md-radio-button>
+              <md-radio-button value="paypal">{{ 'settings.paypal' | translate }}</md-radio-button>
             </md-radio-group>
-            <ng-form name="paypalForm">
-              <div ng-if="settingsAccount.parent.payoutMethod.family == 2">
+            <ng-form name="settingsAccount.parent.paymentForm">
+              <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'paypal'">
                 <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
-                <div layout="row" class="lnr-mh">
-                  <md-input-container>
-                    <label>{{ 'forms.email-address' | translate }}</label>
-                    <input required id="form_paypal_email" name="email" type="email" ng-model="settingsAccount.parent.payoutMethod.email"
-                      ng-pattern="settingsAccount.parent.emailFormat">
-                  </md-input-container>
-                </div>
+                <md-button
+                  class="md-raised md-primary lnr-m-0"
+                  ng-click="settingsAccount.parent.openPaypal()"
+                >
+                  {{ 'booking.payment.pay-paypal' | translate }}
+                </md-button>
               </div>
-              <div ng-if="settingsAccount.parent.payoutMethod.family == 1">
+              <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'credit-card'">
                 <p class="md-caption">{{ 'settings.enter-bank-info' | translate }}</p>
-                <div layout="row" layout-xs="column" layout-margin class="lnr-mv-reset">
-                  <md-input-container flex-gt-xs="50">
-                    <label>Name on Card</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.first_name">
-                  </md-input-container>
-                  <md-input-container flex-gt-xs="50">
-                    <label>Card Number</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.last_name">
-                  </md-input-container>
-                </div>
-                <div layout="row" layout-margin class="lnr-mv-reset">
-                  <md-input-container flex="50">
-                    <label>Exp. date</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.iban">
-                  </md-input-container>
-                  <md-input-container flex="50">
-                    <label>CVC Number</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.bic">
-                  </md-input-container>
-                </div>
+                <credit-card-input data="settingsAccount.parent.creditCardData"></credit-card-input>
+                <md-button
+                  class="md-raised md-primary lnr-m-0"
+                  ng-click="settingsAccount.parent.tokenizeCard()"
+                >
+                  {{ 'availability.submit-btn-save' | translate }}
+                </md-button>
               </div>
             </ng-form>
 

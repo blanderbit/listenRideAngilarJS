@@ -24,8 +24,9 @@ angular.module('settings',[])
     'authentication',
     'voucher',
     'notification',
+    'paymentHelper',
     function SettingsController($localStorage, $window, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
-      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification) {
+      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification, paymentHelper) {
 
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -58,8 +59,13 @@ angular.module('settings',[])
         settings.business = {};
         settings.user.business = false;
         settings.user.has_billing = false;
+
         // payment
         settings.showPaymentChangeForm = false;
+        settings.creditCardData = {};
+        settings.tokenizeCard = tokenizeCard;
+        settings.openPaypal = openPaypal;
+        settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
 
         // methods
         settings.changePassword = changePassword;
@@ -81,12 +87,12 @@ angular.module('settings',[])
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
         settings.updateNewsletter = updateNewsletter;
-        settings.getPaymentShortDescription = getPaymentShortDescription;
 
         // invocations
         userApi.getUserData().then(function (response) {
           settings.loaded = true;
           setUserData(response.data);
+          paymentHelper.setupBraintreeClient();
         });
       }
 
@@ -95,7 +101,7 @@ angular.module('settings',[])
 
         // payment method exist
         if (settings.user.payment_method) {
-          settings.paymentDescription = settings.getPaymentShortDescription();
+          settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
         }
 
         settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
@@ -430,16 +436,27 @@ angular.module('settings',[])
       // === ACCOUNT TAB ===
       // ===================
 
-      function getPaymentShortDescription() {
-        switch (settings.user.payment_method.payment_type) {
-          case 'credit-card':
-            return '**** **** **** ' + settings.user.payment_method.last_four;
-          case 'paypal-account':
-            return settings.user.payment_method.email;
-          default:
-            notification.show(null, null, 'shared.errors.unexpected-payment-type');
-            return false;
-        }
+      function tokenizeCard () {
+        paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate);
+      };
+
+      function openPaypal () {
+        paymentHelper.btPostPaypal(settings.onSuccessPaymentUpdate);
+      };
+
+      function onSuccessPaymentUpdate(data) {
+        // reset form and data after success
+        settings.creditCardData = {}
+        settings.paymentForm.$setPristine();
+        settings.paymentForm.$setUntouched();
+        settings.showPaymentChangeForm = false;
+
+        updatePaymentInformation(data);
+      }
+
+      function updatePaymentInformation(data) {
+        settings.user.payment_method = paymentHelper.updatePaymentUserData(settings.user.payment_method, data);
+        settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
       }
 
       // TODO: this code is appearing twice, here and in the payoutDialog Controller (requests.component.rb)

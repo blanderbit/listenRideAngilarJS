@@ -92,7 +92,7 @@ function PaymentHelperController(ENV, api, authentication, notification) {
       );
     },
     updatePaymentUserData: function(currentPaymentData, newData) {
-      return Object.assign({}, currentPaymentData, newData);
+      return Object.assign({}, newData);
     },
     getPaymentShortDescription: function(paymentData) {
       switch (paymentData.payment_type) {
