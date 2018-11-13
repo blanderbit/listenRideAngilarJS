@@ -124,18 +124,19 @@
             </div>
             <div flex-gt-xs="33">
               <p class="md-title">{{ 'booking.overview.payment' | translate }}</p>
-              <div ng-if="overview.parent.user.current_payment_method.type == 1">
+              <div ng-if="overview.parent.user.payment_method.payment_type == 'credit-card'">
                 <p class="md-body-1">
-                  <span class="lnr-bold">{{ overview.parent.user.current_payment_method.family.split(" ")[0] }}</span><br>
-                  **** **** **** {{ overview.parent.user.current_payment_method.family.split(" ")[1] }}
+                  <span class="lnr-bold" translate="{{ 'shared.payment-type.' + overview.parent.user.payment_method.payment_type }}"></span><br>
+                  **** **** **** {{ overview.parent.user.payment_method.last_four }}
                 </p>
               </div>
-              <div ng-if="overview.parent.user.current_payment_method.type == 2">
+              <div ng-if="overview.parent.user.payment_method.payment_type == 'paypal-account'">
                 <p class="md-body-1">
-                  <span class="lnr-bold">Paypal</span><br>
-                  {{ overview.parent.user.current_payment_method.details }}
+                  <span class="lnr-bold">{{ 'shared.payment-type.paypal-account' | translate }}</span><br>
+                  {{ overview.parent.user.payment_method.email }}
                 </p>
               </div>
+              <a class="lnr-link" ng-click="overview.parent.previousTab()">{{ 'shared.change' | translate }}</a>
             </div>
             <div ng-hide show-xs>
               <div class="spacer-xs"></div>

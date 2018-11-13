@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('settings',[]).component('settings', {
+angular.module('settings',[])
+.component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
   controller: [
@@ -23,8 +24,9 @@ angular.module('settings',[]).component('settings', {
     'authentication',
     'voucher',
     'notification',
+    'paymentHelper',
     function SettingsController($localStorage, $window, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
-      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification) {
+      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification, paymentHelper) {
 
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -37,7 +39,7 @@ angular.module('settings',[]).component('settings', {
       var settings = this;
 
       settings.$onInit = function() {
-        // variables
+        // VARIABLES
         settings.user = {};
         settings.croppedDataUrl = false;
         settings.loaded = false;
@@ -56,25 +58,14 @@ angular.module('settings',[]).component('settings', {
         settings.current_payment = false;
         settings.business = {};
         settings.user.business = false;
-        settings.user.paymentLoading = false;
         settings.user.has_billing = false;
-        userApi.getUserData().then(function (response) {
-          settings.user = response.data;
-          settings.current_payment = response.data.status === 3;
-          settings.loaded = true;
-          settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
-          $timeout(setInitFormState.bind(this), 0);
-          // TODO: remove this request it should be on the first request
-          if (!_.isEmpty(settings.user.business)) {
-            getBusinessData()
-          }
-          if (!!response.data.locations) {
-            settings.user.has_billing = !!response.data.locations.billing
-          }
-          if (!!response.data.phone_number) {
-            updatePrivatePhoneNumber(response.data.phone_number)
-          }
-        });
+
+        // payment
+        settings.showPaymentChangeForm = false;
+        settings.creditCardData = {};
+        settings.tokenizeCard = tokenizeCard;
+        settings.openPaypal = openPaypal;
+        settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
 
         // methods
         settings.changePassword = changePassword;
@@ -90,8 +81,6 @@ angular.module('settings',[]).component('settings', {
         settings.onSubmit = onSubmit;
         settings.toggleBilling = toggleBilling;
         settings.fillAddress = fillAddress;
-        settings.openPaymentWindow = openPaymentWindow;
-        settings.currentPaymentMethod = currentPaymentMethod;
         settings.addPayoutMethod = addPayoutMethod;
         settings.addVoucher = addVoucher;
         settings.updateUser = updateUser;
@@ -100,6 +89,34 @@ angular.module('settings',[]).component('settings', {
         settings.updateNewsletter = updateNewsletter;
 
         // invocations
+        userApi.getUserData().then(function (response) {
+          settings.loaded = true;
+          setUserData(response.data);
+          paymentHelper.setupBraintreeClient();
+        });
+      }
+
+      function setUserData(data) {
+        settings.user = data;
+
+        // payment method exist
+        if (settings.user.payment_method) {
+          settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
+        }
+
+        settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
+
+        if (!!settings.user.locations) {
+          settings.user.has_billing = !!settings.user.locations.billing
+        }
+        if (!!settings.user.phone_number) {
+          updatePrivatePhoneNumber(settings.user.phone_number)
+        }
+        if (!_.isEmpty(settings.user.business)) {
+          settings.business = settings.user.business;
+        }
+
+        $timeout(setInitFormState.bind(this), 0);
       }
 
       // availability data
@@ -249,17 +266,6 @@ angular.module('settings',[]).component('settings', {
         billing.vat = '';
 
         settings.user.has_billing = false;
-      }
-
-      function getBusinessData() {
-        api.get('/businesses/' + settings.user.business.id).then(
-          function(response) {
-            settings.business = response.data;
-          },
-          function(error) {
-            notification.show(error, 'error');
-          }
-        );
       }
 
       function fillAddress (place) {
@@ -430,6 +436,29 @@ angular.module('settings',[]).component('settings', {
       // === ACCOUNT TAB ===
       // ===================
 
+      function tokenizeCard () {
+        paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate);
+      };
+
+      function openPaypal () {
+        paymentHelper.btPostPaypal(settings.onSuccessPaymentUpdate);
+      };
+
+      function onSuccessPaymentUpdate(data) {
+        // reset form and data after success
+        settings.creditCardData = {}
+        settings.paymentForm.$setPristine();
+        settings.paymentForm.$setUntouched();
+        settings.showPaymentChangeForm = false;
+
+        updatePaymentInformation(data);
+      }
+
+      function updatePaymentInformation(data) {
+        settings.user.payment_method = paymentHelper.updatePaymentUserData(settings.user.payment_method, data);
+        settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
+      }
+
       // TODO: this code is appearing twice, here and in the payoutDialog Controller (requests.component.rb)
       function addPayoutMethod () {
         var data = {
@@ -438,6 +467,8 @@ angular.module('settings',[]).component('settings', {
 
         data.payment_method.user_id = $localStorage.userId;
 
+        // 1 - credit card
+        // 2 - paypal
         if (settings.payoutMethod.family == 1) {
           data.payment_method.email = "";
         } else {
@@ -445,6 +476,7 @@ angular.module('settings',[]).component('settings', {
           data.payment_method.bic = "";
         }
 
+        // it will be another endpoint
         api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
           function (success) {
             notification.show(success, null, 'toasts.add-payout-success');
@@ -516,33 +548,11 @@ angular.module('settings',[]).component('settings', {
         );
       }
 
-      function openPaymentWindow () {
-        var w = 550;
-        var h = 700;
-        var left = (screen.width / 2) - (w / 2);
-        var top = (screen.height / 2) - (h / 2);
-
-        $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new", "popup", "width=" + w + ",height=" + h + ",left=" + left + ",top=" + top);
-      };
-
-      function currentPaymentMethod () {
-        settings.user.paymentLoading = true;
-        api.get('/users/' + settings.user.id + '/current_payment').then(
-          function(response) {
-            settings.user.paymentLoading = false;
-            settings.user.current_payment_method = response.data;
-          },
-          function(error) {
-            notification.show(error, 'error');
-          }
-        );
-      };
-
       function addVoucher() {
         voucher.addVoucher(settings.voucherCode);
         settings.voucherCode = "";
       };
-      
+
       function updateNewsletter() {
         var data = {
           'notification_preference': {
@@ -815,4 +825,11 @@ angular.module('settings',[]).component('settings', {
 
     }
   ]
-});
+})
+.component('settingsAccountTab', {
+  templateUrl: 'app/modules/settings/settings-account-tab.template.html',
+  require: {
+    parent: '^settings'
+  },
+  controllerAs: 'settingsAccount'
+})

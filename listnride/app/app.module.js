@@ -31,6 +31,7 @@ angular.module('listnride', [
   'categoryFilter',
   'bikeCountFilter',
   'accessoriesFilter',
+  'creditCardInput',
   /* app_core_end */
 
   /* app_extras_start */
