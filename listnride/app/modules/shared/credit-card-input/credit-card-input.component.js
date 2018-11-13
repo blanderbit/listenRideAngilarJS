@@ -22,7 +22,9 @@ angular.module('creditCardInput', []).component('creditCardInput', {
         creditCardInput.validateExpiryDate = validateExpiryDate;
       };
 
-      function updateExpiryDate($event) {
+      function updateExpiryDate() {
+        if (!creditCardInput.creditCardForm.expiryDate) return;
+
         creditCardInput.expiryDateLength = creditCardInput.creditCardForm.expiryDate.toString().length;
         creditCardInput.month = creditCardInput.creditCardForm.expiryDate.toString().split("/")[0];
         creditCardInput.year = creditCardInput.creditCardForm.expiryDate.toString().split("/")[1];
@@ -36,9 +38,10 @@ angular.module('creditCardInput', []).component('creditCardInput', {
             creditCardInput.oldExpiryDateLength < 2) {
           creditCardInput.creditCardForm.expiryDate += "/";
         }
+
         if (creditCardInput.oldExpiryDateLength == 4 &&
           creditCardInput.expiryDateLength == 3) {
-          creditCardInput.creditCardForm.expiryDate = creditCardInput.month;
+          creditCardInput.creditCardForm.expiryDate = creditCardInput.month[0];
         }
         creditCardInput.oldExpiryDateLength = creditCardInput.expiryDateLength;
       };
