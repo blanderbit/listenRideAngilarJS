@@ -87,7 +87,6 @@
                 </md-button>
               </div>
               <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'credit-card'">
-                <p class="md-caption">{{ 'settings.enter-bank-info' | translate }}</p>
                 <credit-card-input data="settingsAccount.parent.creditCardData"></credit-card-input>
                 <md-button
                   class="md-raised md-primary lnr-m-0"

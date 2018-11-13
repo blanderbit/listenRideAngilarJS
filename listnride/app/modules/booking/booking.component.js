@@ -265,7 +265,7 @@ angular.module('booking', [])
           paymentHelper.btPostPaypal(onSuccessPaymentValidation);
         };
 
-        booking.savePaymentOption = function() {
+        function savePaymentOption() {
           if (booking.paymentMethod === 'current') {
             booking.nextTab();
           } else {
