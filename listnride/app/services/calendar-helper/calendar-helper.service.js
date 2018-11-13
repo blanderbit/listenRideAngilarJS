@@ -67,8 +67,8 @@ angular.module('listnride')
         }
         openTime.startTime = hour_now;
       }
-      openTime.startDate = setStartDate(openTime.startTime, openTime.startDate);
-      openTime.endDate = moment(openTime.endDate).hour(openTime.endTime)._d;
+      openTime.startDate = setStartDate(openTime.startTime, startDate);
+      openTime.endDate = moment(endDate).hour(openTime.endTime)._d;
       return openTime;
     }
 
