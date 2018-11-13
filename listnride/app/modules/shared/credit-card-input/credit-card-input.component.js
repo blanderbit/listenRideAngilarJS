@@ -18,9 +18,11 @@ angular.module('creditCardInput', []).component('creditCardInput', {
         creditCardInput.year = 0;
         // METHODS
         creditCardInput.creditCardForm = creditCardInput.data;
+        creditCardInput.updateExpiryDate = updateExpiryDate;
+        creditCardInput.validateExpiryDate = validateExpiryDate;
       };
 
-      creditCardInput.updateExpiryDate = function () {
+      function updateExpiryDate($event) {
         creditCardInput.expiryDateLength = creditCardInput.creditCardForm.expiryDate.toString().length;
         creditCardInput.month = creditCardInput.creditCardForm.expiryDate.toString().split("/")[0];
         creditCardInput.year = creditCardInput.creditCardForm.expiryDate.toString().split("/")[1];
@@ -42,7 +44,7 @@ angular.module('creditCardInput', []).component('creditCardInput', {
       };
 
       // TODO: remove hardcoded current year and month
-      creditCardInput.validateExpiryDate = function () {
+      function validateExpiryDate() {
         var dateInput = $scope.creditCardForm.expiryDate;
         if (creditCardInput.expiryDateLength != 5) {
           dateInput.$setValidity('dateFormat', false);

@@ -28,13 +28,14 @@
       ng-model="creditCardInput.data.creditCardNumber"
       ng-model-options='{ debounce: 400 }'
       type="text"
-      cc-number cc-eager-type ng-required="true" maxlength="16" />
+      cc-format cc-number cc-eager-type
+      ng-required="true" maxlength="19" />
     <div
       ng-show="creditCardInput.data.creditCardNumber && creditCardForm.creditCardNumber.$invalid"
       ng-messages="creditCardForm.creditCardNumber.$error"
       role="alert">
       <div ng-message="required">{{ 'booking.payment.invalid-card' | translate }}</div>
-      <div ng-message="ccNumber" ng-if="creditCardForm.creditCardNumber.$viewValue.length == 16">
+      <div ng-message="ccNumber" ng-if="creditCardForm.creditCardNumber.$viewValue.length == 19">
         {{'booking.payment.invalid-card-number' | translate }}
       </div>
     </div>
