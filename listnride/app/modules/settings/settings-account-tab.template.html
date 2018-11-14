@@ -119,8 +119,11 @@
         <div flex-gt-xs="70" layout-margin>
           <p>{{ 'settings.payout-method-description' | translate }}</p>
           <p ng-if="!settingsAccount.parent.user.payout_method">{{ 'settings.no-payout-method' | translate }}</p>
-          <p class="md-body-2" ng-if="settingsAccount.parent.user.payout_method && settingsAccount.parent.user.payout_method.payment_type == 'credit-card'">{{
-            'settings.payout-bank' | translate }} {{ settingsAccount.parent.payoutMethod.short_iban }}</p>
+          <p class="md-body-2"
+            ng-if="settingsAccount.parent.user.payout_method &&
+                   settingsAccount.parent.user.payout_method.payment_type == 'credit-card' &&
+                   settingsAccount.parent.user.payout_method.iban">
+            {{'settings.payout-bank' | translate }} {{ settingsAccount.parent.payoutMethod.short_iban }}</p>
           <p class="md-body-2" ng-if="settingsAccount.parent.user.payout_method && settingsAccount.parent.user.payout_method.payment_type == 'paypal'">{{
             'settings.payout-paypal' | translate }} {{ settingsAccount.parent.user.payout_method.email }}</p>
           <div layout="column">
