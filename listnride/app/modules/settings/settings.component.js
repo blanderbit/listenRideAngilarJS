@@ -489,7 +489,9 @@ angular.module('settings',[])
           function (success) {
             notification.show(success, null, 'toasts.add-payout-success');
             settings.user.payout_method = data.payout_method;
-            settings.payoutMethod.short_iban = getShortIban();
+            if (settings.payoutMethod.payment_type === 'credit-card') {
+              settings.payoutMethod.short_iban = getShortIban();
+            }
             settings.payoutMethod.loading = false;
             // clear payout form
             settings.payoutMethod.formData = {};
