@@ -62,6 +62,8 @@ angular.module('settings',[])
 
         // payment
         settings.showPaymentChangeForm = false;
+        settings.showPayoutChangeForm = false;
+        settings.paymentLoading = false;
         settings.creditCardData = {};
         settings.tokenizeCard = tokenizeCard;
         settings.openPaypal = openPaypal;
@@ -114,6 +116,9 @@ angular.module('settings',[])
         }
         if (!_.isEmpty(settings.user.business)) {
           settings.business = settings.user.business;
+        }
+        if (settings.user.payout_method && settings.user.payout_method.payment_type === 'credit-card') {
+          settings.payoutMethod.short_iban = getShortIban();
         }
 
         $timeout(setInitFormState.bind(this), 0);
@@ -437,6 +442,7 @@ angular.module('settings',[])
       // ===================
 
       function tokenizeCard () {
+        settings.paymentLoading = true;
         paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate);
       };
 
@@ -450,8 +456,13 @@ angular.module('settings',[])
         settings.paymentForm.$setPristine();
         settings.paymentForm.$setUntouched();
         settings.showPaymentChangeForm = false;
+        settings.paymentLoading = false;
 
         updatePaymentInformation(data);
+      }
+
+      function onErrorPaymentUpdate(){
+        settings.paymentLoading = false;
       }
 
       function updatePaymentInformation(data) {
@@ -459,37 +470,43 @@ angular.module('settings',[])
         settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
       }
 
-      // TODO: this code is appearing twice, here and in the payoutDialog Controller (requests.component.rb)
       function addPayoutMethod () {
         var data = {
-          "payment_method": settings.payoutMethod
+          "payout_method": {
+            'payment_type': settings.payoutMethod.payment_type,
+            'first_name': settings.payoutMethod.formData.first_name,
+            'last_name': settings.payoutMethod.formData.last_name,
+            'email': settings.payoutMethod.formData.email,
+            'iban': settings.payoutMethod.formData.iban,
+            'bic': settings.payoutMethod.formData.bic
+          }
         };
 
-        data.payment_method.user_id = $localStorage.userId;
-
-        // 1 - credit card
-        // 2 - paypal
-        if (settings.payoutMethod.family == 1) {
-          data.payment_method.email = "";
-        } else {
-          data.payment_method.iban = "";
-          data.payment_method.bic = "";
-        }
+        settings.payoutMethod.loading = true;
 
         // it will be another endpoint
-        api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
+        api.post('/users/' + $localStorage.userId + '/payout_methods', data).then(
           function (success) {
             notification.show(success, null, 'toasts.add-payout-success');
-            // TODO: Properly configure API to output payout method details and use those instead of making another call to the user
-            userApi.getUserData().then(function (response) {
-              settings.user.current_payout_method = response.data.current_payout_method;
-            });
+            settings.user.payout_method = data.payout_method;
+            settings.payoutMethod.short_iban = getShortIban();
+            settings.payoutMethod.loading = false;
+            // clear payout form
+            settings.payoutMethod.formData = {};
+            settings.showPayoutChangeForm = false;
+            settings.payoutForm.$setPristine();
+            settings.payoutForm.$setUntouched();
           },
           function (error) {
             notification.show(error, 'error');
+            settings.payoutMethod.loading = false;
           }
         );
       };
+
+      function getShortIban() {
+        return '**** ' + settings.user.payout_method.iban.slice(-6);
+      }
 
       // business account settings
       function updateBusiness () {

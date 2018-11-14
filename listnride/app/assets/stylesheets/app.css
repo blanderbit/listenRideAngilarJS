@@ -152,6 +152,50 @@ address {
   align-items: center;
 }
 
+/* LOADER */
+
+.lnr-loader {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 21px;
+}
+
+.lnr-loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  margin: 6px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  animation: lnr-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lnr-loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lnr-loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lnr-loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lnr-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* This has to be set for all full-height layouts */
 
 ui-view {
@@ -3481,6 +3525,15 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .date-picker-wrapper.date-picker-wrapper--ngDialog,
   .date-picker-wrapper.date-picker-wrapper--ngDialog .month-wrapper {
     max-width: 320px;
+  }
+}
+
+@media (min-width: 600px) { /* GT-XS-BREAKPOINT */
+  .lnr-gt-xs-mr {
+    margin-right: 8px;
+  }
+  .lnr-gt-xs-ml {
+    margin-left: 8px;
   }
 }
 

@@ -33,7 +33,7 @@ function PaymentHelperController(ENV, api, authentication, notification) {
         });
       });
     },
-    btPostCreditCard: function(creditCardData, cb) {
+    btPostCreditCard: function(creditCardData, cb, cbError) {
       notification.show(null, null, 'booking.payment.getting-saved');
       var self = this;
       self.btClient.request({
@@ -58,9 +58,10 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           };
           api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
             function () {
-              cb(data.payment_method);
+              if (typeof cb == 'function') cb(data.payment_method);
             },
             function (error) {
+              if (typeof cbError == 'function') cbError();
               notification.show(error, 'error');
             }
           );

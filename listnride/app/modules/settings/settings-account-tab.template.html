@@ -59,7 +59,7 @@
           <p ng-if="settingsAccount.parent.user.payment_method">
             <b>{{ 'settings.your-payment-method' | translate }}</b>&nbsp;
             <span translate="{{ 'shared.payment-type.' + settingsAccount.parent.user.payment_method.payment_type }}"></span>, {{ settingsAccount.parent.paymentDescription }}
-            <md-icon ng-if="settingsAccount.parent.user.payment_method.card_type" class="md-color-black" md-svg-src="app/assets/ui_icons/card-logo-{{settingsAccount.parent.user.payment_method.card_type}}.svg"></md-icon>
+            <md-icon ng-if="settingsAccount.parent.user.payment_method.card_type" class="md-color-black lnr-ml" md-svg-src="app/assets/ui_icons/lnr_logo_{{settingsAccount.parent.user.payment_method.card_type}}.svg"></md-icon>
           </p>
 
           <div layout="column" class="lnr-mh-x2">
@@ -91,8 +91,14 @@
                 <md-button
                   class="md-raised md-primary lnr-m-0"
                   ng-click="settingsAccount.parent.tokenizeCard()"
-                >
-                  {{ 'availability.submit-btn-save' | translate }}
+                  ng-disabled="!settingsAccount.parent.paymentForm.$valid || settingsAccount.parent.paymentLoading">
+                  <div ng-if="settingsAccount.parent.paymentLoading" class="lnr-loader">
+                      <div class="lnr-loader__item1"></div>
+                      <div class="lnr-loader__item2"></div>
+                      <div class="lnr-loader__item3"></div>
+                      <div class="lnr-loader__item4"></div>
+                  </div>
+                  <span ng-if="!settingsAccount.parent.paymentLoading">{{ 'availability.submit-btn-save' | translate }}</span>
                 </md-button>
               </div>
             </ng-form>
@@ -112,59 +118,81 @@
         </div>
         <div flex-gt-xs="70" layout-margin>
           <p>{{ 'settings.payout-method-description' | translate }}</p>
-          <p ng-if="!settingsAccount.parent.user.current_payout_method">{{ 'settings.no-payout-method' | translate }}</p>
-          <p class="md-body-2" ng-if="settingsAccount.parent.user.current_payout_method && settingsAccount.parent.user.current_payout_method.family == 1">{{
-            'settings.payout-bank' | translate }} {{ settingsAccount.parent.user.current_payout_method.details }}</p>
-          <p class="md-body-2" ng-if="settingsAccount.parent.user.current_payout_method && settingsAccount.parent.user.current_payout_method.family == 2">{{
-            'settings.payout-paypal' | translate }} {{ settingsAccount.parent.user.current_payout_method.details }}</p>
-          <br>
+          <p ng-if="!settingsAccount.parent.user.payout_method">{{ 'settings.no-payout-method' | translate }}</p>
+          <p class="md-body-2" ng-if="settingsAccount.parent.user.payout_method && settingsAccount.parent.user.payout_method.payment_type == 'credit-card'">{{
+            'settings.payout-bank' | translate }} {{ settingsAccount.parent.payoutMethod.short_iban }}</p>
+          <p class="md-body-2" ng-if="settingsAccount.parent.user.payout_method && settingsAccount.parent.user.payout_method.payment_type == 'paypal'">{{
+            'settings.payout-paypal' | translate }} {{ settingsAccount.parent.user.payout_method.email }}</p>
           <div layout="column">
-            <md-radio-group ng-model="settingsAccount.parent.payoutMethod.family" layout="row">
-              <md-radio-button value="1">{{ 'settings.bank-account' | translate }}</md-radio-button>
-              <md-radio-button value="2">{{ 'settings.paypal' | translate }}</md-radio-button>
+            <span
+              class="lnr-color-primary lnr-link lnr-off-selection"
+              ng-click="settingsAccount.parent.showPayoutChangeForm = !settingsAccount.parent.showPayoutChangeForm">
+                {{ 'settings.change-payout-method' | translate }}
+            </span>
+            <md-radio-group class="lnr-mh-x2" ng-if="settingsAccount.parent.showPayoutChangeForm" ng-model="settingsAccount.parent.payoutMethod.payment_type" layout="row">
+              <md-radio-button value="credit-card">{{ 'settings.bank-account' | translate }}</md-radio-button>
+              <md-radio-button value="paypal">{{ 'settings.paypal' | translate }}</md-radio-button>
             </md-radio-group>
-            <ng-form name="paypalForm">
-              <div ng-if="settingsAccount.parent.payoutMethod.family == 2">
+            <ng-form ng-if="settingsAccount.parent.showPayoutChangeForm" name="settingsAccount.parent.payoutForm">
+              <div ng-if="settingsAccount.parent.payoutMethod.payment_type == 'paypal'">
                 <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
                 <div layout="row" class="lnr-mh">
                   <md-input-container>
                     <label>{{ 'forms.email-address' | translate }}</label>
-                    <input required id="form_paypal_email" name="email" type="email" ng-model="settingsAccount.parent.payoutMethod.email"
+                    <input
+                      required
+                      id="form_paypal_email"
+                      name="email"
+                      type="email"
+                      ng-model="settingsAccount.parent.payoutMethod.formData.email"
                       ng-pattern="settingsAccount.parent.emailFormat">
                   </md-input-container>
                 </div>
               </div>
-              <div ng-if="settingsAccount.parent.payoutMethod.family == 1">
+              <div ng-if="settingsAccount.parent.payoutMethod.payment_type == 'credit-card'">
                 <p class="md-caption">{{ 'settings.enter-bank-info' | translate }}</p>
-                <div layout="row" layout-margin>
-                  <md-input-container flex-gt-xs="50">
+                <div layout="row" layout-xs="column">
+                  <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
                     <label>{{ 'forms.first-name' | translate }}</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.first_name">
+                    <input
+                      required
+                      ng-model="settingsAccount.parent.payoutMethod.formData.first_name">
                   </md-input-container>
-                  <md-input-container flex-gt-xs="50">
+                  <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                     <label>{{ 'forms.last-name' | translate }}</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.last_name">
+                    <input
+                      required
+                      ng-model="settingsAccount.parent.payoutMethod.formData.last_name">
                   </md-input-container>
                 </div>
-                <div layout="row" layout-margin>
-                  <md-input-container flex="50">
+                <div layout="row" layout-xs="column">
+                  <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
                     <label>IBAN</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.iban">
+                    <input
+                      required
+                      ng-model="settingsAccount.parent.payoutMethod.formData.iban">
                   </md-input-container>
-                  <md-input-container flex="50">
+                  <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                     <label>BIC</label>
-                    <input required ng-model="settingsAccount.parent.payoutMethod.bic">
+                    <input required ng-model="settingsAccount.parent.payoutMethod.formData.bic">
                   </md-input-container>
                 </div>
               </div>
-              <div layout="row" ng-if="settingsAccount.parent.payoutMethod.family" layout-align="end">
-                <md-button class="md-raised md-primary" ng-click="settingsAccount.parent.addPayoutMethod(settingsForm)" ng-disabled="!paypalForm.$valid">
-                  {{ 'settings.save-payout-method' | translate }}
+              <div layout="row" ng-if="settingsAccount.parent.payoutMethod.payment_type" layout-align="end">
+                <md-button  class="md-raised md-primary"
+                            ng-click="settingsAccount.parent.addPayoutMethod()"
+                            ng-disabled="!settingsAccount.parent.payoutForm.$valid || settingsAccount.parent.payoutMethod.loading">
+                  <div ng-if="settingsAccount.parent.payoutMethod.loading" class="lnr-loader">
+                    <div class="lnr-loader__item1"></div>
+                    <div class="lnr-loader__item2"></div>
+                    <div class="lnr-loader__item3"></div>
+                    <div class="lnr-loader__item4"></div>
+                  </div>
+                  <span ng-if="!settingsAccount.parent.payoutMethod.loading">{{ 'settings.save-payout-method' | translate }}</span>
                 </md-button>
               </div>
             </ng-form>
           </div>
-          <div class="spacer-xs"></div>
           <p class="md-caption lnr-mt-x2" data-ng-bind-html="'forms.privacy-policy' | translate"></p>
         </div>
       </div>
@@ -178,7 +206,7 @@
         <div flex-gt-xs="70" layout-margin>
           <p>
             <span class="md-body-1">{{ 'settings.current-vouchers' | translate }}</span>
-            <div class="md-body-2">{{ settingsAccount.parent.user.balance | number : 0 }} €</div>
+            <span class="md-body-2">{{ settingsAccount.parent.user.balance | number : 0 }} €</span>
           </p>
           <div layout="row" layout-xs="column">
             <md-input-container flex-gt-xs="45">
