@@ -3,8 +3,8 @@
     "learn-more": "Per saperne di più",
     "payment-type": {
       "pay-pal-account": "Paypal",
-      "credit-card": "Credit card",
-      "paypal-account": "Paypal account"
+      "credit-card": "Carta di credito",
+      "paypal-account": "Conto Paypal"
     },
     "change": "Change",
     "map": "Mappa",
@@ -22,7 +22,7 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
-      "unexpected-payment-type": "Unexpected payment type",
+      "unexpected-payment-type": "Tipo di pagamento non previsto",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
       "phone-required": "Per favore inserisci il tuo numero di telefono, questo campo è obbligatorio"
@@ -481,6 +481,7 @@
     },
     "payment": {
       "tab": "3. Metodi di Pagamento",
+      "current-method": "Attuale metodo di pagamento",
       "getting-saved": "Il metodo di pagamento è stato salvato",
       "select-method": "Seleziona il tuo metodo di pagamento",
       "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
@@ -567,11 +568,12 @@
       "required-vat": "Si prega di inserire il numero di partita IVA.",
       "minlength-vat": "L'IVA dovrebbe essere più lunga di 2 caratteri"
     },
-    "pick-payment-method": "Please pick a payment method",
-    "change-payment-method": "Change payment method",
-    "your-payment-method": "Your payment method:",
+    "pick-payment-method": "Aggiungi il metodo di pagamento",
+    "change-payment-method": "Cambia il metodo di pagamento",
+    "your-payment-method": "Il tuo metodo di pagamento:",
     "pay-pal-account": "PayPal",
-    "pick-payment-method-new": "Please pick a new method",
+    "pick-payment-method-new": "Aggiungi un nuovo metodo",
+    "change-payout-method": "Cambia il metodo di pagamento",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
     "account": "Conto",
@@ -758,6 +760,7 @@
   },
   "forms": {
     "first-name": "Nome",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Salva nuova password",
     "your-name": "Il tuo nome",
     "your-email-address": "Il tuo indirizzo email",

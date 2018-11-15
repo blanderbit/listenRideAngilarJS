@@ -22,7 +22,7 @@
     "please-select": "Please select",
     "errors": {
       "email-required": "Please enter your email address, email is required",
-      "unexpected-payment-type": "Unexpected payment type",
+      "unexpected-payment-type": "Payment type not valid",
       "email-not-valid": "Please, enter a valid email address",
       "phone-not-valid": "Please, enter a valid phone number",
       "phone-required": "Please enter your phone number, this field is required"
@@ -493,6 +493,7 @@
     },
     "payment": {
       "tab": "3. Payment Method",
+      "current-method": "Current payment method",
       "getting-saved": "Payment method has been saved",
       "select-method": "Select your Payment Method",
       "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
@@ -577,13 +578,14 @@
       "required-company-name": "Please enter your company name.",
       "minlength-company-name": "Company name should be longer than 2 characters",
       "required-vat": "Please enter your VAT number.",
-      "minlength-vat": "The VAT should be longer than 2 characters"
+      "minlength-vat": "The VAT number should be longer than 2 characters"
     },
     "pick-payment-method": "Please pick a payment method",
     "change-payment-method": "Change payment method",
     "your-payment-method": "Your payment method:",
     "pay-pal-account": "PayPal",
     "pick-payment-method-new": "Please pick a new method",
+    "change-payout-method": "Change payout method",
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
@@ -771,6 +773,7 @@
   },
   "forms": {
     "first-name": "First Name",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Save new password",
     "your-name": "Your name",
     "your-email-address": "Your email address",
