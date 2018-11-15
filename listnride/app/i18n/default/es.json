@@ -3,8 +3,8 @@
     "learn-more": "Leer más",
     "payment-type": {
       "pay-pal-account": "Paypal",
-      "credit-card": "Credit card",
-      "paypal-account": "Paypal account"
+      "credit-card": "Tarjeta de crédito",
+      "paypal-account": "Cuenta de Paypal"
     },
     "change": "Change",
     "map": "Mapa",
@@ -22,7 +22,7 @@
     "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
-      "unexpected-payment-type": "Unexpected payment type",
+      "unexpected-payment-type": "Tipo de pago inesperado",
       "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
       "phone-not-valid": "Por favor ingresa un número de teléfono válido",
       "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio"
@@ -485,6 +485,7 @@
     },
     "payment": {
       "tab": "3. Formas de pago",
+      "current-method": "Forma de pago actual",
       "getting-saved": "Se ha guardado el método de pago",
       "select-method": "Selecciona tu forma de pago",
       "subtitle": "Sólo te cobraremos después de que el anunciante de la bici haya aceptado tu solicitud.",
@@ -571,11 +572,12 @@
       "required-vat": "Por favor, especifica tu número de IVA.",
       "minlength-vat": "El IVA debe ser superior a 2 caracteres."
     },
-    "pick-payment-method": "Please pick a payment method",
-    "change-payment-method": "Change payment method",
-    "your-payment-method": "Your payment method:",
+    "pick-payment-method": "Por favor elige un método de pago",
+    "change-payment-method": "Cambiar método de pago",
+    "your-payment-method": "Tu método de pago:",
     "pay-pal-account": "PayPal",
-    "pick-payment-method-new": "Please pick a new method",
+    "pick-payment-method-new": "Por favor elige un nuevo método de pago",
+    "change-payout-method": "Cambiar el método de cobro",
     "profile": "Perfil",
     "invite": "Invitar a amigos",
     "account": "Cuenta",
@@ -762,6 +764,7 @@
   },
   "forms": {
     "first-name": "Nombre",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Guardar nueva contraseña",
     "your-name": "Nombre",
     "your-email-address": "Correo electrónico",

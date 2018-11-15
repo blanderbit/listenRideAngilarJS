@@ -3,8 +3,8 @@
     "learn-more": "Mehr erfahren",
     "payment-type": {
       "pay-pal-account": "Paypal",
-      "credit-card": "Credit card",
-      "paypal-account": "Paypal account"
+      "credit-card": "Kreditkarte",
+      "paypal-account": "Paypal-Konto"
     },
     "change": "Change",
     "map": "Karte",
@@ -22,7 +22,7 @@
     "please-select": "Bitte auswählen",
     "errors": {
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
-      "unexpected-payment-type": "Unexpected payment type",
+      "unexpected-payment-type": "Zahlungsart nicht gültig",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
       "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",
       "phone-required": "Bitte gib die Telefonnummer ein, diese wird benötigt"
@@ -490,6 +490,7 @@
     },
     "payment": {
       "tab": "3. Zahlungsmethode",
+      "current-method": "Aktuelle Zahlungsart",
       "getting-saved": "Die Zahlungsmethode wurde gespeichert",
       "select-method": "Wähle deine Zahlungsart aus",
       "subtitle": "Wir buchen erst Geld ab, wenn deine Anfrage vom Vermieter bestätigt wurde.",
@@ -567,20 +568,21 @@
   },
   "settings": {
     "settings": "Einstellungen",
-    "newsletter-subscribe": "Ja, bitte sendet mir monatlichen listnride-Newsletter",
+    "newsletter-subscribe": "Ja, bitte sendet mir den monatlichen listnride-Newsletter",
     "newsletter-description": "Abonniere unseren Newsletter und erhalte jede Ausgabe frisch in deinen Posteingang. Unser Newsletter informiert dich über die neuesten Marken, nützliche und neue Funktionen auf listnride.de, was in der Community passiert, sowie über Reiseziele mit gelisteten Fahrrädern und natürlich jede menge Fahrrad-Events.\nHaben wir schon erwähnt, dass der Newsletter mit viel Liebe und Hingabe gefertigt wird? Wird er.\nDu kannst den Newsletter natürlich jederzeit abbestellen.",
     "newsletter": "Newsletter",
     "errors": {
-      "required-company-name": "Bitte gib den Namen deiner Firma ein.",
+      "required-company-name": "Bitte trage hier deinen Firmennamen ein.",
       "minlength-company-name": "Der Firmenname sollte länger als 2 Zeichen sein",
       "required-vat": "Bitte geben Sie Ihre Umsatzsteuer-Identifikationsnummer ein.",
-      "minlength-vat": "Die Mehrwertsteuer sollte länger als 2 Zeichen sein"
+      "minlength-vat": "Die Umsatzsteuer-Identifikationsnummer sollte länger als 2 Zeichen sein"
     },
-    "pick-payment-method": "Please pick a payment method",
-    "change-payment-method": "Change payment method",
-    "your-payment-method": "Your payment method:",
+    "pick-payment-method": "Bitte wählt eine Zahlungsmethode aus",
+    "change-payment-method": "Bezahlungsmethode ändern",
+    "your-payment-method": "Deine Zahlungsart:",
     "pay-pal-account": "PayPal",
-    "pick-payment-method-new": "Please pick a new method",
+    "pick-payment-method-new": "Bitte wählt eine neue Zahlungsmethode aus",
+    "change-payout-method": "Auszahlungsmethode ändern",
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
@@ -768,6 +770,7 @@
   },
   "forms": {
     "first-name": "Vorname",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Neues Passwort speichern",
     "your-name": "Dein Name",
     "your-email-address": "Deine E-Mail Adresse",
