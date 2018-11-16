@@ -361,17 +361,17 @@
     "black-friday": {
       "title": "Black Friday",
       "pre": {
-        "subtitle": "Get huge discounts for<br> your next rental"
+        "subtitle": "Ontvang geweldige kortingen voor <br>uw volgende huurperiode"
       },
-      "use-code": "Use this code",
+      "use-code": "Gebruik deze code",
       "steps": {
-        "header": "How does it work?",
-        "step1": "Find a bike",
-        "step2": "Add the voucher on bike request",
-        "step3": "Agree on pick up"
+        "header": "Hoe werkt het?",
+        "step1": "Vind je fiets",
+        "step2": "Wissel de voucher in",
+        "step3": "Ophaalafspraak vastleggen"
       },
-      "footer-text": "The voucher is valid until the December 31st 2018.<br>\nDid you know that all rentals of bikes in Germany and Austria are insured? ",
-      "subtitle": "Get 30€ for your next rental. <br>Only today."
+      "footer-text": "Deze voucher is alleen geldig tot 31.12.2018. <br>\nMeer informatie over het inwisselen van een voucher vind je <a href=\"/faq?group=7\" target=\"_blank\">hier </a>. <br>\nWist je dat alle huurfietsen in Oostenrijk en Duitsland zijn verzekerd? ",
+      "subtitle": "Ontvang 30 € voor je volgende fietshuur. <br>Alleen vandaag."
     },
     "berlin-triathlon": {
       "title": "Huur een racefiets voor de Berlin Triathlon 2019",

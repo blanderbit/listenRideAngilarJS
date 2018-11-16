@@ -283,8 +283,8 @@
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
       "black-friday": {
-        "meta-title": "Black Friday 2019 bike rental discount | listnride",
-        "meta-description": "Black Friday description"
+        "meta-title": " Black Friday 2018 |Sconto noleggio bici listnride",
+        "meta-description": "Sconto del Black Friday su listnride! Grande sconto sul prossimo noleggio di biciclette, solo questo fine settimana."
       },
       "eroica-gaiole": {
         "meta-title": "L' Eroica, manifetazione cicloturistica con bici da corsa d'epoca",
@@ -486,7 +486,7 @@
     "payment": {
       "tab": "3. Metodi di Pagamento",
       "current-method": "Attuale metodo di pagamento",
-      "getting-saved": "Il metodo di pagamento è stato salvato",
+      "getting-saved": "Payment method saving in progress",
       "select-method": "Seleziona il tuo metodo di pagamento",
       "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
       "credit-card": "Carta di credito",
@@ -537,6 +537,8 @@
   },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
+    "add-payment-success": "Il metodo di pagamento è stato salvato",
+    "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "bike-edit-successful": "Le modifiche sono state salvate",
     "error": "Si è verificato un errore. Assicurati che la connessione a Internet funzioni e riprova.",
     "add-payout-success": "Il metodo di pagamento è stato aggiunto con successo.",

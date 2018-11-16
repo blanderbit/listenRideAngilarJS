@@ -361,17 +361,17 @@
     "black-friday": {
       "title": "Black Friday",
       "pre": {
-        "subtitle": "Get huge discounts for<br> your next rental"
+        "subtitle": "Hol dir riesige Rabatte für<br> deine nächste Miete."
       },
-      "use-code": "Use this code",
+      "use-code": "Benutze diesen Code",
       "steps": {
-        "header": "How does it work?",
-        "step1": "Find a bike",
-        "step2": "Add the voucher on bike request",
-        "step3": "Agree on pick up"
+        "header": "Wie funktioniert das?",
+        "step1": "Finde dein Rad",
+        "step2": "Gutschein einlösen",
+        "step3": "Vereinbarung der Abholung"
       },
-      "footer-text": "The voucher is valid until the December 31st 2018.<br>\nDid you know that all rentals of bikes in Germany and Austria are insured? ",
-      "subtitle": "Get 30€ for your next rental. <br>Only today."
+      "footer-text": "Dieser Gutschein ist nur bis zum 31.12.2018 gültig. <br>\nWeitere Informationen zum Einlösen eines Gutscheins findest du <a href=\"/faq?group=7\" target=\"_blank\">hier </a>. <br>\nWusstest du, dass alle Leihräder in Österreich und Deutschland versichert sind?",
+      "subtitle": "Erhalte 30€ für deine nächste Miete. <br>Nur heute."
     },
     "berlin-triathlon": {
       "title": "Miete dir ein Rennrad für den Berlin Triathlon 2019",
