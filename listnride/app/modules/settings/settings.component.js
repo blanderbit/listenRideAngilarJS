@@ -6,7 +6,6 @@ angular.module('settings',[])
   controllerAs: 'settings',
   controller: [
     '$localStorage',
-    '$window',
     '$mdToast',
     '$translate',
     '$state',
@@ -16,7 +15,6 @@ angular.module('settings',[])
     'Base64',
     'Upload',
     'loadingDialog',
-    'ENV',
     'ngMeta',
     'userApi',
     '$timeout',
@@ -25,8 +23,9 @@ angular.module('settings',[])
     'voucher',
     'notification',
     'paymentHelper',
-    function SettingsController($localStorage, $window, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
-      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification, paymentHelper) {
+    'payoutHelper',
+    function SettingsController($localStorage, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
+      Upload, loadingDialog, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification, paymentHelper, payoutHelper) {
 
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -62,13 +61,16 @@ angular.module('settings',[])
 
         // payment
         settings.showPaymentChangeForm = false;
-        settings.showPayoutChangeForm = false;
         settings.paymentLoading = false;
         settings.creditCardData = {};
         settings.tokenizeCard = tokenizeCard;
         settings.openPaypal = openPaypal;
         settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
         settings.onErrorPaymentUpdate = onErrorPaymentUpdate;
+        // payout
+        settings.showPayoutChangeForm = false;
+        settings.payoutMethod.loading = false;
+        settings.payoutMethod.formData = {};
 
         // methods
         settings.changePassword = changePassword;
@@ -472,39 +474,25 @@ angular.module('settings',[])
       }
 
       function addPayoutMethod () {
-        var data = {
-          "payout_method": {
-            'payment_type': settings.payoutMethod.payment_type,
-            'first_name': settings.payoutMethod.formData.first_name,
-            'last_name': settings.payoutMethod.formData.last_name,
-            'email': settings.payoutMethod.formData.email,
-            'iban': settings.payoutMethod.formData.iban,
-            'bic': settings.payoutMethod.formData.bic
-          }
-        };
-
         settings.payoutMethod.loading = true;
+        payoutHelper.postPayout(settings.payoutMethod.formData, settings.payoutMethod.payment_type, onSuccessPayoutUpdate, onErrorPayoutUpdate);
 
-        // it will be another endpoint
-        api.post('/users/' + $localStorage.userId + '/payout_methods', data).then(
-          function (success) {
-            notification.show(success, null, 'toasts.add-payout-success');
-            settings.user.payout_method = data.payout_method;
-            if (settings.payoutMethod.payment_type === 'credit-card') {
-              settings.payoutMethod.short_iban = getShortIban();
-            }
-            settings.payoutMethod.loading = false;
-            // clear payout form
-            settings.payoutMethod.formData = {};
-            settings.showPayoutChangeForm = false;
-            settings.payoutForm.$setPristine();
-            settings.payoutForm.$setUntouched();
-          },
-          function (error) {
-            notification.show(error, 'error');
-            settings.payoutMethod.loading = false;
+        function onSuccessPayoutUpdate(data) {
+          settings.user.payout_method = data.payout_method;
+          if (settings.payoutMethod.payment_type === 'credit-card') {
+            settings.payoutMethod.short_iban = getShortIban();
           }
-        );
+          settings.payoutMethod.loading = false;
+          // clear payout form
+          settings.payoutMethod.formData = {};
+          settings.showPayoutChangeForm = false;
+          settings.payoutForm.$setPristine();
+          settings.payoutForm.$setUntouched();
+        }
+
+        function onErrorPayoutUpdate() {
+          settings.payoutMethod.loading = false;
+        }
       };
 
       function getShortIban() {
