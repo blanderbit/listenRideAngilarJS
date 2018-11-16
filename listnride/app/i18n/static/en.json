@@ -367,10 +367,10 @@
       "steps": {
         "header": "How does it work?",
         "step1": "Find a bike",
-        "step2": "Redeem the voucher",
-        "step3": "Agree on pick up"
+        "step2": "Select rental period",
+        "step3": "Redeem & request the bike"
       },
-      "footer-text": "This voucher is only valid until 31.12.2018. <br>\nFind more information on how to redeem a voucher <a href=\"/faq?group=7\" target=\"_blank\">here</a>.<br>\nDid you know that all bike rentals in Austria and Germany are insured?\n",
+      "footer-text": "This voucher is only valid until 31.12.2018. <br>\nFind more information on how to redeem a voucher <a href=\"/faq?group=7\" target=\"_blank\">here</a>.<br>\nDid you know that all bike rentals in Austria and Germany are <a href=\"/insurance\" target=\"_blank\">insured</a>?",
       "subtitle": "Get 30€ for your next rental. <br>Only today."
     },
     "berlin-triathlon": {
