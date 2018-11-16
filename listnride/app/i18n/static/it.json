@@ -361,7 +361,7 @@
     "black-friday": {
       "title": "Black Friday",
       "pre": {
-        "subtitle": "Get huge discounts for your next rental"
+        "subtitle": "Get huge discounts for<br> your next rental"
       },
       "use-code": "Use this code",
       "steps": {
