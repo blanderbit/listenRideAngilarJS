@@ -361,17 +361,17 @@
     "black-friday": {
       "title": "Black Friday",
       "pre": {
-        "subtitle": "Get huge discounts for<br> your next rental"
+        "subtitle": "Grandes descuentos para <br>tu próximo alquiler"
       },
       "use-code": "Use this code",
       "steps": {
         "header": "How does it work?",
         "step1": "Find a bike",
-        "step2": "Add the voucher on bike request",
+        "step2": "Redeem the voucher",
         "step3": "Agree on pick up"
       },
-      "footer-text": "The voucher is valid until the December 31st 2018.<br>\nDid you know that all rentals of bikes in Germany and Austria are insured? ",
-      "subtitle": "Get 30€ for your next rental. <br>Only today."
+      "footer-text": "Este descuento es válido hasta el 31.12.2018. <br>\nEncuentra más información sobre cómo canjear un cupón <a href=\"/faq?group=7\" target=\"_blank\">aquí </a>. <br>\n¿Sabías que todos los alquileres de bicicletas en Austria y Alemania están asegurados?",
+      "subtitle": "Consigue 30 € de descuento para tu próximo alquiler. <br>Solo por hoy."
     },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019",

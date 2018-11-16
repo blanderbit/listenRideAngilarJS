@@ -281,8 +281,8 @@
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
       "black-friday": {
-        "meta-title": "Black Friday 2019 bike rental discount | listnride",
-        "meta-description": "Black Friday description"
+        "meta-title": "Black Friday 2018 fietshuur korting | listnride",
+        "meta-description": "Black Friday-korting bij listnride! Enorme korting op  je volgende fietshuur, alleen dit weekend."
       },
       "eroica-gaiole": {
         "meta-title": "Eroica vintage wielertocht",
@@ -490,7 +490,7 @@
     "payment": {
       "tab": "3. Betaalgegevens",
       "current-method": "Huidige betaalmethode",
-      "getting-saved": "Betaalmethode is opgeslagen",
+      "getting-saved": "Betaalmethode wordt opgeslagen",
       "select-method": "Selecteer je betaalmethode",
       "subtitle": "We incasseren de huur nadat de verhuurder je aanvraag accepteerd",
       "credit-card": "Kredietkaart",
@@ -541,6 +541,8 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
+    "add-payment-success": "Betaalmethode is opgeslagen",
+    "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "bike-edit-successful": "De aanpassingen zijn succesvol opgeslagen",
     "error": "Er is een fout opgetreden. Check of je internetverbinding werkt en probeer het nogmaals.",
     "add-payout-success": "Je uitbetaalmethode is toegevoegd aan je profiel.",
