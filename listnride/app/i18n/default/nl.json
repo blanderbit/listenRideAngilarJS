@@ -168,6 +168,11 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "delete-events": {
+    "black-friday": {
+      "subtitle": "Get 30€ for your next rental.<br>Only today."
+    }
+  },
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
@@ -175,7 +180,7 @@
       "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past."
     },
     "black-friday": {
-      "subtitle": "Get 30€ for your next rental.<br>Only today."
+      "subtitle": "Get 30€ for your next rental. <br> Only today."
     },
     "berlin-triathlon-xl": {
       "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past.",
@@ -284,7 +289,7 @@
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
       "black-friday": {
-        "meta-title": "Black Friday Meta title",
+        "meta-title": "Black Friday 2019 bike rental discount | listnride",
         "meta-description": "Black Friday description"
       },
       "eroica-gaiole": {
