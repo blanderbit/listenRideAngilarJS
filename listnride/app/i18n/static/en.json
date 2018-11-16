@@ -358,6 +358,20 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     },
+    "black-friday": {
+      "title": "Black Friday",
+      "pre": {
+        "subtitle": "Get huge discounts for your next rental"
+      },
+      "use-code": "Use this code",
+      "steps": {
+        "header": "How does it work?",
+        "step1": "Find a bike",
+        "step2": "Add the voucher on bike request",
+        "step3": "Agree on pick up"
+      },
+      "footer-text": "The voucher is valid until the December 31st 2018.<br>\nDid you know that all rentals of bikes in Germany and Austria are insured? "
+    },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019",
       "text": "You need a road bike for <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money! "
