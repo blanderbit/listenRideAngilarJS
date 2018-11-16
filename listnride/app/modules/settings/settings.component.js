@@ -68,6 +68,7 @@ angular.module('settings',[])
         settings.tokenizeCard = tokenizeCard;
         settings.openPaypal = openPaypal;
         settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
+        settings.onErrorPaymentUpdate = onErrorPaymentUpdate;
 
         // methods
         settings.changePassword = changePassword;
@@ -96,7 +97,7 @@ angular.module('settings',[])
           setUserData(response.data);
           paymentHelper.setupBraintreeClient();
         });
-      }
+      };
 
       function setUserData(data) {
         settings.user = data;
@@ -443,7 +444,7 @@ angular.module('settings',[])
 
       function tokenizeCard () {
         settings.paymentLoading = true;
-        paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate);
+        paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate, settings.onErrorPaymentUpdate);
       };
 
       function openPaypal () {
@@ -452,7 +453,7 @@ angular.module('settings',[])
 
       function onSuccessPaymentUpdate(data) {
         // reset form and data after success
-        settings.creditCardData = {}
+        settings.creditCardData = {};
         settings.paymentForm.$setPristine();
         settings.paymentForm.$setUntouched();
         settings.showPaymentChangeForm = false;
