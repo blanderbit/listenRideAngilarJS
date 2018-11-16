@@ -176,19 +176,11 @@
   "test": {
     "delete-me": "TEST TEXT"
   },
-  "delete-events": {
-    "black-friday": {
-      "subtitle": "Get 30€ for your next rental. <br>Only today."
-    }
-  },
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>June 2nd 2019</b>",
       "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
       "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
-    },
-    "black-friday": {
-      "subtitle": "Get 30€ for your next rental. <br> Only today."
     },
     "berlin-triathlon-xl": {
       "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need.",
