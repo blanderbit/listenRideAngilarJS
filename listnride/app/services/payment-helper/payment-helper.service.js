@@ -59,6 +59,7 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
             function () {
               if (typeof cb == 'function') cb(data.payment_method);
+              notification.show(success, null, 'toasts.add-payment-success');
             },
             function (error) {
               if (typeof cbError == 'function') cbError();
