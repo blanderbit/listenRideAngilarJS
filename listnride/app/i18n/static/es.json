@@ -358,6 +358,20 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross regresa al Parque Olímpico de Múnich los días 29 y 30 de octubre para la tercera edición de lo que se ha convertido rápidamente en un legendario festival de ciclocross. Si deseas participar pero no tiene la bici correcta, puedes alquilar una a través de listnride. Hay entusiastas de la bicicleta como tú que ofrecen las bicicletas que puedes ver a continuación. Puedes solicitar y reservar los recorridos antes del evento y recoger la bici según lo acordado con el propietario. Los dueños de las bicis también pueden ofrecer en alquiler las bicis que no usen y así ganar algo de dinero mientras conocen a personas interesantes que participan en el evento. ¡Conviértete en parte de nuestra creciente comunidad!"
     },
+    "black-friday": {
+      "title": "Black Friday",
+      "pre": {
+        "subtitle": "Get huge discounts for your next rental"
+      },
+      "use-code": "Use this code",
+      "steps": {
+        "header": "How does it work?",
+        "step1": "Find a bike",
+        "step2": "Add the voucher on bike request",
+        "step3": "Agree on pick up"
+      },
+      "footer-text": "The voucher is valid until the December 31st 2018.<br>\nDid you know that all rentals of bikes in Germany and Austria are insured? "
+    },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019",
       "text": "You need a road bike for <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money! "

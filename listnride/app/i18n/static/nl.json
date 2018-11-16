@@ -358,6 +358,20 @@
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
     },
+    "black-friday": {
+      "title": "Black Friday",
+      "pre": {
+        "subtitle": "Get huge discounts for your next rental"
+      },
+      "use-code": "Use this code",
+      "steps": {
+        "header": "How does it work?",
+        "step1": "Find a bike",
+        "step2": "Add the voucher on bike request",
+        "step3": "Agree on pick up"
+      },
+      "footer-text": "The voucher is valid until the December 31st 2018.<br>\nDid you know that all rentals of bikes in Germany and Austria are insured? "
+    },
     "berlin-triathlon": {
       "title": "Huur een racefiets voor de Berlin Triathlon 2019",
       "text": "Je hebt een racefiets nodig voor <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019 </a>? We hebben er één voor je! Samen met de listnride community bieden wij geschikte racefietsen die u gemakkelijk kunt huren zolang u wilt. Kies gewoon één van de onderstaande fietsen, vraag hem aan voor de gewenste periode en haal hem op wanneer het zover is. Simpel als dat.\n <br><br>\n Je kunt niet deelnemen? Help iemand in nood. <a href=\"/listing-a-bike\" target=\"_blank\">Plaats je fiets online</a> en verdien wat extra zakgeld!"
