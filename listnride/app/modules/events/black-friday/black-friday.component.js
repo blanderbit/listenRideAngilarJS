@@ -3,9 +3,11 @@
 angular.module('blackFriday', []).component('blackFriday', {
   templateUrl: 'app/modules/events/black-friday/black-friday.template.html',
   controllerAs: 'blackFriday',
-  controller: ['api', '$translate', 'ngMeta', '$translatePartialLoader', 'notification',
-    function BlackFridayController(api, $translate, ngMeta, $tpl, bikeOptions, notification) {
+  controller: ['ENV', '$translate', 'ngMeta', '$translatePartialLoader', 'notification',
+    function BlackFridayController(ENV, $translate, ngMeta, $tpl, bikeOptions, notification) {
       var blackFriday = this;
+
+      blackFriday.isStaging = ENV.apiEndpoint !== "https://api.listnride.com/v2";
 
       $tpl.addPart('static');
       ngMeta.setTitle($translate.instant("meta.events.black-friday.meta-title"));
