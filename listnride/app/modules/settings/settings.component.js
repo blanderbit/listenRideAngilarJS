@@ -67,6 +67,7 @@ angular.module('settings',[])
         settings.openPaypal = openPaypal;
         settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
         settings.onErrorPaymentUpdate = onErrorPaymentUpdate;
+        settings.isPayoutExist = isPayoutExist;
         // payout
         settings.showPayoutChangeForm = false;
         settings.payoutMethod.loading = false;
@@ -497,6 +498,19 @@ angular.module('settings',[])
 
       function getShortIban() {
         return '**** ' + settings.user.payout_method.iban.slice(-6);
+      }
+
+      function isPayoutExist() {
+        if (!settings.user.payout_method) return false;
+        switch (settings.user.payout_method.payment_type) {
+          case 'credit-card':
+            return !!(settings.user.payout_method.iban && settings.user.payout_method.bic)
+          case 'paypal-account':
+            return !!settings.user.payout_method.email;
+          default:
+            notification.show(null, null, 'shared.errors.unexpected-payment-type');
+            return false;
+        }
       }
 
       // business account settings
