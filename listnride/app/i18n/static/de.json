@@ -370,7 +370,7 @@
         "step2": "Mietzeitraum auswählen",
         "step3": "Einlösen & Rad anfragen"
       },
-      "footer-text": "Dieser Gutschein ist nur bis zum 31.12.2018 gültig. <br>\nWeitere Informationen zum Einlösen eines Gutscheins findest du <a href=\"/faq?group=7\" target=\"_blank\">hier </a>. <br>\nWusstest du, dass alle Leihräder in Österreich und Deutschland versichert sind?",
+      "footer-text": "Dieser Gutschein ist nur bis zum 31.12.2018 gültig. <br>\nWeitere Informationen zum Einlösen eines Gutscheins findest du <a href=\"/faq?group=7\" target=\"_blank\">hier</a>. <br>\nWusstest du, dass alle Leihräder in Österreich und Deutschland <a href=\"/insurance\" target=\"_blank\">versichert</a> sind?",
       "subtitle": "Erhalte 30€ für deine nächste Miete. <br>Nur heute."
     },
     "berlin-triathlon": {

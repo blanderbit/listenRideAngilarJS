@@ -370,7 +370,7 @@
         "step2": "Selecciona el período de alquiler",
         "step3": "Canjea el cupón  y solicita la bici"
       },
-      "footer-text": "Este descuento es válido hasta el 31.12.2018. <br>\nEncuentra más información sobre cómo canjear un cupón <a href=\"/faq?group=7\" target=\"_blank\">aquí </a>. <br>\n¿Sabías que todos los alquileres de bicicletas en Austria y Alemania están asegurados?",
+      "footer-text": "Este descuento es válido hasta el 31.12.2018. <br>\nEncuentra más información sobre cómo canjear un cupón <a href=\"/faq?group=7\" target=\"_blank\">aquí</a>. <br>\n¿Sabías que todos los alquileres de bicicletas en Austria y Alemania están<a href=\"/insurance\" target=\"_blank\">asegurados</a>?",
       "subtitle": "Consigue 30 € de descuento para tu próximo alquiler. <br>Solo por hoy."
     },
     "berlin-triathlon": {
