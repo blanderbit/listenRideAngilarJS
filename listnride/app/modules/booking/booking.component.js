@@ -312,9 +312,8 @@ angular.module('booking', [])
                 booking.paymentDescription = paymentHelper.getPaymentShortDescription(booking.user.payment_method);
               }
 
-              // if (!booking.shopBooking || Object.keys(oldUser).length > 0) {
-                setFirstTab();
-              // }
+              setFirstTab();
+
               updatePrices();
               $timeout(function () {
                 booking.hidden = false;
@@ -328,18 +327,21 @@ angular.module('booking', [])
 
         function setFirstTab() {
           if (!booking.shopBooking || booking.selectedIndex > 0) {
-            if (booking.user.status == 3) {
-              booking.selectedIndex = 3;
-              trackTabLoad();
-            }
-            else if (booking.user.has_phone_number && booking.user.has_address) {
-              booking.selectedIndex = 2;
-              trackTabLoad();
+            if (!authentication.loggedIn()) {
+              booking.selectedIndex = 0; // signup tab
+            } else if (!validUserDetails()) {
+              booking.selectedIndex = 1; // details tab
+            } else if(!user.booking.payment_method) {
+              booking.selectedIndex = 2; // payment tab
             } else {
-              booking.selectedIndex = 1;
-              trackTabLoad();
+              booking.selectedIndex = 3; // overview tab
             }
+            trackTabLoad();
           }
+        }
+
+        function validUserDetails() {
+          return booking.user.confirmed_phone && booking.user.has_address;
         }
 
         booking.emailSignup = function () {
