@@ -589,6 +589,8 @@
     "pay-pal-account": "PayPal",
     "pick-payment-method-new": "Bitte wählt eine neue Zahlungsmethode aus",
     "change-payout-method": "Auszahlungsmethode ändern",
+    "set-payment-method": "Zahlungsmethode einstellen",
+    "set-payout-method": "Auszahlungsmethode festlegen",
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
