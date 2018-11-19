@@ -63,11 +63,12 @@
           </p>
 
           <div layout="column" class="lnr-mh-x2">
-            <span
+            <div
               class="lnr-color-primary lnr-link lnr-off-selection"
               ng-click="settingsAccount.parent.showPaymentChangeForm = !settingsAccount.parent.showPaymentChangeForm">
-                {{ 'settings.change-payment-method' | translate }}
-            </span>
+                <span ng-if="settingsAccount.parent.user.payment_method">{{ 'settings.change-payment-method' | translate }}</span>
+                <span ng-if="!settingsAccount.parent.user.payment_method">{{ 'settings.set-payment-method' | translate }}</span>
+            </div>
             <md-radio-group
               ng-if="settingsAccount.parent.showPaymentChangeForm"
               ng-model="settingsAccount.parent.paymentMethod"
@@ -118,20 +119,22 @@
         </div>
         <div flex-gt-xs="70" layout-margin>
           <p>{{ 'settings.payout-method-description' | translate }}</p>
-          <p ng-if="!settingsAccount.parent.user.payout_method">{{ 'settings.no-payout-method' | translate }}</p>
-          <p class="md-body-2"
-            ng-if="settingsAccount.parent.user.payout_method &&
-                   settingsAccount.parent.user.payout_method.payment_type == 'credit-card' &&
-                   settingsAccount.parent.user.payout_method.iban">
-            {{'settings.payout-bank' | translate }} {{ settingsAccount.parent.payoutMethod.short_iban }}</p>
-          <p class="md-body-2" ng-if="settingsAccount.parent.user.payout_method && settingsAccount.parent.user.payout_method.payment_type == 'paypal-account'">{{
-            'settings.payout-paypal' | translate }} {{ settingsAccount.parent.user.payout_method.email }}</p>
-          <div layout="column">
-            <span
+          <p ng-if="!settingsAccount.parent.isPayoutExist()">{{ 'settings.no-payout-method' | translate }}</p>
+          <p class="md-body-2" ng-if="settingsAccount.parent.isPayoutExist()">
+            <span ng-if="settingsAccount.parent.user.payout_method.payment_type == 'credit-card'">
+              {{'settings.payout-bank' | translate }} {{ settingsAccount.parent.payoutMethod.short_iban }}
+            </span>
+            <span ng-if="settingsAccount.parent.user.payout_method.payment_type == 'paypal-account'">
+              {{'settings.payout-paypal' | translate }} {{ settingsAccount.parent.user.payout_method.email }}
+            </span>
+          </p>
+          <div layout="column" class="lnr-mt-x2">
+            <div
               class="lnr-color-primary lnr-link lnr-off-selection"
               ng-click="settingsAccount.parent.showPayoutChangeForm = !settingsAccount.parent.showPayoutChangeForm">
-                {{ 'settings.change-payout-method' | translate }}
-            </span>
+                <span ng-if="settingsAccount.parent.isPayoutExist()">{{ 'settings.change-payout-method' | translate }}</span>
+                <span ng-if="!settingsAccount.parent.isPayoutExist()">{{ 'settings.set-payout-method' | translate }}</span>
+            </div>
             <md-radio-group class="lnr-mh-x2" ng-if="settingsAccount.parent.showPayoutChangeForm" ng-model="settingsAccount.parent.payoutMethod.payment_type" layout="row">
               <md-radio-button value="credit-card">{{ 'settings.bank-account' | translate }}</md-radio-button>
               <md-radio-button value="paypal-account">{{ 'settings.paypal' | translate }}</md-radio-button>
