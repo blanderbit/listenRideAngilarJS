@@ -1,6 +1,12 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Carta di credito",
+      "paypal-account": "Conto Paypal"
+    },
+    "change": "Change",
     "map": "Mappa",
     "bike-type": "Tipo di bici",
     "filter-by": "Filtra per",
@@ -16,6 +22,7 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
+      "unexpected-payment-type": "Tipo di pagamento non previsto",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
       "phone-required": "Per favore inserisci il tuo numero di telefono, questo campo è obbligatorio"
@@ -275,6 +282,10 @@
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
+      "black-friday": {
+        "meta-title": " Black Friday 2018 |Sconto noleggio bici listnride",
+        "meta-description": "Sconto del Black Friday su listnride! Grande sconto sul prossimo noleggio di biciclette, solo questo fine settimana."
+      },
       "eroica-gaiole": {
         "meta-title": "L' Eroica, manifetazione cicloturistica con bici da corsa d'epoca",
         "meta-description": "Noleggia la tua bici da corsa vintage per l'Eroica"
@@ -474,7 +485,8 @@
     },
     "payment": {
       "tab": "3. Metodi di Pagamento",
-      "getting-saved": "Il metodo di pagamento è stato salvato",
+      "current-method": "Attuale metodo di pagamento",
+      "getting-saved": "Payment method saving in progress",
       "select-method": "Seleziona il tuo metodo di pagamento",
       "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
       "credit-card": "Carta di credito",
@@ -525,6 +537,8 @@
   },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
+    "add-payment-success": "Il metodo di pagamento è stato salvato",
+    "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "bike-edit-successful": "Le modifiche sono state salvate",
     "error": "Si è verificato un errore. Assicurati che la connessione a Internet funzioni e riprova.",
     "add-payout-success": "Il metodo di pagamento è stato aggiunto con successo.",
@@ -551,6 +565,23 @@
   },
   "settings": {
     "settings": "Impostazioni",
+    "newsletter-subscribe": "Sì, per favore inviami la newsletter mensile di listnride",
+    "newsletter-description": "Iscriviti e ricevi la nostra newsletter  nella tua casella di posta. La nostra newsletter ti informa sui nuovi marchi, sulle nuove e utili funzioni su listnride.it, su ciò che accade nella community, sulle destinazioni di viaggio con biciclette presenti in piattaforma e gli eventi ciclistici.\nAbbiamo detto che è realizzata con molto amore e dedizione? Perchè lo è.\nPuoi disiscriverti in qualsiasi momento, ovviamente.",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Inserisci il nome della tua azienda.",
+      "minlength-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri",
+      "required-vat": "Si prega di inserire il numero di partita IVA.",
+      "minlength-vat": "L'IVA dovrebbe essere più lunga di 2 caratteri"
+    },
+    "pick-payment-method": "Aggiungi il metodo di pagamento",
+    "change-payment-method": "Cambia il metodo di pagamento",
+    "your-payment-method": "Il tuo metodo di pagamento:",
+    "pay-pal-account": "PayPal",
+    "pick-payment-method-new": "Aggiungi un nuovo metodo",
+    "change-payout-method": "Cambia il metodo di pagamento",
+    "set-payment-method": "Imposta il metodo di pagamento",
+    "set-payout-method": "Imposta il metodo di pagamento",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
     "account": "Conto",
@@ -737,6 +768,7 @@
   },
   "forms": {
     "first-name": "Nome",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Salva nuova password",
     "your-name": "Il tuo nome",
     "your-email-address": "Il tuo indirizzo email",
@@ -1038,6 +1070,7 @@
       },
       "5": {
         "pedelec": "Bicicletta a pedalata assistita",
+        "event-bike": "Biciclette per eventi",
         "e-bike": "Bicicletta elettrica",
         "cargo-bike": "Bici da Carico",
         "bike-trailer": "Rimorchio per Bici",

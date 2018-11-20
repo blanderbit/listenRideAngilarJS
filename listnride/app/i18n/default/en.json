@@ -1,6 +1,12 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Credit card",
+      "paypal-account": "Paypal account"
+    },
+    "change": "Change",
     "map": "Map",
     "bike-type": "Bike type",
     "filter-by": "Filter by",
@@ -16,6 +22,7 @@
     "please-select": "Please select",
     "errors": {
       "email-required": "Please enter your email address, email is required",
+      "unexpected-payment-type": "Payment type not valid",
       "email-not-valid": "Please, enter a valid email address",
       "phone-not-valid": "Please, enter a valid phone number",
       "phone-required": "Please enter your phone number, this field is required"
@@ -281,6 +288,10 @@
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
+      "black-friday": {
+        "meta-title": "Black Friday 2018 bike rental discount | listnride",
+        "meta-description": "Black Friday discount at listnride! Huge discount on your next bike rental, only this weekend."
+      },
       "eroica-gaiole": {
         "meta-title": "Eroica classic road bike event",
         "meta-description": "Rent your vintage road bike for Eroica on listnride"
@@ -455,7 +466,7 @@
     "agree-terms-link": "listnride Terms",
     "footer": {
       "questions": "Do you have questions about booking a bike?",
-      "call-us": "Having a Questions? Call us:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a>\n. Or\n<a href=\"mailto:contact@listnride.com\">write us</a>.",
+      "call-us": "Need help? Call us:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a>\nOr\n<a href=\"mailto:contact@listnride.com\">write us</a>.",
       "email-us": "Or write us an email",
       "support": "listnride Support"
     },
@@ -486,7 +497,8 @@
     },
     "payment": {
       "tab": "3. Payment Method",
-      "getting-saved": "Payment method has been saved",
+      "current-method": "Current payment method",
+      "getting-saved": "Payment method saving in progress",
       "select-method": "Select your Payment Method",
       "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
       "credit-card": "Credit Card",
@@ -537,11 +549,13 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "add-payment-success": "Payment method has been saved",
+    "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "bike-edit-successful": "Your changes have been saved",
     "error": "An error occured. Please make sure your internet connection works and try again.",
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",
-    "add-voucher-error": "Unfortunately, the supplied voucher is not valid.",
+    "add-voucher-error": "Unfortunately, the voucher code is not valid.",
     "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
     "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
     "successfully-sign-up": "You have successfully signed up. Welcome!",
@@ -563,12 +577,29 @@
   },
   "settings": {
     "settings": "Settings",
+    "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
+    "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Please enter your company name.",
+      "minlength-company-name": "Company name should be longer than 2 characters",
+      "required-vat": "Please enter your VAT number.",
+      "minlength-vat": "The VAT number should be longer than 2 characters"
+    },
+    "pick-payment-method": "Please pick a payment method",
+    "change-payment-method": "Change payment method",
+    "your-payment-method": "Your payment method:",
+    "pay-pal-account": "PayPal",
+    "pick-payment-method-new": "Please pick a new method",
+    "change-payout-method": "Change payout method",
+    "set-payment-method": "Set payment method",
+    "set-payout-method": "Set payout method",
     "profile": "Profile",
     "invite": "Invite Friends",
     "account": "Account",
     "contact-to-update": "To change your name or email address please contact us\nvia e-mail at: contact@listnride.com",
     "delete-account": "Deactivate Account",
-    "delete-account-description": "Here you can dactivate your listnride account. This step can not be undone.",
+    "delete-account-description": "Here you can deactivate your listnride account. This step can not be undone.",
     "delete-account-sure": "Are you really sure?",
     "delete-account-sure-description": "This step can not be undone.",
     "delete-account-yes": "Yes, deactivate",
@@ -750,6 +781,7 @@
   },
   "forms": {
     "first-name": "First Name",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Save new password",
     "your-name": "Your name",
     "your-email-address": "Your email address",
@@ -1052,6 +1084,7 @@
       },
       "5": {
         "pedelec": "Pedelec",
+        "event-bike": "Event Bike",
         "e-bike": "E-Bike",
         "cargo-bike": "Cargo Bike",
         "bike-trailer": "Bike Trailer",

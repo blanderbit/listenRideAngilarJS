@@ -358,6 +358,21 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     },
+    "black-friday": {
+      "title": "Black Friday",
+      "pre": {
+        "subtitle": "Get huge discounts for<br> your next rental"
+      },
+      "use-code": "Use this code",
+      "steps": {
+        "header": "How does it work?",
+        "step1": "Find a bike",
+        "step2": "Select rental period",
+        "step3": "Redeem & request the bike"
+      },
+      "footer-text": "This voucher is only valid until 31.12.2018. <br>\nFind more information on how to redeem a voucher <a href=\"/faq?group=7\" target=\"_blank\">here</a>.<br>\nDid you know that all bike rentals in Austria and Germany are <a href=\"/insurance\" target=\"_blank\">insured</a>?",
+      "subtitle": "Get 30€ for your next rental. <br>Only today."
+    },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019",
       "text": "You need a road bike for <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money! "
@@ -368,7 +383,7 @@
       "text": "Do you need a road bike for <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Berlin Triathlon 2019 XL</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need.  <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money!"
     },
     "vatternrundan": {
-      "title": "Rent a road bike for Vätternrundan 2019",
+      "title": "Rent a road bike for Vätternrundan",
       "description": "What: <b>Vätternrundan</b> | Where: <b> Motala, Sweden </b> | When: <b> June 7th–15th 2019 </b>",
       "text": "Do you need a road bike for \n<a href=\"http://vatternrundan.se/en/\" target=\"_blank\">Vätternrundan</a>? The world’s largest recreational bike event with start and finish in Motala, Sweden. We got you covered! Together with the listnride community we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. \n<br><br>\nThe 300 km around lake Vättern will test riders to their limits. Participants from all over the world come together every June in what can best be described as a celebration of cycling-sports! Together with Halvvättern 150km, Tjejvättern 100km, Vätternrundan 100km and MTB-Vättern, this event attracts almost 37,000 participants annually.\n<br><br>\nYou can’t participate? Help out another Rider in need: \n <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money!"
     },
@@ -425,14 +440,14 @@
       "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
       "title": "Rent a road bike for the Cyclassics Hamburg on listnride",
       "text": "You need a road bike for the Cyclassics in Hamburg? We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.<br><br>You can’t participate? Help out someone in need. List your bike and make some extra pocket money!",
-      "description": "where: <b>Hamburg</b>  |  what: <b>roadbike race 60, 100 or 160km</b>  |  when: <b>19.08.2018</b>"
+      "description": "Where: <b>Hamburg</b>  |  What: <b>road bike race over 60, 100 or 160km</b>  |  When: <b>28.08.2019</b>"
     },
     "hamburg-triathlon": {
       "meta-title": "Rent a road bike for the Triathlon Hamburg on listnride",
       "meta-description": "Rent the perfect road bike for the Triathlon Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi",
       "title": "Rent a road bike for the Triathlon Hamburg on listnride",
       "text": "You need a road bike for the Triahlon in Hamburg? We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.<br><br>You can’t participate? Help out someone in need. List your bike and make some extra pocket money!",
-      "description": "where: <b>Hamburg</b>  |  what: <b>Triahtlon- Sprint & Olympic Distance</b>  |  when: <b>14-15 July 2018</b>"
+      "description": "Where: <b>Hamburg</b>  |  What: <b>Triathlon - Sprint & Olympic Distance</b>  |  When: <b>6th / 7th July 2019</b>"
     },
     "riderman": {
       "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",

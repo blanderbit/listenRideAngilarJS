@@ -358,6 +358,21 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
     },
+    "black-friday": {
+      "title": "Black Friday",
+      "pre": {
+        "subtitle": "Ottieni un enormi sconti per <br>il tuo prossimo noleggio"
+      },
+      "use-code": "Usa questo codice",
+      "steps": {
+        "header": "Come funziona?",
+        "step1": "Cerca una bicicletta",
+        "step2": "Seleziona il periodo di noleggio",
+        "step3": "Riscatta e richiedi la bici"
+      },
+      "footer-text": "Questo buono è valido fino al 31.12.2018. <br>\nTrova ulteriori informazioni su come riscattare un buono <a href=\"/faq?group=7\" target=\"_blank\">qui</a>. <br>\nLo sapevi che tutti gli noleggi di biciclette in Austria e Germania sono <a href=\"/insurance\" target=\"_blank\">assicurati</a>?",
+      "subtitle": "Ottieni 30 € per il tuo prossimo noleggio. <br>Solo oggi."
+    },
     "berlin-triathlon": {
       "title": "Noleggia una bici da strada per il Triathlon di Berlino 2019",
       "text": "Hai bisogno di una bici da strada per <a href=\"//berlin-triathlon.de/\" target=\"_blank\">il Triathlon di Berlino 2019 </a>? Ne abbiamo uno per te! Insieme alla community di listnride, forniamo bici da strada adatte che puoi facilmente noleggiare per tutto il tempo che vuoi. Basta scegliere una delle bici qui sotto, richiederla per il periodo richiesto e ritirarla quando sarà il momento. Semplice.\n<br><br>\n Non puoi partecipare? Aiuta qualcuno che ha bisogno.\n<a href=\"/listing-a-bike\" target=\"_blank\">Registra la tua bici</a> e guadagna qualche soldo in più!"
@@ -368,7 +383,7 @@
       "text": "Hai bisogno di una bici da strada per <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Triathlon XL di Berlino 2019</a>? Ne abbiamo uno per te! Insieme alla community di listnride, forniamo bici da strada adatte che puoi facilmente noleggiare per tutto il tempo che vuoi. Basta scegliere una delle bici qui sotto, richiederla per il periodo richiesto e ritirarla quando sarà il momento. Semplice.\n<br><br>\nNon puoi partecipare? Aiuta qualcuno che ha bisogno. <a href=\"/listing-a-bike\" target=\"_blank\">Registra la tua bici</a> e guadagna qualche soldo in più!"
     },
     "vatternrundan": {
-      "title": "Noleggia una bici da strada per Vätternrundan 2019",
+      "title": "Noleggia una bici da strada per Vätternrundan",
       "description": "Cosa: <b> Vätternrundan </b> | Dove: <b> Motala, Svezia </b>| Quando: <b> 7–15 giugno 2019 </b>",
       "text": "Hai bisogno di una bici da strada per\n<a href=\"http://vatternrundan.se/en/\" target=\"_blank\">Vätternrundan</a>? La più grande corsa ciclistica ricreativa al mondo con partenza e arrivo a Motala, in Svezia. Abbiamo una bicicletta per te! Insieme alla community di listnride, forniamo bici da strada adatte ad ogni esigenza che puoi facilmente noleggiare per tutto il tempo che vuoi. Basta scegliere una delle bici qui sotto, richiederla per il periodo richiesto e ritirarla quando sarà il momento. Semplice.\n<br><br>\nI 300 chilometri attorno al lago Vättern faranno testare ai ciclisti i propri limiti. I partecipanti provenienti da tutto il mondo si riuniscono ogni giugno in quello che può essere meglio descritto come una celebrazione del ciclismo! Insieme a Halvvättern 150 km, Tjejvättern 100 km, Vätternrundan 100 km e MTB-Vättern, questo evento attira quasi 37.000 partecipanti all'anno.\n<br><br>\nNon puoi partecipare? Aiuta qualcuno che ne ha bisogno.\n <a href=\"/listing-a-bike\" target=\"_blank\">Registra la tua bici</a> \ne guadagna qualche soldo in più!"
     },

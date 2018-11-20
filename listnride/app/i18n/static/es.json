@@ -358,6 +358,21 @@
     "rapha-super-cross": {
       "text": "Rapha Super Cross regresa al Parque Olímpico de Múnich los días 29 y 30 de octubre para la tercera edición de lo que se ha convertido rápidamente en un legendario festival de ciclocross. Si deseas participar pero no tiene la bici correcta, puedes alquilar una a través de listnride. Hay entusiastas de la bicicleta como tú que ofrecen las bicicletas que puedes ver a continuación. Puedes solicitar y reservar los recorridos antes del evento y recoger la bici según lo acordado con el propietario. Los dueños de las bicis también pueden ofrecer en alquiler las bicis que no usen y así ganar algo de dinero mientras conocen a personas interesantes que participan en el evento. ¡Conviértete en parte de nuestra creciente comunidad!"
     },
+    "black-friday": {
+      "title": "Black Friday",
+      "pre": {
+        "subtitle": "Grandes descuentos para <br>tu próximo alquiler"
+      },
+      "use-code": "Usa este codigo",
+      "steps": {
+        "header": "¿Cómo funciona?",
+        "step1": "Encuentra tu bici",
+        "step2": "Selecciona el período de alquiler",
+        "step3": "Canjea el cupón  y solicita la bici"
+      },
+      "footer-text": "Este descuento es válido hasta el 31.12.2018. <br>\nEncuentra más información sobre cómo canjear un cupón <a href=\"/faq?group=7\" target=\"_blank\">aquí</a>. <br>\n¿Sabías que todos los alquileres de bicicletas en Austria y Alemania están<a href=\"/insurance\" target=\"_blank\">asegurados</a>?",
+      "subtitle": "Consigue 30 € de descuento para tu próximo alquiler. <br>Solo por hoy."
+    },
     "berlin-triathlon": {
       "title": "Rent a road bike for Berlin Triathlon 2019",
       "text": "You need a road bike for <a href=\"//berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2019</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need. <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money! "
@@ -368,7 +383,7 @@
       "text": "Do you need a road bike for <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Berlin Triathlon 2019 XL</a>? We have one for you! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br><br>\nYou can’t participate? Help out someone in need.  <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money!"
     },
     "vatternrundan": {
-      "title": "Alquila una bici de carretera para el Vätternrundan 2019 ",
+      "title": "Alquila una bici de carretera para el Vätternrundan",
       "description": "Qué: <b>Vätternrundan </b>| Dónde: <b>Motala, Suecia </b>| Cuándo: <b>7 al 15 de junio de 2019 </b>",
       "text": "¿Necesitas una bicicleta de carretera para\n<a href=\"http://vatternrundan.se/en/\" target=\"_blank\">Vätternrundan </a>? ¡Te tenemos cubierto!  Junto con la comunidad listnride, ofrecemos bicicletas de carretera de calidad para que puedas alquilarlas fácilmente por el tiempo que desees. Simplemente elije una de las bicicletas a continuación, solicítala para el período requerido y recógela cuando llegue el momento de manera fácil y segura.\n<br><br>\nLos 300 km alrededor del lago Vättern pondrán a prueba a sus límites. ¡Participantes de todo el mundo se reúnen cada junio en lo que se puede describir mejor como una celebración del ciclismo! Junto con Halvvättern 150 km, Tjejvättern 100 km, Vätternrundan 100 km y MTB-Vättern, este evento atrae a casi 37,000 participantes anualmente.\n<br><br>\n¿No puedes participar? Ayudar a otro competidor alquilando tu bicicleta:\n <a href=\"/listing-a-bike\" target=\"_blank\">¡Alquila tu bicicleta </a>y gana dinero extra!"
     },

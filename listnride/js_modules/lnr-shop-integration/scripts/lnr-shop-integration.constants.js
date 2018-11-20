@@ -180,7 +180,7 @@ var lnrConstants = {
       52: "kinderzitje",
       53: "Fietsendragers",
       54: "Fietskoffer",
-      55: "Event Bike",
+      55: "Eventfietsen",
       // KIDS
       60: "Stadsfiets",
       61: "ATB-fiets",

@@ -9,129 +9,108 @@
          style="min-height: 250px;"
          layout-align="space-between none"
          layout-padding>
-      <div class="lnr-list-form"
-           layout="column">
+      <div class="lnr-list-form" layout="column">
         <h3 class="md-title">{{ 'booking.payment.select-method' | translate }}</h3>
         <p class="md-body-1">{{ 'booking.payment.subtitle' | translate }}</p>
         <div class="spacer-xs"></div>
-        <md-radio-group class="lnr-md-no-focused" ng-model="payment.parent.paymentMethod">
+
+        <md-radio-group
+          class="lnr-md-no-focused"
+          ng-model="payment.parent.paymentMethod">
           <md-divider></md-divider>
-            <div layout="row">
-              <md-radio-button value="1" class="md-primary md-title lnr-payment-tab-button" flex="80">{{ 'booking.payment.credit-card' | translate }}</md-radio-button>
+          <!-- CARD METHOD -->
+          <div layout="row">
+            <md-radio-button
+              value="1"
+              class="md-primary md-title lnr-payment-tab-button"
+              flex="80">
+                {{ 'booking.payment.credit-card' | translate }}
+            </md-radio-button>
+            <div flex="20" layout="row" layout-align="end center">
+              <img
+                class="md-card-image lnr-request__img-methods lnr-payment-tab-image lnr-mr-x2"
+                ng-src="app/assets/ui_icons/lnr_logo_mastercard.svg"
+                alt="Mastercard"
+              >
+              <img
+                class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                ng-src="app/assets/ui_icons/lnr_logo_visa.svg"
+                alt="Visa"
+              >
+            </div>
+          </div>
+          <form
+            name="payment.parent.paymentForm"
+            novalidate
+            ng-hide="payment.parent.paymentMethod != 1">
+            <credit-card-input data="payment.parent.creditCardData"></credit-card-input>
+          </form>
+          <!-- END CARD METHOD -->
+          <md-divider></md-divider>
+          <!-- PAYPAL METHOD -->
+          <div layout="row" layout-align="space-between none">
+            <md-radio-button
+              value="2"
+              class="md-primary md-title lnr-payment-tab-button"
+              flex="80"
+            >
+              Paypal
+            </md-radio-button>
+            <div flex="20" layout="row" layout-align="end center">
+              <img
+                class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
+                alt="PayPal"
+              >
+            </div>
+          </div>
+          <md-button
+            class="md-raised md-primary payment__paypal-btn"
+            ng-hide="payment.parent.paymentMethod != 2"
+            ng-click="payment.parent.openPaypal()"
+          >
+            {{ 'booking.payment.pay-paypal' | translate }}
+          </md-button>
+          <!-- END PAYPAL METHOD -->
+          <md-divider></md-divider>
+          <!-- CURRENT PAYMENT METHOD -->
+          <div class="spacer"></div>
+          <div ng-if="payment.parent.user.payment_method">
+            <h3 class="md-title">{{ 'booking.payment.current-method' | translate }}</h3>
+            <div layout="row" layout-align="space-between none" class="lnr-mh-x2">
+              <div layout="row" layout-xs="column">
+                <md-radio-button
+                  value="current"
+                  class="md-primary md-title md-checked lnr-pr-x2"
+                  flex="1">
+                  <span translate="{{ 'shared.payment-type.' + payment.parent.user.payment_method.payment_type }}"></span>
+                </md-radio-button>
+                <div flex="auto" class="lnr-pt">{{ payment.parent.paymentDescription }}</div>
+              </div>
               <div flex="20" layout="row" layout-align="end center">
                 <img
+                  ng-if="payment.parent.user.payment_method.payment_type === 'paypal-account'"
+                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                  ng-src="app/assets/ui_icons/lnr_logo_paypal.svg" alt="PayPal">
+                <div ng-if="payment.parent.user.payment_method.payment_type === 'credit-card'">
+                  <img
                   class="md-card-image lnr-request__img-methods lnr-payment-tab-image lnr-mr-x2"
                   ng-src="app/assets/ui_icons/lnr_logo_mastercard.svg"
                   alt="Mastercard"
-                >
-                <img
-                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
-                  ng-src="app/assets/ui_icons/lnr_logo_visa.svg"
-                  alt="Visa"
-                >
+                  >
+                  <img
+                    class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
+                    ng-src="app/assets/ui_icons/lnr_logo_visa.svg"
+                    alt="Visa"
+                  >
+                </div>
               </div>
             </div>
-            <form name="payment.parent.paymentForm" novalidate ng-hide="payment.parent.paymentMethod != 1">
-              <!-- Cardholder name and Cardnumber -->
-              <div class="lnr-input-containers" layout="row" layout-align="space-between none" layout-wrap>
-                <md-input-container flex="100" flex-gt-xs="30">
-                  <label>{{ 'booking.payment.card-name' | translate }}</label>
-                  <input name="cardholderName"
-                         ng-model-options='{ debounce: 400 }'
-                         type="text"
-                         ng-model="payment.parent.creditCardHolderName"
-                         ng-required="true"/>
-                  <div ng-messages="payment.parent.paymentForm.cardholderName.$error"
-                       ng-show="payment.parent.paymentForm.cardholderName.$dirty"
-                       role="alert">
-                    <div ng-message="required">{{ 'booking.payment.invalid-name' | translate }}</div>
-                  </div>
-                </md-input-container>
-                <md-input-container flex="100" flex-gt-xs="30">
-                  <label>{{ 'booking.payment.card-number' | translate }}</label>
-                  <input name="creditCardNumber"
-                         ng-model-options='{ debounce: 400 }'
-                         type="text"
-                         ng-model="payment.parent.creditCardNumber"
-                         cc-number
-                         cc-eager-type
-                         ng-required="true"
-                         maxlength="16"
-                  />
-                  <div ng-messages="payment.parent.paymentForm.creditCardNumber.$error"
-                       ng-show="payment.parent.paymentForm.creditCardNumber.$invalid"
-                       role="alert">
-                    <div ng-message="required">{{ 'booking.payment.invalid-card' | translate }}</div>
-                    <div ng-message="ccNumber" ng-if="payment.parent.paymentForm.creditCardNumber.$viewValue.length == 16">{{ 'booking.payment.invalid-card-number' | translate }}</div>
-                  </div>
-                </md-input-container>
-                <md-input-container flex="45" flex-gt-xs="15">
-                  <label>{{ 'booking.payment.exp-date' | translate }}</label>
-                  <input name="expiryDate"
-                     ng-model-options='{ debounce: 50 }'
-                     ng-model="payment.parent.expiryDate"
-                     ng-change="payment.parent.updateExpiryDate()"
-                     ng-blur="payment.parent.validateExpiryDate()"
-                     type="text"
-                     ng-required="true"
-                     autocomplete="off"
-                     placeholder="MM/YY"
-                     maxlength="5"
-                  />
-                  <div ng-messages="payment.parent.paymentForm.expiryDate.$error"
-                       ng-show="payment.parent.paymentForm.expiryDate.$dirty"
-                       role="alert">
-                    <div ng-message="required">{{ 'booking.payment.invalid-month' | translate }}</div>
-                    <div ng-message="parse">{{ 'booking.payment.invalid-month' | translate }}</div>
-                    <div ng-message="dateFormat">{{ 'booking.payment.invalid-date' | translate }}</div>
-                  </div>
-                </md-input-container>
-                <md-input-container flex="45" flex-gt-xs="15">
-                  <label>{{ 'booking.payment.cvc' | translate }}</label>
-                  <input name="securityNumber"
-                     ng-model-options='{ debounce: 400 }'
-                     ng-model="payment.parent.securityNumber"
-                     type="text"
-                     maxlength="4"
-                     cc-cvc
-                     ng-required="true"
-                     class="lnr-center"/>
-                  <div ng-messages="payment.parent.paymentForm.securityNumber.$error"
-                       ng-show="payment.parent.paymentForm.securityNumber.$dirty"
-                       role="alert">
-                    <div ng-message="required">{{ 'booking.payment.cvc' | translate }}</div>
-                    <div ng-message="ccCvc">{{ 'booking.payment.cvc' | translate }}</div>
-                  </div>
-                </md-input-container>
-              </div>
-              <br>
-            </form>
-          <md-divider></md-divider>
-            <div layout="row" layout-align="space-between none">
-              <md-radio-button
-                value="2"
-                class="md-primary md-title lnr-payment-tab-button"
-                flex="80"
-              >
-                Paypal
-              </md-radio-button>
-              <div flex="20" layout="row" layout-align="end center">
-                <img
-                  class="md-card-image lnr-request__img-methods lnr-payment-tab-image"
-                  ng-src="app/assets/ui_icons/lnr_logo_paypal.svg"
-                  alt="PayPal"
-                >
-              </div>
-            </div>
-            <md-button
-              class="md-raised md-primary payment__paypal-btn"
-              ng-hide="payment.parent.paymentMethod != 2"
-              ng-click="payment.parent.openPaypal()"
-            >
-              {{ 'booking.payment.pay-paypal' | translate }}
-            </md-button>
-          <md-divider></md-divider>
+          </div>
+          <!-- END CURRENT PAYMENT METHOD -->
         </md-radio-group>
+
+        <div class="spacer"></div>
         <p class="md-caption" data-ng-bind-html="'forms.privacy-policy' | translate"></p>
       </div>
     </div>

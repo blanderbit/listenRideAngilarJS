@@ -1,6 +1,12 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Kredietkaart",
+      "paypal-account": "Paypal rekening"
+    },
+    "change": "Change",
     "map": "Kaart",
     "bike-type": "Fietstype",
     "filter-by": "Filteren op",
@@ -16,6 +22,7 @@
     "please-select": "Ajb. selecteren",
     "errors": {
       "email-required": "Vul een geldig emailadres in",
+      "unexpected-payment-type": "Ongeldige betalingsmethode ",
       "email-not-valid": "Vul een geldig emailadres in",
       "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
       "phone-required": "Voer je telefoonnummer in. "
@@ -273,6 +280,10 @@
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
       },
+      "black-friday": {
+        "meta-title": "Black Friday 2018 fietshuur korting | listnride",
+        "meta-description": "Black Friday-korting bij listnride! Enorme korting op  je volgende fietshuur, alleen dit weekend."
+      },
       "eroica-gaiole": {
         "meta-title": "Eroica vintage wielertocht",
         "meta-description": "Huur een vintage racefiets voor de Eroica on listnride"
@@ -447,7 +458,7 @@
     "agree-terms-link": "algemene voorwaarden van listnride",
     "footer": {
       "questions": "Heb je vragen bij het boeken van een fiets?",
-      "call-us": "Heeft u een vraag? Bel ons:\n<a href=\"tel:+49030120870330\">+49 (0) 30 120870330 </a>\n. Of\n<a href=\"mailto:contact@listnride.com\">schrijf ons </a>.",
+      "call-us": "Heeft u vragen? Bel ons:\n<a href=\"tel:+49030120870330\">+49 (0) 30 120870330 </a>\nOf\n<a href=\"mailto:contact@listnride.com\">mail ons </a>.",
       "email-us": "Of stuur ons een email",
       "support": "listnride Support"
     },
@@ -477,25 +488,26 @@
       "resend": "Nogmaals versturen"
     },
     "payment": {
-      "tab": "3. Betalingsgegevens",
-      "getting-saved": "Betaalmethode is opgeslagen",
+      "tab": "3. Betaalgegevens",
+      "current-method": "Huidige betaalmethode",
+      "getting-saved": "Betaalmethode wordt opgeslagen",
       "select-method": "Selecteer je betaalmethode",
       "subtitle": "We incasseren de huur nadat de verhuurder je aanvraag accepteerd",
       "credit-card": "Kredietkaart",
       "card-name": "Kaarthouder",
       "invalid-name": "Geef een geldige naam op",
       "card-number": "Nummer Kredietkaart",
-      "invalid-card": "Please provide a valid Card Number",
+      "invalid-card": "Geef een geldig kaartnummer op",
       "invalid-card-number": "kaartnummer niet geldig",
-      "exp-month": "Exp. month",
-      "invalid-month": "Month not valid",
-      "invalid-year": "Year not valid",
+      "exp-month": "Vervaldatum",
+      "invalid-month": "Maand niet geldig",
+      "invalid-year": "Jaar niet geldig",
       "invalid-date": "Datum niet geldig",
-      "exp-year": "Exp. year",
+      "exp-year": "Vervaljaar",
       "exp-date": "Vervaldatum",
-      "invalid-cvc": "CVC not valid",
-      "cvc": "CVC-nummer",
-      "pay-paypal": "Paypal"
+      "invalid-cvc": "CVV niet geldig",
+      "cvc": "CVV-nummer",
+      "pay-paypal": "Betaal met PayPal"
     },
     "overview": {
       "tab": "4. Samenvatting",
@@ -529,6 +541,8 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
+    "add-payment-success": "Betaalmethode is opgeslagen",
+    "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "bike-edit-successful": "De aanpassingen zijn succesvol opgeslagen",
     "error": "Er is een fout opgetreden. Check of je internetverbinding werkt en probeer het nogmaals.",
     "add-payout-success": "Je uitbetaalmethode is toegevoegd aan je profiel.",
@@ -555,6 +569,23 @@
   },
   "settings": {
     "settings": "Instellingen",
+    "newsletter-subscribe": "Ja, stuur me alsjeblieft de maandelijkse nieuwsbrief",
+    "newsletter-description": "Schrijf je in en ontvang onze nieuwsbrief vers in je inbox. Onze nieuwsbrief informeert je over de nieuwste merken, nuttige en nieuwe features op listnride.com, wat er in de community gebeurt, maar ook over reisbestemmingen met fietsen en fietsevenementen. Hebben we al verteld dat dit met veel liefde en toewijding wordt gemaakt? Dat is namelijk zo. Je kunt je natuurlijk op elk moment afmelden.",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Vul hier je bedrijfsnaam in.",
+      "minlength-company-name": "Bedrijfsnaam moet langer zijn dan 2 tekens.",
+      "required-vat": "Voer hier je btw-nummer in.",
+      "minlength-vat": "Het btw-nummer moet langer zijn dan 2 tekens"
+    },
+    "pick-payment-method": "Kies een betaalmethode",
+    "change-payment-method": "Betaalmethode wijzigen",
+    "your-payment-method": "Je betaalmethode:",
+    "pay-pal-account": "PayPal",
+    "pick-payment-method-new": "Kies een nieuwe betaalmethode",
+    "change-payout-method": "Uitbetaalmethode wijzigen",
+    "set-payment-method": "Stel betaalmethode in",
+    "set-payout-method": "Stel de uitbetalingsmethode in",
     "profile": "Profiel",
     "invite": "Vrienden uitnodigen",
     "account": "Account",
@@ -739,6 +770,7 @@
   },
   "forms": {
     "first-name": "Voornaam",
+    "newsletter-privacy-policy": "Je kan ten aller tijde je voor de nieuwsletter afmelden. Het privacybeleid van listnride is van toepassing",
     "save-new-password": "Bewaar nieuw wachtwoord",
     "your-name": "Je naam",
     "your-email-address": "Emailadres",
@@ -1039,6 +1071,7 @@
       },
       "5": {
         "pedelec": "Speed Pedelec",
+        "event-bike": "Evenementfiets",
         "e-bike": "Elektrische fiets",
         "cargo-bike": "Bakfiets",
         "bike-trailer": "Fietsaanhanger",

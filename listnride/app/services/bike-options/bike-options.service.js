@@ -107,6 +107,7 @@ angular.module('listnride')
           "list.subcategory.5.bike-child-seat",
           "list.subcategory.5.bike-car-rack",
           "list.subcategory.5.bike-travel-bag",
+          "list.subcategory.5.event-bike",
 
           "list.category.kids",
           "list.subcategory.6.city-bike",
@@ -177,7 +178,8 @@ angular.module('listnride')
                 { id: 51, name: translations["list.subcategory.5.bike-trailer"] },
                 { id: 52, name: translations["list.subcategory.5.bike-child-seat"] },
                 { id: 53, name: translations["list.subcategory.5.bike-car-rack"] },
-                { id: 54, name: translations["list.subcategory.5.bike-travel-bag"] }
+                { id: 54, name: translations["list.subcategory.5.bike-travel-bag"] },
+                { id: 55, name: translations["list.subcategory.5.event-bike"] }
               ]
             }, {
               catId: 60,
@@ -237,7 +239,7 @@ angular.module('listnride')
               name: translations["list.category.transport"],
               // TODO: Add image for transport
               imgFilePath: "",
-              subcategories: '50,51,52,53,54'
+              subcategories: '50,51,52,53,54,55'
             }, {
               url: 'kids',
               name: translations["list.category.kids"],

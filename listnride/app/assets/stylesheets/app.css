@@ -3,7 +3,7 @@
 /*-----------------------------------------------------------------------------------*/
 
 /*
-// #5FC693: Primary Color
+// #5FC693: Primary Color (green color)
 // #f3f3f3: Preload Color
 // #DD2C00: Error color
 // #7ab2f8: Blue color
@@ -150,6 +150,50 @@ address {
 .slick-centered .slick-track {
   display: flex;
   align-items: center;
+}
+
+/* LOADER */
+
+.lnr-loader {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 21px;
+}
+
+.lnr-loader div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  margin: 6px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  animation: lnr-loader 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lnr-loader div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lnr-loader div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lnr-loader div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lnr-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* This has to be set for all full-height layouts */
@@ -487,12 +531,32 @@ md-tooltip .md-content {
   line-height: 24px;
 }
 
+.lnr-color-primary {
+  color: #5fc693;
+}
+
+.lnr-color-blue {
+  color: #7ab2f8;
+}
+
+.lnr-color-white {
+  color: #ffffff;
+}
+
 .lnr-black {
   color: rgba(85, 85, 85, 1.0);
 }
 
+.lnr-font-normal {
+  font-weight: 400 !important;
+}
+
 .lnr-bold {
   font-weight: 500!important;
+}
+
+.lnr-super-bold {
+  font-weight: 900!important;
 }
 
 .lnr-capitalize {
@@ -509,6 +573,22 @@ md-tooltip .md-content {
 
 .lnr-pos-r {
   position: relative;
+}
+
+.lnr-off-selection::selection {
+  background: transparent;
+}
+
+.lnr-off-selection::-moz-selection {
+  background: transparent;
+}
+
+.lnr-min-100vh {
+  min-height: calc(100vh - 60px); /* header height */
+}
+
+.lnr-w100 {
+  width: 100%;
 }
 
 /* ALIGNMENTS */
@@ -530,6 +610,13 @@ md-tooltip .md-content {
   text-align: right;
 }
 
+.lnr-absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* MARGINS */
 /* MARGINS::SET */
 
@@ -544,6 +631,11 @@ md-tooltip .md-content {
 .lnr-mv {
   margin-left: 8px;
   margin-right: 8px;
+}
+
+.lnr-mv-reset {
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 .lnr-mv-x2 {
@@ -803,6 +895,17 @@ md-tooltip .md-content {
   background-color: #eaeeee;
 }
 
+.lnr-a-gradient-bg-black:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top, #7f7f7f, rgba(0, 0, 0, 0.86));
+}
+
 .lnr-sc {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -857,6 +960,10 @@ md-tooltip .md-content {
   border: 1px solid #e1e6e6;
   border-radius: 3px;
   padding: 0;
+}
+
+.lnr-tt-u {
+  text-transform: uppercase;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -3304,6 +3411,42 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   height: 650px;
 }
 
+.voucher-block {
+  max-width: 280px;
+  padding: 16px;
+  border: dotted 3px #5fc693;
+  background-color: #5f5f5f;
+  color: #fff;
+  font-size: 26px;
+  margin: auto;
+}
+
+/* SVG Manipulation */
+
+.lnr-svg-p1-white .svg-p1 {
+  fill: white;
+}
+
+.lnr-svg-p1-blue .svg-p1 {
+  fill: #7ab2f8;
+}
+
+.lnr-svg-p1-green .svg-p1 {
+  fill: #5FC693;
+}
+
+.lnr-svg-p2-white .svg-p2 {
+  fill: white;
+}
+
+.lnr-svg-p2-blue .svg-p2 {
+  fill: #7ab2f8;
+}
+
+.lnr-svg-p2-green .svg-p2 {
+  fill: #5FC693;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  MEDIA
 /*-----------------------------------------------------------------------------------*/
@@ -3465,6 +3608,15 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   }
 }
 
+@media (min-width: 600px) { /* GT-XS-BREAKPOINT */
+  .lnr-gt-xs-mr {
+    margin-right: 8px;
+  }
+  .lnr-gt-xs-ml {
+    margin-left: 8px;
+  }
+}
+
 @media (max-width:599px) { /* XS-BREAKPOINT */
 
   input-range {
@@ -3584,6 +3736,11 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-xs-w100 {
     width: 100%;
+  }
+
+  .lnr-xs-fs-24 {
+    font-size: 24px;
+    line-height: 1.2;
   }
 
   .lnr-sc-w-divider > :last-child {
