@@ -331,7 +331,7 @@ angular.module('booking', [])
               booking.selectedIndex = 0; // signup tab
             } else if (!validUserDetails()) {
               booking.selectedIndex = 1; // details tab
-            } else if(!user.booking.payment_method) {
+            } else if(!booking.user.payment_method) {
               booking.selectedIndex = 2; // payment tab
             } else {
               booking.selectedIndex = 3; // overview tab

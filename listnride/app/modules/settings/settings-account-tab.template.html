@@ -59,7 +59,7 @@
           <p ng-if="settingsAccount.parent.user.payment_method">
             <b>{{ 'settings.your-payment-method' | translate }}</b>&nbsp;
             <span translate="{{ 'shared.payment-type.' + settingsAccount.parent.user.payment_method.payment_type }}"></span>, {{ settingsAccount.parent.paymentDescription }}
-            <md-icon ng-if="settingsAccount.parent.user.payment_method.card_type" class="md-color-black lnr-ml" md-svg-src="app/assets/ui_icons/lnr_logo_{{settingsAccount.parent.user.payment_method.card_type}}.svg"></md-icon>
+            <md-icon ng-if="settingsAccount.parent.user.payment_method.card_type" class="md-color-black lnr-ml" md-svg-src="app/assets/ui_icons/lnr_logo_{{settingsAccount.parent.user.payment_method.card_type | lowercase}}.svg"></md-icon>
           </p>
 
           <div layout="column" class="lnr-mh-x2">
