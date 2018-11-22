@@ -6,6 +6,11 @@ angular.module('blackFridayHeader', []).component('blackFridayHeader', {
   controller: [function BlackFridayHeader() {
       var blackFridayHeader = this;
 
+      var SpecialToDate = '23-11-2018'; // DD/MM/YYYY
+
+      var SpecialTo = moment(SpecialToDate, "DD/MM/YYYY");
+      blackFridayHeader.isToday = moment() > SpecialTo;
+
     }
   ]
 });

@@ -757,6 +757,14 @@ md-tooltip .md-content {
   padding-bottom: 16px;
 }
 
+.lnr-pb {
+  padding-bottom: 8px;
+}
+
+.lnr-pb-x2 {
+  padding-bottom: 16px;
+}
+
 /* PADDINGS::REMOVE */
 
 .lnr-p-0 {
