@@ -82,6 +82,7 @@ angular.module('requests', ['infinite-scroll'])
         requests.is_lister = function (request) {
           return request.user.id !== $localStorage.userId
         }
+        request.short_iban = '';
 
         // methods
         // requests.nextPage = nextPage;

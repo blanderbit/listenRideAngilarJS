@@ -4,9 +4,7 @@
     <div class="md-dialog-content" layout="column" layout-margin>
       <p class="md-headline lnr-center">{{ 'settings.add-payout-method' | translate }}</p>
       <p>{{ 'settings.payout-method-description' | translate }}</p>
-      <p ng-if="!settings.user.current_payout_method">{{ 'settings.no-payout-method' | translate }}</p>
-      <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 1">{{ 'settings.payout-bank' | translate }} {{ settings.user.current_payout_method.details }}</p>
-      <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 2">{{ 'settings.payout-paypal' | translate }} {{ settings.user.current_payout_method.details }}</p>
+      <p ng-if="!settings.user.payout_method">{{ 'settings.no-payout-method' | translate }}</p>
       <br>
       <div layout="column">
         <md-radio-group ng-model="settings.payoutMethod.payment_type" layout="row">

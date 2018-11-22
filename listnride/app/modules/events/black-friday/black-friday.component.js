@@ -14,8 +14,10 @@ angular.module('blackFriday', []).component('blackFriday', {
       ngMeta.setTag("description", $translate.instant("meta.events.black-friday.meta-description"));
       ngMeta.setTag("og:image", "app/assets/ui_images/events/black-friday/black-friday_og.jpg");
 
-      var today = new Date();
-      blackFriday.isBlackFriday = moment(today).isSameOrAfter('2018-11-23');
+      var SpecialToDate = '23-11-2018'; // DD/MM/YYYY
+
+      var SpecialTo = moment(SpecialToDate, "DD/MM/YYYY");
+      blackFriday.isBlackFriday = moment() > SpecialTo;
     }
   ]
 });

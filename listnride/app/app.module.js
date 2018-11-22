@@ -40,6 +40,7 @@ angular.module('listnride', [
   'seoGrid',
   'search',
   'header',
+  'blackFridayHeader',
   'footer',
   'invite',
   'inviteLanding',
