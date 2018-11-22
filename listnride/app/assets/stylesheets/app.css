@@ -3610,6 +3610,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 }
 
 @media (max-width: 659px) { /* two month width  */
+  .bf-banner__box {
+    font-size: 14px!important;
+    line-height: 1.2;
+  }
   .date-picker-wrapper.date-picker-wrapper--ngDialog,
   .date-picker-wrapper.date-picker-wrapper--ngDialog .month-wrapper {
     max-width: 320px;
