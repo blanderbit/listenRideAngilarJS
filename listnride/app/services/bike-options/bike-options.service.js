@@ -16,6 +16,13 @@ angular.module('listnride')
         ];
       },
 
+      sharedTranslationKeys: function () {
+        return [
+          'search.unisize',
+          'search.all-sizes'
+        ]
+      },
+
       accessoryOptions: function () {
         return $translate(this.accessoriesTranslationKeys()).then(function (translations) {
           return [
@@ -31,23 +38,29 @@ angular.module('listnride')
       },
 
       sizeOptions: function (isSearch, withKidsSizes) {
-        var sizes = [
-          { value: 0, label: $translate.instant("search.unisize")}
-        ];
+        var self = this;
 
-        // show 'all sizes' option if used for search puproses
-        if (isSearch) {
-          sizes.unshift({ value: -1, label: $translate.instant('search.all-sizes')});
-        }
+        return $translate(this.sharedTranslationKeys()).then(
+          function (translations) {
+            var sizes = [
+              { value: 0, label: translations['search.unisize']}
+            ];
 
-        sizes = sizes.concat(this.adultSizeOptions());
+            // show 'all sizes' option if used for search purposes
+            if (isSearch) {
+              sizes.unshift({ value: -1, label: translations['search.all-sizes']});
+            }
 
-        // show kids sizes by default
-        if (withKidsSizes !== null) {
-          sizes = sizes.concat(this.kidsSizeOptions())
-        };
+            sizes = sizes.concat(self.adultSizeOptions());
 
-        return sizes;
+            // show kids sizes by default
+            if (withKidsSizes !== null) {
+              sizes = sizes.concat(self.kidsSizeOptions())
+            }
+
+            return sizes;
+          }
+        );
       },
 
       adultSizeOptions: function() {
