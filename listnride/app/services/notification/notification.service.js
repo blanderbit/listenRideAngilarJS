@@ -15,31 +15,44 @@ function notificationController($mdToast, $translate) {
  return {
   show: function (response, type, translateKey) {
     var type = type || 'success';
-    var message = translateKey || getMessage();
+
+    if (translateKey) {
+      convertToKey(translateKey)
+    } else {
+      getMessage();
+    }
 
     function getMessage() {
       var responseText;
 
       if (type === 'error' && response.data && response.data.errors && response.data.errors.length) {
         // TODO: Add multiply errors
-        return response.data.errors[0].detail
+        return  showToast(response.data.errors[0].detail)
+      } else if (response.status != -1) {
+        responseText = 'shared.notifications.'+ response.status
       } else {
-        responseText = response.status
+        responseText = 'toasts.error';
       }
 
       return convertToKey(responseText);
     };
 
     function convertToKey(text) {
-      return 'shared.notifications.' + text;
+      $translate(text).then(function (success) {
+        showToast(success)
+      }, function (error) {
+        showToast(error)
+      });
     };
 
-    $mdToast.show(
-      $mdToast.simple()
-      .textContent($translate.instant(message))
-      .hideDelay(4000)
-      .position('top center')
-    );
+    function showToast(text) {
+      $mdToast.show(
+        $mdToast.simple()
+          .textContent(text)
+          .hideDelay(4000)
+          .position('top center')
+      );
+    }
   }
  }
 }

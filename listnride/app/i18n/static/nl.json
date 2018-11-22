@@ -368,7 +368,7 @@
         "header": "Hoe werkt het?",
         "step1": "Vind je fiets",
         "step2": "Select huurperiode",
-        "step3": "Inwisselen & fiets aanvragen"
+        "step3": "Voucher verzilveren & Fiets boeken"
       },
       "footer-text": "Deze voucher is alleen geldig tot 31.12.2018. <br>\nMeer informatie over het inwisselen van een voucher vind je <a href=\"/faq?group=7\" target=\"_blank\">hier</a>. <br>\nWist je dat alle huurfietsen in Oostenrijk en Duitsland zijn <a href=\"/insurance\" target=\"_blank\">verzekerd</a>? ",
       "subtitle": "Ontvang 30 € voor je volgende fietshuur. <br>Alleen vandaag."
@@ -759,7 +759,7 @@
       "item2-description": "Quick and agile handling<br>Durable powder coated finish<br>High quality components<br>Pure riding pleasure",
       "item3-title": "Great Price - Solid Value",
       "item3-description": "Singlespeed bikes starting from 349€<br>High customer satisfaction<br>Personalized service<br>Speedy delivery to Berlin",
-      "test-bike": "Test a bonvelo bike in Berlin, Munich or Hamburg",
+      "test-bike": "Test een bonvelo-fiets in Berlijn, München of Hamburg",
       "testimonial-1": "Nice, clean design, and arrived neatly pre-assembled. I’m loving the ride.",
       "testimonial-2": "Very friendly customer service, quick processing of the order and super fast response to my questions.",
       "testimonial-3": "Bonvelo is awesome. Everything is right here. Great customer service -- they responded quickly even when I asked a question on Sunday. The delivery time was really fast, and the bike arrived almost fully assembled, with just a couple easy things to finish. The bike looks great, and the price was even better. Will definitely recommend. Cheers from Munich!",
@@ -827,7 +827,7 @@
       "faq-answer-4": "In the geometry tables of the respective models you will find a size recommendation which refers to the body size and your step length. How to determine your step length: You need a cane and a water balance. If you do not have a water scale, you can easily use a book. Pull out your shoes and pants (depending on how pants are cut, it affects the result). If you have a water scale, pull it upwards as far as possible between the legs. It works the same way with a book, but you should place yourself on a door or wall so that the top of your 'meter' is parallel to the ground. Now measure the stick from the floor to the upper edge of the water scale or the book. The value you have now determined is your so-called step length (step height)."
     },
     "vanmoof": {
-      "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
+      "meta-title": "Huur en test de Electrified S E-Bikes in Berlin, Munich en Hamburg",
       "meta-descr": "The perfect city bike - VanMoof",
       "title": "The perfect city bike - VanMoof",
       "description": "Electrified S - The revolutionary electric bike by VanMoof",
@@ -880,7 +880,7 @@
     },
     "rethink": {
       "title": "Your rethink e-bike. Clear. Robust. Distinct Character.",
-      "description": "Rent and test rethink E-Bikes in Munich, Hamburg and Dresden",
+      "description": "Huur en test Rethink E-Bikes in Munich, Hamburg en Dresden",
       "subdescription": "Choose between the City Low, the City High and the Longtail",
       "bike1-title": "rethink City Low",
       "bike1-description": "rethink, these are sustainable steel frames with a long service life.",
@@ -1061,7 +1061,7 @@
     "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUNT?",
     "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around €10 (exact amount depends on exchange rates). We are happy to receive any amount!",
     "faq-question-5": "WHAT HAS LISTNRIDE ACCOMPLISHED SO FAR?",
-    "faq-answer-5": "Sinds onze officiële start in september 2016 is de lancering van een volledig functioneel webplatform: listnride uitgegroeid tot het grootste community-platform voor het delen van fietsen in de Duitstalige markt (DE, AT, CH), met meer dan 5.000 geregistreerde fietsen en 5.000 geregistreerde gebruikers. listnride heeft al meer dan 250 fietsenwinkels geïntegreerd en 9 innovatieve fietsmerken in gebruik met testrit-programma's. We hebben een sterke aanwezigheid opgebouwd in Berlijn, München, Wenen, Amsterdam en Mallorca en breiden uit naar andere grote steden zoals Hamburg, Zürich en Düsseldorf.",
+    "faq-answer-5": "Sinds onze officiële start in september 2016 is de lancering van een volledig functioneel webplatform: listnride uitgegroeid tot het grootste community-platform voor het delen van fietsen in de Duitstalige markt (DE, AT, CH), met meer dan 10.000 geplaatste fietsen en 15.000 geregistreerde gebruikers. listnride heeft al meer dan 450 fietsenwinkels geïntegreerd en 9 innovatieve fietsmerken in gebruik met testrit-programma's. We hebben een sterke aanwezigheid opgebouwd in Berlijn, München, Wenen, Amsterdam en Mallorca en breiden uit naar andere grote steden zoals Hamburg, Zürich en Düsseldorf.",
     "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
     "faq-answer-6": "To make a profit on your investment, you will generally need to sell your shares for more than the amount you invested. In a best case scenario, the value of your shares will rise in line with the growth of business you invested in, and you will be able to see your shares when the business floats on a stock exchange or is bought by another company (i.e. an exit event). More info <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">here</a>",
     "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
