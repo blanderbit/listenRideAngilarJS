@@ -275,25 +275,6 @@
       /* event pages -- start */
 
       $stateProvider.state({
-        name: 'blackFriday',
-        url: '/black-friday',
-        template: '<black-friday></black-friday>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.black-friday.meta-title", "meta.events.black-friday.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.black-friday.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.black-friday.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
         name: 'raphaSuperCross',
         url: '/rapha-super-cross',
         template: '<rapha-super-cross></rapha-super-cross>',
