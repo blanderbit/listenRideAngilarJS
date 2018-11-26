@@ -29,6 +29,7 @@
     },
     "notifications": {
       "404": "La pagina non esiste",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "Entità non processabile",
       "500": "Errore interno del server",
       "200": "Successo"

@@ -29,6 +29,7 @@
     },
     "notifications": {
       "404": "Page doesn't exist",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "Wrong data format entered",
       "500": "Internal server error",
       "200": "Success"

@@ -29,6 +29,7 @@
     },
     "notifications": {
       "404": "Pagina bestaat niet",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "Verkeerd dataformaat ingevoerd",
       "500": "Interne Server Fout",
       "200": "gelukt! "
