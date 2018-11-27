@@ -7,6 +7,9 @@ angular.module('bike',[]).component('bike', {
     function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers) {
       var bike = this;
       bike.colorScheme = mapConfigs.colorScheme();
+      bike.owner = {};
+      bike.owner.display_name = '';
+      bike.owner.picture = '';
 
       bike.mapOptions = {
         lat: 0,
@@ -38,7 +41,9 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data;
-          bike.owner = bike.data.user.id === $localStorage.userId;
+          bike.is_owner = bike.data.user.id === $localStorage.userId;
+          bike.owner.display_name = bike.data.business ? $translate.instant('shared.local-business') : bike.data.user.first_name;
+          bike.owner.picture = bike.data.business ? 'app/assets/ui_images/lnr_hero.jpg' : bike.data.user.profile_picture.profile_picture.url;
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
           $translate($filter('category')(bike.data.category)).then(
