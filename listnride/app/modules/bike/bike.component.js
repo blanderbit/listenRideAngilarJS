@@ -58,7 +58,7 @@ angular.module('bike',[]).component('bike', {
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          ngMeta.setTag("og:image", bike.data.image_file_1.small.url);
+          ngMeta.setTag("og:image", bike.data.image_file.url);
         },
         function(error) {
         	$state.go('404');
