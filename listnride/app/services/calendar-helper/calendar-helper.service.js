@@ -38,7 +38,7 @@ angular.module('listnride')
     };
 
     var isDayAvailable = function(openingHours, date) {
-      if (!openingHours) return false;
+      if (!openingHoursAvailable(openingHours)) return false;
 
       return _.isEmpty(openingHours.hours[getWeekDay(date)]);
     };
