@@ -4,10 +4,9 @@
 
     <div class="lnr-mv lnr-mh-x2" layout-xs="column" layout="row" layout-padding>
       <div class="lnr-user__header" flex-gt-xs="70" layout="row">
-        <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
+        <img class="lnr-profile-lrg" ng-src="{{user.picture}}">
         <div class="lnr-user__info" layout="column" layout-align="center start" layout-padding>
-          <h1 class="md-headline">{{user.user.first_name}}</h1>
-          <!--<h1 ng-if="user.user.business" class="md-headline">{{user.user.business.company_name}}</h1>-->
+          <h1 class="md-headline">{{ user.display_name }}</h1>
           <input-stars class="lnr-user-rating rating" max="5" ng-model="user.rating" readonly></input-stars>
           <span ng-if="user.user.city && user.user.country" class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
         </div>
