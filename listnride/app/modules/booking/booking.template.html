@@ -10,7 +10,7 @@
         ng-hide="booking.hidden"
         class="lnr-progress-tabs booking"
       >
-        <!-- sign-in data tab -->
+        <!-- calendar data tab -->
         <calendar-tab></calendar-tab>
 
         <!-- sign-in data tab -->
@@ -28,7 +28,9 @@
       </md-tabs>
     </div>
 
-    <div flex-md="40" flex-gt-md="30" layout-padding layout="column" ng-if="booking.authentication.loggedIn() || booking.shopBooking" ng-hide="booking.booked">
+    <div flex-md="40" flex-gt-md="30" layout-padding layout="column"
+      ng-hide="booking.booked || booking.selectedIndex == booking.tabOrder['sign-in']"
+    >
       <div class="spacer-xs"></div>
       <div class="animate-if highlight-tile booking__receipt" layout="column">
         <receipt
