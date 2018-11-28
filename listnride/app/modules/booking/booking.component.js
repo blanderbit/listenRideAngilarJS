@@ -87,11 +87,11 @@ angular.module('booking', [])
           booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
           booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
           booking.tabOrder = {
-            'calendar': 1,
-            'sign-in': 2,
-            'details': 3,
-            'payment': 4,
-            'overview': 5
+            'calendar': 0,
+            'sign-in': 1,
+            'details': 2,
+            'payment': 3,
+            'overview': 4
           }
 
           // METHODS

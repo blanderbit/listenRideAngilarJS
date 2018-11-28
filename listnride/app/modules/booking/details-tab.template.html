@@ -1,6 +1,6 @@
 <md-tab
   class="details"
-  label="{{details.parent.tabOrder['details']}}. {{ 'booking.details.tab' | translate }} {{ details.parent.tabCompleted(1) }}"
+  label="{{ details.parent.tabOrder['details'] + 1 }}. {{ 'booking.details.tab' | translate }} {{ details.parent.tabCompleted(1) }}"
   layout="row"
   ng-disabled="details.parent.tabsDisabled"
   md-on-select="details.parent.onTabChanged()"
@@ -16,51 +16,11 @@
            flex="100">
         <div layout="row" layout-align="space-between center">
           <h2 class="md-title">{{ 'booking.details.invoice-address' | translate }}</h2>
-          <a class="lnr-link" ng-click="details.parent.authentication.showLoginDialog()" ng-if="details.parent.shopBooking">Do you have a listnride Account?</a>
         </div>
         <p class="md-body-1">{{ 'booking.details.subtitle' | translate }}</p>
         <div class="spacer-xs"></div>
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
-          <div class="lnr-input-containers" layout="row" flex="100" ng-if="details.parent.shopBooking">
-            <md-input-container flex="50" flex-xs="45">
-              <label>{{ 'forms.first-name' | translate }}</label>
-              <input
-                name="first_name"
-                ng-model="details.parent.user.firstName"
-                required
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-              >
-              <div ng-messages="details.parent.detailsForm.firstName.$error" role="alert">
-              <div ng-message="required">{{ 'forms.errors.empty-first-name' | translate }}</div>
-              <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
-              </div>
-            </md-input-container>
-            <span hide-gt-xs flex="10"></span>
-            <md-input-container flex="50" flex-xs="45">
-              <label>{{ 'forms.last-name' | translate }}</label>
-              <input
-                name="last_name"
-                ng-model="details.parent.user.lastName"
-                ng-maxlength="30"
-                required
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-              >
-              <div ng-messages="details.parent.detailsForm.lastName.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.empty-last-name' | translate }}</div>
-                <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
-              </div>
-            </md-input-container>
-            <md-input-container flex="50" hide>
-              <label>{{ 'forms.password' | translate }}</label>
-              <input
-                name="password"
-                ng-model="details.parent.user.password"
-                value="123456"
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-              >
-            </md-input-container>
-          </div>
         </form>
         <div class="lnr-input-containers">
           <address-input address="details.parent.address" valid-address="details.parent.validAddress"></address-input>
@@ -86,20 +46,6 @@
             layout-gt-xs="row"
             ng-show="details.parent.showConfirmButton"
           >
-            <md-input-container flex-gt-xs="60" ng-if="details.parent.shopBooking">
-              <label>{{ 'forms.email-address' | translate }}</label>
-              <input
-                name="email"
-                ng-model="details.parent.user.email"
-                ng-maxlength="30"
-                ng-disabled="details.parent.phoneConfirmed === 'success'"
-                required
-              >
-              <div ng-messages="details.parent.verificationForm.email.$error" role="alert">
-                <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
-                <div ng-message="maxlength">{{ 'forms.errors.max-size-last-name' | translate }}</div>
-              </div>
-            </md-input-container>
             <md-input-container flex-gt-xs="60">
               <label>{{ 'shared.phone-number' | translate }}</label>
               <input

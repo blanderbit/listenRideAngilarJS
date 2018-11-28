@@ -1,6 +1,6 @@
 <md-tab
   class="categories"
-  label="{{calendar.parent.tabOrder['calendar']}}. {{ 'booking.calendar.tab' | translate }} {{ calendar.parent.tabCompleted(0) }}"
+  label="{{ calendar.parent.tabOrder['calendar'] + 1 }}. {{ 'booking.calendar.tab' | translate }} {{ calendar.parent.tabCompleted(0) }}"
   layout="row"
   ng-disabled="calendar.parent.tabsDisabled"
   md-on-select="calendar.parent.onTabChanged()">
