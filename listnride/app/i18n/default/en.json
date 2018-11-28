@@ -548,7 +548,7 @@
       "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
     },
     "calendar": {
-      "tab": "1. Duration",
+      "tab": "Duration",
       "bike-rental": "Your bike rental",
       "choose-duration": "Choose your rental duration",
       "pickup-time": "Pickup time",
