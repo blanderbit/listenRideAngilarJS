@@ -30,7 +30,7 @@ angular.module('user',[]).component('user', {
             user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
             user.rating = (user.user.rating_lister + user.user.rating_rider);
             user.display_name = user.user.has_business ? $translate.instant('shared.local-business') : user.user.first_name;
-            user.picture = user.user.has_business ? 'app/assets/ui_icons/lnr_shop_avatar.svg' : user.profile_picture.profile_picture.url;
+            user.picture = user.user.has_business ? 'app/assets/ui_icons/lnr_shop_avatar.svg' : user.user.profile_picture.profile_picture.url;
             user.current_payment = response.data.status === 3;
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
@@ -82,7 +82,7 @@ angular.module('user',[]).component('user', {
           user.hours[day] = dayRange;
         });
       }
-      
+
       function compactHours() {
         var dayName = '', currentDay = {}, prevDay = {}, shortenHours = {};
 
