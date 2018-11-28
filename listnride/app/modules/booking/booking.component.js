@@ -86,6 +86,13 @@ angular.module('booking', [])
           booking.showConfirmButton = true;
           booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
           booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+          booking.tabOrder = {
+            'calendar': 1,
+            'sign-in': 2,
+            'details': 3,
+            'payment': 4,
+            'overview': 5
+          }
 
           // METHODS
           booking.calendarHelper = calendarHelper;
@@ -165,23 +172,12 @@ angular.module('booking', [])
           $analytics.eventTrack('click', {category: 'Request Bike', label: 'Add Voucher'});
         };
 
-
-        // TODO: rename tabs from numbers to names/labels
         booking.nextDisabled = function() {
-          if (!booking.shopBooking) {
-            switch (booking.selectedIndex) {
-              case 0: return false;
-              case 1: return !checkValidDetails();
-              case 2: return !checkValidPayment();
-              case 3: return false;
-            }
-          } else {
-            switch (booking.selectedIndex) {
-              case 0: return !validDates();
-              case 1: return !checkValidDetails();
-              case 2: return !checkValidPayment();
-              case 3: return false;
-            }
+          switch (booking.selectedIndex) {
+            case 0: return booking.shopBooking ? !validDates() : false;
+            case 1: return !checkValidDetails();
+            case 2: return !checkValidPayment();
+            case 3: return false;
           }
         };
 
@@ -220,17 +216,11 @@ angular.module('booking', [])
 
         booking.nextAction = function() {
           switch (booking.selectedIndex) {
-            case 0:
-              if (booking.shopBooking) {
-                booking.selectedIndex = 1;
-                setFirstTab(); break;
-              } else {
-                booking.goNext(); break;
-              }
             case 1: booking.saveAddress(); break;
             case 2: booking.savePaymentOption(); break;
             case 3: booking.book(); break;
-            default: booking.goNext(); break;
+            case 0:
+            default: setFirstTab(); break;
           }
         };
 
@@ -294,8 +284,6 @@ angular.module('booking', [])
         booking.reloadUser = function() {
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
-              var oldUser = booking.user;
-
               booking.user = success.data;
               booking.user.firstName = success.data.first_name;
               booking.user.lastName = success.data.last_name;
@@ -328,7 +316,7 @@ angular.module('booking', [])
         };
 
         function setFirstTab() {
-          if (!authentication.loggedIn()) {
+          if (!authentication.loggedIn() && !booking.shopBooking) {
             booking.selectedIndex = 0; // signup tab
           } else if (!validUserDetails()) {
             booking.selectedIndex = 1; // details tab
@@ -404,20 +392,6 @@ angular.module('booking', [])
         // toggle confirm phone button
         booking.toggleConfirmButton = function () {
           booking.showConfirmButton = !booking.showConfirmButton;
-        };
-
-        // controls behavior of "next" button
-        booking.goNext = function () {
-          switch(booking.selectedIndex) {
-            case 0:
-              if (booking.shopBooking) {
-                setFirstTab();
-              }
-            case 2:
-              booking.savePaymentOption(); break;
-            default:
-              booking.nextTab(); break
-          }
         };
 
         // go to next tab

@@ -1,6 +1,6 @@
 <md-tab
   class="details"
-  label="{{ 'booking.details.tab' | translate }} {{ details.parent.tabCompleted(1) }}"
+  label="{{details.parent.tabOrder['details']}}. {{ 'booking.details.tab' | translate }} {{ details.parent.tabCompleted(1) }}"
   layout="row"
   ng-disabled="details.parent.tabsDisabled"
   md-on-select="details.parent.onTabChanged()"
@@ -23,7 +23,7 @@
         <form name="details.parent.detailsForm" novalidate class="md-body-desktop">
           <!-- First name and Last name -->
           <div class="lnr-input-containers" layout="row" flex="100" ng-if="details.parent.shopBooking">
-            <md-input-container flex="50">
+            <md-input-container flex="50" flex-xs="45">
               <label>{{ 'forms.first-name' | translate }}</label>
               <input
                 name="first_name"
@@ -36,7 +36,8 @@
               <div ng-message="maxlength">{{ 'forms.errors.max-size-first-name' | translate }}</div>
               </div>
             </md-input-container>
-            <md-input-container flex="50">
+            <span hide-gt-xs flex="10"></span>
+            <md-input-container flex="50" flex-xs="45">
               <label>{{ 'forms.last-name' | translate }}</label>
               <input
                 name="last_name"

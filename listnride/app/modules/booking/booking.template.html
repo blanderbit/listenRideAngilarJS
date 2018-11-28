@@ -11,7 +11,7 @@
         class="lnr-progress-tabs booking"
       >
         <!-- sign-in data tab -->
-        <calendar-tab ng-hide="!booking.shopBooking"></calendar-tab>
+        <calendar-tab ng-if="booking.shopBooking"></calendar-tab>
 
         <!-- sign-in data tab -->
         <signup-tab></signup-tab>

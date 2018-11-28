@@ -42,8 +42,8 @@ angular.module('bike',[]).component('bike', {
           bike.showAll = false;
           bike.data = response.data;
           bike.is_owner = bike.data.user.id === $localStorage.userId;
-          bike.owner.display_name = bike.data.business ? $translate.instant('shared.local-business') : bike.data.user.first_name;
-          bike.owner.picture = bike.data.business ? 'app/assets/ui_icons/lnr_shop_avatar.svg' : bike.data.user.profile_picture.profile_picture.url;
+          bike.owner.display_name = setName();
+          bike.owner.picture = setPicture();
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
           $translate($filter('category')(bike.data.category)).then(
@@ -111,6 +111,26 @@ angular.module('bike',[]).component('bike', {
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
       };
+
+      function setName() {
+        if (bike.data.business) {
+          if (!bike.is_owner) {
+            return $translate.instant('shared.local-business')
+          } else {
+            return bike.data.business.company_name
+          }
+        } else {
+          return bike.data.user.first_name
+        }
+      }
+
+      function setPicture() {
+        if (bike.data.business && !bike.is_owner) {
+          return 'app/assets/ui_icons/lnr_shop_avatar.svg'
+        } else {
+          return bike.data.user.profile_picture.profile_picture.url
+        }
+      }
 
       function GalleryDialogController($mdDialog, bikeData) {
         var galleryDialog = this;

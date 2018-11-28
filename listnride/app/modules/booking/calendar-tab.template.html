@@ -1,6 +1,6 @@
 <md-tab
   class="categories"
-  label="{{ 'booking.calendar.tab' | translate }} {{ calendar.parent.tabCompleted(0) }}"
+  label="{{calendar.parent.tabOrder['calendar']}}. {{ 'booking.calendar.tab' | translate }} {{ calendar.parent.tabCompleted(0) }}"
   layout="row"
   ng-disabled="calendar.parent.tabsDisabled"
   md-on-select="calendar.parent.onTabChanged()">
@@ -53,8 +53,9 @@
             </input-range>
           </md-input-container>
           &nbsp;&nbsp;&nbsp;&nbsp;
-<div id="timeRange" layout="row" layout-align="start center" ng-if="calendar.parent.startDate"
-  flex="40" flex-xs="100">
+
+        <div id="timeRange" ng-if="calendar.parent.startDate"
+            layout="row" layout-align="start center" flex="40" flex-xs="100">
             <md-input-container flex>
               <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
               <md-select

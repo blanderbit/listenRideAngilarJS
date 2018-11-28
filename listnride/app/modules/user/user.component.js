@@ -29,8 +29,10 @@ angular.module('user',[]).component('user', {
             user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
             user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
             user.rating = (user.user.rating_lister + user.user.rating_rider);
-            user.display_name = user.user.has_business ? $translate.instant('shared.local-business') : user.user.first_name;
-            user.picture = user.user.has_business ? 'app/assets/ui_icons/lnr_shop_avatar.svg' : user.user.profile_picture.profile_picture.url;
+
+            user.display_name = setName();
+            user.picture = setPicture();
+
             user.current_payment = response.data.status === 3;
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
@@ -58,6 +60,26 @@ angular.module('user',[]).component('user', {
               ngMeta.setTag("noindex", false);
             }
           });
+      }
+
+      function setName() {
+        if (user.user.has_business) {
+           if (userId !== $localStorage.userId) {
+             return $translate.instant('shared.local-business')
+           } else {
+             return user.user.business.company_name
+           }
+        } else {
+          return user.user.first_name
+        }
+      }
+
+      function setPicture() {
+        if (user.user.has_business && userId !== $localStorage.userId) {
+          return 'app/assets/ui_icons/lnr_shop_avatar.svg'
+        } else {
+          return user.profile_picture.profile_picture.url
+        }
       }
 
       function setOpeningHours() {
