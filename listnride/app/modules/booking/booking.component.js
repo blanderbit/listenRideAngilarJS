@@ -165,6 +165,8 @@ angular.module('booking', [])
           $analytics.eventTrack('click', {category: 'Request Bike', label: 'Add Voucher'});
         };
 
+
+        // TODO: rename tabs from numbers to names/labels
         booking.nextDisabled = function() {
           if (!booking.shopBooking) {
             switch (booking.selectedIndex) {
@@ -326,18 +328,16 @@ angular.module('booking', [])
         };
 
         function setFirstTab() {
-          if (!booking.shopBooking || booking.selectedIndex > 0) {
-            if (!authentication.loggedIn()) {
-              booking.selectedIndex = 0; // signup tab
-            } else if (!validUserDetails()) {
-              booking.selectedIndex = 1; // details tab
-            } else if(!booking.user.payment_method) {
-              booking.selectedIndex = 2; // payment tab
-            } else {
-              booking.selectedIndex = 3; // overview tab
-            }
-            trackTabLoad();
+          if (!authentication.loggedIn()) {
+            booking.selectedIndex = 0; // signup tab
+          } else if (!validUserDetails()) {
+            booking.selectedIndex = 1; // details tab
+          } else if(!booking.user.payment_method) {
+            booking.selectedIndex = 2; // payment tab
+          } else {
+            booking.selectedIndex = 3; // overview tab
           }
+          trackTabLoad();
         }
 
         function validUserDetails() {
