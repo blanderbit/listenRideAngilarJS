@@ -161,8 +161,8 @@ angular.module('booking', [])
         // START BOOKING CALENDAR TAB <<<<<<
         // =================================
 
-        booking.tabCompleted = function(tabId) {
-          return booking.selectedIndex > tabId ? "✔" : "    ";
+        booking.tabCompleted = function(label) {
+          return booking.selectedIndex > booking.tabOrder[label] ? "✔" : "    ";
         };
 
         booking.addVoucher = function() {
