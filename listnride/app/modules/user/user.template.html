@@ -98,7 +98,7 @@
       <!-- end listings -->
 
       <!-- reviews -->
-      <div layout="row" layout-xs="column" ng-if="user.user.ratings.length !==0">
+      <div layout="row" layout-xs="column" ng-if="user.user.ratings.length !== 0">
         <div flex-gt-xs="25">
           <h3 class="md-body-2">{{ 'user.ratings' | translate }}</h3>
         </div>
@@ -107,8 +107,20 @@
           <div layout="column">
             <rating ng-repeat="rating in user.user.ratings" data="rating" index="$index" show-all="user.showAll"></rating>
             <div layout="row" layout-align="end center">
-              <md-button class="md-no-focus" ng-if="user.user.ratings.length > 3 && false === user.showAll" ng-click="user.showAll = true">{{'shared.show-more' | translate}} {{'shared.reviews' | translate}}</md-button>
-              <md-button class="md-no-focus" ng-if="user.user.ratings.length > 3 && true === user.showAll" ng-click="user.showAll = false">{{'shared.show-less' | translate}} {{'shared.reviews' | translate}}</md-button>
+              <md-button
+                class="md-no-focus"
+                ng-if="user.user.ratings.length > 3 && !user.showAll"
+                ng-click="user.showAll = true"
+              >
+                {{'shared.show-more' | translate}} {{'shared.reviews' | translate}}
+              </md-button>
+              <md-button
+                class="md-no-focus"
+                ng-if="user.user.ratings.length > 3 && user.showAll"
+                ng-click="user.showAll = false"
+              >
+                {{'shared.show-less' | translate}} {{'shared.reviews' | translate}}
+              </md-button>
             </div>
           </div>
         </div>
