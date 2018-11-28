@@ -1,9 +1,10 @@
 <md-toolbar class="lnr-header md-accent" layout="row" layout-align="left center">
 
-  <div class="md-toolbar-tools">
+  <div class="md-toolbar-tools" ng-style="{'background-color': header.isStaging ? '#263238' : '#7ab2f8'}">
     <md-button class="lnr-header-logo" ui-sref="home" md-no-ink ng-hide="!header.hideLogo()">
       <md-icon class="md-color-white" md-svg-src="app/assets/ui_icons/lnr_logo_bold.svg"></md-icon>
     </md-button>
+    <div ng-if="header.isStaging">  ⚠️ STAGING VERSION </div>
     <div style="width: 30px;" hide-xs></div>
 
     <autocomplete
@@ -113,6 +114,3 @@
     </div>
   </div>
 </md-toolbar>
-<div class="lnr-watermark" ng-if="header.isStaging">
-  ⚠️ STAGING RELEASE 
-</div>
