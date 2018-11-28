@@ -76,7 +76,7 @@ angular.module('user',[]).component('user', {
         if (user.user.has_business && userId !== $localStorage.userId) {
           return 'app/assets/ui_icons/lnr_shop_avatar.svg'
         } else {
-          return user.profile_picture.profile_picture.url
+          return user.user.profile_picture.profile_picture.url
         }
       }
 
