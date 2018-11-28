@@ -73,6 +73,7 @@
         name: 'booking',
         url: '/booking?bikeId&startDate&endDate&shop',
         template: '<booking></booking>',
+        reloadOnSearch: false,
         resolve: {
           data: function (ngMeta) {
             ngMeta.setTag("noindex", true);

@@ -112,6 +112,18 @@ angular.module('booking', [])
           }
         };
 
+        function getTabNameByOrder(index) {
+          return (_.invert(booking.tabOrder))[index];
+        }
+
+        function updateState (params) {
+          $state.go(
+            $state.current,
+            params,
+            { notify: false }
+          );
+        };
+
 
         // ===============================
         // >>>> START BOOKING CALENDAR TAB
@@ -173,11 +185,12 @@ angular.module('booking', [])
         };
 
         booking.nextDisabled = function() {
-          switch (booking.selectedIndex) {
-            case 0: return booking.shopBooking ? !validDates() : false;
-            case 1: return !checkValidDetails();
-            case 2: return !checkValidPayment();
-            case 3: return false;
+          switch (getTabNameByOrder(booking.selectedIndex)) {
+            case 'calendar': return !validDates();
+            case 'sign-in': return false;
+            case 'details': return !checkValidDetails();
+            case 'payment': return !checkValidPayment();
+            case 'overview': return false;
           }
         };
 
@@ -214,12 +227,17 @@ angular.module('booking', [])
           booking.confirmation_3 = '';
         };
 
-        booking.nextAction = function() {
-          switch (booking.selectedIndex) {
-            case 1: booking.saveAddress(); break;
-            case 2: booking.savePaymentOption(); break;
-            case 3: booking.book(); break;
-            case 0:
+        booking.nextAction = function () {
+          switch (getTabNameByOrder(booking.selectedIndex)) {
+            case 'calendar': {
+              updateState({startDate: booking.startDate, endDate: booking.endDate});
+              setFirstTab();
+              break;
+            }
+            case 'sign-in': setFirstTab(); break;
+            case 'details': booking.saveAddress(); break;
+            case 'payment': booking.savePaymentOption(); break;
+            case 'overview': booking.book(); break;
             default: setFirstTab(); break;
           }
         };
@@ -316,16 +334,22 @@ angular.module('booking', [])
         };
 
         function setFirstTab() {
-          if (!authentication.loggedIn() && !booking.shopBooking) {
-            booking.selectedIndex = 0; // signup tab
+          if (!isDateSet()) {
+            booking.selectedIndex = booking.tabOrder['calendar'];
+          } else if (!authentication.loggedIn()) {
+            booking.selectedIndex = booking.tabOrder['sign-in'];
           } else if (!validUserDetails()) {
-            booking.selectedIndex = 1; // details tab
+            booking.selectedIndex = booking.tabOrder['details'];
           } else if(!booking.user.payment_method) {
-            booking.selectedIndex = 2; // payment tab
+            booking.selectedIndex = booking.tabOrder['payment'];
           } else {
-            booking.selectedIndex = 3; // overview tab
+            booking.selectedIndex = booking.tabOrder['overview'];
           }
           trackTabLoad();
+        }
+
+        function isDateSet() {
+          return booking.startDate && booking.endDate;
         }
 
         function validUserDetails() {
