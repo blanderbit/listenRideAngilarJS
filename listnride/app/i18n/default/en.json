@@ -480,7 +480,7 @@
       "support": "listnride Support"
     },
     "sign-in": {
-      "tab": "1. Sign In",
+      "tab": "Sign In",
       "new": "New at listnride?",
       "login": "Log in to listnride",
       "register-facebook": "Register with Facebook",
@@ -490,7 +490,7 @@
       "not-member": "No member yet?"
     },
     "details": {
-      "tab": "2. Personal Details",
+      "tab": "Personal Details",
       "sms-confirmation-message": "A SMS with a confirmation code was sent to you just now.",
       "invoice-address": "Invoice Address",
       "subtitle": "Please fill in your invoice address in order to request a bike.",
@@ -505,7 +505,7 @@
       "resend": "Resend"
     },
     "payment": {
-      "tab": "3. Payment Method",
+      "tab": "Payment Method",
       "current-method": "Current payment method",
       "getting-saved": "Payment method saving in progress",
       "select-method": "Select your Payment Method",
@@ -527,7 +527,7 @@
       "pay-paypal": "Pay with Paypal"
     },
     "overview": {
-      "tab": "4. Overview",
+      "tab": "Overview",
       "bike-rental": "Your bike rental",
       "size": "Size",
       "location": "Location",

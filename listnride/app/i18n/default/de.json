@@ -477,7 +477,7 @@
       "support": "listnride Support"
     },
     "sign-in": {
-      "tab": "1. Anmelden",
+      "tab": "Anmelden",
       "new": "Neu bei listnride?",
       "login": "Login bei listnride",
       "register-facebook": "Mit Facebook registrieren",
@@ -487,7 +487,7 @@
       "not-member": "Neu bei listnride?"
     },
     "details": {
-      "tab": "2. Persönliche Daten",
+      "tab": "Persönliche Daten",
       "sms-confirmation-message": "Wir haben dir eine SMS mit dem Bestätigungscode geschickt.",
       "invoice-address": "Rechnungsadresse",
       "subtitle": "Bitte gib deine Rechnungsadresse ein, um ein Fahrrad anzufragen.",
@@ -502,7 +502,7 @@
       "resend": "Nochmal senden"
     },
     "payment": {
-      "tab": "3. Zahlungsmethode",
+      "tab": "Zahlungsmethode",
       "current-method": "Aktuelle Zahlungsart",
       "getting-saved": "Zahlungsmethode wird gespeichert",
       "select-method": "Wähle deine Zahlungsart aus",
@@ -524,7 +524,7 @@
       "pay-paypal": "Paypal"
     },
     "overview": {
-      "tab": "4. Zusammenfassung",
+      "tab": "Zusammenfassung",
       "bike-rental": "Deine Radauswahl",
       "size": "Größe",
       "location": "Ort",
