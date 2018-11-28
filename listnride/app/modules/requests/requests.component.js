@@ -215,6 +215,8 @@ angular.module('requests', ['infinite-scroll'])
               requests.request = success.data;
               requests.request.glued = true;
               requests.request = success.data;
+              requests.request.lister.picture = setPicture();
+              requests.request.lister.display_name = setName();
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
@@ -244,6 +246,23 @@ angular.module('requests', ['infinite-scroll'])
           }
         );
       };
+
+      //TODO: Move to shared users service
+      function setName() {
+        if (requests.request.lister.has_business) {
+          return $translate.instant('shared.local-business')
+        } else {
+          return requests.request.lister.business_name
+        }
+      }
+
+      function setPicture() {
+        if (requests.request.lister.has_business) {
+          return 'app/assets/ui_icons/lnr_shop_avatar.svg'
+        } else {
+          return requests.request.lister.profile_picture.profile_picture.url
+        }
+      }
 
       function updateStatus (statusId, paymentWarning) {
         var data = {
