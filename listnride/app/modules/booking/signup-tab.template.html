@@ -1,5 +1,5 @@
 <md-tab class="personal"
-        label="{{ 'booking.sign-in.tab' | translate }} {{ signup.parent.tabCompleted(0) }}"
+        label="{{ signup.parent.tabOrder['sign-in'] + 1 }}. {{ 'booking.sign-in.tab' | translate }} {{ signup.parent.tabCompleted('sign-in') }}"
         layout="row"
         ng-disabled="signup.parent.tabsDisabled"
         md-on-select="signup.parent.onTabChanged()">

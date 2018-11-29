@@ -170,7 +170,8 @@ angular.
           email: user.email,
           firstName: user.firstName,
           lastName: user.lastName,
-          password: user.password
+          password: user.password,
+          isShop: user.isShop || false
         };
 
         $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register'});
@@ -216,6 +217,7 @@ angular.
               'password_hashed': sha256.encrypt(signupDialog.password),
               'first_name': signupDialog.firstName,
               'last_name': signupDialog.lastName,
+              'is_shop': signupDialog.isShop || false,
               'ref_code': inviteCode,
               'language': retrieveLocale()
             },

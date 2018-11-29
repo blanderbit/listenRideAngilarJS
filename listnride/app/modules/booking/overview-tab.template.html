@@ -1,6 +1,6 @@
 <md-tab
   class="categories"
-  label="{{ 'booking.overview.tab' | translate }} {{ overview.parent.tabCompleted(3) }}"
+  label="{{ overview.parent.tabOrder['overview'] + 1 }}. {{ 'booking.overview.tab' | translate }} {{ overview.parent.tabCompleted('overview') }}"
   layout="row"
   ng-disabled="overview.parent.tabsDisabled"
   md-on-select="overview.parent.onTabChanged()">
