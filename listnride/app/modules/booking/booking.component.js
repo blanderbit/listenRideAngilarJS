@@ -158,15 +158,13 @@ angular.module('booking', [])
         }
 
         booking.onTimeChange = function(slot) {
-          var slotDate = slot + "Date";
-          var slotTime = slot + "Time";
+          var slotDate = slot + "Date"; // startDate, endDate
+          var slotTime = slot + "Time"; // startTime, endTime
           var date = new Date(booking[slotDate]);
           date.setHours(booking[slotTime], 0, 0, 0);
           booking[slotDate] = date;
-          if (!validDates()) {
-            booking.startDate = "Invalid Date";
-            booking.endDate = "Invalid Date";
-          }
+
+          validDates();
         };
 
         function validDates() {
@@ -443,11 +441,7 @@ angular.module('booking', [])
         // TODO: This needs to be refactored, rootScopes are very bad practice
         // go to next tab on user create success
         $rootScope.$on('user_created', function () {
-          if (booking.shopBooking) {
-            booking.sendSms(booking.verificationForm.phone_number);
-          } else {
             booking.reloadUser();
-          }
         });
 
         // go to next tab on user login success
