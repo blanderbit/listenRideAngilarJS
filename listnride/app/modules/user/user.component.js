@@ -29,8 +29,10 @@ angular.module('user',[]).component('user', {
             user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
             user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
             user.rating = (user.user.rating_lister + user.user.rating_rider);
+
             user.display_name = setName();
             user.picture = setPicture();
+
             user.current_payment = response.data.status === 3;
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
@@ -102,7 +104,7 @@ angular.module('user',[]).component('user', {
           user.hours[day] = dayRange;
         });
       }
-      
+
       function compactHours() {
         var dayName = '', currentDay = {}, prevDay = {}, shortenHours = {};
 

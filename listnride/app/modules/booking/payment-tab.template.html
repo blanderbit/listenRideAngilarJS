@@ -1,5 +1,5 @@
 <md-tab class="categories"
-        label="{{ 'booking.payment.tab' | translate }} {{ payment.parent.tabCompleted(2) }}"
+        label="{{ payment.parent.tabOrder['payment'] + 1 }}. {{ 'booking.payment.tab' | translate }} {{ payment.parent.tabCompleted('payment') }}"
         layout="row"
         ng-disabled="payment.parent.tabsDisabled"
         md-on-select="payment.parent.onTabChanged()">
