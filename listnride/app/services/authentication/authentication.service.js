@@ -217,13 +217,13 @@ angular.
               'password_hashed': sha256.encrypt(signupDialog.password),
               'first_name': signupDialog.firstName,
               'last_name': signupDialog.lastName,
-              'is_shop': signupDialog.isShop || false,
               'ref_code': inviteCode,
               'language': retrieveLocale()
             },
             'notification_preference' : {
               'newsletter': signupDialog.newsletter
-            }
+            },
+            'is_shop': signupDialog.isShop || false
           };
 
           signupDialog.signingUp = true;
