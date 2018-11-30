@@ -54,7 +54,7 @@
   "devDependencies": {
     "angular-mocks": "^1.7.4",
     "del": "^2.2.2",
-    "event-stream": "^3.3.6",
+    "event-stream": "^4.0.1",
     "gulp": "^3.9.1",
     "gulp-angular-templatecache": "^2.2.5",
     "gulp-clean-css": "^2.4.0",
