@@ -7,6 +7,7 @@
       "paypal-account": "Paypal-Konto"
     },
     "change": "Change",
+    "local-business": "Gewerbliche Anbieter",
     "map": "Karte",
     "bike-type": "Fahrradtyp",
     "filter-by": "Filtern nach",
@@ -29,6 +30,7 @@
     },
     "notifications": {
       "404": "Seite existiert nicht",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "falsches Datenformat eingegeben",
       "500": "Interner Server-Fehler",
       "200": "Success"
@@ -475,7 +477,7 @@
       "support": "listnride Support"
     },
     "sign-in": {
-      "tab": "1. Anmelden",
+      "tab": "Anmelden",
       "new": "Neu bei listnride?",
       "login": "Login bei listnride",
       "register-facebook": "Mit Facebook registrieren",
@@ -485,7 +487,7 @@
       "not-member": "Neu bei listnride?"
     },
     "details": {
-      "tab": "2. Persönliche Daten",
+      "tab": "Persönliche Daten",
       "sms-confirmation-message": "Wir haben dir eine SMS mit dem Bestätigungscode geschickt.",
       "invoice-address": "Rechnungsadresse",
       "subtitle": "Bitte gib deine Rechnungsadresse ein, um ein Fahrrad anzufragen.",
@@ -500,7 +502,7 @@
       "resend": "Nochmal senden"
     },
     "payment": {
-      "tab": "3. Zahlungsmethode",
+      "tab": "Zahlungsmethode",
       "current-method": "Aktuelle Zahlungsart",
       "getting-saved": "Zahlungsmethode wird gespeichert",
       "select-method": "Wähle deine Zahlungsart aus",
@@ -522,7 +524,7 @@
       "pay-paypal": "Paypal"
     },
     "overview": {
-      "tab": "4. Zusammenfassung",
+      "tab": "Zusammenfassung",
       "bike-rental": "Deine Radauswahl",
       "size": "Größe",
       "location": "Ort",
@@ -543,7 +545,7 @@
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
-      "tab": "1. Dauer",
+      "tab": "Dauer",
       "bike-rental": "Deine Buchung",
       "choose-duration": "Wähle die Buchungsdauer",
       "pickup-time": "Abholzeit",
@@ -774,7 +776,7 @@
     "10": "Ihre Anfrage wurde vom System abgebrochen."
   },
   "rideChat": {
-    "1": "Du würdest gerne {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
+    "1": "Du würdest gerne  {{lister.display_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
     "11": "The request got cancelled.",
     "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",

@@ -7,6 +7,7 @@
       "paypal-account": "Conto Paypal"
     },
     "change": "Change",
+    "local-business": "Attività locale",
     "map": "Mappa",
     "bike-type": "Tipo di bici",
     "filter-by": "Filtra per",
@@ -29,6 +30,7 @@
     },
     "notifications": {
       "404": "La pagina non esiste",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "Entità non processabile",
       "500": "Errore interno del server",
       "200": "Successo"
@@ -467,7 +469,7 @@
       "support": "listnride servizio clienti"
     },
     "sign-in": {
-      "tab": "1. Accedi",
+      "tab": "Accedi",
       "new": "Nuovo su listnride?",
       "login": "Registrati con Facebook",
       "register-facebook": "Registrati con Facebook",
@@ -477,7 +479,7 @@
       "not-member": "Nuovo su listnride?"
     },
     "details": {
-      "tab": "2. Dati personali",
+      "tab": "Dati personali",
       "sms-confirmation-message": "Un SMS con un codice di conferma ti è stato inviato proprio ora.",
       "invoice-address": "Il tuo indirizzo di fatturazione ",
       "subtitle": "Si prega di inserire l'indirizzo di fatturazione per richiedere la bicicletta",
@@ -491,7 +493,7 @@
       "resend": "Inviare di nuovo"
     },
     "payment": {
-      "tab": "3. Metodi di Pagamento",
+      "tab": "Metodi di Pagamento",
       "current-method": "Attuale metodo di pagamento",
       "getting-saved": "Payment method saving in progress",
       "select-method": "Seleziona il tuo metodo di pagamento",
@@ -513,7 +515,7 @@
       "pay-paypal": "Paypal"
     },
     "overview": {
-      "tab": "4. Riepilogo",
+      "tab": "Riepilogo",
       "bike-rental": "La bici selzionata",
       "size": "Taglia",
       "location": "Località",
@@ -764,7 +766,7 @@
     "10": "La tua richiesta è stata annullata dal sistema"
   },
   "rideChat": {
-    "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di {{lister.business_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
+    "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di  {{lister.display_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
     "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}} ha confermato il ritorno del mezzo e ti ha fatto una recensione. Infine, ti preghiamo di valutare l'esperienza. Questo aiuta molto la nostra comunità e completa il noleggio.",

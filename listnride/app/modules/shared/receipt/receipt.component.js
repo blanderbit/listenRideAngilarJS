@@ -21,10 +21,8 @@ angular.module('receipt', []).component('receipt', {
       receipt.balance = 0;
 
       this.$onChanges = function (changes) {
-        if (changes.user) {
-          if (changes.user.currentValue.balance != undefined) {
-            receipt.balance = changes.user.currentValue.balance;
-          }
+        if (changes.user && changes.user.currentValue.balance != undefined) {
+          receipt.balance = changes.user.currentValue.balance;
         }
         updatePrices();
       };

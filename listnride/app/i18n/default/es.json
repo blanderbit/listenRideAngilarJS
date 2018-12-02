@@ -7,6 +7,7 @@
       "paypal-account": "Cuenta de Paypal"
     },
     "change": "Change",
+    "local-business": "Tienda de bicicletas ",
     "map": "Mapa",
     "bike-type": "Tipo de bicicleta",
     "filter-by": "Filtrar por",
@@ -29,6 +30,7 @@
     },
     "notifications": {
       "404": "La página no existe",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "El formato de los datos ingresados es incorrecto",
       "500": "Error interno del servidor",
       "200": "Éxito"
@@ -470,7 +472,7 @@
       "support": "Equipo de soporte de listnride"
     },
     "sign-in": {
-      "tab": "1. Inicio de sesión",
+      "tab": "Inicio de sesión",
       "new": "¿Nuevo a listnride?",
       "login": "Iniciar sesión a listnride",
       "register-facebook": "Registrar con Facebook",
@@ -480,7 +482,7 @@
       "not-member": "¿Nuevo a listnride?"
     },
     "details": {
-      "tab": "2. Datos personales",
+      "tab": "Datos personales",
       "sms-confirmation-message": "Te hemos enviado un SMS con el código de confirmación.",
       "invoice-address": "Dirección de facturación",
       "subtitle": "Introduce tu dirección de facturación para solicitar una bicicleta",
@@ -495,7 +497,7 @@
       "resend": "Reenviar"
     },
     "payment": {
-      "tab": "3. Formas de pago",
+      "tab": "Formas de pago",
       "current-method": "Forma de pago actual",
       "getting-saved": "Payment method saving in progress",
       "select-method": "Selecciona tu forma de pago",
@@ -517,7 +519,7 @@
       "pay-paypal": "Paypal"
     },
     "overview": {
-      "tab": "4. Resumen",
+      "tab": "Resumen",
       "bike-rental": "Tu selección de bicicleta",
       "size": "Tamaño",
       "location": "Ubicación",
@@ -538,7 +540,7 @@
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
-      "tab": "1. Período",
+      "tab": "Período",
       "bike-rental": "Tu renta de bici",
       "choose-duration": "Elige el periodo de alquiler",
       "pickup-time": "Hora de recogida",
@@ -768,7 +770,7 @@
     "10": "Tu solicitud fue cancelada por el sistema"
   },
   "rideChat": {
-    "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.business_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
+    "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
     "11": "La reserva de su bicicleta fue cancelada.",
     "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}}ha confirmado que ha terminado el paseo en bici y ha hecho una valoración sobre ti. Por útimo, califica el paseo. Esto ayuda mucho a nuestra comunidad y concluye el alquiler.",

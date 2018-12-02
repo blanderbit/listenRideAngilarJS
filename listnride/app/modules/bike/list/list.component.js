@@ -162,10 +162,10 @@ angular.module('list', ['ngLocale'])
                 var images = [];
                 for (var i = 1; i <= 5; ++i) {
                   if (data["image_file_" + i] !== undefined &&
-                    data["image_file_" + i].small.url !== null) {
+                    data["image_file_" + i].url !== null) {
                     images.push({
                       src: data["image_file_" + i],
-                      url: data["image_file_" + i].small.url,
+                      url: data["image_file_" + i].url,
                       local: "false",
                       name: "image_file_" + i
                     });

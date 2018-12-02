@@ -15,32 +15,83 @@ angular.module('booking', [])
         $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper) {
         var booking = this;
 
-        booking.bikeId = $stateParams.bikeId;
-        booking.shopBooking = $stateParams.shop;
+        booking.$onInit = function () {
+          // VARIABLES
+          booking.showConfirmButton = true;
+          booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
+          booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+          booking.tabOrder = {
+            'calendar': 0,
+            'sign-in': 1,
+            'details': 2,
+            'payment': 3,
+            'overview': 4
+          }
+          // get StateParams
+          booking.bikeId = $stateParams.bikeId;
+          booking.shopBooking = $stateParams.shop;
+          // booking from SHOP PLUGIN starts without information about dates
+          booking.startDate = $stateParams.startDate ? new Date($stateParams.startDate) : null;
+          booking.endDate = $stateParams.endDate ? new Date($stateParams.endDate) : null;
+          // default
+          booking.user = {};
+          booking.bike = {};
+          booking.phoneConfirmed = 'progress';
+          booking.selectedIndex = 0;
+          booking.hidden = false;
+          booking.tabsDisabled = false;
+          booking.voucherCode = "";
+          booking.expiryDate = "";
+          booking.booked = false;
+          booking.processing = false;
+          booking.isPremium = false;
+          booking.bike.country_code = "";
+          booking.user.balance = 0;
+          booking.insuranceCountries = ['DE', 'AT'];
+          booking.isOpeningHoursLoaded = false;
+          booking.creditCardData = {}
+          booking.paymentDescription = '';
 
-        // booking from SHOP PLUGIN starts without information about dates
-        booking.startDate = $stateParams.startDate ? new Date($stateParams.startDate) : null;
-        booking.endDate = $stateParams.endDate ? new Date($stateParams.endDate) : null;
+          // METHODS
+          booking.calendarHelper = calendarHelper;
+          booking.authentication = authentication;
+          booking.savePaymentOption = savePaymentOption;
+          booking.sendCode = sendCode;
 
-        booking.user = {};
-        booking.bike = {};
-        booking.phoneConfirmed = 'progress';
-        booking.selectedIndex = 0;
-        booking.hidden = true;
-        booking.tabsDisabled = false;
-        booking.voucherCode = "";
-        booking.expiryDate = "";
-        booking.booked = false;
-        booking.processing = false;
-        booking.isPremium = false;
-        booking.bike.country_code = "";
-        booking.user.balance = 0;
-        booking.insuranceCountries = ['DE', 'AT'];
-        booking.isOpeningHoursLoaded = false;
-        booking.creditCardData = {}
-        booking.paymentDescription = '';
+          // INVOCATIONS
+          paymentHelper.setupBraintreeClient();
+          getBikeData();
 
-        var getLister = function() {
+          // After material tabs inited
+          $timeout(function () {
+            authentication.loggedIn() ? booking.reloadUser() : setFirstTab();
+          }, 0);
+
+        };
+
+        function getBikeData() {
+          api.get('/rides/' + booking.bikeId).then(
+            function (success) {
+              booking.bike = success.data;
+              booking.coverageTotal = booking.bike.coverage_total || 0;
+              getLister();
+              booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
+              if (booking.bike.size === 0) {
+                booking.bikeSize = $translate.instant("search.unisize");
+              } else {
+                booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
+              }
+              booking.prices = booking.bike.prices;
+              updatePrices();
+            },
+            function (error) {
+              notification.show(error, 'error');
+              $state.go('home');
+            }
+          );
+        }
+
+        function getLister() {
           api.get('/users/' + booking.bike.user.id).then(
             function (success) {
               booking.openingHours = success.data.opening_hours;
@@ -53,47 +104,10 @@ angular.module('booking', [])
               booking.isOpeningHoursLoaded = true;
             }
           );
-        };
-
-        // Fetch Bike Information
-        api.get('/rides/' + booking.bikeId).then(
-          function (success) {
-            booking.bike = success.data;
-            booking.coverageTotal = booking.bike.coverage_total || 0;
-            getLister();
-            booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-            if (booking.bike.size === 0) {
-              booking.bikeSize = $translate.instant("search.unisize");
-            } else {
-              booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
-            }
-            booking.prices = booking.bike.prices;
-            updatePrices();
-          },
-          function (error) {
-            notification.show(error, 'error');
-            $state.go('home');
-          }
-        );
+        }
 
         booking.insuranceAllowed = function () {
           return _.includes(["DE", "AT"], booking.bike.country_code);
-        };
-
-        // on lifecycle initialization
-        booking.$onInit = function () {
-          // VARIABLES
-          booking.showConfirmButton = true;
-          booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
-          booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-
-          // METHODS
-          booking.calendarHelper = calendarHelper;
-          booking.authentication = authentication;
-          booking.savePaymentOption = savePaymentOption;
-
-          // INVOCATIONS
-          paymentHelper.setupBraintreeClient();
         };
 
         booking.resetPassword = function() {
@@ -105,6 +119,17 @@ angular.module('booking', [])
           }
         };
 
+        function getTabNameByOrder(index) {
+          return (_.invert(booking.tabOrder))[index];
+        }
+
+        function updateState (params) {
+          $state.go(
+            $state.current,
+            params,
+            { notify: false }
+          );
+        };
 
         // ===============================
         // >>>> START BOOKING CALENDAR TAB
@@ -133,15 +158,13 @@ angular.module('booking', [])
         }
 
         booking.onTimeChange = function(slot) {
-          var slotDate = slot + "Date";
-          var slotTime = slot + "Time";
+          var slotDate = slot + "Date"; // startDate, endDate
+          var slotTime = slot + "Time"; // startTime, endTime
           var date = new Date(booking[slotDate]);
           date.setHours(booking[slotTime], 0, 0, 0);
           booking[slotDate] = date;
-          if (!validDates()) {
-            booking.startDate = "Invalid Date";
-            booking.endDate = "Invalid Date";
-          }
+
+          validDates();
         };
 
         function validDates() {
@@ -154,8 +177,8 @@ angular.module('booking', [])
         // START BOOKING CALENDAR TAB <<<<<<
         // =================================
 
-        booking.tabCompleted = function(tabId) {
-          return booking.selectedIndex > tabId ? "✔" : "    ";
+        booking.tabCompleted = function(label) {
+          return booking.selectedIndex > booking.tabOrder[label] ? "✔" : "    ";
         };
 
         booking.addVoucher = function() {
@@ -166,20 +189,12 @@ angular.module('booking', [])
         };
 
         booking.nextDisabled = function() {
-          if (!booking.shopBooking) {
-            switch (booking.selectedIndex) {
-              case 0: return false;
-              case 1: return !checkValidDetails();
-              case 2: return !checkValidPayment();
-              case 3: return false;
-            }
-          } else {
-            switch (booking.selectedIndex) {
-              case 0: return !validDates();
-              case 1: return !checkValidDetails();
-              case 2: return !checkValidPayment();
-              case 3: return false;
-            }
+          switch (getTabNameByOrder(booking.selectedIndex)) {
+            case 'calendar': return !validDates();
+            case 'sign-in': return false;
+            case 'details': return !checkValidDetails();
+            case 'payment': return !checkValidPayment();
+            case 'overview': return false;
           }
         };
 
@@ -216,19 +231,18 @@ angular.module('booking', [])
           booking.confirmation_3 = '';
         };
 
-        booking.nextAction = function() {
-          switch (booking.selectedIndex) {
-            case 0:
-              if (booking.shopBooking) {
-                booking.selectedIndex = 1;
-                setFirstTab(); break;
-              } else {
-                booking.goNext(); break;
-              }
-            case 1: booking.saveAddress(); break;
-            case 2: booking.savePaymentOption(); break;
-            case 3: booking.book(); break;
-            default: booking.goNext(); break;
+        booking.nextAction = function () {
+          switch (getTabNameByOrder(booking.selectedIndex)) {
+            case 'calendar': {
+              updateState({startDate: booking.startDate, endDate: booking.endDate});
+              setFirstTab();
+              break;
+            }
+            case 'sign-in': setFirstTab(); break;
+            case 'details': booking.saveAddress(); break;
+            case 'payment': booking.savePaymentOption(); break;
+            case 'overview': booking.book(); break;
+            default: setFirstTab(); break;
           }
         };
 
@@ -292,8 +306,6 @@ angular.module('booking', [])
         booking.reloadUser = function() {
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
-              var oldUser = booking.user;
-
               booking.user = success.data;
               booking.user.firstName = success.data.first_name;
               booking.user.lastName = success.data.last_name;
@@ -326,18 +338,22 @@ angular.module('booking', [])
         };
 
         function setFirstTab() {
-          if (!booking.shopBooking || booking.selectedIndex > 0) {
-            if (!authentication.loggedIn()) {
-              booking.selectedIndex = 0; // signup tab
-            } else if (!validUserDetails()) {
-              booking.selectedIndex = 1; // details tab
-            } else if(!booking.user.payment_method) {
-              booking.selectedIndex = 2; // payment tab
-            } else {
-              booking.selectedIndex = 3; // overview tab
-            }
-            trackTabLoad();
+          if (!isDateSet()) {
+            booking.selectedIndex = booking.tabOrder['calendar'];
+          } else if (!authentication.loggedIn()) {
+            booking.selectedIndex = booking.tabOrder['sign-in'];
+          } else if (!validUserDetails()) {
+            booking.selectedIndex = booking.tabOrder['details'];
+          } else if(!booking.user.payment_method) {
+            booking.selectedIndex = booking.tabOrder['payment'];
+          } else {
+            booking.selectedIndex = booking.tabOrder['overview'];
           }
+          trackTabLoad();
+        }
+
+        function isDateSet() {
+          return booking.startDate && booking.endDate;
         }
 
         function validUserDetails() {
@@ -349,22 +365,16 @@ angular.module('booking', [])
             email: booking.user.email,
             firstName: booking.user.firstName,
             lastName: booking.user.lastName,
-            password: booking.user.password
+            password: booking.user.password,
+            isShop: !!booking.shopBooking
           }
           booking.authentication.signupGlobal(user);
         };
 
-        booking.prepareUser = function() {
-          var user = {
-            email: booking.user.email,
-            firstName: booking.user.firstName,
-            lastName: booking.user.lastName
-          }
-          if (booking.shopBooking && !booking.authentication.loggedIn()) {
-            booking.authentication.signupGlobal(user);
-          } else {
-            booking.sendSms(booking.verificationForm.phone_number);
-          }
+        function sendCode() {
+          if (!booking.authentication.loggedIn()) return setFirstTab();
+
+          booking.sendSms(booking.verificationForm.phone_number);
         }
 
         // phone confirmation
@@ -406,20 +416,6 @@ angular.module('booking', [])
           booking.showConfirmButton = !booking.showConfirmButton;
         };
 
-        // controls behavior of "next" button
-        booking.goNext = function () {
-          switch(booking.selectedIndex) {
-            case 0:
-              if (booking.shopBooking) {
-                setFirstTab();
-              }
-            case 2:
-              booking.savePaymentOption(); break;
-            default:
-              booking.nextTab(); break
-          }
-        };
-
         // go to next tab
         booking.nextTab = function () {
           booking.selectedIndex = booking.selectedIndex + 1;
@@ -445,25 +441,12 @@ angular.module('booking', [])
         // TODO: This needs to be refactored, rootScopes are very bad practice
         // go to next tab on user create success
         $rootScope.$on('user_created', function () {
-          if (booking.shopBooking) {
-            booking.sendSms(booking.verificationForm.phone_number);
-          } else {
             booking.reloadUser();
-          }
         });
 
         // go to next tab on user login success
         $rootScope.$on('user_login', function () {
           booking.reloadUser();
-        });
-
-        angular.element(document).ready(function () {
-          // set User data if registered
-          if (authentication.loggedIn()) {
-            booking.reloadUser();
-          } else {
-            booking.hidden = false;
-          }
         });
 
         booking.fillAddress = function(place) {

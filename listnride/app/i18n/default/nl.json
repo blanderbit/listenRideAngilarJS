@@ -7,6 +7,7 @@
       "paypal-account": "Paypal rekening"
     },
     "change": "Change",
+    "local-business": "Zakelijke aanbieder",
     "map": "Kaart",
     "bike-type": "Fietstype",
     "filter-by": "Filteren op",
@@ -29,6 +30,7 @@
     },
     "notifications": {
       "404": "Pagina bestaat niet",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "Verkeerd dataformaat ingevoerd",
       "500": "Interne Server Fout",
       "200": "gelukt! "
@@ -470,7 +472,7 @@
       "support": "listnride Support"
     },
     "sign-in": {
-      "tab": "1. Aanmelden",
+      "tab": "Aanmelden",
       "new": "Nieuw bij listnride?",
       "login": "Login bij listnride",
       "register-facebook": "Aanmelden met Facebook",
@@ -480,7 +482,7 @@
       "not-member": "Nog niet aangemeld?"
     },
     "details": {
-      "tab": "2. Persoonlijke gegevens",
+      "tab": "Persoonlijke gegevens",
       "sms-confirmation-message": "Een SMS met een bevestigingscode is zojuist naar u verzonden.",
       "invoice-address": "Factuuradres",
       "subtitle": "Vul alstublieft uw adres in om een fiets aan te vragen.",
@@ -495,7 +497,7 @@
       "resend": "Nogmaals versturen"
     },
     "payment": {
-      "tab": "3. Betaalgegevens",
+      "tab": "Betaalgegevens",
       "current-method": "Huidige betaalmethode",
       "getting-saved": "Betaalmethode wordt opgeslagen",
       "select-method": "Selecteer je betaalmethode",
@@ -517,7 +519,7 @@
       "pay-paypal": "Betaal met PayPal"
     },
     "overview": {
-      "tab": "4. Samenvatting",
+      "tab": "Samenvatting",
       "bike-rental": "Je gekozen fiets",
       "size": "Grootte",
       "location": "Locatie",
@@ -538,7 +540,7 @@
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
-      "tab": "1. Periode",
+      "tab": "Periode",
       "bike-rental": "Je fietshuur",
       "choose-duration": "Kies de huurperiode",
       "pickup-time": "Ophaal tijd",
@@ -766,7 +768,7 @@
     "10": "Uw verzoek is geannuleerd door systeem."
   },
   "rideChat": {
-    "1": "Je zou graag {{lister.business_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
+    "1": "Je zou graag {{lister.display_name}}<a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
     "11": "De boeking van je huurfiets is geannuleerd.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}} heeft de teruggave van de fiets bevestigd. Tenslotte vragen wij je een recensie van de ervaring achter te laten. Dit helpt onze community zeer en rondt tevens de transactie af.",

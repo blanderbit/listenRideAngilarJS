@@ -10,6 +10,8 @@ angular.module('user',[]).component('user', {
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       user.loaded = false;
       user.current_payment = false;
+      user.display_name = '';
+      user.picture = '';
       user.closedDay = closedDay;
 
       var userId;
@@ -27,6 +29,10 @@ angular.module('user',[]).component('user', {
             user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
             user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
             user.rating = (user.user.rating_lister + user.user.rating_rider);
+
+            user.display_name = setName();
+            user.picture = setPicture();
+
             user.current_payment = response.data.status === 3;
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
@@ -42,10 +48,9 @@ angular.module('user',[]).component('user', {
       );
 
       function generateMetaDescription(isCompany) {
-        var title = "user.meta-title";
-        var description = "user.meta-description";
-        // var params = isCompany ? { company: user.user.business.company_name } : { name: user.user.first_name };
-        var params = { name: user.user.first_name };
+        var title = isCompany ? "user.company-meta-title" : "user.meta-title";
+        var description = isCompany ? "user.company-meta-description" : "user.meta-description";
+        var params = isCompany ? { company: $translate.instant('shared.local-business') } : { name: user.user.first_name };
 
         $translate([title, description] , params)
           .then(function(translations) {
@@ -55,6 +60,26 @@ angular.module('user',[]).component('user', {
               ngMeta.setTag("noindex", false);
             }
           });
+      }
+
+      function setName() {
+        if (user.user.has_business) {
+           if (userId !== $localStorage.userId) {
+             return $translate.instant('shared.local-business')
+           } else {
+             return user.user.business.company_name
+           }
+        } else {
+          return user.user.first_name
+        }
+      }
+
+      function setPicture() {
+        if (user.user.has_business && userId !== $localStorage.userId) {
+          return 'app/assets/ui_icons/lnr_shop_avatar.svg'
+        } else {
+          return user.user.profile_picture.profile_picture.url
+        }
       }
 
       function setOpeningHours() {
@@ -79,7 +104,7 @@ angular.module('user',[]).component('user', {
           user.hours[day] = dayRange;
         });
       }
-      
+
       function compactHours() {
         var dayName = '', currentDay = {}, prevDay = {}, shortenHours = {};
 

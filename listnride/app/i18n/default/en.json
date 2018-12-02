@@ -7,6 +7,7 @@
       "paypal-account": "Paypal account"
     },
     "change": "Change",
+    "local-business": "Local Business",
     "map": "Map",
     "bike-type": "Bike type",
     "filter-by": "Filter by",
@@ -29,6 +30,7 @@
     },
     "notifications": {
       "404": "Page doesn't exist",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "Wrong data format entered",
       "500": "Internal server error",
       "200": "Success"
@@ -478,7 +480,7 @@
       "support": "listnride Support"
     },
     "sign-in": {
-      "tab": "1. Sign In",
+      "tab": "Sign In",
       "new": "New at listnride?",
       "login": "Log in to listnride",
       "register-facebook": "Register with Facebook",
@@ -488,7 +490,7 @@
       "not-member": "No member yet?"
     },
     "details": {
-      "tab": "2. Personal Details",
+      "tab": "Personal Details",
       "sms-confirmation-message": "A SMS with a confirmation code was sent to you just now.",
       "invoice-address": "Invoice Address",
       "subtitle": "Please fill in your invoice address in order to request a bike.",
@@ -503,7 +505,7 @@
       "resend": "Resend"
     },
     "payment": {
-      "tab": "3. Payment Method",
+      "tab": "Payment Method",
       "current-method": "Current payment method",
       "getting-saved": "Payment method saving in progress",
       "select-method": "Select your Payment Method",
@@ -525,7 +527,7 @@
       "pay-paypal": "Pay with Paypal"
     },
     "overview": {
-      "tab": "4. Overview",
+      "tab": "Overview",
       "bike-rental": "Your bike rental",
       "size": "Size",
       "location": "Location",
@@ -546,7 +548,7 @@
       "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
     },
     "calendar": {
-      "tab": "1. Duration",
+      "tab": "Duration",
       "bike-rental": "Your bike rental",
       "choose-duration": "Choose your rental duration",
       "pickup-time": "Pickup time",
@@ -777,7 +779,7 @@
     "10": "Your request was cancelled by system"
   },
   "rideChat": {
-    "1": "You would like to rent the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{lister.business_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
+    "1": "You would like to rent the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from  {{lister.display_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
     "11": "The booking of your rental bike was cancelled.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",

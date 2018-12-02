@@ -170,7 +170,8 @@ angular.
           email: user.email,
           firstName: user.firstName,
           lastName: user.lastName,
-          password: user.password
+          password: user.password,
+          isShop: user.isShop || false
         };
 
         $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register'});
@@ -221,7 +222,8 @@ angular.
             },
             'notification_preference' : {
               'newsletter': signupDialog.newsletter
-            }
+            },
+            'is_shop': signupDialog.isShop || false
           };
 
           signupDialog.signingUp = true;

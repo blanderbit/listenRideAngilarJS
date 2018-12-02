@@ -4,10 +4,9 @@
 
     <div class="lnr-mv lnr-mh-x2" layout-xs="column" layout="row" layout-padding>
       <div class="lnr-user__header" flex-gt-xs="70" layout="row">
-        <img class="lnr-profile-lrg" ng-src="{{user.user.profile_picture.profile_picture.url}}">
+        <img class="lnr-profile-lrg" ng-src="{{user.picture}}">
         <div class="lnr-user__info" layout="column" layout-align="center start" layout-padding>
-          <h1 class="md-headline">{{user.user.first_name}}</h1>
-          <!--<h1 ng-if="user.user.business" class="md-headline">{{user.user.business.company_name}}</h1>-->
+          <h1 class="md-headline">{{ user.display_name }}</h1>
           <input-stars class="lnr-user-rating rating" max="5" ng-model="user.rating" readonly></input-stars>
           <span ng-if="user.user.city && user.user.country" class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
         </div>
@@ -99,7 +98,7 @@
       <!-- end listings -->
 
       <!-- reviews -->
-      <div layout="row" layout-xs="column" ng-if="user.user.ratings.length !==0">
+      <div layout="row" layout-xs="column" ng-if="user.user.ratings.length !== 0">
         <div flex-gt-xs="25">
           <h3 class="md-body-2">{{ 'user.ratings' | translate }}</h3>
         </div>
@@ -108,8 +107,20 @@
           <div layout="column">
             <rating ng-repeat="rating in user.user.ratings" data="rating" index="$index" show-all="user.showAll"></rating>
             <div layout="row" layout-align="end center">
-              <md-button class="md-no-focus" ng-if="user.user.ratings.length > 3 && false === user.showAll" ng-click="user.showAll = true">{{'shared.show-more' | translate}} {{'shared.reviews' | translate}}</md-button>
-              <md-button class="md-no-focus" ng-if="user.user.ratings.length > 3 && true === user.showAll" ng-click="user.showAll = false">{{'shared.show-less' | translate}} {{'shared.reviews' | translate}}</md-button>
+              <md-button
+                class="md-no-focus"
+                ng-if="user.user.ratings.length > 3 && !user.showAll"
+                ng-click="user.showAll = true"
+              >
+                {{'shared.show-more' | translate}} {{'shared.reviews' | translate}}
+              </md-button>
+              <md-button
+                class="md-no-focus"
+                ng-if="user.user.ratings.length > 3 && user.showAll"
+                ng-click="user.showAll = false"
+              >
+                {{'shared.show-less' | translate}} {{'shared.reviews' | translate}}
+              </md-button>
             </div>
           </div>
         </div>
