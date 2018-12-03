@@ -11,6 +11,8 @@
  * LNR_PAGES ........... site pages
  * EVENT_PAGES ......... pages with events
  * BRANDS_PAGES ........ pages with brands
+ * CITY_PAGES .......... page for cities (auto generated)
+ * 404_PAGE ............ 404 page and redirect rule
  */
 
 (function () {
@@ -1508,7 +1510,7 @@
       });
 
       /* ------------------------------------ */
-      /* 404 */
+      /* 404_PAGE */
       /* ------------------------------------ */
 
       // 404 page
