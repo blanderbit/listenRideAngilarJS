@@ -188,6 +188,10 @@
         "check-it": "Echale un vistazo"
       }
     },
+    "berlin-triathlon-xl": {
+      "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need.",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+    },
     "vatternrundan": {
       "meta-title": "Alquila una bici de carretera para el Vätternrundan 2019 | listnride",
       "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para el Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
@@ -1132,8 +1136,10 @@
     }
   },
   "listingCard": {
-    "activate-bike": "Activar",
-    "deactivate-bike": "Desactivar",
+    "activate-bike": "Activar bici",
+    "deactivate": "Desactivar",
+    "activate": "Activar",
+    "deactivate-bike": "Desactivar bici",
     "edit-bike": "Editar",
     "delete-bike": "Borrar",
     "cancel": "Cancelar",

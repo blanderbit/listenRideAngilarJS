@@ -1129,6 +1129,8 @@
   },
   "listingCard": {
     "activate-bike": "Attivare",
+    "deactivate": "Disattivare",
+    "activate": "Attivare",
     "deactivate-bike": "Disattivare",
     "edit-bike": "Modifica",
     "delete-bike": "Elimina",

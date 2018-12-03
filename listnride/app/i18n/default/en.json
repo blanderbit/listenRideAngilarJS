@@ -1143,6 +1143,8 @@
   },
   "listingCard": {
     "activate-bike": "Activate",
+    "deactivate": "Deactivate",
+    "activate": "Activate",
     "deactivate-bike": "Deactivate",
     "edit-bike": "Edit",
     "delete-bike": "Delete",
