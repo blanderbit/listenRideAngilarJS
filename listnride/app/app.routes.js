@@ -153,21 +153,6 @@
         }
       });
 
-      // wfs
-      $stateProvider.state({
-        name: 'wfs',
-        url: '/wfs',
-        template: '<user></user>',
-        resolve: {
-          data: function (ngMeta) {
-            ngMeta.setTag("noindex", false);
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
       // requests/{id}
       $stateProvider.state({
         name: 'requests',
