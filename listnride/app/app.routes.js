@@ -1158,6 +1158,44 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'epicgrancanaria',
+        url: '/epicgrancanaria',
+        template: '<epicgrancanaria></epicgrancanaria>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.epicgrancanaria.meta-title", "events.epicgrancanaria.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.epicgrancanaria.meta-title"]);
+                ngMeta.setTag("description", translations["events.epicgrancanaria.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'veloraceDresden',
+        url: '/velorace-dresden',
+        template: '<velorace-dresden></velorace-dresden>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.velorace-dresden.meta-title", "events.velorace-dresden.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.velorace-dresden.meta-title"]);
+                ngMeta.setTag("description", translations["events.velorace-dresden.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* BRANDS_PAGES */
       /* ------------------------------------ */
