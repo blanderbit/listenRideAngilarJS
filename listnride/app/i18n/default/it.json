@@ -880,6 +880,7 @@
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Prenotazioni di gruppo",
     "bikes-found": "Bici trovate:",
     "all-sizes": "Tutte le misure",
