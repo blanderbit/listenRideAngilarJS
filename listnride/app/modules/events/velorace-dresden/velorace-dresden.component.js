@@ -11,7 +11,7 @@ angular.module('veloraceDresden', []).component('veloraceDresden', {
       $tpl.addPart('static');
       ngMeta.setTitle($translate.instant("events.velorace-dresden.meta-title"));
       ngMeta.setTag("description", $translate.instant("events.velorace-dresden.meta-description"));
-      ngMeta.setTag("og:image", "app/assets/ui_images/events/velorace-dresden_hero.jpg");
+      ngMeta.setTag("og:image", "app/assets/ui_images/events/velorace_dresden_og.jpg");
 
       bikeOptions.sizeOptions('search', null).then(function (resolve) {
         veloraceDresden.sizes = resolve
