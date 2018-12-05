@@ -145,7 +145,7 @@
     "privacy-policy": "Privacy Policy",
     "booking-accept-tac": "By booking I accept the",
     "already-booked": "Already booked",
-    "for-shops": "For Bikeshops",
+    "for-shops": "For Business",
     "contact-us": "Please get in touch with us via ",
     "required": "This is required",
     "update": "Update",
@@ -190,6 +190,14 @@
         "description": "Get huge discount for your next rental. Only today! ",
         "check-it": "Check it out"
       }
+    },
+    "epicgrancanaria": {
+      "meta-title": "Rent a road bike for Epic Gran Canaria | listnride",
+      "meta-description": "The aim of the Epic Gran Canaria is to deliver a professional experience on bike for amateur riders"
+    },
+    "velorace-dresden": {
+      "meta-title": "Rent a road bike for Velorace Dresden 2019 | listnride",
+      "meta-description": "With listnride you can securely rent a road bike online for Velorace Dresden 2019. Choose the perfect bike that fits your needs!"
     },
     "berlin-triathlon-xl": {
       "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need.",
@@ -1143,6 +1151,8 @@
   },
   "listingCard": {
     "activate-bike": "Activate",
+    "deactivate": "Deactivate",
+    "activate": "Activate",
     "deactivate-bike": "Deactivate",
     "edit-bike": "Edit",
     "delete-bike": "Delete",

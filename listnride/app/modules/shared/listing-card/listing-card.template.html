@@ -36,6 +36,7 @@
       ng-disabled="listingCard.deactivated"
       ng-click="listingCard.deactivate()"
       ng-if="listingCard.available">
+      <md-tooltip>{{ 'listingCard.deactivate' | translate }}</md-tooltip>
       <md-icon md-svg-icon="app/assets/ui_icons/turn-visibility-off-button.svg"></md-icon>
     </md-button>
 
@@ -46,6 +47,7 @@
       ng-disabled="listingCard.disableActivate"
       ng-click="listingCard.onActivateClick()"
       ng-if="!listingCard.available">
+      <md-tooltip>{{ 'listingCard.activate' | translate }}</md-tooltip>
       <md-icon md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
     </md-button>
 

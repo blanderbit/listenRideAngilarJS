@@ -5,6 +5,14 @@
  * meta tag to false to let search engines index our page.
  * Depening if a resolve is needed or not, do it like in the
  * home state (with resolve) or in the user state (without resolve)
+ *
+ * Contents
+ *
+ * LNR_PAGES ........... site pages
+ * EVENT_PAGES ......... pages with events
+ * BRANDS_PAGES ........ pages with brands
+ * CITY_PAGES .......... page for cities (auto generated)
+ * 404_PAGE ............ 404 page and redirect rule
  */
 
 (function () {
@@ -14,6 +22,11 @@
   config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
 
+      /* ------------------------------------ */
+      /* LNR_PAGES */
+      /* ------------------------------------ */
+
+      // home
       $stateProvider.state({
         name: 'home',
         url: '/',
@@ -37,24 +50,28 @@
         }
       });
 
+      // home/verify
       $stateProvider.state({
         name: 'verify',
         url: '/verify',
         template: '<home></home>'
       });
 
+      // home/confirm
       $stateProvider.state({
         name: 'confirm',
         url: '/confirm/{userId:int}/{confirmationCode:string}',
         template: '<home></home>'
       });
 
+      // home/business-signup
       $stateProvider.state({
         name: 'businessSignup',
         url: '/business-signup',
         template: '<home></home>'
       });
 
+      // bikes/{id}
       $stateProvider.state({
         name: 'bike',
         url: '/bikes/{bikeId:int}',
@@ -69,6 +86,7 @@
         }
       });
 
+      // booking
       $stateProvider.state({
         name: 'booking',
         url: '/booking?bikeId&startDate&endDate&shop',
@@ -84,12 +102,14 @@
         }
       });
 
+      // list-view
       $stateProvider.state({
         name: 'list-view',
         url: '/list-view',
         template: '<bike-list-view></bike-list-view>'
       });
 
+      // search
       $stateProvider.state({
         name: 'search',
         url: '/search/{location}?start_date&duration&sizes&categories',
@@ -120,6 +140,7 @@
         }
       });
 
+      // user/{id}
       $stateProvider.state({
         name: 'user',
         url: '/users/{userId:int}',
@@ -134,20 +155,7 @@
         }
       });
 
-      $stateProvider.state({
-        name: 'wfs',
-        url: '/wfs',
-        template: '<user></user>',
-        resolve: {
-          data: function (ngMeta) {
-            ngMeta.setTag("noindex", false);
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
+      // requests/{id}
       $stateProvider.state({
         name: 'requests',
         url: '/requests/?requestId',
@@ -170,6 +178,7 @@
         }
       });
 
+      // requests/tokenlogin
       $stateProvider.state({
         name: 'tokenlogin',
         url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
@@ -187,6 +196,7 @@
         }
       });
 
+      // list-a-bike
       $stateProvider.state({
         name: 'list',
         url: '/list-bike',
@@ -201,6 +211,7 @@
         }
       });
 
+      // listings
       $stateProvider.state({
         name: 'listings',
         url: '/listings?page&q',
@@ -226,6 +237,7 @@
         }
       });
 
+      // invoices
       $stateProvider.state({
         name: 'invoices',
         url: '/invoices',
@@ -240,6 +252,7 @@
         }
       });
 
+      // edit-bike/{id}
       $stateProvider.state({
         name: 'edit',
         url: '/edit-bike/{bikeId:int}',
@@ -254,6 +267,7 @@
         }
       });
 
+      // settings
       $stateProvider.state({
         name: 'settings',
         url: '/settings',
@@ -273,7 +287,457 @@
         }
       });
 
-      /* event pages -- start */
+      // listing-a-bike
+      $stateProvider.state({
+        name: 'listingABike',
+        url: '/listing-a-bike',
+        template: '<listing-a-bike></listing-a-bike>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["list-a-bike.meta-title", "list-a-bike.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["list-a-bike.meta-title"]);
+                ngMeta.setTag("description", translations["list-a-bike.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // renting-a-bike
+      $stateProvider.state({
+        name: 'rentingABike',
+        url: '/renting-a-bike',
+        template: '<renting-a-bike></renting-a-bike>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["rent-a-bike.meta-title", "rent-a-bike.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["rent-a-bike.meta-title"]);
+                ngMeta.setTag("description", translations["rent-a-bike.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // about
+      $stateProvider.state({
+        name: 'about',
+        url: '/about',
+        templateUrl: 'app/modules/static/about.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.about-us.meta-title", "meta.about-us.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.about-us.meta-title"]);
+                ngMeta.setTag("description", translations["meta.about-us.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // invest
+      $stateProvider.state({
+        name: 'invest',
+        url: '/invest',
+        template: '<invest></invest>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.invest.meta-title", "meta.invest.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.invest.meta-title"]);
+                ngMeta.setTag("description", translations["meta.invest.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // trust-and-safety
+      $stateProvider.state({
+        name: 'trustAndSafety',
+        url: '/trust-and-safety',
+        templateUrl: 'app/modules/static/trust-and-safety.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.trust-and-safety.meta-title", "meta.trust-and-safety.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.trust-and-safety.meta-title"]);
+                ngMeta.setTag("description", translations["meta.trust-and-safety.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // terms
+      $stateProvider.state({
+        name: 'terms',
+        url: '/terms',
+        templateUrl: 'app/modules/static/terms.template.html',
+        controller: 'StaticController',
+        resolve: {
+              data: function ($translate, ngMeta) {
+                  $translate(["meta.terms-and-conditions.meta-title", "meta.terms-and-conditions.meta-description"])
+                      .then(function (translations) {
+                          ngMeta.setTitle(translations["meta.terms-and-conditions.meta-title"]);
+                          ngMeta.setTag("description", translations["meta.terms-and-conditions.meta-description"]);
+                          ngMeta.setTag("noindex", false);
+                      })
+              }
+          },
+          meta: {
+              disableUpdate: true
+          }
+      });
+
+      // help
+      $stateProvider.state({
+        name: 'help',
+        url: '/help',
+        templateUrl: 'app/modules/static/help.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.contact-and-help.meta-title", "meta.contact-and-help.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.contact-and-help.meta-title"]);
+                ngMeta.setTag("description", translations["meta.contact-and-help.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // jobs
+      $stateProvider.state({
+        name: 'jobs',
+        url: '/jobs?position',
+        template: '<jobs></jobs>',
+        reloadOnSearch: false,
+        params: {
+          position: {
+            value: "",
+            squash: true
+          }
+        },
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.jobs.meta-title"]);
+                ngMeta.setTag("description", translations["meta.jobs.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // press
+      $stateProvider.state({
+        name: 'press',
+        url: '/press',
+        templateUrl: 'app/modules/static/press.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.press.meta-title", "meta.press.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.press.meta-title"]);
+                ngMeta.setTag("description", translations["meta.press.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // imprint
+      $stateProvider.state({
+        name: 'imprint',
+        url: '/imprint',
+        templateUrl: 'app/modules/static/imprint.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.imprint.meta-title", "meta.imprint.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.imprint.meta-title"]);
+                ngMeta.setTag("description", translations["meta.imprint.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // privacy
+      $stateProvider.state({
+        name: 'privacy',
+        url: '/privacy',
+        templateUrl: 'app/modules/static/privacy.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.privacy.meta-title", "meta.privacy.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.privacy.meta-title"]);
+                ngMeta.setTag("description", translations["meta.privacy.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // how-it-works
+      $stateProvider.state({
+        name: 'howItWorks',
+        url: '/how-it-works',
+        templateUrl: 'app/modules/static/how-it-works.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.how-it-works.meta-title", "meta.how-it-works.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.how-it-works.meta-title"]);
+                ngMeta.setTag("description", translations["meta.how-it-works.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // bikeshop
+      $stateProvider.state({
+        name: 'shopLanding',
+        url: '/bikeshop',
+        templateUrl: 'app/modules/static/shop-landing.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.shop-landing.meta-title", "meta.shop-landing.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.shop-landing.meta-title"]);
+                ngMeta.setTag("description", translations["meta.shop-landing.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // business-community
+      $stateProvider.state({
+        name: 'businessCommunity',
+        url: '/business-community',
+        template: '<business-community></business-community>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.business-community.meta-title", "meta.business-community.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.business-community.meta-title"]);
+                ngMeta.setTag("description", translations["meta.business-community.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // brands
+      $stateProvider.state({
+        name: 'brands',
+        url: '/brands',
+        template: '<brands></brands>',
+        reloadOnSearch: false,
+        params: {
+          view: {
+            value: "",
+            squash: true
+          }
+        },
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brands.meta-title", "meta.brands.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brands.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brands.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // how-to-shoot-bike-photos
+      $stateProvider.state({
+        name: 'how-to-shoot-bike-photos',
+        url: '/how-to-shoot-bike-photos',
+        templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+              $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+                  .then(function () {
+                      ngMeta.setTitle("");
+                      ngMeta.setTag("description", "");
+                      ngMeta.setTag("noindex", false);
+                  })
+          }
+      },
+      meta: {
+          disableUpdate: true
+      }
+      });
+
+      // invite-friends
+      $stateProvider.state({
+        name: 'invite',
+        url: '/invite-friends',
+        template: '<invite></invite>',
+        resolve: {
+          data: function (ngMeta) {
+            ngMeta.setTag("noindex", false);
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // invitation/{invideCode}
+      $stateProvider.state({
+        name: 'inviteLanding',
+        url: '/invitation/{inviteCode: string}',
+        template: '<invite-landing></invite-landing>',
+        resolve: {
+          data: function (ngMeta) {
+            ngMeta.setTag("noindex", false);
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // insurance
+      $stateProvider.state({
+        name: 'insurance',
+        url: '/insurance',
+        templateUrl: 'app/modules/static/insurance.template.html',
+        controller: 'StaticController',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["insurance.meta-title", "insurance.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["insurance.meta-title"]);
+                ngMeta.setTag("description", translations["insurance.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      // multi-booking
+      $stateProvider.state({
+        name: 'multiBooking',
+        url: '/multi-booking?location',
+        template: '<multi-booking></multi-booking>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["multi-booking.meta-title", "multi-booking.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["multi-booking.meta-title"]);
+                ngMeta.setTag("description", translations["multi-booking.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        },
+        params: {
+          location: {
+            value: "",
+            squash: true
+          }
+        }
+      });
+
+      // faq
+      $stateProvider.state({
+        name: 'faq',
+        url: '/faq?group',
+        template: '<faq></faq>',
+        reloadOnSearch: false,
+        params: {
+          position: {
+            value: "",
+            squash: true
+          }
+        },
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["faq.meta-title", "faq.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["faq.meta-title"]);
+                ngMeta.setTag("description", translations["faq.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      /* ------------------------------------ */
+      /* EVENT_PAGES */
+      /* ------------------------------------ */
 
       $stateProvider.state({
         name: 'raphaSuperCross',
@@ -695,15 +1159,15 @@
       });
 
       $stateProvider.state({
-        name: 'listingABike',
-        url: '/listing-a-bike',
-        template: '<listing-a-bike></listing-a-bike>',
+        name: 'epicgrancanaria',
+        url: '/epicgrancanaria',
+        template: '<epicgrancanaria></epicgrancanaria>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["list-a-bike.meta-title", "list-a-bike.meta-description"])
+            $translate(["events.epicgrancanaria.meta-title", "events.epicgrancanaria.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["list-a-bike.meta-title"]);
-                ngMeta.setTag("description", translations["list-a-bike.meta-description"]);
+                ngMeta.setTitle(translations["events.epicgrancanaria.meta-title"]);
+                ngMeta.setTag("description", translations["events.epicgrancanaria.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }
@@ -714,15 +1178,15 @@
       });
 
       $stateProvider.state({
-        name: 'rentingABike',
-        url: '/renting-a-bike',
-        template: '<renting-a-bike></renting-a-bike>',
+        name: 'veloraceDresden',
+        url: '/velorace-dresden',
+        template: '<velorace-dresden></velorace-dresden>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["rent-a-bike.meta-title", "rent-a-bike.meta-description"])
+            $translate(["events.velorace-dresden.meta-title", "events.velorace-dresden.meta-description"])
               .then(function (translations) {
-                ngMeta.setTitle(translations["rent-a-bike.meta-title"]);
-                ngMeta.setTag("description", translations["rent-a-bike.meta-description"]);
+                ngMeta.setTitle(translations["events.velorace-dresden.meta-title"]);
+                ngMeta.setTag("description", translations["events.velorace-dresden.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }
@@ -732,275 +1196,9 @@
         }
       });
 
-      $stateProvider.state({
-        name: 'about',
-        url: '/about',
-        templateUrl: 'app/modules/static/about.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.about-us.meta-title", "meta.about-us.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.about-us.meta-title"]);
-                ngMeta.setTag("description", translations["meta.about-us.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'invest',
-        url: '/invest',
-        template: '<invest></invest>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.invest.meta-title", "meta.invest.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.invest.meta-title"]);
-                ngMeta.setTag("description", translations["meta.invest.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'trustAndSafety',
-        url: '/trust-and-safety',
-        templateUrl: 'app/modules/static/trust-and-safety.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.trust-and-safety.meta-title", "meta.trust-and-safety.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.trust-and-safety.meta-title"]);
-                ngMeta.setTag("description", translations["meta.trust-and-safety.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'terms',
-        url: '/terms',
-        templateUrl: 'app/modules/static/terms.template.html',
-        controller: 'StaticController',
-        resolve: {
-              data: function ($translate, ngMeta) {
-                  $translate(["meta.terms-and-conditions.meta-title", "meta.terms-and-conditions.meta-description"])
-                      .then(function (translations) {
-                          ngMeta.setTitle(translations["meta.terms-and-conditions.meta-title"]);
-                          ngMeta.setTag("description", translations["meta.terms-and-conditions.meta-description"]);
-                          ngMeta.setTag("noindex", false);
-                      })
-              }
-          },
-          meta: {
-              disableUpdate: true
-          }
-      });
-
-      $stateProvider.state({
-        name: 'help',
-        url: '/help',
-        templateUrl: 'app/modules/static/help.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.contact-and-help.meta-title", "meta.contact-and-help.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.contact-and-help.meta-title"]);
-                ngMeta.setTag("description", translations["meta.contact-and-help.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'jobs',
-        url: '/jobs?position',
-        template: '<jobs></jobs>',
-        reloadOnSearch: false,
-        params: {
-          position: {
-            value: "",
-            squash: true
-          }
-        },
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.jobs.meta-title"]);
-                ngMeta.setTag("description", translations["meta.jobs.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'press',
-        url: '/press',
-        templateUrl: 'app/modules/static/press.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.press.meta-title", "meta.press.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.press.meta-title"]);
-                ngMeta.setTag("description", translations["meta.press.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'imprint',
-        url: '/imprint',
-        templateUrl: 'app/modules/static/imprint.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.imprint.meta-title", "meta.imprint.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.imprint.meta-title"]);
-                ngMeta.setTag("description", translations["meta.imprint.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'privacy',
-        url: '/privacy',
-        templateUrl: 'app/modules/static/privacy.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.privacy.meta-title", "meta.privacy.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.privacy.meta-title"]);
-                ngMeta.setTag("description", translations["meta.privacy.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'howItWorks',
-        url: '/how-it-works',
-        templateUrl: 'app/modules/static/how-it-works.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.how-it-works.meta-title", "meta.how-it-works.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.how-it-works.meta-title"]);
-                ngMeta.setTag("description", translations["meta.how-it-works.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'shopLanding',
-        url: '/bikeshop',
-        templateUrl: 'app/modules/static/shop-landing.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.shop-landing.meta-title", "meta.shop-landing.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.shop-landing.meta-title"]);
-                ngMeta.setTag("description", translations["meta.shop-landing.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'businessCommunity',
-        url: '/business-community',
-        template: '<business-community></business-community>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.business-community.meta-title", "meta.business-community.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.business-community.meta-title"]);
-                ngMeta.setTag("description", translations["meta.business-community.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'brands',
-        url: '/brands',
-        template: '<brands></brands>',
-        reloadOnSearch: false,
-        params: {
-          view: {
-            value: "",
-            squash: true
-          }
-        },
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.brands.meta-title", "meta.brands.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.brands.meta-title"]);
-                ngMeta.setTag("description", translations["meta.brands.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
+      /* ------------------------------------ */
+      /* BRANDS_PAGES */
+      /* ------------------------------------ */
 
       $stateProvider.state({
         name: 'ampler',
@@ -1323,65 +1521,9 @@
         }
       });
 
-      /* event pages -- end */
-
-      $stateProvider.state({
-        name: 'how-to-shoot-bike-photos',
-        url: '/how-to-shoot-bike-photos',
-        templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-              $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-                  .then(function () {
-                      ngMeta.setTitle("");
-                      ngMeta.setTag("description", "");
-                      ngMeta.setTag("noindex", false);
-                  })
-          }
-      },
-      meta: {
-          disableUpdate: true
-      }
-      });
-
-      $stateProvider.state({
-        name: 'invite',
-        url: '/invite-friends',
-        template: '<invite></invite>',
-        resolve: {
-          data: function (ngMeta) {
-            ngMeta.setTag("noindex", false);
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'inviteLanding',
-        url: '/invitation/{inviteCode: string}',
-        template: '<invite-landing></invite-landing>',
-        resolve: {
-          data: function (ngMeta) {
-            ngMeta.setTag("noindex", false);
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state('404', {
-        templateUrl: 'app/modules/static/error-404.template.html',
-        data: {
-          meta: {
-            'title': 'listnride - 404',
-            'prerender-status-code': '404'
-          }
-        }
-      });
+      /* ------------------------------------ */
+      /* CITY_PAGES */
+      /* ------------------------------------ */
 
       $stateProvider.state({
         name: 'categoryLanding',
@@ -1405,74 +1547,18 @@
         }
       });
 
-      $stateProvider.state({
-        name: 'insurance',
-        url: '/insurance',
-        templateUrl: 'app/modules/static/insurance.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["insurance.meta-title", "insurance.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["insurance.meta-title"]);
-                ngMeta.setTag("description", translations["insurance.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
+      /* ------------------------------------ */
+      /* 404_PAGE */
+      /* ------------------------------------ */
 
-      $stateProvider.state({
-        name: 'multiBooking',
-        url: '/multi-booking?location',
-        template: '<multi-booking></multi-booking>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["multi-booking.meta-title", "multi-booking.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["multi-booking.meta-title"]);
-                ngMeta.setTag("description", translations["multi-booking.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+      // 404 page
+      $stateProvider.state('404', {
+        templateUrl: 'app/modules/static/error-404.template.html',
+        data: {
+          meta: {
+            'title': 'listnride - 404',
+            'prerender-status-code': '404'
           }
-        },
-        meta: {
-          disableUpdate: true
-        },
-        params: {
-          location: {
-            value: "",
-            squash: true
-          }
-        }
-      });
-
-      $stateProvider.state({
-        name: 'faq',
-        url: '/faq?group',
-        template: '<faq></faq>',
-        reloadOnSearch: false,
-        params: {
-          position: {
-            value: "",
-            squash: true
-          }
-        },
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["faq.meta-title", "faq.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["faq.meta-title"]);
-                ngMeta.setTag("description", translations["faq.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
         }
       });
 
