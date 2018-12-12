@@ -13,9 +13,9 @@ angular.module('user',[]).component('user', {
       user.display_name = '';
       user.picture = '';
       user.mobileScreen = $mdMedia('xs');
-      user.mobileBikeColumns = 2;
-      user.desktopBikeColumns = 6;
-      user.bikesToShow = user.mobileScreen ? user.mobileBikeColumns : user.desktopBikeColumns;
+      var mobileBikeColumns = 2;
+      var desktopBikeColumns = 6;
+      user.bikesToShow = user.mobileScreen ? mobileBikeColumns : desktopBikeColumns;
       user.showAllBikes = false;
 
       user.closedDay = closedDay;
