@@ -13,7 +13,9 @@ angular.module('user',[]).component('user', {
       user.display_name = '';
       user.picture = '';
       user.mobileScreen = $mdMedia('xs');
-      user.bikesToShow = user.mobileScreen ? 2 : 6;
+      user.mobileBikeColumns = 2;
+      user.desktopBikeColumns = 6;
+      user.bikesToShow = user.mobileScreen ? user.mobileBikeColumns : user.desktopBikeColumns;
       user.showAllBikes = false;
 
       user.closedDay = closedDay;
@@ -42,11 +44,9 @@ angular.module('user',[]).component('user', {
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
             }
-            if (user.user.rides.length > user.bikesToShow) {
-              user.bikes = user.user.rides.slice(0, user.bikesToShow);
-            } else {
-              user.bikes = user.user.rides;
-            }
+
+            user.bikes = user.user.rides.slice(0, user.bikesToShow);
+
             user.rating = Math.round(user.rating);
             if (user.openingHoursEnabled) setOpeningHours();
 

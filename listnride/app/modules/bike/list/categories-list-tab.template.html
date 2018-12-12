@@ -24,7 +24,7 @@
         <md-input-container>
           <label style="display: none">2. Specify the subcategory</label>
           <md-select
-            ng-class="!categoriesTab.parent.selectedCategory.subcategories ? 'lnr-no-select' : ''"
+            ng-class="categoriesTab.parent.selectedCategory.subcategories ? '' : 'lnr-no-select'"
             ng-model="categoriesTab.parent.form.subCategory">
             <md-option ng-value="subCategory.id" ng-repeat="subCategory in categoriesTab.parent.selectedCategory.subcategories">
               {{ subCategory.name }}
