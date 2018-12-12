@@ -1,19 +1,15 @@
 <!-- invitation form -->
 <div id="inviteForm" layout-padding>
     <div class="invite-form-container content" md-theme="lnr-dark" layout="column" layout-align="space-around none">
-        <div class="lnr-center" flex layout="column" layout-align="start center">
-            <h2 class="md-display-1">{{ referral.header | translate }}</h2>
-        </div>
-        <div class="lnr-center" flex layout="column" layout-align="center center">
-            <p class="md-subhead" layout layout-align="center center">
-                <span flex="90">{{ referral.subHeader | translate }}</span>
-            </p>
-        </div>
+        <h2 class="lnr-center md-display-1">{{ referral.header | translate }}</h2>
+        <p class="lnr-center md-subhead" layout layout-align="center center">
+            <span flex="90">{{ referral.subHeader | translate }}</span>
+        </p>
 
         <div ng-if="referral.authentication.loggedIn()"
              class="button-container"
              layout="row"
-             layout-align="center center" 
+             layout-align="center center"
              layout-margin>
             <img ng-click="referral.shareThroughFacebook()"
                  class="lnr-icn-lrg share-icon"

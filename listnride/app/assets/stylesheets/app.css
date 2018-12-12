@@ -292,7 +292,6 @@ md-card md-card-title {
   display: block;
 }
 
-
 button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
   background-color: rgb(122, 178, 248);
 }
@@ -914,6 +913,10 @@ md-tooltip .md-content {
 
 .lnr-tt-u {
   text-transform: uppercase;
+}
+
+.lnr-no-select {
+  pointer-events: none;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2246,6 +2249,7 @@ requests md-input-container {
 
 .lnr-message .message-text {
   margin-bottom: 2px;
+  word-wrap: break-word;
 }
 
 message .sent-message {

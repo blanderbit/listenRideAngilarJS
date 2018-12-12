@@ -42,7 +42,7 @@
 
     <md-divider></md-divider>
 
-    <div layout="column" flex-xs="100" flex="90" layout-padding>
+    <div layout="column" flex-gt-sm="90" layout-padding>
       <!-- description -->
       <div layout="row" layout-xs="column">
         <div flex-gt-xs="25">
@@ -87,12 +87,20 @@
       <!-- end availability -->
 
       <!-- listings -->
-      <div layout="row" layout-xs="column" ng-if="user.user.rides.length !== 0">
-        <div flex-gt-xs="25">
-          <h3 class="md-body-2">{{ 'user.own-bikes' | translate }}</h3>
+      <div ng-if="user.user.rides.length !== 0">
+        <h3 class="md-body-2">{{ 'user.own-bikes' | translate }}</h3>
+        <div layout="row" layout-xs="column" class="lnr-mv-reset">
+          <div flex-gt-xs layout="row" layout-wrap layout-padding class="lnr-mv-reset">
+            <bike-card ng-repeat="bike in user.bikes" bike="bike" flex="100" flex-gt-xs="33" flex-gt-sm="33"></bike-card>
+          </div>
         </div>
-        <div flex-gt-xs layout="row" layout-wrap layout-padding>
-          <bike-card ng-repeat="bike in user.user.rides" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="50"></bike-card>
+        <div layout="row" layout-align="center center">
+          <md-button
+            ng-if="user.user.rides.length > user.bikesToShow && !user.showAllBikes"
+            class="md-no-focus"
+            ng-click="user.loadAllBikes()">
+            {{'shared.show-more' | translate}} {{'search.bikes' | translate}}
+          </md-button>
         </div>
       </div>
       <!-- end listings -->
