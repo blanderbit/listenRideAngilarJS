@@ -2246,6 +2246,7 @@ requests md-input-container {
 
 .lnr-message .message-text {
   margin-bottom: 2px;
+  word-wrap: break-word;
 }
 
 message .sent-message {
