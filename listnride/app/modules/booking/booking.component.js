@@ -182,10 +182,11 @@ angular.module('booking', [])
         };
 
         booking.addVoucher = function() {
-          voucher.addVoucher(booking.voucherCode);
-          booking.reloadUser();
-          booking.voucherCode = "";
-          $analytics.eventTrack('click', {category: 'Request Bike', label: 'Add Voucher'});
+          voucher.addVoucher(booking.voucherCode).then(function(response){
+            $analytics.eventTrack('click', {category: 'Request Bike', label: 'Add Voucher'});
+            booking.voucherCode = "";
+            booking.reloadUser();
+          });
         };
 
         booking.nextDisabled = function() {
