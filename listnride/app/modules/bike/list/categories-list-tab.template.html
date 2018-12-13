@@ -32,27 +32,27 @@
           </md-select>
         </md-input-container>
 
-        <div class="lnr-list-title" ng-show="categoriesTab.parent.showAccessories()">
-          <h3 class="md-subhead">
-            {{ 'list.accessories.header' | translate }}
-          </h3>
-        </div>
-        <div layout="row" flex layout-wrap ng-show="categoriesTab.parent.showAccessories()">
-          <div
-            class="accessory-checkbox"
-            flex="30" flex-xs="45" layout="row" layout-align="start center"
-            ng-repeat="acc in categoriesTab.parent.accessoryOptions"
-            ng-class="categoriesTab.parent.form.accessories[acc.model] ? 'checked' : 'unchecked'"
-            ng-click="categoriesTab.parent.form.accessories[acc.model] = !categoriesTab.parent.form.accessories[acc.model]">
-            <md-icon ng-class="categoriesTab.parent.form.accessories[acc.model] ? 'checked' : 'unchecked'" class="lnr-icn-md md-color-foreground accessory-icon"
-              md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}"></md-icon>
-            <div class="accessory-label no-select" ng-class="categoriesTab.parent.form.accessories[acc.model] ? 'checked' : 'unchecked'">
-              {{'list.accessories.' + acc.label | translate }}
+        <div ng-style="{'visibility' : categoriesTab.parent.showAccessories() ? 'visible' : 'hidden'}">
+          <div class="lnr-list-title" >
+            <h3 class="md-subhead">
+              {{ 'list.accessories.header' | translate }}
+            </h3>
+          </div>
+          <div layout="row" flex layout-wrap>
+            <div
+              class="accessory-checkbox"
+              flex="30" flex-xs="45" layout="row" layout-align="start center"
+              ng-repeat="acc in categoriesTab.parent.accessoryOptions"
+              ng-class="categoriesTab.parent.form.accessories[acc.model] ? 'checked' : 'unchecked'"
+              ng-click="categoriesTab.parent.form.accessories[acc.model] = !categoriesTab.parent.form.accessories[acc.model]">
+              <md-icon ng-class="categoriesTab.parent.form.accessories[acc.model] ? 'checked' : 'unchecked'" class="lnr-icn-md md-color-foreground accessory-icon"
+                md-svg-src="app/assets/ui_icons/{{acc.iconFileName}}"></md-icon>
+              <div class="accessory-label no-select" ng-class="categoriesTab.parent.form.accessories[acc.model] ? 'checked' : 'unchecked'">
+                {{'list.accessories.' + acc.label | translate }}
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
 
       <md-divider hide-xs class="lnr-ml lnr-mr-x2"></md-divider>
