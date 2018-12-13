@@ -1174,19 +1174,19 @@
     }
   },
   "jobs": {
-    "title": "Jobs",
-    "header": "Stellenangebote",
-    "subheader": "Vergrößere unsere Bike-Sharing-Community.",
+    "title": "Stellenangebote",
+    "header": "Stellenangebote bei List and Ride",
+    "subheader": "Wir setzen neue Standards für die Buchung von Fahrrädern und Rad-Erlebnissen",
     "contact": {
       "title": "Werde Teil unseres Teams",
-      "content": "Über Fahrräder weißt du immer mehr als andere? Du liebst es, auch bei Wind und Wetter in die Pedale zu treten? Dann bist du wahrscheinlich ein Fahrrad-Fanatiker – und passt schon mal gut zu unserem Team. Schau, ob wir aktuell einen passenden Job für Dich haben und schicke uns gerne Deine Bewerbung."
+      "content": "Wir suchen Menschen mit Talent und Erfahrung, die in einem Start-up etwas bewegen möchten. Arbeite in einem aufregenden und dynamischen Umfeld, eigenverantwortlich und als Teil eines coolen Teams. Gemeinsam setzen wir neue Standards für die Buchung von Bikes und Bike-Erlebnissen. \n\nWenn du interessiert bist dabei zu sein, schau bitte die unten aufgelisteten freien Stellen durch. Wir freuen uns darauf, von dir zu hören."
     },
     "view": "Anzeigen",
     "meta-title": "Jobs | listnride",
     "meta-description": "Werde Teil des Teams und unterstütze die globale Fahrrad Community!",
     "apply": "Jetzt bewerben",
-    "see-all": "See Other Jobs",
-    "open": "Offene Positionen",
+    "see-all": "Weitere Jobs anzeigen",
+    "open": "Stellenangebote",
     "go-back": "Zurück"
   },
   "shop-landing": {

@@ -1162,17 +1162,18 @@
   },
   "jobs": {
     "title": "Werken bij",
-    "header": "Vacatures",
-    "subheader": "Vergroot onze Bike-Sharing-Community.",
+    "header": "Werken bij List and Ride",
+    "subheader": "We zetten de nieuwe standaard voor het boeken van fietshuur en fietstochten.",
     "contact": {
-      "title": " Join the team!",
-      "content": "Je weet altijd meer over fietsen dan anderen? Je houdt ervan bij weer en wind op de fiets te zitten? Dan ben je waarschijnlijk een fietsfanaat – en pas je waarschijnlijk ook goed in ons team. Check of wij momenteel een interessante baan voor je hebben of stuur ons je sollicitatie toe."
+      "title": "Join ons team",
+      "content": "Wij zijn op zoek naar getalenteerde collega's die binnen een inspirerend en gemotiveerd team willen werken binnen een start-up business, die een nieuwe standaard wil zetten voor de manier waarop mensen fietsen en fietstochten boeken. List and Ride is op zoek naar mensen met een doener mentaliteit die bereid zijn om verantwoordelijkheid te nemen in een dynamische omgeving.\n\nAls je geïnteresseerd bent om bij ons te komen werken, bekijk dan onze actuele vacatures hieronder. We horen graag van je."
     },
     "view": "Bekijk",
-    "meta-title": "Werken voor listnride",
-    "meta-description": "Wordt deel van het listnride bike sharing team in Berlijn of Munchen om te bouwen aan een wereldwijde fietscommunity",
-    "apply": "Nu toepassen",
-    "open": "Open Posities",
+    "meta-title": "Werken bij listnride",
+    "meta-description": "Kom werken bij het listnride team in Berlijn of München en bouw mee aan de wereldwijde fietscommunity",
+    "apply": "Soliciteer nu! ",
+    "see-all": "Meer vacatures",
+    "open": "Vacatures",
     "go-back": "Terug"
   },
   "shop-landing": {
