@@ -571,8 +571,12 @@ angular.module('settings',[])
       }
 
       function addVoucher() {
-        voucher.addVoucher(settings.voucherCode);
-        settings.voucherCode = "";
+        voucher.addVoucher(settings.voucherCode).then(function () {
+          settings.voucherCode = "";
+          userApi.getUserData().then(function (response) {
+            settings.user.balance = response.data.balance;
+          });
+        }, null);
       };
 
       function updateNewsletter() {
