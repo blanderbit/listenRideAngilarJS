@@ -3,8 +3,8 @@
 angular.module('brands', []).component('brands', {
   templateUrl: 'app/modules/brands/brands.template.html',
   controllerAs: 'brands',
-  controller: ['$timeout', '$translatePartialLoader', 'ENV', 'notification', 'mapConfigs', 'NgMap', 'api',
-    function BrandsController($timeout, $tpl, ENV, notification, mapConfigs, NgMap, api) {
+  controller: ['$timeout', '$translatePartialLoader', '$state', 'ENV', 'notification', 'mapConfigs', 'NgMap', 'api',
+    function BrandsController($timeout, $tpl, $state, ENV, notification, mapConfigs, NgMap, api) {
 
       var brands = this;
       $tpl.addPart(ENV.staticTranslation);
@@ -18,19 +18,21 @@ angular.module('brands', []).component('brands', {
         brands.data = [];
         brands.allPins = [];
         brands.colorScheme = mapConfigs.colorScheme();
+        brands.isMapView = !!$state.params.view;
         // TODO: change to first picked Brand
         brands.mapOptions = {
           lat: 50.1176084,
           lng: 11.362239,
           zoom: 5
         };
+
+
         // methods
         brands.isIncludeCategory = isIncludeCategory;
         brands.filterChange = filterChange;
         brands.checkSelectedBrands = checkSelectedBrands;
         brands.toggleView = toggleView;
         brands.onMapClick = onMapClick;
-        brands.toggleView = toggleView;
         // invocations
         getData();
       };
@@ -77,8 +79,14 @@ angular.module('brands', []).component('brands', {
         }
       }
 
-      function toggleView() {
-        brands.isMapView = !brands.isMapView;
+      function toggleView (mode) {
+        brands.isMapView = mode;
+        brands.view = (brands.isMapView) ? 'map' : '';
+        $state.go(
+          $state.current, {
+            view: brands.view
+          }
+        );
       }
 
       // ============================
