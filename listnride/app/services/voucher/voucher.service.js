@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('voucher', ['api', 'notification',
-    function (api, notification) {
+  factory('voucher', ['$q', 'api', 'notification',
+    function ($q, api, notification) {
       return {
         addVoucher: function(voucherCode) {
           var data = {
@@ -19,6 +19,7 @@ angular.
             },
             function (error) {
               notification.show(error, 'error');
+              return $q.reject(error);
             }
           );
         }

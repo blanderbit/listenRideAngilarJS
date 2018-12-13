@@ -186,7 +186,7 @@ angular.module('booking', [])
             $analytics.eventTrack('click', {category: 'Request Bike', label: 'Add Voucher'});
             booking.voucherCode = "";
             booking.reloadUser();
-          });
+          }, null);
         };
 
         booking.nextDisabled = function() {
