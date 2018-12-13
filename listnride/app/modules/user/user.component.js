@@ -3,8 +3,8 @@
 angular.module('user',[]).component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
-  controller: ['$localStorage', '$state', '$stateParams', '$translate', 'ngMeta', 'api',
-    function ProfileController($localStorage, $state, $stateParams, $translate, ngMeta, api) {
+  controller: ['$localStorage', '$state', '$stateParams', '$translate', 'ngMeta', 'api', '$mdMedia',
+    function ProfileController($localStorage, $state, $stateParams, $translate, ngMeta, api, $mdMedia) {
       var user = this;
       user.hours = {};
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -12,7 +12,14 @@ angular.module('user',[]).component('user', {
       user.current_payment = false;
       user.display_name = '';
       user.picture = '';
+      user.mobileScreen = $mdMedia('xs');
+      var mobileBikeColumns = 3;
+      var desktopBikeColumns = 6;
+      user.bikesToShow = user.mobileScreen ? mobileBikeColumns : desktopBikeColumns;
+      user.showAllBikes = false;
+
       user.closedDay = closedDay;
+      user.loadAllBikes = loadAllBikes;
 
       var userId;
       $stateParams.userId? userId = $stateParams.userId : userId = 1930;
@@ -37,6 +44,9 @@ angular.module('user',[]).component('user', {
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
             }
+
+            user.bikes = user.user.rides.slice(0, user.bikesToShow);
+
             user.rating = Math.round(user.rating);
             if (user.openingHoursEnabled) setOpeningHours();
 
@@ -46,6 +56,11 @@ angular.module('user',[]).component('user', {
         function(error) {
         }
       );
+
+      function loadAllBikes() {
+        user.showAllBikes = true;
+        user.bikes = user.user.rides;
+      }
 
       function generateMetaDescription(isCompany) {
         var title = isCompany ? "user.company-meta-title" : "user.meta-title";

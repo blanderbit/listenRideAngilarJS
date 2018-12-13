@@ -175,6 +175,10 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "imprint": {
+    "germany-address": "Steinstraße 17<br>10119 Berlin<br>Deutschland",
+    "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefon: +49 (0)30-120870330"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "Was: <b>Berlin Triathlon</b> | Wo: <b>Berlin</b> | Wann: <b>2. Juni 2019</b>",
@@ -454,7 +458,7 @@
       "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!"
     },
     "jobs": {
-      "meta-title": "Jobs | listnride",
+      "meta-title": "Stellenangebote bei List and Ride",
       "meta-description": "Werde Teil des Teams und unterstütze die globale Fahrrad Community!"
     },
     "shop-landing": {
@@ -1316,7 +1320,7 @@
     "imprint": "Impressum",
     "about": "Über uns",
     "press": "Presse",
-    "jobs": "Jobs",
+    "jobs": "Stellenangebote",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
   },
   "seo": {

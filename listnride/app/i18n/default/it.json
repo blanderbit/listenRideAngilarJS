@@ -172,6 +172,10 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "imprint": {
+    "germany-address": "Steinstraße 17<br>10119 Berlino<br>Germania",
+    "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefono: +49 (0)30-120870330"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>2 Giugno 2019</b>",

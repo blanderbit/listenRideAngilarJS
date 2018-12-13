@@ -170,6 +170,10 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "imprint": {
+    "germany-address": "Steinstraße 17<br>10119 Berlijn<br>Duitsland",
+    "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefoon: +49 (0)30-120870330"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
@@ -450,7 +454,7 @@
     },
     "jobs": {
       "meta-title": "Work for listnride",
-      "meta-description": "Join the listnride bike sharing team in Berlin or Munich to build the global biking community"
+      "meta-description": "Kom werken bij het listnride team in Berlijn of München en bouw mee aan de wereldwijde fietscommunity"
     },
     "shop-landing": {
       "meta-title": "listnride Shop Plugin - Get your bike rental online",

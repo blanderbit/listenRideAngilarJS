@@ -292,7 +292,6 @@ md-card md-card-title {
   display: block;
 }
 
-
 button.md-primary.md-cancel-button.md-button.ng-scope.md-default-theme.md-ink-ripple {
   background-color: rgb(122, 178, 248);
 }
@@ -531,6 +530,10 @@ md-tooltip .md-content {
 
 .lnr-w100 {
   width: 100%;
+}
+
+.lnr-maxh-100 {
+  max-height: 100%!important;
 }
 
 /* ALIGNMENTS */
@@ -914,6 +917,10 @@ md-tooltip .md-content {
 
 .lnr-tt-u {
   text-transform: uppercase;
+}
+
+.lnr-no-select {
+  pointer-events: none;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2195,8 +2202,6 @@ requests md-input-container {
 }
 
 .requests-list {
-  min-width: 320px!important;
-  max-width: 450px!important;
   border-right: 1px solid #efefef;
 }
 
@@ -2246,6 +2251,7 @@ requests md-input-container {
 
 .lnr-message .message-text {
   margin-bottom: 2px;
+  word-wrap: break-word;
 }
 
 message .sent-message {

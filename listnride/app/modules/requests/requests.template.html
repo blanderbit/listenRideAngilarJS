@@ -2,7 +2,7 @@
 <div flex="100" layout="row" layout-fill>
 
   <!-- Left Column displaying list of all Requests -->
-  <md-content flex-gt-xs="25" flex="100" class="requests-list" flex-order="1">
+  <md-content flex-gt-xs="25" flex-sm="40" flex="100" class="requests-list" flex-order="1">
     <div flex layout="row" layout-align="space-around center">
       <section layout="row" layout-align="space-around center">
         <md-button md-no-ink
@@ -71,9 +71,9 @@
   </md-content>
 
   <!-- Right Column displaying actual Chat -->
-  <div flex-order="2" layout="column" layout-fill hide-xs>
+  <div flex-order="2" layout="column" hide-xs flex="75" flex-sm="60">
     <md-progress-linear class="md-accent" ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
-    <div scroll-glue="requests.request.glued" class="chat" flex="90">
+    <div flex="90" scroll-glue="requests.request.glued" class="chat lnr-maxh-100">
       <message ng-repeat="message in requests.request.messages"
                content="message.content"
                sender="message.sender"
