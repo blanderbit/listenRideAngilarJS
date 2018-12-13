@@ -454,7 +454,7 @@
       "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!"
     },
     "jobs": {
-      "meta-title": "Jobs | listnride",
+      "meta-title": "Stellenangebote bei List and Ride",
       "meta-description": "Werde Teil des Teams und unterstütze die globale Fahrrad Community!"
     },
     "shop-landing": {
@@ -1316,7 +1316,7 @@
     "imprint": "Impressum",
     "about": "Über uns",
     "press": "Presse",
-    "jobs": "Jobs",
+    "jobs": "Stellenangebote",
     "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=de"
   },
   "seo": {
