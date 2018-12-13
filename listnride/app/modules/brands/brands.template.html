@@ -44,7 +44,8 @@
       </md-menu>
       <!-- VIEW SWITCHER -->
       <div layout="row" layout-align="end center">
-        <span class="lnr-pr" hide-xs hide-sm>{{'shared.map' | translate}}</span>
+        <span class="lnr-pr" ng-if="!brands.isMapView">{{'shared.map' | translate}}</span>
+        <span class="lnr-pr" ng-if="brands.isMapView">{{'shared.list' | translate}}</span>
         <md-switch
           ng-model="brands.isMapView"
           ng-change="brands.toggleView(brands.isMapView)">
