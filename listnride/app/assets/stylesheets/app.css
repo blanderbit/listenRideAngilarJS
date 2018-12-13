@@ -532,6 +532,10 @@ md-tooltip .md-content {
   width: 100%;
 }
 
+.lnr-maxh-100 {
+  max-height: 100%!important;
+}
+
 /* ALIGNMENTS */
 
 .lnr-center {
@@ -2198,8 +2202,6 @@ requests md-input-container {
 }
 
 .requests-list {
-  min-width: 320px!important;
-  max-width: 450px!important;
   border-right: 1px solid #efefef;
 }
 
