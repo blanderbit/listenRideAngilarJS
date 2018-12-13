@@ -13,7 +13,7 @@ angular.module('user',[]).component('user', {
       user.display_name = '';
       user.picture = '';
       user.mobileScreen = $mdMedia('xs');
-      var mobileBikeColumns = 2;
+      var mobileBikeColumns = 3;
       var desktopBikeColumns = 6;
       user.bikesToShow = user.mobileScreen ? mobileBikeColumns : desktopBikeColumns;
       user.showAllBikes = false;
