@@ -170,6 +170,10 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "imprint": {
+    "germany-address": "Steinstraße 17<br>10119 Berlin<br>Germany",
+    "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nPhone: +49 (0)30-120870330"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
