@@ -1,18 +1,12 @@
-<div ng-if="message.sentMessage()" flex layout="row" layout-align="end end">
-  <div class="lnr-message sent-message"
-       flex="60"
-       flex-xs="70"
-       layout-margin>
+<div class="lnr-right" ng-if="message.sentMessage()">
+  <div class="lnr-message sent-message lnr-message--inlined" layout-margin>
      <p class="message-time">{{message.localTime}}</p>
     <p class="message-text">{{message.content}}</p>
   </div>
 </div>
 
-<div ng-if="message.receivedMessage()" layout="row" layout-align="start end">
-  <div class="lnr-message received-message"
-       flex="60"
-       flex-xs="70"
-       layout-margin>
+<div ng-if="message.receivedMessage()">
+  <div class="lnr-message received-message lnr-message--inlined" layout-margin>
      <p class="message-time">{{message.localTime}}</p>
     <p class="message-text">{{message.content}}</p>
   </div>
