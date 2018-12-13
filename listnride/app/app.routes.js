@@ -586,7 +586,7 @@
       // brands
       $stateProvider.state({
         name: 'brands',
-        url: '/brands',
+        url: '/brands?view',
         template: '<brands></brands>',
         reloadOnSearch: false,
         params: {

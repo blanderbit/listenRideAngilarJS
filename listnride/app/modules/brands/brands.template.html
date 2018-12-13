@@ -42,10 +42,15 @@
           </category-filter>
         </md-menu-content>
       </md-menu>
-      <md-button class="lnr-md-button__icon lnr-no-ripple" ng-click="brands.toggleView()">
-        <md-icon style="width: 30px; height: 27px;" md-svg-src="app/assets/ui_icons/icn_pin.svg" aria-label="toggle map view"></md-icon>
-        <span class="lnr-fs14">{{ 'shared.map' | translate }}</span>
-      </md-button>
+      <!-- VIEW SWITCHER -->
+      <div layout="row" layout-align="end center">
+        <span class="lnr-pr" hide-xs hide-sm>{{'shared.map' | translate}}</span>
+        <md-switch
+          hide-xs hide-sm
+          ng-model="brands.isMapView"
+          ng-change="brands.toggleView(brands.isMapView)">
+        </md-switch>
+      </div>
     </div>
     <div class="lnr-p-x2" ng-class="brands.isMapView ? 'brands__fixed-map-height': ''">
       <div class="lnr-pos-r">
