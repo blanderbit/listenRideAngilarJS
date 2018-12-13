@@ -2243,6 +2243,12 @@ requests md-input-container {
   border-radius: 4px;
 }
 
+.lnr-message--inlined {
+  display:inline-block;
+  max-width: 60%;
+  text-align: left;
+}
+
 .lnr-message .message-time {
   text-align: right;
   font-size: 10px;
@@ -3737,6 +3743,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .lnr-pagination__divider,
   .lnr-pagination__item:not(.active) {
     display: none;
+  }
+
+  .lnr-message--inlined {
+    max-width: 75%;
   }
 }
 
