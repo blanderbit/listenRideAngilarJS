@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$http', '$localStorage', '$mdDialog', '$rootScope', '$mdToast', '$window', '$state', '$q', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256',
-    function(Base64, $http, $localStorage, $mdDialog, $rootScope, $mdToast, $window, $state, $q, $translate, $analytics, ezfb, api, verification, sha256){
+    'Base64', '$localStorage', '$mdDialog', '$rootScope', '$mdToast', '$state', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
+    function(Base64, $localStorage, $mdDialog, $rootScope, $mdToast, $state, $translate, $analytics, ezfb, api, verification, sha256, notification){
 
       var encodeAuth = function (email, password_hashed) {
         return Base64.encode(email + ":" + password_hashed);
