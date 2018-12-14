@@ -21,11 +21,12 @@ angular.module('requests', ['infinite-scroll'])
     '$analytics',
     'date',
     'accessControl',
+    'payoutHelper',
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
       $state, $stateParams, $translate, $mdToast, $analytics, date,
-      accessControl) {
+      accessControl, payoutHelper) {
 
       var requests = this;
       // user should be logged in
@@ -214,6 +215,8 @@ angular.module('requests', ['infinite-scroll'])
               requests.request = success.data;
               requests.request.glued = true;
               requests.request = success.data;
+              requests.request.lister.picture = setPicture();
+              requests.request.lister.display_name = setName();
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
@@ -243,6 +246,23 @@ angular.module('requests', ['infinite-scroll'])
           }
         );
       };
+
+      //TODO: Move to shared users service
+      function setName() {
+        if (requests.request.lister.has_business) {
+          return $translate.instant('shared.local-business')
+        } else {
+          return requests.request.lister.business_name
+        }
+      }
+
+      function setPicture() {
+        if (requests.request.lister.has_business) {
+          return 'app/assets/ui_icons/lnr_shop_avatar.svg'
+        } else {
+          return requests.request.lister.profile_picture.profile_picture.url
+        }
+      }
 
       function updateStatus (statusId, paymentWarning) {
         var data = {
@@ -277,7 +297,7 @@ angular.module('requests', ['infinite-scroll'])
       function acceptBooking () {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
-            if (success.data.current_payout_method) {
+            if (validPayoutMethod(success.data)) {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
               updateStatus(3, true);
@@ -292,6 +312,16 @@ angular.module('requests', ['infinite-scroll'])
           }
         );
       };
+
+      function validPayoutMethod(data) {
+        if (!data.payout_method) return false;
+
+        if (data.payout_method && data.payout_method.payment_type === 'credit-card') {
+          return data.payout_method.iban && data.payout_method.bic && data.payout_method.first_name && data.payout_method.last_name;
+        }
+
+        return true;
+      }
 
       // Sends a new message by directly appending it locally and posting it to the API
       function sendMessage () {
@@ -348,40 +378,15 @@ angular.module('requests', ['infinite-scroll'])
         payoutDialog.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         payoutDialog.addPayoutMethod = function () {
-          var data = {
-            "payment_method": payoutDialog.payoutMethod
-          };
 
-          data.payment_method.user_id = $localStorage.userId;
+          payoutHelper.postPayout(payoutDialog.payoutMethod.formData, payoutDialog.payoutMethod.payment_type, onSuccessPayoutUpdate);
 
-          if (payoutDialog.payoutMethod.family == 1) {
-            data.payment_method.email = "";
-          } else {
-            data.payment_method.iban = "";
-            data.payment_method.bic = "";
+          function onSuccessPayoutUpdate(data) {
+            requests.loadingChat = true;
+            updateStatus(2, false);
+            hideDialog();
           }
 
-          api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
-            function (success) {
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent($translate.instant('toasts.add-payout-success'))
-                .hideDelay(4000)
-                .position('top center')
-              );
-              requests.loadingChat = true;
-              updateStatus(2, false);
-              hideDialog();
-            },
-            function (error) {
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent($translate.instant('toasts.error'))
-                .hideDelay(4000)
-                .position('top center')
-              );
-            }
-          );
         };
       };
 

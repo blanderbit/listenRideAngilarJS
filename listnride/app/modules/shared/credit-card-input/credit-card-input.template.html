@@ -1,0 +1,80 @@
+<div
+  ng-form name="creditCardForm"
+  class="lnr-input-containers"
+  layout="row"
+  layout-align="space-between none"
+  layout-wrap>
+  <!-- CARD NAME -->
+  <md-input-container flex="100" flex-gt-xs="30">
+    <label>{{ 'booking.payment.card-name' | translate }}</label>
+    <input
+      name="cardholderName"
+      ng-model="creditCardInput.data.cardholderName"
+      ng-model-options='{ debounce: 400 }'
+      type="text"
+      ng-required="true" />
+    <div
+      ng-show="creditCardForm.cardholderName.$dirty"
+      ng-messages="creditCardForm.cardholderName.$error"
+      role="alert">
+      <div ng-message="required">{{ 'booking.payment.invalid-name' | translate }}</div>
+    </div>
+  </md-input-container>
+  <!-- CARD NUMBER -->
+  <md-input-container flex="100" flex-gt-xs="30">
+    <label>{{ 'booking.payment.card-number' | translate }}</label>
+    <input
+      name="creditCardNumber"
+      ng-model="creditCardInput.data.creditCardNumber"
+      ng-model-options='{ debounce: 400 }'
+      type="text"
+      cc-format cc-number cc-eager-type
+      ng-required="true" maxlength="19" />
+    <div
+      ng-show="creditCardInput.data.creditCardNumber && creditCardForm.creditCardNumber.$invalid"
+      ng-messages="creditCardForm.creditCardNumber.$error"
+      role="alert">
+      <div ng-message="required">{{ 'booking.payment.invalid-card' | translate }}</div>
+      <div ng-message="ccNumber" ng-if="creditCardForm.creditCardNumber.$viewValue.length == 19">
+        {{'booking.payment.invalid-card-number' | translate }}
+      </div>
+    </div>
+  </md-input-container>
+  <!-- EXP DATE -->
+  <md-input-container flex="45" flex-gt-xs="15">
+    <label>{{ 'booking.payment.exp-date' | translate }}</label>
+    <input
+      name="expiryDate"
+      ng-model-options='{ debounce: 50 }'
+      ng-model="creditCardInput.data.expiryDate"
+      ng-change="creditCardInput.updateExpiryDate()"
+      ng-blur="creditCardInput.validateExpiryDate()"
+      type="text" ng-required="true" autocomplete="off" placeholder="MM/YY"
+      maxlength="5" />
+    <div
+      ng-show="creditCardForm.expiryDate.$dirty"
+      ng-messages="creditCardForm.expiryDate.$error"
+      role="alert">
+      <div ng-message="required">{{ 'booking.payment.invalid-month' | translate }}</div>
+      <div ng-message="parse">{{ 'booking.payment.invalid-month' | translate }}</div>
+      <div ng-message="dateFormat">{{ 'booking.payment.invalid-date' | translate }}</div>
+    </div>
+  </md-input-container>
+  <!-- CARD CVC -->
+  <md-input-container flex="45" flex-gt-xs="15">
+    <label>{{ 'booking.payment.cvc' | translate }}</label>
+    <input
+      name="securityNumber"
+      ng-model="creditCardInput.data.securityNumber"
+      ng-model-options='{ debounce: 400 }'
+      type="text"
+      maxlength="4" cc-cvc ng-required="true" class="lnr-center" />
+    <div
+      ng-show="creditCardForm.securityNumber.$dirty"
+      ng-messages="creditCardForm.securityNumber.$error"
+      role="alert">
+      <div ng-message="required">{{ 'booking.payment.cvc' | translate }}</div>
+      <div ng-message="ccCvc">{{ 'booking.payment.cvc' | translate }}</div>
+    </div>
+  </md-input-container>
+</div>

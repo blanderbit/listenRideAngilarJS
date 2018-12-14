@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('settings',[]).component('settings', {
+angular.module('settings',[])
+.component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
   controller: [
     '$localStorage',
-    '$window',
     '$mdToast',
     '$translate',
     '$state',
@@ -15,15 +15,17 @@ angular.module('settings',[]).component('settings', {
     'Base64',
     'Upload',
     'loadingDialog',
-    'ENV',
     'ngMeta',
     'userApi',
     '$timeout',
     '$mdDialog',
     'authentication',
     'voucher',
-    function SettingsController($localStorage, $window, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
-      Upload, loadingDialog, ENV, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher) {
+    'notification',
+    'paymentHelper',
+    'payoutHelper',
+    function SettingsController($localStorage, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
+      Upload, loadingDialog, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification, paymentHelper, payoutHelper) {
 
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -36,7 +38,7 @@ angular.module('settings',[]).component('settings', {
       var settings = this;
 
       settings.$onInit = function() {
-        // variables
+        // VARIABLES
         settings.user = {};
         settings.croppedDataUrl = false;
         settings.loaded = false;
@@ -55,25 +57,21 @@ angular.module('settings',[]).component('settings', {
         settings.current_payment = false;
         settings.business = {};
         settings.user.business = false;
-        settings.user.paymentLoading = false;
         settings.user.has_billing = false;
-        userApi.getUserData().then(function (response) {
-          settings.user = response.data;
-          settings.current_payment = response.data.status === 3;
-          settings.loaded = true;
-          settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
-          $timeout(setInitFormState.bind(this), 0);
-          // TODO: remove this request it should be on the first request
-          if (!_.isEmpty(settings.user.business)) {
-            getBusinessData()
-          }
-          if (!!response.data.locations) {
-            settings.user.has_billing = !!response.data.locations.billing
-          }
-          if (!!response.data.phone_number) {
-            updatePrivatePhoneNumber(response.data.phone_number)
-          }
-        });
+
+        // payment
+        settings.showPaymentChangeForm = false;
+        settings.paymentLoading = false;
+        settings.creditCardData = {};
+        settings.tokenizeCard = tokenizeCard;
+        settings.openPaypal = openPaypal;
+        settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
+        settings.onErrorPaymentUpdate = onErrorPaymentUpdate;
+        settings.isPayoutExist = isPayoutExist;
+        // payout
+        settings.showPayoutChangeForm = false;
+        settings.payoutMethod.loading = false;
+        settings.payoutMethod.formData = {};
 
         // methods
         settings.changePassword = changePassword;
@@ -89,15 +87,45 @@ angular.module('settings',[]).component('settings', {
         settings.onSubmit = onSubmit;
         settings.toggleBilling = toggleBilling;
         settings.fillAddress = fillAddress;
-        settings.openPaymentWindow = openPaymentWindow;
-        settings.currentPaymentMethod = currentPaymentMethod;
         settings.addPayoutMethod = addPayoutMethod;
         settings.addVoucher = addVoucher;
         settings.updateUser = updateUser;
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
+        settings.updateNewsletter = updateNewsletter;
 
         // invocations
+        userApi.getUserData().then(function (response) {
+          settings.loaded = true;
+          setUserData(response.data);
+          paymentHelper.setupBraintreeClient();
+        });
+      };
+
+      function setUserData(data) {
+        settings.user = data;
+
+        // payment method exist
+        if (settings.user.payment_method) {
+          settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
+        }
+
+        settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
+
+        if (!!settings.user.locations) {
+          settings.user.has_billing = !!settings.user.locations.billing
+        }
+        if (!!settings.user.phone_number) {
+          updatePrivatePhoneNumber(settings.user.phone_number)
+        }
+        if (!_.isEmpty(settings.user.business)) {
+          settings.business = settings.user.business;
+        }
+        if (settings.user.payout_method && settings.user.payout_method.payment_type === 'credit-card') {
+          settings.payoutMethod.short_iban = getShortIban();
+        }
+
+        $timeout(setInitFormState.bind(this), 0);
       }
 
       // availability data
@@ -228,7 +256,7 @@ angular.module('settings',[]).component('settings', {
             cleanBillingInputs()
           },
           function (error) {
-
+            notification.show(error, 'error');
           }
         )
       }
@@ -247,17 +275,6 @@ angular.module('settings',[]).component('settings', {
         billing.vat = '';
 
         settings.user.has_billing = false;
-      }
-
-      function getBusinessData() {
-        api.get('/businesses/' + settings.user.business.id).then(
-          function(response) {
-            settings.business = response.data;
-          },
-          function(error) {
-
-          }
-        );
       }
 
       function fillAddress (place) {
@@ -346,12 +363,7 @@ angular.module('settings',[]).component('settings', {
         }).then(
           function (success) {
             loadingDialog.close();
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.update-profile-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.update-profile-success');
             settings.user = success.data;
             if (success.data.phone_number) updatePrivatePhoneNumber(success.data.phone_number);
             settings.user.has_billing = !!success.data.locations.billing;
@@ -362,12 +374,7 @@ angular.module('settings',[]).component('settings', {
           },
           function (error) {
             loadingDialog.close();
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -438,44 +445,73 @@ angular.module('settings',[]).component('settings', {
       // === ACCOUNT TAB ===
       // ===================
 
-      // TODO: this code is appearing twice, here and in the payoutDialog Controller (requests.component.rb)
+      function tokenizeCard () {
+        settings.paymentLoading = true;
+        paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate, settings.onErrorPaymentUpdate);
+      };
+
+      function openPaypal () {
+        paymentHelper.btPostPaypal(settings.onSuccessPaymentUpdate);
+      };
+
+      function onSuccessPaymentUpdate(data) {
+        // reset form and data after success
+        settings.creditCardData = {};
+        settings.paymentForm.$setPristine();
+        settings.paymentForm.$setUntouched();
+        settings.showPaymentChangeForm = false;
+        settings.paymentLoading = false;
+
+        updatePaymentInformation(data);
+      }
+
+      function onErrorPaymentUpdate(){
+        settings.paymentLoading = false;
+      }
+
+      function updatePaymentInformation(data) {
+        settings.user.payment_method = paymentHelper.updatePaymentUserData(settings.user.payment_method, data);
+        settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
+      }
+
       function addPayoutMethod () {
-        var data = {
-          "payment_method": settings.payoutMethod
-        };
+        settings.payoutMethod.loading = true;
+        payoutHelper.postPayout(settings.payoutMethod.formData, settings.payoutMethod.payment_type, onSuccessPayoutUpdate, onErrorPayoutUpdate);
 
-        data.payment_method.user_id = $localStorage.userId;
-
-        if (settings.payoutMethod.family == 1) {
-          data.payment_method.email = "";
-        } else {
-          data.payment_method.iban = "";
-          data.payment_method.bic = "";
+        function onSuccessPayoutUpdate(data) {
+          settings.user.payout_method = data.payout_method;
+          if (settings.payoutMethod.payment_type === 'credit-card') {
+            settings.payoutMethod.short_iban = getShortIban();
+          }
+          settings.payoutMethod.loading = false;
+          // clear payout form
+          settings.payoutMethod.formData = {};
+          settings.showPayoutChangeForm = false;
+          settings.payoutForm.$setPristine();
+          settings.payoutForm.$setUntouched();
         }
 
-        api.post('/users/' + $localStorage.userId + '/payment_methods', data).then(
-          function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.add-payout-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
-            // TODO: Properly configure API to output payout method details and use those instead of making another call to the user
-            userApi.getUserData().then(function (response) {
-              settings.user.current_payout_method = response.data.current_payout_method;
-            });
-          },
-          function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
-          }
-        );
+        function onErrorPayoutUpdate() {
+          settings.payoutMethod.loading = false;
+        }
       };
+
+      function getShortIban() {
+        return '**** ' + settings.user.payout_method.iban.slice(-6);
+      }
+
+      function isPayoutExist() {
+        if (!settings.user.payout_method) return false;
+        switch (settings.user.payout_method.payment_type) {
+          case 'credit-card':
+            return !!(settings.user.payout_method.iban && settings.user.payout_method.bic)
+          case 'paypal-account':
+            return !!settings.user.payout_method.email;
+          default:
+            notification.show(null, null, 'shared.errors.unexpected-payment-type');
+            return false;
+        }
+      }
 
       // business account settings
       function updateBusiness () {
@@ -488,22 +524,11 @@ angular.module('settings',[]).component('settings', {
 
         api.put("/businesses/" + settings.user.business.id, data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.update-profile-success'))
-                .hideDelay(4000)
-                .position('top center')
-            );
-
+            notification.show(success, null, 'toasts.update-profile-success');
             settings.user.business = true;
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.error'))
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       };
@@ -535,6 +560,7 @@ angular.module('settings',[]).component('settings', {
                 });
               },
               function(error) {
+                notification.show(error, 'error');
               }
             );
           },
@@ -544,32 +570,31 @@ angular.module('settings',[]).component('settings', {
         );
       }
 
-      function openPaymentWindow () {
-        var w = 550;
-        var h = 700;
-        var left = (screen.width / 2) - (w / 2);
-        var top = (screen.height / 2) - (h / 2);
-
-        $window.open(ENV.userEndpoint + $localStorage.userId + "/payment_methods/new", "popup", "width=" + w + ",height=" + h + ",left=" + left + ",top=" + top);
+      function addVoucher() {
+        voucher.addVoucher(settings.voucherCode).then(function () {
+          settings.voucherCode = "";
+          userApi.getUserData().then(function (response) {
+            settings.user.balance = response.data.balance;
+          });
+        }, null);
       };
 
-      function currentPaymentMethod () {
-        settings.user.paymentLoading = true;
-        api.get('/users/' + settings.user.id + '/current_payment').then(
-          function(response) {
-            settings.user.paymentLoading = false;
-            settings.user.current_payment_method = response.data;
-          },
-          function(error) {
+      function updateNewsletter() {
+        var data = {
+          'notification_preference': {
+            'newsletter': settings.user.notification_preference.newsletter
+          }
+        };
 
+        api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(
+          function (success) {
+            notification.show(success, null, 'toasts.update-profile-success');
+          },
+          function (error) {
+            notification.show(error, 'error');
           }
         );
-      };
-
-      function addVoucher() {
-        voucher.addVoucher(settings.voucherCode);
-        settings.voucherCode = "";
-      };
+      }
 
       // ===================
       // ==== HOURS TAB ====
@@ -779,20 +804,10 @@ angular.module('settings',[]).component('settings', {
         api.post('/opening_hours', data).then(
           function (success) {
             settings.openingHoursId = success.data.id;
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.opening-hours-success');
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
@@ -800,20 +815,10 @@ angular.module('settings',[]).component('settings', {
       function updateOpeningHours(data) {
         api.put("/opening_hours/" + settings.openingHoursId, data).then(
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-success'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(success, null, 'toasts.opening-hours-success');
           },
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-              .textContent($translate.instant('toasts.opening-hours-error'))
-              .hideDelay(4000)
-              .position('top center')
-            );
+            notification.show(error, 'error');
           }
         );
       }
@@ -846,4 +851,11 @@ angular.module('settings',[]).component('settings', {
 
     }
   ]
-});
+})
+.component('settingsAccountTab', {
+  templateUrl: 'app/modules/settings/settings-account-tab.template.html',
+  require: {
+    parent: '^settings'
+  },
+  controllerAs: 'settingsAccount'
+})

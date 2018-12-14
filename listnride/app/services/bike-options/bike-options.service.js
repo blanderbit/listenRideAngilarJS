@@ -16,6 +16,13 @@ angular.module('listnride')
         ];
       },
 
+      sharedTranslationKeys: function () {
+        return [
+          'search.unisize',
+          'search.all-sizes'
+        ]
+      },
+
       accessoryOptions: function () {
         return $translate(this.accessoriesTranslationKeys()).then(function (translations) {
           return [
@@ -31,23 +38,29 @@ angular.module('listnride')
       },
 
       sizeOptions: function (isSearch, withKidsSizes) {
-        var sizes = [
-          { value: 0, label: $translate.instant("search.unisize")}
-        ];
+        var self = this;
 
-        // show 'all sizes' option if used for search puproses
-        if (isSearch) {
-          sizes.unshift({ value: -1, label: $translate.instant('search.all-sizes')});
-        }
+        return $translate(this.sharedTranslationKeys()).then(
+          function (translations) {
+            var sizes = [
+              { value: 0, label: translations['search.unisize']}
+            ];
 
-        sizes = sizes.concat(this.adultSizeOptions());
+            // show 'all sizes' option if used for search purposes
+            if (isSearch) {
+              sizes.unshift({ value: -1, label: translations['search.all-sizes']});
+            }
 
-        // show kids sizes by default
-        if (withKidsSizes !== null) {
-          sizes = sizes.concat(this.kidsSizeOptions())
-        };
+            sizes = sizes.concat(self.adultSizeOptions());
 
-        return sizes;
+            // show kids sizes by default
+            if (withKidsSizes !== null) {
+              sizes = sizes.concat(self.kidsSizeOptions())
+            }
+
+            return sizes;
+          }
+        );
       },
 
       adultSizeOptions: function() {
@@ -107,6 +120,7 @@ angular.module('listnride')
           "list.subcategory.5.bike-child-seat",
           "list.subcategory.5.bike-car-rack",
           "list.subcategory.5.bike-travel-bag",
+          "list.subcategory.5.event-bike",
 
           "list.category.kids",
           "list.subcategory.6.city-bike",
@@ -177,7 +191,8 @@ angular.module('listnride')
                 { id: 51, name: translations["list.subcategory.5.bike-trailer"] },
                 { id: 52, name: translations["list.subcategory.5.bike-child-seat"] },
                 { id: 53, name: translations["list.subcategory.5.bike-car-rack"] },
-                { id: 54, name: translations["list.subcategory.5.bike-travel-bag"] }
+                { id: 54, name: translations["list.subcategory.5.bike-travel-bag"] },
+                { id: 55, name: translations["list.subcategory.5.event-bike"] }
               ]
             }, {
               catId: 60,
@@ -237,7 +252,7 @@ angular.module('listnride')
               name: translations["list.category.transport"],
               // TODO: Add image for transport
               imgFilePath: "",
-              subcategories: '50,51,52,53,54'
+              subcategories: '50,51,52,53,54,55'
             }, {
               url: 'kids',
               name: translations["list.category.kids"],

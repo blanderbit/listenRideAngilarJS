@@ -4,50 +4,68 @@
     <div class="md-dialog-content" layout="column" layout-margin>
       <p class="md-headline lnr-center">{{ 'settings.add-payout-method' | translate }}</p>
       <p>{{ 'settings.payout-method-description' | translate }}</p>
-      <p ng-if="!settings.user.current_payout_method">{{ 'settings.no-payout-method' | translate }}</p>
-      <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 1">{{ 'settings.payout-bank' | translate }} {{ settings.user.current_payout_method.details }}</p>
-      <p class="md-body-2" ng-if="settings.user.current_payout_method && settings.user.current_payout_method.family == 2">{{ 'settings.payout-paypal' | translate }} {{ settings.user.current_payout_method.details }}</p>
+      <p ng-if="!settings.user.payout_method">{{ 'settings.no-payout-method' | translate }}</p>
       <br>
       <div layout="column">
-        <md-radio-group ng-model="settings.payoutMethod.family" layout="row">
-          <md-radio-button value="1">{{ 'settings.bank-account' | translate }}</md-radio-button>
-          <md-radio-button value="2">{{ 'settings.paypal' | translate }}</md-radio-button>
+        <md-radio-group ng-model="settings.payoutMethod.payment_type" layout="row">
+          <md-radio-button value="credit-card">{{ 'settings.bank-account' | translate }}</md-radio-button>
+          <md-radio-button value="paypal-account">{{ 'settings.paypal' | translate }}</md-radio-button>
         </md-radio-group>
-        <form name="paypalForm">
-          <div ng-if="settings.payoutMethod.family == 2">
+        <form name="settings.payoutForm">
+          <div ng-if="settings.payoutMethod.payment_type == 'paypal-account'">
             <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
             <div layout="row" layout-margin>
               <md-input-container>
                 <label>{{ 'forms.email-address' | translate }}</label>
-                <input required name="email" ng-model="settings.payoutMethod.email" ng-pattern="settings.emailFormat"></input>
+                <input
+                  required
+                  name="email"
+                  ng-model="settings.payoutMethod.formData.email"
+                  ng-pattern="settings.emailFormat">
               </md-input-container>
             </div>
           </div>
-          <div ng-if="settings.payoutMethod.family == 1">
+          <div ng-if="settings.payoutMethod.payment_type == 'credit-card'">
             <p class="md-caption">{{ 'settings.enter-bank-info' | translate }}</p>
             <div layout="row" layout-margin>
               <md-input-container flex="50">
                 <label>{{ 'forms.first-name' | translate }}</label>
-                <input required ng-model="settings.payoutMethod.first_name"></input>
+                <input
+                  required
+                  ng-model="settings.payoutMethod.formData.first_name">
               </md-input-container>
               <md-input-container flex="50">
                 <label>{{ 'forms.last-name' | translate }}</label>
-                <input required ng-model="settings.payoutMethod.last_name"></input>
+                <input
+                  required
+                  ng-model="settings.payoutMethod.formData.last_name">
               </md-input-container>
             </div>
             <div layout="row" layout-margin>
               <md-input-container flex="50">
                 <label>IBAN</label>
-                <input required ng-model="settings.payoutMethod.iban"></input>
+                <input
+                  required
+                  ng-model="settings.payoutMethod.formData.iban">
               </md-input-container>
               <md-input-container flex="50">
                 <label>BIC</label>
-                <input required ng-model="settings.payoutMethod.bic"></input>
+                <input
+                  required
+                  ng-model="settings.payoutMethod.formData.bic">
               </md-input-container>
             </div>
           </div>
-          <div layout="row" ng-if="settings.payoutMethod.family" layout-align="end">
-            <md-button class="md-raised md-primary" ng-click="settings.addPayoutMethod()" ng-disabled="!paypalForm.$valid">{{ 'settings.save-payout-method' | translate }}</md-button>
+          <div
+            ng-if="settings.payoutMethod.payment_type"
+            layout="row"
+            layout-align="end">
+            <md-button
+              ng-click="settings.addPayoutMethod()"
+              ng-disabled="!settings.payoutForm.$valid"
+              class="md-raised md-primary" >
+              {{ 'settings.save-payout-method' | translate }}
+            </md-button>
           </div>
         </form>
       </div>

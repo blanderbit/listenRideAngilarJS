@@ -144,7 +144,7 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
       calendar.event.slots= [];
-      calendar.event.familyId = 34;
+      calendar.event.familyId = 777;
       calendar.event.days = _.range(22, 31);
 
       var slotDuration = 1;

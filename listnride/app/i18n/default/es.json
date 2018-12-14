@@ -1,6 +1,14 @@
 {
   "shared": {
     "learn-more": "Leer más",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Tarjeta de crédito",
+      "paypal-account": "Cuenta de Paypal"
+    },
+    "change": "Change",
+    "local-business": "Tienda de bicicletas ",
+    "list": "List",
     "map": "Mapa",
     "bike-type": "Tipo de bicicleta",
     "filter-by": "Filtrar por",
@@ -16,12 +24,14 @@
     "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
+      "unexpected-payment-type": "Tipo de pago inesperado",
       "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
       "phone-not-valid": "Por favor ingresa un número de teléfono válido",
       "phone-required": "Por favor ingresa tu número de teléfono, este campo es obligatorio"
     },
     "notifications": {
       "404": "La página no existe",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "El formato de los datos ingresados es incorrecto",
       "500": "Error interno del servidor",
       "200": "Éxito"
@@ -166,15 +176,38 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "imprint": {
+    "germany-address": "Steinstraße 17 <br>\n10119 Berlín <br>\nAlemania",
+    "contacts": "Correo electrónico: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com </a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com </a><br>\nTeléfono: +49 (0) 30-120870330"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
       "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
       "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
     },
+    "black-friday": {
+      "banner": {
+        "title": "Black Friday",
+        "description": "¡Solo por hoy! Obtén un gran descuento para tu próximo alquiler. ",
+        "check-it": "Echale un vistazo"
+      }
+    },
+    "epicgrancanaria": {
+      "meta-title": "Alquila una bici de carretera para Epic Gran Canaria | listnride",
+      "meta-description": "Siéntete por unos días como un profesional y experimenta una experiencia deportiva y humana sin precedentes midiéndote en cada una de las subidas cronometradas durante tres días. Alquila tu bici de carretera aquí, simplemente tienes que  seleccionar la bicicleta adecuada para ti y solicitarla para los días de la competencia. \n"
+    },
+    "velorace-dresden": {
+      "meta-title": "Alquila una bici de carretera para Vätternrundan 2019 | listnride",
+      "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
+    },
+    "berlin-triathlon-xl": {
+      "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need.",
+      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+    },
     "vatternrundan": {
-      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "With listnride you can securely rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Alquila una bici de carretera para el Vätternrundan 2019 | listnride",
+      "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para el Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
     }
   },
   "lister": {
@@ -273,6 +306,10 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "Rapha Super Cross: alquila una bici con listnride"
+      },
+      "black-friday": {
+        "meta-title": "Black Friday 2018 descuentos en el alquiler de bicicletas | listnride",
+        "meta-description": "Black Friday en listnride! Grandes descuentos para tu próximo alquiler, solo por este fin de semana."
       },
       "eroica-gaiole": {
         "meta-title": "Eroica vintage road bike cycling event",
@@ -452,7 +489,7 @@
       "support": "Equipo de soporte de listnride"
     },
     "sign-in": {
-      "tab": "1. Inicio de sesión",
+      "tab": "Inicio de sesión",
       "new": "¿Nuevo a listnride?",
       "login": "Iniciar sesión a listnride",
       "register-facebook": "Registrar con Facebook",
@@ -462,7 +499,7 @@
       "not-member": "¿Nuevo a listnride?"
     },
     "details": {
-      "tab": "2. Datos personales",
+      "tab": "Datos personales",
       "sms-confirmation-message": "Te hemos enviado un SMS con el código de confirmación.",
       "invoice-address": "Dirección de facturación",
       "subtitle": "Introduce tu dirección de facturación para solicitar una bicicleta",
@@ -477,8 +514,9 @@
       "resend": "Reenviar"
     },
     "payment": {
-      "tab": "3. Formas de pago",
-      "getting-saved": "Se ha guardado el método de pago",
+      "tab": "Formas de pago",
+      "current-method": "Forma de pago actual",
+      "getting-saved": "Payment method saving in progress",
       "select-method": "Selecciona tu forma de pago",
       "subtitle": "Sólo te cobraremos después de que el anunciante de la bici haya aceptado tu solicitud.",
       "credit-card": "Tarjeta de crédito",
@@ -498,7 +536,7 @@
       "pay-paypal": "Paypal"
     },
     "overview": {
-      "tab": "4. Resumen",
+      "tab": "Resumen",
       "bike-rental": "Tu selección de bicicleta",
       "size": "Tamaño",
       "location": "Ubicación",
@@ -519,7 +557,7 @@
       "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
     },
     "calendar": {
-      "tab": "1. Período",
+      "tab": "Período",
       "bike-rental": "Tu renta de bici",
       "choose-duration": "Elige el periodo de alquiler",
       "pickup-time": "Hora de recogida",
@@ -529,6 +567,8 @@
   },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
+    "add-payment-success": "Guardando método de pago",
+    "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "bike-edit-successful": "Se han guardado los cambios",
     "error": "Se ha producido un error. Asegúrate de que la conexión a Internet funcione y vuelve a intentarlo.",
     "add-payout-success": "Tu método de pago se ha añadido correctamente. ",
@@ -555,6 +595,23 @@
   },
   "settings": {
     "settings": "Configuración",
+    "newsletter-subscribe": "Sí, por favor envíeme el boletín de noticias mensual",
+    "newsletter-description": "Deseo suscribirme a la newsletter y formar parte de la comunidad listnride para estar al día de todas las novedades relacionadas al ciclismo, nuevos destinos para ciclistas, eventos y recibir cupones de descuento para mi próximo alquiler.",
+    "newsletter": "Newsletter ",
+    "errors": {
+      "required-company-name": "Introduce el nombre de tu empresa",
+      "minlength-company-name": "El nombre de la empresa no debe exceder los 20 caracteres",
+      "required-vat": "Por favor, especifica tu número de IVA.",
+      "minlength-vat": "El IVA debe ser superior a 2 caracteres."
+    },
+    "pick-payment-method": "Por favor elige un método de pago",
+    "change-payment-method": "Cambiar método de pago",
+    "your-payment-method": "Tu método de pago:",
+    "pay-pal-account": "PayPal",
+    "pick-payment-method-new": "Por favor elige un nuevo método de pago",
+    "change-payout-method": "Cambiar el método de cobro",
+    "set-payment-method": "Seleccionar método de pago",
+    "set-payout-method": "Seleccionar método de cobro",
     "profile": "Perfil",
     "invite": "Invitar a amigos",
     "account": "Cuenta",
@@ -730,9 +787,9 @@
     "10": "Tu solicitud fue cancelada por el sistema"
   },
   "rideChat": {
-    "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.business_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
+    "1": "Te gustaría alquilar <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} desde {{timespan}}. Acuerda más detalles con el anunciante. La bici queda reservada tan pronto como dicha persona acepte tu pedido. ",
     "11": "La reserva de su bicicleta fue cancelada.",
-    "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}",
+    "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}}ha confirmado que ha terminado el paseo en bici y ha hecho una valoración sobre ti. Por útimo, califica el paseo. Esto ayuda mucho a nuestra comunidad y concluye el alquiler.",
     "6": "Gracias por la valoración, el alquiler se realizó con éxito.",
     "8": "Lamentablemente, el anunciante no pudo aceptar tu solicitud, pero puedes solicitar otras bicis estupendas.",
@@ -741,6 +798,7 @@
   },
   "forms": {
     "first-name": "Nombre",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Guardar nueva contraseña",
     "your-name": "Nombre",
     "your-email-address": "Correo electrónico",
@@ -878,7 +936,7 @@
     "list-your-bike": "Registra tu bici",
     "back": "Anterior",
     "next": "Siguiente",
-    "list-bike": "Registrar mi bici",
+    "list-bike": "Publicar bici",
     "category": {
       "header": "¿Cuál es la categoría de tu bici?",
       "event": "Bicicletas de evento",
@@ -1042,6 +1100,7 @@
       },
       "5": {
         "pedelec": "Pedelec",
+        "event-bike": "Bicicleta de evento",
         "e-bike": "Bici eléctrica",
         "cargo-bike": "Bicicleta de carga",
         "bike-trailer": "Remolque para bicicleta",
@@ -1077,10 +1136,10 @@
     "list-a-bike": "Publica una bicicleta",
     "show-as-list": "Mostrar como lista",
     "duplicate": {
-      "duplicate": "Duplicada",
+      "duplicate": "Duplicar",
       "duplication-status": "Estado de duplicación",
       "how_many": "¿Cuántas bicis?",
-      "header": "Bicicleta duplicada",
+      "header": "Duplicar Bici",
       "number_bikes": "Número de bicicletas",
       "maxlength": "Funciona para un máximo de 99 bicicletas",
       "required": "Número de bicicletas que se requiere"
@@ -1090,13 +1149,15 @@
     }
   },
   "listingCard": {
-    "activate-bike": "Activar",
-    "deactivate-bike": "Desactivar",
+    "activate-bike": "Activar bici",
+    "deactivate": "Desactivar",
+    "activate": "Activar",
+    "deactivate-bike": "Desactivar bici",
     "edit-bike": "Editar",
     "delete-bike": "Borrar",
     "cancel": "Cancelar",
     "delete": "Borrar",
-    "duplicate": "Duplicada",
+    "duplicate": "Duplicar",
     "dialog-title": "¿Seguro que quieres eliminar tu bici?",
     "dialog-subtitle": "La bici se eliminará permanentemente de la plataforma. Las solicitudes actuales no se ven afectadas por esto."
   },

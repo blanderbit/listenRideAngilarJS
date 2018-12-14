@@ -1,6 +1,14 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "payment-type": {
+      "pay-pal-account": "Paypal",
+      "credit-card": "Carta di credito",
+      "paypal-account": "Conto Paypal"
+    },
+    "change": "Change",
+    "local-business": "Attività locale",
+    "list": "List",
     "map": "Mappa",
     "bike-type": "Tipo di bici",
     "filter-by": "Filtra per",
@@ -16,12 +24,14 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
+      "unexpected-payment-type": "Tipo di pagamento non previsto",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
       "phone-required": "Per favore inserisci il tuo numero di telefono, questo campo è obbligatorio"
     },
     "notifications": {
       "404": "La pagina non esiste",
+      "406": "The information you entered is incorrect. please check your information and try again",
       "422": "Entità non processabile",
       "500": "Errore interno del server",
       "200": "Successo"
@@ -163,19 +173,38 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "imprint": {
+    "germany-address": "Steinstraße 17<br>10119 Berlino<br>Germania",
+    "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefono: +49 (0)30-120870330"
+  },
   "events": {
     "berlin-triathlon": {
       "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>2 Giugno 2019</b>",
       "meta-title": "Noleggia una bici da strada per il Triathlon di Berlino 2019 | listnride",
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2019. Scegli la bici perfetta per te."
     },
+    "black-friday": {
+      "banner": {
+        "title": "Black Friday",
+        "description": "Ottieni uno sconto enorme per il tuo prossimo noleggio. Solo oggi!",
+        "check-it": "Controlla"
+      }
+    },
+    "epicgrancanaria": {
+      "meta-title": "Noleggia una bici da strada per l'Epic Gran Canaria | listnride",
+      "meta-description": "L'obiettivo di Epic Gran Canaria è di offrire un'esperienza professionale a ciclisti amatoriali"
+    },
+    "velorace-dresden": {
+      "meta-title": "Rent a road bike for Velorace Dresden 2019 | listnride",
+      "meta-description": "With listnride you can securely rent a road bike online for Velorace Dresden 2019. Choose the perfect bike that fits your needs!"
+    },
     "berlin-triathlon-xl": {
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon XL di Berlino 2019. Scegli la bici perfetta per te.",
       "meta-title": "Noleggia una bici da strada per il Triathlon XL di Berlino 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "With listnride you can securely rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Noleggia una bici da strada per Vätternrundan 2019 | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per Vätternrundan 2019 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
     }
   },
   "lister": {
@@ -274,6 +303,10 @@
     "events": {
       "rapha-super-cross": {
         "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+      },
+      "black-friday": {
+        "meta-title": " Black Friday 2018 |Sconto noleggio bici listnride",
+        "meta-description": "Sconto del Black Friday su listnride! Grande sconto sul prossimo noleggio di biciclette, solo questo fine settimana."
       },
       "eroica-gaiole": {
         "meta-title": "L' Eroica, manifetazione cicloturistica con bici da corsa d'epoca",
@@ -449,7 +482,7 @@
       "support": "listnride servizio clienti"
     },
     "sign-in": {
-      "tab": "1. Accedi",
+      "tab": "Accedi",
       "new": "Nuovo su listnride?",
       "login": "Registrati con Facebook",
       "register-facebook": "Registrati con Facebook",
@@ -459,7 +492,7 @@
       "not-member": "Nuovo su listnride?"
     },
     "details": {
-      "tab": "2. Dati personali",
+      "tab": "Dati personali",
       "sms-confirmation-message": "Un SMS con un codice di conferma ti è stato inviato proprio ora.",
       "invoice-address": "Il tuo indirizzo di fatturazione ",
       "subtitle": "Si prega di inserire l'indirizzo di fatturazione per richiedere la bicicletta",
@@ -473,8 +506,9 @@
       "resend": "Inviare di nuovo"
     },
     "payment": {
-      "tab": "3. Metodi di Pagamento",
-      "getting-saved": "Il metodo di pagamento è stato salvato",
+      "tab": "Metodi di Pagamento",
+      "current-method": "Attuale metodo di pagamento",
+      "getting-saved": "Payment method saving in progress",
       "select-method": "Seleziona il tuo metodo di pagamento",
       "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
       "credit-card": "Carta di credito",
@@ -494,7 +528,7 @@
       "pay-paypal": "Paypal"
     },
     "overview": {
-      "tab": "4. Riepilogo",
+      "tab": "Riepilogo",
       "bike-rental": "La bici selzionata",
       "size": "Taglia",
       "location": "Località",
@@ -525,6 +559,8 @@
   },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
+    "add-payment-success": "Il metodo di pagamento è stato salvato",
+    "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "bike-edit-successful": "Le modifiche sono state salvate",
     "error": "Si è verificato un errore. Assicurati che la connessione a Internet funzioni e riprova.",
     "add-payout-success": "Il metodo di pagamento è stato aggiunto con successo.",
@@ -551,6 +587,23 @@
   },
   "settings": {
     "settings": "Impostazioni",
+    "newsletter-subscribe": "Sì, per favore inviami la newsletter mensile di listnride",
+    "newsletter-description": "Iscriviti e ricevi la nostra newsletter  nella tua casella di posta. La nostra newsletter ti informa sui nuovi marchi, sulle nuove e utili funzioni su listnride.it, su ciò che accade nella community, sulle destinazioni di viaggio con biciclette presenti in piattaforma e gli eventi ciclistici.\nAbbiamo detto che è realizzata con molto amore e dedizione? Perchè lo è.\nPuoi disiscriverti in qualsiasi momento, ovviamente.",
+    "newsletter": "Newsletter",
+    "errors": {
+      "required-company-name": "Inserisci il nome della tua azienda.",
+      "minlength-company-name": "Il nome della società dovrebbe essere superiore ai 2 caratteri",
+      "required-vat": "Si prega di inserire il numero di partita IVA.",
+      "minlength-vat": "L'IVA dovrebbe essere più lunga di 2 caratteri"
+    },
+    "pick-payment-method": "Aggiungi il metodo di pagamento",
+    "change-payment-method": "Cambia il metodo di pagamento",
+    "your-payment-method": "Il tuo metodo di pagamento:",
+    "pay-pal-account": "PayPal",
+    "pick-payment-method-new": "Aggiungi un nuovo metodo",
+    "change-payout-method": "Cambia il metodo di pagamento",
+    "set-payment-method": "Imposta il metodo di pagamento",
+    "set-payout-method": "Imposta il metodo di pagamento",
     "profile": "Profilo",
     "invite": "Invita i tuoi amici",
     "account": "Conto",
@@ -726,9 +779,9 @@
     "10": "La tua richiesta è stata annullata dal sistema"
   },
   "rideChat": {
-    "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di {{lister.business_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
+    "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di  {{lister.display_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
     "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
-    "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: {{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}",
+    "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "{{lister.first_name}} ha confermato il ritorno del mezzo e ti ha fatto una recensione. Infine, ti preghiamo di valutare l'esperienza. Questo aiuta molto la nostra comunità e completa il noleggio.",
     "6": "Grazie per la valutazione, il noleggio è stato completato con successo.",
     "8": "Purtroppo il noleggiatore non poteva accettare la tua richiesta. Richiedi altre belle biciclette.",
@@ -737,6 +790,7 @@
   },
   "forms": {
     "first-name": "Nome",
+    "newsletter-privacy-policy": "Privacy Policy News letter",
     "save-new-password": "Salva nuova password",
     "your-name": "Il tuo nome",
     "your-email-address": "Il tuo indirizzo email",
@@ -831,6 +885,7 @@
   },
   "search": {
     "no-bikes": "Non ci sono biciclette in questa località",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Prenotazioni di gruppo",
     "bikes-found": "Bici trovate:",
     "all-sizes": "Tutte le misure",
@@ -1038,6 +1093,7 @@
       },
       "5": {
         "pedelec": "Bicicletta a pedalata assistita",
+        "event-bike": "Biciclette per eventi",
         "e-bike": "Bicicletta elettrica",
         "cargo-bike": "Bici da Carico",
         "bike-trailer": "Rimorchio per Bici",
@@ -1087,6 +1143,8 @@
   },
   "listingCard": {
     "activate-bike": "Attivare",
+    "deactivate": "Disattivare",
+    "activate": "Attivare",
     "deactivate-bike": "Disattivare",
     "edit-bike": "Modifica",
     "delete-bike": "Elimina",

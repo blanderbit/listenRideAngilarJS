@@ -1,5 +1,5 @@
 <md-tab class="personal"
-        label="{{ 'booking.sign-in.tab' | translate }} {{ signup.parent.tabCompleted(0) }}"
+        label="{{ signup.parent.tabOrder['sign-in'] + 1 }}. {{ 'booking.sign-in.tab' | translate }} {{ signup.parent.tabCompleted('sign-in') }}"
         layout="row"
         ng-disabled="signup.parent.tabsDisabled"
         md-on-select="signup.parent.onTabChanged()">
@@ -22,7 +22,7 @@
           ng-submit="signup.parent.emailSignup()"
           ng-hide="showLogin"
         >
-          <div class="md-dialog-content" layout="column">
+          <div class="md-dialog-content">
             <div layout="column">
               <div layout="row" layout-xs="column">
                 <div flex="50" flex-xs="100" layout="column">
@@ -197,13 +197,13 @@
             </div>
 
             <div class="md-dialog-buttons" layout="row" layout-xs="column" layout-align="space-between center" layout-align-xs="center stretch">
-              <a layout flex-xs="50" class="lnr-link" ng-click="signup.parent.resetPassword()">
+              <a class="lnr-link" ng-click="signup.parent.resetPassword()">
                 {{ 'forms.forgot-password' | translate }}
               </a>
               <md-button type="submit" class="md-primary md-raised">
                 {{ 'forms.log-in' | translate }}
               </md-button>
-              <div layout layout-padding flex-xs="50" layout-align="center center" hide-gt-xs>
+              <div layout layout-padding layout-align="center center" hide-gt-xs>
                 <a class="lnr-link" ng-click="showLogin = false">{{ 'booking.sign-in.not-member' | translate }}</a>
               </div>
             </div>

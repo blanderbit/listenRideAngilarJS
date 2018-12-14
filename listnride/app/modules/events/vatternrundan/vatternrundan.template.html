@@ -1,7 +1,15 @@
 <md-content class="single-column">
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/vatternrundan_hero.jpg'); background-position: 0 60%"
-    layout="row" layout-align="center center">
-    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center"></div>
+  <div id="hero-shot"
+    class="lnr-preload-bg"
+    style="background-image: url('app/assets/ui_images/events/vatternrundan/lnr_vaettern_hero_image_03.jpg'); background-position: 0 60%"
+    layout="row"
+    layout-align="center center">
+    <div class="lnr-page-title md-color-white" layout="column" layout-align="center center">
+      <div>
+        <img ng-src="app/assets/ui_images/events/vatternrundan/lnr_vaettern_logo_image_02.png" flex="25"><br><br>
+      </div>
+      <!-- <h1 class="md-display-1">{{ 'brand-integration.brompton.title' | translate }}</h1>     -->
+    </div>
   </div>
 
   <div class="content" layout="column" layout-padding>
@@ -28,7 +36,9 @@
         </md-input-container>
       </div>
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in vatternrundan.bikes | filter : {size : filterSize}" bike="bike" booked="bike.booked"
+        <bike-card
+          ng-repeat="bike in vatternrundan.bikes | filter : (filterSize != -1 || '') && {size : filterSize}"
+          bike="bike" booked="bike.booked"
           flex="100" flex-gt-xs="50" flex-gt-sm="33">
         </bike-card>
       </div>

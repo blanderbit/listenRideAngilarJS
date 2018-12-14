@@ -3,14 +3,23 @@
 angular.module('user',[]).component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
-  controller: ['$localStorage', '$state', '$stateParams', '$translate', 'ngMeta', 'api',
-    function ProfileController($localStorage, $state, $stateParams, $translate, ngMeta, api) {
+  controller: ['$localStorage', '$state', '$stateParams', '$translate', 'ngMeta', 'api', '$mdMedia',
+    function ProfileController($localStorage, $state, $stateParams, $translate, ngMeta, api, $mdMedia) {
       var user = this;
       user.hours = {};
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       user.loaded = false;
       user.current_payment = false;
+      user.display_name = '';
+      user.picture = '';
+      user.mobileScreen = $mdMedia('xs');
+      var mobileBikeColumns = 3;
+      var desktopBikeColumns = 6;
+      user.bikesToShow = user.mobileScreen ? mobileBikeColumns : desktopBikeColumns;
+      user.showAllBikes = false;
+
       user.closedDay = closedDay;
+      user.loadAllBikes = loadAllBikes;
 
       var userId;
       $stateParams.userId? userId = $stateParams.userId : userId = 1930;
@@ -27,10 +36,17 @@ angular.module('user',[]).component('user', {
             user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
             user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
             user.rating = (user.user.rating_lister + user.user.rating_rider);
+
+            user.display_name = setName();
+            user.picture = setPicture();
+
             user.current_payment = response.data.status === 3;
             if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
               user.rating = user.rating / 2;
             }
+
+            user.bikes = user.user.rides.slice(0, user.bikesToShow);
+
             user.rating = Math.round(user.rating);
             if (user.openingHoursEnabled) setOpeningHours();
 
@@ -41,11 +57,15 @@ angular.module('user',[]).component('user', {
         }
       );
 
+      function loadAllBikes() {
+        user.showAllBikes = true;
+        user.bikes = user.user.rides;
+      }
+
       function generateMetaDescription(isCompany) {
         var title = isCompany ? "user.company-meta-title" : "user.meta-title";
         var description = isCompany ? "user.company-meta-description" : "user.meta-description";
-        // var params = isCompany ? { company: user.user.business.company_name } : { name: user.user.first_name };
-        var params = { name: user.user.first_name };
+        var params = isCompany ? { company: $translate.instant('shared.local-business') } : { name: user.user.first_name };
 
         $translate([title, description] , params)
           .then(function(translations) {
@@ -55,6 +75,26 @@ angular.module('user',[]).component('user', {
               ngMeta.setTag("noindex", false);
             }
           });
+      }
+
+      function setName() {
+        if (user.user.has_business) {
+           if (userId !== $localStorage.userId) {
+             return $translate.instant('shared.local-business')
+           } else {
+             return user.user.business.company_name
+           }
+        } else {
+          return user.user.first_name
+        }
+      }
+
+      function setPicture() {
+        if (user.user.has_business && userId !== $localStorage.userId) {
+          return 'app/assets/ui_icons/lnr_shop_avatar.svg'
+        } else {
+          return user.user.profile_picture.profile_picture.url
+        }
       }
 
       function setOpeningHours() {
@@ -79,7 +119,7 @@ angular.module('user',[]).component('user', {
           user.hours[day] = dayRange;
         });
       }
-      
+
       function compactHours() {
         var dayName = '', currentDay = {}, prevDay = {}, shortenHours = {};
 

@@ -1,4 +1,4 @@
- <md-content class="single-column">
+<md-content class="single-column">
 
   <div id="slideshow" md-theme="lnr-dark" layout="column" layout-align="center center">
     <!-- BRAND SLIDER -->
@@ -27,20 +27,23 @@
     <!-- BRAND PAGE FEATURES -->
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
-        <img class="md-card-image" src="app/assets/ui_images/brand-integration/swytch/lnr_swytch_top_columns_image_01.jpg" alt="swytch feature 1">
+        <img class="md-card-image" src="app/assets/ui_images/brand-integration/swytch/lnr_swytch_top_columns_image_01.jpg"
+          alt="swytch feature 1">
         <h3 class="md-subhead lnr-center">{{ 'brand-integration.swytch.feature-1.title' | translate }}</h3>
         <p class="lnr-center" translate="brand-integration.swytch.feature-1.description"></p>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
-        <img class="md-card-image" src="app/assets/ui_images/brand-integration/swytch/lnr_swytch_top_columns_image_02.jpg" alt="swytch feature 2">
+        <img class="md-card-image" src="app/assets/ui_images/brand-integration/swytch/lnr_swytch_top_columns_image_02.jpg"
+          alt="swytch feature 2">
         <h3 class="md-subhead lnr-center">{{ 'brand-integration.swytch.feature-2.title' | translate }}</h3>
         <p class="lnr-center" translate="brand-integration.swytch.feature-2.description"></p>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin class="lnr-m-0">
-        <img class="md-card-image" src="app/assets/ui_images/brand-integration/swytch/lnr_swytch_top_columns_image_03.jpg" alt="swytch feature 3">
-        <h3  class="md-subhead lnr-center">{{ 'brand-integration.swytch.feature-3.title' | translate }}</h3>
+        <img class="md-card-image" src="app/assets/ui_images/brand-integration/swytch/lnr_swytch_top_columns_image_03.jpg"
+          alt="swytch feature 3">
+        <h3 class="md-subhead lnr-center">{{ 'brand-integration.swytch.feature-3.title' | translate }}</h3>
         <p class="lnr-center" translate="brand-integration.swytch.feature-3.description"></p>
       </div>
     </div>
@@ -87,13 +90,14 @@
       <h1 class="md-headline">{{ 'brand-integration.swytch.find-out-more.title' | translate }}</h1>
       <h2 class="md-subhead" translate="brand-integration.swytch.find-out-more.description"></h2>
     </div>
-    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-align-gt-sm="space-between start" layout-padding layout-wrap>
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-align-gt-sm="space-between start"
+      layout-padding layout-wrap>
       <!-- LEFT COLUMN -->
       <div class="lnr-sm-center lnr-sm-no-vertical-space" flex-gt-sm="45" layout="column" layout-margin>
         <div ng-repeat="f in swytch.faqs[1] track by $index">
-          <h3 class="md-body-2 lnr-clickable" ng-click="swytch['faq-l'+$index] = !swytch['faq-l'+$index]">{{ f.question | translate}}</h3>
+          <h3 class="md-body-2 lnr-clickable" ng-click="swytch['faq-l'+$index] = !swytch['faq-l'+$index]" translate="{{f.question}}"></h3>
           <div ng-show="swytch['faq-l'+$index]">
-            <p>{{ f.answer | translate}}</p>
+            <p translate="{{f.answer}}"></p>
           </div>
         </div>
       </div>
@@ -101,9 +105,9 @@
       <!-- RIGHT COLUMN -->
       <div class="lnr-sm-center lnr-sm-no-vertical-space" flex-gt-sm="45" layout="column" layout-margin>
         <div ng-repeat="f in swytch.faqs[0] track by $index">
-          <h3 class="md-body-2 lnr-clickable" ng-click="swytch['faq-r'+$index] = !swytch['faq-r'+$index]">{{ f.question | translate}}</h3>
+          <h3 class="md-body-2 lnr-clickable" ng-click="swytch['faq-r'+$index] = !swytch['faq-r'+$index]" translate="{{f.question}}"></h3>
           <div ng-show="swytch['faq-r'+$index]">
-            <p>{{ f.answer | translate}}</p>
+            <p translate="{{f.answer}}"></p>
           </div>
         </div>
       </div>
@@ -113,5 +117,5 @@
 
     <div class="lnr-mh-x2"></div>
   </div>
- <footer></footer>
+  <footer></footer>
 </md-content>

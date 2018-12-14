@@ -62,7 +62,10 @@ angular.module('list', ['ngLocale'])
           list.selectedIndex = 0;
           list.removedImages = [];
           list.startImage = 1;
-          list.sizeOptions = bikeOptions.sizeOptions();
+          list.sizeOptions = [];
+          bikeOptions.sizeOptions().then(function (resolve) {
+            list.sizeOptions = resolve
+          });
           bikeOptions.accessoryOptions().then(function (resolve) {
             list.accessoryOptions = resolve;
           });
@@ -160,10 +163,10 @@ angular.module('list', ['ngLocale'])
                 var images = [];
                 for (var i = 1; i <= 5; ++i) {
                   if (data["image_file_" + i] !== undefined &&
-                    data["image_file_" + i].small.url !== null) {
+                    data["image_file_" + i].url !== null) {
                     images.push({
                       src: data["image_file_" + i],
-                      url: data["image_file_" + i].small.url,
+                      url: data["image_file_" + i].url,
                       local: "false",
                       name: "image_file_" + i
                     });
@@ -429,10 +432,10 @@ angular.module('list', ['ngLocale'])
 
         // check bikes details
         list.isDetailsValid = function () {
-          return list.form.name !== undefined &&
-            list.form.brand !== undefined &&
-            list.form.size !== undefined &&
-            list.form.description !== undefined;
+          return list.form.name &&
+            list.form.brand &&
+            list.form.size &&
+            list.form.description;
         };
 
         // check picture is correct

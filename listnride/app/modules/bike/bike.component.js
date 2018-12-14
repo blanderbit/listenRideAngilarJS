@@ -7,6 +7,9 @@ angular.module('bike',[]).component('bike', {
     function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers) {
       var bike = this;
       bike.colorScheme = mapConfigs.colorScheme();
+      bike.owner = {};
+      bike.owner.display_name = '';
+      bike.owner.picture = '';
 
       bike.mapOptions = {
         lat: 0,
@@ -38,7 +41,9 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data;
-          bike.owner = bike.data.user.id === $localStorage.userId;
+          bike.is_owner = bike.data.user.id === $localStorage.userId;
+          bike.owner.display_name = setName();
+          bike.owner.picture = setPicture();
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
           $translate($filter('category')(bike.data.category)).then(
@@ -58,7 +63,7 @@ angular.module('bike',[]).component('bike', {
 
           ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
           ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          ngMeta.setTag("og:image", bike.data.image_file_1.small.url);
+          ngMeta.setTag("og:image", bike.data.image_file.url);
         },
         function(error) {
         	$state.go('404');
@@ -106,6 +111,26 @@ angular.module('bike',[]).component('bike', {
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
       };
+
+      function setName() {
+        if (bike.data.business) {
+          if (!bike.is_owner) {
+            return $translate.instant('shared.local-business')
+          } else {
+            return bike.data.business.company_name
+          }
+        } else {
+          return bike.data.user.first_name
+        }
+      }
+
+      function setPicture() {
+        if (bike.data.business && !bike.is_owner) {
+          return 'app/assets/ui_icons/lnr_shop_avatar.svg'
+        } else {
+          return bike.data.user.profile_picture.profile_picture.url
+        }
+      }
 
       function GalleryDialogController($mdDialog, bikeData) {
         var galleryDialog = this;

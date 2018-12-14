@@ -8,15 +8,15 @@
   </div>
   <!-- CONTENT -->
   <div class="content" layout-padding>
-    <div class="spacer"></div>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
+    <div class="lnr-pv-x2"></div>
+    <div class="lnr-section-title lnr-xs-m-0" layout="column" layout-align="center center">
       <p class="md-subhead">{{ 'brands.description' | translate }}</p>
     </div>
   </div>
 
   <div class="content" layout-padding>
-    <div class="spacer"></div>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
+    <div class="lnr-pv-x2"></div>
+    <div class="lnr-section-title lnr-xs-m-0" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'brands.choose-from-brands' | translate }}</h2>
     </div>
     <div class="lnr-pb-0" layout="row" layout-align="space-between center">
@@ -42,10 +42,15 @@
           </category-filter>
         </md-menu-content>
       </md-menu>
-      <md-button class="lnr-md-button__icon lnr-no-ripple" ng-click="brands.toggleView()">
-        <md-icon style="width: 30px; height: 27px;" md-svg-src="app/assets/ui_icons/icn_pin.svg" aria-label="toggle map view"></md-icon>
-        <span class="lnr-fs14">{{ 'shared.map' | translate }}</span>
-      </md-button>
+      <!-- VIEW SWITCHER -->
+      <div layout="row" layout-align="end center">
+        <span class="lnr-pr" ng-if="!brands.isMapView">{{'shared.map' | translate}}</span>
+        <span class="lnr-pr" ng-if="brands.isMapView">{{'shared.list' | translate}}</span>
+        <md-switch
+          ng-model="brands.isMapView"
+          ng-change="brands.toggleView(brands.isMapView)">
+        </md-switch>
+      </div>
     </div>
     <div class="lnr-p-x2" ng-class="brands.isMapView ? 'brands__fixed-map-height': ''">
       <div class="lnr-pos-r">
@@ -58,6 +63,7 @@
           md-cols-gt-xs="4"
           md-gutter="16px"
           md-row-height="1:0.65"
+          md-cols-xs="2"
         >
           <md-grid-tile
             class="tile"
@@ -107,12 +113,12 @@
         </div>
       </div>
     </div>
-    <p class="lnr-ph-x2" translate="brands.join-program-link"></p>
+    <p class="lnr-m-0 lnr-ph-x2" translate="brands.join-program-link"></p>
   </div>
 
   <div class="content" layout-padding>
-    <div class="spacer"></div>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
+    <div class="lnr-pv-x2 lnr-xs-p-0"></div>
+    <div class="lnr-section-title lnr-xs-m-0" layout="column" layout-align="center center">
       <h2 class="md-headline">{{ 'brands.showroom.header' | translate }}</h2>
       <p class="md-subhead">{{ 'brands.showroom.sub-header' | translate }}</p>
     </div>
@@ -126,7 +132,7 @@
           >
           <h3 class="md-headline md-color-white">{{'shared.berlin' | translate}}</h3>
         </div>
-        <div class="lnr-pv-x2"></div>
+        <div class="lnr-pv-x2 lnr-xs-p-0"></div>
         <p class="md-body-1" translate="brands.showroom.berlin-description"></p>
         <div>
           <div class="lnr-pv-x2"></div>
@@ -148,7 +154,7 @@
           >
           <h3 class="md-headline md-color-white">{{'shared.munich' | translate}}</h3>
         </div>
-        <div class="lnr-pv-x2"></div>
+        <div class="lnr-pv-x2 lnr-xs-p-0"></div>
         <p class="md-body-1" translate="brands.showroom.munich-description"></p>
         <div>
           <div class="lnr-pv-x2"></div>
