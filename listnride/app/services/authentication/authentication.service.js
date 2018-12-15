@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$localStorage', '$mdDialog', '$rootScope', '$mdToast', '$state', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
-    function(Base64, $localStorage, $mdDialog, $rootScope, $mdToast, $state, $translate, $analytics, ezfb, api, verification, sha256, notification){
+    'Base64', '$localStorage', '$mdDialog', '$rootScope', '$state', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
+    function(Base64, $localStorage, $mdDialog, $rootScope, $state, $translate, $analytics, ezfb, api, verification, sha256, notification){
 
       var encodeAuth = function (email, password_hashed) {
         return Base64.encode(email + ":" + password_hashed);
@@ -48,45 +48,137 @@ angular.
       // used in request booking flow
 
       var showSignupSuccess = function() {
-        $mdToast.show(
-          $mdToast.simple()
-            .textContent($translate.instant('toasts.successfully-sign-up'))
-            .hideDelay(3000)
-            .position('top center')
-        );
+        notification.show(null, null, 'toasts.successfully-sign-up');
       };
 
       var showSignupError = function() {
-        $mdToast.show(
-          $mdToast.simple()
-          .textContent($translate.instant('toasts.could-not-sign-up'))
-          .hideDelay(4000)
-          .position('top center')
-        );
+        notification.show(null, null, 'toasts.could-not-sign-up');
       };
 
       var showLoginSuccess = function() {
         $mdDialog.hide();
-        $mdToast.show(
-          $mdToast.simple()
-            .textContent($translate.instant('toasts.successfully-logged-in'))
-            .hideDelay(3000)
-            .position('top center')
-        );
+        notification.show(null, null, 'toasts.successfully-logged-in');
       };
 
       var showLoginError = function() {
-        $mdToast.show(
-          $mdToast.simple()
-            .textContent($translate.instant('toasts.could-not-log-in'))
-            .hideDelay(3000)
-            .position('top center')
-        );
+        notification.show(null, null, 'toasts.could-not-log-in');
       };
 
       var showProfile = function() {
         $state.go("user", {userId: $localStorage.userId});
       };
+
+      // LOGIN
+
+      var loginGlobal = function (form) {
+        var obj = {
+          email: form.email.$modelValue,
+          password: form.password.$modelValue,
+          grand_type: 'password',
+          target: 'login'
+        };
+        $analytics.eventTrack('click', { category: 'Request Bike', label: 'Sign In' });
+        LoginDialogController(null, sha256, null, obj);
+      };
+
+      // SIGN_UP
+
+      // CONTROLLERS
+
+      var LoginDialogController = function($mdDialog, sha256, ezfb, loginObj) {
+        var loginDialog = loginObj || this;
+
+        loginDialog.requestLogin = true;
+
+        var loginFb = function(email, facebookId) {
+          var user = {
+            'user': {
+              'email': email,
+              'facebook_id': facebookId
+            }
+          };
+          api.post('/users/login', user).then(function(response) {
+            setCredentials(response.data);
+            showLoginSuccess();
+            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
+              verification.openDialog(false);
+            }
+          }, function(error) {
+            showLoginError();
+          });
+        };
+
+        loginDialog.hide = function() {
+          $mdDialog.hide();
+        };
+
+        loginDialog.login = function() {
+          var user = {
+            'user': {
+              'email': loginDialog.email,
+              'password_hashed': sha256.encrypt(loginDialog.password)
+            }
+          };
+          api.post('/users/login', user).then(function(success) {
+            setCredentials(success.data);
+            showLoginSuccess();
+            if (loginDialog.requestLogin) {
+              $analytics.eventTrack('click', {category: 'Login', label: 'Email Request Flow'});
+              $rootScope.$broadcast('user_login');
+            } else {
+              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
+              if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
+                verification.openDialog(false);
+              }
+            }
+          }, function(error) {
+            showLoginError();
+          });
+        };
+
+        loginDialog.connectFb = function() {
+          ezfb.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                loginFb(response.email, response.id);
+              });
+            } else {
+              ezfb.login(function(response) {
+                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
+                  loginFb(response.email, response.id);
+                });
+              }, {scope: 'email'});
+            }
+          });
+        };
+
+        loginDialog.resetPassword = function() {
+          if (loginDialog.email) {
+            var user = {
+              "user": {
+                "email": loginDialog.email
+              }
+            };
+            api.post('/users/reset_password', user).then(function(success) {
+              notification.show(success, null, 'toasts.reset-password-success');
+            }, function(error) {
+              loginDialog.error = error.data.errors[0]
+            });
+          } else {
+            notification.show(success, null, 'toasts.enter-email');
+          }
+        };
+
+        if (loginObj) {
+          if (loginDialog.target === 'login') {
+            loginDialog.requestLogin = true;
+            loginDialog.login ()
+          } else if (loginDialog.target === 'reset') {
+            loginDialog.resetPassword()
+          }
+        }
+      };
+
 
       var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
         var invited = !!inviteCode;
@@ -278,128 +370,13 @@ angular.
         }
       };
 
-      var loginGlobal = function (form) {
-        var obj = {
-          email: form.email.$modelValue,
-          password: form.password.$modelValue,
-          target: 'login'
-        };
-        $analytics.eventTrack('click', {category: 'Request Bike', label: 'Sign In'});
-        LoginDialogController(null, null, sha256, null, obj);
-      };
-
       var forgetGlobal = function (email) {
         var obj = {
           email: email,
           target: 'reset'
         };
 
-        LoginDialogController(null, null, sha256, null, obj);
-      };
-
-      // The Login Dialog Controller
-      var LoginDialogController = function($mdDialog, $mdToast, sha256, ezfb, loginObj) {
-        var loginDialog = loginObj || this;
-
-        loginDialog.requestLogin = true;
-
-        var loginFb = function(email, facebookId) {
-          var user = {
-            'user': {
-              'email': email,
-              'facebook_id': facebookId
-            }
-          };
-          api.post('/users/login', user).then(function(response) {
-            setCredentials(response.data);
-            showLoginSuccess();
-            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
-              verification.openDialog(false);
-            }
-          }, function(error) {
-            showLoginError();
-          });
-        };
-
-        loginDialog.hide = function() {
-          $mdDialog.hide();
-        };
-
-        loginDialog.login = function() {
-          var user = {
-            'user': {
-              'email': loginDialog.email,
-              'password_hashed': sha256.encrypt(loginDialog.password)
-            }
-          };
-          api.post('/users/login', user).then(function(success) {
-            setCredentials(success.data);
-            showLoginSuccess();
-            if (loginDialog.requestLogin) {
-              $analytics.eventTrack('click', {category: 'Login', label: 'Email Request Flow'});
-              $rootScope.$broadcast('user_login');
-            } else {
-              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
-              if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
-                verification.openDialog(false);
-              }
-            }
-          }, function(error) {
-            showLoginError();
-          });
-        };
-
-        loginDialog.connectFb = function() {
-          ezfb.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                loginFb(response.email, response.id);
-              });
-            } else {
-              ezfb.login(function(response) {
-                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  loginFb(response.email, response.id);
-                });
-              }, {scope: 'email'});
-            }
-          });
-        };
-
-        loginDialog.resetPassword = function() {
-          if (loginDialog.email) {
-            var user = {
-              "user": {
-                "email": loginDialog.email
-              }
-            };
-            api.post('/users/reset_password', user).then(function(success) {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent($translate.instant('toasts.reset-password-success'))
-                  .hideDelay(5000)
-                  .position('top center')
-              );
-            }, function(error) {
-              loginDialog.error = error.data.errors[0]
-            });
-          } else {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.enter-email'))
-                .hideDelay(5000)
-                .position('top center')
-            );
-          }
-        };
-
-        if (loginObj) {
-          if (loginDialog.target === 'login') {
-            loginDialog.requestLogin = true;
-            loginDialog.login ()
-          } else if (loginDialog.target === 'reset') {
-            loginDialog.resetPassword()
-          }
-        }
+        LoginDialogController(null, sha256, null, obj);
       };
 
       var showSignupDialog = function(inviteCode, requesting, event, business) {
@@ -461,12 +438,7 @@ angular.
         delete $localStorage.profilePicture;
         delete $localStorage.name;
         $state.go('home');
-        $mdToast.show(
-          $mdToast.simple()
-          .textContent($translate.instant('toasts.successfully-logged-out'))
-          .hideDelay(3000)
-          .position('top center')
-        );
+        notification.show(null, null, 'toasts.successfully-logged-out');
       };
 
       var tokenLogin = function(token, email) {
