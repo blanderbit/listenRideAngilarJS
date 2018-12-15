@@ -3,18 +3,11 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$localStorage', '$mdDialog', '$rootScope', '$state', '$translate', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
-    function(Base64, $localStorage, $mdDialog, $rootScope, $state, $translate, $analytics, ezfb, api, verification, sha256, notification){
-
-      var encodeAuth = function (email, password_hashed) {
-        return Base64.encode(email + ":" + password_hashed);
-      }
+    'Base64', '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
+    function(Base64, $localStorage, $mdDialog, $rootScope, $state, $analytics, ezfb, api, verification, sha256, notification){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
-        var encoded = encodeAuth(response.email, response.password_hashed);
-        // Sets the Basic Auth String for the Authorization Header
-        $localStorage.auth = 'Basic ' + encoded;
         $localStorage.userId = response.id;
         $localStorage.name = response.first_name + " " + response.last_name;
         $localStorage.firstName = response.first_name;
@@ -23,8 +16,33 @@ angular.
         $localStorage.unreadMessages = response.unread_messages;
         $localStorage.email = response.email;
         $localStorage.referenceCode = response.ref_code;
-        $localStorage.isBusiness = (response.business !== undefined);
+        $localStorage.isBusiness = !!response.business;
       };
+
+      var getAccessToken = function (user, isFacebook) {
+        var preparedData = isFacebook ? {
+          assertion: facebook_access_token,
+          grant_type: 'assertion'
+        } : {
+          email: user.email,
+          password: user.password,
+          grant_type: 'password'
+        }
+
+        return api.post('/oauth/token', preparedData).then(function (response) {
+          return response.data;
+        }, function(error){
+          notification.show(error, 'error');
+        });
+      }
+
+      var setAccessToken = function (data) {
+        $localStorage.accessToken = data.access_token;
+        $localStorage.tokenType = data.token_type;
+        $localStorage.expiresIn = data.expiresIn;
+        $localStorage.refreshToken = data.refresh_token;
+        $localStorage.createdAt = data.created_at;
+      }
 
       var retrieveLocale = function() {
         // Set default language to english
@@ -74,7 +92,7 @@ angular.
         var obj = {
           email: form.email.$modelValue,
           password: form.password.$modelValue,
-          grand_type: 'password',
+          grant_type: 'password',
           target: 'login'
         };
         $analytics.eventTrack('click', { category: 'Request Bike', label: 'Sign In' });
@@ -82,6 +100,23 @@ angular.
       };
 
       // SIGN_UP
+
+      var signupGlobal = function (user) {
+        var obj = {
+          email: user.email,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          password: user.password,
+          isShop: user.isShop || false
+        };
+
+        $analytics.eventTrack('click', { category: 'Request Bike', label: 'Register' });
+
+        // manually set all variables to null
+        // $mdDialog, inviteCode, requesting, business
+        // TODO: Create service for sign up
+        SignupDialogController(null, null, null, false, obj);
+      };
 
       // CONTROLLERS
 
@@ -179,6 +214,107 @@ angular.
         }
       };
 
+       // The Signup Dialog Controller
+      var SignupDialogController = function ($mdDialog, inviteCode, requesting, business, signupObj) {
+        var signupDialog = signupObj || this;
+        signupDialog.signingUp = false;
+        signupDialog.requestSignup = false;
+        signupDialog.business = business;
+        signupDialog.businessError = false;
+        signupDialog.requesting = requesting;
+        signupDialog.newsletter = false;
+        var invited = !!inviteCode;
+
+        signupDialog.hide = function() {
+          $mdDialog.hide();
+        };
+
+        signupDialog.showLogin = function() {
+          $mdDialog.hide();
+          showLoginDialog();
+        };
+
+        signupDialog.signup = function() {
+          if (signupDialog.businessError && signupDialog.business) {
+            signupDialog.createBusiness();
+          } else {
+            signupDialog.createUser();
+          }
+        };
+
+        signupDialog.createUser = function() {
+          var user = {
+            'user': {
+              'email': signupDialog.email,
+              'password': signupDialog.password,
+              'first_name': signupDialog.firstName,
+              'last_name': signupDialog.lastName,
+              'ref_code': inviteCode,
+              'language': retrieveLocale()
+            },
+            'notification_preference' : {
+              'newsletter': signupDialog.newsletter
+            },
+            'is_shop': signupDialog.isShop || false
+          };
+
+          signupDialog.signingUp = true;
+
+          api.post('/users', user).then(function(success) {
+            setCredentials(success.data);
+            getAccessToken(user.user).then(function(successTokenData){
+              setAccessToken(successTokenData)
+            });
+
+            //TODO: refactor this logic
+            if (signupDialog.requestSignup) {
+              $rootScope.$broadcast('user_created');
+              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Request Flow'});
+            } else {
+              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
+              if (signupDialog.business) {
+                signupDialog.createBusiness();
+              } else {
+                if (!signupDialog.requesting) {
+                  $state.go('home');
+                }
+                signupDialog.hide();
+                // verification.openDialog(false, invited);
+              }
+            }
+          }, function(error) {
+            showSignupError();
+            signupDialog.signingUp = false;
+          });
+        };
+
+        signupDialog.createBusiness = function() {
+          var business = {
+            'business': {
+              'company_name': signupDialog.companyName
+            }
+          };
+
+          api.post('/businesses', business).then(function(success) {
+            $state.go('home');
+            verification.openDialog(false, invited, false, signupDialog.showProfile);
+          }, function(error) {
+            signupDialog.businessError = true;
+            signupDialog.signingUp = false;
+            showSignupError();
+          });
+        };
+
+        signupDialog.connectFb = connectFb;
+        signupDialog.showProfile = showProfile;
+
+        if (signupObj) {
+          signupDialog.requestSignup = true;
+          signupDialog.createUser()
+        }
+      };
+
+      /////////////////
 
       var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
         var invited = !!inviteCode;
@@ -253,123 +389,6 @@ angular.
         });
       };
 
-      var signupGlobal = function (user) {
-        // TODO: REPLACE THIS MONKEY PATCH WITH PROPER BACKEND-SIDE TEMPORARY PASSWORDS
-        if (!user.password) {
-          user.password = "sdf138FH";
-        }
-        var obj = {
-          email: user.email,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          password: user.password,
-          isShop: user.isShop || false
-        };
-
-        $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register'});
-
-        // manually set all variables to null
-        // $mdDialog, inviteCode, requesting, business
-        // TODO: Create service for sign up
-        SignupDialogController(null, null, null, false, obj);
-      };
-
-      // The Signup Dialog Controller
-      var SignupDialogController = function ($mdDialog, inviteCode, requesting, business, signupObj) {
-        var signupDialog = signupObj || this;
-        signupDialog.signingUp = false;
-        signupDialog.requestSignup = false;
-        signupDialog.business = business;
-        signupDialog.businessError = false;
-        signupDialog.requesting = requesting;
-        signupDialog.newsletter = false;
-        var invited = !!inviteCode;
-
-        signupDialog.hide = function() {
-          $mdDialog.hide();
-        };
-
-        signupDialog.showLogin = function() {
-          $mdDialog.hide();
-          showLoginDialog();
-        };
-
-        signupDialog.signup = function() {
-          if (signupDialog.businessError && signupDialog.business) {
-            signupDialog.createBusiness();
-          } else {
-            signupDialog.createUser();
-          }
-        };
-
-        signupDialog.createUser = function() {
-          var user = {
-            'user': {
-              'email': signupDialog.email,
-              'password_hashed': sha256.encrypt(signupDialog.password),
-              'first_name': signupDialog.firstName,
-              'last_name': signupDialog.lastName,
-              'ref_code': inviteCode,
-              'language': retrieveLocale()
-            },
-            'notification_preference' : {
-              'newsletter': signupDialog.newsletter
-            },
-            'is_shop': signupDialog.isShop || false
-          };
-
-          signupDialog.signingUp = true;
-
-          api.post('/users', user).then(function(success) {
-            setCredentials(success.data);
-            //TODO: refactor this logic
-            if (signupDialog.requestSignup) {
-              $rootScope.$broadcast('user_created');
-              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Request Flow'});
-            } else {
-              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
-              if (signupDialog.business) {
-                signupDialog.createBusiness();
-              } else {
-                if (!signupDialog.requesting) {
-                  $state.go('home');
-                }
-                signupDialog.hide();
-                // verification.openDialog(false, invited);
-              }
-            }
-          }, function(error) {
-            showSignupError();
-            signupDialog.signingUp = false;
-          });
-        };
-
-        signupDialog.createBusiness = function() {
-          var business = {
-            'business': {
-              'company_name': signupDialog.companyName
-            }
-          };
-
-          api.post('/businesses', business).then(function(success) {
-            $state.go('home');
-            verification.openDialog(false, invited, false, signupDialog.showProfile);
-          }, function(error) {
-            signupDialog.businessError = true;
-            signupDialog.signingUp = false;
-            showSignupError();
-          });
-        };
-
-        signupDialog.connectFb = connectFb;
-        signupDialog.showProfile = showProfile;
-
-        if (signupObj) {
-          signupDialog.requestSignup = true;
-          signupDialog.createUser()
-        }
-      };
-
       var forgetGlobal = function (email) {
         var obj = {
           email: email,
@@ -427,28 +446,21 @@ angular.
       };
 
       var loggedIn = function() {
-        return !!$localStorage.auth;
+        return !!$localStorage.accessToken;
       };
 
       // Logs out the user by deleting the auth header from localStorage
       var logout = function() {
-        document.execCommand("ClearAuthenticationCache");
-        delete $localStorage.auth;
-        delete $localStorage.userId;
-        delete $localStorage.profilePicture;
-        delete $localStorage.name;
-        $state.go('home');
-        notification.show(null, null, 'toasts.successfully-logged-out');
-      };
 
-      var tokenLogin = function(token, email) {
-        var user = {
-          "user": {
-            "shop_token": token,
-            "email": email
-          }
-        };
-        return api.post('/users/login', user);
+        api.post('/oauth/revoke', {'token': $localStorage.accessToken}).then(function(){
+          // reset all localStorage except isAgreeCookiesInfo if user set it to true
+          var isAgreeCookiesInfo = $localStorage.isAgreeCookiesInfo;
+          $localStorage.$reset();
+          if (isAgreeCookiesInfo) $localStorage.isAgreeCookiesInfo = true;
+
+          $state.go('home');
+          notification.show(null, null, 'toasts.successfully-logged-out');
+        });
       };
 
       // Further all functions to be exposed in the service
@@ -457,9 +469,7 @@ angular.
         showLoginDialog: showLoginDialog,
         loggedIn: loggedIn,
         logout: logout,
-        tokenLogin: tokenLogin,
         setCredentials: setCredentials,
-        encodeAuth: encodeAuth,
         profilePicture: function() {
           return $localStorage.profilePicture
         },
