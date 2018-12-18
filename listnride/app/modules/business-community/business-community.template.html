@@ -44,11 +44,21 @@
 
   <div class="content lnr-mh-x2">
     <div layout="column" layout-padding layout-margin layout-gt-xs="row">
-      <div layout="column" layout-align="start start" layout-align-xs="start center" flex-gt-xs="50">
-        <img class="lnr-w-fluid" ng-src="app/assets/ui_images/business/request.gif" alt="Request image">
+      <div
+        layout="column"
+        layout-align="start start"
+        layout-align-xs="start center"
+        flex-gt-xs="50">
+        <img width="250" class="lnr-w-fluid" ng-src="app/assets/ui_images/business/request.gif" alt="Request image" style="box-shadow: 1px 0px 4px 1px #e5e8e9;">
       </div>
-      <div class="md-body-1" layout="column" layout-align="start start" flex-gt-xs=50>
-        <p class="md-subhead">{{ 'business-community.requests.title' | translate }}</p>
+      <div
+        class="md-body-1 lnr-xs-center"
+        layout="column"
+        layout-align="start start"
+        layout-align-xs="start center"
+        flex-gt-xs="50"
+        flex-order-xs="-1">
+        <p class="md-subhead lnr-gt-xs-pt-x2">{{ 'business-community.requests.title' | translate }}</p>
         <p class="lnr-mh-x2" translate="business-community.requests.description"></p>
         <md-button class="md-raised md-primary md-lrg lnr-ml-0 lnr-mt" ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">{{
           'forms.sign-up-today' | translate }}</md-button>
@@ -56,11 +66,22 @@
     </div>
 
     <div layout="column" layout-padding layout-margin layout-gt-xs="row">
-      <div layout="column" layout-align="start end" layout-align-xs="start center" flex-gt-xs="50" flex-order-gt-xs="1">
-        <img class="lnr-w-fluid" ng-src="app/assets/ui_images/business/bike.png" alt="Bike page">
+      <div
+        layout="column"
+        layout-align="start end"
+        layout-align-xs="start center"
+        flex-gt-xs="50">
+        <img class="lnr-w-fluid" ng-src="app/assets/ui_images/business/bike.jpg" alt="Bike page">
       </div>
-      <div class="md-body-1" layout="column" layout-align="start start" flex-gt-xs=50>
-        <p class="md-subhead">{{ 'business-community.bike-page.title' | translate }}</p>
+      <div
+        class="md-body-1 lnr-xs-center"
+        layout="column"
+        layout-align="start start"
+        layout-align-xs="start center"
+        flex-gt-xs="50"
+        flex-order-xs="-1">
+        <br>
+        <p class="md-subhead lnr-gt-xs-pt-x2">{{ 'business-community.bike-page.title' | translate }}</p>
         <p class="lnr-mh-x2" translate="business-community.bike-page.description"></p>
         <md-button class="md-raised md-primary md-lrg lnr-ml-0 lnr-mt" ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">{{
           'forms.sign-up-today' | translate }}</md-button>
@@ -68,11 +89,22 @@
     </div>
 
     <div layout="column" layout-padding layout-margin layout-gt-xs="row">
-      <div layout="column" layout-align="start start" layout-align-xs="start center" flex-gt-xs="50">
-        <img class="lnr-w-fluid" ng-src="app/assets/ui_images/business/plugin_page.png" alt="Plugin page image">
+      <div
+        layout="column"
+        layout-align="start start"
+        layout-align-xs="start center"
+        flex-gt-xs="50">
+        <img class="lnr-w-fluid" ng-src="app/assets/ui_images/business/plugin_page.jpg" alt="Plugin page image">
       </div>
-      <div class="md-body-1" layout="column" layout-align="start start" flex-gt-xs=50>
-        <p class="md-subhead">{{ 'business-community.plugin-wp.title' | translate }}</p>
+      <div
+        class="md-body-1 lnr-xs-center"
+        layout="column"
+        layout-align="start start"
+        layout-align-xs="start center"
+        flex-gt-xs="50"
+        flex-order-xs="-1">
+        <br>
+        <p class="md-subhead lnr-gt-xs-pt-x2">{{ 'business-community.plugin-wp.title' | translate }}</p>
         <p class="lnr-mh-x2" translate="business-community.plugin-wp.description"></p>
         <img class="lnr-mh-x2" ng-src="app/assets/ui_images/business/wordpress-logo.png" alt="Wordpress logo">
         <md-button class="md-raised md-primary md-lrg lnr-mh-x2 lnr-ml-0" ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">{{
