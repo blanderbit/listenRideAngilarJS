@@ -334,33 +334,33 @@
       "description": "Ontvang boekingsaanvragen in plaats van eindeloze e-mails, je behoudt altijd de controle. Verbeter de communicatie met de klant, geen ingewikkelde of onjuiste communicatie meer."
     },
     "bike-page": {
-      "title": "Bikes comes first ",
-      "description": "Each bike has a unique profile with all the basic information that allows the user to rent the bike in seconds."
+      "title": "Fietsen op de eerste plaats ",
+      "description": "Elke fiets heeft een uniek profiel met gedetailleerde informatie waarmee de huurder de fiets van zijn keuze in enkele seconden kan boeken."
     },
     "companies": {
-      "title": "Companies that joined our listnride business community"
+      "title": "Andere bedrijven die zich bij onze listnride business community hebben aangesloten"
     },
     "plugin-wp": {
-      "title": "Listnride Booking Plugin ",
-      "description": "We developed this free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
-      "install": "Install on Wordpress",
-      "link": "Please use our installation documentation if you have a website that doesn’t use Wordpress."
+      "title": "Listnride Boekingsplug-in ",
+      "description": "We hebben een gratis te plaatsen boekingsplug-in ontwikkeld, zodat je klanten de fietsen direct van je website kunnen huren, 24/7.",
+      "install": "Installeer in Wordpress",
+      "link": "Gebruik onze installatiehandleiding als je geen gebruik maakt van Wordpress."
     },
     "meta-description": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
-    "title": "De listnride business community",
-    "subtitle": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
-    "description": "Wij willen je graag onze commerciële fietsverhuuroplossingen aanbieden en het je zo gemakkelijk mogelijk maken. Onze passie is fietsen en dus zien we dit graag meer in de straten van Europa. Is het niet geweldig dat we elkaar in deze missie kunnen ondersteunen?",
+    "title": "Sluit je aan bij de listnride business community",
+    "subtitle": "Geen contracten, geen maandelijkse kosten, enkel een commissie per boeking.",
+    "description": "Met listnride kan je al je verhuringen op één plaats beheren. Geen formulieren of miscommunicatie meer. Accepteer of wijs boekingsaanvragen online af, zodat u altijd de controle behoudt. Klaar om je aan te sluiten bij listnride?",
     "feature-1": {
-      "title": "Huur meer fietsen via listnride",
-      "description": "Jouw klanten kunnen hun huurfiets online selecteren en boeken, zowel via listnride als op je eigen website. Het volledige boekings- en betalingsproces neemt listnride van je over."
+      "title": "Profiteer van ons grote netwerk",
+      "description": "Wij promoten je fietsen via onze website en mediakanalen. Zo kunnen onze internationale klanten gemakkelijk je fietsen vinden en boeken. "
     },
     "feature-2": {
-      "title": "Presenteer jouw winkel online",
-      "description": "Presenteer jouw fietsaanbod online en breid zo je klantenbestand uit door de “Internet generatie' beter te bereiken via internet en mobiel."
+      "title": "Vereenvoudigd verhuurproces ",
+      "description": "Geen e-mails en telefoontjes meer die je voortdurend tijd kosten. Je ontvangt gewoon een boekingsaanvraag die je kunt accepteren."
     },
     "feature-3": {
-      "title": "Profiteer van ons bereik",
-      "description": "listnride is Europa's grootste fietsdeelgemeenschap en we blijven groeien. Profiteer van dit bereik en win nieuwe internationale klanten."
+      "title": "Ontvang meer boekingen",
+      "description": "Ons doel is om uw bedrijf tot een succes te maken en tegelijkertijd de administratieve rompslomp en complexiteit te verminderen."
     },
     "text-2": {
       "title": "Word lid van de listnride Business Community!",
@@ -603,7 +603,7 @@
       },
       "find-out-more": {
         "title": "Learn more about Felt Bicycles",
-        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle online</a> and get your listnride rental reimbursed. Find the most frequently asked questions below."
+        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle online</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a>and learn more about Felt Bicycles. "
       },
       "faq-answer-1": "FAQ ANSWER #1",
       "faq-answer-2": "FAQ ANSWER #2",
