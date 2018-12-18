@@ -329,6 +329,23 @@
   },
   "business-community": {
     "meta-title": "De listnride business community",
+    "requests": {
+      "title": "Manage all your rentals from one place",
+      "description": "Receive booking requests instead of endless emails, you are always in control. Improve your customer communication, no more forms or miscommunication."
+    },
+    "bike-page": {
+      "title": "Bikes comes first ",
+      "description": "Each bike has a unique profile with all the basic information that allows the user to rent the bike in seconds."
+    },
+    "companies": {
+      "title": "Companies that joined our listnride business community"
+    },
+    "plugin-wp": {
+      "title": "Listnride Booking Plugin ",
+      "description": "We developed this free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
+      "install": "Install on Wordpress",
+      "link": "Please use our installation documentation if you have a website that doesn’t use Wordpress."
+    },
     "meta-description": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
     "title": "De listnride business community",
     "subtitle": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
@@ -568,6 +585,34 @@
         "title": "Learn more about Whyte bikes",
         "description": "Order your new <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte bike</a> online and get your listnride rental reimbursed (valid for purchases at Whyte Germany only)."
       }
+    },
+    "felt": {
+      "title": "Rent and test ride Felt road bikes in Munich",
+      "description": "As countless frame makers experimented with new materials and unorthodox aesthetics, Felt Bicycles focused on function over form, on a painstakingly iterative design process, and on adapting the bike’s characteristics to the fit needs of the rider, rather than the other way around. Felt’s goal is to produce the best bicycle possible, regardless of how long it takes.",
+      "feature-1": {
+        "title": "Design Methodology",
+        "description": "The introduction of a new Felt bicycle comes at the conclusion of a long, thoughtful, and rigorous process. The amount of time from initial concept to a new bike can take years to complete."
+      },
+      "feature-2": {
+        "title": "Carbon Fiber",
+        "description": "Lighter than aluminum, stronger than steel, and with Felt’s manufacturing techniques, carbon fiber bicycles offer an unmatched combination of ride compliance, stiffness, strength, and efficiency."
+      },
+      "feature-3": {
+        "title": "Aero Science",
+        "description": "Felt aero bikes are wind tunnel developed. They are bringing prototypes to the wind tunnel, making changes, and then going back and refining the design before the carbon fiber molds are ever cut."
+      },
+      "find-out-more": {
+        "title": "Learn more about Felt Bicycles",
+        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle online</a> and get your listnride rental reimbursed. Find the most frequently asked questions below."
+      },
+      "faq-answer-1": "FAQ ANSWER #1",
+      "faq-answer-2": "FAQ ANSWER #2",
+      "faq-answer-3": "FAQ ANSWER #3",
+      "faq-answer-4": "FAQ ANSWER #4",
+      "faq-question-1": "faq-question-1",
+      "faq-question-2": "faq-question-2",
+      "faq-question-3": "faq-question-3",
+      "faq-question-4": "faq-question-4"
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",
@@ -1165,7 +1210,7 @@
     "header": "Werken bij List and Ride",
     "subheader": "We zetten de nieuwe standaard voor het boeken van fietshuur en fietstochten.",
     "contact": {
-      "title": "Join ons team",
+      "title": "Kom erbij!",
       "content": "Wij zijn op zoek naar getalenteerde collega's die binnen een inspirerend en gemotiveerd team willen werken binnen een start-up business, die een nieuwe standaard wil zetten voor de manier waarop mensen fietsen en fietstochten boeken. List and Ride is op zoek naar mensen met een doener mentaliteit die bereid zijn om verantwoordelijkheid te nemen in een dynamische omgeving.\n\nAls je geïnteresseerd bent om bij ons te komen werken, bekijk dan onze actuele vacatures hieronder. We horen graag van je."
     },
     "view": "Bekijk",

@@ -373,6 +373,10 @@
         "meta-title": "Rent and test ride Whyte bikes in Berlin | listnride",
         "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
       },
+      "felt": {
+        "meta-title": "Alquila y prueba una Felt Bicycles en Munich | listnride",
+        "meta-description": "¡Prueba una bicicleta Felt! Las bicicletas de carretera Felt las puedes alquilar en Munich."
+      },
       "swytch": {
         "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
         "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
@@ -799,6 +803,7 @@
   "forms": {
     "first-name": "Nombre",
     "newsletter-privacy-policy": "Privacy Policy News letter",
+    "sign-up-today": "Sign up today ",
     "save-new-password": "Guardar nueva contraseña",
     "your-name": "Nombre",
     "your-email-address": "Correo electrónico",
