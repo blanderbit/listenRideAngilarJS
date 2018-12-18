@@ -3589,8 +3589,13 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .lnr-gt-xs-mr {
     margin-right: 8px;
   }
+
   .lnr-gt-xs-ml {
     margin-left: 8px;
+  }
+
+  .lnr-gt-xs-pt-x2 {
+    padding-top: 16px;
   }
 }
 
@@ -3726,6 +3731,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-sc-w-divider md-divider {
     display: none;
+  }
+
+  .lnr-xs-center {
+    text-align: center;
   }
 
   /* INSURANCE */
