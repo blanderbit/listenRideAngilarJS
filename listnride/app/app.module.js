@@ -73,6 +73,7 @@ angular.module('listnride', [
   'veloheldIntegration',
   'votec-integration',
   'whyteIntegration',
+  'feltIntegration',
   /* EVENTS_PAGE */
   'berlinTriathlon',
   'berlinTriathlonXl',

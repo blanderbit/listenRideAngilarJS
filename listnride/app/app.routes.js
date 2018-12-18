@@ -1521,6 +1521,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'felt',
+        url: '/brands/felt',
+        template: '<felt></felt>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.felt.meta-title", "meta.brand-integration.felt.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.felt.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.felt.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* CITY_PAGES */
       /* ------------------------------------ */
