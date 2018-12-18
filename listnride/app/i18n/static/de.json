@@ -330,37 +330,37 @@
   "business-community": {
     "meta-title": "Die listnride Business Community",
     "requests": {
-      "title": "Manage all your rentals from one place",
+      "title": "Verwaltung aller Vermietungen an einem Ort",
       "description": "Erhalte nur Buchungsanfragen anstelle von endlosen E-Mails, so hast du immer die volle Kontrolle. Verbesserte Kommunikation mit dem Kunden, keine komplizierte oder falsche Kommunikation mehr."
     },
     "bike-page": {
-      "title": "Bikes comes first ",
-      "description": "Each bike has a unique profile with all the basic information that allows the user to rent the bike in seconds."
+      "title": "Fahrräder an erster Stelle ",
+      "description": "Jedes Fahrrad hat ein eigenes Profil mit detaillierten Infos, die es dem Mieter ermöglicht, das Rad seiner Wahl in wenigen Sekunden zu buchen."
     },
     "companies": {
-      "title": "Companies that joined our listnride business community"
+      "title": "Andere Firmen, die sich unserer Listnride Business Community angeschlossen haben."
     },
     "plugin-wp": {
-      "title": "Listnride Booking Plugin ",
-      "description": "We developed this free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
-      "install": "Install on Wordpress",
-      "link": "Please use our installation documentation if you have a website that doesn’t use Wordpress."
+      "title": "Listnride Buchungsplug-in ",
+      "description": "Wir haben ein kostenloses Buchungs-Plugin entwickelt, damit deine Kunden die Fahrräder rund um die Uhr direkt von deiner Website aus buchen können.",
+      "install": "In Wordpress installieren",
+      "link": "Bitte nutze unsere Installationsdokumentation, wenn du nicht Wordpress verwendest."
     },
     "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
-    "title": "Die listnride Business Community",
-    "subtitle": "Werde Teil des gewerblichen listnride Fahrradverleihs",
-    "description": "Wir möchten dich gerne in unseren gewerblichen Fahrradverleih einbinden und dir diesen so einfach wie möglich machen. Denn unsere Leidenschaft sind Fahrräder und wir möchten gerne mehr davon auf Europas Straßen sehen. Wie gut, dass wir uns gegenseitig bei dieser Mission unterstützen können.",
+    "title": "Werde noch heute Teil der listnride-Community",
+    "subtitle": "Keine Verträge, keine monatlichen Gebühren, lediglich eine Gebühr pro Buchung.",
+    "description": "Mit Listnride kannst du alle deine Vermietungen an einem Ort verwalten. Keine Formulare oder Fehlkommunikation mehr. Du kannst Buchungsanfragen online annehmen oder ablehnen, so dass du immer den Überblick behältst. Bist du startklar für listnride?",
     "feature-1": {
-      "title": "Vermiete deine Fahrräder",
-      "description": "Deine Kunden können ihr Leihfahrrad online über deine  Webseite auswählen und buchen. Den kompletten Buchungs-und Bezahlvorgang übernimmt listnride für dich."
+      "title": "Profitiere von unserem großen Netzwerk",
+      "description": "Wir bewerben deine Bikes über unsere Plattform und unsere Medienkanäle. So können unsere internationalen Kunden deine Fahrräder leicht finden und buchen. "
     },
     "feature-2": {
-      "title": "Präsentiere deinen Shop online",
-      "description": "Wir geben dir die Möglichkeit deinen Shop online zu präsentieren und so deinen Kundenstamm zu erweitern und die ‘Generation Internet’ online abzuholen."
+      "title": "Vereinfachter Mietvorgang ",
+      "description": "Keine E-Mails und Telefonate mehr, die dir die ganze Zeit wegnehmen. Du erhältst einfach eine Buchungsanfrage, die du akzeptieren kannst."
     },
     "feature-3": {
-      "title": "Profitiere von unserer Reichweite",
-      "description": "Listnride ist Europas größte Bikesharing Community und wir wachsen stetig weiter. Nutze diese Reichweite."
+      "title": "Mehr Vermietungen erhalten",
+      "description": "Unser Ziel ist es, den Erfolg deines Geschäfts zu fördern und gleichzeitig den Verwaltungsaufwand und die Komplexität zu reduzieren."
     },
     "text-2": {
       "title": "Werde auch du Teil der listnride Business Community",
@@ -563,7 +563,7 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a test location",
-      "no-bikes-found": "Ups .., hier werden leider noch keine Fahrräder angeboten.",
+      "no-bikes-found": "Ups ... hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
     },
     "whyte": {
@@ -603,7 +603,7 @@
       },
       "find-out-more": {
         "title": "Learn more about Felt Bicycles",
-        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle online</a> and get your listnride rental reimbursed. Find the most frequently asked questions below."
+        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle online</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a>and learn more about Felt Bicycles. "
       },
       "faq-answer-1": "FAQ ANSWER #1",
       "faq-answer-2": "FAQ ANSWER #2",
