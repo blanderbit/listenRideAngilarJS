@@ -329,6 +329,23 @@
   },
   "business-community": {
     "meta-title": "La comunidad empresarial de listnride",
+    "requests": {
+      "title": "Manage all your rentals from one place",
+      "description": "Receive booking requests instead of endless emails, you are always in control. Improve your customer communication, no more forms or miscommunication."
+    },
+    "bike-page": {
+      "title": "Bikes comes first ",
+      "description": "Each bike has a unique profile with all the basic information that allows the user to rent the bike in seconds."
+    },
+    "companies": {
+      "title": "Companies that joined our listnride business community"
+    },
+    "plugin-wp": {
+      "title": "Listnride Booking Plugin ",
+      "description": "We developed this free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
+      "install": "Install on Wordpress",
+      "link": "Please use our installation documentation if you have a website that doesn’t use Wordpress."
+    },
     "meta-description": "Únete a la comunidad empresarial de listnride para alquilar bicis",
     "title": "La comunidad empresarial de listnride",
     "subtitle": "Únete a la comunidad empresarial de listnride para alquilar bicis",
@@ -568,6 +585,34 @@
         "title": "Learn more about Whyte bikes",
         "description": "Order your new <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte bike</a> online and get your listnride rental reimbursed (valid for purchases at Whyte Germany only)."
       }
+    },
+    "felt": {
+      "title": "Alquila y prueba las bicicletas de carretera Felt en Munich",
+      "description": "Innumerables fabricantes de cuadros experimentaron con nuevos materiales y una estética poco ortodoxa, Felt Bicycles se centró en la función sobre la forma, en un proceso de diseño meticulosamente iterativo, y en adaptar las características de la bicicleta a las necesidades de ajuste del ciclista, y no al revés. El objetivo de Felt es producir la mejor bicicleta posible, independientemente del tiempo que demore.",
+      "feature-1": {
+        "title": "Metodología de diseño",
+        "description": "La introducción de una nueva bicicleta Felt al mercado llega a la conclusión de un proceso largo, reflexivo y riguroso. La cantidad de tiempo desde el concepto inicial hasta una bicicleta nueva puede tardar años en completarse."
+      },
+      "feature-2": {
+        "title": "Fibra de carbon",
+        "description": "Más ligeras que el aluminio, más fuertes que el acero, y con las técnicas de fabricación de Felt, las bicicletas de fibra de carbono ofrecen una combinación inigualable de conformidad con la conducción, rigidez, resistencia y eficiencia."
+      },
+      "feature-3": {
+        "title": "Aero ciencia",
+        "description": "Las bicicletas aerodinámicas de fieltro son túnel de viento desarrollado. Traen prototipos al túnel de viento, hacen cambios y luego regresan y refinan el diseño antes de que se corten los moldes de fibra de carbono."
+      },
+      "find-out-more": {
+        "title": "Aprende más sobre las bicicletas Felt",
+        "description": "Busca un distribuidor y compra tu <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Bicicleta de Felt</a>y obtén el reembolso del alquiler. Estas son las preguntas frecuentes sobre la Felt."
+      },
+      "faq-answer-1": "FAQ ANSWER #1",
+      "faq-answer-2": "FAQ ANSWER #2",
+      "faq-answer-3": "FAQ ANSWER #3",
+      "faq-answer-4": "FAQ ANSWER #4",
+      "faq-question-1": "faq-question-1",
+      "faq-question-2": "faq-question-2",
+      "faq-question-3": "faq-question-3",
+      "faq-question-4": "faq-question-4"
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",

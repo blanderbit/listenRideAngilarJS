@@ -329,6 +329,23 @@
   },
   "business-community": {
     "meta-title": "La comunità business di listnride",
+    "requests": {
+      "title": "Manage all your rentals from one place",
+      "description": "Receive booking requests instead of endless emails, you are always in control. Improve your customer communication, no more forms or miscommunication."
+    },
+    "bike-page": {
+      "title": "Bikes comes first ",
+      "description": "Each bike has a unique profile with all the basic information that allows the user to rent the bike in seconds."
+    },
+    "companies": {
+      "title": "Companies that joined our listnride business community"
+    },
+    "plugin-wp": {
+      "title": "Listnride Booking Plugin ",
+      "description": "We developed this free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
+      "install": "Install on Wordpress",
+      "link": "Please use our installation documentation if you have a website that doesn’t use Wordpress."
+    },
     "meta-description": "Diventa parte di listnride per il noleggio online di biciclette",
     "title": "La comunità business di listnride",
     "subtitle": "Diventa parte di listnride per il noleggio online di biciclette",
@@ -561,6 +578,34 @@
         "title": "Learn more about Whyte bikes",
         "description": "Order your new <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte bike</a> online and get your listnride rental reimbursed (valid for purchases at Whyte Germany only)."
       }
+    },
+    "felt": {
+      "title": "Noleggia e testa la Felt a Monaco di Baviera ",
+      "description": "Come innumerevoli produttori di telai hanno sperimentato nuovi materiali e un'estetica poco ortodossa, Felt Bicycles si è concentrata sulla funzione della forma, su un processo di progettazione iterativo accurato e sull'adattamento delle caratteristiche della bici alle esigenze di adattamento del ciclista, piuttosto che il contrario. L'obiettivo di Felt è produrre la migliore bicicletta possibile, indipendentemente da quanto tempo ci vuole.",
+      "feature-1": {
+        "title": "Metodologia di progetto",
+        "description": "L'introduzione di una nuova bicicletta Felt arriva alla conclusione di un lungo, accurato e rigoroso processo. La quantità di tempo che trascorre dal concetto iniziale a una nuova bicicletta può richiedere anni per essere completata."
+      },
+      "feature-2": {
+        "title": "Fibra di carbonio",
+        "description": "Più leggeri dell'alluminio, più resistenti all'acciaio, e con le tecniche di fabbricazione Felt, le biciclette in fibra di carbonio offrono una combinazione ineguagliata di tenuta in pista, rigidità, resistenza ed efficienza."
+      },
+      "feature-3": {
+        "title": "Aero Science",
+        "description": "Le bici aerodinamiche sono sviluppate in galleria del vento. Stanno portando i prototipi nella galleria del vento, apportando modifiche, quindi tornando indietro e perfezionando il progetto prima che gli stampi in fibra di carbonio vengano tagliati."
+      },
+      "find-out-more": {
+        "title": "Ulteriori informazioni su Felt Bicycles",
+        "description": "<a href=\"https://amplerbikes.com/bikes\" target=\"_BLANK\">Ordina online una delle loro bicicletta  </a>e ricevi il rimborso del tuo noleggio. <br>Vedere le domande più frequenti qui sotto."
+      },
+      "faq-answer-1": "FAQ ANSWER #1",
+      "faq-answer-2": "FAQ ANSWER #2",
+      "faq-answer-3": "FAQ ANSWER #3",
+      "faq-answer-4": "FAQ ANSWER #4",
+      "faq-question-1": "faq-question-1",
+      "faq-question-2": "faq-question-2",
+      "faq-question-3": "faq-question-3",
+      "faq-question-4": "faq-question-4"
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",
@@ -1157,10 +1202,10 @@
   "jobs": {
     "title": "Lavora con noi",
     "header": "Offerte di lavoro",
-    "subheader": "Aiuta la nostra comunità bike sharing a crescere",
+    "subheader": "Stabiliamo un nuovo standard su come le persone prenotano le loro bici e le esperienze in bicicletta",
     "contact": {
       "title": "Unisciti al nostro gruppo",
-      "content": "Sai sempre di più sulle biciclette? Ti piace saltare sulla sella e andare in giro, sia con la pioggia che con il sole? Allora sei veramente un vero e proprio ciclista - e saresti un grande valore aggiunto nella nostra squadra. Dai un'occhiata per vedere se abbiamo attualmente un posto vacante che è giusto per te e non esitare a inviarci la tua richiesta."
+      "content": "Cerchiamo persone di talento che vogliono unirsi a un team stimolante e motivato in una start-up che vuole stabilire un nuovo standard su come le persone prenotano le biciclette e le esperienze in bicicletta. List and Ride è alla ricerca di persone con una mentalità aperta che siano disposte ad assumersi delle responsabilità in un ambiente frenetico, se sei interessato ad unirti a noi, cerca qui sotto le nostre posizioni vacanti. Ci piacerebbe sentirti.\n\n"
     },
     "view": "Mostra",
     "meta-title": "Lavora per listnrid",
