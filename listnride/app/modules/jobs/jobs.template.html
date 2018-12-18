@@ -15,9 +15,9 @@
     </div>
     <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="space-around center">
       <div flex-gt-sm="70" layout="column" layout-align="space stretch">
-        <h2 class="md-subhead">
-          {{ 'jobs.contact.title' | translate }}
-        </h2>
+        <!--<h2 class="md-subhead">-->
+          <!--{{ 'jobs.contact.title' | translate }}-->
+        <!--</h2>-->
         <p>
           {{ 'jobs.contact.content' | translate }}
         </p>
@@ -26,11 +26,10 @@
             {{ 'jobs.open' | translate }}:
           </md-subheader>
           <md-list-item ng-repeat="job in jobs.availableJobs">
-            <p>
-              {{job.title}}
-            </p>
             <a ui-sref="jobs({position: job.id})" ng-click="jobs.showDetails(job)">
-              {{ 'jobs.view' | translate }}
+              <p>
+                {{job.title}}
+              </p>
             </a>
           </md-list-item>
         </md-list>
