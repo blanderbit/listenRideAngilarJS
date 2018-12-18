@@ -45,36 +45,38 @@
 
     <!-- BRAND BIKES -->
     <!-- <h2 class="md-headline lnr-center">{{ 'brand-integration.felt.test-bike' | translate }}</h2> -->
-    <h2 class="md-subhead lnr-center">{{ 'brand-integration.shared.choose-location' | translate }}</h2>
+    <div ng-if="!felt.isEmpty(felt.cities)">
+      <h2 class="md-subhead lnr-center">{{ 'brand-integration.shared.choose-location' | translate }}</h2>
 
-
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <md-menu md-position-mode="target bottom">
-        <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
-          <p class="md-right-arrow md-headline lnr-m-0">&nbsp;&nbsp;{{ felt.currentShop.cityName }}</p>
-        </md-button>
-        <md-menu-content width="3">
-          <md-menu-item ng-repeat="(city, v) in felt.cities">
-            <md-button ng-disabled="!v.bikes.length" md-no-ink ng-click="felt.currentShop = felt.cities[city]">
-              <p class="md-subhead lnr-m-0">{{ v.cityName }}</p>
-            </md-button>
-          </md-menu-item>
-        </md-menu-content>
-      </md-menu>
-    </div>
-
-    <md-content ng-if="felt.currentShop.bikes && felt.currentShop.bikes.length !==0">
-      <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
-        <bike-card ng-repeat="bike in felt.currentShop.bikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+      <div class="lnr-section-title" layout="column" layout-align="center center">
+        <md-menu md-position-mode="target bottom">
+          <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">
+            <p class="md-right-arrow md-headline lnr-m-0">&nbsp;&nbsp;{{ felt.currentShop.cityName }}</p>
+          </md-button>
+          <md-menu-content width="3">
+            <md-menu-item ng-repeat="(city, v) in felt.cities">
+              <md-button ng-disabled="!v.bikes.length" md-no-ink ng-click="felt.currentShop = felt.cities[city]">
+                <p class="md-subhead lnr-m-0">{{ v.cityName }}</p>
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
       </div>
-    </md-content>
 
-    <div ng-if="!felt.currentShop.bikes.length">
-      <p class="md-subhead lnr-center">{{'shared.no-bikes-found'}}</p>
+      <md-content ng-if="felt.currentShop.bikes && felt.currentShop.bikes.length !==0">
+        <div flex-gt-xs layout="row" layout-wrap layout-padding layout-align="center center">
+          <bike-card ng-repeat="bike in felt.currentShop.bikes" bike="bike" flex="100" flex-gt-xs="50" flex-gt-sm="33"></bike-card>
+        </div>
+      </md-content>
+
+
+      <div ng-if="!felt.currentShop.bikes.length">
+        <p class="md-subhead lnr-center">{{'shared.no-bikes-found' | translate}}</p>
+      </div>
+      <!-- END BRAND BIKES -->
+
+      <md-divider class="lnr-mv lnr-mh-x2"></md-divider>
     </div>
-    <!-- END BRAND BIKES -->
-
-    <md-divider class="lnr-mv lnr-mh-x2"></md-divider>
 
     <div class="lnr-section-title" layout="column" layout-align="center center">
       <h1 class="md-headline">{{ 'brand-integration.felt.find-out-more.title' | translate }}</h1>
