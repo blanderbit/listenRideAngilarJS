@@ -43,6 +43,7 @@
   <!-- end features -->
 
   <div class="content lnr-mh-x2">
+    <!-- Requests section -->
     <div layout="column" layout-padding layout-margin layout-gt-xs="row">
       <div
         layout="column"
@@ -60,11 +61,17 @@
         flex-order-xs="-1">
         <p class="md-subhead lnr-gt-xs-pt-x2">{{ 'business-community.requests.title' | translate }}</p>
         <p class="lnr-mh-x2" translate="business-community.requests.description"></p>
-        <md-button class="md-raised md-primary md-lrg lnr-ml-0 lnr-mt" ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">{{
-          'forms.sign-up-today' | translate }}</md-button>
+        <md-button
+          class="md-raised md-primary md-lrg lnr-ml-0 lnr-mt"
+          ng-disabled="businessCommunity.authentication.loggedIn()"
+          ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">
+          <span ng-if="!businessCommunity.authentication.loggedIn()">{{ 'forms.sign-up-today' | translate }}</span>
+          <span ng-if="businessCommunity.authentication.loggedIn()">{{ 'forms.already-registered' | translate }}</span>
+        </md-button>
       </div>
     </div>
 
+    <!-- Bike page section -->
     <div layout="column" layout-padding layout-margin layout-gt-xs="row">
       <div
         layout="column"
@@ -79,15 +86,21 @@
         layout-align="start start"
         layout-align-xs="start center"
         flex-gt-xs="50"
-        flex-order-xs="-1">
+        flex-order="-1">
         <br>
         <p class="md-subhead lnr-gt-xs-pt-x2">{{ 'business-community.bike-page.title' | translate }}</p>
         <p class="lnr-mh-x2" translate="business-community.bike-page.description"></p>
-        <md-button class="md-raised md-primary md-lrg lnr-ml-0 lnr-mt" ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">{{
-          'forms.sign-up-today' | translate }}</md-button>
+        <md-button
+          class="md-raised md-primary md-lrg lnr-ml-0 lnr-mt"
+          ng-disabled="businessCommunity.authentication.loggedIn()"
+          ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">
+          <span ng-if="!businessCommunity.authentication.loggedIn()">{{ 'forms.sign-up-today' | translate }}</span>
+          <span ng-if="businessCommunity.authentication.loggedIn()">{{ 'forms.already-registered' | translate }}</span>
+        </md-button>
       </div>
     </div>
 
+    <!-- Wordpress plugin section -->
     <div layout="column" layout-padding layout-margin layout-gt-xs="row">
       <div
         layout="column"
@@ -135,8 +148,13 @@
       </div>
     </div>
     <div class="lnr-mh-x2" layout="row" layout-align="center center">
-      <md-button class="md-raised md-primary md-lrg" ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">{{
-        'forms.sign-up-today' | translate }}</md-button>
+      <md-button
+        class="md-raised md-primary md-lrg"
+        ng-disabled="businessCommunity.authentication.loggedIn()"
+        ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">
+        <span ng-if="!businessCommunity.authentication.loggedIn()">{{ 'forms.sign-up-today' | translate }}</span>
+        <span ng-if="businessCommunity.authentication.loggedIn()">{{ 'forms.already-registered' | translate }}</span>
+      </md-button>
     </div>
   </div>
 
