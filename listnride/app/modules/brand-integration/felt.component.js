@@ -26,12 +26,14 @@ angular.module('feltIntegration', []).component('felt', {
           'app/assets/ui_images/brand-integration/felt/lnr_felt_hero_image_01.jpg',
           'app/assets/ui_images/brand-integration/felt/lnr_felt_hero_image_02.jpg',
           'app/assets/ui_images/brand-integration/felt/lnr_felt_hero_image_03.jpg',
-          'app/assets/ui_images/brand-integration/felt/lnr_felt_hero_image_04.jpg'
         ];
 
         // GROUPED BIKES
         // TODO: Move to Admin panel
         felt.cities = {};
+
+        // methods
+        felt.isEmpty = _.isEmpty;
 
         // invocations
         // felt.splitFaq();
