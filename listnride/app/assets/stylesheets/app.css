@@ -532,6 +532,10 @@ md-tooltip .md-content {
   width: 100%;
 }
 
+.lnr-w-fluid {
+  max-width: 100%;
+}
+
 .lnr-maxh-100 {
   max-height: 100%!important;
 }
@@ -2399,6 +2403,14 @@ button.md-primary.md-cancel-button {
 #error404 {
   text-align: center;
   min-height: calc(100vh - 413px);
+}
+
+.lnr-business-logo {
+  text-align: center;
+}
+
+.lnr-business-logo img {
+  max-height: 60px;
 }
 
 /*-----------------------------------------------------------------------------------*/
