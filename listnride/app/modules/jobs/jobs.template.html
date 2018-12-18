@@ -39,19 +39,19 @@
               <h1 layout="column" layout-gt-sm="row" layout-align="space-around stretch" class="md-headline">
                 {{jobs.chosenJob.title}}
               </h1>
-              <h3><strong>Role & Responsibilities:&nbsp</strong></h3>
+              <h3><strong>What will keep you challenged:&nbsp</strong></h3>
               <md-list>
                 <md-list-item ng-repeat="desc in jobs.chosenJob.role">
                   &bull;&nbsp{{desc}}
                 </md-list-item>
               </md-list>
-              <h3><strong>What you have:&nbsp</strong></h3>
+              <h3><strong>Which traits contribute to your success:&nbsp</strong></h3>
               <md-list>
                 <md-list-item ng-repeat="desc in jobs.chosenJob.required">
                   &bull;&nbsp{{desc}}
                 </md-list-item>
               </md-list>
-              <h3><strong>What we have:&nbsp</strong></h3>
+              <h3><strong>What to expect working with us:&nbsp</strong></h3>
               <md-list>
                 <md-list-item ng-repeat="desc in jobs.chosenJob.offer">
                   &bull;&nbsp{{desc}}
