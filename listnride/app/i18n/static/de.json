@@ -344,7 +344,7 @@
       "title": "Listnride Buchungsplug-in ",
       "description": "Wir haben ein kostenloses Buchungs-Plugin entwickelt, damit deine Kunden die Fahrräder rund um die Uhr direkt von deiner Website aus buchen können.",
       "install": "In Wordpress installieren",
-      "link": "Bitte nutze unsere Installationsdokumentation, wenn du nicht Wordpress verwendest."
+      "link": "Bitte nutze unsere <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">Installationsdokumentation</a>, wenn du nicht Wordpress verwendest."
     },
     "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
     "title": "Werde noch heute Teil der listnride-Community",

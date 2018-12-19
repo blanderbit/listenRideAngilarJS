@@ -344,7 +344,7 @@
       "title": "Listnride Boekingsplug-in ",
       "description": "We hebben een gratis te plaatsen boekingsplug-in ontwikkeld, zodat je klanten de fietsen direct van je website kunnen huren, 24/7.",
       "install": "Installeer in Wordpress",
-      "link": "Gebruik onze installatiehandleiding als je geen gebruik maakt van Wordpress."
+      "link": "Gebruik onze <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">installatiehandleiding</a> als je geen gebruik maakt van Wordpress."
     },
     "meta-description": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
     "title": "Sluit je aan bij de listnride business community",

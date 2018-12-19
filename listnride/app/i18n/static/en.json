@@ -344,7 +344,7 @@
       "title": "Listnride Booking Plug-in ",
       "description": "We developed a free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
       "install": "Install on Wordpress",
-      "link": "Please use our installation documentation if you don't use Wordpress."
+      "link": "Please use our <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">installation documentation</a> if you don't use Wordpress."
     },
     "meta-description": "Join the listnride business community for bike rental",
     "title": "Join the listnride bike rental community today",
