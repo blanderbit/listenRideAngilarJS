@@ -193,7 +193,7 @@ var lnrHelper = {
       if (size > 0) {
         var readableSize = size + ' cm - ' + parseInt(size + 10) + ' cm';
       } else {
-        var readableSize = 'Unisize';
+        var readableSize = 'All sizes';
       }
 
       // HTML of the element
@@ -454,7 +454,7 @@ var lnrHelper = {
           rideDescription = ride.description;
 
       if (ride.size === 0) {
-        var readableSize = 'Unisize';
+        var readableSize = lnrConstants.translate.allSizes[userLang];
       } else {
         var readableSize = ' ' + ride.size + '-' + parseInt(ride.size + 10) + ' cm';
       }
@@ -614,9 +614,9 @@ var lnrHelper = {
       } else {
         // select first available size
         defaultSize = lnrConstants.sizes[userId].available[0];
-        // if this first available size is '0' translate it to 'Unisize'
+        // if this first available size is '0' translate it to 'All sizes'
         // else add range and cm
-        defaultSize = defaultSize === 0 ? 'Unisize' : defaultSize + '-' + parseInt(defaultSize + 10) + ' cm';
+        defaultSize = defaultSize === 0 ? lnrConstants.translate.allSizes[userLang] : defaultSize + '-' + parseInt(defaultSize + 10) + ' cm';
       }
       sizeButton.innerHTML = defaultSize + '<div class="dropdown-caret" style="float: right"></div>';
     }
