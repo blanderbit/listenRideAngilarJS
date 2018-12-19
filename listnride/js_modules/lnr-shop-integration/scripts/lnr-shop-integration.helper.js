@@ -280,6 +280,8 @@ var lnrHelper = {
 
       // render filtered bikes
       lnrHelper.renderBikesHTML(userId, selectedRides, null);
+    } else {
+      lnrHelper.renderBikesHTML(userId, selectedRides, null);
     }
   },
   /**
@@ -406,6 +408,9 @@ var lnrHelper = {
         }
         // render bikes html
         lnrHelper.renderBikesHTML(userId, lnrConstants.rides[userId], userLang);
+      } else {
+        var errorNoUserFound = '<p style="flex:1; text-align:center" class="lnr-margin-left"><br><br>We can\'t find user with this ID</p>';
+        lnrHelper.renderHTML(errorNoUserFound);
       }
     };
     // send request to server
@@ -440,11 +445,12 @@ var lnrHelper = {
     // clear bikes grid
     grid.innerHTML = '';
 
-    var basicInfo = lnrHelper.getBikesBasicInfo(userId);
-    rides.forEach(function (ride) {
+    if (rides.length) {
+      var basicInfo = lnrHelper.getBikesBasicInfo(userId);
+      rides.forEach(function (ride) {
 
-      // properties for grid creation
-      var brand = ride.brand,
+        // properties for grid creation
+        var brand = ride.brand,
           category = ride.category,
           rideName = ride.name,
           rideId = ride.id,
@@ -453,68 +459,78 @@ var lnrHelper = {
           imageUrl = ride.image_file,
           rideDescription = ride.description;
 
-      if (ride.size === 0) {
-        var readableSize = lnrConstants.translate.allSizes[userLang];
-      } else {
-        var readableSize = ' ' + ride.size + '-' + parseInt(ride.size + 10) + ' cm';
+        if (ride.size === 0) {
+          var readableSize = lnrConstants.translate.allSizes[userLang];
+        } else {
+          var readableSize = ' ' + ride.size + '-' + parseInt(ride.size + 10) + ' cm';
+        }
+
+        // bikes grid html
+        // mdl grid => 12 col (desktop), 8 col (tablet), 4 col (phone)
+        var gridHTML = [
+          '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
+          '<bike-card>',
+          '<md-card class="lnr-bike-card _md">',
+          '<a style="cursor:default" class="image-container lnr-links">',
+          '<img src="' + imageUrl + '" />',
+          // default: info button
+          '<div class="info-button"><button class="info-icon"></button></div>',
+          '<div id="rent-element-default-' + rideId + '" class="rent-element">',
+          // on hover: info button
+          '<div class="info-button">',
+          '<button class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></button>',
+          '</div>',
+          // on hover: rent button
+          '<span class="lnr-content">',
+          '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ', \'' + userLang + '\')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
+          '</span>',
+          '</div>',
+          // bike description
+          '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
+          '<div class="rent-description-content">',
+          '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
+          '<div class="md-subhead ride-name">' + rideName + '</div>',
+          '<p>' + rideDescription + '</p>',
+          '</div>',
+          '</div>',
+          '</a>',
+          '<md-card-title layout="row" class="layout-row">',
+          '<md-card-title-text class="layout-align-space-around-start layout-column">' +
+          '<span class="md-subhead">' + brand + ', ' + rideName + '</span>',
+          '<span>' + categoryDesc + ', ' + readableSize + '</span>' +
+          '</md-card-title-text>',
+          '<div layout="column" class="layout-align-space-around-center layout-column">',
+          '<span style="text-align: center">' + basicInfo.dayText + '</span>',
+          '<span class="md-headline">' + price + '&euro;</span>',
+          ' </div>',
+          '</md-card-title>',
+          '</md-card>',
+          '</bike-card>',
+          '<div class="lnr-brand">',
+        ].join('');
+
+        // render bikes grid
+        grid.innerHTML += gridHTML;
+      });
+
+      // show rent button by default on mobile
+      if ('ontouchstart' in document.documentElement) {
+        var rentElements = document.getElementsByClassName('rent-element');
+        for (var elem = 0; elem < rentElements.length; elem += 1) {
+          rentElements[elem].style.display = 'flex';
+          rentElements[elem].style.background = 'rgba(0, 0, 0, .4)';
+        }
       }
-
-      // bikes grid html
-      // mdl grid => 12 col (desktop), 8 col (tablet), 4 col (phone)
-      var gridHTML = [
-        '<div class="mdl-cell mdl-cell--4-col mdl-cell--middle">',
-        '<bike-card>',
-        '<md-card class="lnr-bike-card _md">',
-        '<a style="cursor:default" class="image-container lnr-links">',
-        '<img src="' + imageUrl + '" />',
-        // default: info button
-        '<div class="info-button"><button class="info-icon"></button></div>',
-        '<div id="rent-element-default-' + rideId + '" class="rent-element">',
-        // on hover: info button
-        '<div class="info-button">',
-        '<button class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></button>',
-        '</div>',
-        // on hover: rent button
-        '<span class="lnr-content">',
-        '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ', \'' + userLang + '\')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
-        '</span>',
-        '</div>',
-        // bike description
-        '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
-        '<div class="rent-description-content">',
-        '<span class="close-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></span>',
-        '<div class="md-subhead ride-name">' + rideName + '</div>',
-        '<p>' + rideDescription + '</p>',
-        '</div>',
-        '</div>',
-        '</a>',
-        '<md-card-title layout="row" class="layout-row">',
-        '<md-card-title-text class="layout-align-space-around-start layout-column">' +
-        '<span class="md-subhead">' + brand + ', ' + rideName + '</span>',
-        '<span>' + categoryDesc + ', ' + readableSize + '</span>' +
-        '</md-card-title-text>',
-        '<div layout="column" class="layout-align-space-around-center layout-column">',
-        '<span style="text-align: center">' + basicInfo.dayText + '</span>',
-        '<span class="md-headline">' + price + '&euro;</span>',
-        ' </div>',
-        '</md-card-title>',
-        '</md-card>',
-        '</bike-card>',
-        '<div class="lnr-brand">',
-      ].join('');
-
-      // render bikes grid
-      grid.innerHTML += gridHTML;
-    });
-
-    // show rent button by default on mobile
-    if ('ontouchstart' in document.documentElement) {
-      var rentElements = document.getElementsByClassName('rent-element');
-      for (var elem = 0; elem < rentElements.length; elem += 1) {
-        rentElements[elem].style.display = 'flex';
-        rentElements[elem].style.background = 'rgba(0, 0, 0, .4)';
-      }
+    } else {
+      var errorNoBikesText = '<p style="flex:1; text-align:center" class="lnr-margin-left"><br><br>No bikes available</p>';
+      lnrHelper.renderHTML(errorNoBikesText);
     }
+  },
+  renderHTML: function(html) {
+    var lnrSection = document.getElementById('listnride');
+    lnrSection.innerHTML = '';
+    lnrSection.innerHTML = html;
+    lnrSection.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + 'https://www.listnride.com' + '" target="_blank">listnride</a></div>';
   },
   /**
    * renders the location and size selectors
