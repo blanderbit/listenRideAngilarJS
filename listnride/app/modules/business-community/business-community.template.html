@@ -120,8 +120,12 @@
         <p class="md-subhead lnr-gt-xs-pt-x2">{{ 'business-community.plugin-wp.title' | translate }}</p>
         <p class="lnr-mh-x2" translate="business-community.plugin-wp.description"></p>
         <img class="lnr-mh-x2" ng-src="app/assets/ui_images/business/wordpress-logo.png" alt="Wordpress logo">
-        <md-button class="md-raised md-primary md-lrg lnr-mh-x2 lnr-ml-0" ng-click="businessCommunity.authentication.showSignupDialog(false, false, false, true)">{{
-          'business-community.plugin-wp.install' | translate }}</md-button>
+        <a
+          class="md-button md-raised md-primary md-lrg lnr-mh-x2 lnr-ml-0"
+          href="https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride-shop-integration.zip"
+          target="_blank">
+          {{ 'business-community.plugin-wp.install' | translate }}
+        </a>
         <p translate="business-community.plugin-wp.link"></p>
       </div>
     </div>
