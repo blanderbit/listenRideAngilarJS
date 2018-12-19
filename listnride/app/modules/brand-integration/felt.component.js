@@ -17,10 +17,6 @@ angular.module('feltIntegration', []).component('felt', {
         // felt.splitFaq = splitFaq;
         felt.getBikes = getBikes;
 
-        // VARIABLES
-        // TODO: change on another familyId or create another request based on brands endpoint
-        felt.familyId = 17;
-
         // hero slider
         felt.cbSlider = [
           'app/assets/ui_images/brand-integration/felt/lnr_felt_hero_image_01.jpg',
@@ -57,7 +53,7 @@ angular.module('feltIntegration', []).component('felt', {
       }
 
       function getBikes() {
-        api.get('/brand_pages/' + felt.familyId).then(
+        api.get('/brand_pages/' + 'felt').then(
           function (success) {
             _.forEach(success.data.bikes, function (bike) {
               if (!felt.cities.hasOwnProperty(bike.en_city)) {
