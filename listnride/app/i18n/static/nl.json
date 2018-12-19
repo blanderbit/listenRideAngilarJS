@@ -329,21 +329,38 @@
   },
   "business-community": {
     "meta-title": "De listnride business community",
+    "requests": {
+      "title": "Manage al je verhuurtransacties vanuit één plek ",
+      "description": "Ontvang boekingsaanvragen in plaats van eindeloze e-mails, je behoudt altijd de controle. Verbeter de communicatie met de klant, geen ingewikkelde of onjuiste communicatie meer."
+    },
+    "bike-page": {
+      "title": "Fietsen op de eerste plaats ",
+      "description": "Elke fiets heeft een uniek profiel met gedetailleerde informatie waarmee de huurder de fiets van zijn keuze in enkele seconden kan boeken."
+    },
+    "companies": {
+      "title": "Andere bedrijven die zich bij onze listnride business community hebben aangesloten"
+    },
+    "plugin-wp": {
+      "title": "Listnride Boekingsplug-in ",
+      "description": "We hebben een gratis te plaatsen boekingsplug-in ontwikkeld, zodat je klanten de fietsen direct van je website kunnen huren, 24/7.",
+      "install": "Installeer in Wordpress",
+      "link": "Gebruik onze <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">installatiehandleiding</a> als je geen gebruik maakt van Wordpress."
+    },
     "meta-description": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
-    "title": "De listnride business community",
-    "subtitle": "Doe je voordeel met het zakelijke fietsverhuur via listnride",
-    "description": "Wij willen je graag onze commerciële fietsverhuuroplossingen aanbieden en het je zo gemakkelijk mogelijk maken. Onze passie is fietsen en dus zien we dit graag meer in de straten van Europa. Is het niet geweldig dat we elkaar in deze missie kunnen ondersteunen?",
+    "title": "Sluit je aan bij de listnride business community",
+    "subtitle": "Geen contracten, geen maandelijkse kosten, enkel een commissie per boeking.",
+    "description": "Met listnride kan je al je verhuringen op één plaats beheren. Geen formulieren of miscommunicatie meer. Accepteer of wijs boekingsaanvragen online af, zodat u altijd de controle behoudt. Klaar om je aan te sluiten bij listnride?",
     "feature-1": {
-      "title": "Huur meer fietsen via listnride",
-      "description": "Jouw klanten kunnen hun huurfiets online selecteren en boeken, zowel via listnride als op je eigen website. Het volledige boekings- en betalingsproces neemt listnride van je over."
+      "title": "Profiteer van ons grote netwerk",
+      "description": "Wij promoten je fietsen via onze website en mediakanalen. Zo kunnen onze internationale klanten gemakkelijk je fietsen vinden en boeken. "
     },
     "feature-2": {
-      "title": "Presenteer jouw winkel online",
-      "description": "Presenteer jouw fietsaanbod online en breid zo je klantenbestand uit door de “Internet generatie' beter te bereiken via internet en mobiel."
+      "title": "Vereenvoudigd verhuurproces ",
+      "description": "Geen e-mails en telefoontjes meer die je voortdurend tijd kosten. Je ontvangt gewoon een boekingsaanvraag die je kunt accepteren."
     },
     "feature-3": {
-      "title": "Profiteer van ons bereik",
-      "description": "listnride is Europa's grootste fietsdeelgemeenschap en we blijven groeien. Profiteer van dit bereik en win nieuwe internationale klanten."
+      "title": "Ontvang meer boekingen",
+      "description": "Ons doel is om uw bedrijf tot een succes te maken en tegelijkertijd de administratieve rompslomp en complexiteit te verminderen."
     },
     "text-2": {
       "title": "Word lid van de listnride Business Community!",
@@ -568,6 +585,34 @@
         "title": "Learn more about Whyte bikes",
         "description": "Order your new <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte bike</a> online and get your listnride rental reimbursed (valid for purchases at Whyte Germany only)."
       }
+    },
+    "felt": {
+      "title": "Rent and test ride Felt road bikes in Munich",
+      "description": "As countless frame makers experimented with new materials and unorthodox aesthetics, Felt Bicycles focused on function over form, on a painstakingly iterative design process, and on adapting the bike’s characteristics to the fit needs of the rider, rather than the other way around. Felt’s goal is to produce the best bicycle possible, regardless of how long it takes.",
+      "feature-1": {
+        "title": "Design Methodology",
+        "description": "The introduction of a new Felt bicycle comes at the conclusion of a long, thoughtful, and rigorous process. The amount of time from initial concept to a new bike can take years to complete."
+      },
+      "feature-2": {
+        "title": "Carbon Fiber",
+        "description": "Lighter than aluminum, stronger than steel, and with Felt’s manufacturing techniques, carbon fiber bicycles offer an unmatched combination of ride compliance, stiffness, strength, and efficiency."
+      },
+      "feature-3": {
+        "title": "Aero Science",
+        "description": "Felt aero bikes are wind tunnel developed. They are bringing prototypes to the wind tunnel, making changes, and then going back and refining the design before the carbon fiber molds are ever cut."
+      },
+      "find-out-more": {
+        "title": "Learn more about Felt Bicycles",
+        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
+      },
+      "faq-answer-1": "FAQ ANSWER #1",
+      "faq-answer-2": "FAQ ANSWER #2",
+      "faq-answer-3": "FAQ ANSWER #3",
+      "faq-answer-4": "FAQ ANSWER #4",
+      "faq-question-1": "faq-question-1",
+      "faq-question-2": "faq-question-2",
+      "faq-question-3": "faq-question-3",
+      "faq-question-4": "faq-question-4"
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",
@@ -1165,7 +1210,7 @@
     "header": "Werken bij List and Ride",
     "subheader": "We zetten de nieuwe standaard voor het boeken van fietshuur en fietstochten.",
     "contact": {
-      "title": "Join ons team",
+      "title": "Kom erbij!",
       "content": "Wij zijn op zoek naar getalenteerde collega's die binnen een inspirerend en gemotiveerd team willen werken binnen een start-up business, die een nieuwe standaard wil zetten voor de manier waarop mensen fietsen en fietstochten boeken. List and Ride is op zoek naar mensen met een doener mentaliteit die bereid zijn om verantwoordelijkheid te nemen in een dynamische omgeving.\n\nAls je geïnteresseerd bent om bij ons te komen werken, bekijk dan onze actuele vacatures hieronder. We horen graag van je."
     },
     "view": "Bekijk",

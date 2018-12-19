@@ -373,6 +373,10 @@
         "meta-title": "Miete und teste Whyte Bikes in Berlin | listnride",
         "meta-description": "Teste noch heute ein Whyte Bike! Die Gravel- und Mountainbikes von Whyte stehen zum Testen in Berlin zur Verfügung"
       },
+      "felt": {
+        "meta-title": "Rent and test ride Felt Bicycles in Munich | listnride",
+        "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
+      },
       "swytch": {
         "meta-title": "Miete und teste Swytch E-bikes in Berlin | listnride",
         "meta-description": "Teste noch heute ein Switch E-Bike! Die E-Bikes von Swytch stehen zum Testen in Berlin zur Verfügung!"
@@ -801,6 +805,8 @@
   "forms": {
     "first-name": "Vorname",
     "newsletter-privacy-policy": "Privacy Policy News letter",
+    "sign-up-today": "Heute anmelden",
+    "already-registered": "Du hast dich bereits angemeldet",
     "save-new-password": "Neues Passwort speichern",
     "your-name": "Dein Name",
     "your-email-address": "Deine E-Mail Adresse",
