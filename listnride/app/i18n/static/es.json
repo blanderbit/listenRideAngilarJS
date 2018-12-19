@@ -334,17 +334,17 @@
       "description": "Receive booking requests instead of endless emails, you are always in control. Improve your customer communication, no more forms or miscommunication."
     },
     "bike-page": {
-      "title": "Bikes comes first ",
-      "description": "Each bike has a unique profile with all the basic information that allows the user to rent the bike in seconds."
+      "title": "Las bicicletas son lo primero",
+      "description": "Cada bicicleta tiene un perfil único con información detallada que permite a nuestros usuarios alquilar la bicicleta perfecta en segundos."
     },
     "companies": {
-      "title": "Companies that joined our listnride business community"
+      "title": "Otras tiendas que se unieron a nuestra comunidad de negocios de listnride"
     },
     "plugin-wp": {
       "title": "Listnride Booking Plugin ",
-      "description": "We developed this free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
+      "description": "Desarrollamos el plugin de reserva  para que tus clientes puedan alquilar tus bicicletas directamente desde tu sitio web, 24/7.",
       "install": "Install on Wordpress",
-      "link": "Please use our <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">installation documentation</a> if you have a website that doesn’t use Wordpress."
+      "link": "En caso de que no uses Wordpress, esta es  nuestra <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">guía de instalación </a>."
     },
     "meta-description": "Únete a la comunidad empresarial de listnride para alquilar bicis",
     "title": "Únete a la comunidad listnride ",
