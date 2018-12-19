@@ -344,7 +344,7 @@
       "title": "listnride  Plug-in di prenotazione",
       "description": "Abbiamo sviluppato un plug-in di prenotazione gratuito per l'installazione in modo che i clienti possano noleggiare le biciclette direttamente dal tuo sito web, 24 ore su 24, 7 giorni su 7.",
       "install": "Installa su Wordpress",
-      "link": "Si prega di utilizzare la nostra documentazione di installazione se non si utilizza Wordpress."
+      "link": "Si prega di utilizzare la nostra <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">documentazione di installazione</a> se non si utilizza Wordpress."
     },
     "meta-description": "Diventa parte di listnride per il noleggio online di biciclette",
     "title": "Unisciti oggi alla community di listnride ",
