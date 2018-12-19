@@ -99,7 +99,7 @@ angular.module('swytchIntegration', []).component('swytch', {
       }
 
       function getBikes() {
-        api.get('/brand_pages/' + swytch.familyId).then(
+        api.get('/brand_pages/' + 'swytch').then(
           function (success) {
             _.forEach(success.data.bikes, function(bike){
               if (!swytch.cities.hasOwnProperty(bike.en_city)){
