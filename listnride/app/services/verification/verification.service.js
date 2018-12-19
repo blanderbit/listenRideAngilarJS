@@ -82,7 +82,8 @@ angular.
             url: api.getApiUrl() + '/users/' + $localStorage.userId,
             data: profilePicture,
             headers: {
-              'Authorization': $localStorage.auth
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             }
           }).then(
             function(response) {
@@ -171,7 +172,7 @@ angular.
               );
             },
             function (error) {
-              
+
             }
           );
         };
@@ -316,7 +317,7 @@ angular.
         // return promise to caller
         return deferred.promise;
       };
-      
+
       return {
         openDialog: openDialog,
         sendSms: sendSms,

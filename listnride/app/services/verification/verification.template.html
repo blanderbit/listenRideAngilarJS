@@ -158,7 +158,12 @@
               </md-input-container>
 
               <md-input-container layout="row" flex="45">
-                <md-button flex class="md-raised md-primary lnr-btn-inline" ng-disabled="verificationDialog.user.status > 0" ng-click="verificationDialog.resendEmail()">{{ 'verification.resend-email' | translate }}</md-button>
+                <md-button
+                  flex class="md-raised md-primary lnr-btn-inline"
+                  ng-disabled="verificationDialog.user.status > 0"
+                  ng-click="verificationDialog.resendEmail()">
+                  {{ 'verification.resend-email' | translate }}
+                </md-button>
               </md-input-container>
             </div>
             <p class="md-body-2 lnr-center" ng-if="verificationDialog.user.status > 0">{{ 'verification.4.email-verified' | translate }}</p>
