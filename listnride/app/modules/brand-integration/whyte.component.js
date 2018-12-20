@@ -55,7 +55,7 @@ angular.module('whyteIntegration', []).component('whyte', {
       }
 
       function getBikes() {
-        api.get('/brand_pages/' + whyte.familyId).then(
+        api.get('/brand_pages/' + 'whyte').then(
           function (success) {
             _.forEach(success.data.bikes, function (bike) {
               if (!whyte.cities.hasOwnProperty(bike.en_city)) {
