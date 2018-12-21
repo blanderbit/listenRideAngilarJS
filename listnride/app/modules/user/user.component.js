@@ -26,34 +26,32 @@ angular.module('user',[]).component('user', {
 
       api.get('/users/' + userId).then(
         function(response) {
-          if (!response.data.active) {
-            $state.go('404');
-          } else {
-            user.showAll = false;
-            user.user = response.data;
-            user.loaded = true;
-            user.anyHours = !_.isEmpty(response.data.opening_hours);
-            user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
-            user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
-            user.rating = (user.user.rating_lister + user.user.rating_rider);
+          user.showAll = false;
+          user.user = response.data;
+          user.loaded = true;
+          user.anyHours = !_.isEmpty(response.data.opening_hours);
+          user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
+          user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
+          user.rating = (user.user.rating_lister + user.user.rating_rider);
 
-            user.display_name = setName();
-            user.picture = setPicture();
+          user.display_name = setName();
+          user.picture = setPicture();
 
-            user.current_payment = response.data.status === 3;
-            if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
-              user.rating = user.rating / 2;
-            }
-
-            user.bikes = user.user.rides.slice(0, user.bikesToShow);
-
-            user.rating = Math.round(user.rating);
-            if (user.openingHoursEnabled) setOpeningHours();
-
-            generateMetaDescription(user.user.has_business);
+          user.current_payment = response.data.status === 3;
+          if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
+            user.rating = user.rating / 2;
           }
+
+          user.bikes = user.user.rides.slice(0, user.bikesToShow);
+
+          user.rating = Math.round(user.rating);
+          if (user.openingHoursEnabled) setOpeningHours();
+
+          generateMetaDescription(user.user.has_business);
+
         },
         function(error) {
+          $state.go('404');
         }
       );
 

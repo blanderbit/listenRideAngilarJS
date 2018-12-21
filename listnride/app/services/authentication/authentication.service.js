@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    'Base64', '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
-    function(Base64, $localStorage, $mdDialog, $rootScope, $state, $analytics, ezfb, api, verification, sha256, notification){
+    '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
+    function($localStorage, $mdDialog, $rootScope, $state, $analytics, ezfb, api, verification, sha256, notification){
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
@@ -21,7 +21,7 @@ angular.
 
       var getAccessToken = function (user, isFacebook) {
         var preparedData = isFacebook ? {
-          assertion: facebook_access_token,
+          assertion: user.assertion,
           grant_type: 'assertion'
         } : {
           email: user.email,
@@ -92,11 +92,24 @@ angular.
         var obj = {
           email: form.email.$modelValue,
           password: form.password.$modelValue,
-          grant_type: 'password',
           target: 'login'
         };
         $analytics.eventTrack('click', { category: 'Request Bike', label: 'Sign In' });
         LoginDialogController(null, sha256, null, obj);
+      };
+
+      var loginFbGlobal = function (fbAccessToken) {
+        getAccessToken({assertion: fbAccessToken}, 'facebook').then(function (successTokenData) {
+          setAccessToken(successTokenData);
+          api.get('/users/me').then(function (success) {
+            setCredentials(success.data);
+            $rootScope.$broadcast('user_login');
+            showLoginSuccess();
+          },
+          function(error){
+            notification.show(error, 'error');
+          });
+        });
       };
 
       // SIGN_UP
@@ -118,6 +131,38 @@ angular.
         SignupDialogController(null, null, null, false, obj);
       };
 
+      var signupFbGlobal = function (email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
+        var invited = !!inviteCode;
+        var user = {
+          "user": {
+            "facebook_access_token": fbAccessToken
+          },
+          'is_shop': false
+        };
+
+        api.post('/users', user).then(function (success) {
+          setCredentials(success.data);
+          getAccessToken(user.user, 'facebook').then(function (successTokenData) {
+            setAccessToken(successTokenData);
+            if (requestFlow) {
+              $rootScope.$broadcast('user_created');
+              $analytics.eventTrack('click', {
+                category: 'Sign Up',
+                label: 'Facebook Request Flow'
+              });
+            } else {
+              verification.openDialog(false, invited, false, showProfile);
+              $analytics.eventTrack('click', {
+                category: 'Sign Up',
+                label: 'Facebook Standard Flow'
+              });
+            }
+          });
+        }, function (error) {
+          showSignupError();
+        });
+      };
+
       // CONTROLLERS
 
       var LoginDialogController = function($mdDialog, sha256, ezfb, loginObj) {
@@ -125,62 +170,43 @@ angular.
 
         loginDialog.requestLogin = true;
 
-        var loginFb = function(email, facebookId) {
-          var user = {
-            'user': {
-              'email': email,
-              'facebook_id': facebookId
-            }
-          };
-          api.post('/users/login', user).then(function(response) {
-            setCredentials(response.data);
-            showLoginSuccess();
-            if (!response.data.has_address || !response.data.confirmed_phone || response.data.status === 0) {
-              verification.openDialog(false);
-            }
-          }, function(error) {
-            showLoginError();
-          });
-        };
-
-        loginDialog.hide = function() {
-          $mdDialog.hide();
-        };
-
         loginDialog.login = function() {
           var user = {
-            'user': {
-              'email': loginDialog.email,
-              'password_hashed': sha256.encrypt(loginDialog.password)
-            }
+            'email': loginDialog.email,
+            'password': loginDialog.password,
           };
-          api.post('/users/login', user).then(function(success) {
-            setCredentials(success.data);
-            showLoginSuccess();
-            if (loginDialog.requestLogin) {
-              $analytics.eventTrack('click', {category: 'Login', label: 'Email Request Flow'});
-              $rootScope.$broadcast('user_login');
-            } else {
-              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
-              if (!success.data.has_address || !success.data.confirmed_phone || success.data.status === 0) {
-                verification.openDialog(false);
+
+          getAccessToken(user).then(function (successTokenData) {
+            setAccessToken(successTokenData);
+            api.get('/users/me').then(function (success) {
+              showLoginSuccess();
+              setCredentials(success.data);
+              if (loginDialog.requestLogin) {
+                $analytics.eventTrack('click', {category: 'Login', label: 'Email Request Flow'});
+                $rootScope.$broadcast('user_login');
+              } else {
+                $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
               }
-            }
-          }, function(error) {
-            showLoginError();
+            },function(error){
+              notification.show(error, 'error');
+            });
           });
+        };
+
+        loginDialog.hide = function () {
+          $mdDialog.hide();
         };
 
         loginDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
             if (response.status === 'connected') {
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                loginFb(response.email, response.id);
+                loginFbGlobal(fbAccessToken);
               });
             } else {
               ezfb.login(function(response) {
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  loginFb(response.email, response.id);
+                  loginFbGlobal(fbAccessToken);
                 });
               }, {scope: 'email'});
             }
@@ -190,9 +216,7 @@ angular.
         loginDialog.resetPassword = function() {
           if (loginDialog.email) {
             var user = {
-              "user": {
-                "email": loginDialog.email
-              }
+              "email": loginDialog.email
             };
             api.post('/users/reset_password', user).then(function(success) {
               notification.show(success, null, 'toasts.reset-password-success');
@@ -207,9 +231,9 @@ angular.
         if (loginObj) {
           if (loginDialog.target === 'login') {
             loginDialog.requestLogin = true;
-            loginDialog.login ()
+            loginDialog.login();
           } else if (loginDialog.target === 'reset') {
-            loginDialog.resetPassword()
+            loginDialog.resetPassword();
           }
         }
       };
@@ -316,73 +340,20 @@ angular.
 
       /////////////////
 
-      var signupFb = function(email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
-        var invited = !!inviteCode;
-        var user = {
-          "user": {
-            "email": email,
-            "facebook_id": fbId,
-            "facebook_access_token": fbAccessToken,
-            "profile_picture_url": profilePicture,
-            "first_name": firstName,
-            "last_name": lastName,
-            "ref_code": inviteCode,
-            "language": retrieveLocale()
-          }
-        };
-
-        api.post("/users", user).then(function(success) {
-          setCredentials(success.data);
-          if (requestFlow) {
-            $rootScope.$broadcast('user_created');
-            $analytics.eventTrack('click', {  category: 'Sign Up', label: 'Facebook Request Flow'});
-          } else {
-            verification.openDialog(false, invited, false, showProfile);
-            $analytics.eventTrack('click', {  category: 'Sign Up', label: 'Facebook Standard Flow'});
-          }
-        }, function(error) {
-          showSignupError();
-        });
-      };
-
-      var loginFb = function(email, facebookId) {
-        var user = {
-          'user': {
-            'email': email,
-            'facebook_id': facebookId
-          }
-        };
-        api.post('/users/login', user).then(function(response) {
-          setCredentials(response.data);
-          $rootScope.$broadcast('user_login');
-          showLoginSuccess();
-        }, function(error) {
-        });
-      };
-
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
-            if (requestFlow) {
-              $analytics.eventTrack('click', {category: 'Login', label: 'Facebook Request Flow'});
-            } else {
-              $analytics.eventTrack('click', {category: 'Login', label: 'Facebook Standard Flow'});
-            }
-            var accessToken = response.authResponse.accessToken;
+            $analytics.eventTrack('click', {category: 'Login', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
             ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-              loginFb(response.email, response.id);
+              loginFbGlobal(response.authResponse.accessToken);
             });
           } else {
             ezfb.login(function(response) {
-              if (requestFlow) {
-                $analytics.eventTrack('click', {category: 'Signup', label: 'Facebook Request Flow'});
-              } else {
-                $analytics.eventTrack('click', {category: 'Signup', label: 'Facebook Standard Flow'});
-              }
+              $analytics.eventTrack('click', {category: 'Signup', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
               $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
-              var accessToken = response.authResponse.accessToken;
+
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                signupFb(response.email, response.id, accessToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
+                signupFbGlobal(response.email, response.id, response.authResponse.accessToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
               });
             }, {scope: 'email'});
           }

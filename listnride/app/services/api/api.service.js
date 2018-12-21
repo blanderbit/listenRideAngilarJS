@@ -16,7 +16,7 @@ angular.
             url: apiUrl + url,
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer' + $localStorage.accessToken
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             },
             responseType: type
           });
@@ -28,7 +28,7 @@ angular.
             data: data,
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer' + $localStorage.accessToken
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             }
           });
         },
@@ -39,7 +39,7 @@ angular.
             data: data,
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer' + $localStorage.accessToken
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             }
           });
         },
@@ -49,7 +49,7 @@ angular.
             url: apiUrl + url,
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': 'Bearer' + $localStorage.accessToken
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             }
           });
         },
