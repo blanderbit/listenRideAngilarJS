@@ -446,17 +446,15 @@ angular.
 
         var refreshTime = 300; // 5 minutes
 
-        // var expiredDate = $localStorage.createdAt + $localStorage.expiresIn;
-        // expiredDate = moment(expiredDate, "DD/MM/YYYY");
-        // var now = moment();
-
-        // test only
-        var now = "04/09/2013 15:00:00"; // moment()
-        var expiredDate = "04/09/2013 14:55:30"; // expired date
+        // JavaScript works in milliseconds, so you'll first have to convert the UNIX timestamp from seconds to milliseconds.
+        var expiredDate = $localStorage.createdAt + $localStorage.expiresIn;
+        expiredDate = new Date(expiredDate * 1000)
+        expiredDate = moment(expiredDate, "DD/MM/YYYY, h:mm:ss");
+        var now = moment();
 
         // check dates difference
         // https://stackoverflow.com/a/34672015/6334780
-        var diff = moment.duration(moment(expiredDate).diff(moment(now)));
+        var diff = moment.duration(moment(now).diff(moment(expiredDate)));
         var seconds = parseInt(diff.asSeconds());
 
         if (seconds < 0 && Math.abs(seconds) <= refreshTime) {
@@ -467,6 +465,7 @@ angular.
           return resetUserInformation();
         }
 
+        return;
       }
 
       // Further all functions to be exposed in the service
