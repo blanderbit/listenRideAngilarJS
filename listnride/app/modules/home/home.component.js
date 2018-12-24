@@ -10,61 +10,78 @@ angular.module('home',[]).component('home', {
 
       var home = this;
 
-      // Trigger verification or authentication dialogs if requested
-      if ($state.current.name === "verify" && authentication.loggedIn()) {
-        verification.openDialog(false, false, window.event);
-      } else if ($state.current.name == "businessSignup") {
-        authentication.showSignupDialog(false, false, window.event, true);
-      } else if ($state.current.name === "confirm") {
-        $mdDialog.show({
-          templateUrl: 'app/modules/shared/dialogs/spinner.template.html',
-          parent: angular.element(document.body),
-          targetEvent: window.event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          escapeToClose: false
-        });
-
-        var data = {
-          confirmation: {
-            user_id: $stateParams.userId,
-            email_confirmation_token: $stateParams.confirmationCode
+      switch ($state.current.name) {
+        case 'verify':
+          if (authentication.loggedIn()) {
+            verification.openDialog(false, false, window.event);
           }
-        };
+          break;
+        case 'businessSignup':
+          authentication.showSignupDialog(false, false, window.event, true);
+          break;
+        case 'confirm':
+          $mdDialog.show({
+            templateUrl: 'app/modules/shared/dialogs/spinner.template.html',
+            parent: angular.element(document.body),
+            targetEvent: window.event,
+            openFrom: angular.element(document.body),
+            closeTo: angular.element(document.body),
+            clickOutsideToClose: false,
+            escapeToClose: false
+          });
 
-        api.post('/confirm_email', data).then(
-          function (success) {
-            $mdDialog.show(
-              $mdDialog.alert()
+          var data = {
+            confirmation: {
+              user_id: $stateParams.userId,
+              email_confirmation_token: $stateParams.confirmationCode
+            }
+          };
+
+          api.post('/confirm_email', data).then(
+            function (success) {
+              $mdDialog.show(
+                $mdDialog.alert()
                 .parent(angular.element(document.body))
                 .clickOutsideToClose(true)
                 .title('Confirmation successful')
                 .textContent('Great, you\'ve successfully confirmed your email address!')
                 .ariaLabel('Confirmation Successful')
                 .ok('Ok')
-            );
-          },
-          function (error) {
-            // $mdDialog.show(
-            //   $mdDialog.alert()
-            //     .clickOutsideToClose(true)
-            //     .title('Confirmation was not successful')
-            //     .textContent('The confirmation code seems to be wrong, please reach out to our customer support.')
-            //     .ok('Ok')
-            // );
-            $mdDialog.show(
-              $mdDialog.alert()
+              );
+            },
+            function (error) {
+              $mdDialog.show(
+                $mdDialog.alert()
                 .parent(angular.element(document.body))
                 .clickOutsideToClose(true)
                 .title('Confirmation successful')
                 .textContent('Great, you\'ve successfully confirmed your email address!')
                 .ariaLabel('Confirmation Successful')
                 .ok('Ok')
-            );
-          }
-        );
+              );
+            }
+          );
+         break;
+
+        case 'reset-password':
+          // TODO: check reset token
+          // on success ->
+          $mdDialog.show({
+            templateUrl: 'app/modules/shared/dialogs/spinner.template.html',
+            parent: angular.element(document.body),
+            targetEvent: window.event,
+            openFrom: angular.element(document.body),
+            closeTo: angular.element(document.body),
+            clickOutsideToClose: false,
+            escapeToClose: false
+          });
+
+          break;
+
+        default:
+          break;
       }
+
 
       // Pick a random hero shot and select
       function pickRandomHeroshot() {

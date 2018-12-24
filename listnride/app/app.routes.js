@@ -50,6 +50,13 @@
         }
       });
 
+      // home/reset-password
+      $stateProvider.state({
+        name: 'reset-password',
+        url: '/reset-password/{resetHash:string}',
+        template: '<home></home>'
+      });
+
       // home/verify
       $stateProvider.state({
         name: 'verify',
