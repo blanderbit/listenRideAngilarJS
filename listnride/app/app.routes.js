@@ -50,6 +50,13 @@
         }
       });
 
+      // home/reset-password
+      $stateProvider.state({
+        name: 'reset-password',
+        url: '/reset-password/{resetHash:string}',
+        template: '<home></home>'
+      });
+
       // home/verify
       $stateProvider.state({
         name: 'verify',
@@ -175,24 +182,6 @@
         },
         meta: {
           disableUpdate: true
-        }
-      });
-
-      // requests/tokenlogin
-      $stateProvider.state({
-        name: 'tokenlogin',
-        url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
-        template: '<requests></requests>',
-        resolve: {
-          login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
-            return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
-              function (success) {
-                authentication.setCredentials(success.data);
-              },
-              function (error) {
-              }
-            );
-          }]
         }
       });
 

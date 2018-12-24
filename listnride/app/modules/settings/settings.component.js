@@ -193,19 +193,16 @@ angular.module('settings',[])
          changePassword.closeDialog = $mdDialog.cancel;
 
          changePassword.update = function() {
-           var new_password_hashed = sha256.encrypt(changePassword.user.new_password);
            var user = {
-             'user': {
                'email': $localStorage.email,
-               'old_password': sha256.encrypt(changePassword.user.old_password),
-               'new_password': new_password_hashed
-             }
+               'current_password': changePassword.user.old_password,
+               'password': changePassword.user.new_password,
+               'password_confirmation': changePassword.user.new_password
            };
+
 
            api.put('/users/' + $localStorage.userId + '/update_password/', user).then(function (success) {
              settings.password = changePassword.user.new_password;
-             // update auth
-             $localStorage.auth = 'Basic ' + authentication.encodeAuth($localStorage.email, new_password_hashed);
              settings.showResponseMessage('update-profile-success', 'toasts');
              changePassword.closeDialog();
            }, function (error) {
@@ -358,7 +355,8 @@ angular.module('settings',[])
           url: api.getApiUrl() + '/users/' + $localStorage.userId,
           data: prepareData() ,
           headers: {
-            'Authorization': $localStorage.auth
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + $localStorage.accessToken
           }
         }).then(
           function (success) {
@@ -369,8 +367,6 @@ angular.module('settings',[])
             settings.user.has_billing = !!success.data.locations.billing;
             $localStorage.profilePicture = success.data.profile_picture.profile_picture.url;
             settings.profilePicture = false;
-            var encoded = Base64.encode(success.data.email + ":" + success.data.password_hashed);
-            $localStorage.auth = 'Basic ' + encoded;
           },
           function (error) {
             loadingDialog.close();
@@ -545,19 +541,10 @@ angular.module('settings',[])
           function() {
             api.delete('/users/' + authentication.userId()).then(
               function(success) {
-                $mdToast.show(
-                  $mdToast.simple()
-                  .textContent($translate.instant('toasts.account-deleted'))
-                  .hideDelay(1100)
-                  .position('top center')
-                ).then(function(){
-                  document.execCommand("ClearAuthenticationCache");
-                  delete $localStorage.auth;
-                  delete $localStorage.userId;
-                  delete $localStorage.profilePicture;
-                  delete $localStorage.name;
-                  $state.go('home');
-                });
+                notification.show(success, null, 'toasts.account-deleted');
+                document.execCommand("ClearAuthenticationCache");
+                $localStorage.$reset();
+                $state.go('home');
               },
               function(error) {
                 notification.show(error, 'error');

@@ -212,6 +212,7 @@ angular.module('listnride', [
   $rootScope.location = $location;
   ngMeta.init();
 
+  // TODO: check why we call this function here
   if (authentication.loggedIn && !_.isEmpty(authentication.userId())) {
     api.get('/users/' + authentication.userId()).then(
       function (success) {
@@ -222,5 +223,10 @@ angular.module('listnride', [
       }
     );
   }
+
+  // on route change we ask if users token is still valid
+  $rootScope.$on("$locationChangeStart", function (event, next, current) {
+    authentication.checkTokenExpiration();
+  });
 
 }]);
