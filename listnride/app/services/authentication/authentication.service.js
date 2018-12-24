@@ -39,7 +39,7 @@ angular.
       var setAccessToken = function (data) {
         $localStorage.accessToken = data.access_token;
         $localStorage.tokenType = data.token_type;
-        $localStorage.expiresIn = data.expiresIn;
+        $localStorage.expiresIn = data.expires_in;
         $localStorage.refreshToken = data.refresh_token;
         $localStorage.createdAt = data.created_at;
       }
@@ -420,19 +420,54 @@ angular.
         return !!$localStorage.accessToken;
       };
 
+      var getNewTokenByRefresh = function () {
+        // refresh token here
+      }
+
       // Logs out the user by deleting the auth header from localStorage
       var logout = function() {
 
         api.post('/oauth/revoke', {'token': $localStorage.accessToken}).then(function(){
           // reset all localStorage except isAgreeCookiesInfo if user set it to true
-          var isAgreeCookiesInfo = $localStorage.isAgreeCookiesInfo;
-          $localStorage.$reset();
-          if (isAgreeCookiesInfo) $localStorage.isAgreeCookiesInfo = true;
-
+          resetUserInformation()
           $state.go('home');
           notification.show(null, null, 'toasts.successfully-logged-out');
         });
       };
+
+      var resetUserInformation = function() {
+        var isAgreeCookiesInfo = $localStorage.isAgreeCookiesInfo;
+        $localStorage.$reset();
+        if (isAgreeCookiesInfo) $localStorage.isAgreeCookiesInfo = true;
+      }
+
+      var checkTokenExpiration = function() {
+        if (!$localStorage.accessToken) return;
+
+        var refreshTime = 300; // 5 minutes
+
+        // var expiredDate = $localStorage.createdAt + $localStorage.expiresIn;
+        // expiredDate = moment(expiredDate, "DD/MM/YYYY");
+        // var now = moment();
+
+        // test only
+        var now = "04/09/2013 15:00:00"; // moment()
+        var expiredDate = "04/09/2013 14:55:30"; // expired date
+
+        // check dates difference
+        // https://stackoverflow.com/a/34672015/6334780
+        var diff = moment.duration(moment(expiredDate).diff(moment(now)));
+        var seconds = parseInt(diff.asSeconds());
+
+        if (seconds < 0 && Math.abs(seconds) <= refreshTime) {
+          return getNewTokenByRefresh();
+        }
+
+        if (seconds > 0) {
+          return resetUserInformation();
+        }
+
+      }
 
       // Further all functions to be exposed in the service
       return {
@@ -441,6 +476,7 @@ angular.
         loggedIn: loggedIn,
         logout: logout,
         setCredentials: setCredentials,
+        checkTokenExpiration: checkTokenExpiration,
         profilePicture: function() {
           return $localStorage.profilePicture
         },
