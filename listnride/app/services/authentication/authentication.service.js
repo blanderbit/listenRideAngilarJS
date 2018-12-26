@@ -107,10 +107,34 @@ angular.
             showLoginSuccess();
           },
           function(error){
+            // check if user need update his password, after security update
+            if (error.data.need_update) showUpdatePasswordDialog();
             notification.show(error, 'error');
           });
         });
       };
+
+      var updatePasswordAlertController = function () {
+        var updatePasswordAlert = this;
+
+        updatePasswordAlert.hide = function () {
+          $mdDialog.hide();
+        };
+      }
+
+      var showUpdatePasswordDialog = function(){
+        $mdDialog.show({
+          controller: updatePasswordAlertController,
+          controllerAs: 'updatePasswordAlert',
+          templateUrl: 'app/services/authentication/updatePasswordAlert.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true, // Changed in CSS to only be for XS sizes
+        });
+      }
 
       // SIGN_UP
 
@@ -188,6 +212,10 @@ angular.
                 $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
               }
             },function(error){
+              if (error.data.need_update) {
+                loginDialog.hide()
+                showUpdatePasswordDialog();
+              }
               notification.show(error, 'error');
             });
           });
