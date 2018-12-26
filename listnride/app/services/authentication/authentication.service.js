@@ -108,7 +108,7 @@ angular.
           },
           function(error){
             // check if user need update his password, after security update
-            if (error.data.need_update) showUpdatePasswordDialog();
+            if (error.data.errors[0].source.pointer === 'password_change') showUpdatePasswordDialog();
             notification.show(error, 'error');
           });
         });
@@ -212,7 +212,7 @@ angular.
                 $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
               }
             },function(error){
-              if (error.data.need_update) {
+              if (error.data.errors[0].source.pointer === 'password_change') {
                 loginDialog.hide()
                 showUpdatePasswordDialog();
               }
