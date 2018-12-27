@@ -27,21 +27,27 @@ angular.
           email: user.email,
           password: user.password,
           grant_type: 'password'
-        }
+        };
 
         return api.post('/oauth/token', preparedData).then(function (response) {
           return response.data;
         }, function(error){
+          if (error.data.errors[0].source.pointer === 'password_change') {
+            $mdDialog.hide();
+            showChangePasswordAlert();
+          }
           notification.show(error, 'error');
         });
-      }
+      };
 
       var setAccessToken = function (data) {
-        $localStorage.accessToken = data.access_token;
-        $localStorage.tokenType = data.token_type;
-        $localStorage.expiresIn = data.expires_in;
-        $localStorage.refreshToken = data.refresh_token;
-        $localStorage.createdAt = data.created_at;
+        if (data) {
+          $localStorage.accessToken = data.access_token;
+          $localStorage.tokenType = data.token_type;
+          $localStorage.expiresIn = data.expires_in;
+          $localStorage.refreshToken = data.refresh_token;
+          $localStorage.createdAt = data.created_at;
+        }
       };
 
       var retrieveLocale = function() {
@@ -201,6 +207,7 @@ angular.
           };
 
           getAccessToken(user).then(function (successTokenData) {
+            //TODO do not call setAccessToken if getAccessToken failed
             setAccessToken(successTokenData);
             api.get('/users/me').then(function (success) {
               showLoginSuccess();
@@ -212,10 +219,6 @@ angular.
                 $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
               }
             },function(error){
-              if (error.data.errors[0].source.pointer === 'password_change') {
-                loginDialog.hide();
-                showChangePasswordAlert();
-              }
               notification.show(error, 'error');
             });
           });
