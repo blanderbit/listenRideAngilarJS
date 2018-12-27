@@ -71,6 +71,13 @@
         template: '<home></home>'
       });
 
+      // home/change_password
+      $stateProvider.state({
+        name: 'change_password',
+        url: '/change_password/{userId:int}/{passwordChangeToken:string}',
+        template: '<home></home>'
+      });
+
       // home/business-signup
       $stateProvider.state({
         name: 'businessSignup',
