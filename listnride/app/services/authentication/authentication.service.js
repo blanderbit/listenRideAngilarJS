@@ -247,7 +247,7 @@ angular.
         loginDialog.resetPassword = function() {
           if (loginDialog.email) {
             var user = {
-              "email": loginDialog.email
+              email: loginDialog.email
             };
             api.post('/users/reset_password', user).then(function(success) {
               notification.show(success, null, 'toasts.reset-password-success');
@@ -255,7 +255,7 @@ angular.
               loginDialog.error = error.data.errors[0]
             });
           } else {
-            notification.show(success, null, 'toasts.enter-email');
+            notification.show(null, null, 'toasts.enter-email');
           }
         };
 
