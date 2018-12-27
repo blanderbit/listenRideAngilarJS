@@ -42,7 +42,7 @@ angular.
         $localStorage.expiresIn = data.expires_in;
         $localStorage.refreshToken = data.refresh_token;
         $localStorage.createdAt = data.created_at;
-      }
+      };
 
       var retrieveLocale = function() {
         // Set default language to english
@@ -197,7 +197,7 @@ angular.
         loginDialog.login = function() {
           var user = {
             'email': loginDialog.email,
-            'password': loginDialog.password,
+            'password': loginDialog.password
           };
 
           getAccessToken(user).then(function (successTokenData) {
