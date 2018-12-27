@@ -108,33 +108,33 @@ angular.
           },
           function(error){
             // check if user need update his password, after security update
-            if (error.data.errors[0].source.pointer === 'password_change') showUpdatePasswordDialog();
+            if (error.data.errors[0].source.pointer === 'password_change') showChangePasswordAlert();
             notification.show(error, 'error');
           });
         });
       };
 
-      var updatePasswordAlertController = function () {
-        var updatePasswordAlert = this;
+      var changePasswordAlertController = function () {
+        var changePasswordAlert = this;
 
-        updatePasswordAlert.hide = function () {
+        changePasswordAlert.hide = function () {
           $mdDialog.hide();
         };
-      }
+      };
 
-      var showUpdatePasswordDialog = function(){
+      var showChangePasswordAlert = function(){
         $mdDialog.show({
-          controller: updatePasswordAlertController,
-          controllerAs: 'updatePasswordAlert',
-          templateUrl: 'app/services/authentication/updatePasswordAlert.template.html',
+          controller: changePasswordAlertController,
+          controllerAs: 'changePasswordAlert',
+          templateUrl: 'app/services/authentication/changePasswordAlert.template.html',
           parent: angular.element(document.body),
           targetEvent: event,
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
-          fullscreen: true, // Changed in CSS to only be for XS sizes
+          fullscreen: true // Changed in CSS to only be for XS sizes
         });
-      }
+      };
 
       // SIGN_UP
 
@@ -213,8 +213,8 @@ angular.
               }
             },function(error){
               if (error.data.errors[0].source.pointer === 'password_change') {
-                loginDialog.hide()
-                showUpdatePasswordDialog();
+                loginDialog.hide();
+                showChangePasswordAlert();
               }
               notification.show(error, 'error');
             });
