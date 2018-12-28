@@ -384,7 +384,7 @@ angular.module('booking', [])
           if (!_.isEmpty(numberInput.$error)) { return }
           var data = {"phone_number": numberInput.$modelValue};
           booking.toggleConfirmButton();
-          api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+          api.put('/users/' + $localStorage.userId + '/update_phone', data).then(
             function (success) {
               notification.show(success, null, 'booking.details.sms-confirmation-message');
             },
