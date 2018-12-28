@@ -290,11 +290,7 @@ angular.
         };
 
         signupDialog.signup = function() {
-          if (signupDialog.businessError && signupDialog.business) {
-            signupDialog.createBusiness();
-          } else {
-            signupDialog.createUser();
-          }
+          signupDialog.createUser();
         };
 
         signupDialog.createUser = function() {
@@ -318,25 +314,25 @@ angular.
           api.post('/users', user).then(function(success) {
             setCredentials(success.data);
             getAccessToken(user.user).then(function(successTokenData){
-              setAccessToken(successTokenData)
-            });
+              setAccessToken(successTokenData);
 
-            //TODO: refactor this logic
-            if (signupDialog.requestSignup) {
-              $rootScope.$broadcast('user_created');
-              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Request Flow'});
-            } else {
-              $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
-              if (signupDialog.business) {
-                signupDialog.createBusiness();
+              //TODO: refactor this logic
+              if (signupDialog.requestSignup) {
+                $rootScope.$broadcast('user_created');
+                $analytics.eventTrack('click', {category: 'Signup', label: 'Email Request Flow'});
               } else {
-                if (!signupDialog.requesting) {
-                  $state.go('home');
+                $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
+                if (signupDialog.business) {
+                  signupDialog.createBusiness();
+                } else {
+                  if (!signupDialog.requesting) {
+                    $state.go('home');
+                  }
+                  signupDialog.hide();
+                  // verification.openDialog(false, invited);
                 }
-                signupDialog.hide();
-                // verification.openDialog(false, invited);
               }
-            }
+            });
           }, function(error) {
             showSignupError();
             signupDialog.signingUp = false;
@@ -453,7 +449,7 @@ angular.
 
       var getNewTokenByRefresh = function () {
         // refresh token here
-      }
+      };
 
       // Logs out the user by deleting the auth header from localStorage
       var logout = function() {
@@ -497,7 +493,7 @@ angular.
         }
 
         return;
-      }
+      };
 
       // Further all functions to be exposed in the service
       return {
