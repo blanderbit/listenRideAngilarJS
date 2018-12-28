@@ -261,7 +261,7 @@ angular.
         // promise
         var deferred = $q.defer();
         // api call
-        api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+        api.put('/users/' + $localStorage.userId + '/update_phone', data).then(
           // resolve api: success
           function (success) {
             $mdToast.show(
