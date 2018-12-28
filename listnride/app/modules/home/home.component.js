@@ -4,9 +4,9 @@ angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
   controller: [ '$state', '$stateParams', '$translate', '$localStorage', '$mdMedia',
-    '$mdDialog', 'verification', 'authentication', 'api', 'ngMeta', 'loadingDialog',
+    '$mdDialog', '$mdToast', 'verification', 'authentication', 'api', 'loadingDialog',
     function HomeController($state, $stateParams, $translate, $localStorage, $mdMedia,
-      $mdDialog, verification, authentication, api, ngMeta) {
+      $mdDialog, $mdToast, verification, authentication, api) {
 
       var home = this;
 
@@ -19,6 +19,70 @@ angular.module('home',[]).component('home', {
         case 'businessSignup':
           authentication.showSignupDialog(false, false, window.event, true);
           break;
+        case 'change_password':
+          var updatePasswordDialogController = function () {
+            var updatePasswordDialog = this;
+
+            updatePasswordDialog.hide = function () {
+              $mdDialog.hide();
+            };
+
+            updatePasswordDialog.update = function () {
+              if (updatePasswordDialog.new_password === updatePasswordDialog.confirm_password) {
+                updatePassword(updatePasswordDialog.new_password)
+              } else {
+                $mdToast.show(
+                  $mdToast.simple()
+                    .textContent('Passwords do not match')
+                    .hideDelay(4000)
+                    .position('top center')
+                );
+              }
+            }
+          };
+
+          var showUpdatePasswordDialog = function() {
+            $mdDialog.show({
+              controller: updatePasswordDialogController,
+              controllerAs: 'updatePasswordDialog',
+              templateUrl: 'app/services/authentication/updatePasswordDialog.template.html',
+              parent: angular.element(document.body),
+              targetEvent: event,
+              openFrom: angular.element(document.body),
+              closeTo: angular.element(document.body),
+              clickOutsideToClose: false,
+              fullscreen: true
+            });
+          };
+
+          showUpdatePasswordDialog();
+
+          var updatePassword = function(password){
+            var password_data = {
+              user_id: $stateParams.userId,
+              token: $stateParams.passwordChangeToken,
+              password: password
+            };
+
+            api.post('/change_password', password_data).then(
+              function (success) {
+                $mdDialog.show(
+                  $mdDialog.alert()
+                    .parent(angular.element(document.body))
+                    .clickOutsideToClose(true)
+                    .title('Change successful')
+                    .textContent('Great, you\'ve successfully changed your password!')
+                    .ariaLabel('Change Successful')
+                    .ok('Ok')
+                );
+              },
+              function (error) {
+                //  Show error
+              }
+            );
+          };
+          break;
+
         case 'confirm':
           $mdDialog.show({
             templateUrl: 'app/modules/shared/dialogs/spinner.template.html',

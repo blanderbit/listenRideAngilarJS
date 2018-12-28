@@ -3,8 +3,8 @@
 angular.module('user',[]).component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
-  controller: ['$localStorage', '$state', '$stateParams', '$translate', 'ngMeta', 'api', '$mdMedia',
-    function ProfileController($localStorage, $state, $stateParams, $translate, ngMeta, api, $mdMedia) {
+  controller: ['$localStorage', '$state', '$stateParams', '$translate','$mdDialog', '$rootScope', '$window', 'ngMeta', 'api', '$mdMedia', 'notification',
+    function ProfileController($localStorage, $state, $stateParams, $translate, $mdDialog, $rootScope, $window, ngMeta, api, $mdMedia, notification) {
       var user = this;
       user.hours = {};
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -23,6 +23,43 @@ angular.module('user',[]).component('user', {
 
       var userId;
       $stateParams.userId? userId = $stateParams.userId : userId = 1930;
+
+      var getAccessToken = function (clientId) {
+        return api.post('/oauth/token_for', {user_id: clientId}).then(function (response) {
+          return response.data;
+        }, function(error){
+          notification.show(error, 'error');
+        });
+      };
+
+      //FIXME: Code duplication
+      // START >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      var setAccessToken = function (data) {
+        $localStorage.accessToken = data.access_token;
+        $localStorage.tokenType = data.token_type;
+        $localStorage.expiresIn = data.expires_in;
+        $localStorage.refreshToken = data.refresh_token;
+        $localStorage.createdAt = data.created_at;
+      };
+
+      var setCredentials = function (response) {
+        $localStorage.userId = response.id;
+        $localStorage.name = response.first_name + " " + response.last_name;
+        $localStorage.firstName = response.first_name;
+        $localStorage.lastName = response.last_name;
+        $localStorage.profilePicture = response.profile_picture.profile_picture.url;
+        $localStorage.unreadMessages = response.unread_messages;
+        $localStorage.email = response.email;
+        $localStorage.referenceCode = response.ref_code;
+        $localStorage.isBusiness = !!response.business;
+      };
+
+      var showLoginSuccess = function() {
+        $mdDialog.hide();
+        notification.show(null, null, 'toasts.successfully-logged-in');
+      };
+
+      // END <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
       api.get('/users/' + userId).then(
         function(response) {
@@ -54,6 +91,22 @@ angular.module('user',[]).component('user', {
           $state.go('404');
         }
       );
+
+      user.stealSession = function () {
+        getAccessToken(user.user.id).then(function (successTokenData) {
+          setAccessToken(successTokenData);
+          api.get('/users/me').then(function (success) {
+              setCredentials(success.data);
+              $rootScope.$broadcast('user_login');
+              showLoginSuccess();
+              $window.location.reload();
+            },
+            function(error){
+              notification.show(error, 'error');
+            });
+        });
+      };
+
 
       function loadAllBikes() {
         user.showAllBikes = true;
