@@ -12,6 +12,7 @@ angular.module('user',[]).component('user', {
       user.current_payment = false;
       user.display_name = '';
       user.picture = '';
+      user.me = {};
       user.mobileScreen = $mdMedia('xs');
       var mobileBikeColumns = 3;
       var desktopBikeColumns = 6;
@@ -65,6 +66,7 @@ angular.module('user',[]).component('user', {
         function(response) {
           user.showAll = false;
           user.user = response.data;
+          user.user.me.id = $localStorage.userId;
           user.loaded = true;
           user.anyHours = !_.isEmpty(response.data.opening_hours);
           user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;

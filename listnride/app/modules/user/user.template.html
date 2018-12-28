@@ -9,7 +9,7 @@
           <div layout="row">
             <h1 class="md-headline">{{ user.display_name }}</h1>
             <md-button
-              ng-if="user.user.me.admin"
+              ng-if="user.user.me.admin && user.user.me.id != user.user.id"
               class="md-raised md-primary"
               ng-click="user.stealSession()"
             >
