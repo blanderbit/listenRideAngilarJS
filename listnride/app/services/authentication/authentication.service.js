@@ -334,7 +334,6 @@ angular.
               }
             });
           }, function(error) {
-            showSignupError();
             signupDialog.signingUp = false;
           });
         };
@@ -352,7 +351,6 @@ angular.
           }, function(error) {
             signupDialog.businessError = true;
             signupDialog.signingUp = false;
-            showSignupError();
           });
         };
 
