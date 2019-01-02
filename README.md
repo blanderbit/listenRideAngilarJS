@@ -1,8 +1,8 @@
 List-n-Ride Frontend
 ===============
 
-Staging: [`http://en.staging.listnride.com/`](http://en.staging.listnride.com/)
-Production: [`http://en.listnride.com/`](http://en.listnride.com/)
+Staging: [`http://staging.listnride.com/`](http://staging.listnride.com/)
+Production: [`http://listnride.com/`](http://listnride.com/)
 
 Prerequisites
 -------------
