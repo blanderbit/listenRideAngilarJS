@@ -87,7 +87,8 @@
     "karma-chrome-launcher": "^0.2.3",
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
-    "live-server": "^0.9.1",
+    "live-server": "^1.2.1",
+    "live-server-https": "0.0.2",
     "lodash": "^4.17.11",
     "postcss": "^5.2.16",
     "request": "^2.88.0",
@@ -95,9 +96,8 @@
   },
   "scripts": {
     "prestart": "npm update && npm install --production && gulp constants --env=local",
-    "start": "live-server --host=localhost --open=#/",
+    "start": "live-server --host=localhost --open=#/ --https=node_modules/live-server-https/index.js",
     "start-quiet": "live-server --quiet --host=localhost --open=#/",
-    "pretest": "npm update",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run"
   }
