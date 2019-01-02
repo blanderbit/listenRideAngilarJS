@@ -230,14 +230,15 @@ angular.
 
         loginDialog.connectFb = function() {
           ezfb.getLoginStatus(function(response) {
+            var fbToken = response.authResponse.accessToken;
             if (response.status === 'connected') {
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                loginFbGlobal(fbAccessToken);
+                loginFbGlobal(fbToken);
               });
             } else {
               ezfb.login(function(response) {
                 ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  loginFbGlobal(fbAccessToken);
+                  loginFbGlobal(fbToken);
                 });
               }, {scope: 'email'});
             }
@@ -369,8 +370,9 @@ angular.
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             $analytics.eventTrack('click', {category: 'Login', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
+            var fbToken = response.authResponse.accessToken;
             ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-              loginFbGlobal(response.authResponse.accessToken);
+              loginFbGlobal(fbToken);
             });
           } else {
             ezfb.login(function(response) {
@@ -378,7 +380,7 @@ angular.
               $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
 
               ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                signupFbGlobal(response.email, response.id, response.authResponse.accessToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
+                signupFbGlobal(response.email, response.id, fbToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
               });
             }, {scope: 'email'});
           }
