@@ -33,7 +33,6 @@ angular.
           return response.data;
         }, function(error){
           if (error.data.errors[0].source.pointer === 'password_change') {
-            $mdDialog.hide();
             showChangePasswordAlert();
           }
           notification.show(error, 'error');
