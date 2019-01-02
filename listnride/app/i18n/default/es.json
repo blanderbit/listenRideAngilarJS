@@ -810,6 +810,7 @@
     "check-inbox": "Por favor, compruebe su e-mail",
     "security-text": "La seguridad es muy importante para nosotros. Y esta no es solo una frase que usamos para calmarte. Con el fin de mantener su cuenta segura, nos gustaría pedirle que cambie su contraseña. <br><b>Por favor, haga clic en el enlace del correo electrónico que acabamos le enviamos. </b>",
     "confirm-password": "Confirmar contraseña",
+    "please-change-password": "Please change your password",
     "save-new-password": "Guardar nueva contraseña",
     "your-name": "Nombre",
     "your-email-address": "Correo electrónico",
