@@ -812,6 +812,7 @@
     "check-inbox": "Bitte prüfe deinen Posteingang.",
     "security-text": "Sicherheit ist uns sehr wichtig. Und das ist nicht nur eine Aussage, mit der wir dich besänftigen. Zur Sicherheit deines Kontos bitten wir dich, dein Passwort zu ändern. <br><b>Klick auf den Link in der E-Mail, die wir dir gerade geschickt haben.</b>",
     "confirm-password": "Passwort bestätigen",
+    "please-change-password": "Please change your password",
     "save-new-password": "Neues Passwort speichern",
     "your-name": "Dein Name",
     "your-email-address": "Deine E-Mail Adresse",
