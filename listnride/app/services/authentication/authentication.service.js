@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
-    function($localStorage, $mdDialog, $rootScope, $state, $analytics, ezfb, api, verification, sha256, notification){
+    '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', '$q', 'ezfb', 'api', 'verification', 'sha256', 'notification',
+    function ($localStorage, $mdDialog, $rootScope, $state, $analytics, $q, ezfb, api, verification, sha256, notification) {
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
@@ -36,6 +36,7 @@ angular.
             showChangePasswordAlert();
           }
           notification.show(error, 'error');
+          return $q.reject(error);
         });
       };
 
@@ -334,6 +335,7 @@ angular.
               }
             });
           }, function(error) {
+            notification.show(error, 'error');
             signupDialog.signingUp = false;
           });
         };
