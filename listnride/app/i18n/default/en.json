@@ -813,7 +813,7 @@
     "sign-up-today": "Sign up today ",
     "already-registered": "You are already signed up",
     "check-inbox": "Please check your inbox",
-    "security-text": "Security is really important for us. And this is not just a phrase that we use to make you calm. In order to keep your account secure, we would like to ask you to change your password.<br><b>Please click the link in the email that we just sent you.</b>",
+    "security-text": "Security is really important for us. And this is not just a phrase that we use to make you calm. In order to keep your account secure, we would like to ask you to change your password.<br><br><b>Please click the link in the email that we just sent you.</b>",
     "confirm-password": "Confirm password",
     "please-change-password": "Please change your password",
     "save-new-password": "Save new password",
