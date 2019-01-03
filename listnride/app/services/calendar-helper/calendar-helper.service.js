@@ -33,10 +33,12 @@ angular.module('listnride')
         isAvailable = $index + 6 >= moment().hour() + 1;
       }
 
-      var weekDay = openingHours.hours[getWeekDay(date)];
-      if (!_.isEmpty(weekDay)) {
-        var workingHours = openHours(weekDay);
-        return workingHours.includes($index + 6) && isAvailable;
+      if (openingHours) {
+        var weekDay = openingHours.hours[getWeekDay(date)];
+        if (!_.isEmpty(weekDay)) {
+          var workingHours = openHours(weekDay);
+          return workingHours.includes($index + 6) && isAvailable;
+        }
       }
 
       return isAvailable;
