@@ -128,7 +128,7 @@ angular.
         };
       };
 
-      var showChangePasswordAlert = function(eent){
+      var showChangePasswordAlert = function(){
         $mdDialog.show({
           controller: changePasswordAlertController,
           controllerAs: 'changePasswordAlert',
