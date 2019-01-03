@@ -81,7 +81,7 @@ angular.module('listnride')
       return !!openingHours && checkIsOpeningHoursEnabled(openingHours) && _.some(openingHours.hours, Array)
     }
 
-    function checkIsOpeningHoursEnabled() {
+    function checkIsOpeningHoursEnabled(openingHours) {
       if (openingHours.enabled !== undefined) {
         return openingHours.enabled
       }
