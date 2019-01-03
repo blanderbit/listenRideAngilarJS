@@ -508,6 +508,7 @@ angular.module('bike').component('calendar', {
       function openingHoursAvailable() {
         return calendar.bikeOwner &&
           !!calendar.bikeOwner.opening_hours &&
+          calendarHelper.checkIsOpeningHoursEnabled(calendar.bikeOwner.opening_hours) &&
           _.some(calendar.bikeOwner.opening_hours.hours, Array)
       }
 

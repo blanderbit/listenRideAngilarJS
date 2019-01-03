@@ -78,7 +78,14 @@ angular.module('listnride')
     }
 
     function openingHoursAvailable(openingHours) {
-      return !!openingHours && _.some(openingHours.hours, Array)
+      return !!openingHours && checkIsOpeningHoursEnabled(openingHours) && _.some(openingHours.hours, Array)
+    }
+
+    function checkIsOpeningHoursEnabled(openingHours) {
+      if (openingHours.enabled !== undefined) {
+        return openingHours.enabled
+      }
+      return true;
     }
 
     function setStartDate(startTime, startDate) {
@@ -88,6 +95,7 @@ angular.module('listnride')
     return {
       isTimeAvailable: isTimeAvailable,
       isDayAvailable: isDayAvailable,
-      getInitHours: getInitHours
+      getInitHours: getInitHours,
+      checkIsOpeningHoursEnabled: checkIsOpeningHoursEnabled
     };
   }]);
