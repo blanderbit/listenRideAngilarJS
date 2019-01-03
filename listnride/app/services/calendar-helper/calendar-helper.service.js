@@ -95,6 +95,7 @@ angular.module('listnride')
     return {
       isTimeAvailable: isTimeAvailable,
       isDayAvailable: isDayAvailable,
-      getInitHours: getInitHours
+      getInitHours: getInitHours,
+      checkIsOpeningHoursEnabled: checkIsOpeningHoursEnabled
     };
   }]);
