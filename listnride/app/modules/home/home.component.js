@@ -126,21 +126,6 @@ angular.module('home',[]).component('home', {
           );
          break;
 
-        case 'reset-password':
-          // TODO: check reset token
-          // on success ->
-          $mdDialog.show({
-            templateUrl: 'app/modules/shared/dialogs/spinner.template.html',
-            parent: angular.element(document.body),
-            targetEvent: window.event,
-            openFrom: angular.element(document.body),
-            closeTo: angular.element(document.body),
-            clickOutsideToClose: false,
-            escapeToClose: false
-          });
-
-          break;
-
         default:
           break;
       }
