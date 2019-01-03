@@ -78,7 +78,14 @@ angular.module('listnride')
     }
 
     function openingHoursAvailable(openingHours) {
-      return !!openingHours && _.some(openingHours.hours, Array)
+      return !!openingHours && checkIsOpeningHoursEnabled(openingHours) && _.some(openingHours.hours, Array)
+    }
+
+    function checkIsOpeningHoursEnabled() {
+      if (openingHours.enabled !== undefined) {
+        return openingHours.enabled
+      }
+      return true;
     }
 
     function setStartDate(startTime, startDate) {

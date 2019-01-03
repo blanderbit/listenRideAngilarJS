@@ -508,7 +508,15 @@ angular.module('bike').component('calendar', {
       function openingHoursAvailable() {
         return calendar.bikeOwner &&
           !!calendar.bikeOwner.opening_hours &&
+          checkIsOpeningHoursEnabled() &&
           _.some(calendar.bikeOwner.opening_hours.hours, Array)
+      }
+
+      function checkIsOpeningHoursEnabled() {
+        if (calendar.bikeOwner.opening_hours.enabled !== undefined) {
+          return calendar.bikeOwner.opening_hours.enabled
+        }
+        return true;
       }
 
       function isReserved(date) {
