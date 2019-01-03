@@ -64,6 +64,13 @@
         template: '<home></home>'
       });
 
+      // home/change_password
+      $stateProvider.state({
+        name: 'change_password',
+        url: '/change_password/{userId:int}/{passwordChangeToken:string}',
+        template: '<home></home>'
+      });
+
       // home/business-signup
       $stateProvider.state({
         name: 'businessSignup',
@@ -175,24 +182,6 @@
         },
         meta: {
           disableUpdate: true
-        }
-      });
-
-      // requests/tokenlogin
-      $stateProvider.state({
-        name: 'tokenlogin',
-        url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
-        template: '<requests></requests>',
-        resolve: {
-          login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
-            return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
-              function (success) {
-                authentication.setCredentials(success.data);
-              },
-              function (error) {
-              }
-            );
-          }]
         }
       });
 

@@ -6,7 +6,16 @@
       <div class="lnr-user__header" flex-gt-xs="70" layout="row">
         <img class="lnr-profile-lrg" ng-src="{{user.picture}}">
         <div class="lnr-user__info" layout="column" layout-align="center start" layout-padding>
-          <h1 class="md-headline">{{ user.display_name }}</h1>
+          <div layout="row">
+            <h1 class="md-headline">{{ user.display_name }}</h1>
+            <md-button
+              ng-if="user.user.me.admin && user.user.me.id != user.user.id"
+              class="md-raised md-primary"
+              ng-click="user.stealSession()"
+            >
+              <span>{{ 'user.become-this-user' | translate }}</span>
+            </md-button>
+          </div>
           <input-stars class="lnr-user-rating rating" max="5" ng-model="user.rating" readonly></input-stars>
           <span ng-if="user.user.city && user.user.country" class="md-body-1">{{user.user.city}}, {{user.user.country}}</span>
         </div>

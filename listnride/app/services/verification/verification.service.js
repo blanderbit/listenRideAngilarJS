@@ -82,7 +82,8 @@ angular.
             url: api.getApiUrl() + '/users/' + $localStorage.userId,
             data: profilePicture,
             headers: {
-              'Authorization': $localStorage.auth
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             }
           }).then(
             function(response) {
@@ -171,7 +172,7 @@ angular.
               );
             },
             function (error) {
-              
+
             }
           );
         };
@@ -260,7 +261,7 @@ angular.
         // promise
         var deferred = $q.defer();
         // api call
-        api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+        api.put('/users/' + $localStorage.userId + '/update_phone', data).then(
           // resolve api: success
           function (success) {
             $mdToast.show(
@@ -316,7 +317,7 @@ angular.
         // return promise to caller
         return deferred.promise;
       };
-      
+
       return {
         openDialog: openDialog,
         sendSms: sendSms,

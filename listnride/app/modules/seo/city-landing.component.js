@@ -3,8 +3,8 @@
 angular.module('cityLanding',[]).component('cityLanding', {
   templateUrl: 'app/modules/seo/city-landing.template.html',
   controllerAs: 'cityLanding',
-  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', '$http', 'api', 'ENV', 'bikeOptions', 'ngMeta',
-    function cityLandingController($translate, $tpl, $stateParams, $state, $http, api, ENV, bikeOptions, ngMeta) {
+  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', 'api', 'ENV', 'bikeOptions', 'ngMeta',
+    function cityLandingController($translate, $tpl, $stateParams, $state, api, ENV, bikeOptions, ngMeta) {
       var cityLanding = this;
 
       cityLanding.$onInit = function() {

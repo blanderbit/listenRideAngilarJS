@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('userApi', ['$http', '$localStorage', 'api',
-    function($http, $localStorage, api) {
+  factory('userApi', ['$localStorage', 'api',
+    function($localStorage, api) {
       function getUserData() {
         return api.get('/users/' + $localStorage.userId)
       }

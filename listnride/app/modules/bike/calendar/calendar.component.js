@@ -236,25 +236,13 @@ angular.module('bike').component('calendar', {
       /* ------------------------------------------------- */
 
       calendar.availabilityMessage = function($index, date) {
-        if (!calendar.isOptionEnabled($index, date)) {
+        if (!calendar.isOptionEnabled($index, calendar.bikeOwner.opening_hours, date)) {
           return openingHoursAvailable() ?  ' ('+ $translate.instant('calendar.status-closed')+')' : ' ('+($translate.instant('calendar.status-in-past'))+')';
         }
       };
 
-      calendar.isOptionEnabled = function($index, date) {
-        if (date === undefined) { return true }
+      calendar.isOptionEnabled = calendarHelper.isTimeAvailable;
 
-        var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
-        // Date today chosen
-        if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
-        if (!openingHoursAvailable()) { return true }
-        var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
-        if (weekDay !== null) {
-          var workingHours = openHours(weekDay);
-          return workingHours.includes($index + 6);
-        }
-        return false
-      };
 
       // This function handles booking and all necessary validations
       calendar.confirmBooking = function () {
@@ -520,7 +508,7 @@ angular.module('bike').component('calendar', {
       function openingHoursAvailable() {
         return calendar.bikeOwner &&
           !!calendar.bikeOwner.opening_hours &&
-          calendar.bikeOwner.opening_hours.enabled &&
+          calendarHelper.checkIsOpeningHoursEnabled(calendar.bikeOwner.opening_hours) &&
           _.some(calendar.bikeOwner.opening_hours.hours, Array)
       }
 

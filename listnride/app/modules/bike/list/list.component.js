@@ -241,7 +241,8 @@ angular.module('list', ['ngLocale'])
                   url: api.getApiUrl() + '/rides',
                   data: ride,
                   headers: {
-                    'Authorization': $localStorage.auth
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + $localStorage.accessToken
                   }
                 }).then(
                   function (response) {
@@ -308,7 +309,8 @@ angular.module('list', ['ngLocale'])
             url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
             data: ride,
             headers: {
-              'Authorization': $localStorage.auth
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             }
           }).then(
             function (response) {
