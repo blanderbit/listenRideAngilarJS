@@ -6,7 +6,7 @@ angular.module('home',[]).component('home', {
   controller: [ '$state', '$stateParams', '$translate', '$localStorage', '$mdMedia',
     '$mdDialog', '$mdToast', 'verification', 'authentication', 'api', 'loadingDialog',
     function HomeController($state, $stateParams, $translate, $localStorage, $mdMedia,
-      $mdDialog, $mdToast, verification, authentication, api) {
+      $mdDialog, $mdToast, verification, authentication, api, notification) {
 
       var home = this;
 
@@ -76,7 +76,7 @@ angular.module('home',[]).component('home', {
                 );
               },
               function (error) {
-                //  Show error
+                notification.show(error, 'error');
               }
             );
           };
@@ -113,15 +113,7 @@ angular.module('home',[]).component('home', {
               );
             },
             function (error) {
-              $mdDialog.show(
-                $mdDialog.alert()
-                .parent(angular.element(document.body))
-                .clickOutsideToClose(true)
-                .title('Confirmation successful')
-                .textContent('Great, you\'ve successfully confirmed your email address!')
-                .ariaLabel('Confirmation Successful')
-                .ok('Ok')
-              );
+              notification.show(error, 'error');
             }
           );
          break;
