@@ -134,7 +134,6 @@ angular.
           controllerAs: 'changePasswordAlert',
           templateUrl: 'app/services/authentication/changePasswordAlert.template.html',
           parent: angular.element(document.body),
-          targetEvent: event,
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,

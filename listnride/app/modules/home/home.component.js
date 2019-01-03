@@ -47,7 +47,6 @@ angular.module('home',[]).component('home', {
               controllerAs: 'updatePasswordDialog',
               templateUrl: 'app/services/authentication/updatePasswordDialog.template.html',
               parent: angular.element(document.body),
-              targetEvent: event,
               openFrom: angular.element(document.body),
               closeTo: angular.element(document.body),
               clickOutsideToClose: false,
