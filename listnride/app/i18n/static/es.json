@@ -344,7 +344,7 @@
       "title": "Listnride Booking Plugin ",
       "description": "Desarrollamos el plugin de reserva  para que tus clientes puedan alquilar tus bicicletas directamente desde tu sitio web, 24/7.",
       "install": "Instalar en Wordpress",
-      "link": "En caso de que no uses Wordpress, esta es  nuestra <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">guía de instalación </a>."
+      "link": "En caso de que no uses Wordpress, esta es nuestra <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">guía de instalación </a>."
     },
     "meta-description": "Únete a la comunidad empresarial de listnride para alquilar bicis",
     "title": "Únete a la comunidad listnride ",
@@ -394,6 +394,21 @@
       "title": "Alquila una bici de carretera para Epic Gran Canaria | listnride",
       "description": "Qué: <b>Epic Gran Canaria</b> | Cuándo: <b>5 - 6 - 7 abril 2019</b> | Dónde: <b>Gran canaria</b>",
       "text": "Siéntete por unos días como un profesional y experimenta una experiencia deportiva y humana sin precedentes midiéndote en cada una de las subidas cronometradas durante tres días. Alquila tu bici de carretera aquí, simplemente tienes que  seleccionar la bicicleta adecuada para ti y solicitarla para los días de la competencia. \n"
+    },
+    "lardita": {
+      "title": "Rent a road bike for Epic Gran Canaria",
+      "description": "What:  <b>Epic Gran Canaria</b> | When: <b>5 - 6 - 7 April 2019</b> | Where: <b>Gran Canaria</b>",
+      "text": "The aim of the Epic Gran Canaria is to deliver a professional experience on bike for amateur riders. You can enjoy an unparalleled level of safety, security, comfort and premium services measuring yourself on each of the timed climbs for three days and ranked stages. Rent your road bike, by clicking on the bike and requesting it."
+    },
+    "granfondoviadelsale": {
+      "title": "Rent a road bike for Epic Gran Canaria",
+      "description": "What:  <b>Epic Gran Canaria</b> | When: <b>5 - 6 - 7 April 2019</b> | Where: <b>Gran Canaria</b>",
+      "text": "The aim of the Epic Gran Canaria is to deliver a professional experience on bike for amateur riders. You can enjoy an unparalleled level of safety, security, comfort and premium services measuring yourself on each of the timed climbs for three days and ranked stages. Rent your road bike, by clicking on the bike and requesting it."
+    },
+    "girosardegna": {
+      "title": "Rent a road bike for Epic Gran Canaria",
+      "description": "What:  <b>Epic Gran Canaria</b> | When: <b>5 - 6 - 7 April 2019</b> | Where: <b>Gran Canaria</b>",
+      "text": "The aim of the Epic Gran Canaria is to deliver a professional experience on bike for amateur riders. You can enjoy an unparalleled level of safety, security, comfort and premium services measuring yourself on each of the timed climbs for three days and ranked stages. Rent your road bike, by clicking on the bike and requesting it."
     },
     "velorace-dresden": {
       "title": "Alquila una bici de carretera para Vätternrundan 2019 | listnride",

@@ -1185,6 +1185,63 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'lardita',
+        url: '/lardita',
+        template: '<lardita></lardita>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.lardita.meta-title", "events.lardita.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.lardita.meta-title"]);
+                ngMeta.setTag("description", translations["events.lardita.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'granfondoviadelsale',
+        url: '/granfondoviadelsale',
+        template: '<granfondoviadelsale></granfondoviadelsale>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.granfondoviadelsale.meta-title", "events.granfondoviadelsale.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.granfondoviadelsale.meta-title"]);
+                ngMeta.setTag("description", translations["events.granfondoviadelsale.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'girosardegna',
+        url: '/girosardegna',
+        template: '<girosardegna></girosardegna>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.girosardegna.meta-title", "events.girosardegna.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.girosardegna.meta-title"]);
+                ngMeta.setTag("description", translations["events.girosardegna.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* BRANDS_PAGES */
       /* ------------------------------------ */
