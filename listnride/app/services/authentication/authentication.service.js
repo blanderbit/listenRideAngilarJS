@@ -368,9 +368,10 @@ angular.
 
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
+          var fbToken = response.authResponse.accessToken;
+
           if (response.status === 'connected') {
             $analytics.eventTrack('click', {category: 'Login', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
-            var fbToken = response.authResponse.accessToken;
             ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
               loginFbGlobal(fbToken);
             });
