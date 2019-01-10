@@ -3,8 +3,8 @@
 angular.
   module('listnride').
   factory('authentication', [
-    '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', 'ezfb', 'api', 'verification', 'sha256', 'notification',
-    function($localStorage, $mdDialog, $rootScope, $state, $analytics, ezfb, api, verification, sha256, notification){
+    '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', '$q', 'ezfb', 'api', 'verification', 'sha256', 'notification',
+    function ($localStorage, $mdDialog, $rootScope, $state, $analytics, $q, ezfb, api, verification, sha256, notification) {
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
@@ -33,10 +33,10 @@ angular.
           return response.data;
         }, function(error){
           if (error.data.errors[0].source.pointer === 'password_change') {
-            $mdDialog.hide();
             showChangePasswordAlert();
           }
           notification.show(error, 'error');
+          return $q.reject(error);
         });
       };
 
@@ -134,7 +134,6 @@ angular.
           controllerAs: 'changePasswordAlert',
           templateUrl: 'app/services/authentication/changePasswordAlert.template.html',
           parent: angular.element(document.body),
-          targetEvent: event,
           openFrom: angular.element(document.body),
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
@@ -161,7 +160,7 @@ angular.
         SignupDialogController(null, null, null, false, obj);
       };
 
-      var signupFbGlobal = function (email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
+      var signupFbGlobal = function (fbAccessToken, inviteCode, requestFlow) {
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -228,21 +227,7 @@ angular.
           $mdDialog.hide();
         };
 
-        loginDialog.connectFb = function() {
-          ezfb.getLoginStatus(function(response) {
-            if (response.status === 'connected') {
-              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                loginFbGlobal(fbAccessToken);
-              });
-            } else {
-              ezfb.login(function(response) {
-                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  loginFbGlobal(fbAccessToken);
-                });
-              }, {scope: 'email'});
-            }
-          });
-        };
+        loginDialog.connectFb = connectFb;
 
         loginDialog.resetPassword = function() {
           if (loginDialog.email) {
@@ -334,6 +319,7 @@ angular.
               }
             });
           }, function(error) {
+            notification.show(error, 'error');
             signupDialog.signingUp = false;
           });
         };
@@ -368,18 +354,14 @@ angular.
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
-            $analytics.eventTrack('click', {category: 'Login', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
-            ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-              loginFbGlobal(response.authResponse.accessToken);
-            });
+            loginFbGlobal(response.authResponse.accessToken);
           } else {
-            ezfb.login(function(response) {
+            ezfb.login(function (response) {
               $analytics.eventTrack('click', {category: 'Signup', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
               $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
 
-              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                signupFbGlobal(response.email, response.id, response.authResponse.accessToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
-              });
+              signupFbGlobal(response.authResponse.accessToken, false, requestFlow)
+
             }, {scope: 'email'});
           }
         });

@@ -12,7 +12,6 @@ angular.module('user',[]).component('user', {
       user.current_payment = false;
       user.display_name = '';
       user.picture = '';
-      user.me = {};
       user.mobileScreen = $mdMedia('xs');
       var mobileBikeColumns = 3;
       var desktopBikeColumns = 6;
@@ -66,11 +65,12 @@ angular.module('user',[]).component('user', {
         function(response) {
           user.showAll = false;
           user.user = response.data;
-          user.user.me.id = $localStorage.userId;
+          if (!user.user.me) user.user.me = {};
+          user.user.me.id = !!$localStorage.userId ? $localStorage.userId : '';
           user.loaded = true;
           user.anyHours = !_.isEmpty(response.data.opening_hours);
-          user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
           user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
+          user.openingHoursEnabled = showHours(response.data.opening_hours);
           user.rating = (user.user.rating_lister + user.user.rating_rider);
 
           user.display_name = setName();
@@ -109,6 +109,14 @@ angular.module('user',[]).component('user', {
         });
       };
 
+      function showHours(hours) {
+        if (!user.anyHours) return false;
+        if (!!hours.enabled) {
+          return hours.enabled
+        } else {
+          return true
+        }
+      }
 
       function loadAllBikes() {
         user.showAllBikes = true;

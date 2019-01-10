@@ -24,17 +24,24 @@ angular.module('listnride')
     var isTimeAvailable = function($index, openingHours, date) {
       if (date === undefined) return true;
 
+      var isAvailable = true;
       var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
-      if (isDateToday) return $index + 6 >= moment().hour() + 1;
 
-      if (!openingHours) return true;
+      if (!openingHours && !isDateToday) return isAvailable;
 
-      var weekDay = openingHours.hours[getWeekDay(date)];
-      if (!_.isEmpty(weekDay)) {
-        var workingHours = openHours(weekDay);
-        return workingHours.includes($index + 6);
+      if (isDateToday) {
+        isAvailable = $index + 6 >= moment().hour() + 1;
       }
-      return true;
+
+      if (openingHours && checkIsOpeningHoursEnabled(openingHours)) {
+        var weekDay = openingHours.hours[getWeekDay(date)];
+        if (!_.isEmpty(weekDay)) {
+          var workingHours = openHours(weekDay);
+          return workingHours.includes($index + 6) && isAvailable;
+        }
+      }
+
+      return isAvailable;
     };
 
     var isDayAvailable = function(openingHours, date) {
@@ -73,7 +80,14 @@ angular.module('listnride')
     }
 
     function openingHoursAvailable(openingHours) {
-      return !!openingHours && openingHours.enabled && _.some(openingHours.hours, Array)
+      return !!openingHours && checkIsOpeningHoursEnabled(openingHours) && _.some(openingHours.hours, Array)
+    }
+
+    function checkIsOpeningHoursEnabled(openingHours) {
+      if (openingHours.enabled !== undefined) {
+        return openingHours.enabled
+      }
+      return true;
     }
 
     function setStartDate(startTime, startDate) {
@@ -83,6 +97,7 @@ angular.module('listnride')
     return {
       isTimeAvailable: isTimeAvailable,
       isDayAvailable: isDayAvailable,
-      getInitHours: getInitHours
+      getInitHours: getInitHours,
+      checkIsOpeningHoursEnabled: checkIsOpeningHoursEnabled
     };
   }]);

@@ -50,13 +50,6 @@
         }
       });
 
-      // home/reset-password
-      $stateProvider.state({
-        name: 'reset-password',
-        url: '/reset-password/{resetHash:string}',
-        template: '<home></home>'
-      });
-
       // home/verify
       $stateProvider.state({
         name: 'verify',
@@ -1183,6 +1176,63 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["events.velorace-dresden.meta-title"]);
                 ngMeta.setTag("description", translations["events.velorace-dresden.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'lardita',
+        url: '/lardita-arezzo',
+        template: '<lardita></lardita>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.lardita.meta-title", "events.lardita.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.lardita.meta-title"]);
+                ngMeta.setTag("description", translations["events.lardita.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'granfondoviadelsale',
+        url: '/granfondo-via-del-sale',
+        template: '<granfondoviadelsale></granfondoviadelsale>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.granfondoviadelsale.meta-title", "events.granfondoviadelsale.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.granfondoviadelsale.meta-title"]);
+                ngMeta.setTag("description", translations["events.granfondoviadelsale.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'girosardegna',
+        url: '/giro-sardegna',
+        template: '<girosardegna></girosardegna>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.girosardegna.meta-title", "events.girosardegna.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.girosardegna.meta-title"]);
+                ngMeta.setTag("description", translations["events.girosardegna.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }

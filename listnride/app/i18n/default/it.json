@@ -205,6 +205,18 @@
     "vatternrundan": {
       "meta-title": "Noleggia una bici da strada per Vätternrundan 2019 | listnride",
       "meta-description": "Con listnride puoi noleggiare una bici da corsa online per Vätternrundan 2019 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
+    },
+    "lardita": {
+      "meta-title": "Noleggia una bici da corsa vintage per l'Ardita | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa vintage online per l'Ardita 2019 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Noleggia una bici da corsa per la Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per la Granfondo Via del Sale 2019. Scegli la bici perfetta per le tue esigenze!"
+    },
+    "girosardegna": {
+      "meta-title": "Noleggia una bici da corsa per il Giro Sardegna  | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per il Giro Sardegna 2019. Scegli la bici perfetta per le tue esigenze!"
     }
   },
   "lister": {
@@ -800,8 +812,9 @@
     "sign-up-today": "Iscriviti oggi",
     "already-registered": "Sei già iscritto",
     "check-inbox": "Controlla la tua casella e-mail",
-    "security-text": "La sicurezza è molto importante per noi. Per mantenere sicuro il tuo account, vorremmo chiederti di cambiare la tua password. <br><b>Fai clic sul link nell'email che ti abbiamo appena inviato. </b>",
+    "security-text": "La sicurezza è molto importante per noi. Per mantenere sicuro il tuo account, vorremmo chiederti di cambiare la tua password.<br> <br><b>Fai clic sul link nell'email che ti abbiamo appena inviato. </b>",
     "confirm-password": "Conferma password",
+    "please-change-password": "Per favore cambia la tua password",
     "save-new-password": "Salva nuova password",
     "your-name": "Il tuo nome",
     "your-email-address": "Il tuo indirizzo email",

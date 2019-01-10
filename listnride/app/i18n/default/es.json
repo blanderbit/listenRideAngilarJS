@@ -208,6 +208,18 @@
     "vatternrundan": {
       "meta-title": "Alquila una bici de carretera para el Vätternrundan 2019 | listnride",
       "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para el Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
+    },
+    "lardita": {
+      "meta-title": "Alquiler de una bici de carretera vintage para l'Ardita | listnride",
+      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para l'Ardita 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Alquiler de una bicicleta de carretera para el Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para la Granfondo Via del Sale 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+    },
+    "girosardegna": {
+      "meta-title": "Alquiler de una bicicleta de carretera para el Giro Sardegna 2019 | listnride",
+      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para el Giro Sardegna 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
     }
   },
   "lister": {
@@ -727,7 +739,7 @@
   },
   "user": {
     "verified-through": "Verificado",
-    "become-this-user": "Become this user",
+    "become-this-user": "Conviértete en este usuario",
     "own-bikes": "Bicicletas de alquiler",
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
@@ -807,9 +819,10 @@
     "newsletter-privacy-policy": "Privacy Policy News letter",
     "sign-up-today": "Sign up today",
     "already-registered": "Ya estas registrado",
-    "check-inbox": "Por favor, compruebe su e-mail",
-    "security-text": "La seguridad es muy importante para nosotros. Y esta no es solo una frase que usamos para calmarte. Con el fin de mantener su cuenta segura, nos gustaría pedirle que cambie su contraseña. <br><b>Por favor, haga clic en el enlace del correo electrónico que acabamos le enviamos. </b>",
+    "check-inbox": "Por favor, comprueba tu e-mail",
+    "security-text": "La seguridad es muy importante para nosotros. Y esta no es solo una frase que usamos para calmarte. Con el fin de mantener tu cuenta segura, nos gustaría pedirte que cambies tu contraseña.<br> <br><b>Por favor, haz clic en el enlace del correo electrónico que acabamos de enviarte. </b>",
     "confirm-password": "Confirmar contraseña",
+    "please-change-password": "Por favor cambia tu contraseña",
     "save-new-password": "Guardar nueva contraseña",
     "your-name": "Nombre",
     "your-email-address": "Correo electrónico",

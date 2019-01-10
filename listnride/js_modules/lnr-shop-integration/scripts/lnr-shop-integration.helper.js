@@ -56,16 +56,8 @@ var lnrHelper = {
       unshifts: 0
     };
 
-    if ("de" === userLang) {
-      selectedLocation = lnrConstants.translate.allLocations.de;
-      selectedSize = lnrConstants.translate.allSizes.de;
-    } else if ('nl' === userLang) {
-      selectedLocation = lnrConstants.translate.allLocations.nl;
-      selectedSize = lnrConstants.translate.allSizes.nl;
-    } else {
-      selectedLocation = lnrConstants.translate.allLocations.en;
-      selectedSize = lnrConstants.translate.allSizes.en;
-    }
+    selectedLocation = lnrConstants.translate.allLocations[userLang];
+    selectedSize = lnrConstants.translate.allSizes[userLang];
 
     // update location and size for each user
     lnrConstants.translate.allLocations.selected[userId] = selectedLocation;
@@ -101,16 +93,8 @@ var lnrHelper = {
           unshifts: 0
         };
 
-        if ("de" === userLang) {
-          selectedLocation = lnrConstants.translate.allLocations.de;
-          selectedSize = lnrConstants.translate.allSizes.de;
-        } else if ('nl' === userLang) {
-          selectedLocation = lnrConstants.translate.allLocations.nl;
-          selectedSize = lnrConstants.translate.allSizes.nl;
-        } else {
-          selectedLocation = lnrConstants.translate.allLocations.en;
-          selectedSize = lnrConstants.translate.allSizes.en;
-        }
+        selectedLocation = lnrConstants.translate.allLocations[userLang];
+        selectedSize = lnrConstants.translate.allSizes[userLang];
 
         // update location and size for each user
         lnrConstants.translate.allLocations.selected[userId] = selectedLocation;
@@ -172,9 +156,10 @@ var lnrHelper = {
   /**
    * open the size dropdown
    * @param {String} userId user id
+   * @param {String} userLang user language
    * @returns {void}
    */
-  openSizeSelector: function (userId) {
+  openSizeSelector: function (userId, userLang) {
     // element id
     var id = userId + '-lnr-size-dropdown';
 
@@ -193,13 +178,13 @@ var lnrHelper = {
       if (size > 0) {
         var readableSize = size + ' cm - ' + parseInt(size + 10) + ' cm';
       } else {
-        var readableSize = 'All sizes';
+        var readableSize = lnrConstants.translate.allSizes[userLang]
       }
 
       // HTML of the element
       var elementHTML = [
         '<div class="lnr-date-selector" ',
-        'onclick="lnrHelper.onSizeSelect(' + index + ', ' + userId + ')" ',
+        'onclick="lnrHelper.onSizeSelect(' + index + ', ' + userId + ', \'' + userLang + '\'' + ')" ',
         'id="' + selectorId + '" ',
         '<span>' + readableSize + '</span></div>'
       ].join('');
@@ -290,7 +275,7 @@ var lnrHelper = {
    * @param {String} userId user id
    * @returns {void}
    */
-  onSizeSelect: function (index, userId) {
+  onSizeSelect: function (index, userId, userLang) {
 
     // size button
     var sizeButtonId = userId + '-lnr-size-button';
@@ -307,7 +292,7 @@ var lnrHelper = {
     // and 'All' is selected
     else if (index === 0) {
       sizeButton.innerHTML = lnrConstants.translate.allSizes.selected[userId] + '<div class="dropdown-caret" style="float: right"></div>';
-      lnrHelper.renderBikesHTML(userId, rides, null);
+      lnrHelper.renderBikesHTML(userId, rides, userLang);
       return;
     }
 
@@ -333,7 +318,7 @@ var lnrHelper = {
       sizeButton.innerHTML = element;
 
       // render filtered bikes
-      lnrHelper.renderBikesHTML(userId, selectedRides, null);
+      lnrHelper.renderBikesHTML(userId, selectedRides, userLang);
     }
   },
   /*
@@ -404,7 +389,7 @@ var lnrHelper = {
         // only when user has at least 2  bikes
         if (lnrConstants.rides[userId] && lnrConstants.rides[userId].length > 1) {
           var shouldRenderLocationSelector = lnrConstants.cities.length > 1;
-          lnrHelper.renderSelectors(userId, shouldRenderLocationSelector);
+          lnrHelper.renderSelectors(userId, shouldRenderLocationSelector, userLang);
         }
         // render bikes html
         lnrHelper.renderBikesHTML(userId, lnrConstants.rides[userId], userLang);
@@ -425,7 +410,6 @@ var lnrHelper = {
    * @returns {void}
    */
   renderBikesHTML: function (userId, rides, userLang) {
-
     // add bikes grid
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
@@ -460,7 +444,7 @@ var lnrHelper = {
           rideDescription = ride.description;
 
         if (ride.size === 0) {
-          var readableSize = lnrConstants.translate.allSizes[userLang];
+          var readableSize = lnrConstants.translate.unisize[userLang];
         } else {
           var readableSize = ' ' + ride.size + '-' + parseInt(ride.size + 10) + ' cm';
         }
@@ -536,12 +520,13 @@ var lnrHelper = {
    * renders the location and size selectors
    * @param{String} userId user id
    * @param{Boolean} shouldRenderLocationSelector bool based on # of locations
+   * @param{String} userLang user language
    * @returns {void}
    */
-  renderSelectors: function (userId, shouldRenderLocationSelector) {
+  renderSelectors: function (userId, shouldRenderLocationSelector, userLang) {
     var element = lnrConstants.isSingleUserMode ? document.getElementById('listnride') : document.getElementById(userId);
     // HTML for the selectors
-    var selectors = lnrHelper.renderSelectorsHTML(userId, shouldRenderLocationSelector);
+    var selectors = lnrHelper.renderSelectorsHTML(userId, shouldRenderLocationSelector, userLang);
 
     // clear element HTML
     element.innerHTML = '';
@@ -550,7 +535,7 @@ var lnrHelper = {
     element.innerHTML += selectors;
 
     // set default values for selectors
-    lnrHelper.setDefaultSelectorValues(userId);
+    lnrHelper.setDefaultSelectorValues(userId, userLang);
 
     // close location dropdown on window click
     window.onclick = lnrHelper.closeDropDown;
@@ -561,7 +546,7 @@ var lnrHelper = {
    * @param {Boolean} shouldRenderLocationSelector bool based on # of locations
    * @returns {void}
    */
-  renderSelectorsHTML: function (id, shouldRenderLocationSelector) {
+  renderSelectorsHTML: function (id, shouldRenderLocationSelector, lang) {
     // open mdl grid
     var mdlGridOpen = '<div class="mdl-grid mdl-grid--no-spacing" style="margin-top:32px;margin-bottom:32px">';
 
@@ -571,7 +556,7 @@ var lnrHelper = {
       '<div style="margin-left:8px; margin-right:8px;">',
       '<button type="button" style="color: black;" ',
       'id="' + id + '-lnr-size-button" ',
-      'onclick="lnrHelper.openSizeSelector(' + id + ')" ',
+      'onclick="lnrHelper.openSizeSelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
       'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></button>',
       '<div id="' + id + '-lnr-size-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
@@ -607,9 +592,10 @@ var lnrHelper = {
   /**
    * set the default values for location and size selectors
    * @param {String} userId user id
+   * @param {String} userLang user language
    * @returns {void}
    */
-  setDefaultSelectorValues: function (userId) {
+  setDefaultSelectorValues: function (userId, userLang) {
 
     // location button
     var locationButton = document.getElementById(userId + '-lnr-location-button');
@@ -632,7 +618,7 @@ var lnrHelper = {
         defaultSize = lnrConstants.sizes[userId].available[0];
         // if this first available size is '0' translate it to 'All sizes'
         // else add range and cm
-        defaultSize = defaultSize === 0 ? lnrConstants.translate.allSizes[userLang] : defaultSize + '-' + parseInt(defaultSize + 10) + ' cm';
+        defaultSize = defaultSize === 0 ? lnrConstants.translate.unisize[userLang] : defaultSize + '-' + parseInt(defaultSize + 10) + ' cm';
       }
       sizeButton.innerHTML = defaultSize + '<div class="dropdown-caret" style="float: right"></div>';
     }
@@ -714,7 +700,7 @@ var lnrHelper = {
       left: left,
       top: top,
       //window url
-      url: url + '?bikeId=' + bikeId + "&shop=1",
+      url: url + '?bikeId=' + bikeId + "&shop=true",
       // open type
       type: '_blank',
       // window params

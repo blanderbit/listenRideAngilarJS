@@ -203,6 +203,18 @@
     "vatternrundan": {
       "meta-title": "Huur een racefiets voor Vätternrundan 2019 | listnride",
       "meta-description": "Met listnride huur je eenvoudig een racefiets online voor de Vätternrundan 2019. Kies de perfecte fiets die bij u past!"
+    },
+    "lardita": {
+      "meta-title": "Huur een vintage racefiets voor de Eroica I listnride",
+      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor l'Ardita 2019. Kies de perfecte fiets die bij u past!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Huur een racefiets voor de Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Granfondo Via del Sale 2019. Kies de perfecte fiets die bij u past!"
+    },
+    "girosardegna": {
+      "meta-title": "Huur een racefiets voor de Giro Sardegna 2019 | listnride",
+      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Giro Sardegna 2019. Kies de perfecte fiets die bij u past!"
     }
   },
   "lister": {
@@ -802,8 +814,9 @@
     "sign-up-today": "Meld je nu aan",
     "already-registered": "Je bent al geregistreerd",
     "check-inbox": "Controleer ajb je inbox",
-    "security-text": "Veiligheid is echt belangrijk voor ons. En dit is niet zomaar een uitspraak die we gebruiken om je tot rust te brengen. Met het oog op de veiligheid van je account willen we je vragen om je wachtwoord nu te wijzigen.<br><b>Klik op de link in de e-mail die we je zojuist hebben gestuurd.</b>",
+    "security-text": "Veiligheid is echt belangrijk voor ons. En dit is niet zomaar een uitspraak die we gebruiken om je tot rust te brengen. Met het oog op de veiligheid van je account willen we je vragen om je wachtwoord nu te wijzigen.<br><br><b>Klik op de link in de e-mail die we je zojuist hebben gestuurd.</b>",
     "confirm-password": "Bevestig wachtwoord",
+    "please-change-password": "Please change your password",
     "save-new-password": "Bewaar nieuw wachtwoord",
     "your-name": "Je naam",
     "your-email-address": "Emailadres",

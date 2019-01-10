@@ -208,6 +208,18 @@
     "vatternrundan": {
       "meta-title": "Miete ein Rennrad für die Vätternrundan 2019 | listnride",
       "meta-description": "Mit listnride kannst du dir einfach online ein Rennrad für die Vätternrundan 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
+    },
+    "lardita": {
+      "meta-title": "Miete ein Vintage Rennrad für die l'Ardita",
+      "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Mieten Sie ein Rennrad für die Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Mit listnride können Sie bequem ein Rennrad für die Granfondo Via del Sale 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
+    },
+    "girosardegna": {
+      "meta-title": "Miete ein Rennrad für den Giro Sardegna 2019 I listnride\n",
+      "meta-description": "Mit listnride können Sie einfach ein Rennrad für den Giro Sardegna 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
     }
   },
   "lister": {
@@ -810,8 +822,9 @@
     "sign-up-today": "Heute anmelden",
     "already-registered": "Du hast dich bereits angemeldet",
     "check-inbox": "Bitte prüfe deinen Posteingang.",
-    "security-text": "Sicherheit ist uns sehr wichtig. Und das ist nicht nur eine Aussage, mit der wir dich besänftigen. Zur Sicherheit deines Kontos bitten wir dich, dein Passwort zu ändern. <br><b>Klick auf den Link in der E-Mail, die wir dir gerade geschickt haben.</b>",
+    "security-text": "Sicherheit ist uns sehr wichtig. Und das ist nicht nur eine Aussage, mit der wir dich besänftigen. Zur Sicherheit deines Kontos bitten wir dich, dein Passwort zu ändern.<br> <br><b>Klick auf den Link in der E-Mail, die wir dir gerade geschickt haben.</b>",
     "confirm-password": "Passwort bestätigen",
+    "please-change-password": "Please change your password",
     "save-new-password": "Neues Passwort speichern",
     "your-name": "Dein Name",
     "your-email-address": "Deine E-Mail Adresse",

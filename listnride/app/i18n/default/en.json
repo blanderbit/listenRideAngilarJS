@@ -211,6 +211,18 @@
     "vatternrundan": {
       "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
       "meta-description": "With listnride you can easily rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+    },
+    "lardita": {
+      "meta-title": "Rent a vintage road bike for l'Ardita | listnride",
+      "meta-description": "With listnride you can easily rent a road bike online for l'Ardita 2019. Choose the perfect bike that fits your needs!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Rent a road bike for the Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "With listnride you can easily rent a road bike online for the Granfondo Via del Sale 2019. Choose the perfect bike that fits your needs!"
+    },
+    "girosardegna": {
+      "meta-title": "Rent a road bike for the Giro Sardegna 2019 | listnride",
+      "meta-description": "With listnride you can easily rent a road bike online for the Giro Sardegna 2019. Choose the perfect bike that fits your needs!"
     }
   },
   "lister": {
@@ -813,8 +825,9 @@
     "sign-up-today": "Sign up today ",
     "already-registered": "You are already signed up",
     "check-inbox": "Please check your inbox",
-    "security-text": "Security is really important for us. And this is not just a phrase that we use to make you calm. In order to keep your account secure, we would like to ask you to change your password.<br><b>Please click the link in the email that we just sent you.</b>",
+    "security-text": "Security is really important for us. And this is not just a phrase that we use to make you calm. In order to keep your account secure, we would like to ask you to change your password.<br><br><b>Please click the link in the email that we just sent you.</b>",
     "confirm-password": "Confirm password",
+    "please-change-password": "Please change your password",
     "save-new-password": "Save new password",
     "your-name": "Your name",
     "your-email-address": "Your email address",

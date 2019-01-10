@@ -98,6 +98,9 @@ angular.module('listnride', [
   'coffeespin',
   'veloraceDresden',
   'epicgrancanaria',
+  'lardita',
+  'granfondoviadelsale',
+  'girosardegna',
   //endRemoveIf(shop)
   /* app_extras_end */
 
