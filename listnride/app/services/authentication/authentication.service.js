@@ -160,7 +160,7 @@ angular.
         SignupDialogController(null, null, null, false, obj);
       };
 
-      var signupFbGlobal = function (email, fbId, fbAccessToken, profilePicture, firstName, lastName, inviteCode, requestFlow) {
+      var signupFbGlobal = function (fbAccessToken, inviteCode, requestFlow) {
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -227,22 +227,7 @@ angular.
           $mdDialog.hide();
         };
 
-        loginDialog.connectFb = function() {
-          ezfb.getLoginStatus(function(response) {
-            var fbToken = response.authResponse.accessToken;
-            if (response.status === 'connected') {
-              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                loginFbGlobal(fbToken);
-              });
-            } else {
-              ezfb.login(function(response) {
-                ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                  loginFbGlobal(fbToken);
-                });
-              }, {scope: 'email'});
-            }
-          });
-        };
+        loginDialog.connectFb = connectFb;
 
         loginDialog.resetPassword = function() {
           if (loginDialog.email) {
@@ -368,21 +353,15 @@ angular.
 
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
-          var fbToken = response.authResponse.accessToken;
-
           if (response.status === 'connected') {
-            $analytics.eventTrack('click', {category: 'Login', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
-            ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-              loginFbGlobal(fbToken);
-            });
+            loginFbGlobal(response.authResponse.accessToken);
           } else {
-            ezfb.login(function(response) {
+            ezfb.login(function (response) {
               $analytics.eventTrack('click', {category: 'Signup', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
               $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
 
-              ezfb.api('/me?fields=id,email,first_name,last_name,picture.width(600).height(600)', function(response) {
-                signupFbGlobal(response.email, response.id, fbToken, response.picture.data.url, response.first_name, response.last_name, false, requestFlow);
-              });
+              signupFbGlobal(response.authResponse.accessToken, false, requestFlow)
+
             }, {scope: 'email'});
           }
         });
