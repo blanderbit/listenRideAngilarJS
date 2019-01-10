@@ -18,7 +18,7 @@ angular.module('granfondoviadelsale', []).component('granfondoviadelsale', {
       });
 
       // booked_at = YYYY-MM-DD
-      api.get('/rides?category=30&location=Cervia%20(RA)%20,%20Emilia%20Romagna&booked_at=2019-05-05').then(
+      api.get('/rides?category=30&location=Cesenatico&booked_at=2019-05-05').then(
         function (response) {
           granfondoviadelsale.bikes = response.data.bikes;
         },

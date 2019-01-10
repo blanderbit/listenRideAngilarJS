@@ -18,7 +18,7 @@ angular.module('girosardegna', []).component('girosardegna', {
       });
 
       // booked_at = YYYY-MM-DD
-      api.get('/rides?category=30&location=Cagliari,%20Sardegna&booked_at=2019-04-21').then(
+      api.get('/rides?category=30&location=Cagliari&booked_at=2019-04-21').then(
         function (response) {
           girosardegna.bikes = response.data.bikes;
         },

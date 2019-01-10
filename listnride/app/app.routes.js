@@ -1187,7 +1187,7 @@
 
       $stateProvider.state({
         name: 'lardita',
-        url: '/lardita',
+        url: '/lardita-arezzo',
         template: '<lardita></lardita>',
         resolve: {
           data: function ($translate, ngMeta) {
@@ -1206,7 +1206,7 @@
 
       $stateProvider.state({
         name: 'granfondoviadelsale',
-        url: '/granfondoviadelsale',
+        url: '/granfondo-via-del-sale',
         template: '<granfondoviadelsale></granfondoviadelsale>',
         resolve: {
           data: function ($translate, ngMeta) {
@@ -1225,7 +1225,7 @@
 
       $stateProvider.state({
         name: 'girosardegna',
-        url: '/girosardegna',
+        url: '/giro-sardegna',
         template: '<girosardegna></girosardegna>',
         resolve: {
           data: function ($translate, ngMeta) {
