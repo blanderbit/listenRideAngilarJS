@@ -184,7 +184,7 @@ var lnrHelper = {
       // HTML of the element
       var elementHTML = [
         '<div class="lnr-date-selector" ',
-        'onclick="lnrHelper.onSizeSelect(' + index + ', ' + userId + ')" ',
+        'onclick="lnrHelper.onSizeSelect(' + index + ', ' + userId + ', \'' + userLang + '\'' + ')" ',
         'id="' + selectorId + '" ',
         '<span>' + readableSize + '</span></div>'
       ].join('');
@@ -275,7 +275,7 @@ var lnrHelper = {
    * @param {String} userId user id
    * @returns {void}
    */
-  onSizeSelect: function (index, userId) {
+  onSizeSelect: function (index, userId, userLang) {
 
     // size button
     var sizeButtonId = userId + '-lnr-size-button';
@@ -292,7 +292,7 @@ var lnrHelper = {
     // and 'All' is selected
     else if (index === 0) {
       sizeButton.innerHTML = lnrConstants.translate.allSizes.selected[userId] + '<div class="dropdown-caret" style="float: right"></div>';
-      lnrHelper.renderBikesHTML(userId, rides, null);
+      lnrHelper.renderBikesHTML(userId, rides, userLang);
       return;
     }
 
@@ -318,7 +318,7 @@ var lnrHelper = {
       sizeButton.innerHTML = element;
 
       // render filtered bikes
-      lnrHelper.renderBikesHTML(userId, selectedRides, null);
+      lnrHelper.renderBikesHTML(userId, selectedRides, userLang);
     }
   },
   /*
@@ -410,7 +410,6 @@ var lnrHelper = {
    * @returns {void}
    */
   renderBikesHTML: function (userId, rides, userLang) {
-
     // add bikes grid
     var lnr = lnrConstants.isSingleUserMode ? lnrConstants.parentElement : document.getElementById(userId);
     var gridId = userId + '-lnr-grid';
@@ -701,7 +700,7 @@ var lnrHelper = {
       left: left,
       top: top,
       //window url
-      url: url + '?bikeId=' + bikeId + "&shop=1",
+      url: url + '?bikeId=' + bikeId + "&shop=true",
       // open type
       type: '_blank',
       // window params
