@@ -1,6 +1,9 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "status-labels": {
+      "variants_available": "Variants available"
+    },
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Credit card",
