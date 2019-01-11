@@ -7,7 +7,8 @@ angular.module('bikeCard',[]).component('bikeCard', {
     bike: '<',
     booked: '<',
     home: '<',
-    seo: '<'
+    seo: '<',
+    showLabels: '<'
   },
   controller: ['$mdMedia', 'helpers',
     function BikeCardController($mdMedia, helpers) {
@@ -15,6 +16,9 @@ angular.module('bikeCard',[]).component('bikeCard', {
       bikeCard.showIcon = !bikeCard.seo && bikeCard.bike.category;
       bikeCard.from = Math.ceil(bikeCard.bike.price_from);
       bikeCard.isPhoneScreen = $mdMedia('xs');
+
+      // TODO: create logic for this and remove dummy data here
+      bikeCard.labels = ['variants_available']
     }
   ]
 });
