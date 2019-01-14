@@ -433,10 +433,10 @@ angular.module('list', ['ngLocale'])
 
         // check bikes details
         list.isDetailsValid = function () {
-          return list.form.name &&
-            list.form.brand &&
-            list.form.size &&
-            list.form.description;
+          return !(_.isEmpty(list.form.name) &&
+            _.isEmpty(list.form.brand) &&
+            _.isEmpty(list.form.size) &&
+            _.isEmpty(list.form.description));
         };
 
         // check picture is correct
