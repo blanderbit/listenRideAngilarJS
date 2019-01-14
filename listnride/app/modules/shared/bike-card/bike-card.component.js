@@ -17,8 +17,12 @@ angular.module('bikeCard',[]).component('bikeCard', {
       bikeCard.from = Math.ceil(bikeCard.bike.price_from);
       bikeCard.isPhoneScreen = $mdMedia('xs');
 
-      // TODO: create logic for this and remove dummy data here
-      bikeCard.labels = ['variants_available']
+
+      // Conditional array elements
+      // link: https://stackoverflow.com/questions/44908159/how-to-define-an-array-with-conditional-elements
+      bikeCard.labels = [
+        bikeCard.bike.is_cluster && 'variants_available'
+      ].filter(Boolean);
     }
   ]
 });
