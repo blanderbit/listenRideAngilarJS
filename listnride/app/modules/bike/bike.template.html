@@ -200,6 +200,8 @@
         <calendar
           ng-if="!bike.mobileCalendar()"
           bike-id="bike.data.id"
+          bike-size="bike.defaultSize"
+          bike-cluster-sizes="bike.availableSizes"
           price-half-day="bike.data.price_half_daily"
           price-day="bike.data.price_daily"
           price-week="bike.data.price_weekly"
@@ -210,6 +212,7 @@
           bike-availabilities="bike.data.availabilities"
           coverage-total="bike.data.coverage_total"
           country-code="bike.data.country_code"
+          cluster="bike.cluster"
         ></calendar>
       </div>
     </div>

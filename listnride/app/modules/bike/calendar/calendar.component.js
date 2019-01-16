@@ -5,6 +5,8 @@ angular.module('bike').component('calendar', {
   bindings: {
     bikeId: '<',
     bikeFamily: '<',
+    bikeSize: '<',
+    bikeClusterSizes: '<',
     bikeAvailabilities: '<',
     userId: '<',
     priceHalfDay: '<',
@@ -13,7 +15,8 @@ angular.module('bike').component('calendar', {
     prices: '<',
     requests: '<',
     coverageTotal: '<',
-    countryCode: '<'
+    countryCode: '<',
+    cluster: '<'
   },
   controller: ['$scope',
       '$localStorage',
@@ -42,6 +45,7 @@ angular.module('bike').component('calendar', {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
+            calendar.pickedBikeSize = calendar.bikeDefaultSize;
             initOverview();
             initCalendarPicker();
           });

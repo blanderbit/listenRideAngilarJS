@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers',
-    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers) {
+  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers', 'bikeOptions',
+    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeOptions) {
       var bike = this;
       bike.colorScheme = mapConfigs.colorScheme();
       bike.owner = {};
@@ -40,7 +40,19 @@ angular.module('bike',[]).component('bike', {
       api.get('/rides/' + $stateParams.bikeId).then(
         function(response) {
           bike.showAll = false;
-          bike.data = response.data;
+          bike.data = response.data.current;
+          bike.cluster = response.data.cluster;
+          bike.availableSizes = bike.cluster ? response.data.cluster.sizes : null;
+          bike.defaultSize = $stateParams.size || bike.data.size;
+
+          if (bike.availableSizes) {
+            bikeOptions.sizeOptions(false, true).then(function (resolve) {
+              _.map(bike.availableSizes, function (option) {
+                option.name = _.find(resolve, function(o) { return o.value === option.size }).label
+              });
+            });
+          }
+
           bike.is_owner = bike.data.user.id === $localStorage.userId;
           bike.owner.display_name = setName();
           bike.owner.picture = setPicture();
