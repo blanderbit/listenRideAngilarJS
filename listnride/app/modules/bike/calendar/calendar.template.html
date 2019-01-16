@@ -174,7 +174,7 @@
       <md-select
         ng-model="calendar.bikeSize"
         placeholder="{{ 'shared.pick-size' | translate}}"
-        ng-disabled="!calendar.startDate"
+        ng-disabled="!calendar.isDateValid()"
       >
         <md-option
           ng-repeat="option in calendar.bikeClusterSizes"
@@ -183,7 +183,7 @@
           {{ option.name }}
         </md-option>
       </md-select>
-      <p translate="shared.firstly-pick-dates"></p>
+      <p ng-if="!calendar.isDateValid()" translate="shared.firstly-pick-dates"></p>
     </div>
 
     <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2"></md-divider>
@@ -242,7 +242,7 @@
       <div>{{ calendar.total | currency:"€":2 }}</div>
     </div>
     <div class="text-error md-caption"
-         ng-if="calendar.bikeFamily != 2 && calendar.isDateInvalid()"
+         ng-if="calendar.bikeFamily != 2 && calendar.startDate && !calendar.isDateValid()"
          layout-padding>
       {{ 'calendar.invalid-date' | translate }}
     </div>

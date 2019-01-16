@@ -135,10 +135,10 @@ angular.module('bike').component('calendar', {
           (calendar.startDate !== undefined  && calendar.startDate.getTime() >= calendar.endDate.getTime());
       };
 
-      calendar.isDateInvalid = function() {
-        return calendar.startDate !== undefined  &&
-          calendar.startDate.getTime() >= calendar.endDate.getTime();
-      };
+      calendar.isDateValid = function() {
+        return calendar.startDate && calendar.endDate &&
+          calendar.startDate.getTime() <= calendar.endDate.getTime();
+      }
 
       /* ---------- CODE FOR THE EVENT CALENDAR 1 ---------- */
 
@@ -546,12 +546,7 @@ angular.module('bike').component('calendar', {
 
       // TODO: Replace custom receipt with modular receipt component in calendar template
       function dateChange(startDate, endDate) {
-        if (calendar.isDateInvalid()) {
-          calendar.duration = date.duration(undefined, undefined, 0);
-          calendar.subtotal = 0;
-          calendar.lnrFee = 0;
-          calendar.total = 0;
-        } else {
+        if (calendar.isDateValid()) {
           var invalidDays = countInvalidDays(startDate, endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
           calendar.durationDays = date.durationDays(startDate, endDate);
@@ -561,6 +556,11 @@ angular.module('bike').component('calendar', {
           calendar.discountRelative = calendar.discount / calendar.durationDays;
           calendar.lnrFee = prices.serviceFee;
           calendar.total = prices.total;
+        } else {
+          calendar.duration = date.duration(undefined, undefined, 0);
+          calendar.subtotal = 0;
+          calendar.lnrFee = 0;
+          calendar.total = 0;
         }
       }
 
