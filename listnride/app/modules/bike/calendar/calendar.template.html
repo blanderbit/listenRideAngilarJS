@@ -162,6 +162,11 @@
       <div>{{ calendar.duration }}</div>
     </div>
 
+    <!-- <div layout="row" layout-align="space-between center">
+      <div>{{ 'shared.subtotal' | translate }}</div>
+      <div>{{ calendar.subtotal | currency:"€":2 }}</div>
+    </div> -->
+
     <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2" ng-if="calendar.cluster"></md-divider>
 
     <div ng-if="calendar.cluster">
