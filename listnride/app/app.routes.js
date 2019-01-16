@@ -83,6 +83,22 @@
         name: 'bike',
         url: '/bikes/{bikeId:int}',
         template: '<bike></bike>',
+        reloadOnSearch: false,
+        params: {
+          hideFooter: true,
+          date: {
+            value: "",
+            squash: true
+          },
+          duration: {
+            value: "",
+            squash: true
+          },
+          size: {
+            value: "",
+            squash: true
+          }
+        },
         resolve: {
           data: function (ngMeta) {
             ngMeta.setTag("noindex", true);

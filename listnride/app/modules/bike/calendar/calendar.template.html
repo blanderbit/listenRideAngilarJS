@@ -153,7 +153,7 @@
   <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
     <div layout="row" layout-align="space-between center" ng-if="calendar.bikeFamily != 2">
       <div layout="row" layout-align="start center">
-        <div>{{ 'shared.duration' | translate }}</div>
+        <div class="md-body-2">{{ 'shared.duration' | translate }}</div>
         <div>
           <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
           <md-tooltip md-direction="right"><span translate="calendar.info"></span></md-tooltip>
@@ -162,12 +162,37 @@
       <div>{{ calendar.duration }}</div>
     </div>
 
-    <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2"></md-divider>
-
     <!-- <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.subtotal' | translate }}</div>
       <div>{{ calendar.subtotal | currency:"€":2 }}</div>
     </div> -->
+
+    <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2" ng-if="calendar.cluster"></md-divider>
+
+    <div ng-if="calendar.cluster">
+      <div class="md-body-2">{{ 'shared.pick-size' | translate }}</div>
+      <md-select
+        ng-model="calendar.bikeSize"
+        placeholder="{{ 'shared.pick-size' | translate}}"
+        ng-disabled="!calendar.startDate"
+      >
+        <md-option
+          ng-repeat="option in calendar.bikeClusterSizes"
+          value="{{option.size}}"
+        >
+          {{ option.name }}
+        </md-option>
+      </md-select>
+      <p translate="shared.firstly-pick-dates"></p>
+    </div>
+
+    <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2"></md-divider>
+
+    <div layout="row" layout-align="space-between center">
+      <div layout="row" layout-align="start center">
+        <div class="md-body-2">{{ 'shared.summary' | translate }}</div>
+      </div>
+    </div>
 
     <div layout="row" layout-align="space-between center">
       <div layout="row" layout-align="start center">
