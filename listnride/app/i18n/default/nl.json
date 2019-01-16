@@ -4,6 +4,9 @@
     "status-labels": {
       "variants_available": "Variants available"
     },
+    "summary": "Summary",
+    "pick-size": "Pick a size",
+    "firstly-pick-dates": "Please, select your rental dates first.",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kredietkaart",
