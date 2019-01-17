@@ -72,7 +72,7 @@ angular.module('booking', [])
         function getBikeData() {
           api.get('/rides/' + booking.bikeId).then(
             function (success) {
-              booking.bike = success.data;
+              booking.bike = success.data.current;
               booking.coverageTotal = booking.bike.coverage_total || 0;
               getLister();
               booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
