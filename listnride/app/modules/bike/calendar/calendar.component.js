@@ -34,8 +34,10 @@ angular.module('bike').component('calendar', {
       'verification',
       'ENV',
       'calendarHelper',
+      'notification',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
-                                $mdMedia, $window, $analytics, date, price, api, authentication, verification, ENV, calendarHelper) {
+                                $mdMedia, $window, $analytics, date, price, api, authentication,
+                                verification, ENV, calendarHelper, notification) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.calendarHelper = calendarHelper;
@@ -108,15 +110,16 @@ angular.module('bike').component('calendar', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             calendar.rider = success.data;
-            varifyOrConfirm();
+            verifyOnConfirm();
           },
           function (error) {
+            notification.show(error, 'error');
           }
         );
       };
 
 
-      function varifyOrConfirm() {
+      function verifyOnConfirm() {
         if (calendar.bikeFamily == calendar.event.familyId || (calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1)) {
           calendar.confirmBooking();
         }
@@ -333,13 +336,7 @@ angular.module('bike').component('calendar', {
             function(error) {
               bookingDialog.inProcess = false;
               calendar.requested = false;
-              $mdToast.show(
-                $mdToast.simple()
-                  // .textContent(error.data.errors[0].detail)
-                  .textContent("There was an error requesting the bike")
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(error, 'error');
             }
           );
         };
