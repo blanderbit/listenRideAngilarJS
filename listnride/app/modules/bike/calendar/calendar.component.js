@@ -134,8 +134,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isFormInvalid = function() {
-        return calendar.bikeId === undefined || calendar.startDate === undefined ||
-          (calendar.startDate !== undefined  && calendar.startDate.getTime() >= calendar.endDate.getTime());
+        return !calendar.bikeId || !calendar.isDateValid();
       };
 
       calendar.isDateValid = function() {
@@ -314,20 +313,17 @@ angular.module('bike').component('calendar', {
               calendar.current_request = success.data;
               calendar.current_request.glued = true;
               calendar.current_request.rideChat = $localStorage.userId == calendar.current_request.user.id;
-              calendar.current_request.rideChat ? calendar.current_request.chatFlow = "rideChat" : calendar.current_request.chatFlow = "listChat";
 
-              if (calendar.current_request.rideChat) {
-                calendar.current_request.rating = calendar.current_request.lister.rating_lister + calendar.current_request.lister.rating_rider;
-                if (calendar.current_request.lister.rating_lister != 0 && calendar.current_request.lister.rating_rider != 0) {
-                  calendar.current_request.rating = calendar.current_request.rating / 2
-                }
+              calendar.current_request.chatFlow = calendar.current_request.rideChat ? "rideChat" : "listChat";
+              calendar.current_request.userType = calendar.current_request.rideChat ? "lister" : "user";
+              calendar.current_request.userData = calendar.current_request[calendar.current_request.userType];
+
+              calendar.current_request.rating = calendar.current_request.userData.rating_lister + calendar.current_request.userData.rating_rider;
+              if (calendar.current_request.userData.rating_lister != 0 &&
+                  calendar.current_request.userData.rating_rider != 0) {
+                calendar.current_request.rating = calendar.current_request.rating / 2;
               }
-              else {
-                calendar.current_request.rating = calendar.current_request.user.rating_lister + calendar.current_request.user.rating_rider;
-                if (calendar.current_request.user.rating_lister != 0 && calendar.current_request.user.rating_rider != 0) {
-                  calendar.current_request.rating = calendar.current_request.rating / 2
-                }
-              }
+
               calendar.current_request.rating = Math.round(calendar.current_request.rating);
               $state.go('requests', {requestId: success.data.id});
               bookingDialog.hide();
@@ -553,6 +549,12 @@ angular.module('bike').component('calendar', {
           calendar.discountRelative = calendar.discount / calendar.durationDays;
           calendar.lnrFee = prices.serviceFee;
           calendar.total = prices.total;
+
+          if (calendar.cluster) {
+            api.get('/clusters/' + calendar.cluster.id + '?start_date=' + calendar.startDate + '&duration=' + calendar.duration).then(function (response) {
+            });
+          }
+
         } else {
           calendar.duration = date.duration(undefined, undefined, 0);
           calendar.subtotal = 0;
