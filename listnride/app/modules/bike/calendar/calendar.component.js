@@ -47,7 +47,7 @@ angular.module('bike').component('calendar', {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
-            calendar.pickedBikeSize = calendar.bikeDefaultSize;
+            calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
             initOverview();
             initCalendarPicker();
           });
@@ -101,8 +101,20 @@ angular.module('bike').component('calendar', {
 
       calendar.onBooking = function(){
         $mdDialog.hide();
-        $state.go('booking', {bikeId: calendar.bikeId, startDate: calendar.startDate, endDate: calendar.endDate});
+        $state.go('booking', {
+          bikeId: calendar.pickAvailableBike(),
+          startDate: calendar.startDate,
+          endDate: calendar.endDate
+        });
       };
+
+      calendar.pickAvailableBike = function () {
+        if (calendar.pickedBikeSize !== calendar.bikeSize) {
+          return calendar.cluster.rides[calendar.pickedBikeSize][0].id;
+        } else {
+          return calendar.bikeId;
+        }
+      }
 
       calendar.onBikeRequest = function() {
         $mdDialog.hide();
@@ -551,7 +563,11 @@ angular.module('bike').component('calendar', {
           calendar.total = prices.total;
 
           if (calendar.cluster) {
-            api.get('/clusters/' + calendar.cluster.id + '?start_date=' + calendar.startDate + '&duration=' + calendar.duration).then(function (response) {
+            api.get('/clusters/' + calendar.cluster.id + '?start_date=' + moment(calendar.startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + date.diff(startDate, endDate) / 1000).then(function (response) {
+              _.map(calendar.bikeClusterSizes, function(option){
+                if (!response.data.rides[option.size]) option.notAvailable = true;
+              });
+              calendar.cluster.rides = response.data.rides;
             });
           }
 

@@ -172,15 +172,17 @@
     <div ng-if="calendar.cluster">
       <div class="md-body-2">{{ 'shared.pick-size' | translate }}</div>
       <md-select
-        ng-model="calendar.bikeSize"
+        ng-model="calendar.pickedBikeSize"
         placeholder="{{ 'shared.pick-size' | translate}}"
         ng-disabled="!calendar.isDateValid()"
       >
         <md-option
           ng-repeat="option in calendar.bikeClusterSizes"
           value="{{option.size}}"
+          ng-disabled="option.notAvailable"
         >
           {{ option.name }}
+          <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
         </md-option>
       </md-select>
       <p ng-if="!calendar.isDateValid()" translate="shared.firstly-pick-dates"></p>
