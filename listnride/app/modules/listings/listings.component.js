@@ -17,7 +17,8 @@ angular.module('listings', []).component('listings', {
     '$mdMedia',
     'api',
     'accessControl',
-    function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
+    'notification',
+    function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl, notification) {
       if (accessControl.requireLogin()) {
         return
       }
@@ -46,24 +47,16 @@ angular.module('listings', []).component('listings', {
         listings.helper = {
           // local method to be called on duplicate success
           duplicateHelper: function (bike, duplicate_number) {
-            api.post('/rides/' + bike.id + '/duplicate', {
-              "quantity": duplicate_number
+            api.post('/rides/' + bike.id + '/duplicates', {
+              'duplicate': {
+                "quantity": duplicate_number
+              }
             }).then(function (response) {
               var job_id = response.data.job_id;
               listings.getStatus(bike, job_id, 'initialized');
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent($translate.instant('toasts.duplicate-start'))
-                  .hideDelay(4000)
-                  .position('top center')
-              );
-            }, function () {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent($translate.instant('toasts.error'))
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(response, null, 'toasts.duplicate-start');
+            }, function (error) {
+              notification.show(error, 'error');
             });
           },
 
@@ -76,21 +69,11 @@ angular.module('listings', []).component('listings', {
                 });
                 listings.bikes = listings.mirror_bikes;
                 // if (listings.input) { listings.search() }
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent($translate.instant('toasts.bike-deleted'))
-                    .hideDelay(4000)
-                    .position('top center')
-                );
+                notification.show(response, null, 'toasts.bike-deleted');
                 $analytics.eventTrack('List a Bike', { category: 'List Bike', label: 'Bike Removed' });
               },
               function (error) {
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent($translate.instant('toasts.pending-requests'))
-                    .hideDelay(4000)
-                    .position('top center')
-                );
+                notification.show(error, 'error');
               }
             );
           }
@@ -248,12 +231,7 @@ angular.module('listings', []).component('listings', {
           }
 
           function showSuccessSavedMsg() {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.availability-success-saved'))
-                .hideDelay(4000)
-                .position('top center')
-            )
+            notification.show(null, null, 'toasts.availability-success-saved');
           }
 
           function save() {
@@ -305,7 +283,7 @@ angular.module('listings', []).component('listings', {
                 }
               },
               function (error) {
-                //TODO: error
+                notification.show(error, 'error');
               }
             );
           }
@@ -319,7 +297,7 @@ angular.module('listings', []).component('listings', {
                 showSuccessSavedMsg();
               },
               function (error) {
-                //TODO: error
+                notification.show(error, 'error');
               }
             );
           }
@@ -330,15 +308,10 @@ angular.module('listings', []).component('listings', {
                 delete bike.availabilities[response.data.id];
                 availabilityDialog.setData();
                 // destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.data.id }));
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent($translate.instant('toasts.range-success-delete'))
-                    .hideDelay(4000)
-                    .position('top center')
-                )
+                notification.show(response, null, 'toasts.range-success-delete');
               },
               function (error) {
-                //TODO: show error message
+                notification.show(error, 'error');
               }
             );
           }
@@ -415,6 +388,7 @@ angular.module('listings', []).component('listings', {
             listings.getBikes();
           }
         }, function (error) {
+          notification.show(error, 'error');
         });
       };
 
@@ -509,6 +483,7 @@ angular.module('listings', []).component('listings', {
             }
           },
           function (error) {
+            notification.show(error, 'error');
           }
         );
       };
