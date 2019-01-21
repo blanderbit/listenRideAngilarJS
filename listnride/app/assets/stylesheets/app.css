@@ -206,6 +206,10 @@ md-grid-tile.ng-leave-active {
   width: 8px;
 }
 
+.spacer-horizontal {
+  width: 16px;
+}
+
 .spacer-xs {
   height: 20px;
 }
@@ -694,6 +698,11 @@ md-tooltip .md-content {
 
 .lnr-p-x2 {
   padding: 16px;
+}
+
+.lnr-ph {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .lnr-ph-x2 {
@@ -1392,6 +1401,22 @@ home #landingSection {
   transform: rotate(-9deg);
 }
 
+.lnr-badge-rounded {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+  line-height: 1;
+  text-align: center;
+}
+
+.lnr-badge-default {
+  background-color: #7ab2f8;
+  color: #fff;
+}
+
 home #landingSection #homeHeroShot {
   position: absolute;
   top: 0;
@@ -1826,6 +1851,29 @@ md-dialog md-dialog-content .month-wrapper {
 md-dialog md-dialog-content .date-picker-wrapper .month-wrapper thead {
   background: #fff;
   color: rgba(85, 85, 85, 0.75);
+}
+
+.lnr-details-step {
+  position: relative;
+  padding-left: 30px;
+}
+
+.lnr-details-step .lnr-badge-default {
+  position: absolute;
+  left: 0;
+  top: 33px;
+}
+
+.lnr-details-close.md-button.md-icon-button {
+  position: absolute;
+  top: 33px;
+  left: 100%;
+  width: 24px;
+  height: 24px;
+  min-height: auto;
+  padding: 0;
+  margin-left: -8px;
+  line-height: 1;
 }
 
 /*-----------------------------------------------------------------------------------*/

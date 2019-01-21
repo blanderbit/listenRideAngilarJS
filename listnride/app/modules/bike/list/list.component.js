@@ -85,8 +85,11 @@ angular.module('list', ['ngLocale'])
 
           list.equipmentCategories = [51, 52, 53, 54];
           list.insuranceCountries = ['DE', 'AT'];
+          list.variations = [];
 
           // methods
+          list.addInput = addInput;
+          list.removeInput = removeInput;
 
           // invocations
           // populate data for list or edit bike
@@ -196,10 +199,6 @@ angular.module('list', ['ngLocale'])
                 }
 
                 setBusinessForm();
-
-                if (!_.isEmpty(list.form.frame_size) || !_.isEmpty(list.form.frame_number) || !_.isEmpty(list.form.details)) {
-                  list.show_custom_fields = true;
-                }
               }
             },
             function (error) {
@@ -221,7 +220,8 @@ angular.module('list', ['ngLocale'])
               "image_file_2": (list.form.images[1]) ? list.form.images[1].src : undefined,
               "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
               "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
-              "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined
+              "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
+              "variations": list.variations
             })
           };
           // Hack to paste hash of Boolean params into JSONB
@@ -502,7 +502,22 @@ angular.module('list', ['ngLocale'])
 
         list.changeCategory = function () {
           list.form.subCategory = undefined;
-        }
+        };
+
+        // DETAILS TAB
+
+        function addInput() {
+          list.variations.push({
+            size: '',
+            frame_size: '',
+            bicycle_number: '',
+            frame_number: ''
+          });
+        };
+
+        function removeInput(index) {
+          list.variations.splice(index, 1);
+        };
       }
     ]
   })
