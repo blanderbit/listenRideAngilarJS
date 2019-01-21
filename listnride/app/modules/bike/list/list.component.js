@@ -157,7 +157,7 @@ angular.module('list', ['ngLocale'])
         list.populateExistingBikeData = function () {
           api.get('/rides/' + $stateParams.bikeId).then(
             function (response) {
-              var data = response.data;
+              var data = response.data.current;
               if (parseInt(data.user.id) === $localStorage.userId) {
                 var images = [];
                 for (var i = 1; i <= 5; ++i) {
