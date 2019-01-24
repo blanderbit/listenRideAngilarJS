@@ -1,12 +1,32 @@
 <md-card
   class="lnr-bike-card"
-  ng-class="{'lnr-unavailable': !listingCard.available}">
+  ng-class="{
+    'lnr-unavailable': !listingCard.available,
+    'lnr-checked-card': listingCard.isChecked,
+    'lnr-check-mode': listingCard.isCheckModeOn
+  }">
+
+  <div
+    class="lnr-bike-card__backdrop"
+    ng-if="listingCard.isCheckModeOn"
+    ng-click="listingCard.checkBike($event, listingCard.bikeId)">
+  </div>
 
   <div class="bg lnr-preload-bg">
     <status-labels
       ng-if="listingCard.showLabels"
       bike="listingCard.bike">
     </status-labels>
+    <md-checkbox
+      ng-if="listingCard.isSelectable"
+      ng-checked="listingCard.isChecked"
+      ng-click="listingCard.checkBike($event, listingCard.bikeId)"
+      md-no-ink
+      aria-label="Merging Mode"
+      class="lnr-bike-card__merge-checkbox md-checkbox__hide-label lnr-md-no-focused"
+    >
+    </md-checkbox>
+
   </div>
 
   <img

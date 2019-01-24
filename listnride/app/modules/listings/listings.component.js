@@ -38,6 +38,7 @@ angular.module('listings', []).component('listings', {
         };
         listings.currentPageIndex = +$stateParams.page || 1;
         if ($localStorage.listView) listings.listView = true;
+        listings.checkedBikes = [];
 
         // methods
         listings.getBikes = getBikes;
@@ -516,6 +517,25 @@ angular.module('listings', []).component('listings', {
       // save view mode in localstorage
       listings.changeListingMode = function(mode) {
         $localStorage.listView = mode;
+      };
+
+      listings.isCheckedBike = function(id) {
+        return exists(id, listings.checkedBikes);
+      }
+
+      listings.checkBikeTile = function($event, id) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        var idx = listings.checkedBikes.indexOf(id);
+        idx > -1 ? listings.checkedBikes.splice(idx, 1) : listings.checkedBikes.push(id);
+      }
+
+      listings.isCheckMode = function() {
+        return listings.checkedBikes.length;
+      }
+
+      function exists(item, list) {
+        return list.indexOf(item) > -1;
       };
     }
   ]

@@ -20,6 +20,9 @@ angular.module('listingCard',[]).component('listingCard', {
     view: '<',
     changeAvailability: '<',
     showLabels: '<',
+    isCheckModeOn: '<',
+    onBikeTileCheck: '<',
+    isChecked: '<',
     isSelectable: '<'
   },
   controller: ['api', 'notification', 'helpers', function ListingCardController(api, notification, helpers) {
@@ -57,6 +60,8 @@ angular.module('listingCard',[]).component('listingCard', {
           }
         );
       };
+
+      listingCard.checkBike = listingCard.onBikeTileCheck;
     }
   ]
 });
