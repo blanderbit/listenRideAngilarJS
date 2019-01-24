@@ -44,6 +44,10 @@ angular.module('listings', []).component('listings', {
         listings.getBikes = getBikes;
         listings.changePage = changePage;
         listings.isPaginationInRange = isPaginationInRange;
+        listings.canMerge = canMerge;
+        listings.mergeBikesToCluster = mergeBikesToCluster;
+        listings.canDeactivateMulti = canDeactivateMulti;
+        listings.deactivateMulti = deactivateMulti
 
         listings.helper = {
           // local method to be called on duplicate success
@@ -537,6 +541,33 @@ angular.module('listings', []).component('listings', {
       function exists(item, list) {
         return list.indexOf(item) > -1;
       };
+
+      function canMerge() {
+        return listings.checkedBikes.length > 1;
+      }
+
+      function mergeBikesToCluster() {
+        var data = JSON.stringify({ "cluster": {
+            "ride_ids": listings.checkedBikes
+          }
+        });
+        api.post("/clusters", data).then(
+          function (response) {
+            listings.checkedBikes.length = 0;
+            listings.getBikes();
+          },
+          function (error) {
+            notification.show(error, 'error');
+          }
+        );
+      }
+
+      function canDeactivateMulti() {
+        return !!listings.checkedBikes.length;
+      }
+      function deactivateMulti() {
+        // api.update
+      }
     }
   ]
 });

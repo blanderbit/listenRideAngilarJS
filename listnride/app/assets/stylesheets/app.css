@@ -2169,6 +2169,11 @@ listings .lnr-bike-listings {
   min-height: 60px;
 }
 
+.listings__actions {
+  border-right: 1px solid #e1e1e1;
+  margin-right: 8px;
+}
+
 /* TODO: OPTIMIZE */
 @-moz-document url-prefix() {
   listings #list-view {

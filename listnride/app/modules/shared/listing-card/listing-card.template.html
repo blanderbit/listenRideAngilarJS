@@ -68,7 +68,7 @@
     <md-button
       md-no-ink
       flex
-      class="md-icon-button md-primary"
+      class="md-icon-button"
       ng-disabled="listingCard.deactivated"
       ng-click="listingCard.deactivate()"
       ng-if="listingCard.available">
@@ -99,7 +99,8 @@
     <md-button
       md-no-ink
       flex
-      class="md-icon-button md-primary"
+      class="md-icon-button"
+      ng-disabled="listingCard.bike.is_cluster"
       ng-click="listingCard.duplicate(listingCard.bike, $event)">
       <md-tooltip>{{'listings.duplicate.duplicate' | translate}}</md-tooltip>
       <md-icon md-svg-icon="app/assets/ui_icons/duplicate-image.svg"></md-icon>
