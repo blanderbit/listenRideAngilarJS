@@ -1,10 +1,26 @@
-<md-card class="lnr-bike-card" ng-class="{'lnr-unavailable': !listingCard.available}">
+<md-card
+  class="lnr-bike-card"
+  ng-class="{'lnr-unavailable': !listingCard.available}">
 
-  <div class="bg lnr-preload-bg"></div>
-  <img class="md-card-image" ng-click="listingCard.view(listingCard.bikeId)" ng-src="{{ ::listingCard.imageUrl }}" alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
+  <div class="bg lnr-preload-bg">
+    <status-labels
+      ng-if="listingCard.showLabels"
+      bike="listingCard.bike">
+    </status-labels>
+  </div>
+
+  <img
+    class="md-card-image"
+    ng-click="listingCard.view(listingCard.bikeId)"
+    ng-src="{{ ::listingCard.imageUrl }}"
+    alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
 
   <md-card-title layout="row">
-    <md-icon ng-if="::listingCard.category" class="lnr-icn-lrg md-color-foreground" md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg"></md-icon>
+    <md-icon
+      ng-if="::listingCard.category"
+      class="lnr-icn-lrg md-color-foreground"
+      md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg">
+    </md-icon>
 
     <md-card-title-text flex="65" ng-click="listingCard.view(listingCard.bikeId)" class="lnr-ml lnr-bike-title" layout="column" layout-align="space-around start">
       <span class="md-subhead">{{ ::listingCard.brand }}, {{ ::listingCard.category | category | translate }}</span>

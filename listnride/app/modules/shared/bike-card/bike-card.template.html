@@ -1,7 +1,10 @@
 <a ui-sref="bike({bikeId: bikeCard.bike.id})" ng-attr-target="{{ bikeCard.isPhoneScreen ? '_self' : '_blank' }}" ng-if="bikeCard.bike">
   <md-card class="lnr-bike-card" ng-class="{'lnr-unavailable': bikeCard.booked}">
     <div class="bg lnr-preload-bg">
-      <status-labels ng-if="bikeCard.showLabels" labels="bikeCard.labels"></status-labels>
+      <status-labels
+        ng-if="bikeCard.showLabels"
+        bike="bikeCard.bike">
+      </status-labels>
     </div>
     <img class="md-card-image" ng-src="{{bikeCard.bike.image_file}}" alt="{{ ::bikeCard.bike.brand }} - {{ ::bikeCard.bike.name }}">
     <div class="after" ng-if="bikeCard.booked"><div>{{ 'shared.already-booked' | translate }}</div></div>

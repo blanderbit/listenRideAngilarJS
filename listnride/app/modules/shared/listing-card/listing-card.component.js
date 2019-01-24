@@ -18,7 +18,9 @@ angular.module('listingCard',[]).component('listingCard', {
     delete: '<',
     edit: '<',
     view: '<',
-    changeAvailability: '<'
+    changeAvailability: '<',
+    showLabels: '<',
+    isSelectable: '<'
   },
   controller: ['api', 'notification', 'helpers', function ListingCardController(api, notification, helpers) {
       var listingCard = this;
