@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', '$mdMedia', '$analytics', 'api', 'Upload',
-    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $mdMedia, $analytics, api, Upload) {
+  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', '$mdMedia', '$analytics', 'api', 'Upload', 'notification',
+    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $mdMedia, $analytics, api, Upload, notification) {
       var VerificationDialogController = function(lister, invited, callback) {
         var verificationDialog = this;
         var poller = $interval(function() {
@@ -276,6 +276,7 @@ angular.
           // reject api: error
           function (error) {
             // reject the promise
+            notification.show(error, 'error');
             deferred.reject(error);
           }
         );
