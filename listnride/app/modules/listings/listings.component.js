@@ -81,6 +81,15 @@ angular.module('listings', []).component('listings', {
                 notification.show(error, 'error');
               }
             );
+          },
+          deleteClusterHelper: function(id) {
+            api.delete("/cluster/" + id).then(function(response){
+              // TODO: ask about deleted bikes array
+              listings.getBikes();
+              notification.show(response, null, 'toasts.cluster-deleted');
+            }, function(error){
+              notification.show(error, 'error');
+            })
           }
         };
 
@@ -105,7 +114,7 @@ angular.module('listings', []).component('listings', {
         };
 
         // local method to be used as delete controller
-        var DeleteController = function (bikeId) {
+        var DeleteController = function (bike) {
           var deleteBikeDialog = this;
           // cancel dialog
           deleteBikeDialog.hide = function () {
@@ -113,7 +122,7 @@ angular.module('listings', []).component('listings', {
           };
           // delete a bike after confirmation
           deleteBikeDialog.deleteBike = function () {
-            listings.helper.deleteHelper(bikeId);
+            bike.is_cluster ? listings.helper.deleteHelper(bike.id) : listings.helper.deleteClusterHelper(bike.cluster.id);
             $mdDialog.hide();
           }
         };
@@ -419,7 +428,7 @@ angular.module('listings', []).component('listings', {
 
       // delete a bike
       // asks for confirmation
-      listings.delete = function (id, event) {
+      listings.delete = function (bike, event) {
         $mdDialog.show({
           controller: DeleteController,
           controllerAs: 'deleteBikeDialog',
@@ -430,7 +439,7 @@ angular.module('listings', []).component('listings', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           locals: {
-            bikeId: id
+            bike: bike
           }
         });
       };
