@@ -38,11 +38,16 @@ angular.module('listings', []).component('listings', {
         };
         listings.currentPageIndex = +$stateParams.page || 1;
         if ($localStorage.listView) listings.listView = true;
+        listings.checkedBikes = [];
 
         // methods
         listings.getBikes = getBikes;
         listings.changePage = changePage;
         listings.isPaginationInRange = isPaginationInRange;
+        listings.canMerge = canMerge;
+        listings.mergeBikesToCluster = mergeBikesToCluster;
+        listings.canDeactivateMulti = canDeactivateMulti;
+        listings.deactivateMulti = deactivateMulti
 
         listings.helper = {
           // local method to be called on duplicate success
@@ -76,6 +81,15 @@ angular.module('listings', []).component('listings', {
                 notification.show(error, 'error');
               }
             );
+          },
+          deleteClusterHelper: function(id) {
+            api.delete("/cluster/" + id).then(function(response){
+              // TODO: ask about deleted bikes array
+              listings.getBikes();
+              notification.show(response, null, 'toasts.cluster-deleted');
+            }, function(error){
+              notification.show(error, 'error');
+            })
           }
         };
 
@@ -100,7 +114,7 @@ angular.module('listings', []).component('listings', {
         };
 
         // local method to be used as delete controller
-        var DeleteController = function (bikeId) {
+        var DeleteController = function (bike) {
           var deleteBikeDialog = this;
           // cancel dialog
           deleteBikeDialog.hide = function () {
@@ -108,7 +122,7 @@ angular.module('listings', []).component('listings', {
           };
           // delete a bike after confirmation
           deleteBikeDialog.deleteBike = function () {
-            listings.helper.deleteHelper(bikeId);
+            bike.is_cluster ? listings.helper.deleteHelper(bike.id) : listings.helper.deleteClusterHelper(bike.cluster.id);
             $mdDialog.hide();
           }
         };
@@ -414,7 +428,7 @@ angular.module('listings', []).component('listings', {
 
       // delete a bike
       // asks for confirmation
-      listings.delete = function (id, event) {
+      listings.delete = function (bike, event) {
         $mdDialog.show({
           controller: DeleteController,
           controllerAs: 'deleteBikeDialog',
@@ -425,7 +439,7 @@ angular.module('listings', []).component('listings', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           locals: {
-            bikeId: id
+            bike: bike
           }
         });
       };
@@ -517,6 +531,52 @@ angular.module('listings', []).component('listings', {
       listings.changeListingMode = function(mode) {
         $localStorage.listView = mode;
       };
+
+      listings.isCheckedBike = function(id) {
+        return existsInObject(id, listings.checkedBikes, 'id') > -1;
+      }
+
+      listings.checkBikeTile = function($event, bike) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        var idx = existsInObject(bike.id, listings.checkedBikes, 'id');
+        idx > -1 ? listings.checkedBikes.splice(idx, 1) : listings.checkedBikes.push(bike);
+      }
+
+      listings.isCheckMode = function() {
+        return listings.checkedBikes.length;
+      }
+
+      function existsInObject(item, obj, findBy) {
+        return _.findIndex(obj, function(o) { return o[findBy] === item; });
+      };
+
+      function canMerge() {
+        return listings.checkedBikes.length > 1;
+      }
+
+      function mergeBikesToCluster() {
+        var data = JSON.stringify({ "cluster": {
+            "ride_ids": _.map(listings.checkedBikes, 'id')
+          }
+        });
+        api.post("/clusters", data).then(
+          function (response) {
+            listings.checkedBikes.length = 0;
+            listings.getBikes();
+          },
+          function (error) {
+            notification.show(error, 'error');
+          }
+        );
+      }
+
+      function canDeactivateMulti() {
+        return !!listings.checkedBikes.length;
+      }
+      function deactivateMulti() {
+        // api.update
+      }
     }
   ]
 });
