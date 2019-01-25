@@ -48,6 +48,7 @@ angular.module('listings', []).component('listings', {
         listings.mergeBikesToCluster = mergeBikesToCluster;
         listings.canDeactivateMulti = canDeactivateMulti;
         listings.deactivateMulti = deactivateMulti
+        listings.unmerge = unmerge;
 
         listings.helper = {
           // local method to be called on duplicate success
@@ -84,7 +85,6 @@ angular.module('listings', []).component('listings', {
           },
           deleteClusterHelper: function(id) {
             api.delete("/cluster/" + id).then(function(response){
-              // TODO: ask about deleted bikes array
               listings.getBikes();
               notification.show(response, null, 'toasts.cluster-deleted');
             }, function(error){
@@ -122,7 +122,7 @@ angular.module('listings', []).component('listings', {
           };
           // delete a bike after confirmation
           deleteBikeDialog.deleteBike = function () {
-            bike.is_cluster ? listings.helper.deleteHelper(bike.id) : listings.helper.deleteClusterHelper(bike.cluster.id);
+            bike.is_cluster ? listings.helper.deleteClusterHelper(bike.cluster_id) : listings.helper.deleteHelper(bike.id);
             $mdDialog.hide();
           }
         };
@@ -577,6 +577,16 @@ angular.module('listings', []).component('listings', {
       function deactivateMulti() {
         // api.update
       }
+
+      function unmerge (bike) {
+        api.delete("/cluster/" + bike.cluster_id + '/unmerge').then(function (response) {
+          listings.getBikes();
+          notification.show(response, null, 'toasts.cluster-unmerged');
+        }, function (error) {
+          notification.show(error, 'error');
+        })
+      }
+
     }
   ]
 });

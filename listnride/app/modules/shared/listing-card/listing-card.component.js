@@ -23,7 +23,8 @@ angular.module('listingCard',[]).component('listingCard', {
     isCheckModeOn: '<',
     onBikeTileCheck: '<',
     isChecked: '<',
-    isSelectable: '<'
+    isSelectable: '<',
+    unmerge: '<'
   },
   controller: ['api', 'notification', 'helpers',
     function ListingCardController(api, notification, helpers) {

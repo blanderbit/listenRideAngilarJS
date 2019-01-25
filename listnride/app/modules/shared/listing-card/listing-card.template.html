@@ -106,10 +106,20 @@
       md-no-ink
       flex
       class="md-icon-button"
-      ng-disabled="listingCard.bike.is_cluster"
+      ng-if="!listingCard.bike.is_cluster"
       ng-click="listingCard.duplicate(listingCard.bike, $event)">
       <md-tooltip>{{'listings.duplicate.duplicate' | translate}}</md-tooltip>
       <md-icon md-svg-icon="app/assets/ui_icons/duplicate-image.svg"></md-icon>
+    </md-button>
+
+    <md-button
+      md-no-ink
+      flex
+      class="md-icon-button"
+      ng-if="listingCard.bike.is_cluster"
+      ng-click="listingCard.unmerge(listingCard.bike, $event)">
+      <md-tooltip>{{ 'listings.unmerge' | translate }}</md-tooltip>
+      <md-icon md-svg-icon="app/assets/ui_icons/icn_merge.svg"></md-icon>
     </md-button>
 
     <md-button
