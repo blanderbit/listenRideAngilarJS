@@ -9,7 +9,7 @@
   <div
     class="lnr-bike-card__backdrop"
     ng-if="listingCard.isCheckModeOn"
-    ng-click="listingCard.checkBike($event, listingCard.bikeId)">
+    ng-click="listingCard.checkBike($event, listingCard.bike)">
   </div>
 
   <div class="bg lnr-preload-bg">
@@ -20,7 +20,7 @@
     <md-checkbox
       ng-if="listingCard.isSelectable"
       ng-checked="listingCard.isChecked"
-      ng-click="listingCard.checkBike($event, listingCard.bikeId)"
+      ng-click="listingCard.checkBike($event, listingCard.bike)"
       md-no-ink
       aria-label="Merging Mode"
       class="lnr-bike-card__merge-checkbox md-checkbox__hide-label lnr-md-no-focused"

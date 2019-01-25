@@ -533,22 +533,22 @@ angular.module('listings', []).component('listings', {
       };
 
       listings.isCheckedBike = function(id) {
-        return exists(id, listings.checkedBikes);
+        return existsInObject(id, listings.checkedBikes, 'id') > -1;
       }
 
-      listings.checkBikeTile = function($event, id) {
+      listings.checkBikeTile = function($event, bike) {
         $event.preventDefault();
         $event.stopPropagation();
-        var idx = listings.checkedBikes.indexOf(id);
-        idx > -1 ? listings.checkedBikes.splice(idx, 1) : listings.checkedBikes.push(id);
+        var idx = existsInObject(bike.id, listings.checkedBikes, 'id');
+        idx > -1 ? listings.checkedBikes.splice(idx, 1) : listings.checkedBikes.push(bike);
       }
 
       listings.isCheckMode = function() {
         return listings.checkedBikes.length;
       }
 
-      function exists(item, list) {
-        return list.indexOf(item) > -1;
+      function existsInObject(item, obj, findBy) {
+        return _.findIndex(obj, function(o) { return o[findBy] === item; });
       };
 
       function canMerge() {
@@ -557,7 +557,7 @@ angular.module('listings', []).component('listings', {
 
       function mergeBikesToCluster() {
         var data = JSON.stringify({ "cluster": {
-            "ride_ids": listings.checkedBikes
+            "ride_ids": _.map(listings.checkedBikes, 'id')
           }
         });
         api.post("/clusters", data).then(
