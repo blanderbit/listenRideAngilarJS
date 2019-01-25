@@ -536,6 +536,10 @@ angular.module('listings', []).component('listings', {
         return existsInObject(id, listings.checkedBikes, 'id') > -1;
       }
 
+      listings.isClusterChecked = function() {
+        return existsInObject(true, listings.checkedBikes, 'is_cluster') > -1;
+      }
+
       listings.checkBikeTile = function($event, bike) {
         $event.preventDefault();
         $event.stopPropagation();
@@ -556,6 +560,12 @@ angular.module('listings', []).component('listings', {
       }
 
       function mergeBikesToCluster() {
+        if (listings.isClusterChecked()) {
+          var idx = existsInObject(true, listings.checkedBikes, 'is_cluster');
+          var clusterBikeArray = listings.checkedBikes.splice(idx, 1)
+          return mergeBikesToExistingCluster(clusterBikeArray[0]);
+        }
+
         var data = JSON.stringify({ "cluster": {
             "ride_ids": _.map(listings.checkedBikes, 'id')
           }
@@ -569,6 +579,23 @@ angular.module('listings', []).component('listings', {
             notification.show(error, 'error');
           }
         );
+      }
+
+      function mergeBikesToExistingCluster(clusterBike) {
+        var data = JSON.stringify({
+          "cluster": {
+            "ride_ids": _.map(listings.checkedBikes, 'id')
+          }
+        });
+        api.put("/clusters/" + clusterBike.cluster_id, data).then(
+          function (response) {
+            listings.checkedBikes.length = 0;
+            listings.getBikes();
+          },
+          function (error){
+            notification.show(error, 'error');
+          }
+        )
       }
 
       function canDeactivateMulti() {
