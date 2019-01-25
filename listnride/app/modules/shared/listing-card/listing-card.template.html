@@ -26,7 +26,6 @@
       class="lnr-bike-card__merge-checkbox md-checkbox__hide-label lnr-md-no-focused"
     >
     </md-checkbox>
-
   </div>
 
   <img
@@ -42,8 +41,15 @@
       md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg">
     </md-icon>
 
-    <md-card-title-text flex="65" ng-click="listingCard.view(listingCard.bikeId)" class="lnr-ml lnr-bike-title" layout="column" layout-align="space-around start">
-      <span class="md-subhead">{{ ::listingCard.brand }}, {{ ::listingCard.category | category | translate }}</span>
+    <md-card-title-text
+      flex="65"
+      ng-click="listingCard.view(listingCard.bikeId)"
+      class="lnr-ml lnr-bike-title"
+      layout="column"
+      layout-align="space-around start">
+      <span class="md-subhead">
+        {{ ::listingCard.brand }}, {{ ::listingCard.category | category | translate }}
+      </span>
       <span>{{ ::listingCard.name }}</span>
     </md-card-title-text>
 
