@@ -318,7 +318,7 @@ angular.module('list', ['ngLocale'])
           }
 
           function editBikeUrl(){
-            return api.getApiUrl() + list.form.is_cluster ? '/clusters/' +  list.clusterData.id  + '/update_rides' : '/rides/' + $stateParams.bikeId
+            return api.getApiUrl() + (list.form.is_cluster ? '/clusters/' + list.clusterData.id + '/update_rides' : '/rides/' + $stateParams.bikeId)
           }
 
           Upload.upload({
