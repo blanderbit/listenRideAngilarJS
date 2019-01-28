@@ -606,7 +606,7 @@ angular.module('listings', []).component('listings', {
       }
 
       function unmerge (bike) {
-        api.delete("/clusters/" + bike.cluster_id + '/unmerge').then(function (response) {
+        api.put("/clusters/" + bike.cluster_id + '/unmerge').then(function (response) {
           listings.getBikes();
           notification.show(response, null, 'toasts.cluster-unmerged');
         }, function (error) {
