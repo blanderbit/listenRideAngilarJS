@@ -161,6 +161,12 @@ angular.module('list', ['ngLocale'])
           api.get('/rides/' + $stateParams.bikeId).then(
             function (response) {
               var data = response.data.current;
+
+              if (response.data.current.is_cluster){
+                list.clusterData = response.data.cluster;
+                list.variations = list.clusterData.variations;
+              }
+
               if (parseInt(data.user.id) === $localStorage.userId) {
                 var images = [];
                 for (var i = 1; i <= 5; ++i) {
@@ -224,6 +230,7 @@ angular.module('list', ['ngLocale'])
               "variations": list.variations
             })
           };
+
           // Hack to paste hash of Boolean params into JSONB
           ride.ride.accessories = JSON.stringify(ride.ride.accessories);
 
@@ -282,6 +289,11 @@ angular.module('list', ['ngLocale'])
           // Hack to paste hash of Boolean params into JSONB
           ride.ride.accessories = JSON.stringify(ride.ride.accessories);
 
+          // add variations to request data
+          if (list.form.is_cluster) {
+            ride.ride.variations = list.variations;
+          }
+
           // TODO: Refactor images logic backend & frontend
           _.forEach(list.removedImages, function (image_name) {
             ride['ride']['remove_' + image_name] = true
@@ -304,9 +316,14 @@ angular.module('list', ['ngLocale'])
               }
             });
           }
+
+          function editBikeUrl(){
+            return api.getApiUrl() + list.form.is_cluster ? '/clusters/' +  list.clusterData.id  + '/update_rides' : '/rides/' + $stateParams.bikeId
+          }
+
           Upload.upload({
             method: 'PUT',
-            url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
+            url: editBikeUrl(),
             data: ride,
             headers: {
               'Content-Type': 'application/json',
