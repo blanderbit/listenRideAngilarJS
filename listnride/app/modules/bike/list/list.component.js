@@ -164,7 +164,7 @@ angular.module('list', ['ngLocale'])
 
               if (response.data.current.is_cluster){
                 list.clusterData = response.data.cluster;
-                list.variations = list.clusterData.variations;
+                list.variations = list.clusterData.variations.filter(function(variant){return variant.id !== data.id})
               }
 
               if (parseInt(data.user.id) === $localStorage.userId) {
