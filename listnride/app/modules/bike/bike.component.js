@@ -41,14 +41,23 @@ angular.module('bike',[]).component('bike', {
         function(response) {
           bike.showAll = false;
           bike.data = response.data.current;
-          bike.cluster = response.data.cluster;
-          bike.availableSizes = bike.cluster ? response.data.cluster.sizes : null;
           bike.defaultSize = $stateParams.size || bike.data.size;
 
-          if (bike.availableSizes) {
+          if (bike.data.is_cluster) {
+            bike.cluster = response.data.cluster;
+            bike.availableSizes = bike.cluster.sizes;
+
+            // remove primary bike from variations array
+            bike.cluster.variations = _.filter(bike.cluster.variations, function (variant) {
+              return variant.id !== bike.data.id;
+            });
+
+            // get size translations
             bikeOptions.sizeOptions(false, true).then(function (resolve) {
               _.map(bike.availableSizes, function (option) {
-                option.name = _.find(resolve, function(o) { return o.value === option.size }).label
+                option.name = _.find(resolve, function (o) {
+                  return o.value === option.size
+                }).label
               });
             });
           }
