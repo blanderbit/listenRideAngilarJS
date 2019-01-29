@@ -2,7 +2,7 @@
   "shared": {
     "learn-more": "Per saperne di più",
     "status-labels": {
-      "variants_available": "Variants available"
+      "variants_available": "Varianti disponibili"
     },
     "summary": "Sommario",
     "pick-size": "Scegli una taglia",
@@ -582,7 +582,8 @@
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
     "cluster-deleted": "Le biciclette raggruppate sono state eliminate con successo",
-    "cluster-unmerged": "Bike cluster successfully unmerged",
+    "cluster-unmerged": "Raggruppamento bici rimosso con successo",
+    "cluster-merged": "Bici raggruppate con successo ",
     "add-payment-success": "Il metodo di pagamento è stato salvato",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "La password corrente non è valida.",
