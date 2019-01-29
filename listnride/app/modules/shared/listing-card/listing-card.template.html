@@ -75,7 +75,7 @@
       md-no-ink
       flex
       class="md-icon-button"
-      ng-disabled="listingCard.deactivated"
+      ng-disabled="listingCard.deactivated || listingCard.bike.is_cluster"
       ng-click="listingCard.deactivate()"
       ng-if="listingCard.available">
       <md-tooltip>{{ 'listingCard.deactivate' | translate }}</md-tooltip>
@@ -86,7 +86,7 @@
       md-no-ink
       flex
       class="md-icon-button md-primary"
-      ng-disabled="listingCard.disableActivate"
+      ng-disabled="listingCard.disableActivate || listingCard.bike.is_cluster"
       ng-click="listingCard.onActivateClick()"
       ng-if="!listingCard.available">
       <md-tooltip>{{ 'listingCard.activate' | translate }}</md-tooltip>
