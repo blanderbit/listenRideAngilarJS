@@ -500,7 +500,7 @@ angular.module('listings', []).component('listings', {
             notification.show(error, 'error');
           }
         );
-      };
+      }
 
       function changePage(pageIndex) {
         $state.go(
@@ -534,26 +534,26 @@ angular.module('listings', []).component('listings', {
 
       listings.isCheckedBike = function(id) {
         return existsInObject(id, listings.checkedBikes, 'id') > -1;
-      }
+      };
 
       listings.isClusterChecked = function() {
         return existsInObject(true, listings.checkedBikes, 'is_cluster') > -1;
-      }
+      };
 
       listings.checkBikeTile = function($event, bike) {
         $event.preventDefault();
         $event.stopPropagation();
         var idx = existsInObject(bike.id, listings.checkedBikes, 'id');
         idx > -1 ? listings.checkedBikes.splice(idx, 1) : listings.checkedBikes.push(bike);
-      }
+      };
 
       listings.isCheckMode = function() {
         return listings.checkedBikes.length;
-      }
+      };
 
       function existsInObject(item, obj, findBy) {
         return _.findIndex(obj, function(o) { return o[findBy] === item; });
-      };
+      }
 
       function canMerge() {
         return listings.checkedBikes.length > 1;
@@ -562,7 +562,7 @@ angular.module('listings', []).component('listings', {
       function mergeBikesToCluster() {
         if (listings.isClusterChecked()) {
           var idx = existsInObject(true, listings.checkedBikes, 'is_cluster');
-          var clusterBikeArray = listings.checkedBikes.splice(idx, 1)
+          var clusterBikeArray = listings.checkedBikes.splice(idx, 1);
           return mergeBikesToExistingCluster(clusterBikeArray[0]);
         }
 
