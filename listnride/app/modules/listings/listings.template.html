@@ -29,6 +29,7 @@
               md-no-ink
               flex
               class="md-icon-button"
+              ng-if="false"
               ng-disabled="!listings.canDeactivateMulti()"
               ng-click="listings.deactivateMulti()">
               <md-tooltip>{{ 'listingCard.deactivate' | translate }}</md-tooltip>
