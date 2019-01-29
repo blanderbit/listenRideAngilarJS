@@ -23,7 +23,7 @@
                   </md-icon>
                 </div>
                 <div
-                  flex="20"
+                  flex="15"
                   ng-click="listView.order('name')"
                   class="lnr-header-filter"
                   ng-mouseover="name = true"
@@ -62,12 +62,12 @@
                   </md-icon>
                 </div>
                 <div
-                  flex="15"
+                  flex="10"
                   ng-click="listView.order('size')"
                   class="lnr-header-filter"
                   ng-mouseover="size = true"
                   ng-mouseleave="size = false">
-                  {{'list.details.size' | translate}} (cm)
+                  {{'list.details.size' | translate}} <br>(cm)
                   <md-icon
                     ng-if="listView.propertyName == 'size' || size === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
@@ -125,11 +125,16 @@
               <div flex="10">
                 {{bike.bicycle_number}}
               </div>
-              <div flex="20"> {{bike.name}}</div>
+              <div flex="15"> {{bike.name}}</div>
               <div flex="15"> {{bike.brand}}</div>
               <div flex="15"> {{bike.city}}</div>
-              <div flex="15"> {{bike.size}}</div>
+              <div flex="10"> {{bike.size}}</div>
               <div flex="10"> {{bike.price_from | number : 0}}</div>
+              <status-labels
+                flex="10"
+                ng-if="listView.showLabels"
+                bike="bike">
+              </status-labels>
               <md-menu flex md-position-mode="target bottom">
                 <md-button class="md-icon-button md-primary" md-no-ink ng-click="$mdOpenMenu($event)" aria-label="Menu">
                   <md-icon md-svg-icon="app/assets/ui_icons/menu.svg"></md-icon>
