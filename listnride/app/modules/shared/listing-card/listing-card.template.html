@@ -75,7 +75,7 @@
       md-no-ink
       flex
       class="md-icon-button"
-      ng-disabled="listingCard.deactivated"
+      ng-disabled="listingCard.deactivated || listingCard.bike.is_cluster"
       ng-click="listingCard.deactivate()"
       ng-if="listingCard.available">
       <md-tooltip>{{ 'listingCard.deactivate' | translate }}</md-tooltip>
@@ -86,7 +86,7 @@
       md-no-ink
       flex
       class="md-icon-button md-primary"
-      ng-disabled="listingCard.disableActivate"
+      ng-disabled="listingCard.disableActivate || listingCard.bike.is_cluster"
       ng-click="listingCard.onActivateClick()"
       ng-if="!listingCard.available">
       <md-tooltip>{{ 'listingCard.activate' | translate }}</md-tooltip>
@@ -96,7 +96,8 @@
     <md-button
       md-no-ink
       flex
-      class="md-icon-button md-primary lnr-md-no-focused"
+      class="md-icon-button lnr-md-no-focused"
+      ng-disabled="listingCard.bike.is_cluster"
       ng-click="listingCard.changeAvailability(listingCard.bike, $event)">
       <md-tooltip>{{ 'availability.availability' | translate }}</md-tooltip>
       <md-icon md-svg-icon="app/assets/ui_icons/lnr_access_time.svg"></md-icon>
@@ -119,7 +120,7 @@
       ng-if="listingCard.bike.is_cluster"
       ng-click="listingCard.unmerge(listingCard.bike, $event)">
       <md-tooltip>{{ 'listings.unmerge' | translate }}</md-tooltip>
-      <md-icon md-svg-icon="app/assets/ui_icons/icn_merge.svg"></md-icon>
+      <md-icon md-svg-icon="app/assets/ui_icons/icn_unmerge.svg"></md-icon>
     </md-button>
 
     <md-button

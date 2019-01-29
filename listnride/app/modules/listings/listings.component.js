@@ -556,7 +556,8 @@ angular.module('listings', []).component('listings', {
       };
 
       function canMerge() {
-        return listings.checkedBikes.length > 1;
+        return listings.checkedBikes.length > 1 &&
+          _.filter(listings.checkedBikes, function(o) { return o.is_cluster; }).length <= 1
       }
 
       function mergeBikesToCluster() {
