@@ -4,9 +4,9 @@
     "status-labels": {
       "variants_available": "Variants available"
     },
-    "summary": "Summary",
-    "pick-size": "Pick a size",
-    "firstly-pick-dates": "Please, select your rental dates first.",
+    "summary": "Sommario",
+    "pick-size": "Scegli una taglia",
+    "firstly-pick-dates": "Per favore, seleziona prima le date del noleggio.",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Carta di credito",
@@ -581,6 +581,8 @@
   },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
+    "cluster-deleted": "Le biciclette raggruppate sono state eliminate con successo",
+    "cluster-unmerged": "Bike cluster successfully unmerged",
     "add-payment-success": "Il metodo di pagamento è stato salvato",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "La password corrente non è valida.",
@@ -1155,6 +1157,8 @@
   },
   "listings": {
     "my-bikes": "Le mie biciclette",
+    "merge": "Raggruppare",
+    "unmerge": "Unmerge bikes",
     "no-bikes": "Non hai ancora registrato nessuna delle tue biciclette",
     "list-a-bike": "Registra una bicicletta",
     "show-as-list": "Mostra come lista",
