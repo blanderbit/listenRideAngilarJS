@@ -47,7 +47,7 @@ angular.module('listings', []).component('listings', {
         listings.canMerge = canMerge;
         listings.mergeBikesToCluster = mergeBikesToCluster;
         listings.canDeactivateMulti = canDeactivateMulti;
-        listings.deactivateMulti = deactivateMulti
+        listings.deactivateMulti = deactivateMulti;
         listings.unmerge = unmerge;
 
         listings.helper = {
@@ -84,7 +84,7 @@ angular.module('listings', []).component('listings', {
             );
           },
           deleteClusterHelper: function(id) {
-            api.delete("/cluster/" + id).then(function(response){
+            api.delete("/clusters/" + id).then(function(response){
               listings.getBikes();
               notification.show(response, null, 'toasts.cluster-deleted');
             }, function(error){
