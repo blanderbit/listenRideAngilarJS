@@ -573,6 +573,7 @@ angular.module('listings', []).component('listings', {
         });
         api.post("/clusters", data).then(
           function (response) {
+            notification.show(response, null, 'toasts.cluster-merged');
             listings.checkedBikes.length = 0;
             listings.getBikes();
           },
@@ -590,6 +591,7 @@ angular.module('listings', []).component('listings', {
         });
         api.put("/clusters/" + clusterBike.cluster_id, data).then(
           function (response) {
+            notification.show(response, null, 'toasts.cluster-merged');
             listings.checkedBikes.length = 0;
             listings.getBikes();
           },
