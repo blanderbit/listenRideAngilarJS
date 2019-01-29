@@ -592,6 +592,7 @@
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
     "cluster-deleted": "Zusammengehörige Bikes erfolgreich gelöscht",
     "cluster-unmerged": "Bike cluster successfully unmerged",
+    "cluster-merged": "Bikes successfully merged into cluster",
     "add-payment-success": "Die Zahlungsmethode wurde gespeichert",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "Das aktuelle Passwort ist ungültig.",

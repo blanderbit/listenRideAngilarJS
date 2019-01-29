@@ -587,6 +587,7 @@
     "update-profile-success": "Je profiel is geactualiseerd.",
     "cluster-deleted": "Fietskluster succesvol verwijderd",
     "cluster-unmerged": "Bike cluster successfully unmerged",
+    "cluster-merged": "Bikes successfully merged into cluster",
     "add-payment-success": "Betaalmethode is opgeslagen",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "Het huidige wachtwoord is ongeldig.",
