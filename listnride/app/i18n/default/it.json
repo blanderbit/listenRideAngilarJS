@@ -7,7 +7,7 @@
     "summary": "Sommario",
     "pick-size": "Scegli una taglia",
     "firstly-pick-dates": "Per favore, seleziona prima le date del noleggio.",
-    "remove": "Remove",
+    "remove": "Rimuovere",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Carta di credito",
@@ -981,7 +981,8 @@
     },
     "details": {
       "header": "Qual è il nome, dimensione e marca della tua bicicletta?",
-      "variations-add": "Add variant",
+      "variations-add": "Aggiungi variante",
+      "variations-header": "Quante varianti vorresti aggiungere?",
       "hint": "Inserisci la marca, il nome e una descrizione della tua bicicletta. Il nome dovrebbe includere il modello e descrivere la bicicletta. per esempio. Gazelle, Tour Populair 2013. Quindi selezionare un intervallo per l'altezza adeguata dei ciclisti.",
       "label": "Dettagli",
       "brand": "Marca",

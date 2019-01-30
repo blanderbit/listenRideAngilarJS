@@ -7,7 +7,7 @@
     "summary": "Resumen",
     "pick-size": "Elige un tamaño",
     "firstly-pick-dates": "Por favor, selecciona sus fechas de alquiler primero.",
-    "remove": "Remove",
+    "remove": "Eliminar",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Tarjeta de crédito",
@@ -989,7 +989,8 @@
     },
     "details": {
       "header": "¿Cuál es el nombre, tamaño y marca de tu bici?",
-      "variations-add": "Add variant",
+      "variations-add": "Añadir variantes",
+      "variations-header": "¿Cuántas variantes te gustaría agregar?",
       "hint": "Introduce la marca, nombre y descripción de la bici. El nombre debe incluir el modelo y descripción detallada de la bici. P. ej. Gazelle, Tour Populair, 2013. A continuación, selecciona un rango de altura adecuada de los ciclistas.",
       "label": "Detalles",
       "brand": "Marca",
