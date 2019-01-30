@@ -463,7 +463,7 @@ angular.module('list', ['ngLocale'])
         list.isDetailsValid = function () {
           return !!(list.form.name &&
             list.form.brand &&
-            list.form.size &&
+            (list.form.size || list.form.size === 0) &&
             list.form.description &&
             list.isVariationsValid());
         };
