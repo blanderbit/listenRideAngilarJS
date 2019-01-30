@@ -448,12 +448,24 @@ angular.module('list', ['ngLocale'])
           return list.form.subCategory !== undefined;
         };
 
+        list.isVariationsValid = function () {
+          var isValid = true;
+
+          if (list.variations) {
+            _.forEach(list.variations, function (item) {
+              isValid = isValid && item.size;
+            });
+          }
+          return isValid;
+        };
+
         // check bikes details
         list.isDetailsValid = function () {
-          return !(_.isEmpty(list.form.name) &&
-            _.isEmpty(list.form.brand) &&
-            _.isEmpty(list.form.size) &&
-            _.isEmpty(list.form.description));
+          return !!(list.form.name &&
+            list.form.brand &&
+            list.form.size &&
+            list.form.description &&
+            list.isVariationsValid());
         };
 
         // check picture is correct
