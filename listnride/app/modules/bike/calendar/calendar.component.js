@@ -3,6 +3,8 @@ angular.module('bike').component('calendar', {
   templateUrl: 'app/modules/bike/calendar/calendar.template.html',
   controllerAs: 'calendar',
   bindings: {
+    bike: '<',
+    bikeCluster: '<',
     bikeId: '<',
     bikeFamily: '<',
     bikeSize: '<',
@@ -132,13 +134,17 @@ angular.module('bike').component('calendar', {
 
 
       function verifyOnConfirm() {
-        if (calendar.bikeFamily == calendar.event.familyId || (calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1)) {
+        if (calendar.bikeFamily == calendar.event.familyId || isUserVerified()) {
           calendar.confirmBooking();
         }
         else {
           calendar.requested = false;
           verification.openDialog(false, false, false, calendar.confirmBooking);
         }
+      }
+
+      function isUserVerified() {
+        return calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1;
       }
 
       calendar.promptAuthentication = function(event) {
@@ -521,19 +527,40 @@ angular.module('bike').component('calendar', {
           _.some(calendar.bikeOwner.opening_hours.hours, Array)
       }
 
+      // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date
       function isReserved(date) {
-        for (var i = 0; i < calendar.requests.length; ++i) {
-          var start = new Date(calendar.requests[i].start_date_tz);
-          start.setHours(0,0,0,0);
-          var end = new Date(calendar.requests[i].end_date_tz);
-          end.setHours(0,0,0,0);
+        return isReservedPrimary(date) && isAllClusterReserved(date);
+      }
 
-          if (start.getTime() <= date.getTime()
-            && date.getTime() <= end.getTime()) {
+      function isReservedDate(date, requests) {
+        for (var i = 0; i < requests.length; ++i) {
+          var start = new Date(requests[i].start_date_tz);
+          start.setHours(0, 0, 0, 0);
+          var end = new Date(requests[i].end_date_tz);
+          end.setHours(0, 0, 0, 0);
+
+          if (start.getTime() <= date.getTime() &&
+            date.getTime() <= end.getTime()) {
             return true;
           }
         }
         return false;
+      }
+
+      function isReservedPrimary(date) {
+        return isReservedDate(date, calendar.requests);
+      }
+
+      function isAllClusterReserved(date) {
+        // for single bike always return true
+        if (!calendar.bike.is_cluster) return true;
+
+        var isClusterBikeReserved = true;
+        _.forEach(calendar.bikeCluster.variations, function(variant) {
+          isClusterBikeReserved = isClusterBikeReserved && isReservedDate(date, variant.requests)
+        });
+
+        return isClusterBikeReserved;
       }
 
       function initOverview() {
