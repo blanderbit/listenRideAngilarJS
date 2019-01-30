@@ -5,6 +5,7 @@ angular.module('statusLabels', []).component('statusLabels', {
   controllerAs: 'statusLabels',
   bindings: {
     bike: '<',
+    minifiedView: '<'
   },
   controller: [function StatusLabelsController() {
       var statusLabels = this;
