@@ -7,6 +7,7 @@
     "summary": "Overzicht",
     "pick-size": "Kies een maat",
     "firstly-pick-dates": "Selecteer eerst een dag",
+    "remove": "Remove",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kredietkaart",
@@ -980,6 +981,7 @@
     },
     "details": {
       "header": "Welke naam geef je jouw fiets en welk Merk en grootte is het?",
+      "variations-add": "Add variant",
       "hint": "Vul het merk, de naam en beschrijving van je fiets in. De naam is vrij te kiezen en kan bijvoorbeeld het model zijn. Bijv. Gazelle, Tour Populair, 2013. Kies de passende lichaamslengte voor het rijden van de fiets.",
       "label": "Details",
       "brand": "Merk",

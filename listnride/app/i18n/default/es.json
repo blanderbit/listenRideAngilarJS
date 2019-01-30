@@ -7,6 +7,7 @@
     "summary": "Resumen",
     "pick-size": "Elige un tamaño",
     "firstly-pick-dates": "Por favor, selecciona sus fechas de alquiler primero.",
+    "remove": "Remove",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Tarjeta de crédito",
@@ -590,8 +591,8 @@
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
     "cluster-deleted": "Bicicletas borradas con éxito",
-    "cluster-unmerged": "Bike cluster successfully unmerged",
-    "cluster-merged": "Bikes successfully merged into cluster",
+    "cluster-unmerged": "Grupo de bicicletas desagrupado",
+    "cluster-merged": "Las bicicletas se agruparon con éxito",
     "add-payment-success": "Guardando método de pago",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "La contraseña actual no es válida.",
@@ -988,6 +989,7 @@
     },
     "details": {
       "header": "¿Cuál es el nombre, tamaño y marca de tu bici?",
+      "variations-add": "Add variant",
       "hint": "Introduce la marca, nombre y descripción de la bici. El nombre debe incluir el modelo y descripción detallada de la bici. P. ej. Gazelle, Tour Populair, 2013. A continuación, selecciona un rango de altura adecuada de los ciclistas.",
       "label": "Detalles",
       "brand": "Marca",
