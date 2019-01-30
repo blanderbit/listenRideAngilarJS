@@ -33,7 +33,7 @@
         <div class="spacer-xs"></div>
 
         <div class="lnr-list-title ">
-          <h3 class="md-subhead">{{ 'list.details.header' | translate }}</h3>
+          <h3 class="md-subhead">{{ 'list.details.variations-header' | translate }}</h3>
         </div>
 
         <div layout="row" layout-align="space-between center" class="lnr-details-step" layout-wrap>
@@ -64,48 +64,60 @@
           </md-input-container>
         </div>
 
-        <div ng-repeat="input in detailsTab.parent.variations" layout="row" layout-align="space-between center" class="lnr-details-step" layout-wrap>
-          <span class="lnr-badge-rounded lnr-badge-default">{{$index+2}}</span>
+        <div ng-repeat="input in detailsTab.parent.variations">
+          <div hide-gt-sm ng-if="$index !== 0" class="lnr-pb-x2"></div>
+          <md-divider hide-gt-sm class="lnr-mh-x2 lnr-pb"></md-divider>
+          <div layout="row" layout-align="space-between center" class="lnr-details-step" layout-wrap>
+            <span class="lnr-badge-rounded lnr-badge-default">{{$index+2}}</span>
 
-          <md-input-container flex="100" flex-gt-sm="25" flex-gt-xs="50" class="lnr-ph">
-            <label>{{ 'list.details.size' | translate }}</label>
-            <md-select required ng-model="detailsTab.parent.variations[$index].size">
-              <md-option ng-repeat="size in detailsTab.parent.sizeOptions" value="{{ size.value }}">
-                {{ size.label }}
-              </md-option>
-            </md-select>
-          </md-input-container>
+            <md-input-container flex="100" flex-gt-sm="25" flex-gt-xs="50" class="lnr-ph">
+              <label>{{ 'list.details.size' | translate }}</label>
+              <md-select required ng-model="detailsTab.parent.variations[$index].size">
+                <md-option ng-repeat="size in detailsTab.parent.sizeOptions" value="{{ size.value }}">
+                  {{ size.label }}
+                </md-option>
+              </md-select>
+            </md-input-container>
 
-          <md-input-container flex="100" flex-gt-sm="25" flex-gt-xs="50" class="lnr-ph">
-            <label>{{ 'list.details.frame-size' | translate }}</label>
-            <input name="frame_size" ng-model="detailsTab.parent.variations[$index].frame_size" maxlength="25">
-          </md-input-container>
+            <md-input-container flex="100" flex-gt-sm="25" flex-gt-xs="50" class="lnr-ph">
+              <label>{{ 'list.details.frame-size' | translate }}</label>
+              <input name="frame_size" ng-model="detailsTab.parent.variations[$index].frame_size" maxlength="25">
+            </md-input-container>
 
-          <md-input-container flex="100" flex-gt-sm="25" flex-gt-xs="50" class="lnr-ph">
-            <label>{{ 'list.details.bicycle-number' | translate }}</label>
-            <input name="bicycle_number" ng-model="detailsTab.parent.variations[$index].bicycle_number" maxlength="25">
-          </md-input-container>
+            <md-input-container flex="100" flex-gt-sm="25" flex-gt-xs="50" class="lnr-ph">
+              <label>{{ 'list.details.bicycle-number' | translate }}</label>
+              <input name="bicycle_number" ng-model="detailsTab.parent.variations[$index].bicycle_number" maxlength="25">
+            </md-input-container>
 
           <md-input-container flex="100" flex-gt-sm="25" flex-gt-xs="50" class="lnr-ph">
             <label>{{ 'list.details.frame-number' | translate }}</label>
             <input name="frame_number" ng-model="detailsTab.parent.variations[$index].frame_number" maxlength="25">
           </md-input-container>
           <md-button
+            hide-xs
+            hide-sm
             class="lnr-details-close md-icon-button md-warn"
             ng-if="detailsTab.parent.isListMode"
             ng-click="detailsTab.parent.removeInput($index)">
-
-            <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
-          </md-button>
+              <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
+            </md-button>
+            <a
+              hide-gt-sm
+              class="lnr-details-close lnr-link md-warn"
+              ng-click="detailsTab.parent.removeInput($index)">
+                {{ 'shared.remove' | translate }}
+            </a>
+          </div>
         </div>
 
         <div
           layout="row"
           layout-align="end none">
           <a
-            class="lnr-link"
+            class="lnr-link lnr-mv"
             ng-if="detailsTab.parent.isListMode"
-            ng-click="detailsTab.parent.addInput()">Add variant
+            ng-click="detailsTab.parent.addInput()">
+            {{ 'list.details.variations-add' | translate}}
           </a>
         </div>
 
@@ -118,7 +130,10 @@
       <md-button class="md-lined" ng-click="detailsTab.parent.previousTab()">
         {{ 'list.back' | translate }}
       </md-button>
-      <md-button class="md-raised md-primary" ng-disabled="!detailsTab.parent.isDetailsValid() && detailsTab.parent.isListMode" ng-click="detailsTab.parent.nextTab()">
+      <md-button
+              class="md-raised md-primary"
+              ng-disabled="!detailsTab.parent.isDetailsValid()"
+              ng-click="detailsTab.parent.nextTab()">
         {{ 'list.next' | translate }}
       </md-button>
     </div>
