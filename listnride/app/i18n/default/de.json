@@ -7,6 +7,7 @@
     "summary": "Zusammenfassung",
     "pick-size": "Wähle eine Größe aus",
     "firstly-pick-dates": "Wähle zuerst die Miettage aus",
+    "remove": "Remove",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kreditkarte",
@@ -990,6 +991,7 @@
     },
     "details": {
       "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",
+      "variations-add": "Add variant",
       "hint": "Gib Marke, Name und Beschreibung deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
       "label": "Details",
       "brand": "Marke",

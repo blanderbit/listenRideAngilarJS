@@ -7,6 +7,7 @@
     "summary": "Overview",
     "pick-size": "Pick a size",
     "firstly-pick-dates": "Please, select your rental dates first.",
+    "remove": "Remove",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Credit card",
@@ -993,6 +994,7 @@
     },
     "details": {
       "header": "What is your bike name, size & brand?",
+      "variations-add": "Add variant",
       "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
       "label": "Details",
       "brand": "Brand",
