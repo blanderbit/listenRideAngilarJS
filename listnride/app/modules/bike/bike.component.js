@@ -60,6 +60,10 @@ angular.module('bike',[]).component('bike', {
                 }).label
               });
             });
+
+            // change some params to cluster merged params
+            bike.data.accessories = bike.cluster.accessories;
+            bike.data.ratings = bike.cluster.ratings;
           }
 
           bike.is_owner = bike.data.user.id === $localStorage.userId;
