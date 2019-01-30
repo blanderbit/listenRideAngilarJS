@@ -994,7 +994,8 @@
     },
     "details": {
       "header": "What is your bike name, size & brand?",
-      "variations-add": "Add variant",
+      "variations-add": "Add variants",
+      "variations-header": "How many variants would you like to add?",
       "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
       "label": "Details",
       "brand": "Brand",
