@@ -495,7 +495,7 @@ angular.module('booking', [])
             ride_id: booking.bikeId,
             start_date: startDate_utc.toISOString(),
             end_date: endDate_utc.toISOString(),
-            instant: booking.shopBooking,
+            instant: !!booking.shopBooking,
             insurance: {
               premium: booking.isPremium
             }
