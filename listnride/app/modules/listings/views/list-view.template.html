@@ -147,10 +147,9 @@
                       {{'listingCard.edit-bike' | translate}}
                     </md-button>
                   </md-menu-item>
-                  <md-menu-item>
+                  <md-menu-item ng-if="bike.is_cluster">
                     <md-button
                       md-no-ink
-                      ng-if="bike.is_cluster"
                       ng-click="listView.unmerge(bike, $event)">
                       {{ 'listings.unmerge' | translate }}
                     </md-button>
