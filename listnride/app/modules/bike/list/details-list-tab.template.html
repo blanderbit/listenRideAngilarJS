@@ -103,6 +103,7 @@
             </md-button>
             <a
               hide-gt-sm
+              ng-if="detailsTab.parent.isListMode"
               class="lnr-details-close lnr-link md-warn"
               ng-click="detailsTab.parent.removeInput($index)">
                 {{ 'shared.remove' | translate }}
