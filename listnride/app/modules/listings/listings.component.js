@@ -17,7 +17,8 @@ angular.module('listings', []).component('listings', {
     '$mdMedia',
     'api',
     'accessControl',
-    function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl) {
+    'notification',
+    function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl, notification) {
       if (accessControl.requireLogin()) {
         return
       }
@@ -37,33 +38,31 @@ angular.module('listings', []).component('listings', {
         };
         listings.currentPageIndex = +$stateParams.page || 1;
         if ($localStorage.listView) listings.listView = true;
+        listings.checkedBikes = [];
 
         // methods
         listings.getBikes = getBikes;
         listings.changePage = changePage;
         listings.isPaginationInRange = isPaginationInRange;
+        listings.canMerge = canMerge;
+        listings.mergeBikesToCluster = mergeBikesToCluster;
+        listings.canDeactivateMulti = canDeactivateMulti;
+        listings.deactivateMulti = deactivateMulti;
+        listings.unmerge = unmerge;
 
         listings.helper = {
           // local method to be called on duplicate success
           duplicateHelper: function (bike, duplicate_number) {
-            api.post('/rides/' + bike.id + '/duplicate', {
-              "quantity": duplicate_number
+            api.post('/rides/' + bike.id + '/duplicates', {
+              'duplicate': {
+                "quantity": duplicate_number
+              }
             }).then(function (response) {
               var job_id = response.data.job_id;
               listings.getStatus(bike, job_id, 'initialized');
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent($translate.instant('toasts.duplicate-start'))
-                  .hideDelay(4000)
-                  .position('top center')
-              );
-            }, function () {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent($translate.instant('toasts.error'))
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(response, null, 'toasts.duplicate-start');
+            }, function (error) {
+              notification.show(error, 'error');
             });
           },
 
@@ -76,23 +75,21 @@ angular.module('listings', []).component('listings', {
                 });
                 listings.bikes = listings.mirror_bikes;
                 // if (listings.input) { listings.search() }
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent($translate.instant('toasts.bike-deleted'))
-                    .hideDelay(4000)
-                    .position('top center')
-                );
+                notification.show(response, null, 'toasts.bike-deleted');
                 $analytics.eventTrack('List a Bike', { category: 'List Bike', label: 'Bike Removed' });
               },
               function (error) {
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent($translate.instant('toasts.pending-requests'))
-                    .hideDelay(4000)
-                    .position('top center')
-                );
+                notification.show(error, 'error');
               }
             );
+          },
+          deleteClusterHelper: function(id) {
+            api.delete("/clusters/" + id).then(function(response){
+              listings.getBikes();
+              notification.show(response, null, 'toasts.cluster-deleted');
+            }, function(error){
+              notification.show(error, 'error');
+            })
           }
         };
 
@@ -117,7 +114,7 @@ angular.module('listings', []).component('listings', {
         };
 
         // local method to be used as delete controller
-        var DeleteController = function (bikeId) {
+        var DeleteController = function (bike) {
           var deleteBikeDialog = this;
           // cancel dialog
           deleteBikeDialog.hide = function () {
@@ -125,7 +122,7 @@ angular.module('listings', []).component('listings', {
           };
           // delete a bike after confirmation
           deleteBikeDialog.deleteBike = function () {
-            listings.helper.deleteHelper(bikeId);
+            bike.is_cluster ? listings.helper.deleteClusterHelper(bike.cluster_id) : listings.helper.deleteHelper(bike.id);
             $mdDialog.hide();
           }
         };
@@ -248,12 +245,7 @@ angular.module('listings', []).component('listings', {
           }
 
           function showSuccessSavedMsg() {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent($translate.instant('toasts.availability-success-saved'))
-                .hideDelay(4000)
-                .position('top center')
-            )
+            notification.show(null, null, 'toasts.availability-success-saved');
           }
 
           function save() {
@@ -305,7 +297,7 @@ angular.module('listings', []).component('listings', {
                 }
               },
               function (error) {
-                //TODO: error
+                notification.show(error, 'error');
               }
             );
           }
@@ -319,7 +311,7 @@ angular.module('listings', []).component('listings', {
                 showSuccessSavedMsg();
               },
               function (error) {
-                //TODO: error
+                notification.show(error, 'error');
               }
             );
           }
@@ -330,15 +322,10 @@ angular.module('listings', []).component('listings', {
                 delete bike.availabilities[response.data.id];
                 availabilityDialog.setData();
                 // destroyInput(_.findIndex(availabilityDialog.inputs, { 'id': response.data.id }));
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent($translate.instant('toasts.range-success-delete'))
-                    .hideDelay(4000)
-                    .position('top center')
-                )
+                notification.show(response, null, 'toasts.range-success-delete');
               },
               function (error) {
-                //TODO: show error message
+                notification.show(error, 'error');
               }
             );
           }
@@ -415,6 +402,7 @@ angular.module('listings', []).component('listings', {
             listings.getBikes();
           }
         }, function (error) {
+          notification.show(error, 'error');
         });
       };
 
@@ -440,7 +428,7 @@ angular.module('listings', []).component('listings', {
 
       // delete a bike
       // asks for confirmation
-      listings.delete = function (id, event) {
+      listings.delete = function (bike, event) {
         $mdDialog.show({
           controller: DeleteController,
           controllerAs: 'deleteBikeDialog',
@@ -451,7 +439,7 @@ angular.module('listings', []).component('listings', {
           closeTo: angular.element(document.body),
           clickOutsideToClose: true,
           locals: {
-            bikeId: id
+            bike: bike
           }
         });
       };
@@ -509,9 +497,10 @@ angular.module('listings', []).component('listings', {
             }
           },
           function (error) {
+            notification.show(error, 'error');
           }
         );
-      };
+      }
 
       function changePage(pageIndex) {
         $state.go(
@@ -542,6 +531,92 @@ angular.module('listings', []).component('listings', {
       listings.changeListingMode = function(mode) {
         $localStorage.listView = mode;
       };
+
+      listings.isCheckedBike = function(id) {
+        return existsInObject(id, listings.checkedBikes, 'id') > -1;
+      };
+
+      listings.isClusterChecked = function() {
+        return existsInObject(true, listings.checkedBikes, 'is_cluster') > -1;
+      };
+
+      listings.checkBikeTile = function($event, bike) {
+        $event.preventDefault();
+        $event.stopPropagation();
+        var idx = existsInObject(bike.id, listings.checkedBikes, 'id');
+        idx > -1 ? listings.checkedBikes.splice(idx, 1) : listings.checkedBikes.push(bike);
+      };
+
+      listings.isCheckMode = function() {
+        return listings.checkedBikes.length;
+      };
+
+      function existsInObject(item, obj, findBy) {
+        return _.findIndex(obj, function(o) { return o[findBy] === item; });
+      }
+
+      function canMerge() {
+        return listings.checkedBikes.length > 1 &&
+          _.filter(listings.checkedBikes, function(o) { return o.is_cluster; }).length <= 1
+      }
+
+      function mergeBikesToCluster() {
+        if (listings.isClusterChecked()) {
+          var idx = existsInObject(true, listings.checkedBikes, 'is_cluster');
+          var clusterBikeArray = listings.checkedBikes.splice(idx, 1);
+          return mergeBikesToExistingCluster(clusterBikeArray[0]);
+        }
+
+        var data = JSON.stringify({ "cluster": {
+            "ride_ids": _.map(listings.checkedBikes, 'id')
+          }
+        });
+        api.post("/clusters", data).then(
+          function (response) {
+            notification.show(response, null, 'toasts.cluster-merged');
+            listings.checkedBikes.length = 0;
+            listings.getBikes();
+          },
+          function (error) {
+            notification.show(error, 'error');
+          }
+        );
+      }
+
+      function mergeBikesToExistingCluster(clusterBike) {
+        var data = JSON.stringify({
+          "cluster": {
+            "ride_ids": _.map(listings.checkedBikes, 'id')
+          }
+        });
+        api.put("/clusters/" + clusterBike.cluster_id, data).then(
+          function (response) {
+            notification.show(response, null, 'toasts.cluster-merged');
+            listings.checkedBikes.length = 0;
+            listings.getBikes();
+          },
+          function (error){
+            notification.show(error, 'error');
+          }
+        )
+      }
+
+      function canDeactivateMulti() {
+        return !!listings.checkedBikes.length;
+      }
+      function deactivateMulti() {
+        // api.update
+      }
+
+      function unmerge (bike) {
+        api.put("/clusters/" + bike.cluster_id + '/unmerge').then(function (response) {
+          listings.getBikes();
+          notification.show(response, null, 'toasts.cluster-unmerged');
+        }, function (error) {
+          notification.show(error, 'error');
+        })
+      }
+
     }
   ]
 });

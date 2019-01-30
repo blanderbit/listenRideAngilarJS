@@ -85,8 +85,11 @@ angular.module('list', ['ngLocale'])
 
           list.equipmentCategories = [51, 52, 53, 54];
           list.insuranceCountries = ['DE', 'AT'];
+          list.variations = [];
 
           // methods
+          list.addInput = addInput;
+          list.removeInput = removeInput;
 
           // invocations
           // populate data for list or edit bike
@@ -157,7 +160,13 @@ angular.module('list', ['ngLocale'])
         list.populateExistingBikeData = function () {
           api.get('/rides/' + $stateParams.bikeId).then(
             function (response) {
-              var data = response.data;
+              var data = response.data.current;
+
+              if (response.data.current.is_cluster){
+                list.clusterData = response.data.cluster;
+                list.variations = list.clusterData.variations.filter(function(variant){return variant.id !== data.id})
+              }
+
               if (parseInt(data.user.id) === $localStorage.userId) {
                 var images = [];
                 for (var i = 1; i <= 5; ++i) {
@@ -196,10 +205,6 @@ angular.module('list', ['ngLocale'])
                 }
 
                 setBusinessForm();
-
-                if (!_.isEmpty(list.form.frame_size) || !_.isEmpty(list.form.frame_number) || !_.isEmpty(list.form.details)) {
-                  list.show_custom_fields = true;
-                }
               }
             },
             function (error) {
@@ -221,9 +226,11 @@ angular.module('list', ['ngLocale'])
               "image_file_2": (list.form.images[1]) ? list.form.images[1].src : undefined,
               "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
               "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
-              "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined
+              "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
+              "variations": list.variations
             })
           };
+
           // Hack to paste hash of Boolean params into JSONB
           ride.ride.accessories = JSON.stringify(ride.ride.accessories);
 
@@ -282,6 +289,11 @@ angular.module('list', ['ngLocale'])
           // Hack to paste hash of Boolean params into JSONB
           ride.ride.accessories = JSON.stringify(ride.ride.accessories);
 
+          // add variations to request data
+          if (list.form.is_cluster) {
+            ride.ride.variations = list.variations;
+          }
+
           // TODO: Refactor images logic backend & frontend
           _.forEach(list.removedImages, function (image_name) {
             ride['ride']['remove_' + image_name] = true
@@ -304,9 +316,14 @@ angular.module('list', ['ngLocale'])
               }
             });
           }
+
+          function editBikeUrl(){
+            return api.getApiUrl() + (list.form.is_cluster ? '/clusters/' + list.clusterData.id + '/update_rides' : '/rides/' + $stateParams.bikeId)
+          }
+
           Upload.upload({
             method: 'PUT',
-            url: api.getApiUrl() + '/rides/' + $stateParams.bikeId,
+            url: editBikeUrl(),
             data: ride,
             headers: {
               'Content-Type': 'application/json',
@@ -431,12 +448,24 @@ angular.module('list', ['ngLocale'])
           return list.form.subCategory !== undefined;
         };
 
+        list.isVariationsValid = function () {
+          var isValid = true;
+
+          if (list.variations) {
+            _.forEach(list.variations, function (item) {
+              isValid = isValid && item.size;
+            });
+          }
+          return isValid;
+        };
+
         // check bikes details
         list.isDetailsValid = function () {
-          return !(_.isEmpty(list.form.name) &&
-            _.isEmpty(list.form.brand) &&
-            _.isEmpty(list.form.size) &&
-            _.isEmpty(list.form.description));
+          return !!(list.form.name &&
+            list.form.brand &&
+            (list.form.size || list.form.size === 0) &&
+            list.form.description &&
+            list.isVariationsValid());
         };
 
         // check picture is correct
@@ -502,7 +531,22 @@ angular.module('list', ['ngLocale'])
 
         list.changeCategory = function () {
           list.form.subCategory = undefined;
-        }
+        };
+
+        // DETAILS TAB
+
+        function addInput() {
+          list.variations.push({
+            size: '',
+            frame_size: '',
+            bicycle_number: '',
+            frame_number: ''
+          });
+        };
+
+        function removeInput(index) {
+          list.variations.splice(index, 1);
+        };
       }
     ]
   })

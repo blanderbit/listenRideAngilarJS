@@ -10,6 +10,8 @@ angular
         data: '=',
         openingHours: '<?',
         disabledDates: '<',
+        bike: '<?',
+        bikeCluster: "<?",
         requests: '<?',
         dateOnChange: '<?',
         dateOnClear: '<?',
@@ -163,20 +165,42 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       return result;
     }
 
+    // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date
     function isReserved(date) {
-      if (!vm.requests) return;
-      for (var i = 0; i < vm.requests.length; ++i) {
-        var start = new Date(vm.requests[i].start_date_tz);
+      return isReservedPrimary(date) && isAllClusterReserved(date);
+    }
+
+    function isReservedDate(date, requests) {
+      if (!requests) return false;
+
+      for (var i = 0; i < requests.length; ++i) {
+        var start = new Date(requests[i].start_date_tz);
         start.setHours(0, 0, 0, 0);
-        var end = new Date(vm.requests[i].end_date_tz);
+        var end = new Date(requests[i].end_date_tz);
         end.setHours(0, 0, 0, 0);
 
-        if (start.getTime() <= date.getTime()
-          && date.getTime() <= end.getTime()) {
+        if (start.getTime() <= date.getTime() &&
+          date.getTime() <= end.getTime()) {
           return true;
         }
       }
       return false;
+    }
+
+    function isReservedPrimary(date) {
+      return isReservedDate(date, vm.requests);
+    }
+
+    function isAllClusterReserved(date) {
+      // for single bike always return true
+      if (!(vm.bike && vm.bike.is_cluster)) return true;
+
+      var isClusterBikeReserved = true;
+      _.forEach(vm.bikeCluster, function (variant) {
+        isClusterBikeReserved = isClusterBikeReserved && isReservedDate(date, variant.requests)
+      });
+
+      return isClusterBikeReserved;
     }
 
     // add close event, if we click on trigger object when calendar is open

@@ -52,12 +52,12 @@
             layout-align="space-between center"
             class="lnr-mv lnr-mh-x2 lnr-mb-0"
             hide-gt-sm
-            ng-hide="booking.selectedIndex !== 3">
+            ng-hide="booking.selectedIndex !== booking.tabOrder['overview']">
             <span class="md-subhead">{{ 'shared.total' | translate }}</span>
             <span class="md-subhead">{{ booking.total | currency:"€":2 }}</span>
           </div>
           <p
-            ng-hide="booking.selectedIndex !== 3"
+            ng-hide="booking.selectedIndex !== booking.tabOrder['overview']"
             class="md-body-1 lnr-mv lnr-mh-x2 lnr-mb-0 lnr-center booking__terms">
              {{ 'booking.agree-terms' | translate }}
             <a ui-sref="terms" target="_blank">{{ 'booking.agree-terms-link' | translate }}</a>
@@ -68,8 +68,8 @@
             ng-disabled="booking.nextDisabled()"
             ng-click="booking.nextAction()"
           >
-            <span ng-if="booking.selectedIndex !== 3">{{ 'shared.next' | translate }}</span>
-            <span ng-if="booking.selectedIndex == 3">{{ 'calendar.request-bike' | translate }}</span>
+            <span ng-if="booking.selectedIndex !== booking.tabOrder['overview']">{{ 'shared.next' | translate }}</span>
+            <span ng-if="booking.selectedIndex === booking.tabOrder['overview']">{{ 'calendar.request-bike' | translate }}</span>
           </md-button>
         </div>
       </div>

@@ -32,6 +32,7 @@ angular.module('listnride', [
   'bikeCountFilter',
   'accessoriesFilter',
   'creditCardInput',
+  'statusLabels',
   /* app_core_end */
 
   /* app_extras_start */

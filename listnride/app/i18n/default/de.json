@@ -1,6 +1,13 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "status-labels": {
+      "variants_available": "Varianten verfügbar"
+    },
+    "summary": "Zusammenfassung",
+    "pick-size": "Wähle eine Größe aus",
+    "firstly-pick-dates": "Wähle zuerst die Miettage aus",
+    "remove": "Löschen",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kreditkarte",
@@ -584,6 +591,9 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
+    "cluster-deleted": "Zusammengehörige Bikes erfolgreich gelöscht",
+    "cluster-unmerged": "Bike-Cluster erfolgreich aufgehoben",
+    "cluster-merged": "Bikes erfolgreich in Cluster zusammengeführt",
     "add-payment-success": "Die Zahlungsmethode wurde gespeichert",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "Das aktuelle Passwort ist ungültig.",
@@ -981,6 +991,8 @@
     },
     "details": {
       "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",
+      "variations-add": "Varianten hinzufügen",
+      "variations-header": "Wie viele Varianten magst du hinzufügen?",
       "hint": "Gib Marke, Name und Beschreibung deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
       "label": "Details",
       "brand": "Marke",
@@ -1159,6 +1171,8 @@
   },
   "listings": {
     "my-bikes": "Meine Räder",
+    "merge": "zusammenführen",
+    "unmerge": "Fahrräder entmischen",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",
     "list-a-bike": "Rad einstellen",
     "show-as-list": "Als Liste anzeigen",

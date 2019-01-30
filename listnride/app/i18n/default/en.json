@@ -1,6 +1,13 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "status-labels": {
+      "variants_available": "Variants available"
+    },
+    "summary": "Overview",
+    "pick-size": "Pick a size",
+    "firstly-pick-dates": "Please, select your rental dates first.",
+    "remove": "Remove",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Credit card",
@@ -587,6 +594,9 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "cluster-deleted": "Bike cluster successfully deleted",
+    "cluster-unmerged": "Bike cluster successfully unmerged",
+    "cluster-merged": "Bikes successfully merged into cluster",
     "add-payment-success": "Payment method has been saved",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "The current password is invalid.",
@@ -984,6 +994,8 @@
     },
     "details": {
       "header": "What is your bike name, size & brand?",
+      "variations-add": "Add variants",
+      "variations-header": "How many variants would you like to add?",
       "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
       "label": "Details",
       "brand": "Brand",
@@ -1162,6 +1174,8 @@
   },
   "listings": {
     "my-bikes": "My Bikes",
+    "merge": "Merge bikes",
+    "unmerge": "Unmerge bikes",
     "no-bikes": "You haven't listed any of your bikes yet.",
     "list-a-bike": "List a Bike",
     "show-as-list": "Show as List",
