@@ -3,8 +3,8 @@
 angular.module('user',[]).component('user', {
   templateUrl: 'app/modules/user/user.template.html',
   controllerAs: 'user',
-  controller: ['$localStorage', '$state', '$stateParams', '$translate', 'ngMeta', 'api', '$mdMedia',
-    function ProfileController($localStorage, $state, $stateParams, $translate, ngMeta, api, $mdMedia) {
+  controller: ['$localStorage', '$state', '$stateParams', '$translate','$mdDialog', '$rootScope', '$window', 'ngMeta', 'api', '$mdMedia', 'notification',
+    function ProfileController($localStorage, $state, $stateParams, $translate, $mdDialog, $rootScope, $window, ngMeta, api, $mdMedia, notification) {
       var user = this;
       user.hours = {};
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -24,38 +24,99 @@ angular.module('user',[]).component('user', {
       var userId;
       $stateParams.userId? userId = $stateParams.userId : userId = 1930;
 
+      var getAccessToken = function (clientId) {
+        return api.post('/oauth/token_for', {user_id: clientId}).then(function (response) {
+          return response.data;
+        }, function(error){
+          notification.show(error, 'error');
+        });
+      };
+
+      //FIXME: Code duplication
+      // START >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      var setAccessToken = function (data) {
+        $localStorage.accessToken = data.access_token;
+        $localStorage.tokenType = data.token_type;
+        $localStorage.expiresIn = data.expires_in;
+        $localStorage.refreshToken = data.refresh_token;
+        $localStorage.createdAt = data.created_at;
+      };
+
+      var setCredentials = function (response) {
+        $localStorage.userId = response.id;
+        $localStorage.name = response.first_name + " " + response.last_name;
+        $localStorage.firstName = response.first_name;
+        $localStorage.lastName = response.last_name;
+        $localStorage.profilePicture = response.profile_picture.profile_picture.url;
+        $localStorage.unreadMessages = response.unread_messages;
+        $localStorage.email = response.email;
+        $localStorage.referenceCode = response.ref_code;
+        $localStorage.isBusiness = !!response.business;
+      };
+
+      var showLoginSuccess = function() {
+        $mdDialog.hide();
+        notification.show(null, null, 'toasts.successfully-logged-in');
+      };
+
+      // END <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
       api.get('/users/' + userId).then(
         function(response) {
-          if (!response.data.active) {
-            $state.go('404');
-          } else {
-            user.showAll = false;
-            user.user = response.data;
-            user.loaded = true;
-            user.anyHours = !_.isEmpty(response.data.opening_hours);
-            user.openingHoursEnabled = user.anyHours ? response.data.opening_hours.enabled : false;
-            user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
-            user.rating = (user.user.rating_lister + user.user.rating_rider);
+          user.showAll = false;
+          user.user = response.data;
+          if (!user.user.me) user.user.me = {};
+          user.user.me.id = !!$localStorage.userId ? $localStorage.userId : '';
+          user.loaded = true;
+          user.anyHours = !_.isEmpty(response.data.opening_hours);
+          user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
+          user.openingHoursEnabled = showHours(response.data.opening_hours);
+          user.rating = (user.user.rating_lister + user.user.rating_rider);
 
-            user.display_name = setName();
-            user.picture = setPicture();
+          user.display_name = setName();
+          user.picture = setPicture();
 
-            user.current_payment = response.data.status === 3;
-            if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
-              user.rating = user.rating / 2;
-            }
-
-            user.bikes = user.user.rides.slice(0, user.bikesToShow);
-
-            user.rating = Math.round(user.rating);
-            if (user.openingHoursEnabled) setOpeningHours();
-
-            generateMetaDescription(user.user.has_business);
+          user.current_payment = response.data.status === 3;
+          if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
+            user.rating = user.rating / 2;
           }
+
+          user.bikes = user.user.rides.slice(0, user.bikesToShow);
+
+          user.rating = Math.round(user.rating);
+          if (user.openingHoursEnabled) setOpeningHours();
+
+          generateMetaDescription(user.user.has_business);
+
         },
         function(error) {
+          $state.go('404');
         }
       );
+
+      user.stealSession = function () {
+        getAccessToken(user.user.id).then(function (successTokenData) {
+          setAccessToken(successTokenData);
+          api.get('/users/me').then(function (success) {
+              setCredentials(success.data);
+              $rootScope.$broadcast('user_login');
+              showLoginSuccess();
+              $window.location.reload();
+            },
+            function(error){
+              notification.show(error, 'error');
+            });
+        });
+      };
+
+      function showHours(hours) {
+        if (!user.anyHours) return false;
+        if (!!hours.enabled) {
+          return hours.enabled
+        } else {
+          return true
+        }
+      }
 
       function loadAllBikes() {
         user.showAllBikes = true;

@@ -64,6 +64,13 @@
         template: '<home></home>'
       });
 
+      // home/change_password
+      $stateProvider.state({
+        name: 'change_password',
+        url: '/change_password/{userId:int}/{passwordChangeToken:string}',
+        template: '<home></home>'
+      });
+
       // home/business-signup
       $stateProvider.state({
         name: 'businessSignup',
@@ -76,6 +83,22 @@
         name: 'bike',
         url: '/bikes/{bikeId:int}',
         template: '<bike></bike>',
+        reloadOnSearch: false,
+        params: {
+          hideFooter: true,
+          date: {
+            value: "",
+            squash: true
+          },
+          duration: {
+            value: "",
+            squash: true
+          },
+          size: {
+            value: "",
+            squash: true
+          }
+        },
         resolve: {
           data: function (ngMeta) {
             ngMeta.setTag("noindex", true);
@@ -191,24 +214,6 @@
         },
         meta: {
           disableUpdate: true
-        }
-      });
-
-      // requests/tokenlogin
-      $stateProvider.state({
-        name: 'tokenlogin',
-        url: '/requests/{requestId: int}/tokenlogin?shop_token&email',
-        template: '<requests></requests>',
-        resolve: {
-          login: ['$state', '$stateParams', 'authentication', function($state, $stateParams, authentication) {
-            return authentication.tokenLogin($stateParams.shop_token, $stateParams.email).then(
-              function (success) {
-                authentication.setCredentials(success.data);
-              },
-              function (error) {
-              }
-            );
-          }]
         }
       });
 
@@ -1212,6 +1217,63 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'lardita',
+        url: '/lardita-arezzo',
+        template: '<lardita></lardita>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.lardita.meta-title", "events.lardita.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.lardita.meta-title"]);
+                ngMeta.setTag("description", translations["events.lardita.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'granfondoviadelsale',
+        url: '/granfondo-via-del-sale',
+        template: '<granfondoviadelsale></granfondoviadelsale>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.granfondoviadelsale.meta-title", "events.granfondoviadelsale.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.granfondoviadelsale.meta-title"]);
+                ngMeta.setTag("description", translations["events.granfondoviadelsale.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'girosardegna',
+        url: '/giro-sardegna',
+        template: '<girosardegna></girosardegna>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["events.girosardegna.meta-title", "events.girosardegna.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["events.girosardegna.meta-title"]);
+                ngMeta.setTag("description", translations["events.girosardegna.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* BRANDS_PAGES */
       /* ------------------------------------ */
@@ -1530,6 +1592,25 @@
         resolve: {
           data: function (ngMeta) {
             ngMeta.setTag("noindex", false);
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'felt',
+        url: '/brands/felt',
+        template: '<felt></felt>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.felt.meta-title", "meta.brand-integration.felt.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.felt.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.felt.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
           }
         },
         meta: {

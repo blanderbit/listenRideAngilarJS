@@ -67,6 +67,7 @@ booking md-radio-button {
 
 .booking__receipt {
     margin-top: 100px;
+    z-index: 1;
 }
 
 .details__send-code {

@@ -32,6 +32,7 @@ angular.module('listnride', [
   'bikeCountFilter',
   'accessoriesFilter',
   'creditCardInput',
+  'statusLabels',
   /* app_core_end */
 
   /* app_extras_start */
@@ -73,6 +74,7 @@ angular.module('listnride', [
   'veloheldIntegration',
   'votec-integration',
   'whyteIntegration',
+  'feltIntegration',
   /* EVENTS_PAGE */
   'berlinTriathlon',
   'berlinTriathlonXl',
@@ -97,6 +99,9 @@ angular.module('listnride', [
   'coffeespin',
   'veloraceDresden',
   'epicgrancanaria',
+  'lardita',
+  'granfondoviadelsale',
+  'girosardegna',
   //endRemoveIf(shop)
   /* app_extras_end */
 
@@ -211,6 +216,7 @@ angular.module('listnride', [
   $rootScope.location = $location;
   ngMeta.init();
 
+  // TODO: check why we call this function here
   if (authentication.loggedIn && !_.isEmpty(authentication.userId())) {
     api.get('/users/' + authentication.userId()).then(
       function (success) {
@@ -221,5 +227,10 @@ angular.module('listnride', [
       }
     );
   }
+
+  // on route change we ask if users token is still valid
+  $rootScope.$on("$locationChangeStart", function (event, next, current) {
+    authentication.checkTokenExpiration();
+  });
 
 }]);

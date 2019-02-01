@@ -109,7 +109,10 @@
         <div class="md-dialog-buttons lnr-mb-x2" layout="column">
           <div layout="column">
             <md-tooltip ng-if="!signupDialog.terms" md-direction="top">{{ 'forms.agree-terms-and-policy' | translate }}</md-tooltip>
-            <md-button type="submit" class="md-accent md-raised" ng-disabled="signupDialog.signingUp || !signupDialog.terms">
+            <md-button
+              type="submit"
+              class="md-accent md-raised"
+              ng-disabled="signupDialog.signingUp || !signupDialog.terms || !signupForm.$valid">
               {{ 'forms.sign-up' | translate }}
             </md-button>
           </div>

@@ -3,8 +3,12 @@ angular.module('bike').component('calendar', {
   templateUrl: 'app/modules/bike/calendar/calendar.template.html',
   controllerAs: 'calendar',
   bindings: {
+    bike: '<',
+    bikeCluster: '<',
     bikeId: '<',
     bikeFamily: '<',
+    bikeSize: '<',
+    bikeClusterSizes: '<',
     bikeAvailabilities: '<',
     userId: '<',
     priceHalfDay: '<',
@@ -13,7 +17,8 @@ angular.module('bike').component('calendar', {
     prices: '<',
     requests: '<',
     coverageTotal: '<',
-    countryCode: '<'
+    countryCode: '<',
+    cluster: '<'
   },
   controller: ['$scope',
       '$localStorage',
@@ -31,8 +36,10 @@ angular.module('bike').component('calendar', {
       'verification',
       'ENV',
       'calendarHelper',
+      'notification',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
-                                $mdMedia, $window, $analytics, date, price, api, authentication, verification, ENV, calendarHelper) {
+                                $mdMedia, $window, $analytics, date, price, api, authentication,
+                                verification, ENV, calendarHelper, notification) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.calendarHelper = calendarHelper;
@@ -42,6 +49,7 @@ angular.module('bike').component('calendar', {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
+            calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
             initOverview();
             initCalendarPicker();
           });
@@ -95,8 +103,20 @@ angular.module('bike').component('calendar', {
 
       calendar.onBooking = function(){
         $mdDialog.hide();
-        $state.go('booking', {bikeId: calendar.bikeId, startDate: calendar.startDate, endDate: calendar.endDate});
+        $state.go('booking', {
+          bikeId: calendar.pickAvailableBike(),
+          startDate: calendar.startDate,
+          endDate: calendar.endDate
+        });
       };
+
+      calendar.pickAvailableBike = function () {
+        if (calendar.pickedBikeSize !== calendar.bikeSize) {
+          return calendar.cluster.rides[calendar.pickedBikeSize][0].id;
+        } else {
+          return calendar.bikeId;
+        }
+      }
 
       calendar.onBikeRequest = function() {
         $mdDialog.hide();
@@ -104,16 +124,17 @@ angular.module('bike').component('calendar', {
         api.get('/users/' + $localStorage.userId).then(
           function (success) {
             calendar.rider = success.data;
-            varifyOrConfirm();
+            verifyOnConfirm();
           },
           function (error) {
+            notification.show(error, 'error');
           }
         );
       };
 
 
-      function varifyOrConfirm() {
-        if (calendar.bikeFamily == calendar.event.familyId || (calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1)) {
+      function verifyOnConfirm() {
+        if (calendar.bikeFamily == calendar.event.familyId || isUserVerified()) {
           calendar.confirmBooking();
         }
         else {
@@ -122,19 +143,22 @@ angular.module('bike').component('calendar', {
         }
       }
 
+      function isUserVerified() {
+        return calendar.rider.has_address && calendar.rider.confirmed_phone && calendar.rider.status >= 1;
+      }
+
       calendar.promptAuthentication = function(event) {
         authentication.showSignupDialog(false, true, event);
       };
 
       calendar.isFormInvalid = function() {
-        return calendar.bikeId === undefined || calendar.startDate === undefined ||
-          (calendar.startDate !== undefined  && calendar.startDate.getTime() >= calendar.endDate.getTime());
+        return !calendar.bikeId || !calendar.isDateValid();
       };
 
-      calendar.isDateInvalid = function() {
-        return calendar.startDate !== undefined  &&
-          calendar.startDate.getTime() >= calendar.endDate.getTime();
-      };
+      calendar.isDateValid = function() {
+        return calendar.startDate && calendar.endDate &&
+          calendar.startDate.getTime() <= calendar.endDate.getTime();
+      }
 
       /* ---------- CODE FOR THE EVENT CALENDAR 1 ---------- */
 
@@ -236,25 +260,13 @@ angular.module('bike').component('calendar', {
       /* ------------------------------------------------- */
 
       calendar.availabilityMessage = function($index, date) {
-        if (!calendar.isOptionEnabled($index, date)) {
+        if (!calendar.isOptionEnabled($index, calendar.bikeOwner.opening_hours, date)) {
           return openingHoursAvailable() ?  ' ('+ $translate.instant('calendar.status-closed')+')' : ' ('+($translate.instant('calendar.status-in-past'))+')';
         }
       };
 
-      calendar.isOptionEnabled = function($index, date) {
-        if (date === undefined) { return true }
+      calendar.isOptionEnabled = calendarHelper.isTimeAvailable;
 
-        var isDateToday = moment().startOf('day').isSame(moment(date).startOf('day'));
-        // Date today chosen
-        if (isDateToday) { return $index + 6 >= moment().hour() + 1; }
-        if (!openingHoursAvailable()) { return true }
-        var weekDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(date)];
-        if (weekDay !== null) {
-          var workingHours = openHours(weekDay);
-          return workingHours.includes($index + 6);
-        }
-        return false
-      };
 
       // This function handles booking and all necessary validations
       calendar.confirmBooking = function () {
@@ -319,20 +331,17 @@ angular.module('bike').component('calendar', {
               calendar.current_request = success.data;
               calendar.current_request.glued = true;
               calendar.current_request.rideChat = $localStorage.userId == calendar.current_request.user.id;
-              calendar.current_request.rideChat ? calendar.current_request.chatFlow = "rideChat" : calendar.current_request.chatFlow = "listChat";
 
-              if (calendar.current_request.rideChat) {
-                calendar.current_request.rating = calendar.current_request.lister.rating_lister + calendar.current_request.lister.rating_rider;
-                if (calendar.current_request.lister.rating_lister != 0 && calendar.current_request.lister.rating_rider != 0) {
-                  calendar.current_request.rating = calendar.current_request.rating / 2
-                }
+              calendar.current_request.chatFlow = calendar.current_request.rideChat ? "rideChat" : "listChat";
+              calendar.current_request.userType = calendar.current_request.rideChat ? "lister" : "user";
+              calendar.current_request.userData = calendar.current_request[calendar.current_request.userType];
+
+              calendar.current_request.rating = calendar.current_request.userData.rating_lister + calendar.current_request.userData.rating_rider;
+              if (calendar.current_request.userData.rating_lister != 0 &&
+                  calendar.current_request.userData.rating_rider != 0) {
+                calendar.current_request.rating = calendar.current_request.rating / 2;
               }
-              else {
-                calendar.current_request.rating = calendar.current_request.user.rating_lister + calendar.current_request.user.rating_rider;
-                if (calendar.current_request.user.rating_lister != 0 && calendar.current_request.user.rating_rider != 0) {
-                  calendar.current_request.rating = calendar.current_request.rating / 2
-                }
-              }
+
               calendar.current_request.rating = Math.round(calendar.current_request.rating);
               $state.go('requests', {requestId: success.data.id});
               bookingDialog.hide();
@@ -341,13 +350,7 @@ angular.module('bike').component('calendar', {
             function(error) {
               bookingDialog.inProcess = false;
               calendar.requested = false;
-              $mdToast.show(
-                $mdToast.simple()
-                  // .textContent(error.data.errors[0].detail)
-                  .textContent("There was an error requesting the bike")
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(error, 'error');
             }
           );
         };
@@ -520,23 +523,44 @@ angular.module('bike').component('calendar', {
       function openingHoursAvailable() {
         return calendar.bikeOwner &&
           !!calendar.bikeOwner.opening_hours &&
-          calendar.bikeOwner.opening_hours.enabled &&
+          calendarHelper.checkIsOpeningHoursEnabled(calendar.bikeOwner.opening_hours) &&
           _.some(calendar.bikeOwner.opening_hours.hours, Array)
       }
 
+      // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date
       function isReserved(date) {
-        for (var i = 0; i < calendar.requests.length; ++i) {
-          var start = new Date(calendar.requests[i].start_date_tz);
-          start.setHours(0,0,0,0);
-          var end = new Date(calendar.requests[i].end_date_tz);
-          end.setHours(0,0,0,0);
+        return isReservedPrimary(date) && isAllClusterReserved(date);
+      }
 
-          if (start.getTime() <= date.getTime()
-            && date.getTime() <= end.getTime()) {
+      function isReservedDate(date, requests) {
+        for (var i = 0; i < requests.length; ++i) {
+          var start = new Date(requests[i].start_date_tz);
+          start.setHours(0, 0, 0, 0);
+          var end = new Date(requests[i].end_date_tz);
+          end.setHours(0, 0, 0, 0);
+
+          if (start.getTime() <= date.getTime() &&
+            date.getTime() <= end.getTime()) {
             return true;
           }
         }
         return false;
+      }
+
+      function isReservedPrimary(date) {
+        return isReservedDate(date, calendar.requests);
+      }
+
+      function isAllClusterReserved(date) {
+        // for single bike always return true
+        if (!calendar.bike.is_cluster) return true;
+
+        var isClusterBikeReserved = true;
+        _.forEach(calendar.bikeCluster.variations, function(variant) {
+          isClusterBikeReserved = isClusterBikeReserved && isReservedDate(date, variant.requests)
+        });
+
+        return isClusterBikeReserved;
       }
 
       function initOverview() {
@@ -554,12 +578,7 @@ angular.module('bike').component('calendar', {
 
       // TODO: Replace custom receipt with modular receipt component in calendar template
       function dateChange(startDate, endDate) {
-        if (calendar.isDateInvalid()) {
-          calendar.duration = date.duration(undefined, undefined, 0);
-          calendar.subtotal = 0;
-          calendar.lnrFee = 0;
-          calendar.total = 0;
-        } else {
+        if (calendar.isDateValid()) {
           var invalidDays = countInvalidDays(startDate, endDate);
           calendar.duration = date.duration(startDate, endDate, invalidDays);
           calendar.durationDays = date.durationDays(startDate, endDate);
@@ -569,6 +588,22 @@ angular.module('bike').component('calendar', {
           calendar.discountRelative = calendar.discount / calendar.durationDays;
           calendar.lnrFee = prices.serviceFee;
           calendar.total = prices.total;
+
+          if (calendar.cluster) {
+            var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
+            api.get('/clusters/' + calendar.cluster.id + '?start_date=' + moment(calendar.startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays).then(function (response) {
+              _.map(calendar.bikeClusterSizes, function(option){
+                if (!response.data.rides[option.size]) option.notAvailable = true;
+              });
+              calendar.cluster.rides = response.data.rides;
+            });
+          }
+
+        } else {
+          calendar.duration = date.duration(undefined, undefined, 0);
+          calendar.subtotal = 0;
+          calendar.lnrFee = 0;
+          calendar.total = 0;
         }
       }
 

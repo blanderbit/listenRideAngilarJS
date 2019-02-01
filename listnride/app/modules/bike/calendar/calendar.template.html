@@ -153,7 +153,7 @@
   <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
     <div layout="row" layout-align="space-between center" ng-if="calendar.bikeFamily != 2">
       <div layout="row" layout-align="start center">
-        <div>{{ 'shared.duration' | translate }}</div>
+        <div class="md-body-2">{{ 'shared.duration' | translate }}</div>
         <div>
           <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
           <md-tooltip md-direction="right"><span translate="calendar.info"></span></md-tooltip>
@@ -162,12 +162,45 @@
       <div>{{ calendar.duration }}</div>
     </div>
 
-    <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2"></md-divider>
-
     <!-- <div layout="row" layout-align="space-between center">
       <div>{{ 'shared.subtotal' | translate }}</div>
       <div>{{ calendar.subtotal | currency:"€":2 }}</div>
     </div> -->
+
+    <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2"></md-divider>
+
+    <div ng-if="calendar.cluster">
+      <div class="md-body-2">{{ 'shared.pick-size' | translate }}</div>
+      <md-select
+        ng-model="calendar.pickedBikeSize"
+        placeholder="{{ 'shared.pick-size' | translate}}"
+        ng-disabled="!calendar.isDateValid()"
+      >
+        <md-option
+          ng-repeat="option in calendar.bikeClusterSizes"
+          value="{{option.size}}"
+          ng-disabled="option.notAvailable"
+        >
+          {{ option.name }}
+          <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
+        </md-option>
+      </md-select>
+      <p ng-if="!calendar.isDateValid()" translate="shared.firstly-pick-dates"></p>
+    </div>
+
+    <div ng-if="!calendar.cluster" >
+      <span class="md-body-2 lnr-mr">{{ 'list.details.size' | translate }}</span>
+      <span class="md-body-1" ng-if="calendar.bikeSize > 0">{{ 'shared.for' | translate }} <strong>{{ calendar.bikeSize }}</strong> - <strong>{{ calendar.bikeSize + 10 }}</strong> cm</span>
+      <span class="md-body-1" ng-if="calendar.bikeSize == 0">{{ 'shared.for' | translate }} <strong>{{ 'search.all-sizes' | translate }}</strong></span>
+    </div>
+
+    <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2"></md-divider>
+
+    <div layout="row" layout-align="space-between center">
+      <div layout="row" layout-align="start center">
+        <div class="md-body-2">{{ 'shared.summary' | translate }}</div>
+      </div>
+    </div>
 
     <div layout="row" layout-align="space-between center">
       <div layout="row" layout-align="start center">
@@ -216,14 +249,9 @@
       <div>{{ 'shared.total' | translate }}</div>
       <div>{{ calendar.total | currency:"€":2 }}</div>
     </div>
-    <div class="text-error md-caption"
-         ng-if="calendar.bikeFamily != 2 && calendar.isDateInvalid()"
-         layout-padding>
-      {{ 'calendar.invalid-date' | translate }}
-    </div>
-    <div class="text-error md-caption"
-         ng-if="calendar.owner">
-      {{ 'calendar.own-bike' | translate }}
+    <div class="text-error md-caption">
+      <span ng-if="calendar.bikeFamily != 2 && calendar.startDate && !calendar.isDateValid()">{{ 'calendar.invalid-date' | translate }}</span>
+      <span ng-if="calendar.owner">{{ 'calendar.own-bike' | translate }}</span>
     </div>
   </div>
 
@@ -231,18 +259,10 @@
     type="submit"
     class="md-raised md-primary lnr-mv lnr-mh-x2"
     ng-click="calendar.onBooking()"
-    ng-if="!calendar.isFormInvalid()"
-    ng-disabled="calendar.owner || calendar.requested"
+    ng-disabled="calendar.owner || calendar.requested || calendar.isFormInvalid()"
   >
-    {{ 'calendar.request-bike' | translate }}
-  </md-button>
-  <md-button
-    type="submit"
-    class="md-raised md-primary lnr-mv lnr-mh-x2"
-    ng-click="calendar.onBikeRequest()"
-    ng-if="calendar.isFormInvalid()"
-    ng-disabled="true">
-    {{ 'calendar.select-timespan' | translate }}
+    <span ng-if="!calendar.isFormInvalid()">{{ 'calendar.request-bike' | translate }}</span>
+    <span ng-if="calendar.isFormInvalid()">{{ 'calendar.select-timespan' | translate }}</span>
   </md-button>
   <div layout-padding layout="row" ng-if="calendar.insuranceCountry()">
     <md-icon md-svg-src="app/assets/ui_icons/icn_insurance.svg" class="lnr-icn-md lnr-m-0"></md-icon>

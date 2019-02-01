@@ -1,6 +1,13 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "status-labels": {
+      "variants_available": "Varianten verfügbar"
+    },
+    "summary": "Zusammenfassung",
+    "pick-size": "Wähle eine Größe aus",
+    "firstly-pick-dates": "Wähle zuerst die Miettage aus",
+    "remove": "Löschen",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kreditkarte",
@@ -208,6 +215,18 @@
     "vatternrundan": {
       "meta-title": "Miete ein Rennrad für die Vätternrundan 2019 | listnride",
       "meta-description": "Mit listnride kannst du dir einfach online ein Rennrad für die Vätternrundan 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
+    },
+    "lardita": {
+      "meta-title": "Miete ein Vintage Rennrad für die l'Ardita",
+      "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Mieten Sie ein Rennrad für die Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Mit listnride können Sie bequem ein Rennrad für die Granfondo Via del Sale 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
+    },
+    "girosardegna": {
+      "meta-title": "Miete ein Rennrad für den Giro Sardegna 2019 I listnride\n",
+      "meta-description": "Mit listnride können Sie einfach ein Rennrad für den Giro Sardegna 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
     }
   },
   "lister": {
@@ -370,8 +389,12 @@
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
       },
       "whyte": {
-        "meta-title": "Miete und teste Whyte Bikes in Berlin | listnride",
+        "meta-title": "Miete und teste Whyte Bikes in Berlin und Zell am Ziller (AT) | listnride",
         "meta-description": "Teste noch heute ein Whyte Bike! Die Gravel- und Mountainbikes von Whyte stehen zum Testen in Berlin zur Verfügung"
+      },
+      "felt": {
+        "meta-title": "Rent and test ride Felt Bicycles in Munich | listnride",
+        "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
       },
       "swytch": {
         "meta-title": "Miete und teste Swytch E-bikes in Berlin | listnride",
@@ -568,8 +591,12 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
+    "cluster-deleted": "Zusammengehörige Bikes erfolgreich gelöscht",
+    "cluster-unmerged": "Bike-Cluster erfolgreich aufgehoben",
+    "cluster-merged": "Bikes erfolgreich in Cluster zusammengeführt",
     "add-payment-success": "Die Zahlungsmethode wurde gespeichert",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
+    "is-invalid": "Das aktuelle Passwort ist ungültig.",
     "bike-edit-successful": "Deine Änderungen wurden gespeichert",
     "error": "Es ist ein Fehler aufgetreten. Bitte stell sicher dass deine Internetverbindung funktioniert und versuche es nochmal.",
     "add-payout-success": "Deine Auszahlungsmethode wurde erfolgreich hinzugefügt.",
@@ -724,6 +751,7 @@
   },
   "user": {
     "verified-through": "Verifiziert durch",
+    "become-this-user": "Become this user",
     "own-bikes": "Leihfahrräder",
     "ratings": "Bewertungen",
     "meta-title": "{{name}}s Profil",
@@ -801,6 +829,12 @@
   "forms": {
     "first-name": "Vorname",
     "newsletter-privacy-policy": "Privacy Policy News letter",
+    "sign-up-today": "Heute anmelden",
+    "already-registered": "Du hast dich bereits angemeldet",
+    "check-inbox": "Bitte prüfe deinen Posteingang.",
+    "security-text": "Sicherheit ist uns sehr wichtig. Und das ist nicht nur eine Aussage, mit der wir dich besänftigen. Zur Sicherheit deines Kontos bitten wir dich, dein Passwort zu ändern.<br> <br><b>Klick auf den Link in der E-Mail, die wir dir gerade geschickt haben.</b>",
+    "confirm-password": "Passwort bestätigen",
+    "please-change-password": "Please change your password",
     "save-new-password": "Neues Passwort speichern",
     "your-name": "Dein Name",
     "your-email-address": "Deine E-Mail Adresse",
@@ -957,6 +991,8 @@
     },
     "details": {
       "header": "Wie heißt das Modell, von welcher Marke ist es, für welche Fahrergröße ist es geeignet?",
+      "variations-add": "Varianten hinzufügen",
+      "variations-header": "Wie viele Varianten magst du hinzufügen?",
       "hint": "Gib Marke, Name und Beschreibung deines Rads ein. Der Name sollte das Rad kurz beschreiben und das Model beinhalten. Z.B. Gazelle, Tour Populair, 2013. Wähle dann die passende Fahrergröße.",
       "label": "Details",
       "brand": "Marke",
@@ -1135,6 +1171,8 @@
   },
   "listings": {
     "my-bikes": "Meine Räder",
+    "merge": "zusammenführen",
+    "unmerge": "Fahrräder entmischen",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",
     "list-a-bike": "Rad einstellen",
     "show-as-list": "Als Liste anzeigen",

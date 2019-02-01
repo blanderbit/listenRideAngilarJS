@@ -18,16 +18,31 @@ angular.module('listingCard',[]).component('listingCard', {
     delete: '<',
     edit: '<',
     view: '<',
-    changeAvailability: '<'
+    changeAvailability: '<',
+    showLabels: '<',
+    isCheckModeOn: '<',
+    onBikeTileCheck: '<',
+    isChecked: '<',
+    isSelectable: '<',
+    unmerge: '<'
   },
-  controller: ['api', 'notification', 'helpers', function ListingCardController(api, notification, helpers) {
+  controller: ['api', 'notification', 'helpers',
+    function ListingCardController(api, notification, helpers) {
       var listingCard = this;
 
-      listingCard.price = Math.ceil(listingCard.price);
+      listingCard.$onInit = function() {
+        //variables
+        listingCard.price = Math.ceil(listingCard.price);
+
+        //methods
+        listingCard.checkBike = listingCard.onBikeTileCheck;
+        listingCard.onActivateClick = onActivateClick;
+        listingCard.deactivate = deactivate;
+      }
 
       // activate a bike
       // implementation is different from parent component
-      listingCard.onActivateClick = function() {
+      function onActivateClick() {
         listingCard.disableActivate = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "true"}}).then(
           function(response) {
@@ -42,7 +57,7 @@ angular.module('listingCard',[]).component('listingCard', {
 
       // deactivate a bike
       // implementation is different from parent component
-      listingCard.deactivate = function() {
+      function deactivate() {
         listingCard.disableDeactivate = true;
         api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "false"}}).then(
           function(response) {

@@ -1,6 +1,13 @@
 {
   "shared": {
     "learn-more": "Leer más",
+    "status-labels": {
+      "variants_available": "Variantes disponibles"
+    },
+    "summary": "Resumen",
+    "pick-size": "Elige un tamaño",
+    "firstly-pick-dates": "Por favor, selecciona sus fechas de alquiler primero.",
+    "remove": "Eliminar",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Tarjeta de crédito",
@@ -208,6 +215,18 @@
     "vatternrundan": {
       "meta-title": "Alquila una bici de carretera para el Vätternrundan 2019 | listnride",
       "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para el Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
+    },
+    "lardita": {
+      "meta-title": "Alquiler de una bici de carretera vintage para l'Ardita | listnride",
+      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para l'Ardita 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Alquiler de una bicicleta de carretera para el Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para la Granfondo Via del Sale 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+    },
+    "girosardegna": {
+      "meta-title": "Alquiler de una bicicleta de carretera para el Giro Sardegna 2019 | listnride",
+      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para el Giro Sardegna 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
     }
   },
   "lister": {
@@ -370,8 +389,12 @@
         "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich."
       },
       "whyte": {
-        "meta-title": "Rent and test ride Whyte bikes in Berlin | listnride",
+        "meta-title": "Rent and test ride Whyte bikes in Berlin and Zell am Ziller (AT) | listnride",
         "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
+      },
+      "felt": {
+        "meta-title": "Alquila y prueba una Felt Bicycles en Munich | listnride",
+        "meta-description": "¡Prueba una bicicleta Felt! Las bicicletas de carretera Felt las puedes alquilar en Munich."
       },
       "swytch": {
         "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
@@ -567,8 +590,12 @@
   },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
+    "cluster-deleted": "Bicicletas borradas con éxito",
+    "cluster-unmerged": "Grupo de bicicletas desagrupado",
+    "cluster-merged": "Las bicicletas se agruparon con éxito",
     "add-payment-success": "Guardando método de pago",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
+    "is-invalid": "La contraseña actual no es válida.",
     "bike-edit-successful": "Se han guardado los cambios",
     "error": "Se ha producido un error. Asegúrate de que la conexión a Internet funcione y vuelve a intentarlo.",
     "add-payout-success": "Tu método de pago se ha añadido correctamente. ",
@@ -722,6 +749,7 @@
   },
   "user": {
     "verified-through": "Verificado",
+    "become-this-user": "Conviértete en este usuario",
     "own-bikes": "Bicicletas de alquiler",
     "ratings": "Puntuaciones",
     "meta-title": "Perfil de {{name}}",
@@ -799,6 +827,12 @@
   "forms": {
     "first-name": "Nombre",
     "newsletter-privacy-policy": "Privacy Policy News letter",
+    "sign-up-today": "Sign up today",
+    "already-registered": "Ya estas registrado",
+    "check-inbox": "Por favor, comprueba tu e-mail",
+    "security-text": "La seguridad es muy importante para nosotros. Y esta no es solo una frase que usamos para calmarte. Con el fin de mantener tu cuenta segura, nos gustaría pedirte que cambies tu contraseña.<br> <br><b>Por favor, haz clic en el enlace del correo electrónico que acabamos de enviarte. </b>",
+    "confirm-password": "Confirmar contraseña",
+    "please-change-password": "Por favor cambia tu contraseña",
     "save-new-password": "Guardar nueva contraseña",
     "your-name": "Nombre",
     "your-email-address": "Correo electrónico",
@@ -955,6 +989,8 @@
     },
     "details": {
       "header": "¿Cuál es el nombre, tamaño y marca de tu bici?",
+      "variations-add": "Añadir variantes",
+      "variations-header": "¿Cuántas variantes te gustaría agregar?",
       "hint": "Introduce la marca, nombre y descripción de la bici. El nombre debe incluir el modelo y descripción detallada de la bici. P. ej. Gazelle, Tour Populair, 2013. A continuación, selecciona un rango de altura adecuada de los ciclistas.",
       "label": "Detalles",
       "brand": "Marca",
@@ -1132,6 +1168,8 @@
   },
   "listings": {
     "my-bikes": "Mis bicicletas",
+    "merge": "Agrupar",
+    "unmerge": "Desagrupar bikes",
     "no-bikes": "Todavía no has publicado ninguna de tus bicicletas",
     "list-a-bike": "Publica una bicicleta",
     "show-as-list": "Mostrar como lista",

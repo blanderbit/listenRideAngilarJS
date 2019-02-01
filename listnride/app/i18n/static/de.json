@@ -329,21 +329,38 @@
   },
   "business-community": {
     "meta-title": "Die listnride Business Community",
+    "requests": {
+      "title": "Verwaltung aller Vermietungen an einem Ort",
+      "description": "Erhalte nur Buchungsanfragen anstelle von endlosen E-Mails, so hast du immer die volle Kontrolle. Verbesserte Kommunikation mit dem Kunden, keine komplizierte oder falsche Kommunikation mehr."
+    },
+    "bike-page": {
+      "title": "Fahrräder an erster Stelle ",
+      "description": "Jedes Fahrrad hat ein eigenes Profil mit detaillierten Infos, die es dem Mieter ermöglicht, das Rad seiner Wahl in wenigen Sekunden zu buchen."
+    },
+    "companies": {
+      "title": "Andere Firmen, die sich unserer Listnride Business Community angeschlossen haben."
+    },
+    "plugin-wp": {
+      "title": "Listnride Buchungsplug-in ",
+      "description": "Wir haben ein kostenloses Buchungs-Plugin entwickelt, damit deine Kunden die Fahrräder rund um die Uhr direkt von deiner Website aus buchen können.",
+      "install": "In Wordpress installieren",
+      "link": "Bitte nutze unsere <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">Installationsdokumentation</a>, wenn du nicht Wordpress verwendest."
+    },
     "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
-    "title": "Die listnride Business Community",
-    "subtitle": "Werde Teil des gewerblichen listnride Fahrradverleihs",
-    "description": "Wir möchten dich gerne in unseren gewerblichen Fahrradverleih einbinden und dir diesen so einfach wie möglich machen. Denn unsere Leidenschaft sind Fahrräder und wir möchten gerne mehr davon auf Europas Straßen sehen. Wie gut, dass wir uns gegenseitig bei dieser Mission unterstützen können.",
+    "title": "Werde noch heute Teil der listnride-Community",
+    "subtitle": "Keine Verträge, keine monatlichen Gebühren, lediglich eine Gebühr pro Buchung.",
+    "description": "Mit Listnride kannst du alle deine Vermietungen an einem Ort verwalten. Keine Formulare oder Fehlkommunikation mehr. Du kannst Buchungsanfragen online annehmen oder ablehnen, so dass du immer den Überblick behältst. Bist du startklar für listnride?",
     "feature-1": {
-      "title": "Vermiete deine Fahrräder",
-      "description": "Deine Kunden können ihr Leihfahrrad online über deine  Webseite auswählen und buchen. Den kompletten Buchungs-und Bezahlvorgang übernimmt listnride für dich."
+      "title": "Profitiere von unserem großen Netzwerk",
+      "description": "Wir bewerben deine Bikes über unsere Plattform und unsere Medienkanäle. So können unsere internationalen Kunden deine Fahrräder leicht finden und buchen. "
     },
     "feature-2": {
-      "title": "Präsentiere deinen Shop online",
-      "description": "Wir geben dir die Möglichkeit deinen Shop online zu präsentieren und so deinen Kundenstamm zu erweitern und die ‘Generation Internet’ online abzuholen."
+      "title": "Vereinfachter Mietvorgang ",
+      "description": "Keine E-Mails und Telefonate mehr, die dir die ganze Zeit wegnehmen. Du erhältst einfach eine Buchungsanfrage, die du akzeptieren kannst."
     },
     "feature-3": {
-      "title": "Profitiere von unserer Reichweite",
-      "description": "Listnride ist Europas größte Bikesharing Community und wir wachsen stetig weiter. Nutze diese Reichweite."
+      "title": "Mehr Vermietungen erhalten",
+      "description": "Unser Ziel ist es, den Erfolg deines Geschäfts zu fördern und gleichzeitig den Verwaltungsaufwand und die Komplexität zu reduzieren."
     },
     "text-2": {
       "title": "Werde auch du Teil der listnride Business Community",
@@ -377,6 +394,21 @@
       "title": "Miete ein Rennrad für Epic Gran Canaria",
       "description": "Was: <b>Episches Gran Canaria</b> | Wann: <b>5. - 6. - 7. April 2019</b> | Wo: <b>Gran Canaria</b>",
       "text": "Das Ziel des Epic Gran Canaria ist es, Amateurfahrern eine professionelle Erfahrung auf dem Fahrrad zu vermitteln. Du kannst einen einzigartigen Sicherheits-, Sicherheits-, Komfort- und Premium-Service genießen, der sich an jedem der zeitgesteuerten Anstiege für drei Tage und Rangstufen misst. Miete dein Rennrad, indem du auf das Fahrrad klickst und es anfragst."
+    },
+    "lardita": {
+      "title": "Miete ein Vintage-Rennrad für die L’ Ardita\n",
+      "description": "Was: <b>  L’ Ardita </b>| Wann: <b> 24.3.2019</b>| Wo: <b> Arezzo, Toskana </b>",
+      "text": "Herzstück des Festivals ist \"L'Ardita\", der Alpe di Poti für Vintage-Rennräder. \nAm Sonntag, den 24. März 2019, trifft man wieder auf die Alpe di Poti , Etappe des Giro d'Italia 2016, aber auch vieler wichtiger Rennen in den 70er und 80er Jahren.  \nErinnert die L’ Ardita and das Radfahren der Vergangenheit. Suchst du ein Rennrad für <a href=\"https://www.lardita.com/eng\" target=\"_blank\">L’ Ardita? </a> Zusammen mit der listnride-Community stellen wir hier passenden Leihrennräder zur Verfügung. Wähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
+    },
+    "granfondoviadelsale": {
+      "title": "Miete ein Rennrad für die Granfondo Via del Sale",
+      "description": "Was: <b>23ª Granfondo Via del Sale </b>| Wann: <b>5.5.2019 </b>| Wo: <b>Fantini Club-Cervia (RA), Emilia Romagna </b>",
+      "text": "Mit der 23. Edition ist die Via del Sale mit 6.000 Teilnehmern und mehr als 28.000 Besuchern eines der führenden Granfondo in Italien. \nNeben diesen Rekordzahlen entscheiden sich jedes Jahr mehr als 100 Unternehmen für die Teilnahme an der größten Outdoor-Messe Italiens. \nEs gibt 3 verschiedene Routen: Größte Strecke: 174 km. Mittlere Strecke: 118 Km, Kurze Strecke: 77 Km\nDer berühmteste Aufstieg? Besonders der Montevecchio, der legendäre \"Cima Pantani\". Ein Ort, der uns am Herzen liegt, ist das wichtigste Symbol unseres Granfondo. Eine einzigartige Erinnerung an den unvergesslichen Piraten, der hierher kam, um sich auf seine großen Siege vorzubereiten.\nBrauchst du ein Rennrad für die <a target=\"_blank\" href=\"http://granfondoviadelsale.com/index.php?langsito=en&amp;utm_source=listnride&amp;utm_medium=newsletter%26social\"> Granfondo Via del Sale ? </a> In Zusammenarbeit mit der listnride Community stellen wir Ihnen hochwertige Rennräder zur Verfügung, die du problemlos für die Veranstaltung mieten kannst. Wähle eines der unterstehenden Fahrräder, frage es für den gewünschten Zeitraum an und hole es zum richtigen Zeitpunkt ab. \nFoto: Sportograf"
+    },
+    "girosardegna": {
+      "title": "Miete ein Rennrad für den Giro Sardegna.",
+      "description": "Was:  <b>Giro Sardegna</b> | Wann: <b>21.4 - 26.4.2019 </b> | Wo: <b>Cagliari, Sardinia</b>",
+      "text": "Das 6-stufige Radrennen, geeignet für alle fitness-levels von Radfahrern...\nJeden Tag eine neue Herausforderung, 6 Tage 6 Rennen auf der schönsten Insel des Mittelmeers. Giro Sardegna\nOsterspecial: an den Küsten Süd-Sardiniens\".\nVillasimius, Chia, Chia, Pula, Portoscuso, Nebida, Buggerru, Buggerru, Buggerru, etc.\nEs ist wunderbar, zu dieser Jahreszeit mit dem Fahrrad in der Schönheit der Natur zu fahren (Sardinien im späten Frühjahr ist ein Aufstand von Farben und Gerüchen!). \nDie Start- und Zielpunkte sind zu günstigen Zeiten und in der Nähe des Hotels; die Straßen sind perfekt asphaltiert; die Natur ist wie eine Postkarte: Alle diese Elemente haben eine Veranstaltung geschaffen, die weltweit einzigartig ist, mit der richtigen Philosophie und einer gut durchdachten Organisation!\nSuchst du ein Rennrad für den <a target=\"_blank\" href=\"https://www.girosardegna.com/\"> Giro Sardegna ? </a> Zusammen mit der listnride-Community stellen wir hier passenden Leihrennräder zur Verfügung. Wähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
     },
     "velorace-dresden": {
       "title": "Miete ein Rennrad für Velorace Dresden 2019",
@@ -546,7 +578,7 @@
   "brand-integration": {
     "shared": {
       "choose-location": "Choose a test location",
-      "no-bikes-found": "Ups .., hier werden leider noch keine Fahrräder angeboten.",
+      "no-bikes-found": "Ups ... hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
     },
     "whyte": {
@@ -568,6 +600,34 @@
         "title": "Erfahre mehr über Whyte Bikes",
         "description": "Bestelle dein neues <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte Bike</a> online und lass dir deine listnride Miete zurückerstatten."
       }
+    },
+    "felt": {
+      "title": "Rent and test ride Felt road bikes in Munich",
+      "description": "As countless frame makers experimented with new materials and unorthodox aesthetics, Felt Bicycles focused on function over form, on a painstakingly iterative design process, and on adapting the bike’s characteristics to the fit needs of the rider, rather than the other way around. Felt’s goal is to produce the best bicycle possible, regardless of how long it takes.",
+      "feature-1": {
+        "title": "Design Methodology",
+        "description": "The introduction of a new Felt bicycle comes at the conclusion of a long, thoughtful, and rigorous process. The amount of time from initial concept to a new bike can take years to complete."
+      },
+      "feature-2": {
+        "title": "Carbon Fiber",
+        "description": "Lighter than aluminum, stronger than steel, and with Felt’s manufacturing techniques, carbon fiber bicycles offer an unmatched combination of ride compliance, stiffness, strength, and efficiency."
+      },
+      "feature-3": {
+        "title": "Aero Science",
+        "description": "Felt aero bikes are wind tunnel developed. They are bringing prototypes to the wind tunnel, making changes, and then going back and refining the design before the carbon fiber molds are ever cut."
+      },
+      "find-out-more": {
+        "title": "Learn more about Felt Bicycles",
+        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
+      },
+      "faq-answer-1": "FAQ ANSWER #1",
+      "faq-answer-2": "FAQ ANSWER #2",
+      "faq-answer-3": "FAQ ANSWER #3",
+      "faq-answer-4": "FAQ ANSWER #4",
+      "faq-question-1": "faq-question-1",
+      "faq-question-2": "faq-question-2",
+      "faq-question-3": "faq-question-3",
+      "faq-question-4": "faq-question-4"
     },
     "swytch": {
       "title": "Miete und teste Swytch E-bikes in Berlin",

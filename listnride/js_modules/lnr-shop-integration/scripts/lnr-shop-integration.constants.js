@@ -50,15 +50,21 @@ var lnrConstants = {
   // translation object
   translate: {
     allLocations: {
-      "en": 'All locations',
-      "de": 'Alle Standorte',
-      "nl": 'Alle locaties',
+      "en": "All locations",
+      "de": "Alle Standorte",
+      "nl": "Alle locaties",
       "selected": {}
     },
     allSizes: {
-      "en": 'All sizes',
-      "de": 'Alle Gr&ouml;&szlig;en',
-      "nl": 'Alle maten',
+      "en": "All sizes",
+      "de": "Alle Gr&ouml;&szlig;en",
+      "nl": "Alle maten",
+      "selected": {}
+    },
+    unisize: {
+      "en": "Unisize",
+      "de": "Unisize",
+      "nl": "Unisize",
       "selected": {}
     }
   },

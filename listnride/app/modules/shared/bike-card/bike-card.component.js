@@ -7,7 +7,8 @@ angular.module('bikeCard',[]).component('bikeCard', {
     bike: '<',
     booked: '<',
     home: '<',
-    seo: '<'
+    seo: '<',
+    showLabels: '<'
   },
   controller: ['$mdMedia', 'helpers',
     function BikeCardController($mdMedia, helpers) {

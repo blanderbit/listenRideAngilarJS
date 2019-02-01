@@ -2,8 +2,8 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', '$mdMedia', '$analytics', 'api', 'Upload',
-    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $mdMedia, $analytics, api, Upload) {
+  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', '$mdMedia', '$analytics', 'api', 'Upload', 'notification',
+    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $mdMedia, $analytics, api, Upload, notification) {
       var VerificationDialogController = function(lister, invited, callback) {
         var verificationDialog = this;
         var poller = $interval(function() {
@@ -82,7 +82,8 @@ angular.
             url: api.getApiUrl() + '/users/' + $localStorage.userId,
             data: profilePicture,
             headers: {
-              'Authorization': $localStorage.auth
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + $localStorage.accessToken
             }
           }).then(
             function(response) {
@@ -171,7 +172,7 @@ angular.
               );
             },
             function (error) {
-              
+
             }
           );
         };
@@ -260,7 +261,7 @@ angular.
         // promise
         var deferred = $q.defer();
         // api call
-        api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+        api.put('/users/' + $localStorage.userId + '/update_phone', data).then(
           // resolve api: success
           function (success) {
             $mdToast.show(
@@ -275,6 +276,7 @@ angular.
           // reject api: error
           function (error) {
             // reject the promise
+            notification.show(error, 'error');
             deferred.reject(error);
           }
         );
@@ -316,7 +318,7 @@ angular.
         // return promise to caller
         return deferred.promise;
       };
-      
+
       return {
         openDialog: openDialog,
         sendSms: sendSms,

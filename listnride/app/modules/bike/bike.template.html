@@ -103,16 +103,6 @@
           </div>
         </div>
 
-        <div layout="row" layout-xs="column">
-          <div flex-gt-xs="25">
-            <h3 class="md-body-2">{{ 'list.details.size' | translate }}</h3>
-          </div>
-          <div flex-gt-xs>
-            <p class="md-body-1" ng-if="bike.data.size > 0">{{ 'shared.for' | translate }} <strong>{{ bike.data.size }}</strong> - <strong>{{ bike.data.size + 10 }}</strong> cm</p>
-            <p class="md-body-1" ng-if="bike.data.size == 0">{{ 'shared.for' | translate }} <strong>{{ 'search.all-sizes' | translate }}</strong></p>
-          </div>
-        </div>
-
         <div layout="row" layout-xs="column" layout-align-gt-xs="center center">
           <div flex-gt-xs="25">
             <h3 class="md-body-2">{{ 'list.accessories.label' | translate }}</h3>
@@ -141,7 +131,12 @@
               <p flex="30" class="md-body-2">{{ 'list.category.label' | translate }}</p>
               <p class="md-body-1">{{ bike.data.category | category | translate  }}</p>
             </div>
-            <div layout="row" layout-align="start center" ng-if="bike.showAttribute(bike.data.frame_size)">
+            <div
+              layout="row"
+              layout-align="start center"
+              ng-if="bike.showAttribute(bike.data.frame_size)"
+              ng-hide="bike.data.is_cluster"
+            >
               <p flex="30" class="md-body-2">{{ 'list.details.frame_size' | translate }}</p>
               <p class="md-body-1">{{ bike.data.frame_size }}</p>
             </div>
@@ -199,7 +194,11 @@
       <div flex="30" hide-sm hide-xs>
         <calendar
           ng-if="!bike.mobileCalendar()"
+          bike="bike.data"
+          bike-cluster="bike.cluster"
           bike-id="bike.data.id"
+          bike-size="bike.defaultSize"
+          bike-cluster-sizes="bike.availableSizes"
           price-half-day="bike.data.price_half_daily"
           price-day="bike.data.price_daily"
           price-week="bike.data.price_weekly"
@@ -210,6 +209,7 @@
           bike-availabilities="bike.data.availabilities"
           coverage-total="bike.data.coverage_total"
           country-code="bike.data.country_code"
+          cluster="bike.cluster"
         ></calendar>
       </div>
     </div>

@@ -206,6 +206,10 @@ md-grid-tile.ng-leave-active {
   width: 8px;
 }
 
+.spacer-horizontal {
+  width: 16px;
+}
+
 .spacer-xs {
   height: 20px;
 }
@@ -532,6 +536,10 @@ md-tooltip .md-content {
   width: 100%;
 }
 
+.lnr-w-fluid {
+  max-width: 100%;
+}
+
 .lnr-maxh-100 {
   max-height: 100%!important;
 }
@@ -690,6 +698,11 @@ md-tooltip .md-content {
 
 .lnr-p-x2 {
   padding: 16px;
+}
+
+.lnr-ph {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .lnr-ph-x2 {
@@ -1388,6 +1401,22 @@ home #landingSection {
   transform: rotate(-9deg);
 }
 
+.lnr-badge-rounded {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+  line-height: 1;
+  text-align: center;
+}
+
+.lnr-badge-default {
+  background-color: #7ab2f8;
+  color: #fff;
+}
+
 home #landingSection #homeHeroShot {
   position: absolute;
   top: 0;
@@ -1728,6 +1757,36 @@ listing-card md-card img.md-card-image {
   left: 0;
 }
 
+/* TODO: Check opacity hover for Mobile/touch devices */
+.lnr-bike-card__merge-checkbox {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  opacity: 0;
+  transition: opacity .3s;
+  z-index: 2;
+}
+
+.lnr-bike-card:hover .lnr-bike-card__merge-checkbox {
+  opacity: 0.6;
+}
+
+.lnr-bike-card .lnr-bike-card__merge-checkbox:hover,
+.lnr-bike-card .lnr-bike-card__merge-checkbox.md-checked,
+.lnr-bike-card.lnr-check-mode .lnr-bike-card__merge-checkbox {
+  opacity: 1;
+}
+
+.lnr-bike-card__backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+}
+
 .lnr-bike-card md-card-title-text span {
   max-width: 95%;
   white-space: nowrap;
@@ -1741,13 +1800,27 @@ home #featuredTiles a {
   color: #fff;
 }
 
+.lnr-bike-card {
+  transition: transform .3s;
+}
+
 .lnr-bike-card.lnr-unavailable {
-  background-color: rgb(250, 250, 250);
+  background-color: #fafafa;
   opacity: 0.8;
 }
 
 .lnr-bike-card.lnr-unavailable img {
   opacity: 0.4;
+}
+
+.lnr-bike-card.lnr-checked-card {
+  transform: scale(0.95);
+  box-shadow: 0 0 0px 10px #03a9f41a;
+  border-radius: 0;
+}
+
+.lnr-listing-list-item .lnr-checked-card {
+  background-color: #f1f1f1;
 }
 
 .bike__prices-item {
@@ -1939,7 +2012,7 @@ user .lnr-user-rating {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  LIST BIKE
+/*  RATING
 /*-----------------------------------------------------------------------------------*/
 
 .angular-input-stars {
@@ -1969,56 +2042,6 @@ user .angular-input-stars > li {
   padding-right: 3px;
 }
 
-list md-tabs,
-edit md-tabs {
-  padding: 0!important;
-  width: 100%;
-}
-
-list .md-tab.md-disabled {
-  opacity: 1;
-}
-
-.lnr-list-title {
-  margin: 8px 0 24px 0;
-}
-
-list md-tabs .lnr-list-form,
-edit md-tabs .lnr-list-form {
-  min-height: 300px;
-}
-
-list md-tabs .img-preview,
-edit md-tabs .img-preview {
-  height: 100px;
-  width: 150px;
-  background-position: center;
-  background-size: cover;
-}
-
-list md-tabs .md-whiteframe-1dp {
-  background-color: white;
-}
-
-list md-icon.accessory-icon,
-edit md-icon.accessory-icon {
-  margin: 0 8px 0 0;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-list md-icon.accessory-icon.checked svg path,
-list md-icon.accessory-icon.checked svg rect,
-list md-icon.accessory-icon.checked svg circle,
-edit md-icon.accessory-icon.checked svg path,
-edit md-icon.accessory-icon.checked svg rect,
-edit md-icon.accessory-icon.checked svg circle,
-list md-icon.accessory-icon.checked svg polygon,
-edit md-icon.accessory-icon.checked svg polygon {
-  fill: #FFFFFF;
-  color: #FFFFFF;
-}
-
 .accessory-label.checked {
   color: #FFFFFF;
 }
@@ -2029,29 +2052,6 @@ edit md-icon.accessory-icon.checked svg polygon {
 
 .accessory-checkbox.unchecked {
   background-color: rgb(255, 255, 255);
-}
-
-list md-radio-button.main-category .md-container,
-edit md-radio-button.main-category .md-container {
-  display: none;
-}
-
-list md-radio-button.main-category .md-label,
-edit md-radio-button.main-category .md-label {
-  margin-left: 0;
-}
-
-list .accessory-checkbox,
-edit .accessory-checkbox {
-  margin: 0 10px 16px 0;
-  padding: 5px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-list .accessory-label,
-edit .accessory-label {
-  cursor: pointer;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -2075,6 +2075,11 @@ listings .lnr-bike-listings {
 
 .listings-header .content {
   min-height: 60px;
+}
+
+.listings__actions {
+  border-right: 1px solid #e1e1e1;
+  margin-right: 8px;
 }
 
 /* TODO: OPTIMIZE */
@@ -2401,6 +2406,14 @@ button.md-primary.md-cancel-button {
   min-height: calc(100vh - 413px);
 }
 
+.lnr-business-logo {
+  text-align: center;
+}
+
+.lnr-business-logo img {
+  max-height: 60px;
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
@@ -2482,7 +2495,7 @@ md-grid-list a {
 @media (min-width: 960px) {
   #jobs-details md-list-item {
     min-height: 30px;
-    height: 32px;
+    height: 40px;
   }
 }
 
@@ -2808,12 +2821,17 @@ md-input-container.md-icon-right>md-icon.md-icon--btn {
 }
 
 .md-button:not([disabled]).md-focused.lnr-md-no-focused,
-.lnr-md-no-focused.md-focused:not(:empty) .md-checked.md-primary .md-container:before {
+.lnr-md-no-focused.md-focused:not(:empty) .md-checked.md-primary .md-container:before,
+md-checkbox.lnr-md-no-focused .md-container:before {
   background: none!important;
 }
 
 md-icon[md-font-icon].fa--lh20 {
   line-height: 20px;
+}
+
+.md-checkbox__hide-label .md-label{
+  display: none;
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -3577,8 +3595,13 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .lnr-gt-xs-mr {
     margin-right: 8px;
   }
+
   .lnr-gt-xs-ml {
     margin-left: 8px;
+  }
+
+  .lnr-gt-xs-pt-x2 {
+    padding-top: 16px;
   }
 }
 
@@ -3714,6 +3737,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-sc-w-divider md-divider {
     display: none;
+  }
+
+  .lnr-xs-center {
+    text-align: center;
   }
 
   /* INSURANCE */

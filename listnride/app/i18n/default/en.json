@@ -1,6 +1,13 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "status-labels": {
+      "variants_available": "Variants available"
+    },
+    "summary": "Overview",
+    "pick-size": "Pick a size",
+    "firstly-pick-dates": "Please, select your rental dates first.",
+    "remove": "Remove",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Credit card",
@@ -211,6 +218,18 @@
     "vatternrundan": {
       "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
       "meta-description": "With listnride you can easily rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+    },
+    "lardita": {
+      "meta-title": "Rent a vintage road bike for l'Ardita | listnride",
+      "meta-description": "With listnride you can easily rent a road bike online for l'Ardita 2019. Choose the perfect bike that fits your needs!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Rent a road bike for the Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "With listnride you can easily rent a road bike online for the Granfondo Via del Sale 2019. Choose the perfect bike that fits your needs!"
+    },
+    "girosardegna": {
+      "meta-title": "Rent a road bike for the Giro Sardegna 2019 | listnride",
+      "meta-description": "With listnride you can easily rent a road bike online for the Giro Sardegna 2019. Choose the perfect bike that fits your needs!"
     }
   },
   "lister": {
@@ -373,8 +392,12 @@
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
       },
       "whyte": {
-        "meta-title": "Rent and test Whyte bikes in Berlin | listnride",
+        "meta-title": "Rent and test Whyte bikes in Berlin and Zell am Ziller (AT) | listnride",
         "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
+      },
+      "felt": {
+        "meta-title": "Rent and test ride Felt Bicycles in Munich | listnride",
+        "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
       },
       "swytch": {
         "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
@@ -571,8 +594,12 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "cluster-deleted": "Bike cluster successfully deleted",
+    "cluster-unmerged": "Bike cluster successfully unmerged",
+    "cluster-merged": "Bikes successfully merged into cluster",
     "add-payment-success": "Payment method has been saved",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
+    "is-invalid": "The current password is invalid.",
     "bike-edit-successful": "Your changes have been saved",
     "error": "An error occured. Please make sure your internet connection works and try again.",
     "add-payout-success": "Your payout method was successfully added.",
@@ -727,6 +754,7 @@
   },
   "user": {
     "verified-through": "Verified through",
+    "become-this-user": "Become this user",
     "own-bikes": "Rental Bikes",
     "ratings": "Ratings",
     "meta-title": "{{name}}'s profile",
@@ -804,6 +832,12 @@
   "forms": {
     "first-name": "First Name",
     "newsletter-privacy-policy": "Privacy Policy News letter",
+    "sign-up-today": "Sign up today ",
+    "already-registered": "You are already signed up",
+    "check-inbox": "Please check your inbox",
+    "security-text": "Security is really important for us. And this is not just a phrase that we use to make you calm. In order to keep your account secure, we would like to ask you to change your password.<br><br><b>Please click the link in the email that we just sent you.</b>",
+    "confirm-password": "Confirm password",
+    "please-change-password": "Please change your password",
     "save-new-password": "Save new password",
     "your-name": "Your name",
     "your-email-address": "Your email address",
@@ -960,6 +994,8 @@
     },
     "details": {
       "header": "What is your bike name, size & brand?",
+      "variations-add": "Add variants",
+      "variations-header": "How many variants would you like to add?",
       "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
       "label": "Details",
       "brand": "Brand",
@@ -1138,6 +1174,8 @@
   },
   "listings": {
     "my-bikes": "My Bikes",
+    "merge": "Merge bikes",
+    "unmerge": "Unmerge bikes",
     "no-bikes": "You haven't listed any of your bikes yet.",
     "list-a-bike": "List a Bike",
     "show-as-list": "Show as List",

@@ -72,8 +72,23 @@ angular.module('booking', [])
         function getBikeData() {
           api.get('/rides/' + booking.bikeId).then(
             function (success) {
-              booking.bike = success.data;
+              booking.bike = success.data.current;
               booking.coverageTotal = booking.bike.coverage_total || 0;
+
+              if (booking.bike.is_cluster) {
+                booking.cluster = success.data.cluster;
+
+                // remove primary bike from variations array
+                booking.cluster.variations = _.filter(booking.cluster.variations, function (variant) {
+                  return variant.id !== booking.bike.id;
+                });
+
+
+                // change some params to cluster merged params
+                booking.bike.accessories = booking.cluster.accessories;
+                booking.bike.ratings = booking.cluster.ratings;
+              }
+
               getLister();
               booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
               if (booking.bike.size === 0) {
@@ -384,7 +399,7 @@ angular.module('booking', [])
           if (!_.isEmpty(numberInput.$error)) { return }
           var data = {"phone_number": numberInput.$modelValue};
           booking.toggleConfirmButton();
-          api.post('/users/' + $localStorage.userId + '/update_phone', data).then(
+          api.put('/users/' + $localStorage.userId + '/update_phone', data).then(
             function (success) {
               notification.show(success, null, 'booking.details.sms-confirmation-message');
             },
@@ -495,7 +510,7 @@ angular.module('booking', [])
             ride_id: booking.bikeId,
             start_date: startDate_utc.toISOString(),
             end_date: endDate_utc.toISOString(),
-            instant: booking.shopBooking,
+            instant: !!booking.shopBooking,
             insurance: {
               premium: booking.isPremium
             }

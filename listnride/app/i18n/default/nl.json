@@ -1,6 +1,13 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "status-labels": {
+      "variants_available": "Varianten beschikbaar"
+    },
+    "summary": "Overzicht",
+    "pick-size": "Kies een maat",
+    "firstly-pick-dates": "Selecteer eerst een dag",
+    "remove": "verwijderen",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kredietkaart",
@@ -203,6 +210,18 @@
     "vatternrundan": {
       "meta-title": "Huur een racefiets voor Vätternrundan 2019 | listnride",
       "meta-description": "Met listnride huur je eenvoudig een racefiets online voor de Vätternrundan 2019. Kies de perfecte fiets die bij u past!"
+    },
+    "lardita": {
+      "meta-title": "Huur een vintage racefiets voor de Eroica I listnride",
+      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor l'Ardita 2019. Kies de perfecte fiets die bij u past!"
+    },
+    "granfondoviadelsale": {
+      "meta-title": "Huur een racefiets voor de Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Granfondo Via del Sale 2019. Kies de perfecte fiets die bij u past!"
+    },
+    "girosardegna": {
+      "meta-title": "Huur een racefiets voor de Giro Sardegna 2019 | listnride",
+      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Giro Sardegna 2019. Kies de perfecte fiets die bij u past!"
     }
   },
   "lister": {
@@ -365,8 +384,12 @@
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
       },
       "whyte": {
-        "meta-title": "Rent and test ride Whyte bikes in Berlin | listnride",
+        "meta-title": "Rent and test ride Whyte bikes in Berlin en Zell am Ziller (AT)| listnride",
         "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
+      },
+      "felt": {
+        "meta-title": "Rent and test ride Felt Bicycles in Munich | listnride",
+        "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
       },
       "swytch": {
         "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
@@ -563,8 +586,12 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
+    "cluster-deleted": "Fietskluster succesvol verwijderd",
+    "cluster-unmerged": "Fietscluster is succesvol ontkoppelt",
+    "cluster-merged": "Fietsen zijn succesvol samengevoegd in cluster",
     "add-payment-success": "Betaalmethode is opgeslagen",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
+    "is-invalid": "Het huidige wachtwoord is ongeldig.",
     "bike-edit-successful": "De aanpassingen zijn succesvol opgeslagen",
     "error": "Er is een fout opgetreden. Check of je internetverbinding werkt en probeer het nogmaals.",
     "add-payout-success": "Je uitbetaalmethode is toegevoegd aan je profiel.",
@@ -717,6 +744,7 @@
   },
   "user": {
     "verified-through": "geverifieerd door",
+    "become-this-user": "Become this user",
     "own-bikes": "Huurfietsen",
     "ratings": "Recensies",
     "meta-title": "{{name}}'s profiel",
@@ -793,6 +821,12 @@
   "forms": {
     "first-name": "Voornaam",
     "newsletter-privacy-policy": "Je kan ten aller tijde je voor de nieuwsletter afmelden. Het privacybeleid van listnride is van toepassing",
+    "sign-up-today": "Meld je nu aan",
+    "already-registered": "Je bent al geregistreerd",
+    "check-inbox": "Controleer ajb je inbox",
+    "security-text": "Veiligheid is echt belangrijk voor ons. En dit is niet zomaar een uitspraak die we gebruiken om je tot rust te brengen. Met het oog op de veiligheid van je account willen we je vragen om je wachtwoord nu te wijzigen.<br><br><b>Klik op de link in de e-mail die we je zojuist hebben gestuurd.</b>",
+    "confirm-password": "Bevestig wachtwoord",
+    "please-change-password": "Please change your password",
     "save-new-password": "Bewaar nieuw wachtwoord",
     "your-name": "Je naam",
     "your-email-address": "Emailadres",
@@ -947,6 +981,8 @@
     },
     "details": {
       "header": "Welke naam geef je jouw fiets en welk Merk en grootte is het?",
+      "variations-add": "Voeg varianten toe",
+      "variations-header": "Hoeveel varianten wil je toevoegen?",
       "hint": "Vul het merk, de naam en beschrijving van je fiets in. De naam is vrij te kiezen en kan bijvoorbeeld het model zijn. Bijv. Gazelle, Tour Populair, 2013. Kies de passende lichaamslengte voor het rijden van de fiets.",
       "label": "Details",
       "brand": "Merk",
@@ -1125,6 +1161,8 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
+    "merge": "samenvoegen",
+    "unmerge": "Ontkoppel fietsen",
     "no-bikes": "Je hebt nog geen fietsen online geplaatst.",
     "list-a-bike": "Fiets plaatsen",
     "show-as-list": "Toon als lijst",

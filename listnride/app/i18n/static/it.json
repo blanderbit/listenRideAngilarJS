@@ -329,21 +329,38 @@
   },
   "business-community": {
     "meta-title": "La comunità business di listnride",
+    "requests": {
+      "title": "Gestisci tutti i noleggi da un'unica postazione",
+      "description": "Ricevi richieste di prenotazione invece di un numero infinito di e-mail , tu hai sempre il controllo. Migliora la comunicazione con i tuoi clienti, niente più formulari o problemi di comunicazione."
+    },
+    "bike-page": {
+      "title": "Le biciclette vengono prima",
+      "description": "Ogni bicicletta ha un profilo unico con informazioni dettagliate che consentono ai nostri utenti di noleggiare la bici di sua scelta in pochi secondi."
+    },
+    "companies": {
+      "title": "Altre attività commerciali che hanno aderito alla nostra community business di listnride"
+    },
+    "plugin-wp": {
+      "title": "listnride  Plug-in di prenotazione",
+      "description": "Abbiamo sviluppato un plug-in di prenotazione gratuito per l'installazione in modo che i clienti possano noleggiare le biciclette direttamente dal tuo sito web, 24 ore su 24, 7 giorni su 7.",
+      "install": "Installa su Wordpress",
+      "link": "Si prega di utilizzare la nostra <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">documentazione di installazione</a> se non si utilizza Wordpress."
+    },
     "meta-description": "Diventa parte di listnride per il noleggio online di biciclette",
-    "title": "La comunità business di listnride",
-    "subtitle": "Diventa parte di listnride per il noleggio online di biciclette",
-    "description": "Vorremmo includerti nella nostra piattaforma per il noleggio online di biciclette e renderlo il più semplice possibile per te. Perchè la nostra passione sono le biciclette e vorremmo vederne molte altre sulle strade di tutta Europa. Come sarebbe bello, se potessimo aiutarci l’uno con l’altro in questa missione.",
+    "title": "Unisciti oggi alla community di listnride ",
+    "subtitle": "Nessun contratto, nessun canone mensile, solo una commissione per prenotazione.",
+    "description": "Con listnride puoi gestire tutto il tuo noleggio in un unico posto. Niente più formulari o problemi di comunicazione. Accetta o rifiuta le richieste di noleggio , in modo da avere sempre il controllo. Pronto per iscriverti su listnride?",
     "feature-1": {
-      "title": "Noleggia più biciclette tramite listnride",
-      "description": "I tuoi clienti possono selezionare e prenotare online le loro biciclette a noleggio attraverso il tuo sito web. Listnride si occuperà per te del processo di prenotazione e pagamento."
+      "title": "Approfitta della nostra vasta rete",
+      "description": "Promuoviamo le tue biciclette attraverso la nostra piattaforma e i nostri canali multimediali. Così i nostri clienti internazionali possono facilmente trovare e prenotare le vostre biciclette."
     },
     "feature-2": {
-      "title": "Presenta il tuo negozio online",
-      "description": "Ti diamo l’opportunità di presentare il tuo negozio online e di ampliare la tua base di clienti, quindi di raggiungere online anche la “generazione internet”."
+      "title": "Semplifica il processo di noleggio",
+      "description": "Niente più e-mail e telefonate che ti portano via tutto il tuo tempo. Basta ricevere la richiesta di prenotazione che tu puoi accettare."
     },
     "feature-3": {
-      "title": "Approfitta della nostra espansione",
-      "description": "Listnride è la più grande comunità di bike sharing in Europa, e continuiamo a crescere. Cogli l’opportunità."
+      "title": "Ottieni più noleggi",
+      "description": "Il nostro obiettivo è aiutare a far crescere la tua attività, riducendo al contempo l'amministratore e la complessità."
     },
     "text-2": {
       "title": "Diventa parte della comunità business di listnride",
@@ -377,6 +394,21 @@
       "title": "Noleggia una bici da strada per l'Epic Gran Canaria",
       "description": "Cosa: <b>Epic Gran Canaria</b> | Quando: <b>5 - 6 - 7 aprile 2019</b> | Dove: <b>Gran Canaria</b>",
       "text": "Lo scopo di Epic Gran Canaria è di far vivere un’esperienza ciclistica da professionisti a ciclisti amatoriali. Avrai totale sicurezza, comfort e qualità dei servizi e allo stesso tempo potrai testare te stesso e le tue capacità. Noleggia una bici da corsa cliccando sulla bici che preferisci e selezionando il periodo di tempo in cui desideri averla. "
+    },
+    "lardita": {
+      "title": "Noleggia una bici da corsa vintage per l' Ardita ",
+      "description": "Cosa: <b>L 'Ardita Ciclostorica dell'Alpe di Poti </b>| Quando: <b>24.3.2019 </b>| Dove: <b> Arezzo, Toscana </b>",
+      "text": "Cuore della festa è \"L'Ardita\" il ciclostorico dell'Alpe di Poti per bici da corsa d'epoca. \nDomenica 24 marzo 2019 si affronterà ancora una volta l'Alpe di Poti, tappa del Giro d'Italia 2016 ma anche di molte gare importanti degli anni '70 e '80. L' Ardita  ha la particolarità di rievocare il ciclismo di un tempo,. Avete bisogno di una bici per <a href=\"https://www.lardita.com/\" target=\"_blank\">L’ Ardita? </a> Insieme alla comunità di listnride, mettiamo a vostra disposizione biciclette da strada vintage, che potrete noleggiare facilmente per la manifestazione. Basta scegliere una delle biciclette qui sotto, richiederla per il periodo desiderato, e prenderla al momento opportuno."
+    },
+    "granfondoviadelsale": {
+      "title": "Noleggia una bici da corsa per la Granfondo Via del Sale ",
+      "description": "Cosa: <b>23ª Granfondo Via del Sale </b>| Quando: <b>5.5.2019 </b>| Dove: <b>Fantini Club-Cervia (RA), Emilia Romagna </b>",
+      "text": "Alla sua 23ª edizione, la Via del Sale è una delle Granfondo di riferimento in Italia, capace di coinvolgere 6.000 partecipanti e generare oltre 28.000 presenze di pubblico. \nA questi numeri da record si aggiungono le oltre 100 aziende che ogni anno scelgono di partecipare al più grande expo outdoor di settore in Italia. \n 3 diversi percorsi: Percorso lungo: 174 Km. Percorso medio: 118 Km, Percorso corto: 77 Km\nLa salita più celebre? Certamente Montevecchio, la mitica “Cima Pantani”. Un luogo a cui teniamo molto, divenuto il simbolo principale della nostra Granfondo. Un ricordo unico dell’indimenticato e indimenticabile Pirata, che veniva qui ad allenarsi per preparare le sue grandi vittorie.\n Avete bisogno di una bici per la <a target=\"_blank\" href=\"http://granfondoviadelsale.com/index.php?langsito=en&amp;utm_source=listnride&amp;utm_medium=newsletter%26social\"> Granfondo Via del Sale ? </a>  Insieme alla comunità di listnride, mettiamo a vostra disposizione biciclette da strada, che potrete noleggiare facilmente per la manifestazione. Basta scegliere una delle biciclette qui sotto, richiederla per il periodo desiderato, e prenderla al momento opportuno.\nFoto: Sportograf"
+    },
+    "girosardegna": {
+      "title": "Noleggia una bici da corsa per il Giro Sardegna ",
+      "description": "Cosa:  <b> Giro Sardegna</b> | Quando : <b> 21.4 - 26.4.2019\n\n</b> | Dove : <b> Cagliari , Sardegna </b>",
+      "text": "La gara ciclistica in 6 tappe, adatta a tutti i tipi di ciclisti...\nOgni giorno una nuova sfida, 6 giorni 6 corse nella più bella isola del Mediterraneo \nSpeciale Pasqua: sulle coste della Sardegna meridionale\".\nVillasimius, Chia, Chia, Pula, Portoscuso, Nebida, Buggerru, Buggerru\nE’  meraviglioso andare in bicicletta nella bellezza della zona in quel particolare periodo dell'anno (la Sardegna in tarda primavera è un tripudio di colori e odori!) \nLe tappe iniziano in orari convenienti; le partenze/arrivi sono vicine all'hotel; le strade hanno un asfalto perfetto; la natura è una cartolina: tutti questi elementi combinati hanno costruito un evento senza pari al mondo con una giusta filosofia e un'organizzazione ben fatta!  Avete bisogno di una bici per il <a target=\"_blank\" href=\"https://www.girosardegna.it/\"> Giro Sardegna ? </a> Insieme alla comunità di listnride, mettiamo a vostra disposizione biciclette da strada, che potrete noleggiare facilmente per la manifestazione. Basta scegliere una delle biciclette qui sotto, richiederla per il periodo desiderato, e prenderla al momento opportuno."
     },
     "velorace-dresden": {
       "title": "Rent a road bike for Velorace Dresden 2019",
@@ -561,6 +593,34 @@
         "title": "Learn more about Whyte bikes",
         "description": "Order your new <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte bike</a> online and get your listnride rental reimbursed (valid for purchases at Whyte Germany only)."
       }
+    },
+    "felt": {
+      "title": "Noleggia e testa la Felt a Monaco di Baviera ",
+      "description": "Come innumerevoli produttori di telai hanno sperimentato nuovi materiali e un'estetica poco ortodossa, Felt Bicycles si è concentrata sulla funzione della forma, su un processo di progettazione iterativo accurato e sull'adattamento delle caratteristiche della bici alle esigenze di adattamento del ciclista, piuttosto che il contrario. L'obiettivo di Felt è produrre la migliore bicicletta possibile, indipendentemente da quanto tempo ci vuole.",
+      "feature-1": {
+        "title": "Metodologia di progetto",
+        "description": "L'introduzione di una nuova bicicletta Felt arriva alla conclusione di un lungo, accurato e rigoroso processo. La quantità di tempo che trascorre dal concetto iniziale a una nuova bicicletta può richiedere anni per essere completata."
+      },
+      "feature-2": {
+        "title": "Fibra di carbonio",
+        "description": "Più leggeri dell'alluminio, più resistenti all'acciaio, e con le tecniche di fabbricazione Felt, le biciclette in fibra di carbonio offrono una combinazione ineguagliata di tenuta in pista, rigidità, resistenza ed efficienza."
+      },
+      "feature-3": {
+        "title": "Aero Science",
+        "description": "Le bici aerodinamiche sono sviluppate in galleria del vento. Stanno portando i prototipi nella galleria del vento, apportando modifiche, quindi tornando indietro e perfezionando il progetto prima che gli stampi in fibra di carbonio vengano tagliati."
+      },
+      "find-out-more": {
+        "title": "Ulteriori informazioni su Felt Bicycles",
+        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
+      },
+      "faq-answer-1": "FAQ ANSWER #1",
+      "faq-answer-2": "FAQ ANSWER #2",
+      "faq-answer-3": "FAQ ANSWER #3",
+      "faq-answer-4": "FAQ ANSWER #4",
+      "faq-question-1": "faq-question-1",
+      "faq-question-2": "faq-question-2",
+      "faq-question-3": "faq-question-3",
+      "faq-question-4": "faq-question-4"
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",
@@ -1157,10 +1217,10 @@
   "jobs": {
     "title": "Lavora con noi",
     "header": "Offerte di lavoro",
-    "subheader": "Aiuta la nostra comunità bike sharing a crescere",
+    "subheader": "Stabiliamo un nuovo standard su come le persone prenotano le loro bici e le esperienze in bicicletta",
     "contact": {
       "title": "Unisciti al nostro gruppo",
-      "content": "Sai sempre di più sulle biciclette? Ti piace saltare sulla sella e andare in giro, sia con la pioggia che con il sole? Allora sei veramente un vero e proprio ciclista - e saresti un grande valore aggiunto nella nostra squadra. Dai un'occhiata per vedere se abbiamo attualmente un posto vacante che è giusto per te e non esitare a inviarci la tua richiesta."
+      "content": "Cerchiamo persone di talento che vogliono unirsi a un team stimolante e motivato in una start-up che vuole stabilire un nuovo standard su come le persone prenotano le biciclette e le esperienze in bicicletta. List and Ride è alla ricerca di persone con una mentalità aperta che siano disposte ad assumersi delle responsabilità in un ambiente frenetico, se sei interessato ad unirti a noi, cerca qui sotto le nostre posizioni vacanti. Ci piacerebbe sentirti.\n\n"
     },
     "view": "Mostra",
     "meta-title": "Lavora per listnrid",

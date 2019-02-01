@@ -329,21 +329,38 @@
   },
   "business-community": {
     "meta-title": "La comunidad empresarial de listnride",
+    "requests": {
+      "title": "Gestiona todos tus alquileres desde un solo lugar.",
+      "description": "Recibe solicitudes de reserva en lugar de interminables correos electrónicos,  tu tienes el control. Mejora la comunicación de tus clientes, no más formularios engorrosos o pérdida de tiempo."
+    },
+    "bike-page": {
+      "title": "Las bicicletas son lo primero",
+      "description": "Cada bicicleta tiene un perfil único con información detallada que permite a nuestros usuarios alquilar la bicicleta perfecta en segundos."
+    },
+    "companies": {
+      "title": "Otras tiendas que se unieron a nuestra comunidad de negocios de listnride"
+    },
+    "plugin-wp": {
+      "title": "Listnride Booking Plugin ",
+      "description": "Desarrollamos el plugin de reserva  para que tus clientes puedan alquilar tus bicicletas directamente desde tu sitio web, 24/7.",
+      "install": "Instalar en Wordpress",
+      "link": "En caso de que no uses Wordpress, esta es nuestra <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">guía de instalación </a>."
+    },
     "meta-description": "Únete a la comunidad empresarial de listnride para alquilar bicis",
-    "title": "La comunidad empresarial de listnride",
-    "subtitle": "Únete a la comunidad empresarial de listnride para alquilar bicis",
-    "description": "Nos gustaría incluirte en nuestras soluciones comerciales de alquiler de bicicletas y hacer que sea lo más fácil posible para ti. Porque nuestra pasión es el ciclismo y nos gustaría ver más en las calles de Europa. ¿No es genial que podamos apoyarnos mutuamente en esta misión?",
+    "title": "Únete a la comunidad listnride ",
+    "subtitle": "Sin contratos, sin cuotas mensuales, solo una comisión por reserva confirmada.",
+    "description": "Con listnride puede administrar todos tus alquileres en un solo lugar. No más formularios o teléfono descompuesto. Acepta o rechaza solicitudes de alquiler en línea, siempre en control. ¿Listo para unirte a listnride?",
     "feature-1": {
-      "title": "Alquila más bicis a través de listnride!",
-      "description": "Tus clientes pueden seleccionar y reservar su bici de alquiler online en listnride, así como a través de tu página web. listnride se encarga del proceso completo de reserva y pago por ti."
+      "title": "Benefíciate de nuestra gran comunidad",
+      "description": "Promocionamos tus bicicletas a través de nuestra plataforma y nuestros canales social media. Para que de esta manera nuestros clientes internacionales puedan encontrar y reservar sus bicicletas fácilmente."
     },
     "feature-2": {
-      "title": "Presenta tu tienda online",
-      "description": "Presenta tu tienda online y, de este modo ampliarás tu base de clientes al llegar mejor a la \"generación de internet\" a través de la web y los dispositivos móviles."
+      "title": "Simplifica el proceso de alquiler",
+      "description": "No más correos electrónicos o  llamadas telefónicas que le quitan todo su tiempo. Simplemente reciba solicitudes de reserva que pueda aceptar."
     },
     "feature-3": {
-      "title": "Benefíciate de nuestro alcance",
-      "description": "Listnride es la comunidad de bicicletas compartidas más grande de Europa y seguimos creciendo. Utiliza este alcance y gana nuevos clientes internacionales."
+      "title": "Más alquileres para tu tienda",
+      "description": "Nuestro objetivo es ayudarte a hacer crecer tu negocio, al tiempo que reduces el tiempo invertido en la administración del mismo."
     },
     "text-2": {
       "title": "Únete a la comunidad empresarial de listnride ",
@@ -377,6 +394,21 @@
       "title": "Alquila una bici de carretera para Epic Gran Canaria | listnride",
       "description": "Qué: <b>Epic Gran Canaria</b> | Cuándo: <b>5 - 6 - 7 abril 2019</b> | Dónde: <b>Gran canaria</b>",
       "text": "Siéntete por unos días como un profesional y experimenta una experiencia deportiva y humana sin precedentes midiéndote en cada una de las subidas cronometradas durante tres días. Alquila tu bici de carretera aquí, simplemente tienes que  seleccionar la bicicleta adecuada para ti y solicitarla para los días de la competencia. \n"
+    },
+    "lardita": {
+      "title": "Alquila una bici de carretera antigua para L’ Ardita ",
+      "description": "Qué:  <b> L'Ardita ciclo-histórica del Alpe di Poti </b> | Cuándo: <b> 24.3.2019</b> | Dónde: <b>Arezzo, Toscana</b>",
+      "text": "El corazón de la fiesta es \"L 'Ardita\", la ciclo-histórica de Alpe di Poti para bicicletas de carretera de época. \nEl domingo 24 de marzo de 2019 se enfrentará de nuevo al Alpe di Poti, etapa del Giro de Italia 2016 pero también de muchas carreras importantes de los años 70 y 80. L' Ardita 2019, tiene la particularidad de evocar el ciclismo del pasado, ¿Necesitas una bici de época para <a href=\"https://www.lardita.com/eng\" target=\"_blank\">L’ Ardita?</a> Junto con la comunidad de listnride, ofrecemos bicicletas de carretera de época que se pueden alquilar fácilmente para el evento. Sólo tienes que elegir una de las siguientes bicicletas, solicitarla para el período requerido y recogerla cuando llegue el momento. Tan simple como eso."
+    },
+    "granfondoviadelsale": {
+      "title": "Alquiler de una bicicleta de carretera para el Granfondo Via del Sale.",
+      "description": "Qué: <b>23ª Granfondo Via del Sale </b>| Cuando: <b>5.5.2019 </b>| Dónde: <b>Fantini Club-Cervia (RA), Emilia Romagna </b>",
+      "text": "En su 23ª edición, la Via del Sale es uno de los Granfondos de referencia en Italia, capaz de implicar a 6.000 participantes y generar más de 28.000 visitantes. \nAdemás de estos números récord, hay más de 100 empresas que cada año eligen participar en la mayor exposición al aire libre de Italia. \n3 recorridos de diferente intensidad, uno largo de 174 Km, uno medi de  118 Km y  uno corto de 77 Km\n¿La escalada más famosa? Ciertamente en Montevecchio, la legendaria \"Cima Pantani\". Representa el  emblema de nuestro Granfondo. Un recuerdo único del inolvidable Pirata, que vino a entrenar para sus grandes victorias.\n ¿Necesitas una bicicleta para  el <a target=\"_blank\" href=\"http://granfondoviadelsale.com/index.php?langsito=en&amp;utm_source=listnride&amp;utm_medium=newsletter%26social\"> Granfondo Via del Sale ? </a> Junto con la comunidad de listnride, ponemos a su disposición bicicletas de carretera, que puede alquilar fácilmente para el evento. Sólo tiene que elegir una de las bicicletas a continuación, solicitarla para el período deseado, y tomarla en el momento adecuado.\nFoto: Sportograf"
+    },
+    "girosardegna": {
+      "title": "Alquiler de una bicicleta de carretera para el Giro Sardegna.",
+      "description": "Qué: <b>Giro Sardegna </b>| Cuando: <b>21.4 - 26.4.2019 </b>| Dónde: <b>Cagliari, Cerdeña </b>",
+      "text": "La carrera ciclista de 6 etapas, apta para todo tipo de ciclistas....\nCada día un nuevo reto, 6 días 6 carreras en la isla más bonita del Mediterráneo \nEspecial Semana Santa: en las costas del sur de Cerdeña\".\nVillasimius, Chia, Chia, Chia, Pula, Portoscuso, Nebida, Buggerru, Buggerru\nEs maravilloso montar en bicicleta en la belleza de la zona en esa época del año en particular (Cerdeña a finales de la primavera es una explosión de colores y olores!) \nLas paradas empiezan a horas convenientes; las salidas/llegadas están cerca del hotel; las carreteras tienen asfalto perfecto; la naturaleza es una postal: ¡todos estos elementos combinados han construido un evento sin parangón en el mundo con la filosofía correcta y una organización bien hecha!  ¿Necesitas una bicicleta para el <a target=\"_blank\" href=\"https://www.girosardegna.com/\"> Giro Sardegna ? </a>Junto con la comunidad de listnride, ponemos a su disposición bicicletas de carretera, que puede alquilar fácilmente para el evento. Simplemente elija una de las bicicletas de abajo, solicítela para el período deseado y tómela en el momento adecuado.\n "
     },
     "velorace-dresden": {
       "title": "Alquila una bici de carretera para Vätternrundan 2019 | listnride",
@@ -568,6 +600,34 @@
         "title": "Learn more about Whyte bikes",
         "description": "Order your new <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte bike</a> online and get your listnride rental reimbursed (valid for purchases at Whyte Germany only)."
       }
+    },
+    "felt": {
+      "title": "Alquila y prueba las bicicletas de carretera Felt en Munich",
+      "description": "Innumerables fabricantes de cuadros experimentaron con nuevos materiales y una estética poco ortodoxa, Felt Bicycles se centró en la función sobre la forma, en un proceso de diseño meticulosamente iterativo, y en adaptar las características de la bicicleta a las necesidades de ajuste del ciclista, y no al revés. El objetivo de Felt es producir la mejor bicicleta posible, independientemente del tiempo que demore.",
+      "feature-1": {
+        "title": "Metodología de diseño",
+        "description": "La introducción de una nueva bicicleta Felt al mercado llega a la conclusión de un proceso largo, reflexivo y riguroso. La cantidad de tiempo desde el concepto inicial hasta una bicicleta nueva puede tardar años en completarse."
+      },
+      "feature-2": {
+        "title": "Fibra de carbon",
+        "description": "Más ligeras que el aluminio, más fuertes que el acero, y con las técnicas de fabricación de Felt, las bicicletas de fibra de carbono ofrecen una combinación inigualable de conformidad con la conducción, rigidez, resistencia y eficiencia."
+      },
+      "feature-3": {
+        "title": "Aero ciencia",
+        "description": "Las bicicletas aerodinámicas de fieltro son túnel de viento desarrollado. Traen prototipos al túnel de viento, hacen cambios y luego regresan y refinan el diseño antes de que se corten los moldes de fibra de carbono."
+      },
+      "find-out-more": {
+        "title": "Aprende más sobre las bicicletas Felt",
+        "description": "Busca un concesionario y compra tu <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Bicicleta Felt</a>, y obtén un reembolso del alquiler. Consulta las <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">preguntas frecuentes </a>y aprende más sobre las bicicletas Felt."
+      },
+      "faq-answer-1": "FAQ ANSWER #1",
+      "faq-answer-2": "FAQ ANSWER #2",
+      "faq-answer-3": "FAQ ANSWER #3",
+      "faq-answer-4": "FAQ ANSWER #4",
+      "faq-question-1": "faq-question-1",
+      "faq-question-2": "faq-question-2",
+      "faq-question-3": "faq-question-3",
+      "faq-question-4": "faq-question-4"
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",
