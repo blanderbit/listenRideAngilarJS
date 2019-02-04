@@ -25,7 +25,11 @@
         </md-input-container>
       </div>
       <div layout="row" layout-wrap layout-padding>
-        <bike-card ng-repeat="bike in eroicaGaiole.bikes | filter : {size : filterSize}" bike="bike" booked="bike.booked" flex="100" flex-gt-xs="50" flex-gt-sm="33">
+        <bike-card
+          ng-repeat="bike in eroicaGaiole.bikes | filter : {size : filterSize}"
+          bike="bike" booked="bike.booked"
+          show-labels="true"
+          flex="100" flex-gt-xs="50" flex-gt-sm="33">
         </bike-card>
       </div>
     </div>

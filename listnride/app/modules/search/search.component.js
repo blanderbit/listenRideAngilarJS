@@ -57,6 +57,7 @@ angular.module('search',[]).component('search', {
         search.populateBikes = populateBikes;
         search.addMoreItemsLimit = addMoreItemsLimit;
         search.onDateChange = onDateChange;
+        search.countBikes = countBikes;
 
         // get initial filter values from url
         search.initialValues = {
@@ -388,6 +389,11 @@ angular.module('search',[]).component('search', {
       // END MAP FUNCTIONALITY <<<<<<
       // ============================
 
+      function countBikes() {
+        if (!search.categorizedFilteredBikes) return;
+        return search.categorizedFilteredBikes[0].bikes.length;
+      }
+
       function onDateChange() {
         getUnavailableBikes().then(function(results){
           search.unavailableIds = results.data.ids;
@@ -425,6 +431,7 @@ angular.module('search',[]).component('search', {
         if (!search.bikes) return;
         if (search.limit < search.bikes.length) search.limit += 15;
       }
+
 
     }
   ]
