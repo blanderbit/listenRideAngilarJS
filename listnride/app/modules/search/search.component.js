@@ -20,20 +20,13 @@ angular.module('search',[]).component('search', {
     function SearchController($translate, $stateParams, $state, $timeout, NgMap, ngMeta, api, mapConfigs) {
       var search = this;
       search.$onInit = function() {
-        // methods
+        // variables
         search.location = $stateParams.location;
-        search.showBikeWindow = showBikeWindow;
-        search.placeChanged = placeChanged;
-        search.onCategoryChange = onCategoryChange;
-        search.onMapClick = onMapClick;
-        search.onBikeHover = onBikeHover;
-        search.populateBikes = populateBikes;
-        search.addMoreItemsLimit = addMoreItemsLimit;
-        search.onDateChange = onDateChange;
         search.colorScheme = mapConfigs.colorScheme();
         search.filteredBikes = [];
         search.filteredDateBikes = [];
         search.mapMarkers = [];
+        search.correctLocationCoordinates = '';
         search.noResult = true;
         search.initialValues = {
           amount: '',
@@ -43,18 +36,46 @@ angular.module('search',[]).component('search', {
           date: {
             "start_date": '',
             "duration": ''
+          },
+          correctBoundsCoords: {
+            lat: '',
+            lng: '',
+            ne: '',
+            sw: ''
           }
         };
 
-        // get initial filter values from url
-        search.initialValues.sizes = $stateParams.sizes.split(',');
-        search.initialValues.brand = $stateParams.brand;
-        search.initialValues.categories = $stateParams.categories.split(',');
-        search.initialValues.date = {
-          "start_date": $stateParams.start_date,
-          "duration": $stateParams.duration
-        };
+        // methods
+        search.showBikeWindow = showBikeWindow;
+        search.placeChanged = placeChanged;
+        search.onCategoryChange = onCategoryChange;
+        search.onMapClick = onMapClick;
+        search.onBikeHover = onBikeHover;
+        search.updateBikeData = updateBikeData;
+        search.updateBikesDataByRequest = updateBikesDataByRequest;
+        search.setMapGeometry = setMapGeometry;
+        search.populateBikes = populateBikes;
+        search.addMoreItemsLimit = addMoreItemsLimit;
+        search.onDateChange = onDateChange;
+        search.countBikes = countBikes;
 
+        // get initial filter values from url
+        search.initialValues = {
+          sizes: $stateParams.sizes.split(','),
+          brand: $stateParams.brand,
+          categories: $stateParams.categories.split(','),
+          date: {
+            "start_date": $stateParams.start_date,
+            "duration": $stateParams.duration
+          },
+          correctBoundsCoords: {
+            lat : $stateParams.lat,
+            lng : $stateParams.lng,
+            ne : $stateParams.ne,
+            sw : $stateParams.sw
+          }
+        }
+        // default map options
         search.limit = 15;
         search.mapOptions = {
           lat: 40,
@@ -128,16 +149,27 @@ angular.module('search',[]).component('search', {
       }
 
       function populateBikes(location) {
+        search.correctLocationCoordinates = '';
         search.bikes = undefined;
         search.noResult = false;
+
         location = location ? location : $stateParams.location;
 
-        var urlRequest = "/rides?location=" + location;
+        // if bounds on map was corrected
+        if (search.initialValues.correctBoundsCoords.lat && search.initialValues.correctBoundsCoords.lng) {
+          search.correctLocationCoordinates = '&' + transformObjToUrl(search.initialValues.correctBoundsCoords);
+        }
 
-        api.get(urlRequest).then(function(response) {
+        var urlRequest = "/rides?location=" + location + search.correctLocationCoordinates;
+
+        search.updateBikesDataByRequest(urlRequest);
+      }
+
+      function updateBikesDataByRequest(urlRequest) {
+        api.get(urlRequest).then(function (response) {
           setParamsFromResponse(response);
           return getUnavailableBikes();
-        }).then(function(results) {
+        }).then(function (results) {
           if (!!results) {
             search.unavailableIds = results.data.ids;
             setUnavailableBikes();
@@ -160,7 +192,23 @@ angular.module('search',[]).component('search', {
         }
       }
 
+      function getNewBikesByBounds(){
+        // if bounds on map was corrected
+        if (search.initialValues.correctBoundsCoords.lat && search.initialValues.correctBoundsCoords.lng) {
+          search.correctLocationCoordinates = '?' + transformObjToUrl(search.initialValues.correctBoundsCoords);
+          return api.get('/rides/' + search.correctLocationCoordinates);
+        } else {
+          return false;
+        }
+      }
+
       function setParamsFromResponse(response) {
+        search.updateBikeData(response);
+        search.setMapGeometry(response);
+        initializeGoogleMap();
+      }
+
+      function updateBikeData(response) {
         search.bikes = response.data.bikes;
         search.filteredDateBikes = search.bikes.slice();
         search.categorizedFilteredBikes = [{
@@ -168,11 +216,36 @@ angular.module('search',[]).component('search', {
           bikes: search.bikes
         }];
         search.titles = [];
-        // Google
-        search.latLng = response.data.location.geometry.location;
-        search.locationBounds = response.data.location.geometry.viewport;
+      }
 
-        initializeGoogleMap();
+      function setMapGeometry(response) {
+        // Google
+        if (response.data.location.geometry) {
+          search.latLng = response.data.location.geometry.location;
+          search.locationBounds = response.data.location.geometry.viewport;
+        } else {
+          // take from URL
+          search.latLng = {
+            lat: $stateParams.lat,
+            lng: $stateParams.lng
+          }
+          search.locationBounds = {
+            'northeast': {
+              lat: $stateParams.ne.split(',')[0],
+              lng: $stateParams.ne.split(',')[1]
+            },
+            'southwest': {
+              lat: $stateParams.sw.split(',')[0],
+              lng: $stateParams.sw.split(',')[1]
+            }
+          }
+        }
+      }
+
+      function transformObjToUrl(obj) {
+        return Object.keys(obj).map(function (key) {
+          return key + '=' + obj[key];
+        }).join('&');
       }
 
       // ============================
@@ -291,9 +364,37 @@ angular.module('search',[]).component('search', {
         return marker;
       }
 
+
+      search.centerChanged = function() {
+        // Check if map exists and bounds changed
+        // https://developers.google.com/maps/documentation/javascript/reference/coordinates#LatLngBounds
+        if (search.map) {
+          search.initialValues.correctBoundsCoords = {
+            // map center coordinates
+            lat: this.getCenter().lat(),
+            lng: this.getCenter().lng(),
+            // bounds coordinates
+            ne: this.getBounds().getNorthEast().lat() + ',' + this.getBounds().getNorthEast().lng(),
+            sw: this.getBounds().getSouthWest().lat() + ',' + this.getBounds().getSouthWest().lng()
+          }
+
+          getNewBikesByBounds().then(function(response){
+            search.updateBikeData(response);
+            search.updateState(search.initialValues.correctBoundsCoords);
+          });
+        }
+      }
+
       // ============================
       // END MAP FUNCTIONALITY <<<<<<
       // ============================
+
+      function countBikes() {
+        if (!search.categorizedFilteredBikes) return;
+        return search.categorizedFilteredBikes[0].bikes.reduce(function (accumulator, bike) {
+          return accumulator + bike.rides_count;
+        }, 0);
+      }
 
       function onDateChange() {
         getUnavailableBikes().then(function(results){
@@ -332,6 +433,7 @@ angular.module('search',[]).component('search', {
         if (!search.bikes) return;
         if (search.limit < search.bikes.length) search.limit += 15;
       }
+
 
     }
   ]

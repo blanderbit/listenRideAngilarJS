@@ -135,7 +135,7 @@
       // search
       $stateProvider.state({
         name: 'search',
-        url: '/search/{location}?start_date&duration&sizes&categories',
+        url: '/search/{location}?start_date&duration&sizes&categories&lat&lng&ne&sw',
         template: '<search></search>',
         reloadOnSearch: false,
         params: {
@@ -157,6 +157,22 @@
             squash: true
           },
           categories: {
+            value: "",
+            squash: true
+          },
+          lat: {
+            value: "",
+            squash: true
+          },
+          lng: {
+            value: "",
+            squash: true
+          },
+          ne: {
+            value: "",
+            squash: true
+          },
+          sw: {
             value: "",
             squash: true
           }
