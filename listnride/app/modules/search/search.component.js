@@ -391,7 +391,9 @@ angular.module('search',[]).component('search', {
 
       function countBikes() {
         if (!search.categorizedFilteredBikes) return;
-        return search.categorizedFilteredBikes[0].bikes.length;
+        return search.categorizedFilteredBikes[0].bikes.reduce(function (accumulator, bike) {
+          return accumulator + bike.rides_count;
+        }, 0);
       }
 
       function onDateChange() {
