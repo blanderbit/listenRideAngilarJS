@@ -87,11 +87,11 @@
       zoom="{{search.mapOptions.zoom}}"
       on-click="search.onMapClick(event)"
       draggable="true"
-      on-dragend="search.centerChanged()"
       map-type-control="false"
       street-view-control="false"
       styles="{{search.colorScheme}}"
     >
+  <!-- on-dragend="search.centerChanged()" -->
 
       <info-window id="searchMapWindow">
         <div ng-non-bindable="">
