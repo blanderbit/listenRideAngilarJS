@@ -1,10 +1,11 @@
 <div class="status-labels">
-  <span
+  <div
     ng-repeat="key in statusLabels.labels"
     class="status-labels__item {{'status-labels__item--' + key}}"
     ng-class="{
       'lnr-minified': statusLabels.minifiedView
-    }"
-    translate="{{'shared.status-labels.' + key}}">
-  </span>
+    }">
+    <span>{{ statusLabels.bike.rides_count }}</span>
+    <span translate="{{'shared.status-labels.' + key}}"></span>
+  </div>
 </div>
