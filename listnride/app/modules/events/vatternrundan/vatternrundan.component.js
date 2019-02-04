@@ -17,7 +17,7 @@ angular.module('vatternrundan', []).component('vatternrundan', {
         vatternrundan.sizes = resolve
       });
 
-      api.get('/rides?category=30,31&location=Motala,Sweden&booked_at=2019-06-07').then(
+      api.get('/rides?category=30,31&priority=vatternrundan&location=Motala,Sweden&booked_at=2019-06-07').then(
         function (response) {
           vatternrundan.bikes = response.data.bikes;
         },
