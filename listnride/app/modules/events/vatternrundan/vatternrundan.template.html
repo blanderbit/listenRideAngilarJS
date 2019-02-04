@@ -39,6 +39,7 @@
         <bike-card
           ng-repeat="bike in vatternrundan.bikes | filter : (filterSize != -1 || '') && {size : filterSize}"
           bike="bike" booked="bike.booked"
+          show-labels="true"
           flex="100" flex-gt-xs="50" flex-gt-sm="33">
         </bike-card>
       </div>
