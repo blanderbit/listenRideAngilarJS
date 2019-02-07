@@ -12,7 +12,13 @@ angular.module('listings').component('listView', {
     duplicate: '<',
     delete: '<',
     deactivate: '<',
-    changeAvailability: '<'
+    changeAvailability: '<',
+    showLabels: '<',
+    isCheckModeOn: '<',
+    onBikeTileCheck: '<',
+    isChecked: '<',
+    isSelectable: '<',
+    unmerge: '<'
   },
   controller: ['orderByFilter', function (orderBy) {
       var listView = this;

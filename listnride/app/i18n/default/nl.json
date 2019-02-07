@@ -2,11 +2,12 @@
   "shared": {
     "learn-more": "Meer info",
     "status-labels": {
-      "variants_available": "Variants available"
+      "variants_available": "Varianten beschikbaar"
     },
-    "summary": "Summary",
-    "pick-size": "Pick a size",
-    "firstly-pick-dates": "Please, select your rental dates first.",
+    "summary": "Overzicht",
+    "pick-size": "Kies een maat",
+    "firstly-pick-dates": "Selecteer eerst een dag",
+    "remove": "verwijderen",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kredietkaart",
@@ -585,6 +586,9 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
+    "cluster-deleted": "Fietskluster succesvol verwijderd",
+    "cluster-unmerged": "Fietscluster is succesvol ontkoppelt",
+    "cluster-merged": "Fietsen zijn succesvol samengevoegd in cluster",
     "add-payment-success": "Betaalmethode is opgeslagen",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
     "is-invalid": "Het huidige wachtwoord is ongeldig.",
@@ -977,6 +981,8 @@
     },
     "details": {
       "header": "Welke naam geef je jouw fiets en welk Merk en grootte is het?",
+      "variations-add": "Voeg varianten toe",
+      "variations-header": "Hoeveel varianten wil je toevoegen?",
       "hint": "Vul het merk, de naam en beschrijving van je fiets in. De naam is vrij te kiezen en kan bijvoorbeeld het model zijn. Bijv. Gazelle, Tour Populair, 2013. Kies de passende lichaamslengte voor het rijden van de fiets.",
       "label": "Details",
       "brand": "Merk",
@@ -1155,6 +1161,8 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
+    "merge": "samenvoegen",
+    "unmerge": "Ontkoppel fietsen",
     "no-bikes": "Je hebt nog geen fietsen online geplaatst.",
     "list-a-bike": "Fiets plaatsen",
     "show-as-list": "Toon als lijst",

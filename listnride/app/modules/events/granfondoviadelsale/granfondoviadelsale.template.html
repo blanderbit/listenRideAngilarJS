@@ -1,14 +1,15 @@
 <md-content class="single-column">
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/supercross-munich.jpg'); background-position: 50% 25%;" layout="row" layout-align="center center">
-    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'events.supercross-munich.title' | translate }}</h1>
-    </div>
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/events/granfondoviadelsale_hero.jpg'); background-position: 0 60%"
+    layout="row" layout-align="center center">
+    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center"></div>
   </div>
   <div class="content" layout="column" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
 
-      <!-- <h1 class="md-headline">{{ 'events.supercross-munich.subtitle' | translate }}</h1> -->
-      <div class="md-subhead"><p translate="events.supercross-munich.text"></p>
+      <h1 class="md-headline">{{ 'events.granfondoviadelsale.title' | translate }}</h1>
+      <p class="md-body-1" translate="events.granfondoviadelsale.description"></p>
+      <div class="md-body-1">
+        <p translate="events.granfondoviadelsale.text"></p>
       </div>
     </div>
 
@@ -19,7 +20,7 @@
         <md-input-container layout="column" flex="30" style="padding-bottom: 0">
           <label>{{ 'list.details.size' | translate }}</label>
           <md-select flex ng-model="filterSize" placeholder="{{ 'list.details.size' | translate }}">
-            <md-option ng-repeat="option in supercrossMunich.sizeOptions" value="{{option.value}}">
+            <md-option ng-repeat="option in granfondoviadelsale.sizes" value="{{option.value}}">
               {{option.label}}
             </md-option>
           </md-select>
@@ -27,9 +28,8 @@
       </div>
       <div layout="row" layout-wrap layout-padding>
         <bike-card
-          ng-repeat="bike in supercrossMunich.bikes | filter : {size : filterSize}"
-          bike="bike"
-          booked="bike.booked"
+          ng-repeat="bike in granfondoviadelsale.bikes | filter : (filterSize != -1 || '') && {size : filterSize}"
+          bike="bike" booked="bike.booked"
           show-labels="true"
           flex="100" flex-gt-xs="50" flex-gt-sm="33">
         </bike-card>

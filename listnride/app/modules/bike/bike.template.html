@@ -131,7 +131,12 @@
               <p flex="30" class="md-body-2">{{ 'list.category.label' | translate }}</p>
               <p class="md-body-1">{{ bike.data.category | category | translate  }}</p>
             </div>
-            <div layout="row" layout-align="start center" ng-if="bike.showAttribute(bike.data.frame_size)">
+            <div
+              layout="row"
+              layout-align="start center"
+              ng-if="bike.showAttribute(bike.data.frame_size)"
+              ng-hide="bike.data.is_cluster"
+            >
               <p flex="30" class="md-body-2">{{ 'list.details.frame_size' | translate }}</p>
               <p class="md-body-1">{{ bike.data.frame_size }}</p>
             </div>
@@ -189,6 +194,8 @@
       <div flex="30" hide-sm hide-xs>
         <calendar
           ng-if="!bike.mobileCalendar()"
+          bike="bike.data"
+          bike-cluster="bike.cluster"
           bike-id="bike.data.id"
           bike-size="bike.defaultSize"
           bike-cluster-sizes="bike.availableSizes"

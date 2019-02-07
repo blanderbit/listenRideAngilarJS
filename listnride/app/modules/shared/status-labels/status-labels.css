@@ -1,4 +1,4 @@
-.status-labels {
+.lnr-bike-card .status-labels {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -30,4 +30,15 @@
 
 .status-labels__item--top10 {
   background: #5FC693;
+}
+
+.status-labels__item.lnr-minified {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 50%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }

@@ -27,8 +27,9 @@
       <div layout-margin>
         <div class="lnr-mt-0" layout="row" layout-align="space-between center">
           <!-- <p class="md-subhead">{{filterBikes.title}}</p> -->
-          <p class="md-subhead">{{'search.bikes-found' | translate}}
-            {{search.categorizedFilteredBikes[0].bikes.length}}</p>
+          <p class="md-subhead">
+            {{'search.bikes-found' | translate}}
+            {{ search.countBikes()}}</p>
           <div>
             <a ui-sref="multiBooking({location: search.location})">
               {{'search.book-multiple-bikes' | translate}}
@@ -86,10 +87,12 @@
       center="[{{search.mapOptions.lat}},{{search.mapOptions.lng}}]"
       zoom="{{search.mapOptions.zoom}}"
       on-click="search.onMapClick(event)"
+      draggable="true"
       map-type-control="false"
       street-view-control="false"
       styles="{{search.colorScheme}}"
     >
+  <!-- on-dragend="search.centerChanged()" -->
 
       <info-window id="searchMapWindow">
         <div ng-non-bindable="">

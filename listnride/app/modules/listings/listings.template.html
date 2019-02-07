@@ -29,6 +29,7 @@
               md-no-ink
               flex
               class="md-icon-button"
+              ng-if="false"
               ng-disabled="!listings.canDeactivateMulti()"
               ng-click="listings.deactivateMulti()">
               <md-tooltip>{{ 'listingCard.deactivate' | translate }}</md-tooltip>
@@ -121,7 +122,13 @@
         delete="listings.delete"
         deactivate="listings.deactivate"
         is-duplicating="listings.isDuplicating"
-        change-availability="listings.changeAvailability">
+        change-availability="listings.changeAvailability"
+        show-labels="true"
+        is-check-mode-on="listings.isCheckMode()"
+        on-bike-tile-check="listings.checkBikeTile"
+        is-checked="listings.isCheckedBike"
+        is-selectable="true"
+        unmerge="listings.unmerge">
       </list-view>
     </div>
     <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0"  class="lnr-no-rental">

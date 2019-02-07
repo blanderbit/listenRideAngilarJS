@@ -25,10 +25,9 @@ angular.module('list', ['ngLocale'])
       'price',
       'countryCodeTranslator',
       'notification',
-      'helpers',
       function ListController($localStorage, $stateParams, $state, $analytics,
         Upload, bikeOptions, api, authentication, verification, accessControl,
-        loadingDialog, price, countryCodeTranslator, notification, helpers) {
+        loadingDialog, price, countryCodeTranslator, notification) {
 
         if (accessControl.requireLogin()) {
           return;
@@ -45,10 +44,6 @@ angular.module('list', ['ngLocale'])
             description: '',
             size: '',
             category: '',
-            street: '',
-            city: '',
-            zip: '',
-            country: '',
             custom_price: false,
             discounts: '',
             frame_size: '',
@@ -57,7 +52,13 @@ angular.module('list', ['ngLocale'])
             details: '',
             accessories: {},
             images: [],
-            coverage_total: 0
+            coverage_total: 0,
+            location: {
+              country: '',
+              city: '',
+              street: '',
+              zip: ''
+            }
           };
 
           list.selectedIndex = 0;
@@ -88,12 +89,16 @@ angular.module('list', ['ngLocale'])
           list.variations = [];
 
           // methods
+          list.getUserData = getUserData;
+          list.getBikeData = getBikeData;
+          list.submitNewRide = submitNewRide;
+          list.submitEditedRide = submitEditedRide;
           list.addInput = addInput;
           list.removeInput = removeInput;
 
           // invocations
-          // populate data for list or edit bike
-          list.isListMode ? list.populateNewBikeData() : list.populateExistingBikeData();
+          // ListMode - is mode when you create a new bike
+          list.isListMode ? list.getUserData() : list.getBikeData();
         }
 
         var setBusinessForm = function () {
@@ -118,24 +123,20 @@ angular.module('list', ['ngLocale'])
           return (list.selectedIndex > tabId && list.isListMode) ? "✔" : "    ";
         };
 
-        list.subcategoriesList = function (categoryId) {
-          if (!categoryId) return;
-          return _.find(list.categoryOptions, function (category) {
-            return category.catId === parseInt(categoryId);
-          }).subcategories.sort()
-        };
-
-        list.populateNewBikeData = function () {
+        function getUserData() {
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               var data = success.data;
               if (!data.has_address || !data.confirmed_phone || data.status === 0) {
                 verification.openDialog(true);
               }
-              list.form.street = data.street;
-              list.form.zip = data.zip;
-              list.form.city = data.city;
-              list.form.country = data.country;
+
+              list.form.location = {
+                'street': data.street,
+                'zip': data.zip,
+                'city': data.city,
+                'country': data.country
+              }
 
               list.form.prices = [];
               for (var day = 0; day < 9; day += 1) {
@@ -157,7 +158,7 @@ angular.module('list', ['ngLocale'])
           );
         };
 
-        list.populateExistingBikeData = function () {
+        function getBikeData() {
           api.get('/rides/' + $stateParams.bikeId).then(
             function (response) {
               var data = response.data.current;
@@ -214,7 +215,7 @@ angular.module('list', ['ngLocale'])
         };
 
         // form submission for new ride
-        list.submitNewRide = function () {
+        function submitNewRide () {
           var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
           var ride = {
             "ride": Object.assign({}, list.form, {
@@ -276,7 +277,7 @@ angular.module('list', ['ngLocale'])
         };
 
         // form submission for existing ride
-        list.submitEditedRide = function () {
+        function submitEditedRide() {
           var prices = price.inverseTransformPrices(list.form.prices);
           var ride = {
             "ride": Object.assign({}, list.form, {
@@ -370,7 +371,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.insuranceAllowed = function () {
-          return list.form.country && list.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1;
+          return list.form.location.country && list.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.location.country)) > -1;
         }
 
         list.resetCustomPrices = function () {
@@ -448,12 +449,24 @@ angular.module('list', ['ngLocale'])
           return list.form.subCategory !== undefined;
         };
 
+        list.isVariationsValid = function () {
+          var isValid = true;
+
+          if (list.variations) {
+            _.forEach(list.variations, function (item) {
+              isValid = isValid && item.size;
+            });
+          }
+          return isValid;
+        };
+
         // check bikes details
         list.isDetailsValid = function () {
-          return !(_.isEmpty(list.form.name) &&
-            _.isEmpty(list.form.brand) &&
-            _.isEmpty(list.form.size) &&
-            _.isEmpty(list.form.description));
+          return !!(list.form.name &&
+            list.form.brand &&
+            (list.form.size || list.form.size === 0) &&
+            list.form.description &&
+            list.isVariationsValid());
         };
 
         // check picture is correct
@@ -462,10 +475,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.isLocationValid = function () {
-          return list.form.street !== undefined &&
-            list.form.zip !== undefined &&
-            list.form.city !== undefined &&
-            list.form.country !== undefined;
+          return _.every(list.form.location, Boolean);
         };
 
         list.isPricingValid = function () {
@@ -502,10 +512,12 @@ angular.module('list', ['ngLocale'])
               }
             }
 
-            list.form.street = desiredComponents.route + " " + desiredComponents.street_number;
-            list.form.zip = desiredComponents.postal_code;
-            list.form.city = desiredComponents.locality;
-            list.form.country = desiredComponents.country;
+            list.form.location = {
+              'street' : desiredComponents.route + " " + desiredComponents.street_number,
+              'zip' : desiredComponents.postal_code,
+              'city' : desiredComponents.locality,
+              'country' : desiredComponents.country
+            }
           }
         };
 
