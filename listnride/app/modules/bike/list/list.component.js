@@ -44,10 +44,6 @@ angular.module('list', ['ngLocale'])
             description: '',
             size: '',
             category: '',
-            street: '',
-            city: '',
-            zip: '',
-            country: '',
             custom_price: false,
             discounts: '',
             frame_size: '',
@@ -56,7 +52,13 @@ angular.module('list', ['ngLocale'])
             details: '',
             accessories: {},
             images: [],
-            coverage_total: 0
+            coverage_total: 0,
+            location: {
+              country: '',
+              city: '',
+              street: '',
+              zip: ''
+            }
           };
 
           list.selectedIndex = 0;
@@ -128,10 +130,13 @@ angular.module('list', ['ngLocale'])
               if (!data.has_address || !data.confirmed_phone || data.status === 0) {
                 verification.openDialog(true);
               }
-              list.form.street = data.street;
-              list.form.zip = data.zip;
-              list.form.city = data.city;
-              list.form.country = data.country;
+
+              list.form.location = {
+                'street': data.street,
+                'zip': data.zip,
+                'city': data.city,
+                'country': data.country
+              }
 
               list.form.prices = [];
               for (var day = 0; day < 9; day += 1) {
@@ -366,7 +371,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.insuranceAllowed = function () {
-          return list.form.country && list.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.country)) > -1;
+          return list.form.location.country && list.insuranceCountries.indexOf(countryCodeTranslator.countryCodeFor(list.form.location.country)) > -1;
         }
 
         list.resetCustomPrices = function () {
@@ -470,10 +475,7 @@ angular.module('list', ['ngLocale'])
         };
 
         list.isLocationValid = function () {
-          return list.form.street !== undefined &&
-            list.form.zip !== undefined &&
-            list.form.city !== undefined &&
-            list.form.country !== undefined;
+          return _.every(list.form.location, Boolean);
         };
 
         list.isPricingValid = function () {
@@ -510,10 +512,12 @@ angular.module('list', ['ngLocale'])
               }
             }
 
-            list.form.street = desiredComponents.route + " " + desiredComponents.street_number;
-            list.form.zip = desiredComponents.postal_code;
-            list.form.city = desiredComponents.locality;
-            list.form.country = desiredComponents.country;
+            list.form.location = {
+              'street' : desiredComponents.route + " " + desiredComponents.street_number,
+              'zip' : desiredComponents.postal_code,
+              'city' : desiredComponents.locality,
+              'country' : desiredComponents.country
+            }
           }
         };
 
