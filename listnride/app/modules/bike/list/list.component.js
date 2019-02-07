@@ -87,14 +87,16 @@ angular.module('list', ['ngLocale'])
           list.variations = [];
 
           // methods
-          list.populateNewBikeData = populateNewBikeData;
-          list.populateExistingBikeData = populateExistingBikeData;
+          list.getUserData = getUserData;
+          list.getBikeData = getBikeData;
+          list.submitNewRide = submitNewRide;
+          list.submitEditedRide = submitEditedRide;
           list.addInput = addInput;
           list.removeInput = removeInput;
 
           // invocations
-          // populate data for list or edit bike
-          list.isListMode ? list.populateNewBikeData() : list.populateExistingBikeData();
+          // ListMode - is mode when you create a new bike
+          list.isListMode ? list.getUserData() : list.getBikeData();
         }
 
         var setBusinessForm = function () {
@@ -119,14 +121,7 @@ angular.module('list', ['ngLocale'])
           return (list.selectedIndex > tabId && list.isListMode) ? "✔" : "    ";
         };
 
-        list.subcategoriesList = function (categoryId) {
-          if (!categoryId) return;
-          return _.find(list.categoryOptions, function (category) {
-            return category.catId === parseInt(categoryId);
-          }).subcategories.sort()
-        };
-
-        function populateNewBikeData() {
+        function getUserData() {
           api.get('/users/' + $localStorage.userId).then(
             function (success) {
               var data = success.data;
@@ -158,7 +153,7 @@ angular.module('list', ['ngLocale'])
           );
         };
 
-        function populateExistingBikeData() {
+        function getBikeData() {
           api.get('/rides/' + $stateParams.bikeId).then(
             function (response) {
               var data = response.data.current;
@@ -215,7 +210,7 @@ angular.module('list', ['ngLocale'])
         };
 
         // form submission for new ride
-        list.submitNewRide = function () {
+        function submitNewRide () {
           var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
           var ride = {
             "ride": Object.assign({}, list.form, {
@@ -277,7 +272,7 @@ angular.module('list', ['ngLocale'])
         };
 
         // form submission for existing ride
-        list.submitEditedRide = function () {
+        function submitEditedRide() {
           var prices = price.inverseTransformPrices(list.form.prices);
           var ride = {
             "ride": Object.assign({}, list.form, {
