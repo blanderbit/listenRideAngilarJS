@@ -262,14 +262,14 @@
     "meta-description": "Book your bikes with our group booking form",
     "title": "Group bookings",
     "header": "We are happy to help you with your group booking",
-    "subheader": "No more hassle, let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
+    "subheader": "Let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
     "how-to": {
       "step-1-title": "Search & find",
       "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
       "step-2-title": "Define & request",
       "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
       "step-3-title": "Accept offer & book online",
-      "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. in the latter case, you will be send invoice that needs to be paid to finalize the booking.  "
+      "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. "
     },
     "your-booking-details": "Your booking details",
     "what-bike-kind": "What kind of bike?",
@@ -339,7 +339,7 @@
       },
       "toros-de-gravel": {
         "meta-title": "Rent the perfect bike for Toros de Gravel",
-        "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Majorca. "
+        "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Mallorca. "
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
