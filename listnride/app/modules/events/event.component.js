@@ -31,14 +31,14 @@ angular.module('event', []).component('event', {
           // 'supercross-munich'      : '/rides?category=35&location=Munich&booked_at=2017-10-14',
           // 'rapha-super-cross'      : '/rides?family=7',
           // 'in-velo-veritas'        : '/rides?family=4',
-          // 'berliner-fahrradschau'  : '/rides?family=29',
-          // 'herbstausfahrt'         : '/rides?family=22',
+          // 'berliner-fahrradschau'  : '/rides?family=29', -> crossride
+          // 'herbstausfahrt'         : '/rides?family=22', -> velosoph
           // 'grand-depart'           : '/rides?family=18',
           // 'eroica-gaiole'          : '/users/6352',
           // 'mcbw'                   : '/users/1886',
           // 'constance-spin'         : '/bikes/1998',
-          // 'velothon-coffeespin'    : '/users/1998',
-          // 'cyclingworld'           : '/users/1998',
+          // 'velothon-coffeespin'    : '/users/1998', -> coffeespin
+          // 'cyclingworld'           : '/users/1998', -> cwd.template
           // 'pushnpost'              : '/users/1998',
           // 'kuchenundraketen'       : '/users/1998'
         };
