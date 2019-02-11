@@ -8,6 +8,7 @@
     "pick-size": "Scegli una taglia",
     "firstly-pick-dates": "Per favore, seleziona prima le date del noleggio.",
     "remove": "Rimuovere",
+    "basic-insurance-fee": "Tassa di assicurazione",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Carta di credito",
@@ -354,6 +355,12 @@
       "cyclassics-hamburg": {
         "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
         "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+      },
+      "hamburg-triathlon": {
+        "meta-title": "Rent a road bike for the Triathlon Hamburg on listnride",
+        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+      },
+      "riderman": {
       },
       "riderman-rothaus": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
