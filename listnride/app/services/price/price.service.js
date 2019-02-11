@@ -6,7 +6,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       // Calculates the prices for the calendar and booking overview
       // Note that this is just a preview-calculation, the actual data
       // gets calculated in the backend.
-      calculatePrices: function (startDate, endDate, prices, coverageTotal, isPremiumCoverage) {
+      calculatePrices: function (startDate, endDate, prices, coverageTotal, isPremiumCoverage, isFeeDisabled) {
         var result = {
           subtotal: 0,
           subtotalDiscounted: 0,
@@ -15,6 +15,10 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           premiumCoverage: isPremiumCoverage ? 3 : 0, // premium Coverage price is static 3 euro
           total: 0
         };
+
+        var RIDER_TAX = 0.125;
+        var VAT_TAX = 0.19;
+
         if (startDate !== undefined && endDate !== undefined) {
           var days = date.durationDays(startDate, endDate);
         }
@@ -37,7 +41,12 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         result.premiumCoverage = result.premiumCoverage * days;
 
         // Service Fee is 12,5% and includes 0,19% MwSt
-        result.serviceFee = (result.subtotalDiscounted * 0.125) * 1.19 + (result.coverageTotal / 1000 * days);
+        result.serviceFee = 0;
+
+        if (!isFeeDisabled) {
+          result.serviceFee += (result.subtotalDiscounted * RIDER_TAX * VAT_TAX) + (result.subtotalDiscounted * RIDER_TAX);
+        }
+        result.serviceFee += (result.coverageTotal / 1000) * days;
         result.total = result.subtotalDiscounted + result.serviceFee + result.premiumCoverage;
         return result;
       },

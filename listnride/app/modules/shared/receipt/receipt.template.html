@@ -31,27 +31,32 @@
     <span class="lnr-dark-green-text">-{{ receipt.discount | currency:"€":2 }}</span>
   </div>
 
-  <div layout="row" layout-align="space-between center">
+  <div
+    ng-if="!receipt.isShop || receipt.isShop && receipt.insuranceCountry()"
+    layout="row"
+    layout-align="space-between center">
     <div layout="row" layout-align="start center">
-      <div layout="row" style="width:170px;" ng-if="!receipt.insuranceCountry()">
-        {{ 'shared.lnr-fee' | translate }}
-        <div>
+      <div
+        layout="row"
+        style="width:170px;">
+        <span ng-if="!receipt.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</span>
+        <span ng-if="!receipt.isShop && receipt.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</span>
+        <span ng-if="receipt.isShop && receipt.insuranceCountry()">{{ 'shared.basic-insurance-fee' | translate }}</span>
+        <div ng-if="!receipt.isShop">
           <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-          <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
-        </div>
-      </div>
-      <div layout="row" style="width:170px;" ng-if="receipt.insuranceCountry()">
-        {{ 'shared.basic-fee' | translate }}
-        <div>
-          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-          <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
+          <md-tooltip md-direction="right">
+            <span translate="calendar.info-service-fee"></span>
+          </md-tooltip>
         </div>
       </div>
     </div>
     <div>{{ receipt.lnrFee | currency:"€":2 }}</div>
   </div>
 
-  <div layout="row" layout-align="space-between center" ng-if="receipt.isPremiumCoverage">
+  <div
+    ng-if="receipt.isPremiumCoverage"
+    layout="row"
+    layout-align="space-between center">
     <div layout="row" layout-align="start center">
       {{ 'booking.overview.premium-insurance' | translate }}
     </div>
