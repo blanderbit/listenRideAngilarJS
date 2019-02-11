@@ -37,8 +37,7 @@ angular.module('receipt', []).component('receipt', {
       }
 
       function setPrices() {
-        var isFeeDisabled = receipt.isShop;
-        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices, receipt.coverageTotal, receipt.isPremiumCoverage, isFeeDisabled);
+        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices, receipt.coverageTotal, receipt.isPremiumCoverage, receipt.isShop, receipt.insuranceCountry());
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
         receipt.discount = prices.subtotal - prices.subtotalDiscounted;
