@@ -761,150 +761,17 @@
       /* ------------------------------------ */
 
       $stateProvider.state({
-        name: 'raphaSuperCross',
-        url: '/rapha-super-cross',
-        template: '<rapha-super-cross></rapha-super-cross>',
+        name: 'event',
+        url: '/events/{event_name}',
+        template: '<event></event>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'inVeloVeritas',
-        url: '/in-velo-veritas',
-        template: '<in-velo-veritas></in-velo-veritas>',
-          resolve: {
-              data: function ($translate, ngMeta) {
-                  $translate(["meta.events.in-velo-veritas.meta-title", "meta.events.in-velo-veritas.meta-description"])
-                      .then(function (translations) {
-                          ngMeta.setTitle(translations["meta.events.in-velo-veritas.meta-title"]);
-                          ngMeta.setTag("description", translations["meta.events.in-velo-veritas.meta-description"]);
-                          ngMeta.setTag("noindex", false);
-                      })
-              }
-          },
-          meta: {
-              disableUpdate: true
-          }
-      });
-
-      $stateProvider.state({
-        name: 'cyclassicsHamburg',
-        url: '/cyclassics-hamburg',
-        template: '<cyclassics-hamburg></cyclassics-hamburg>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.cyclassics-hamburg.meta-title", "meta.events.cyclassics-hamburg.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.cyclassics-hamburg.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.cyclassics-hamburg.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'hamburgTriathlon',
-        url: '/triathlon-hamburg',
-        template: '<hamburg-triathlon></hamburg-triathlon>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.hamburg-triathlon.meta-title", "meta.events.hamburg-triathlon.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.hamburg-triathlon.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.hamburg-triathlon.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'torosDeGravel',
-        url: '/toros-de-gravel',
-        template: '<toros-de-gravel></toros-de-gravel>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.toros-de-gravel.meta-title", "meta.events.toros-de-gravel.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.toros-de-gravel.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.toros-de-gravel.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'eroicaGaiole',
-        url: '/eroica-gaiole',
-        template: '<eroica-gaiole></eroica-gaiole>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.eroica-gaiole.meta-title", "meta.events.eroica-gaiole.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.eroica-gaiole.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.eroica-gaiole.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-          name: 'riderman',
-          url: '/riderman-rothaus',
-          template: '<riderman></riderman>',
-          resolve: {
-              data: function ($translate, ngMeta) {
-                  $translate(["meta.events.riderman.meta-title", "meta.events.riderman.meta-description"])
-                      .then(function (translations) {
-                          ngMeta.setTitle(translations["meta.events.riderman.meta-title"]);
-                          ngMeta.setTag("description", translations["meta.events.riderman.meta-description"]);
-                          ngMeta.setTag("noindex", false);
-                      })
-              }
-          },
-          meta: {
-              disableUpdate: true
-          }
-      });
-
-      $stateProvider.state({
-        name: 'velothonBikerental',
-        url: '/velothon-bikerental',
-        template: '<velothon-bikerental></velothon-bikerental>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.velothon-bikerental.meta-title", "meta.events.velothon-bikerental.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.velothon-bikerental.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.velothon-bikerental.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -914,73 +781,16 @@
 
       $stateProvider.state({
         name: 'capeArgus',
-        url: '/capeargus',
+        url: '/events/capeargus',
         template: '<cape-argus></cape-argus>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.cape-argus.meta-title", "meta.events.cape-argus.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.cape-argus.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.cape-argus.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'berlinTriathlon',
-        url: '/berlin-triathlon',
-        template: '<berlin-triathlon></berlin-triathlon>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.berlin-triathlon.meta-title", "events.berlin-triathlon.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.berlin-triathlon.meta-title"]);
-                ngMeta.setTag("description", translations["events.berlin-triathlon.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'berlinTriathlonXl',
-        url: '/berlin-triathlon-xl',
-        template: '<berlin-triathlon-xl></berlin-triathlon-xl>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.berlin-triathlon-xl.meta-title", "events.berlin-triathlon-xl.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.berlin-triathlon-xl.meta-title"]);
-                ngMeta.setTag("description", translations["events.berlin-triathlon-xl.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'vatternrundan',
-        url: '/vatternrundan',
-        template: '<vatternrundan></vatternrundan>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.vatternrundan.meta-title", "events.vatternrundan.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.vatternrundan.meta-title"]);
-                ngMeta.setTag("description", translations["events.vatternrundan.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.cape-argus.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.cape-argus.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -990,16 +800,16 @@
 
       $stateProvider.state({
         name: 'supercrossMunich',
-        url: '/supercross-munich',
+        url: '/events/supercross-munich',
         template: '<supercross-munich></supercross-munich>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.supercross-munich.meta-title", "meta.events.supercross-munich.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.supercross-munich.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.supercross-munich.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.supercross-munich.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.supercross-munich.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -1008,36 +818,17 @@
       });
 
       $stateProvider.state({
-        name: 'depart',
-        url: '/grand-depart',
-        template: '<depart></depart>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.depart.meta-title", "meta.events.depart.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.depart.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.depart.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'coffeespin',
-        url: '/velothon-coffeespin',
-        template: '<coffeespin></coffeespin>',
+        name: 'raphaSuperCross',
+        url: '/events/rapha-super-cross',
+        template: '<rapha-super-cross></rapha-super-cross>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -1046,36 +837,17 @@
       });
 
       $stateProvider.state({
-        name: 'constanceSpin',
-        url: '/constance-spin',
-        template: '<constance-spin></constance-spin>',
+        name: 'inVeloVeritas',
+        url: '/events/in-velo-veritas',
+        template: '<in-velo-veritas></in-velo-veritas>',
         resolve: {
           data: function ($translate, ngMeta) {
-            $translate(["meta.events.constance-spin.meta-title", "meta.events.constance-spin.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.constance-spin.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.constance-spin.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'velosoph',
-        url: '/herbstausfahrt',
-        template: '<velosoph></velosoph>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.velosoph.meta-title", "meta.events.velosoph.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.velosoph.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.velosoph.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+            $translate(["meta.events.in-velo-veritas.meta-title", "meta.events.in-velo-veritas.meta-description"])
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.in-velo-veritas.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.in-velo-veritas.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -1085,16 +857,73 @@
 
       $stateProvider.state({
         name: 'crossride',
-        url: '/berliner-fahrradschau',
+        url: '/events/berliner-fahrradschau',
         template: '<crossride></crossride>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'velosoph',
+        url: '/events/herbstausfahrt',
+        template: '<velosoph></velosoph>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.velosoph.meta-title", "meta.events.velosoph.meta-description"])
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.velosoph.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.velosoph.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'depart',
+        url: '/events/grand-depart',
+        template: '<depart></depart>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.depart.meta-title", "meta.events.depart.meta-description"])
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.depart.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.depart.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'eroicaGaiole',
+        url: '/events/eroica-gaiole',
+        template: '<eroica-gaiole></eroica-gaiole>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.eroica-gaiole.meta-title", "meta.events.eroica-gaiole.meta-description"])
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.eroica-gaiole.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.eroica-gaiole.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -1104,16 +933,54 @@
 
       $stateProvider.state({
         name: 'mcbw',
-        url: '/mcbw',
+        url: '/events/mcbw',
         template: '<mcbw></mcbw>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'constanceSpin',
+        url: '/events/constance-spin',
+        template: '<constance-spin></constance-spin>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.constance-spin.meta-title", "meta.events.constance-spin.meta-description"])
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.constance-spin.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.constance-spin.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'coffeespin',
+        url: '/events/velothon-coffeespin',
+        template: '<coffeespin></coffeespin>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -1123,17 +990,17 @@
 
       $stateProvider.state({
         name: 'cwd',
-        url: '/cyclingworld',
+        url: '/events/cyclingworld',
         templateUrl: 'app/modules/events/cwd/cwd.template.html',
         controller: 'StaticController',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -1143,16 +1010,16 @@
 
       $stateProvider.state({
         name: 'pushnpost',
-        url: '/pushnpost',
+        url: '/events/pushnpost',
         template: '<pushnpost></pushnpost>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
@@ -1162,118 +1029,22 @@
 
       $stateProvider.state({
         name: 'kuchenundraketen',
-        url: '/kuchenundraketen',
+        url: '/events/kuchenundraketen',
         template: '<kuchenundraketen></kuchenundraketen>',
         resolve: {
           data: function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
+                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
           }
         },
         meta: {
           disableUpdate: true
         }
       });
-
-      $stateProvider.state({
-        name: 'epicgrancanaria',
-        url: '/epicgrancanaria',
-        template: '<epicgrancanaria></epicgrancanaria>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.epicgrancanaria.meta-title", "events.epicgrancanaria.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.epicgrancanaria.meta-title"]);
-                ngMeta.setTag("description", translations["events.epicgrancanaria.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'veloraceDresden',
-        url: '/velorace-dresden',
-        template: '<velorace-dresden></velorace-dresden>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.velorace-dresden.meta-title", "events.velorace-dresden.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.velorace-dresden.meta-title"]);
-                ngMeta.setTag("description", translations["events.velorace-dresden.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'lardita',
-        url: '/lardita-arezzo',
-        template: '<lardita></lardita>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.lardita.meta-title", "events.lardita.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.lardita.meta-title"]);
-                ngMeta.setTag("description", translations["events.lardita.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'granfondoviadelsale',
-        url: '/granfondo-via-del-sale',
-        template: '<granfondoviadelsale></granfondoviadelsale>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.granfondoviadelsale.meta-title", "events.granfondoviadelsale.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.granfondoviadelsale.meta-title"]);
-                ngMeta.setTag("description", translations["events.granfondoviadelsale.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
-      $stateProvider.state({
-        name: 'girosardegna',
-        url: '/giro-sardegna',
-        template: '<girosardegna></girosardegna>',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["events.girosardegna.meta-title", "events.girosardegna.meta-description"])
-              .then(function (translations) {
-                ngMeta.setTitle(translations["events.girosardegna.meta-title"]);
-                ngMeta.setTag("description", translations["events.girosardegna.meta-description"]);
-                ngMeta.setTag("noindex", false);
-              })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      });
-
       /* ------------------------------------ */
       /* BRANDS_PAGES */
       /* ------------------------------------ */
