@@ -8,6 +8,7 @@
     "pick-size": "Wähle eine Größe aus",
     "firstly-pick-dates": "Wähle zuerst die Miettage aus",
     "remove": "Löschen",
+    "basic-insurance-fee": "Versicherungsgebühr",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kreditkarte",
@@ -216,15 +217,15 @@
       "meta-title": "Miete ein Rennrad für die Vätternrundan 2019 | listnride",
       "meta-description": "Mit listnride kannst du dir einfach online ein Rennrad für die Vätternrundan 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
     },
-    "lardita": {
+    "lardita-arezzo": {
       "meta-title": "Miete ein Vintage Rennrad für die l'Ardita",
       "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
     },
-    "granfondoviadelsale": {
+    "granfondo-via-del-sale": {
       "meta-title": "Mieten Sie ein Rennrad für die Granfondo Via del Sale 2019 | listnride",
       "meta-description": "Mit listnride können Sie bequem ein Rennrad für die Granfondo Via del Sale 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
     },
-    "girosardegna": {
+    "giro-sardegna": {
       "meta-title": "Miete ein Rennrad für den Giro Sardegna 2019 I listnride\n",
       "meta-description": "Mit listnride können Sie einfach ein Rennrad für den Giro Sardegna 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
     }
@@ -259,14 +260,14 @@
     "meta-description": "Buche deine Räder über unsere Gruppenbuchungs-Funktion",
     "title": "Gruppenbuchungen",
     "header": "Wir helfen dir gern bei deiner Gruppenbuchung",
-    "subheader": "Kein Stress mehr. Wir übernehmen für dich die Buchung für deine nächste Radtour. Sag uns einfach, was duch suchst und für wann. Wir machen den Rest. So kannst du dich einfach nur auf die Tour konzentrieren.",
+    "subheader": "Wir übernehmen für dich die Buchung für deine nächste Radtour. Sag uns einfach, was duch suchst und für wann. Wir machen den Rest. So kannst du dich einfach nur auf die Tour konzentrieren.",
     "how-to": {
       "step-1-title": "Suchen & Finden",
       "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Einfach, transparent, jederzeit.",
-      "step-2-title": "Bestimmen & Anfragen",
+      "step-2-title": "Suchen & Anfragen",
       "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach, was du suchst und wir werden uns mit ein paar Vorschlägen bei dir melden.",
       "step-3-title": "Angebot annehmen & online buchen",
-      "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung. In diesem Fall senden wir dir eine Rechnung, die Du zur Gültigkeit der Buchung vorab begleichst."
+      "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung."
     },
     "your-booking-details": "Deine Buchungsdetails",
     "what-bike-kind": "Welcher Fahrradtyp?",
@@ -358,11 +359,11 @@
         "meta-title": "Miete dir einfach das perfekte Rennrad für den Cyclassics Hamburg",
         "meta-description": "Fahre die Cyclassics Hamburg auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. "
       },
-      "hamburg-triathlon": {
+      "triathlon-hamburg": {
         "meta-title": "Miete dir einfach das perfekte Rennrad für den Triathlon Hamburg",
         "meta-description": "Fahre den Triathlon Hamburg auf dem perfekten Rennrad! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. "
       },
-      "riderman": {
+      "riderman-rothaus": {
         "meta-title": "Miete dir einfach das perfekte Rennrad für die RiderMan in Bad Dürrheim",
         "meta-description": "Fahre die RiderMan Bad Dürrheim auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. "
       },
@@ -1263,6 +1264,7 @@
   },
   "invoices": {
     "request_id": "Anfrage ID",
+    "credit-notes": "Gutschriften",
     "bike": "Rad",
     "start_date": "Startdatum",
     "end_date": "Enddatum",

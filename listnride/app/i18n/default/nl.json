@@ -8,6 +8,7 @@
     "pick-size": "Kies een maat",
     "firstly-pick-dates": "Selecteer eerst een dag",
     "remove": "verwijderen",
+    "basic-insurance-fee": "Verzekeringstoeslag",
     "payment-type": {
       "pay-pal-account": "Paypal",
       "credit-card": "Kredietkaart",
@@ -211,15 +212,15 @@
       "meta-title": "Huur een racefiets voor Vätternrundan 2019 | listnride",
       "meta-description": "Met listnride huur je eenvoudig een racefiets online voor de Vätternrundan 2019. Kies de perfecte fiets die bij u past!"
     },
-    "lardita": {
+    "lardita-arezzo": {
       "meta-title": "Huur een vintage racefiets voor de Eroica I listnride",
       "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor l'Ardita 2019. Kies de perfecte fiets die bij u past!"
     },
-    "granfondoviadelsale": {
+    "granfondo-via-del-sale": {
       "meta-title": "Huur een racefiets voor de Granfondo Via del Sale 2019 | listnride",
       "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Granfondo Via del Sale 2019. Kies de perfecte fiets die bij u past!"
     },
-    "girosardegna": {
+    "giro-sardegna": {
       "meta-title": "Huur een racefiets voor de Giro Sardegna 2019 | listnride",
       "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Giro Sardegna 2019. Kies de perfecte fiets die bij u past!"
     }
@@ -254,14 +255,14 @@
     "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
     "title": "Groepsboekingen",
     "header": "We helpen u graag met uw groepsboeking",
-    "subheader": "Geen gedoe meer, laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
+    "subheader": "Laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
     "how-to": {
       "step-1-title": "Zoeken & vinden",
       "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd en geniet maximaal van de tijd op je vakantiebestemming. Gemakkelijk en transparent, dag en nacht. ",
       "step-2-title": "Definieren & aanvragen",
       "step-2-content": "Vertel ons welke fietsen je wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met je op!",
       "step-3-title": "Offerte accepteren & online boeken",
-      "step-3-content": "Wij sturen je een offerte met een link waar je online kunt boeken of een schriftelijke bevestiging van je boeking kunt geven. In het laatste geval ontvang je een rekening die je kunt overmaken om de boeking af te ronden.  "
+      "step-3-content": "Wij sturen je een offerte met een link waar je online kunt boeken of een schriftelijke bevestiging van je boeking kunt geven.   "
     },
     "your-booking-details": "Uw boekingsgegevens",
     "what-bike-kind": "Wat voor soort fiets?",
@@ -353,11 +354,11 @@
         "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
         "meta-description": "Huur de perfekte racefiets voor de Cyclassics in Hamburg van merken zoals Specialized, Ridley, Cervelo en Bianchi"
       },
-      "hamburg-triathlon": {
+      "triathlon-hamburg": {
         "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
         "meta-description": "Huur eenvoudig de perfecte racefiets voor de Triathlon in Hamburg en kies uit merken als Specialized, Ridley, Cervelo en Bianchi"
       },
-      "riderman": {
+      "riderman-rothaus": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
         "meta-description": "Rent the perfect road bike for the RiderMan in Bad Duerrheim easily online and choose from brands such as Siplon, Specialized, Ridley, Cervelo and Bianchi"
       },
@@ -1253,6 +1254,7 @@
   },
   "invoices": {
     "request_id": "Aanvraag ID",
+    "credit-notes": "Creditnota's",
     "bike": "Fiets",
     "start_date": "Start datum",
     "end_date": "Eind datum",
