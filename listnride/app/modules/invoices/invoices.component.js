@@ -52,7 +52,8 @@ angular.module('invoices',[]).component('invoices', {
 
         invoices.getPdf = function(id, target) {
           invoices.loadingRequests = true;
-          var fileName = 'Invoice ' + id + ' ' + moment().format('MMMM Do YYYY') + '.pdf';
+          var title = target === 'lister' ? 'Credit note' : 'Invoice';
+          var fileName = title + ' ' + id + ' ' + moment().format('MMMM Do YYYY') + '.pdf';
           api.get('/users/' + $localStorage.userId + '/invoices/' + id + '?target=' + target, 'blob').then(
           function (result) {
             downloadAttachment(fileName, result.data, 'application/pdf');
