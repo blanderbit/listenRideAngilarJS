@@ -1261,6 +1261,7 @@
   },
   "invoices": {
     "request_id": "Solicitar identificación",
+    "credit-notes": "Notas de credito",
     "bike": "Bici",
     "start_date": "Fecha de inicio",
     "end_date": "Fecha de finalización",

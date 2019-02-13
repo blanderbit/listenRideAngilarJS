@@ -1264,6 +1264,7 @@
   },
   "invoices": {
     "request_id": "Anfrage ID",
+    "credit-notes": "Gutschriften",
     "bike": "Rad",
     "start_date": "Startdatum",
     "end_date": "Enddatum",

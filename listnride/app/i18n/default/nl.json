@@ -1254,6 +1254,7 @@
   },
   "invoices": {
     "request_id": "Aanvraag ID",
+    "credit-notes": "Creditnota's",
     "bike": "Fiets",
     "start_date": "Start datum",
     "end_date": "Eind datum",

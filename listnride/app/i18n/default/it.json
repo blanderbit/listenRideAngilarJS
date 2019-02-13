@@ -1258,6 +1258,7 @@
   },
   "invoices": {
     "request_id": "Richiesta ID",
+    "credit-notes": "Note di credito",
     "bike": "Bicicletta",
     "start_date": "Data d'inizio",
     "end_date": "Data di fine",
