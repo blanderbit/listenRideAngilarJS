@@ -226,7 +226,7 @@ angular.module('booking', [])
         }
 
         function updatePrices() {
-          var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium);
+          var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium, booking.shopBooking);
           booking.subtotal = prices.subtotal;
           booking.subtotalDiscounted = prices.subtotalDiscounted;
           booking.lnrFee = prices.serviceFee;
