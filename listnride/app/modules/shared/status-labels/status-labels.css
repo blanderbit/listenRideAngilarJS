@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 5px;
+  padding: 16px;
   z-index: 1;
   overflow: hidden;
 }
@@ -38,7 +38,7 @@
   display: inline-block;
   padding: 8px;
   border-radius: 50%;
-  text-indent: 100%;
+  font-size: 0;
   white-space: nowrap;
   overflow: hidden;
 }

@@ -8,16 +8,14 @@
           <md-list-item>
             <div layout="column" flex="100">
               <div layout="row" layout-align="start center">
-                <div flex="10"></div>
+                <div flex="15"></div>
                 <div
                   flex="10"
                   ng-click="listView.order('id')"
                   class="lnr-header-filter"
-                  ng-mouseover="id = true"
-                  ng-mouseleave="id = false">
+                  ng-class="{'lnr-active' : listView.propertyName == 'id'}">
                   ID
                   <md-icon
-                    ng-if="listView.propertyName == 'id' || id === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
@@ -26,11 +24,9 @@
                   flex="15"
                   ng-click="listView.order('name')"
                   class="lnr-header-filter"
-                  ng-mouseover="name = true"
-                  ng-mouseleave="name = false">
+                  ng-class="{'lnr-active' : listView.propertyName == 'name'}">
                   {{ 'list.details.name' | translate }}
                   <md-icon
-                    ng-if="listView.propertyName == 'name' || name === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
@@ -39,11 +35,9 @@
                   flex="15"
                   ng-click="listView.order('brand')"
                   class="lnr-header-filter"
-                  ng-mouseover="brand = true"
-                  ng-mouseleave="brand = false">
+                  ng-class="{'lnr-active' : listView.propertyName == 'brand'}">
                   {{ 'list.details.brand' | translate }}
                   <md-icon
-                    ng-if="listView.propertyName == 'brand' || brand === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
@@ -52,11 +46,9 @@
                   flex="15"
                   ng-click="listView.order('city')"
                   class="lnr-header-filter"
-                  ng-mouseover="city = true"
-                  ng-mouseleave="city = false">
+                  ng-class="{'lnr-active' : listView.propertyName == 'city'}">
                   {{ 'forms.city' | translate }}
                   <md-icon
-                    ng-if="listView.propertyName == 'city' || city === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
@@ -65,11 +57,9 @@
                   flex="10"
                   ng-click="listView.order('size')"
                   class="lnr-header-filter"
-                  ng-mouseover="size = true"
-                  ng-mouseleave="size = false">
+                  ng-class="{'lnr-active' : listView.propertyName == 'size'}">
                   {{'list.details.size' | translate}} <br>(cm)
                   <md-icon
-                    ng-if="listView.propertyName == 'size' || size === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
@@ -78,11 +68,9 @@
                   flex="10"
                   ng-click="listView.order('price_from')"
                   class="lnr-header-filter"
-                  ng-mouseover="price_from = true"
-                  ng-mouseleave="price_from = false">
+                  ng-class="{'lnr-active' : listView.propertyName == 'price_from'}">
                   {{'listings.listView.price' | translate}}
                   <md-icon
-                    ng-if="listView.propertyName == 'price_from' || price_from === true"
                     ng-class="{'fa-caret-up': !listView.reverse, 'fa-caret-down': listView.reverse}"
                     class="fa">
                   </md-icon>
@@ -100,24 +88,24 @@
           id="$index"
           class="lnr-listing-list-item"
           ng-click="listView.isCheckModeOn ? listView.onBikeTileCheck($event, bike) : listView.view(bike.id, $event)"
-          ng-repeat="bike in listView.bikes">
+          ng-repeat="bike in listView.bikes"
+          ng-class="{
+                'lnr-unavailable': !bike.available,
+                'lnr-checked-card': listView.isChecked(bike.id)
+              }">
           <div layout="column" flex="100">
             <div
               layout="row"
               class="break-word"
-              ng-class="{
-                'lnr-unavailable': !bike.available,
-                'lnr-checked-card': listView.isChecked(bike.id)
-              }"
               layout-align="start center">
-              <div flex="10">
+              <div flex="15" layout="row" layout-align="start center">
                 <md-checkbox
                   ng-if="listView.isSelectable"
                   ng-checked="listView.isChecked(bike.id)"
                   ng-click="listView.onBikeTileCheck($event, bike)"
                   md-no-ink
                   aria-label="Merging Mode"
-                  class="md-checkbox__hide-label lnr-md-no-focused"
+                  class="md-checkbox__hide-label lnr-md-no-focused lnr-m-0"
                 >
                 </md-checkbox>
                 <img hide-xs ng-src="{{bike.image_file}}" class="md-avatar lnr-ml" />
@@ -131,13 +119,13 @@
               <div flex="10"> {{bike.size}}</div>
               <div flex="10"> {{bike.price_from | number : 0}}</div>
               <status-labels
-                flex="10"
+                flex="5"
                 ng-if="listView.showLabels"
                 bike="bike"
                 minified-view="true">
               </status-labels>
               <md-menu flex md-position-mode="target bottom">
-                <md-button class="md-icon-button md-primary" md-no-ink ng-click="$mdOpenMenu($event)" aria-label="Menu">
+                <md-button ng-disabled="listView.isCheckModeOn" class="md-icon-button md-primary" md-no-ink ng-click="$mdOpenMenu($event)" aria-label="Menu">
                   <md-icon md-svg-icon="app/assets/ui_icons/menu.svg"></md-icon>
                 </md-button>
                 <md-menu-content width="2">

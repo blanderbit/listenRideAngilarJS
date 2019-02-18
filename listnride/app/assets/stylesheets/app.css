@@ -89,6 +89,15 @@ address {
   width: 15px;
 }
 
+.fa.material-icons {
+  font-family: 'FontAwesome'!important;
+  font-size: 14px!important;
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
 .slick-centered .slick-track {
   display: flex;
   align-items: center;
@@ -1819,8 +1828,40 @@ home #featuredTiles a {
   border-radius: 0;
 }
 
-.lnr-listing-list-item .lnr-checked-card {
+.lnr-listing-list-item {
+  height: 60px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: default;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.lnr-listing-list-item:hover {
+  background-color: #f7f7f7;
+}
+
+.lnr-listing-list-item .md-button:hover {
+  background: none;
+}
+
+.lnr-listing-list-item .md-list-item-inner {
+  line-height: 1;
+}
+
+.lnr-listing-list-item.lnr-checked-card,
+.lnr-listing-list-item.lnr-checked-card:hover {
   background-color: #f1f1f1;
+}
+
+.lnr-listing-list-item.lnr-unavailable {
+  pointer-events: none;
+}
+
+.lnr-listing-list-item.lnr-unavailable:hover {
+  background: none;
+}
+
+.lnr-listing-list-item.lnr-unavailable md-checkbox {
+  opacity: 0;
 }
 
 .bike__prices-item {
@@ -2101,28 +2142,6 @@ listings .lnr-bike-listings {
   opacity: 0.4;
 }
 
-.lnr-listing-list-item {
-  height: 60px;
-  border-bottom: 1px solid #e1e1e1;
-  cursor: default;
-}
-
-.lnr-listing-list-item .md-list-item-inner {
-  line-height: 1;
-}
-
-.break-word {
-  word-wrap: break-word;
-}
-
-.lnr-listing-list-item:hover {
-  background-color: rgba(224, 224, 224, 0.2)!important;
-}
-
-.lnr-listing-list-item .md-button:hover {
-  background-color: rgba(238, 238, 238, 0.2)!important;
-}
-
 .lnr-listing-header {
   background-color: #e1e1e1;
   min-height: 40px;
@@ -2132,16 +2151,19 @@ listings .lnr-bike-listings {
 }
 
 .lnr-listing-header .fa {
-  line-height: 24px;
-}
-
-.fa.material-icons {
-  font-family: 'FontAwesome'!important;
-  font-size: 14px!important;
+  line-height: 18px;
 }
 
 .lnr-listing-header .lnr-header-filter {
   cursor: pointer;
+}
+
+.lnr-header-filter:not(.lnr-active) md-icon {
+  display: none;
+}
+
+.lnr-header-filter:hover md-icon {
+  display: inline-block;
 }
 
 /*-----------------------------------------------------------------------------------*/

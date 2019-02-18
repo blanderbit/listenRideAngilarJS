@@ -1,6 +1,6 @@
 <md-content flex="100" layout="column" layout-fill>
   <div class="listings-header" layout="column">
-    <div layout="row" class="lnr-ph-x2" layout-fill layout-align="space-between center">
+    <div layout="row" class="lnr-ph-x2" flex layout-fill layout-align="space-between center">
       <md-input-container flex="25" hide-xs hide-sm>
         <label style="display: none"></label>
         <input
@@ -8,7 +8,7 @@
           ng-model="listings.input"
         />
       </md-input-container>
-      <div class="lnr-pl-x2" layout="row" flex flex-gt-md="75" layout-align="center center" layout-align-gt-sm="end center">
+      <div class="lnr-pl-x2" layout="row" flex flex-gt-md="75" layout-align="end center">
         <!-- Duplication information -->
         <div ng-if="listings.status" style="margin-right: auto;" class="lnr-pr-x2" hide-xs hide-sm>
           <h3>{{'listings.duplicate.duplication-status' | translate }}: {{listings.status}}</h3>
