@@ -343,7 +343,7 @@
         "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Mallorca. "
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Rent a bike with listnride",
+        "meta-title": "In Velo Veritas - Rent a bike with listnride inveloveritas.at ",
         "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
       },
       "velothon-bikerental": {
@@ -517,7 +517,7 @@
       "support": "listnride Support"
     },
     "sign-in": {
-      "tab": "Sign In",
+      "tab": "Sign in",
       "new": "New at listnride?",
       "login": "Log in to listnride",
       "register-facebook": "Register with Facebook",
@@ -955,7 +955,7 @@
     "status-closed": "closed",
     "status-in-past": "in the past",
     "booked": "booked",
-    "info-service-fee-insurance": "helps us run our platform and<br0>allows us to offer first-class customer service.<br1>VAT included. Non-refundable.",
+    "info-service-fee-insurance": "helps us run our platform and <br> allows us to offer first-class customer service.<br>VAT included. Non-refundable.",
     "basic-insurance-included": "Basic insurance included",
     "request-bike": "Request Bike",
     "to-request-bike-please": "to request a bike please",
