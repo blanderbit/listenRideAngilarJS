@@ -66,36 +66,36 @@
               </p>
 
               <form name="verificationDialog.descriptionForm" layout="column" layout-align="center center">
-                <img
-                        ng-style="{'display': verificationDialog.profilePicture ? 'none' : ''}"
-                        class="lnr-profile-lrg lnr-clickable"
-                        ngf-select
-                        name="uncropedProfilePicture"
-                        ng-model="verificationDialog.profilePicture"
-                        ngf-accept="'image/*'"
-                        ngf-max-size="20MB"
-                        ngf-min-height="100"
-                        ngf-pattern="image/png,image/jpg,image/jpeg"
-                        ngf-fix-orientation="true"
-                        ngf-background="verificationDialog.profilePicture || 'app/assets/ui_icons/lnr_verification_add_image.svg'"
-                        ngf-validate="verificationDialog.validateObj"
-                        ngf-model-invalid="verificationDialog.invalidFiles">
-                </img>
+                <div
+                  ng-style="{'display': verificationDialog.profilePicture ? 'none' : ''}"
+                  class="lnr-profile-lrg lnr-clickable"
+                  ngf-select
+                  name="uncropedProfilePicture"
+                  ng-model="verificationDialog.profilePicture"
+                  ngf-accept="'image/*'"
+                  ngf-max-size="20MB"
+                  ngf-min-height="100"
+                  ngf-pattern="image/png,image/jpg,image/jpeg"
+                  ngf-fix-orientation="true"
+                  ngf-background="verificationDialog.profilePicture || 'app/assets/ui_icons/lnr_verification_add_image.svg'"
+                  ngf-validate="verificationDialog.validateObj"
+                  ngf-model-invalid="verificationDialog.invalidFiles">
+              </div>
 
                 <div
-                        ng-style="{'display': verificationDialog.profilePicture ? '' : 'none'}"
-                        ngf-drop
-                        ng-model="verificationDialog.profilePicture"
-                        ngf-max-size="20MB"
-                        ngf-min-height="100"
-                        ngf-pattern="image/png,image/jpg,image/jpeg"
-                        class="cropArea"
+                  ng-style="{'display': verificationDialog.profilePicture ? '' : 'none'}"
+                  ngf-drop
+                  ng-model="verificationDialog.profilePicture"
+                  ngf-max-size="20MB"
+                  ngf-min-height="100"
+                  ngf-pattern="image/png,image/jpg,image/jpeg"
+                  class="cropArea"
                 >
                   <img-crop
-                          ng-style="{'display': verificationDialog.profilePicture ? '' : 'none'}"
-                          image="verificationDialog.profilePicture  | ngfDataUrl"
-                          result-image="verificationDialog.croppedDataUrl"
-                          ng-init="croppedDataUrl=''">
+                    ng-style="{'display': verificationDialog.profilePicture ? '' : 'none'}"
+                    image="verificationDialog.profilePicture  | ngfDataUrl"
+                    result-image="verificationDialog.croppedDataUrl"
+                    ng-init="croppedDataUrl=''">
                   </img-crop>
                 </div>
 
