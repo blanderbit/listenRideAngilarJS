@@ -38,6 +38,10 @@ angular.module('multiBooking', []).component('multiBooking', {
         }
 
         // invocations
+        multiBooking.disabledDates = [{
+          start_date: new Date(),
+          duration: 1
+        }];
         bikeOptions.accessoryOptions().then(function (resolve) {
           multiBooking.translatedValues.accessories = resolve;
         });
