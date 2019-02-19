@@ -1990,10 +1990,9 @@ search bike-card md-card {
   color: #5FC693;
 }
 
-/* Map bike card hackaround (to be cleaned) */
-ng-map md-card {
-  width: 240px;
-}
+/*-----------------------------------------------------------------------------------*/
+/*  GOOGLE NG-MAP INFO-WINDOW
+/*-----------------------------------------------------------------------------------*/
 
 ng-map md-card.lnr-bike-card md-card-title-text span {
   max-width: 120px;
@@ -2006,19 +2005,53 @@ ng-map md-card.lnr-bike-card md-card-title-text span {
 .ng-map-info-window > div:first-child div:nth-last-child(2),
 .ng-map-info-window > div:first-child div:nth-last-child(2) div {
   display: block !important;
-  margin-top: -4px !important;
-  z-index: 2;
+  /* margin-top: -4px !important; */
+  z-index: 0;
 }
 
-.ng-map-info-window>div:last-child {
-  right: 46px!important;
-  top: 18px!important;
-  opacity: 0.3!important;
-  border-radius: 10px;
+.ng-map-info-window .gm-ui-hover-effect {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ng-map-info-window bike-card {
+  border: none;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.ng-map-info-window > div:last-child {
+  /* right: 46px!important; */
+  /* top: 18px!important; */
+  opacity: 0.86!important;
+  border-radius: 5px;
+  transform: translate(-50%, -125%);
+  padding: 0;
+}
+
+.ng-map-info-window > div:last-child:after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .ng-map-info-window>div:last-child:hover {
-  opacity: 0.6!important;
+  opacity: 1!important;
+}
+
+/* Map bike card hackaround (to be cleaned) */
+@media (min-width: 460px) {
+  ng-map md-card {
+    width: 240px;
+  }
 }
 
 @media (min-width:599px) {
