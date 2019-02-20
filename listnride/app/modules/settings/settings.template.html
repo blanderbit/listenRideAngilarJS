@@ -16,7 +16,7 @@
               </div>
               <div flex-gt-xs="70" layout="column" layout-margin>
                 <div class="lnr-profile-figure">
-                  <img class="lnr-profile-lrg lnr-clickable"
+                  <div class="lnr-profile-lrg lnr-clickable"
                     ng-style="{'display': settings.profilePicture ? 'none' : ''}"
                     ngf-select name="ProfilePicture"
                     ng-model="settings.profilePicture"
@@ -26,7 +26,8 @@
                     ngf-pattern="image/png,image/jpg,image/jpeg"
                     ngf-fix-orientation="true"
                     ngf-background="settings.user.profile_picture.profile_picture.url || settings.profilePicture || 'app/assets/ui_images/no-image.jpg'"
-                    ngf-as-background="true"/>
+                    ngf-as-background="true">
+                  </div>
                 </div>
                 <div
                   ng-style="{'display': settings.profilePicture ? '' : 'none'}"

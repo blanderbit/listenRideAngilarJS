@@ -1716,6 +1716,10 @@ md-grid-list md-grid-tile.tile-lake-garda {
 /*  BIKE CARD & LISTING CARD
 /*-----------------------------------------------------------------------------------*/
 
+bike-card {
+  min-width: 290px;
+}
+
 bike-card .bg,
 listing-card .bg {
   width: 100%;

@@ -443,10 +443,21 @@ var lnrHelper = {
           imageUrl = ride.image_file,
           rideDescription = ride.description;
 
+        var clusterStatusHTML = '';
+
         if (ride.size === 0) {
           var readableSize = lnrConstants.translate.unisize[userLang];
         } else {
           var readableSize = ' ' + ride.size + '-' + parseInt(ride.size + 10) + ' cm';
+        }
+
+        if (ride.is_cluster) {
+          clusterStatusHTML = [
+            '<div class="status-labels__item">',
+              '<span>' + ride.rides_count + '&nbsp;</span>',
+              '<span>' + lnrConstants.translations[userLang].statuses.variants_available + '</span>',
+            '</div>'
+          ].join('');
         }
 
         // bikes grid html
@@ -457,18 +468,24 @@ var lnrHelper = {
           '<md-card class="lnr-bike-card _md">',
           '<a style="cursor:default" class="image-container lnr-links">',
           '<img src="' + imageUrl + '" />',
+
+          // status labels
+          '<div class="status-labels">' + clusterStatusHTML + '</div>',
+
           // default: info button
           '<div class="info-button"><button class="info-icon"></button></div>',
+
           '<div id="rent-element-default-' + rideId + '" class="rent-element">',
-          // on hover: info button
-          '<div class="info-button">',
-          '<button class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></button>',
+            // on hover: info button
+            '<div class="info-button">',
+            '<button class="info-icon" onclick="lnrHelper.toggleElements(' + rideId + ')"></button>',
+            '</div>',
+            // on hover: rent button
+            '<span class="lnr-content">',
+            '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ', \'' + userLang + '\')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
+            '</span>',
           '</div>',
-          // on hover: rent button
-          '<span class="lnr-content">',
-          '<button onclick="lnrHelper.spawnWizard(' + ride.user_id + ', ' + ride.id + ', \'' + userLang + '\')" class="md-button rent-button">' + basicInfo.buttonText + '</button>',
-          '</span>',
-          '</div>',
+
           // bike description
           '<div id="rent-element-description-' + rideId + '" class="rent-description" style="display: none">',
           '<div class="rent-description-content">',
