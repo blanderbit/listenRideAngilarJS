@@ -28,7 +28,7 @@ var lnrConstants = {
   svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
   // local, staging and production styles
   lnrStyles: {
-    "local": "styles/lnr-shop-integration.css",
+    "local": "dist/lnr-shop-integration_staging.min.css",
     "staging": "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration_staging.min.css",
     "production": "https://s3.eu-central-1.amazonaws.com/listnride-cdn/lnr-shop-integration.min.css"
   },
@@ -67,6 +67,33 @@ var lnrConstants = {
       "nl": "Unisize",
       "selected": {}
     }
+  },
+  translations: {
+    'en': {
+      'statuses': {
+        'variants_available': 'Variants available'
+      }
+    },
+    'de': {
+      'statuses': {
+        'variants_available': 'Varianten verfügbar'
+      }
+    },
+    'nl': {
+      'statuses': {
+        'variants_available': 'Varianten beschikbaar'
+      }
+    },
+    'it': {
+      'statuses': {
+        'variants_available': 'Varianti disponibili'
+      }
+    },
+    'es': {
+      'statuses': {
+        'variants_available': 'Variantes disponibles'
+      }
+    },
   },
   // map of the categories for en, de and nl languages
   subCategory: {

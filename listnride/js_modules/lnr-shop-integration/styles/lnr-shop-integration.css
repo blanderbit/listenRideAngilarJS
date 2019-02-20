@@ -542,3 +542,30 @@ md-icon svg {
 .show {
   display: block;
 }
+
+/*------------ STATUS LABELS ------------*/
+
+.lnr-bike-card .status-labels {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 35px;
+  padding: 13px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.status-labels__item {
+  color: #ffffff;
+  background: #7ab2f8;
+  padding: 2px 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.status-labels__item + .status-labels__item {
+  margin-left: 3px;
+}
