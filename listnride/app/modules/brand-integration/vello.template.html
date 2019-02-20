@@ -43,12 +43,12 @@
      <div class="vello-bikes" layout="row" flex-gt-xs layout-wrap layout-padding layout-align="center start">
        <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
          <p class="md-subhead lnr-center">{{ 'shared.berlin' | translate }}</p>
-         <bike-card ng-repeat="bike in vello.bikes.berlin" bike="bike"></bike-card>
+         <bike-card ng-repeat="bike in vello.bikes.berlin" bike="bike" show-labels="true"></bike-card>
        </div>
        <div layout="row" flex-gt-xs="10"></div>
        <div flex="100" flex-gt-xs="45" flex-gt-sm="33" layout="column">
          <p class="md-subhead lnr-center">{{ 'shared.munich' | translate }}</p>
-         <bike-card ng-repeat="bike in vello.bikes.munich" bike="bike"></bike-card>
+         <bike-card ng-repeat="bike in vello.bikes.munich" bike="bike" show-labels="true"></bike-card>
        </div>
      </div>
 

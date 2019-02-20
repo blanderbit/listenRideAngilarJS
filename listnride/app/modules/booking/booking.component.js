@@ -157,8 +157,7 @@ angular.module('booking', [])
             var startDate = new Date(booking.dateRange.start_date);
             booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
             booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
-            booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).subtotal;
-            booking.total = booking.subtotal = price.calculatePrices(booking.startDate, booking.endDate, booking.prices).total;
+            updatePrices();
             setInitHours();
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
@@ -226,7 +225,7 @@ angular.module('booking', [])
         }
 
         function updatePrices() {
-          var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium);
+          var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium, booking.shopBooking);
           booking.subtotal = prices.subtotal;
           booking.subtotalDiscounted = prices.subtotalDiscounted;
           booking.lnrFee = prices.serviceFee;

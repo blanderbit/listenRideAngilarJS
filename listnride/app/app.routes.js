@@ -796,6 +796,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('capeArgusOld', {
+        url: '/capeargus',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('capeArgus');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -815,6 +822,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('supercrossMunichOld', {
+        url: '/supercross-munich',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('supercrossMunich');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -834,6 +848,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('raphaSuperCrossOld', {
+        url: '/rapha-super-cross',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('raphaSuperCross');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -853,6 +874,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('inVeloVeritasOld', {
+        url: '/in-velo-veritas',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('inVeloVeritas');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -872,6 +900,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('crossrideOld', {
+        url: '/berliner-fahrradschau',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('crossride');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -891,6 +926,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('velosophOld', {
+        url: '/herbstausfahrt',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('velosoph');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -910,6 +952,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('departOld', {
+        url: '/grand-depart',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('depart');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -929,6 +978,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('eroicaGaioleOld', {
+        url: '/eroica-gaiole',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('eroicaGaiole');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -948,6 +1004,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('mcbwOld', {
+        url: '/mcbw',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('mcbw');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -967,6 +1030,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('constanceSpinOld', {
+        url: '/constance-spin',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('constanceSpin');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -986,6 +1056,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('coffeespinOld', {
+        url: '/velothon-coffeespin',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('coffeespin');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -1006,6 +1083,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('cwdOld', {
+        url: '/cyclingworld',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('cwd');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -1025,6 +1109,13 @@
         meta: {
           disableUpdate: true
         }
+      }).state('pushnpostOld', {
+        url: '/pushnpost',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('pushnpost');
+          }
+        ],
       });
 
       $stateProvider.state({
@@ -1044,7 +1135,15 @@
         meta: {
           disableUpdate: true
         }
+      }).state('kuchenundraketenOld', {
+        url: '/kuchenundraketen',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('kuchenundraketen');
+          }
+        ],
       });
+
       /* ------------------------------------ */
       /* BRANDS_PAGES */
       /* ------------------------------------ */
@@ -1434,6 +1533,166 @@
         var state = $injector.get('$state');
         state.go('404');
       });
+
+      // REDIRECTS
+
+      $stateProvider.state({
+        name: 'berlinTriathlon',
+        url: '/berlin-triathlon',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'berlin-triathlon'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'berlinTriathlonXl',
+        url: '/berlin-triathlon-xl',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'berlin-triathlon-xl'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'cyclassicsHamburg',
+        url: '/cyclassics-hamburg',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'cyclassics-hamburg'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'hamburgTriathlon',
+        url: '/triathlon-hamburg',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'triathlon-hamburg'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'torosDeGravel',
+        url: '/toros-de-gravel',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'toros-de-gravel'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'riderman',
+        url: '/riderman-rothaus',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'riderman-rothaus'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'velothonBikerental',
+        url: '/velothon-bikerental',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'velothon-bikerental'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'vatternrundan',
+        url: '/vatternrundan',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'vatternrundan'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'epicgrancanaria',
+        url: '/epicgrancanaria',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'epicgrancanaria'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'veloraceDresden',
+        url: '/velorace-dresden',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'velorace-dresden'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'larditaArezzo',
+        url: '/lardita-arezzo',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'lardita-arezzo'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'granfondo',
+        url: '/granfondo-via-del-sale',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'granfondo-via-del-sale'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: 'giroSardegna',
+        url: '/giro-sardegna',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'giro-sardegna'
+            })
+          }
+        ]
+      });
+
+
     }
   ]);
 })();

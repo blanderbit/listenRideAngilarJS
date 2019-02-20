@@ -67,7 +67,7 @@ booking md-radio-button {
 
 .booking__receipt {
     margin-top: 100px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .details__send-code {
@@ -86,7 +86,15 @@ booking md-radio-button {
     margin: 0 32px 19px;
 }
 
+.booking__body md-tabs-wrapper {
+    padding: 0 16px;
+}
+
 @media(max-width: 959px) { /* sm */
+
+    .booking__body md-tabs-wrapper {
+        padding: 0 8px;
+    }
 
     .lnr-list-form {
         padding: 0;
