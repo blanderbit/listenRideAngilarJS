@@ -7,7 +7,8 @@ angular.module('categoryFilter', [])
     bindings: {
       currentCategories: '=',
       onFilterChange: '<?',
-      onlyParentCategories: '<?'
+      onlyParentCategories: '<?',
+      hideCategoryCheckbox:'<?'
     },
     controller: [
       '$translate',

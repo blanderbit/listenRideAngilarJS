@@ -8,6 +8,7 @@
   >
     <div layout="row" layout-align="space-between center">
       <md-checkbox
+        ng-if="!categoryFilter.hideCategoryCheckbox"
         class="lnr-m-0"
         aria-label="{{category.name}}"
         ng-checked="categoryFilter.isChecked(category.catId)"
