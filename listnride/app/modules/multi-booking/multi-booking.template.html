@@ -97,10 +97,10 @@
                   placeholder="{{ 'shared.from' | translate }}"
                 >
                   <md-option
-                    ng-repeat="i in [].constructor(17) track by $index"
-                    value="{{$index + 6}}"
+                    ng-repeat="i in [].constructor(10) track by $index"
+                    value="{{$index + 9}}"
                   >
-                    {{ ($index + 6) + ":00" }}
+                    {{ ($index + 9) + ":00" }}
                   </md-option>
                 </md-select>
               </md-input-container>
@@ -115,10 +115,10 @@
                 >
                   <!-- 17 means hours, working hours start from 06:00 to 22:00 -->
                   <md-option
-                    ng-repeat="i in [].constructor(17) track by $index"
-                    value="{{$index + 6}}"
+                    ng-repeat="i in [].constructor(10) track by $index"
+                    value="{{$index + 9}}"
                   >
-                    {{ ($index + 6) + ":00" }}
+                    {{ ($index + 9) + ":00" }}
                   </md-option>
                 </md-select>
               </md-input-container>

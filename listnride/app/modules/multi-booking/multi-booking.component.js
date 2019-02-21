@@ -21,8 +21,8 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.form = {
           city: $stateParams.location ? $stateParams.location : '',
           start_date: '',
-          start_at: '6',
-          end_at: '22',
+          start_at: '9',
+          end_at: '18',
           duration: 0,
           bike_sizes: [],
           category_ids: [],
@@ -39,7 +39,7 @@ angular.module('multiBooking', []).component('multiBooking', {
 
         // invocations
         multiBooking.disabledDates = [{
-          start_date: new Date(),
+          start_date: (new Date()).setHours(0, 0, 0, 0),
           duration: 1
         }];
         bikeOptions.accessoryOptions().then(function (resolve) {
