@@ -28,6 +28,7 @@ var lnrHelper = {
     lnrConstants.parentElement = document.getElementById('listnride');
     // initialize for single and multi user mode
     if (lnrConstants.parentElement.dataset.user) {
+      lnrConstants.parentElement.dataset.user = lnrHelper.trimSpaces(lnrConstants.parentElement.dataset.user);
       lnrHelper.postInitSingleUser();
     } else {
       lnrHelper.postInitMultiUser();
@@ -120,6 +121,9 @@ var lnrHelper = {
         }
       }
     }
+  },
+  trimSpaces: function(string) {
+    return string.replace(/\s/g, "");
   },
   /**
    * open the location dropdown
