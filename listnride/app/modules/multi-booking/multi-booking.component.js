@@ -14,19 +14,17 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.showSelectedValuesAccessories = showSelectedValuesAccessories;
         multiBooking.showSelectedValuesCategories = showSelectedValuesCategories;
         multiBooking.categorySubs = categorySubs;
+        multiBooking.addInput = addInput;
+        multiBooking.removeInput = removeInput;
 
         // variables
         multiBooking.success_request = false;
-        multiBooking.bike_sizes_ungrouped = [];
         multiBooking.form = {
           city: $stateParams.location ? $stateParams.location : '',
           start_date: '',
           start_at: '9',
           end_at: '18',
           duration: 0,
-          bike_sizes: [],
-          category_ids: [],
-          accessories: [],
           name: '',
           email: '',
           phone_number: '',
@@ -36,6 +34,14 @@ angular.module('multiBooking', []).component('multiBooking', {
           categories: [],
           accessories: []
         }
+        multiBooking.variations = [
+          {
+            bike_sizes_ungrouped:[],
+            bike_sizes: [],
+            category_ids: [],
+            accessories: []
+          }
+        ];
 
         // invocations
         multiBooking.disabledDates = [{
@@ -55,6 +61,18 @@ angular.module('multiBooking', []).component('multiBooking', {
 
       ///////////
 
+      function addInput() {
+        multiBooking.variations.push({
+          bike_sizes: [],
+          category_ids: [],
+          accessories: []
+        });
+      };
+
+      function removeInput(index) {
+        multiBooking.variations.splice(index, 1);
+      };
+
       // tricky function to initialize date-picker close, when we click ng-menu
       function closeDateRange() {
         var datePickerTrigger = angular.element('.js-datepicker-opened');
@@ -64,17 +82,19 @@ angular.module('multiBooking', []).component('multiBooking', {
       }
 
       function groupBikeSizes() {
-        multiBooking.form.bike_sizes.length = 0; // clear array of bike_sizes
-        _.forOwn(_.countBy(multiBooking.bike_sizes_ungrouped), function (value, key) {
-          multiBooking.form.bike_sizes.push({
-            'size': +key,
-            'count': value
+        _.forEach(multiBooking.variations, function (item, index) {
+          multiBooking.variations[index].length = 0; // clear array of bike_sizes
+          _.forOwn(_.countBy(multiBooking.variations[index].bike_sizes_ungrouped), function (value, key) {
+            multiBooking.variations[index].bike_sizes.push({
+              'size': +key,
+              'count': value
+            });
           });
-        });
+        })
       }
 
       function beforeSend() {
-        groupBikeSizes();
+        groupBikeSizes;
       }
 
       function send() {
@@ -96,9 +116,9 @@ angular.module('multiBooking', []).component('multiBooking', {
         }).subcategories, 'id').sort()
       }
 
-      function showSelectedValuesAccessories() {
+      function showSelectedValuesAccessories(index) {
         var str = '';
-        _.forEach(multiBooking.form.accessories, function(item) {
+        _.forEach(multiBooking.variations[index].accessories, function(item) {
           str += _.find(multiBooking.translatedValues.accessories, function(o){
             return o.model === item;
           }).name + ', ';
@@ -107,9 +127,9 @@ angular.module('multiBooking', []).component('multiBooking', {
         return str.slice(0, -2);
       }
 
-      function showSelectedValuesCategories() {
+      function showSelectedValuesCategories(index) {
         var str = '';
-        _.forEach(multiBooking.form.category_ids, function (id) {
+        _.forEach(multiBooking.variations[index].category_ids, function (id) {
           str += _.find(multiBooking.translatedValues.categories, function (o) {
             return o.id == id;
           }).name + ', ';

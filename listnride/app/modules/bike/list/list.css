@@ -83,24 +83,3 @@ edit .accessory-label {
   left: 0;
   top: 33px;
 }
-
-.lnr-details-close {
-  top: 100%;
-  position: absolute;
-  width: auto;
-  padding: 0 8px;
-  min-width: auto;
-  min-height: auto;
-  height: auto;
-  margin: 0;
-}
-
-.lnr-details-close.md-button.md-icon-button {
-  top: 33px;
-  left: 100%;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  margin-left: -8px;
-  line-height: 1;
-}
