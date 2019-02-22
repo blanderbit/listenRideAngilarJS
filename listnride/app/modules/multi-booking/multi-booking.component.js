@@ -94,12 +94,14 @@ angular.module('multiBooking', []).component('multiBooking', {
       }
 
       function beforeSend() {
-        groupBikeSizes;
+        groupBikeSizes();
+        multiBooking.form.variations = multiBooking.variations;
+        // Hack to paste hash of Boolean params into JSONB
+        multiBooking.form = JSON.stringify(multiBooking.form);
       }
 
       function send() {
         beforeSend();
-
         api.post('/multi_booking', multiBooking.form).then(
           function (success) {
             multiBooking.success_request = true;
