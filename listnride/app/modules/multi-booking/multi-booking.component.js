@@ -95,9 +95,11 @@ angular.module('multiBooking', []).component('multiBooking', {
 
       function beforeSend() {
         groupBikeSizes();
+        _.forEach(multiBooking.variations, function (item) {
+          item.category_id = item.category_ids[0];
+        });
+
         multiBooking.form.variations = multiBooking.variations;
-        // Hack to paste hash of Boolean params into JSONB
-        multiBooking.form = JSON.stringify(multiBooking.form);
       }
 
       function send() {

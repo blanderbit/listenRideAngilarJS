@@ -101,7 +101,7 @@
         </div>
       </div>
 
-      <div ng-repeat="input in multiBooking.variations" class="lnr-p-0">
+      <div ng-repeat="input in multiBooking.variations track by $index" class="lnr-p-0">
         <div hide-gt-sm ng-if="$index !== 0" class="lnr-pb-x2"></div>
         <md-divider ng-if="$index !== 0" hide-gt-sm class="lnr-mh-x2 lnr-pb"></md-divider>
         <div class="lnr-multi-booking-step lnr-p-0" layout="column" layout-gt-sm="row">
