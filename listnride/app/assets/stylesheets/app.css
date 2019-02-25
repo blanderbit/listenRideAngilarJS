@@ -437,6 +437,27 @@ md-tooltip .md-content {
 /* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-group-close {
+  top: 100%;
+  position: absolute;
+  width: auto;
+  padding: 0 8px;
+  min-width: auto;
+  min-height: auto;
+  height: auto;
+  margin: 0;
+}
+
+.lnr-group-close.md-button.md-icon-button {
+  top: 33px;
+  left: 100%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-left: -8px;
+  line-height: 1;
+}
+
 .lnr-middle-divider {
   display: inline-block;
   overflow: hidden;
@@ -3333,6 +3354,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   display: inline-block;
   line-height: 16px;
   text-overflow: ellipsis;
+}
+
+.lnr-multi-booking-step {
+  position: relative;
 }
 
 /*-----------------------------------------------------------------------------------*/

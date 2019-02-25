@@ -6,7 +6,8 @@ angular.module('bikeCountFilter', [])
     controllerAs: 'bikeCountFilter',
     bindings: {
       currentValues: '=',
-      onFilterChange: '<?'
+      onFilterChange: '<?',
+      hideAllSizes: '<?',
     },
     controller: [
       '$translate',
@@ -23,21 +24,22 @@ angular.module('bikeCountFilter', [])
           // values
           bikeCountFilter.currentValues = bikeCountFilter.currentValues || [];
           bikeCountFilter.sizes = [];
-          bikeOptions.sizeOptions('search').then(function (resolve) {
+          bikeCountFilter.defaultValueIndex = (bikeCountFilter.hideAllSizes ? 0 : -1);
+          bikeOptions.sizeOptionsValue = (bikeCountFilter.hideAllSizes ? '' : 'search');
+          bikeOptions.sizeOptions(bikeOptions.sizeOptionsValue).then(function (resolve) {
             bikeCountFilter.sizes = resolve
           });
 
           // invocations
           if (!bikeCountFilter.currentValues.length) bikeCountFilter.setDefault();
-
         };
 
         function setDefault() {
-          bikeCountFilter.currentValues = [-1]
+          bikeCountFilter.currentValues = [bikeCountFilter.defaultValueIndex];
         }
 
         function increaseBikesCount() {
-          bikeCountFilter.currentValues.push(-1);
+          bikeCountFilter.currentValues.push(bikeCountFilter.defaultValueIndex);
           if (typeof bikeCountFilter.onFilterChange === "function") bikeCountFilter.onFilterChange();
         }
 

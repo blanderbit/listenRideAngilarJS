@@ -7,7 +7,8 @@ angular.module('categoryFilter', [])
     bindings: {
       currentCategories: '=',
       onFilterChange: '<?',
-      onlyParentCategories: '<?'
+      onlyParentCategories: '<?',
+      hideCategoryCheckbox:'<?'
     },
     controller: [
       '$translate',
@@ -20,6 +21,7 @@ angular.module('categoryFilter', [])
 
         categoryFilter.$onInit = function () {
           // methods
+          categoryFilter.checkDisabled = checkDisabled;
           categoryFilter.toggle = toggle;
           categoryFilter.exists = exists;
           categoryFilter.isIndeterminate = isIndeterminate;
@@ -37,6 +39,11 @@ angular.module('categoryFilter', [])
           categoryFilter.openSubs = [];
         };
 
+        function checkDisabled(subcategoryId) {
+          if (categoryFilter.currentCategories.length) {
+            return categoryFilter.currentCategories[0] !== subcategoryId;
+          }
+        }
 
         function toggle(item, list, $event) {
           // don't display child categories, simply toggle all

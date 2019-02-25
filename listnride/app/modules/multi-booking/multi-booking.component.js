@@ -14,30 +14,44 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.showSelectedValuesAccessories = showSelectedValuesAccessories;
         multiBooking.showSelectedValuesCategories = showSelectedValuesCategories;
         multiBooking.categorySubs = categorySubs;
+        multiBooking.addInput = addInput;
+        multiBooking.removeInput = removeInput;
 
         // variables
+        multiBooking.START_TIME = '9';
+        multiBooking.END_TIME = '18';
+
         multiBooking.success_request = false;
-        multiBooking.bike_sizes_ungrouped = [];
         multiBooking.form = {
           city: $stateParams.location ? $stateParams.location : '',
           start_date: '',
-          start_at: '6',
-          end_at: '22',
+          start_at: multiBooking.START_TIME,
+          end_at: multiBooking.END_TIME,
           duration: 0,
-          bike_sizes: [],
-          category_ids: [],
-          accessories: [],
           name: '',
           email: '',
           phone_number: '',
-          notes: ''
-        }
+          notes: '',
+          variations: [
+            {
+              bike_sizes_ungrouped:[],
+              bike_sizes: [],
+              category_ids: [],
+              accessories: []
+            }
+          ]
+        };
+
         multiBooking.translatedValues = {
           categories: [],
           accessories: []
-        }
+        };
 
         // invocations
+        multiBooking.disabledDates = [{
+          start_date: (new Date()).setHours(0, 0, 0, 0),
+          duration: 1
+        }];
         bikeOptions.accessoryOptions().then(function (resolve) {
           multiBooking.translatedValues.accessories = resolve;
         });
@@ -51,6 +65,19 @@ angular.module('multiBooking', []).component('multiBooking', {
 
       ///////////
 
+      function addInput() {
+        multiBooking.form.variations.push({
+          bike_sizes_ungrouped:[],
+          bike_sizes: [],
+          category_ids: [],
+          accessories: []
+        });
+      };
+
+      function removeInput(index) {
+        multiBooking.form.variations.splice(index, 1);
+      };
+
       // tricky function to initialize date-picker close, when we click ng-menu
       function closeDateRange() {
         var datePickerTrigger = angular.element('.js-datepicker-opened');
@@ -60,23 +87,28 @@ angular.module('multiBooking', []).component('multiBooking', {
       }
 
       function groupBikeSizes() {
-        multiBooking.form.bike_sizes.length = 0; // clear array of bike_sizes
-        _.forOwn(_.countBy(multiBooking.bike_sizes_ungrouped), function (value, key) {
-          multiBooking.form.bike_sizes.push({
-            'size': +key,
-            'count': value
+        _.forEach(multiBooking.form.variations, function (item) {
+          item.bike_sizes.length = 0; // clear array of bike_sizes
+          _.forOwn(_.countBy(item.bike_sizes_ungrouped), function (value, key) {
+            item.bike_sizes.push({
+              'size': +key,
+              'count': value
+            });
           });
         });
       }
 
       function beforeSend() {
         groupBikeSizes();
+        _.forEach(multiBooking.form.variations, function (item) {
+          item.category_id = item.category_ids[0];
+        });
       }
 
       function send() {
         beforeSend();
-
-        api.post('/multi_booking', multiBooking.form).then(
+        var data = { 'multi_booking': multiBooking.form};
+        api.post('/multi_booking', data).then(
           function (success) {
             multiBooking.success_request = true;
           },
@@ -92,9 +124,9 @@ angular.module('multiBooking', []).component('multiBooking', {
         }).subcategories, 'id').sort()
       }
 
-      function showSelectedValuesAccessories() {
+      function showSelectedValuesAccessories(index) {
         var str = '';
-        _.forEach(multiBooking.form.accessories, function(item) {
+        _.forEach(multiBooking.form.variations[index].accessories, function(item) {
           str += _.find(multiBooking.translatedValues.accessories, function(o){
             return o.model === item;
           }).name + ', ';
@@ -103,9 +135,9 @@ angular.module('multiBooking', []).component('multiBooking', {
         return str.slice(0, -2);
       }
 
-      function showSelectedValuesCategories() {
+      function showSelectedValuesCategories(index) {
         var str = '';
-        _.forEach(multiBooking.form.category_ids, function (id) {
+        _.forEach(multiBooking.form.variations[index].category_ids, function (id) {
           str += _.find(multiBooking.translatedValues.categories, function (o) {
             return o.id == id;
           }).name + ', ';
