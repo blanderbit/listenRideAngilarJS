@@ -18,30 +18,34 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.removeInput = removeInput;
 
         // variables
+        multiBooking.START_TIME = '9';
+        multiBooking.END_TIME = '18';
+
         multiBooking.success_request = false;
         multiBooking.form = {
           city: $stateParams.location ? $stateParams.location : '',
           start_date: '',
-          start_at: '9',
-          end_at: '18',
+          start_at: multiBooking.START_TIME,
+          end_at: multiBooking.END_TIME,
           duration: 0,
           name: '',
           email: '',
           phone_number: '',
-          notes: ''
-        }
+          notes: '',
+          variations: [
+            {
+              bike_sizes_ungrouped:[],
+              bike_sizes: [],
+              category_ids: [],
+              accessories: []
+            }
+          ]
+        };
+
         multiBooking.translatedValues = {
           categories: [],
           accessories: []
-        }
-        multiBooking.variations = [
-          {
-            bike_sizes_ungrouped:[],
-            bike_sizes: [],
-            category_ids: [],
-            accessories: []
-          }
-        ];
+        };
 
         // invocations
         multiBooking.disabledDates = [{
@@ -62,7 +66,8 @@ angular.module('multiBooking', []).component('multiBooking', {
       ///////////
 
       function addInput() {
-        multiBooking.variations.push({
+        multiBooking.form.variations.push({
+          bike_sizes_ungrouped:[],
           bike_sizes: [],
           category_ids: [],
           accessories: []
@@ -70,7 +75,7 @@ angular.module('multiBooking', []).component('multiBooking', {
       };
 
       function removeInput(index) {
-        multiBooking.variations.splice(index, 1);
+        multiBooking.form.variations.splice(index, 1);
       };
 
       // tricky function to initialize date-picker close, when we click ng-menu
@@ -82,29 +87,28 @@ angular.module('multiBooking', []).component('multiBooking', {
       }
 
       function groupBikeSizes() {
-        _.forEach(multiBooking.variations, function (item, index) {
-          multiBooking.variations[index].length = 0; // clear array of bike_sizes
-          _.forOwn(_.countBy(multiBooking.variations[index].bike_sizes_ungrouped), function (value, key) {
-            multiBooking.variations[index].bike_sizes.push({
+        _.forEach(multiBooking.form.variations, function (item) {
+          item.bike_sizes.length = 0; // clear array of bike_sizes
+          _.forOwn(_.countBy(item.bike_sizes_ungrouped), function (value, key) {
+            item.bike_sizes.push({
               'size': +key,
               'count': value
             });
           });
-        })
+        });
       }
 
       function beforeSend() {
         groupBikeSizes();
-        _.forEach(multiBooking.variations, function (item) {
+        _.forEach(multiBooking.form.variations, function (item) {
           item.category_id = item.category_ids[0];
         });
-
-        multiBooking.form.variations = multiBooking.variations;
       }
 
       function send() {
         beforeSend();
-        api.post('/multi_booking', multiBooking.form).then(
+        var data = { 'multi_booking': multiBooking.form};
+        api.post('/multi_booking', data).then(
           function (success) {
             multiBooking.success_request = true;
           },
@@ -122,7 +126,7 @@ angular.module('multiBooking', []).component('multiBooking', {
 
       function showSelectedValuesAccessories(index) {
         var str = '';
-        _.forEach(multiBooking.variations[index].accessories, function(item) {
+        _.forEach(multiBooking.form.variations[index].accessories, function(item) {
           str += _.find(multiBooking.translatedValues.accessories, function(o){
             return o.model === item;
           }).name + ', ';
@@ -133,7 +137,7 @@ angular.module('multiBooking', []).component('multiBooking', {
 
       function showSelectedValuesCategories(index) {
         var str = '';
-        _.forEach(multiBooking.variations[index].category_ids, function (id) {
+        _.forEach(multiBooking.form.variations[index].category_ids, function (id) {
           str += _.find(multiBooking.translatedValues.categories, function (o) {
             return o.id == id;
           }).name + ', ';
