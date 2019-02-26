@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Leer más",
+    "choose-bike-size": "Please, pick a bike size",
+    "please-choose-bike-count": "Please pick bike count",
     "status-labels": {
       "variants_available": "Variantes disponibles"
     },
@@ -184,6 +186,23 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "long-term": {
+    "header": "Rental bikes for your long-term stay",
+    "subheader": "listnride offers you a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "how-to": {
+      "step-1-title": "1. Full Service",
+      "step-1-content": "You decide at what location and what period you need which bicycles. Just provide us the details in the following form and we'll get back to you.",
+      "step-2-title": "2. Attractive Packages",
+      "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
+      "step-3-title": "3. Uncomplicated Booking Process",
+      "step-3-content": "Our efficient booking process lasts from the inquiry you made until your payment is processed. You will then receive an invoice with a VAT ID."
+    },
+    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you need and style. Find the right mobility solution for you.",
+    "meta-description": "listnride bike rental, your local expert for bike rental",
+    "opengraph": {
+      "description": "The rental bike that fits you need and style."
+    }
+  },
   "imprint": {
     "germany-address": "Steinstraße 17 <br>\n10119 Berlín <br>\nAlemania",
     "contacts": "Correo electrónico: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com </a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com </a><br>\nTeléfono: +49 (0) 30-120870330"
@@ -256,17 +275,20 @@
   },
   "multi-booking": {
     "meta-title": "Alquileres grupales",
+    "opengraph": {
+      "description": "The rental bike that fits you need and style."
+    },
     "no-accessories": "Sin accesorios",
     "meta-description": "Alquila tus bicicletas con nuestro formulario de reserva grupal",
     "title": "Alquileres grupales",
     "header": "Estamos felices de ayudarte con tu reserva grupal",
     "subheader": "Déjanos ayudarte a organizar tu próximo viaje en bicicleta. Indícanos tus preferencias y nosotros haremos el resto. Tu única preocupación es disfrutar del viaje.",
     "how-to": {
-      "step-1-title": "Buscar y encontrar",
+      "step-1-title": "1. Buscar y encontrar",
       "step-1-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. ",
-      "step-2-title": "Reserva en línea",
+      "step-2-title": "2. Reserva en línea",
       "step-2-content": "Te enviaremos un enlace con una propuesta de alquiler para que puedas reservar en línea de manera fácil, rápida y segura. ",
-      "step-3-title": "Acepta oferta y reserva online.",
+      "step-3-title": "3. Acepta oferta y reserva online.",
       "step-3-content": "Le enviaremos una cotización y un enlace donde puede reservar en línea o darnos una confirmación por escrito de su reserva."
     },
     "your-booking-details": "Detalles de reserva",

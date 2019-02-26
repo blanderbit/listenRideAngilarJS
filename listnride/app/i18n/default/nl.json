@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "choose-bike-size": "Please, pick a bike size",
+    "please-choose-bike-count": "Please pick bike count",
     "status-labels": {
       "variants_available": "Varianten beschikbaar"
     },
@@ -179,6 +181,23 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "long-term": {
+    "header": "Rental bikes for your long-term stay",
+    "subheader": "listnride offers you a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "how-to": {
+      "step-1-title": "1. Full Service",
+      "step-1-content": "You decide at what location and what period you need which bicycles. Just provide us the details in the following form and we'll get back to you.",
+      "step-2-title": "2. Attractive Packages",
+      "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
+      "step-3-title": "3. Uncomplicated Booking Process",
+      "step-3-content": "Our efficient booking process lasts from the inquiry you made until your payment is processed. You will then receive an invoice with a VAT ID."
+    },
+    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you need and style. Find the right mobility solution for you.",
+    "meta-description": "listnride bike rental, your local expert for bike rental",
+    "opengraph": {
+      "description": "The rental bike that fits you need and style."
+    }
+  },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlijn<br>Duitsland",
     "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefoon: +49 (0)30-120870330"
@@ -251,17 +270,20 @@
   },
   "multi-booking": {
     "meta-title": "Groepsboeking",
+    "opengraph": {
+      "description": "The rental bike that fits you need and style."
+    },
     "no-accessories": "Geen accessoires",
     "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
     "title": "Groepsboekingen",
     "header": "We helpen u graag met uw groepsboeking",
     "subheader": "Laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
     "how-to": {
-      "step-1-title": "Zoeken & vinden",
+      "step-1-title": "1. Zoeken & vinden",
       "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd en geniet maximaal van de tijd op je vakantiebestemming. Gemakkelijk en transparent, dag en nacht. ",
-      "step-2-title": "Definieren & aanvragen",
+      "step-2-title": "2. Definieren & aanvragen",
       "step-2-content": "Vertel ons welke fietsen je wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met je op!",
-      "step-3-title": "Offerte accepteren & online boeken",
+      "step-3-title": "3. Offerte accepteren & online boeken",
       "step-3-content": "Wij sturen je een offerte met een link waar je online kunt boeken of een schriftelijke bevestiging van je boeking kunt geven.   "
     },
     "your-booking-details": "Uw boekingsgegevens",
