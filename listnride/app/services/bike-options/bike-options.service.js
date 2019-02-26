@@ -37,7 +37,7 @@ angular.module('listnride')
         })
       },
 
-      sizeOptions: function (isSearch, withKidsSizes) {
+      sizeOptions: function (withAllSizesLabel, withKidsSizes) {
         var self = this;
 
         return $translate(this.sharedTranslationKeys()).then(
@@ -47,7 +47,7 @@ angular.module('listnride')
             ];
 
             // show 'all sizes' option if used for search purposes
-            if (isSearch) {
+            if (withAllSizesLabel) {
               sizes.unshift({ value: -1, label: translations['search.all-sizes']});
             }
 
