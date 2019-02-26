@@ -21,7 +21,7 @@ angular.
 
       var getAccessToken = function (user, isFacebook) {
         var preparedData = isFacebook ? {
-          assertion: user.assertion,
+          assertion: user.facebook_access_token,
           grant_type: 'assertion'
         } : {
           email: user.email,
@@ -105,7 +105,7 @@ angular.
       };
 
       var loginFbGlobal = function (fbAccessToken) {
-        getAccessToken({assertion: fbAccessToken}, 'facebook').then(function (successTokenData) {
+        getAccessToken({facebook_access_token: fbAccessToken}, 'facebook').then(function (successTokenData) {
           setAccessToken(successTokenData);
           api.get('/users/me').then(function (success) {
             setCredentials(success.data);
