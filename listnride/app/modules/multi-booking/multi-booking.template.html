@@ -108,7 +108,7 @@
           <!--<span class="lnr-badge-rounded lnr-badge-default">{{$index+1}}</span>-->
           <div flex="100" flex-gt-sm="50" class="lnr-ph lnr-mb-x2">
             <md-input-container class="lnr-mb-x2"> <!-- CATEGORY-FILTER -->
-              <label>{{ 'multi-booking.what-bike-kind' | translate }}</label>
+              <label>{{ 'multi-booking.what-bike-kind' | translate }} *</label>
               <md-menu md-position-mode="left bottom" lnr-md-menu-fullscreen>
                 <md-button
                   class="md-lined lnr-m-0 lnr__filter-btn md-right-arrow"
@@ -288,7 +288,7 @@
         <md-button
           type="submit"
           class="md-raised md-primary md-lrg"
-          ng-disabled="!multiBookingForm.$valid || !multiBookingForm.$dirty || !multiBooking.form.start_date">
+          ng-disabled="!multiBookingForm.$valid || !multiBookingForm.$dirty || !multiBooking.form.start_date || !multiBooking.categoryValid()">
             {{ 'shared.send' | translate }}
         </md-button>
       </div>
