@@ -725,6 +725,35 @@
           location: {
             value: "",
             squash: true
+          },
+        }
+      });
+
+      $stateProvider.state({
+        name: 'longTerm?location',
+        url: '/multi-booking/{type}?location',
+        template: '<multi-booking></multi-booking>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["long-term.meta-title", "long-term.meta-description"])
+                .then(function (translations) {
+                  ngMeta.setTitle(translations["long-term.meta-title"]);
+                  ngMeta.setTag("description", translations["long-term.meta-description"]);
+                  ngMeta.setTag("noindex", false);
+                })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        },
+        params: {
+          location: {
+            value: "",
+            squash: true
+          },
+          type: {
+            value: "",
+            squash: true
           }
         }
       });

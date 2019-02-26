@@ -1,31 +1,31 @@
 <md-content class="single-column multi-booking">
-  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/opengraph/lnr_multi_booking.jpg'); background-position: 50% 15%;"
+  <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/multibooking/lnr_{{multiBooking.type}}.jpg'); background-position: 50% 15%;"
     layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">{{ 'multi-booking.title' | translate }}</h1>
+      <h1 class="md-display-1" translate="multi-booking.title"></h1>
     </div>
   </div>
 
   <div class="content" layout-padding>
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'multi-booking.header' | translate }}</h2>
-      <p class="md-subhead">{{ 'multi-booking.subheader' | translate }}</p>
+      <h2 class="md-headline" translate="{{multiBooking.type}}.header"></h2>
+      <p class="md-subhead" translate="{{multiBooking.type}}.subheader"></p>
     </div>
 
     <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center none" layout-padding>
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <p class="md-subhead lnr-center">1. {{ 'multi-booking.how-to.step-1-title' | translate }}</p>
-        <p class="lnr-center">{{ 'multi-booking.how-to.step-1-content' | translate }}</p>
+        <p class="md-subhead lnr-center" translate="{{multiBooking.type}}.how-to.step-1-title"></p>
+        <p class="lnr-center" translate="{{multiBooking.type}}.how-to.step-1-content"></p>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-align="none center" layout-margin>
-        <p class="md-subhead lnr-center">2. {{ 'multi-booking.how-to.step-2-title' | translate }}</p>
-        <p class="lnr-center">{{ 'multi-booking.how-to.step-2-content' | translate }}</p>
+        <p class="md-subhead lnr-center" translate="{{multiBooking.type}}.how-to.step-2-title"></p>
+        <p class="lnr-center" translate="{{multiBooking.type}}.how-to.step-2-content"></p>
       </div>
 
       <div flex-gt-xs="33" layout="column" layout-wrap layout-align="none center" layout-margin>
-        <p class="md-subhead lnr-center">3. {{ 'multi-booking.how-to.step-3-title' | translate }}</p>
-        <p class="lnr-center">{{ 'multi-booking.how-to.step-3-content' | translate }}</p>
+        <p class="md-subhead lnr-center" translate="{{multiBooking.type}}.how-to.step-3-title"></p>
+        <p class="lnr-center" translate="{{multiBooking.type}}.how-to.step-3-content"></p>
       </div>
     </div>
 

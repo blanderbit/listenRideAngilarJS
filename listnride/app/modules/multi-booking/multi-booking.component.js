@@ -19,9 +19,10 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.categoryValid = categoryValid;
 
         // variables
+        multiBooking.type = $stateParams.type || 'multi-booking';
         multiBooking.START_TIME = '9';
         multiBooking.END_TIME = '18';
-
+        multiBooking.current_day = (new Date()).setHours(0, 0, 0, 0);
         multiBooking.success_request = false;
         multiBooking.form = {
           city: $stateParams.location ? $stateParams.location : '',
@@ -50,7 +51,7 @@ angular.module('multiBooking', []).component('multiBooking', {
 
         // invocations
         multiBooking.disabledDates = [{
-          start_date: (new Date()).setHours(0, 0, 0, 0),
+          start_date: multiBooking.current_day,
           duration: 1
         }];
         bikeOptions.accessoryOptions().then(function (resolve) {
