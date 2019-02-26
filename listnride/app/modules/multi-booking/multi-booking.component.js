@@ -16,6 +16,7 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.categorySubs = categorySubs;
         multiBooking.addInput = addInput;
         multiBooking.removeInput = removeInput;
+        multiBooking.categoryValid = categoryValid;
 
         // variables
         multiBooking.START_TIME = '9';
@@ -77,6 +78,14 @@ angular.module('multiBooking', []).component('multiBooking', {
       function removeInput(index) {
         multiBooking.form.variations.splice(index, 1);
       };
+
+      function categoryValid(){
+        var valid = true;
+        _.forEach(multiBooking.form.variations, function (item) {
+          valid = valid && !!item.category_ids.length;
+        });
+        return valid;
+      }
 
       // tricky function to initialize date-picker close, when we click ng-menu
       function closeDateRange() {
