@@ -109,6 +109,8 @@ angular.module('multiBooking', []).component('multiBooking', {
 
       function beforeSend() {
         groupBikeSizes();
+        // DIRTY_FIX: add one extra day to humanize duration in email
+        multiBooking.form.duration += 1;
         _.forEach(multiBooking.form.variations, function (item) {
           item.category_id = item.category_ids[0];
         });
