@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "choose-bike-size": "Scegli una taglia",
+    "please-choose-bike-count": "Si prega di selezionare il numero di biciclette",
     "status-labels": {
       "variants_available": "Varianti disponibili"
     },
@@ -181,6 +183,23 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "long-term": {
+    "header": "Rental bikes for your long-term stay",
+    "subheader": "listnride offers you a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "how-to": {
+      "step-1-title": "1. Full Service",
+      "step-1-content": "You decide at what location and what period you need which bicycles. Just provide us the details in the following form and we'll get back to you.",
+      "step-2-title": "2. Attractive Packages",
+      "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
+      "step-3-title": "3. Uncomplicated Booking Process",
+      "step-3-content": "Our efficient booking process lasts from the inquiry you made until your payment is processed. You will then receive an invoice with a VAT ID."
+    },
+    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you need and style. Find the right mobility solution for you.",
+    "meta-description": "listnride bike rental, your local expert for bike rental",
+    "opengraph": {
+      "description": "The rental bike that fits you need and style."
+    }
+  },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlino<br>Germania",
     "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefono: +49 (0)30-120870330"
@@ -253,17 +272,20 @@
   },
   "multi-booking": {
     "meta-title": "Prenotazione di gruppo",
+    "opengraph": {
+      "description": "The rental bike that fits you need and style."
+    },
     "no-accessories": "Senza Accessori",
     "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione di gruppo",
     "title": "Prenotazioni di gruppo",
     "header": "Siamo felici di aiutarti con la tua prenotazione di gruppo",
     "subheader": "Lascia che ti supportiamo nel preparare il tuo prossimo viaggio in bicicletta. Forniscici le tue preferenze e noi faremo il resto, così potrai semplicemente goderti il viaggio.",
     "how-to": {
-      "step-1-title": "Cerca e trova",
+      "step-1-title": "1. Cerca e trova",
       "step-1-content": "Preparati prima dei tuoi viaggi, risparmia tempo prezioso per goderti al massimo il tuo tour. Facile e trasparente, ogni giorno in qualsiasi momento.",
-      "step-2-title": "Definisci e richiedi",
+      "step-2-title": "2. Definisci e richiedi",
       "step-2-content": "Facci sapere quali biciclette vorresti affittare e noi faremo il resto. Forniscici i dettagli e ti risponderemo!",
-      "step-3-title": "Accetta l'offerta e prenota online",
+      "step-3-title": "3. Accetta l'offerta e prenota online",
       "step-3-content": "Ti invieremo un preventivo e un link dove potrai prenotare online o fornirci una conferma scritta per la tua prenotazione."
     },
     "your-booking-details": "I dettagli della tua prenotazione",
