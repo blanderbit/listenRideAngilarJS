@@ -3,9 +3,14 @@
 angular.module('multiBooking', []).component('multiBooking', {
   templateUrl: 'app/modules/multi-booking/multi-booking.template.html',
   controllerAs: 'multiBooking',
-  controller: ['$stateParams', 'api', 'bikeOptions', 'notification',
-    function multiBookingController($stateParams, api, bikeOptions, notification) {
+  controller: ['$stateParams', '$translate', 'api', 'bikeOptions', 'ngMeta', 'notification',
+    function multiBookingController($stateParams, $translate, api, bikeOptions, ngMeta, notification) {
       var multiBooking = this;
+      multiBooking.type = $stateParams.type || 'multi-booking';
+
+      ngMeta.setTitle($translate.instant(multiBooking.type + ".meta-title"));
+      ngMeta.setTag("description", $translate.instant(multiBooking.type + ".meta-description"));
+      ngMeta.setTag("og:image", 'https://www.listnride.com/app/assets/ui_images/opengraph/' + multiBooking.type + '.jpg');
 
       multiBooking.$onInit = function () {
         // methods
@@ -19,7 +24,6 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.categoryValid = categoryValid;
 
         // variables
-        multiBooking.type = $stateParams.type || 'multi-booking';
         multiBooking.START_TIME = '9';
         multiBooking.END_TIME = '18';
         multiBooking.current_day = (new Date()).setHours(0, 0, 0, 0);
