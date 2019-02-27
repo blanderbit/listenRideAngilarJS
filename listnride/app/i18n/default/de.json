@@ -188,7 +188,7 @@
   },
   "long-term": {
     "header": "Wähle das passende Leihrad für deinen Langzeit-Aufenthalt",
-    "subheader": "listnride bietet eine große Auswahl an hochwertigen Leihrädern für deinen längeren Aufenthalt. Finde die richtige Mobilitätslösung.",
+    "subheader": "listnride bietet eine große Auswahl an hochwertigen Leihrädern für deinen Langzeit-Aufenthalt. Finde das passende Fahrrad für dich",
     "how-to": {
       "step-1-title": "1. Rundumservice",
       "step-1-content": "Du entscheidest, wo und wann du welche Fahrräder benötigst. Schreib uns deine Wünsche und wir melden uns mit einem Vorschlag.",
@@ -202,7 +202,7 @@
     "opengraph": {
       "description": "Das perfekte Leihrad, zum deinem Stil und Zweck."
     },
-    "title": "Rental bikes for your long-term stay"
+    "title": "Leihfahrräder für deinen längeren Aufenthalt"
   },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlin<br>Deutschland",
