@@ -1,8 +1,8 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
-    "choose-bike-size": "Scegli una taglia",
-    "please-choose-bike-count": "Si prega di selezionare il numero di biciclette",
+    "choose-bike-size": "Scegli la taglia",
+    "please-choose-bike-count": "Seleziona il numero di biciclette",
     "status-labels": {
       "variants_available": "Varianti disponibili"
     },
@@ -184,20 +184,20 @@
     }
   },
   "long-term": {
-    "header": "Rental bikes for your long-term stay",
-    "subheader": "listnride offers you a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "header": "Scegli la tua bici a noleggio per il tuo soggiorno di lunga durata",
+    "subheader": "listnride offre una vasta gamma di biciclette a noleggio di alta qualità per il tuo soggiorno a lungo termine. Trova la giusta soluzione per te.",
     "how-to": {
-      "step-1-title": "1. Full Service",
-      "step-1-content": "You decide at what location and what period you need which bicycles. Just provide us the details in the following form and we'll get back to you.",
-      "step-2-title": "2. Attractive Packages",
-      "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
-      "step-3-title": "3. Uncomplicated Booking Process",
-      "step-3-content": "Our efficient booking process lasts from the inquiry you made until your payment is processed. You will then receive an invoice with a VAT ID."
+      "step-1-title": "1. Servizio completo",
+      "step-1-content": "Sei tu a decidere dove e quando hai bisogno di quali biciclette. Forniscici i dettagli qui sotto e ti risponderemo.",
+      "step-2-title": "2. Pacchetti interessanti",
+      "step-2-content": "Prezzi per biciclette singole o multiple\nUna bicicletta che si adatta alle tue necessità e al tuo stile (eBike, cargo, bambini)\nAccessori appropriati, ad es. Rimorchio per bambini, lucchetto, casco\nAssicurazione contro danni e furto",
+      "step-3-title": "3. Procedura di prenotazione semplice",
+      "step-3-content": "Il nostro efficiente processo di prenotazione parte dalla tua richiesta fino a quando il pagamento non viene elaborato. Verrà fornita una fattura e una conferma di prenotazione."
     },
-    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you need and style. Find the right mobility solution for you.",
-    "meta-description": "listnride bike rental, your local expert for bike rental",
+    "meta-title": "Se stai pianificando un soggiorno a lungo termine, listnride può fornirti una bicicletta a noleggio adatta alle tue esigenze e stile. Trova la giusta soluzione per te",
+    "meta-description": "listnride, il tuo esperto locale per il noleggio di biciclette",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "La bicicletta a noleggio che si adatta alle tue esigenze e stile."
     }
   },
   "imprint": {
@@ -273,7 +273,7 @@
   "multi-booking": {
     "meta-title": "Prenotazione di gruppo",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "La bicicletta a noleggio che si adatta alle tue esigenze e stile."
     },
     "no-accessories": "Senza Accessori",
     "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione di gruppo",

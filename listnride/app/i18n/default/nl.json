@@ -2,7 +2,7 @@
   "shared": {
     "learn-more": "Meer info",
     "choose-bike-size": "Please, pick a bike size",
-    "please-choose-bike-count": "Please pick bike count",
+    "please-choose-bike-count": "Selecteer het aantal fietsen",
     "status-labels": {
       "variants_available": "Varianten beschikbaar"
     },
@@ -182,20 +182,20 @@
     }
   },
   "long-term": {
-    "header": "Rental bikes for your long-term stay",
-    "subheader": "listnride offers you a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "header": "Kies uw huurfiets voor je verblijf",
+    "subheader": "listnride biedt een breed scala aan hoogwaardige huurfietsen voor je langere verblijf. Vind de juiste mobiliteitsoplossing.",
     "how-to": {
       "step-1-title": "1. Full Service",
-      "step-1-content": "You decide at what location and what period you need which bicycles. Just provide us the details in the following form and we'll get back to you.",
-      "step-2-title": "2. Attractive Packages",
-      "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
-      "step-3-title": "3. Uncomplicated Booking Process",
-      "step-3-content": "Our efficient booking process lasts from the inquiry you made until your payment is processed. You will then receive an invoice with a VAT ID."
+      "step-1-content": "Jij bepaalt waar en wanneer je welke fietsen nodig heeft. Geef ons de details door en wij nemen contact met je op.",
+      "step-2-title": "2. Aantrekkelijke Aanbiedingen",
+      "step-2-content": "Pakketprijzen voor enkele of meerdere fietsen\nEen Fiets die past bij jouw behoefte en stijl (eBikes, vracht, kinderen)\nPassende accessoires, b.v. Kindertrailer, slot, helm\nVerzekering tegen schade en diefstal",
+      "step-3-title": "3. Eenvoudige boekingsprocedure",
+      "step-3-content": "Ons efficiënte boekingsproces verloopt vanaf je aanvraag tot de betaling is verwerkt. Een factuur en boekingsbevestiging worden verstrekt."
     },
-    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you need and style. Find the right mobility solution for you.",
-    "meta-description": "listnride bike rental, your local expert for bike rental",
+    "meta-title": "Als je een langer verblijf plant, dan kan listnride u een huurfiets aanbieden die bij u past en stijl biedt. Vind de juiste mobiliteitsoplossing.",
+    "meta-description": "listnride, je lokale expert voor fietshuur",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "De juiste huurfiets in jouw stijl."
     }
   },
   "imprint": {
@@ -271,7 +271,7 @@
   "multi-booking": {
     "meta-title": "Groepsboeking",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "Huur een fiets naar jouw smaak en gebruik."
     },
     "no-accessories": "Geen accessoires",
     "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
