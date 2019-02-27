@@ -11,6 +11,7 @@ angular.module('multiBooking', []).component('multiBooking', {
       ngMeta.setTitle($translate.instant(multiBooking.type + ".meta-title"));
       ngMeta.setTag("description", $translate.instant(multiBooking.type + ".meta-description"));
       ngMeta.setTag("og:image", 'https://www.listnride.com/app/assets/ui_images/opengraph/' + multiBooking.type + '.jpg');
+      ngMeta.setTag("og:description", $translate.instant(multiBooking.type + ".opengraph.description"));
 
       multiBooking.$onInit = function () {
         // methods
