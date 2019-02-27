@@ -2,7 +2,7 @@
   "shared": {
     "learn-more": "Learn More",
     "choose-bike-size": "Please, pick a bike size",
-    "please-choose-bike-count": "Please pick bike count",
+    "please-choose-bike-count": "Select number of bikes ",
     "status-labels": {
       "variants_available": "Variants available"
     },
@@ -187,20 +187,20 @@
     }
   },
   "long-term": {
-    "header": "Rental bikes for your long-term stay",
-    "subheader": "listnride offers you a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "header": "Chose your rental bike for your long-term stay",
+    "subheader": "listnride offers a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
     "how-to": {
       "step-1-title": "1. Full Service",
-      "step-1-content": "You decide at what location and what period you need which bicycles. Just provide us the details in the following form and we'll get back to you.",
+      "step-1-content": "You decide where and when you need which bicycles. Just provide us the details below and we'll get back to you.",
       "step-2-title": "2. Attractive Packages",
       "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
-      "step-3-title": "3. Uncomplicated Booking Process",
-      "step-3-content": "Our efficient booking process lasts from the inquiry you made until your payment is processed. You will then receive an invoice with a VAT ID."
+      "step-3-title": "3. Simple Booking Procedure",
+      "step-3-content": "Our efficient booking process is from the your inquiry until the payment is processed. An Invoice and booking confirmation will be provided. "
     },
-    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you need and style. Find the right mobility solution for you.",
-    "meta-description": "listnride bike rental, your local expert for bike rental",
+    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you needs and style. Find the right mobility solution.",
+    "meta-description": "listnride, your local expert for bike rental",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "The rental bike that fits you needs and style."
     }
   },
   "test": {
@@ -279,7 +279,7 @@
   "multi-booking": {
     "meta-title": "Group booking",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "The rental bike that fits you needs and style."
     },
     "no-accessories": "No accessories",
     "meta-description": "Book your bikes with our group booking form",

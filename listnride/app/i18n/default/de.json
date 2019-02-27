@@ -2,7 +2,7 @@
   "shared": {
     "learn-more": "Mehr erfahren",
     "choose-bike-size": "Please, pick a bike size",
-    "please-choose-bike-count": "Please pick bike count",
+    "please-choose-bike-count": "Wähle die Anzahl der Fahrräder",
     "status-labels": {
       "variants_available": "Varianten verfügbar"
     },
@@ -187,20 +187,20 @@
     }
   },
   "long-term": {
-    "header": "Rental bikes for your long-term stay",
-    "subheader": "listnride offers you a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "header": "Wähle dein Leihrad für deinen längeren Aufenthalt",
+    "subheader": "listnride bietet eine große Auswahl an hochwertigen Leihrädern für deinen längeren Aufenthalt. Finde die richtige Mobilitätslösung.",
     "how-to": {
-      "step-1-title": "1. Full Service",
-      "step-1-content": "You decide at what location and what period you need which bicycles. Just provide us the details in the following form and we'll get back to you.",
-      "step-2-title": "2. Attractive Packages",
-      "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
-      "step-3-title": "3. Uncomplicated Booking Process",
-      "step-3-content": "Our efficient booking process lasts from the inquiry you made until your payment is processed. You will then receive an invoice with a VAT ID."
+      "step-1-title": "1. Rundumservice",
+      "step-1-content": "Du entscheidest, wo und wann du welche Fahrräder benötigst. Geben Sie uns einfach Details unten an und wir melden uns bei dir.",
+      "step-2-title": "2. Attraktive Angebote",
+      "step-2-content": "Pauschalpreise für Einzel- oder Mehrfachräder\nEin Fahrrad, das deinen Bedürfnissen und deinem Stil entspricht (eBikes, Fracht, Kinder)\nGeeignetes Zubehör, z. Kinderanhänger, Schloss, Helm\nVersicherung gegen Schäden und Diebstahl",
+      "step-3-title": "3. Einfaches Buchungsverfahren",
+      "step-3-content": "Unser effizienter Buchungsprozess reicht von deiner Anfrage bis zur Bezahlung. Eine Rechnung und Buchungsbestätigung werden zur Verfügung gestellt."
     },
-    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you need and style. Find the right mobility solution for you.",
-    "meta-description": "listnride bike rental, your local expert for bike rental",
+    "meta-title": "Wenn du einen längeren Aufenthalt planst, kann dir listnride ein Leihrad anbieten, zum deinem Stil und Zweck. Finde die richtige Mobilitätslösung.",
+    "meta-description": "listnride, dein lokaler Experte für Fahrradverleih",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "Das perfekte Leihrad, zum deinem Stil und Zweck."
     }
   },
   "imprint": {
@@ -276,7 +276,7 @@
   "multi-booking": {
     "meta-title": "Gruppenbuchung",
     "opengraph": {
-      "description": "The rental bike that fits you need and style."
+      "description": "Das perfekte Leihrad, zum deinem Stil und Zweck."
     },
     "no-accessories": "Kein Zubehör",
     "meta-description": "Buche deine Räder über unsere Gruppenbuchungs-Funktion",
