@@ -198,7 +198,8 @@
     "meta-description": "listnride, il tuo esperto locale per il noleggio di biciclette",
     "opengraph": {
       "description": "La bicicletta a noleggio che si adatta alle tue esigenze e stile."
-    }
+    },
+    "title": "Rental bikes for your long-term stay"
   },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlino<br>Germania",

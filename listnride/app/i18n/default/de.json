@@ -187,21 +187,22 @@
     }
   },
   "long-term": {
-    "header": "Wähle dein Leihrad für deinen längeren Aufenthalt",
+    "header": "Wähle das passende Leihrad für deinen Langzeit-Aufenthalt",
     "subheader": "listnride bietet eine große Auswahl an hochwertigen Leihrädern für deinen längeren Aufenthalt. Finde die richtige Mobilitätslösung.",
     "how-to": {
       "step-1-title": "1. Rundumservice",
-      "step-1-content": "Du entscheidest, wo und wann du welche Fahrräder benötigst. Geben Sie uns einfach Details unten an und wir melden uns bei dir.",
-      "step-2-title": "2. Attraktive Angebote",
-      "step-2-content": "Pauschalpreise für Einzel- oder Mehrfachräder\nEin Fahrrad, das deinen Bedürfnissen und deinem Stil entspricht (eBikes, Fracht, Kinder)\nGeeignetes Zubehör, z. Kinderanhänger, Schloss, Helm\nVersicherung gegen Schäden und Diebstahl",
+      "step-1-content": "Du entscheidest, wo und wann du welche Fahrräder benötigst. Schreib uns deine Wünsche und wir melden uns mit einem Vorschlag.",
+      "step-2-title": "2. Attraktive Packetangebote",
+      "step-2-content": "Pauschalpreise für Einzel- oder Mehrfachbuchung, Fahrräder, die deinen Anforderungen und Stil entsprechen (eBikes, Cargo-, Kinderräder), passendes Zubehör, z.B. Kinderanhänger, Schloss, Helm, Versicherung gegen Schäden und Diebstahl",
       "step-3-title": "3. Einfaches Buchungsverfahren",
-      "step-3-content": "Unser effizienter Buchungsprozess reicht von deiner Anfrage bis zur Bezahlung. Eine Rechnung und Buchungsbestätigung werden zur Verfügung gestellt."
+      "step-3-content": "Unser effizienter Buchungsprozess reicht von deiner Anfrage bis zur Bezahlung. Wir stellen dazu eine Buchungsbestätigung und Rechnung aus. "
     },
     "meta-title": "Wenn du einen längeren Aufenthalt planst, kann dir listnride ein Leihrad anbieten, zum deinem Stil und Zweck. Finde die richtige Mobilitätslösung.",
     "meta-description": "listnride, dein lokaler Experte für Fahrradverleih",
     "opengraph": {
       "description": "Das perfekte Leihrad, zum deinem Stil und Zweck."
-    }
+    },
+    "title": "Rental bikes for your long-term stay"
   },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlin<br>Deutschland",
