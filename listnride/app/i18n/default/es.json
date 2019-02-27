@@ -201,7 +201,8 @@
     "meta-description": "Listnride, expertos en alquiler de bicicletas.",
     "opengraph": {
       "description": "La bicicleta de alquiler que se adapta a tus necesidades y estilo."
-    }
+    },
+    "title": "Rental bikes for your long-term stay"
   },
   "imprint": {
     "germany-address": "Steinstraße 17 <br>\n10119 Berlín <br>\nAlemania",

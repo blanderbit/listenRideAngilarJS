@@ -187,21 +187,22 @@
     }
   },
   "long-term": {
-    "header": "Chose your rental bike for your long-term stay",
+    "header": "Choose your rental bike for your long-term stay",
     "subheader": "listnride offers a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
     "how-to": {
       "step-1-title": "1. Full Service",
       "step-1-content": "You decide where and when you need which bicycles. Just provide us the details below and we'll get back to you.",
       "step-2-title": "2. Attractive Packages",
-      "step-2-content": "Package prices for single or multiple bikes \nBike that fits your need and style (eBikes, cargo, children's)\nAppropriate accessories, e.g. Child trailer, lock, helmet\nInsurance against damage and theft\n",
+      "step-2-content": "Package prices for single or multiple bikes, \nbikes that fits your need and style (eBikes, cargo, children's), appropriate accessories, e.g. Child trailer, lock, helmet, insurance against damage and theft\n",
       "step-3-title": "3. Simple Booking Procedure",
-      "step-3-content": "Our efficient booking process is from the your inquiry until the payment is processed. An Invoice and booking confirmation will be provided. "
+      "step-3-content": "Our efficient booking process starts from the your inquiry you made until the payment is processed. A booking confirmation and invoice will be provided to you."
     },
     "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you needs and style. Find the right mobility solution.",
     "meta-description": "listnride, your local expert for bike rental",
     "opengraph": {
       "description": "The rental bike that fits you needs and style."
-    }
+    },
+    "title": "Rental bikes for your long-term stay"
   },
   "test": {
     "delete-me": "TEST TEXT"
