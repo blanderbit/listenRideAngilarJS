@@ -30,6 +30,7 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.current_day = (new Date()).setHours(0, 0, 0, 0);
         multiBooking.success_request = false;
         multiBooking.form = {
+          long_term: !!$stateParams.type, //set received long-term value to boolean type
           city: $stateParams.location ? $stateParams.location : '',
           start_date: '',
           start_at: multiBooking.START_TIME,
