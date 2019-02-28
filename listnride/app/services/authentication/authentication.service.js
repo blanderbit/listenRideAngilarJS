@@ -161,7 +161,7 @@ angular.
         SignupDialogController(null, null, null, false, obj);
       };
 
-      var signupFbGlobal = function (fbAccessToken, inviteCode, requestFlow) {
+      var signupFbGlobal = function (fbAccessToken, inviteCode, requestFlow, canBeLogin) {
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -191,7 +191,7 @@ angular.
         }, function (error) {
           // try to login
           loginFbGlobal(fbAccessToken);
-          showSignupError();
+          if (!canBeLogin) showSignupError();
         });
       };
 
@@ -363,7 +363,7 @@ angular.
               $analytics.eventTrack('click', {category: 'Signup', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
               $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
 
-              signupFbGlobal(response.authResponse.accessToken, false, requestFlow)
+              signupFbGlobal(response.authResponse.accessToken, false, requestFlow, true)
 
             }, {scope: 'email'});
           }
