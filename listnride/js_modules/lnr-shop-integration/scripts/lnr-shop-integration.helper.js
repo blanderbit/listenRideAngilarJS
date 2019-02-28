@@ -514,12 +514,9 @@ var lnrHelper = {
         lnrHelper.initUserElement(userId);
         // json response from server
         var response = JSON.parse(request.responseText);
-        lnrConstants.brands = lnrHelper.getBikeBrands(response.rides);
-        lnrConstants.categorys = lnrHelper.getBikeCategories(response.rides);
-        // get cities information from the bikes
-        lnrConstants.cities = lnrHelper.getBikeCities(userId, response.rides);
-        // get sizes information from the bikes
-        lnrConstants.sizes[userId].available = lnrHelper.getBikeSizes(userId, response.rides);
+
+        lnrHelper.setFiltersData(userId, response.rides);
+
         // save rides in lnrConstants
         lnrConstants.rides[userId] = response.rides;
         // render the locations selector
@@ -537,6 +534,12 @@ var lnrHelper = {
     };
     // send request to server
     request.send();
+  },
+  setFiltersData: function (userId, rides) {
+    lnrConstants.brands = lnrHelper.getBikeBrands(rides);
+    lnrConstants.categorys = lnrHelper.getBikeCategories(rides);
+    lnrConstants.cities = lnrHelper.getBikeCities(userId, rides);
+    lnrConstants.sizes[userId].available = lnrHelper.getBikeSizes(userId, rides);
   },
   /**
    * HTML of the bikes
@@ -764,8 +767,8 @@ var lnrHelper = {
     var selectors = '';
     selectors += mdlGridOpen;
     selectors += sizeHTML;
-    selectors += brandHTML;
-    selectors += categoryHTML;
+    if (lnrConstants.brands.length && lnrConstants.brands.length > 1) selectors += brandHTML;
+    if (lnrConstants.categorys.length && lnrConstants.categorys.length > 1) selectors += categoryHTML;
     selectors += shouldRenderLocationSelector ? locationHTML : '';
     selectors += mdlGridClose;
 
