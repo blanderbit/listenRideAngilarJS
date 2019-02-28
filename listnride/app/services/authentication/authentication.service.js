@@ -189,6 +189,8 @@ angular.
             }
           });
         }, function (error) {
+          // try to login
+          loginFbGlobal(fbAccessToken);
           showSignupError();
         });
       };
@@ -352,7 +354,7 @@ angular.
 
       /////////////////
 
-      var connectFb = function(inviteCode, requestFlow) {
+      var connectFb = function(inviteCode, requestFlow, notRepeat) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             loginFbGlobal(response.authResponse.accessToken);
