@@ -354,7 +354,7 @@ angular.
 
       /////////////////
 
-      var connectFb = function(inviteCode, requestFlow, notRepeat) {
+      var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             loginFbGlobal(response.authResponse.accessToken);
