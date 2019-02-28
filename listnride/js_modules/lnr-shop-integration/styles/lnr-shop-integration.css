@@ -569,3 +569,7 @@ md-icon svg {
 .status-labels__item + .status-labels__item {
   margin-left: 3px;
 }
+
+.mdl-grid {
+  align-items: flex-end;
+}

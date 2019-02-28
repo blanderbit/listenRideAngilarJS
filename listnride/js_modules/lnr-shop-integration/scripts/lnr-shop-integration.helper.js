@@ -759,6 +759,19 @@ var lnrHelper = {
       '</div>'
     ].join("");
 
+    // render date selector
+    var dateHTML = [
+      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
+      '<div style="margin-left:8px; margin-right:8px;">',
+      '<label id="' + id + '-lnr-start-date-button">Start Date</label>',
+      '<input style="color:#333; padding: 5px;" type="date" ',
+      'id="' + id + '-lnr-start-date-button" ',
+      'onchange="lnrHelper.onStartDateChange(' + id + ')" ',
+      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></input>',
+      '</div>',
+      '</div>'
+    ].join("");
+
     // close mdl grid
     var mdlGridClose = '</div>';
 
@@ -769,6 +782,7 @@ var lnrHelper = {
     selectors += sizeHTML;
     if (lnrConstants.brands.length && lnrConstants.brands.length > 1) selectors += brandHTML;
     if (lnrConstants.categorys.length && lnrConstants.categorys.length > 1) selectors += categoryHTML;
+    selectors += dateHTML;
     selectors += shouldRenderLocationSelector ? locationHTML : '';
     selectors += mdlGridClose;
 
