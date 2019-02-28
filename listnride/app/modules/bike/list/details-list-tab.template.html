@@ -96,7 +96,7 @@
           <md-button
             hide-xs
             hide-sm
-            class="lnr-details-close md-icon-button md-warn"
+            class="lnr-group-close md-icon-button md-warn"
             ng-if="detailsTab.parent.isListMode"
             ng-click="detailsTab.parent.removeInput($index)">
               <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
@@ -104,7 +104,7 @@
             <a
               hide-gt-sm
               ng-if="detailsTab.parent.isListMode"
-              class="lnr-details-close lnr-link md-warn"
+              class="lnr-group-close lnr-link md-warn"
               ng-click="detailsTab.parent.removeInput($index)">
                 {{ 'shared.remove' | translate }}
             </a>

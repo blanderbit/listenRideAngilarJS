@@ -21,7 +21,7 @@ angular.
 
       var getAccessToken = function (user, isFacebook) {
         var preparedData = isFacebook ? {
-          assertion: user.assertion,
+          assertion: user.facebook_access_token,
           grant_type: 'assertion'
         } : {
           email: user.email,
@@ -105,7 +105,7 @@ angular.
       };
 
       var loginFbGlobal = function (fbAccessToken) {
-        getAccessToken({assertion: fbAccessToken}, 'facebook').then(function (successTokenData) {
+        getAccessToken({facebook_access_token: fbAccessToken}, 'facebook').then(function (successTokenData) {
           setAccessToken(successTokenData);
           api.get('/users/me').then(function (success) {
             setCredentials(success.data);
@@ -114,6 +114,7 @@ angular.
           },
           function(error){
             // check if user need update his password, after security update
+            resetUserInformation();
             if (error.data.errors[0].source.pointer === 'password_change') showChangePasswordAlert();
             notification.show(error, 'error');
           });
@@ -160,7 +161,7 @@ angular.
         SignupDialogController(null, null, null, false, obj);
       };
 
-      var signupFbGlobal = function (fbAccessToken, inviteCode, requestFlow) {
+      var signupFbGlobal = function (fbAccessToken, inviteCode, requestFlow, canBeLogin) {
         var invited = !!inviteCode;
         var user = {
           "user": {
@@ -188,7 +189,9 @@ angular.
             }
           });
         }, function (error) {
-          showSignupError();
+          // try to login
+          loginFbGlobal(fbAccessToken);
+          if (!canBeLogin) showSignupError();
         });
       };
 
@@ -360,7 +363,7 @@ angular.
               $analytics.eventTrack('click', {category: 'Signup', label: requestFlow ? 'Facebook Request Flow' : 'Facebook Standard Flow'});
               $analytics.eventTrack('click', {category: 'Request Bike', label: 'Register Facebook'});
 
-              signupFbGlobal(response.authResponse.accessToken, false, requestFlow)
+              signupFbGlobal(response.authResponse.accessToken, false, requestFlow, true)
 
             }, {scope: 'email'});
           }

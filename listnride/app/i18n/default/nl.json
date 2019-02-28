@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "choose-bike-size": "Please, pick a bike size",
+    "please-choose-bike-count": "Selecteer het aantal fietsen",
     "status-labels": {
       "variants_available": "Varianten beschikbaar"
     },
@@ -95,9 +97,9 @@
     "subtotal": "Subtotaal",
     "lnr-fee": "Servicekosten",
     "total": "Totaal",
-    "from": "uit",
+    "from": "Uit",
     "from2": "vanaf",
-    "to": "tot",
+    "to": "Tot",
     "as": "Als",
     "all": "Alle",
     "cancel": "Afbreken",
@@ -179,6 +181,24 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "long-term": {
+    "header": "Kies uw huurfiets voor je verblijf",
+    "subheader": "listnride biedt een breed scala aan hoogwaardige huurfietsen voor je langere verblijf. Vind de juiste mobiliteitsoplossing.",
+    "how-to": {
+      "step-1-title": "1. Full Service",
+      "step-1-content": "Jij bepaalt waar en wanneer je welke fietsen nodig heeft. Geef ons de details door en wij nemen contact met je op.",
+      "step-2-title": "2. Aantrekkelijke Aanbiedingen",
+      "step-2-content": "Pakketprijzen voor enkele of meerdere fietsen\nEen Fiets die past bij jouw behoefte en stijl (eBikes, vracht, kinderen)\nPassende accessoires, b.v. Kindertrailer, slot, helm\nVerzekering tegen schade en diefstal",
+      "step-3-title": "3. Eenvoudige boekingsprocedure",
+      "step-3-content": "Ons efficiënte boekingsproces verloopt vanaf je aanvraag tot de betaling is verwerkt. Een factuur en boekingsbevestiging worden verstrekt."
+    },
+    "meta-title": "Als je een langer verblijf plant, dan kan listnride u een huurfiets aanbieden die bij u past en stijl biedt. Vind de juiste mobiliteitsoplossing.",
+    "meta-description": "listnride, je lokale expert voor fietshuur",
+    "opengraph": {
+      "description": "De juiste huurfiets in jouw stijl."
+    },
+    "title": "Huurfietsen voor je langdurig verblijf"
+  },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlijn<br>Duitsland",
     "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefoon: +49 (0)30-120870330"
@@ -251,17 +271,20 @@
   },
   "multi-booking": {
     "meta-title": "Groepsboeking",
+    "opengraph": {
+      "description": "Huur een fiets naar jouw smaak en gebruik."
+    },
     "no-accessories": "Geen accessoires",
     "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
     "title": "Groepsboekingen",
     "header": "We helpen u graag met uw groepsboeking",
     "subheader": "Laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
     "how-to": {
-      "step-1-title": "Zoeken & vinden",
+      "step-1-title": "1. Zoeken & vinden",
       "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd en geniet maximaal van de tijd op je vakantiebestemming. Gemakkelijk en transparent, dag en nacht. ",
-      "step-2-title": "Definieren & aanvragen",
+      "step-2-title": "2. Definieren & aanvragen",
       "step-2-content": "Vertel ons welke fietsen je wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met je op!",
-      "step-3-title": "Offerte accepteren & online boeken",
+      "step-3-title": "3. Offerte accepteren & online boeken",
       "step-3-content": "Wij sturen je een offerte met een link waar je online kunt boeken of een schriftelijke bevestiging van je boeking kunt geven.   "
     },
     "your-booking-details": "Uw boekingsgegevens",

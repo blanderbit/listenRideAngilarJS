@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "choose-bike-size": "Please, pick a bike size",
+    "please-choose-bike-count": "Wähle die Anzahl der Fahrräder",
     "status-labels": {
       "variants_available": "Varianten verfügbar"
     },
@@ -96,9 +98,9 @@
     "subtotal": "Zwischensumme",
     "lnr-fee": "Servicegebühren",
     "total": "Insgesamt",
-    "from": "von",
+    "from": "Von",
     "from2": "ab",
-    "to": "bis",
+    "to": "Bis",
     "as": "Als",
     "all": "Alle",
     "cancel": "Abbrechen",
@@ -184,6 +186,24 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "long-term": {
+    "header": "Wähle das passende Leihrad für deinen Langzeit-Aufenthalt",
+    "subheader": "listnride bietet eine große Auswahl an hochwertigen Leihrädern für deinen Langzeit-Aufenthalt. Finde das passende Fahrrad für dich",
+    "how-to": {
+      "step-1-title": "1. Rundumservice",
+      "step-1-content": "Du entscheidest, wo und wann du welche Fahrräder benötigst. Schreib uns deine Wünsche und wir melden uns mit einem Vorschlag.",
+      "step-2-title": "2. Attraktive Packetangebote",
+      "step-2-content": "Pauschalpreise für Einzel- oder Mehrfachbuchung, Fahrräder, die deinen Anforderungen und Stil entsprechen (eBikes, Cargo-, Kinderräder), passendes Zubehör, z.B. Kinderanhänger, Schloss, Helm, Versicherung gegen Schäden und Diebstahl",
+      "step-3-title": "3. Einfaches Buchungsverfahren",
+      "step-3-content": "Unser effizienter Buchungsprozess reicht von deiner Anfrage bis zur Bezahlung. Wir stellen dazu eine Buchungsbestätigung und Rechnung aus. "
+    },
+    "meta-title": "Wenn du einen längeren Aufenthalt planst, kann dir listnride ein Leihrad anbieten, zum deinem Stil und Zweck. Finde die richtige Mobilitätslösung.",
+    "meta-description": "listnride, dein lokaler Experte für Fahrradverleih",
+    "opengraph": {
+      "description": "Das perfekte Leihrad, zum deinem Stil und Zweck."
+    },
+    "title": "Leihfahrräder für deinen Langzeit-Aufenthalt"
+  },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlin<br>Deutschland",
     "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefon: +49 (0)30-120870330"
@@ -256,17 +276,20 @@
   },
   "multi-booking": {
     "meta-title": "Gruppenbuchung",
+    "opengraph": {
+      "description": "Das perfekte Leihrad, zum deinem Stil und Zweck."
+    },
     "no-accessories": "Kein Zubehör",
     "meta-description": "Buche deine Räder über unsere Gruppenbuchungs-Funktion",
     "title": "Gruppenbuchungen",
     "header": "Wir helfen dir gern bei deiner Gruppenbuchung",
     "subheader": "Wir übernehmen für dich die Buchung für deine nächste Radtour. Sag uns einfach, was duch suchst und für wann. Wir machen den Rest. So kannst du dich einfach nur auf die Tour konzentrieren.",
     "how-to": {
-      "step-1-title": "Suchen & Finden",
+      "step-1-title": "1. Suchen & Finden",
       "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Einfach, transparent, jederzeit.",
-      "step-2-title": "Suchen & Anfragen",
+      "step-2-title": "2. Suchen & Anfragen",
       "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach, was du suchst und wir werden uns mit ein paar Vorschlägen bei dir melden.",
-      "step-3-title": "Angebot annehmen & online buchen",
+      "step-3-title": "3. Angebot annehmen & online buchen",
       "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung."
     },
     "your-booking-details": "Deine Buchungsdetails",
