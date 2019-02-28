@@ -27,7 +27,7 @@ function notificationController($mdToast, $translate) {
 
       if (type === 'error' && response.data && response.data.errors && response.data.errors.length) {
         // TODO: Add multiply errors
-        return  showToast(response.data.errors[0].detail)
+        return showToast(response.data.errors[0].detail)
       } else if (response.status != -1) {
         responseText = 'shared.notifications.'+ response.status
       } else {
