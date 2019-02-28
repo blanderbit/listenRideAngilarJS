@@ -35,14 +35,21 @@
     alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
 
   <md-card-title layout="row">
-    <md-icon
+    <div
       ng-if="::listingCard.category"
-      class="lnr-icn-lrg md-color-foreground"
-      md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg">
-    </md-icon>
+      flex="15"
+      layout="row">
+      <md-icon
+        class="lnr-icn-lrg md-color-foreground"
+        md-svg-src="app/assets/ui_icons/biketype_{{ ::listingCard.category | limitTo: 1 }}.svg">
+      </md-icon>
+    </div>
 
     <md-card-title-text
-      flex="65"
+      flex="70"
+      flex-gt-xs="60"
+      flex-gt-sm="50"
+      flex-gt-md="55"
       ng-click="listingCard.view(listingCard.bikeId)"
       class="lnr-ml lnr-bike-title"
       layout="column"
@@ -53,7 +60,7 @@
       <span>{{ ::listingCard.name }}</span>
     </md-card-title-text>
 
-    <div layout="column" layout-align="space-around center" flex="none">
+    <div layout="column" layout-align="space-around center" class="ml-auto">
       <span class="md-headline">{{ ::listingCard.price | number }}€</span>
       <span>{{ 'shared.per-day' | translate }}</span>
     </div>
@@ -106,7 +113,7 @@
     <md-button
       md-no-ink
       flex
-      class="md-icon-button"
+      class="md-icon-button lnr-md-no-focused"
       ng-if="!listingCard.bike.is_cluster"
       ng-click="listingCard.duplicate(listingCard.bike, $event)">
       <md-tooltip>{{'listings.duplicate.duplicate' | translate}}</md-tooltip>

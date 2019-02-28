@@ -441,9 +441,10 @@
     },
     "in-velo-veritas": {
       "meta-title": "In Velo Veritas - Rent a bike with listnride",
+      "description": "What: <b>In Velo Veritas</b> | When: <b>June 16, 2019</b>  | Where:<b> Poysdorf, Austria</b>",
       "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country.",
-      "title": "Rent a vintage road bike for the In Velo Veritas",
-      "text": "The legendary  <a href=\"//inveloveritas.at\">In Velo Veritas</a> happens this year the 7th time at the 16 June 2019 in Poysdorf. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
+      "title": "Rent a classic road bike for In Velo Veritas",
+      "text": "The legendary  <a target=\"_blank\" href=\"//inveloveritas.at\">In Velo Veritas</a> happens this year the 7th time at the 16 June 2019 in Poysdorf. For those, who want to participate but need a guideline-matching bicycle, we collected some suiting bikes of our community-members to save your day. Just rent it! Bike enthusiasts like you are offering the different bikes below. If you can’t participate, have more vintage bicycles, or just want want to meet like-minded people, you can share your bike on our platform with others! Become a part of our growing community and make some extra money with your passion!"
     },
     "velothon-bikerental": {
       "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
@@ -1196,7 +1197,7 @@
     "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!",
     "title": "Bike sharing without the hassle",
     "header": "listnride helps you get into gear",
-    "subheader": "Renting (out) a bicycle on our bike sharing platform is as easy as meeting up for coffee:",
+    "subheader": "Renting out a bicycle on our bike sharing platform is as easy as meeting up for coffee:",
     "lister-section": {
       "header": "How to list a bike",
       "step-1-title": "List a bike",

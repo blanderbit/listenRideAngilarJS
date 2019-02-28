@@ -76,7 +76,7 @@ var lnrConstants = {
     },
     'de': {
       'statuses': {
-        'variants_available': 'Varianten verfügbar'
+        'variants_available': 'Varianten verf&uuml;gbar'
       }
     },
     'nl': {

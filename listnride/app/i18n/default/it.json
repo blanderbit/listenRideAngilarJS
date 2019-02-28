@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "choose-bike-size": "Scegli la taglia",
+    "please-choose-bike-count": "Seleziona il numero di biciclette",
     "status-labels": {
       "variants_available": "Varianti disponibili"
     },
@@ -95,9 +97,9 @@
     "subtotal": "totale parziale",
     "lnr-fee": "Costo del servizio",
     "total": "Totale",
-    "from": "da",
+    "from": "Da",
     "from2": "da",
-    "to": "a",
+    "to": "A",
     "as": "Come",
     "all": "Tutti",
     "cancel": "Cancellare",
@@ -181,6 +183,24 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "long-term": {
+    "header": "Scegli la tua bici a noleggio per il tuo soggiorno di lunga durata",
+    "subheader": "listnride offre una vasta gamma di biciclette a noleggio di alta qualità per il tuo soggiorno a lungo termine. Trova la giusta soluzione per te.",
+    "how-to": {
+      "step-1-title": "1. Servizio completo",
+      "step-1-content": "Sei tu a decidere dove e quando hai bisogno di quali biciclette. Forniscici i dettagli qui sotto e ti risponderemo.",
+      "step-2-title": "2. Pacchetti interessanti",
+      "step-2-content": "Prezzi per biciclette singole o multiple\nUna bicicletta che si adatta alle tue necessità e al tuo stile (eBike, cargo, bambini)\nAccessori appropriati, ad es. Rimorchio per bambini, lucchetto, casco\nAssicurazione contro danni e furto",
+      "step-3-title": "3. Procedura di prenotazione semplice",
+      "step-3-content": "Il nostro efficiente processo di prenotazione parte dalla tua richiesta fino a quando il pagamento non viene elaborato. Verrà fornita una fattura e una conferma di prenotazione."
+    },
+    "meta-title": "Se stai pianificando un soggiorno a lungo termine, listnride può fornirti una bicicletta a noleggio adatta alle tue esigenze e stile. Trova la giusta soluzione per te",
+    "meta-description": "listnride, il tuo esperto locale per il noleggio di biciclette",
+    "opengraph": {
+      "description": "La bicicletta a noleggio che si adatta alle tue esigenze e stile."
+    },
+    "title": "Noleggio biciclette per il tuo soggiorno "
+  },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlino<br>Germania",
     "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nTelefono: +49 (0)30-120870330"
@@ -253,17 +273,20 @@
   },
   "multi-booking": {
     "meta-title": "Prenotazione di gruppo",
+    "opengraph": {
+      "description": "La bicicletta a noleggio che si adatta alle tue esigenze e stile."
+    },
     "no-accessories": "Senza Accessori",
     "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione di gruppo",
     "title": "Prenotazioni di gruppo",
     "header": "Siamo felici di aiutarti con la tua prenotazione di gruppo",
     "subheader": "Lascia che ti supportiamo nel preparare il tuo prossimo viaggio in bicicletta. Forniscici le tue preferenze e noi faremo il resto, così potrai semplicemente goderti il viaggio.",
     "how-to": {
-      "step-1-title": "Cerca e trova",
+      "step-1-title": "1. Cerca e trova",
       "step-1-content": "Preparati prima dei tuoi viaggi, risparmia tempo prezioso per goderti al massimo il tuo tour. Facile e trasparente, ogni giorno in qualsiasi momento.",
-      "step-2-title": "Definisci e richiedi",
+      "step-2-title": "2. Definisci e richiedi",
       "step-2-content": "Facci sapere quali biciclette vorresti affittare e noi faremo il resto. Forniscici i dettagli e ti risponderemo!",
-      "step-3-title": "Accetta l'offerta e prenota online",
+      "step-3-title": "3. Accetta l'offerta e prenota online",
       "step-3-content": "Ti invieremo un preventivo e un link dove potrai prenotare online o fornirci una conferma scritta per la tua prenotazione."
     },
     "your-booking-details": "I dettagli della tua prenotazione",

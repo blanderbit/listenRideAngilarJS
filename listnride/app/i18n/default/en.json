@@ -1,6 +1,8 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "choose-bike-size": "Please, pick a bike size",
+    "please-choose-bike-count": "Select number of bikes ",
     "status-labels": {
       "variants_available": "Variants available"
     },
@@ -96,9 +98,9 @@
     "subtotal": "subtotal",
     "lnr-fee": "Service fee",
     "total": "Total",
-    "from": "from",
+    "from": "From",
     "from2": "from",
-    "to": "to",
+    "to": "To",
     "as": "As",
     "all": "All",
     "cancel": "Cancel",
@@ -184,6 +186,24 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "long-term": {
+    "header": "Choose your rental bike for your long-term stay",
+    "subheader": "listnride offers a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "how-to": {
+      "step-1-title": "1. Full Service",
+      "step-1-content": "You decide where and when you need which bicycles. Just provide us the details below and we'll get back to you.",
+      "step-2-title": "2. Attractive Packages",
+      "step-2-content": "Package prices for single or multiple bikes, \nbikes that fits your need and style (eBikes, cargo, children's), appropriate accessories, e.g. Child trailer, lock, helmet, insurance against damage and theft\n",
+      "step-3-title": "3. Simple Booking Procedure",
+      "step-3-content": "Our efficient booking process starts from the your inquiry you made until the payment is processed. A booking confirmation and invoice will be provided to you."
+    },
+    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you needs and style. Find the right mobility solution.",
+    "meta-description": "listnride, your local expert for bike rental",
+    "opengraph": {
+      "description": "The rental bike that fits you needs and style."
+    },
+    "title": "Rental bikes for your long-term stay"
+  },
   "test": {
     "delete-me": "TEST TEXT"
   },
@@ -259,17 +279,20 @@
   },
   "multi-booking": {
     "meta-title": "Group booking",
+    "opengraph": {
+      "description": "The rental bike that fits you needs and style."
+    },
     "no-accessories": "No accessories",
     "meta-description": "Book your bikes with our group booking form",
     "title": "Group bookings",
     "header": "We are happy to help you with your group booking",
     "subheader": "Let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
     "how-to": {
-      "step-1-title": "Search & find",
+      "step-1-title": "1. Search & find",
       "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
-      "step-2-title": "Define & request",
+      "step-2-title": "1. Define & request",
       "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
-      "step-3-title": "Accept offer & book online",
+      "step-3-title": "3. Accept offer & book online",
       "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. "
     },
     "your-booking-details": "Your booking details",
