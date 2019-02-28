@@ -114,6 +114,7 @@ angular.
           },
           function(error){
             // check if user need update his password, after security update
+            resetUserInformation();
             if (error.data.errors[0].source.pointer === 'password_change') showChangePasswordAlert();
             notification.show(error, 'error');
           });
