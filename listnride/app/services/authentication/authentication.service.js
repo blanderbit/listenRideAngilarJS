@@ -189,6 +189,8 @@ angular.
             }
           });
         }, function (error) {
+          // try to login
+          loginFbGlobal(fbAccessToken);
           showSignupError();
         });
       };
