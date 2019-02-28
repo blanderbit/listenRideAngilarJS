@@ -695,6 +695,10 @@ md-tooltip .md-content {
   margin-top: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 /* PADDINGS */
 /* PADDINGS::SET */
 
