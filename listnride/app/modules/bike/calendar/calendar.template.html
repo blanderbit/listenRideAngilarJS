@@ -174,12 +174,11 @@
       <md-select
         ng-model="calendar.pickedBikeSize"
         placeholder="{{ 'shared.pick-size' | translate}}"
-        ng-disabled="!calendar.isDateValid()"
       >
         <md-option
           ng-repeat="option in calendar.bikeClusterSizes"
           value="{{option.size}}"
-          ng-disabled="option.notAvailable"
+          ng-disabled="option.notAvailable || !calendar.isDateValid()"
         >
           {{ option.name }}
           <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
