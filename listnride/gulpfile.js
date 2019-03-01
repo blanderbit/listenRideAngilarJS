@@ -127,6 +127,8 @@ scope = postcss(function (css) {
         rule.selectors = rule.selectors.map(function (selector) {
             if (selector.trim().toLowerCase() === 'body') {
                 return scopeSelector;
+            } else if (selector.trim() === 'from' || selector.trim() === 'to' || !isNaN(+selector[0])) {
+                return selector;
             } else {
                 return scopeSelector + ' ' + selector;
             }

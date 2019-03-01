@@ -24,6 +24,14 @@ var lnrConstants = {
     "staging": "https://listnride-staging.herokuapp.com/v2/users/",
     "production": "https://api.listnride.com/v2/users/"
   },
+  routes: {
+    "staging": {
+      "unavailableBikes": "https://listnride-staging.herokuapp.com/v2/rides/unavailable?"
+    },
+    "production": {
+      "unavailableBikes": "https://api.listnride.com/v2/rides/unavailable?"
+    }
+  },
   // root url for svg files
   svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
   // local, staging and production styles
