@@ -730,8 +730,8 @@
       });
 
       $stateProvider.state({
-        name: 'longTerm?location',
-        url: '/multi-booking/{type}?location',
+        name: 'longTerm',
+        url: '/long-term?location',
         template: '<multi-booking></multi-booking>',
         resolve: {
           data: function ($translate, ngMeta) {
@@ -752,7 +752,7 @@
             squash: true
           },
           type: {
-            value: "",
+            value: "long-term",
             squash: true
           }
         }
