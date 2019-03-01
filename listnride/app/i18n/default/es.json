@@ -16,7 +16,7 @@
       "credit-card": "Tarjeta de crédito",
       "paypal-account": "Cuenta de Paypal"
     },
-    "change": "Change",
+    "change": "Cambiar",
     "local-business": "Tienda de bicicletas ",
     "list": "List",
     "map": "Mapa",
@@ -98,9 +98,9 @@
     "subtotal": "subtotal",
     "lnr-fee": "Cuota de servicio",
     "total": "Total",
-    "from": "De",
+    "from": "de",
     "from2": "de",
-    "to": "A",
+    "to": "a",
     "as": "Como",
     "all": "Todos",
     "cancel": "Cancelar",
@@ -213,6 +213,10 @@
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
       "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
       "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+    },
+    "cyclingworld": {
+      "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
+      "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
     },
     "black-friday": {
       "banner": {

@@ -202,7 +202,7 @@
     "opengraph": {
       "description": "Das perfekte Leihrad, zum deinem Stil und Zweck."
     },
-    "title": "Leihfahrräder für deinen Langzeit-Aufenthalt"
+    "title": "Leihfahrräder für deinen längeren Aufenthalt"
   },
   "imprint": {
     "germany-address": "Steinstraße 17<br>10119 Berlin<br>Deutschland",
@@ -213,6 +213,10 @@
       "description": "Was: <b>Berlin Triathlon</b> | Wo: <b>Berlin</b> | Wann: <b>2. Juni 2019</b>",
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon 2019 | listnride",
       "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 einfach online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
+    },
+    "cyclingworld": {
+      "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
+      "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
     },
     "black-friday": {
       "banner": {
