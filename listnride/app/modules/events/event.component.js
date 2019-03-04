@@ -3,13 +3,16 @@
 angular.module('event', []).component('event', {
   templateUrl: 'app/modules/events/event.template.html',
   controllerAs: 'event',
-  controller: ['api', '$state', '$stateParams', '$translatePartialLoader', 'bikeOptions', 'notification',
-    function EventController(api, $state, $stateParams, $tpl, bikeOptions, notification) {
+  controller: ['api', '$state', '$stateParams', '$translate', 'ngMeta', '$translatePartialLoader', 'bikeOptions', 'notification',
+    function EventController(api, $state, $stateParams, $translate, ngMeta, $tpl, bikeOptions, notification) {
       var event = this;
       $tpl.addPart('static');
+      event.name = $stateParams.event_name;
+      ngMeta.setTitle($translate.instant("events." + event.name + ".meta-title"));
+      ngMeta.setTag("description", $translate.instant("events." + event.name + ".meta-description"));
+      ngMeta.setTag("og:image", "app/assets/ui_images/events/" + event.name + "_og.jpg");
 
       event.$onInit = function() {
-        event.name = $stateParams.event_name;
         event.object = {
           'berlin-triathlon': getRequestUrl('30', 'Berlin', '', '2019-06-02'),
           'berlin-triathlon-xl': getRequestUrl('30,31', 'Berlin', '', '2019-06-23'),
@@ -23,7 +26,8 @@ angular.module('event', []).component('event', {
           'velorace-dresden': getRequestUrl('30', 'Dresden', '', '2019-08-11'),
           'lardita-arezzo': getRequestUrl('30', 'Arezzo, Tuscany', '', '2019-03-24'),
           'granfondo-via-del-sale': getRequestUrl('30', 'Cesenatico', '', '2019-05-05'),
-          'giro-sardegna': getRequestUrl('30', 'Cagliari', '', '2019-04-21')
+          'giro-sardegna': getRequestUrl('30', 'Cagliari', '', '2019-04-21'),
+          'cyclingworld': getRequestUrl('43', 'Düsseldorf', '', '2019-03-24')
 
           // CUSTOM DESIGN AND OLD PAGES
 
@@ -82,7 +86,6 @@ angular.module('event', []).component('event', {
         });
         return '/rides?' + queryArray.join('&');
       }
-
       function getEvents() {
         api.get(event.path).then(
           function (response) {
