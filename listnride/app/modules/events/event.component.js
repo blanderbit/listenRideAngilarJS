@@ -42,7 +42,6 @@ angular.module('event', []).component('event', {
           // 'mcbw'                   : '/users/1886',
           // 'constance-spin'         : '/bikes/1998',
           // 'velothon-coffeespin'    : '/users/1998', -> coffeespin
-          // 'cyclingworld'           : '/users/1998', -> cwd.template
           // 'pushnpost'              : '/users/1998',
           // 'kuchenundraketen'       : '/users/1998'
         };
