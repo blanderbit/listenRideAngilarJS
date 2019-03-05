@@ -1189,6 +1189,10 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
+    "merge-title": "Are you sure you want to merge {{listings.checkedBikes.length}} bikes",
+    "unmerge-title": "Are you sure you want to unmerge {{listings.bike.rides_count}} bikes?",
+    "merge-yes": "Yes",
+    "merge-no": "No, rather not",
     "merge": "samenvoegen",
     "unmerge": "Ontkoppel fietsen",
     "no-bikes": "Je hebt nog geen fietsen online geplaatst.",

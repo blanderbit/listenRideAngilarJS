@@ -1193,6 +1193,10 @@
   },
   "listings": {
     "my-bikes": "Le mie biciclette",
+    "merge-title": "Are you sure you want to merge {{listings.checkedBikes.length}} bikes",
+    "unmerge-title": "Are you sure you want to unmerge {{listings.bike.rides_count}} bikes?",
+    "merge-yes": "Yes",
+    "merge-no": "No, rather not",
     "merge": "Raggruppare",
     "unmerge": "Unmerge bikes",
     "no-bikes": "Non hai ancora registrato nessuna delle tue biciclette",
