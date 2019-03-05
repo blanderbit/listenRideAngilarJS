@@ -891,10 +891,10 @@ var lnrHelper = {
     // in particular order
     var selectors = '';
     selectors += mdlGridOpen;
+    selectors += dateHTML;
     selectors += sizeHTML;
     if (lnrConstants.brands.length && lnrConstants.brands.length > 1) selectors += brandHTML;
     if (lnrConstants.categorys.length && lnrConstants.categorys.length > 1) selectors += categoryHTML;
-    selectors += dateHTML;
     selectors += shouldRenderLocationSelector ? locationHTML : '';
     selectors += mdlGridClose;
 
