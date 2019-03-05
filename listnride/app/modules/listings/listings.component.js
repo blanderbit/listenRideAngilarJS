@@ -45,10 +45,8 @@ angular.module('listings', []).component('listings', {
         listings.changePage = changePage;
         listings.isPaginationInRange = isPaginationInRange;
         listings.canMerge = canMerge;
-        listings.mergeBikesToCluster = mergeBikesToCluster;
         listings.canDeactivateMulti = canDeactivateMulti;
         listings.deactivateMulti = deactivateMulti;
-        listings.unmerge = unmerge;
 
         listings.helper = {
           // local method to be called on duplicate success
@@ -336,6 +334,58 @@ angular.module('listings', []).component('listings', {
 
         };
 
+        var mergeController = function () {
+          var mergeBikeDialog = this;
+          //listings.checkedBikes.length - TODO add to translation
+          // cancel dialog
+          mergeBikeDialog.hide = function () {
+            $mdDialog.hide();
+          };
+          // merge bikes after confirmation
+          mergeBikeDialog.mergeBike = function () {
+            if (listings.isClusterChecked()) {
+              var idx = existsInObject(true, listings.checkedBikes, 'is_cluster');
+              var clusterBikeArray = listings.checkedBikes.splice(idx, 1);
+              return mergeBikesToExistingCluster(clusterBikeArray[0]);
+            }
+
+            var data = JSON.stringify({ "cluster": {
+              "ride_ids": _.map(listings.checkedBikes, 'id')
+            }
+            });
+            api.post("/clusters", data).then(
+                function (response) {
+                  notification.show(response, null, 'toasts.cluster-merged');
+                  listings.checkedBikes.length = 0;
+                  listings.getBikes();
+                },
+                function (error) {
+                  notification.show(error, 'error');
+                }
+            );
+            $mdDialog.hide();
+          };
+        };
+
+        var unmergeController = function (bike) {
+          //bike.rides_count - TODO add to translation
+          var unmergeBikeDialog = this;
+          // cancel dialog
+          unmergeBikeDialog.hide = function () {
+            $mdDialog.hide();
+          };
+          // unmerge bikes after confirmation
+          unmergeBikeDialog.unmergeBike = function () {
+            api.put("/clusters/" + bike.cluster_id + '/unmerge').then(function (response) {
+              listings.getBikes();
+              notification.show(response, null, 'toasts.cluster-unmerged');
+            }, function (error) {
+              notification.show(error, 'error');
+            });
+            $mdDialog.hide();
+          };
+        };
+
       // END OF CHILD CONTROLLERS
 
       // search functionality in header of My Bikes (List View)
@@ -462,6 +512,40 @@ angular.module('listings', []).component('listings', {
         });
       };
 
+      listings.mergeBikesToCluster = function(bike, event) {
+        $mdDialog.show({
+          controller: mergeController,
+          controllerAs: 'mergeBikeDialog',
+          templateUrl: 'app/modules/shared/listing-card/merge-bike-dialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true,
+          locals: {
+            bike: bike
+          }
+        });
+      }
+
+      listings.unmergeCluster = function (bike, event) {
+        $mdDialog.show({
+          controller: unmergeController,
+          controllerAs: 'unmergeBikeDialog',
+          templateUrl: 'app/modules/shared/listing-card/unmerge-bike-dialog.template.html',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true,
+          locals: {
+            bike: bike
+          }
+        });
+      }
+
       // deactivate a bike
       // used only in List View
       // Tile View has its own implementation
@@ -560,29 +644,6 @@ angular.module('listings', []).component('listings', {
           _.filter(listings.checkedBikes, function(o) { return o.is_cluster; }).length <= 1
       }
 
-      function mergeBikesToCluster() {
-        if (listings.isClusterChecked()) {
-          var idx = existsInObject(true, listings.checkedBikes, 'is_cluster');
-          var clusterBikeArray = listings.checkedBikes.splice(idx, 1);
-          return mergeBikesToExistingCluster(clusterBikeArray[0]);
-        }
-
-        var data = JSON.stringify({ "cluster": {
-            "ride_ids": _.map(listings.checkedBikes, 'id')
-          }
-        });
-        api.post("/clusters", data).then(
-          function (response) {
-            notification.show(response, null, 'toasts.cluster-merged');
-            listings.checkedBikes.length = 0;
-            listings.getBikes();
-          },
-          function (error) {
-            notification.show(error, 'error');
-          }
-        );
-      }
-
       function mergeBikesToExistingCluster(clusterBike) {
         var data = JSON.stringify({
           "cluster": {
@@ -607,16 +668,6 @@ angular.module('listings', []).component('listings', {
       function deactivateMulti() {
         // api.update
       }
-
-      function unmerge (bike) {
-        api.put("/clusters/" + bike.cluster_id + '/unmerge').then(function (response) {
-          listings.getBikes();
-          notification.show(response, null, 'toasts.cluster-unmerged');
-        }, function (error) {
-          notification.show(error, 'error');
-        })
-      }
-
     }
   ]
 });
