@@ -75,6 +75,7 @@ angular.module('listnride', [
   'votec-integration',
   'whyteIntegration',
   'feltIntegration',
+  'unimokeIntegration',
   /* EVENTS_PAGE */
   'event',
   'capeArgus',

@@ -1490,6 +1490,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'unimoke',
+        url: '/brands/unimoke',
+        template: '<unimoke></unimoke>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.unimoke.meta-title", "meta.brand-integration.unimoke.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.unimoke.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.unimoke.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* CITY_PAGES */
       /* ------------------------------------ */
