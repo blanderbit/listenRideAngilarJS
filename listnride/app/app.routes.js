@@ -1694,7 +1694,17 @@
         ]
       });
 
-
+      $stateProvider.state({
+        name: 'cyclingworld',
+        url: '/cyclingworld',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'cyclingworld'
+            })
+          }
+        ]
+      });
     }
   ]);
 })();
