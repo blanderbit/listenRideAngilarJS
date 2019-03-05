@@ -336,7 +336,6 @@ angular.module('listings', []).component('listings', {
 
         var mergeController = function () {
           var mergeBikeDialog = this;
-          //listings.checkedBikes.length - TODO add to translation
           // cancel dialog
           mergeBikeDialog.hide = function () {
             $mdDialog.hide();
@@ -368,7 +367,6 @@ angular.module('listings', []).component('listings', {
         };
 
         var unmergeController = function (bike) {
-          //bike.rides_count - TODO add to translation
           var unmergeBikeDialog = this;
           // cancel dialog
           unmergeBikeDialog.hide = function () {
