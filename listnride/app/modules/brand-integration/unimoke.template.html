@@ -79,8 +79,31 @@
     </div>
 
     <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h1 class="md-headline">{{ 'brand-integration.unimoke.find-out-more.title' | translate }}</h1>
-      <h2 class="md-subhead" translate="brand-integration.unimoke.find-out-more.description"></h2>
+      <h1 class="md-headline">{{ 'brand-integration.unimoke.find-out-more' | translate }}</h1>
+      <h2 class="md-subhead" translate="brand-integration.unimoke.order-online"></h2>
+    </div>
+    <div class="md-body-1" layout="column" layout-gt-sm="row" layout-align="center none" layout-align-gt-sm="space-between start"
+      layout-padding layout-wrap>
+      <!-- LEFT COLUMN -->
+      <div class="lnr-sm-center lnr-sm-no-vertical-space" flex-gt-sm="45" layout="column" layout-margin>
+        <div ng-repeat="f in unimoke.faqs[1] track by $index">
+          <h3 class="md-body-2 lnr-clickable" ng-click="unimoke['faq-l'+$index] = !unimoke['faq-l'+$index]" translate="{{f.question}}"></h3>
+          <div ng-show="unimoke['faq-l'+$index]">
+            <p translate="{{f.answer}}"></p>
+          </div>
+        </div>
+      </div>
+      <!-- END LEFT COLUMN -->
+      <!-- RIGHT COLUMN -->
+      <div class="lnr-sm-center lnr-sm-no-vertical-space" flex-gt-sm="45" layout="column" layout-margin>
+        <div ng-repeat="f in unimoke.faqs[0] track by $index">
+          <h3 class="md-body-2 lnr-clickable" ng-click="unimoke['faq-r'+$index] = !unimoke['faq-r'+$index]" translate="{{f.question}}"></h3>
+          <div ng-show="unimoke['faq-r'+$index]">
+            <p translate="{{f.answer}}"></p>
+          </div>
+        </div>
+      </div>
+      <!-- END RIGHT COLUMN -->
     </div>
 
     <div class="lnr-mh-x2"></div>

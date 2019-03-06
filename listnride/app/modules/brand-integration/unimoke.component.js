@@ -14,7 +14,7 @@ angular.module('unimokeIntegration', []).component('unimoke', {
 
       unimoke.$onInit = function () {
         // METHODS
-        // unimoke.splitFaq = splitFaq;
+        unimoke.splitFaq = splitFaq;
         unimoke.getBikes = getBikes;
 
         // hero slider
@@ -22,6 +22,32 @@ angular.module('unimokeIntegration', []).component('unimoke', {
           'app/assets/ui_images/brand-integration/unimoke/lnr_unimoke_hero_image_01.jpg',
           'app/assets/ui_images/brand-integration/unimoke/lnr_unimoke_hero_image_02.jpg',
           'app/assets/ui_images/brand-integration/unimoke/lnr_unimoke_hero_image_03.jpg',
+        ];
+
+        unimoke.faqs = [{
+            question: 'brand-integration.unimoke.faq-question-1',
+            answer: 'brand-integration.unimoke.faq-answer-1',
+          },
+          {
+            question: 'brand-integration.unimoke.faq-question-2',
+            answer: 'brand-integration.unimoke.faq-answer-2',
+          },
+          {
+            question: 'brand-integration.unimoke.faq-question-3',
+            answer: 'brand-integration.unimoke.faq-answer-3',
+          },
+          {
+            question: 'brand-integration.unimoke.faq-question-4',
+            answer: 'brand-integration.unimoke.faq-answer-4',
+          },
+          {
+            question: 'brand-integration.unimoke.faq-question-5',
+            answer: 'brand-integration.unimoke.faq-answer-5',
+          },
+          {
+            question: 'brand-integration.unimoke.faq-question-6',
+            answer: 'brand-integration.unimoke.faq-answer-6',
+          }
         ];
 
         // GROUPED BIKES
@@ -32,7 +58,7 @@ angular.module('unimokeIntegration', []).component('unimoke', {
         unimoke.isEmpty = _.isEmpty;
 
         // invocations
-        // unimoke.splitFaq();
+        unimoke.splitFaq();
         unimoke.getBikes();
       }
 
