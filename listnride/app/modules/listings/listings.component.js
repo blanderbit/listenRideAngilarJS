@@ -345,8 +345,8 @@ angular.module('listings', []).component('listings', {
           // merge bikes after confirmation
           mergeBikeDialog.mergeBike = function () {
             if (listings.isClusterChecked()) {
-              var idx = existsInObject(true, listings.checkedBikes, 'is_cluster');
-              var clusterBikeArray = listings.checkedBikes.splice(idx, 1);
+              var id_exists = existsInObject(true, listings.checkedBikes, 'is_cluster');
+              var clusterBikeArray = listings.checkedBikes.splice(id_exists, 1);
               return mergeBikesToExistingCluster(clusterBikeArray[0]);
             }
 
@@ -629,8 +629,8 @@ angular.module('listings', []).component('listings', {
       listings.checkBikeTile = function($event, bike) {
         $event.preventDefault();
         $event.stopPropagation();
-        var idx = existsInObject(bike.id, listings.checkedBikes, 'id');
-        idx > -1 ? listings.checkedBikes.splice(idx, 1) : listings.checkedBikes.push(bike);
+        var id_exists = existsInObject(bike.id, listings.checkedBikes, 'id');
+        id_exists > -1 ? listings.checkedBikes.splice(id_exists, 1) : listings.checkedBikes.push(bike);
       };
 
       listings.isCheckMode = function() {
