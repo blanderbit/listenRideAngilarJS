@@ -1197,8 +1197,8 @@
   },
   "listings": {
     "my-bikes": "Le mie biciclette",
-    "merge-title": "Sei sicuro di voler unire {{bikes_count}}biciclette",
-    "unmerge-title": "Sei sicuro di voler dividere {{bikes_count}}biciclette?",
+    "merge-title": "Sei sicuro di voler unire {{bikes_count}} biciclette",
+    "unmerge-title": "Sei sicuro di voler dividere {{bikes_count}} biciclette?",
     "merge-yes": "Sì",
     "merge-no": "No",
     "merge": "Raggruppare",
