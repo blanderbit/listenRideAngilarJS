@@ -1193,7 +1193,7 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
-    "merge-title": "Are you sure you want to merge {{listings.checkedBikes.length}} bikes",
+    "merge-title": "Are you sure you want to merge {{bikes_count}} bikes",
     "unmerge-title": "Are you sure you want to unmerge {{bikes_count}} bikes?",
     "merge-yes": "Yes",
     "merge-no": "No, rather not",
