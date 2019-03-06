@@ -1203,7 +1203,7 @@
   },
   "listings": {
     "my-bikes": "Meine Räder",
-    "merge-title": "Are you sure you want to merge {{bikes_count}} bikes",
+    "merge-title": "Möchtest Du wirklich {{bikes_count}}Bikes in einem Cluster zusammenfassen?",
     "unmerge-title": "Are you sure you want to unmerge {{bikes_count}} bikes?",
     "merge-yes": "Yes",
     "merge-no": "No, rather not",
