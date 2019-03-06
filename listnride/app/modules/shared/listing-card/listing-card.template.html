@@ -26,13 +26,14 @@
       class="lnr-bike-card__merge-checkbox md-checkbox__hide-label lnr-md-no-focused"
     >
     </md-checkbox>
-  </div>
 
-  <img
-    class="md-card-image"
-    ng-click="listingCard.view(listingCard.bikeId)"
-    ng-src="{{ ::listingCard.imageUrl }}"
-    alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
+    <div class="lnr-card-overlay" ng-click="listingCard.view(listingCard.bikeId)">
+      <img
+        class="md-card-image lnr-block"
+        ng-src="{{ ::listingCard.imageUrl }}"
+        alt="{{ ::listingCard.brand }} - {{ ::listingCard.name }}">
+    </div>
+  </div>
 
   <md-card-title layout="row">
     <div

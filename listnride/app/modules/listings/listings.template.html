@@ -128,7 +128,7 @@
         on-bike-tile-check="listings.checkBikeTile"
         is-checked="listings.isCheckedBike"
         is-selectable="true"
-        unmerge="listings.unmerge">
+        unmerge="listings.unmergeCluster">
       </list-view>
     </div>
     <div ng-if="listings.bikes !== undefined && listings.bikes.length == 0"  class="lnr-no-rental">
@@ -172,7 +172,7 @@
           on-bike-tile-check="listings.checkBikeTile"
           is-checked="listings.isCheckedBike(bike.id)"
           is-selectable="true"
-          unmerge="listings.unmerge">
+          unmerge="listings.unmergeCluster">
         </listing-card>
       </div>
     </div>

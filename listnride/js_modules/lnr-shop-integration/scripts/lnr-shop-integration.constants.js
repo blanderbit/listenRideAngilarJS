@@ -24,6 +24,14 @@ var lnrConstants = {
     "staging": "https://listnride-staging.herokuapp.com/v2/users/",
     "production": "https://api.listnride.com/v2/users/"
   },
+  routes: {
+    "staging": {
+      "unavailableBikes": "https://listnride-staging.herokuapp.com/v2/rides/unavailable?"
+    },
+    "production": {
+      "unavailableBikes": "https://api.listnride.com/v2/rides/unavailable?"
+    }
+  },
   // root url for svg files
   svgUrlRoot: 'https://s3.eu-central-1.amazonaws.com/listnride-cdn/icons/biketype_',
   // local, staging and production styles
@@ -69,30 +77,40 @@ var lnrConstants = {
     }
   },
   translations: {
-    'en': {
-      'statuses': {
-        'variants_available': 'Variants available'
-      }
+    "en": {
+      "statuses": {
+        "variants_available": "Variants available"
+      },
+      "all-brands": "All Brands",
+      "all-categories": "All categories"
     },
-    'de': {
-      'statuses': {
-        'variants_available': 'Varianten verf&uuml;gbar'
-      }
+    "de": {
+      "statuses": {
+        "variants_available": "Varianten verf&uuml;gbar"
+      },
+      "all-brands": "Alle Marken",
+      "all-categories": "All categories"
     },
-    'nl': {
-      'statuses': {
-        'variants_available': 'Varianten beschikbaar'
-      }
+    "nl": {
+      "statuses": {
+        "variants_available": "Varianten beschikbaar"
+      },
+      "all-brands": "Alle merken",
+      "all-categories": "All categories"
     },
-    'it': {
-      'statuses': {
-        'variants_available': 'Varianti disponibili'
-      }
+    "it": {
+      "statuses": {
+        "variants_available": "Varianti disponibili"
+      },
+      "all-brands": "Tutte le marche",
+      "all-categories": "All categories"
     },
-    'es': {
-      'statuses': {
-        'variants_available': 'Variantes disponibles'
-      }
+    "es": {
+      "statuses": {
+        "variants_available": "Variantes disponibles"
+      },
+      "all-brands": "Todas las marcas",
+      "all-categories": "All categories"
     },
   },
   // map of the categories for en, de and nl languages
@@ -233,6 +251,10 @@ var lnrConstants = {
   rides: {},
   userId: {},
   userLang: {},
+  defaultFilterLabel: {
+    'brand': 'all-brands',
+    'category': 'all-categories'
+  },
   // style for disabling a dropdown element
   disabledButtonCss: {
     "pointer-events": "none",

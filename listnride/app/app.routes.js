@@ -794,13 +794,13 @@
         url: '/events/{event_name}',
         template: '<event></event>',
         resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
+          data: function ($translate, ngMeta, $stateParams) {
+            $translate(["events." + $stateParams.event_name + ".meta-title", "events." + $stateParams.event_name + ".meta-description"])
                 .then(function (translations) {
-                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
+                  ngMeta.setTitle(translations["events." + $stateParams.event_name + ".meta-title"]);
+                  ngMeta.setTag("description", translations["events." + $stateParams.event_name + ".meta-description"]);
                   ngMeta.setTag("noindex", false);
-                })
+                });
           }
         },
         meta: {
@@ -1090,33 +1090,6 @@
         controller: ['$scope', '$state',
           function ($scope, $state) {
             $state.go('coffeespin');
-          }
-        ],
-      });
-
-      $stateProvider.state({
-        name: 'cwd',
-        url: '/events/cyclingworld',
-        templateUrl: 'app/modules/events/cwd/cwd.template.html',
-        controller: 'StaticController',
-        resolve: {
-          data: function ($translate, ngMeta) {
-            $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
-                .then(function (translations) {
-                  ngMeta.setTitle(translations["meta.events.common.meta-title"]);
-                  ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
-                  ngMeta.setTag("noindex", false);
-                })
-          }
-        },
-        meta: {
-          disableUpdate: true
-        }
-      }).state('cwdOld', {
-        url: '/cyclingworld',
-        controller: ['$scope', '$state',
-          function ($scope, $state) {
-            $state.go('cwd');
           }
         ],
       });
@@ -1517,6 +1490,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'unimoke',
+        url: '/brands/unimoke',
+        template: '<unimoke></unimoke>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.unimoke.meta-title", "meta.brand-integration.unimoke.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.unimoke.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.unimoke.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* CITY_PAGES */
       /* ------------------------------------ */
@@ -1721,7 +1713,17 @@
         ]
       });
 
-
+      $stateProvider.state({
+        name: 'cyclingworld',
+        url: '/cyclingworld',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': 'cyclingworld'
+            })
+          }
+        ]
+      });
     }
   ]);
 })();

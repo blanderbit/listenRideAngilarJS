@@ -97,9 +97,9 @@
     "subtotal": "totale parziale",
     "lnr-fee": "Costo del servizio",
     "total": "Totale",
-    "from": "Da",
+    "from": "da",
     "from2": "da",
-    "to": "A",
+    "to": "a",
     "as": "Come",
     "all": "Tutti",
     "cancel": "Cancellare",
@@ -210,6 +210,10 @@
       "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>2 Giugno 2019</b>",
       "meta-title": "Noleggia una bici da strada per il Triathlon di Berlino 2019 | listnride",
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2019. Scegli la bici perfetta per te."
+    },
+    "cyclingworld": {
+      "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
+      "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
     },
     "black-friday": {
       "banner": {
@@ -408,6 +412,10 @@
       "ampler": {
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+      },
+      "unimoke": {
+        "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",
+        "meta-description": "Test ride an UNI Moke E-City Bike today! The E-City Bikes from UNI Moke are available to test and rent on listnride all across Germany!"
       },
       "whyte": {
         "meta-title": "Rent and test ride Whyte bikes in Berlin and Zell am Ziller (AT)| listnride",
@@ -1189,6 +1197,10 @@
   },
   "listings": {
     "my-bikes": "Le mie biciclette",
+    "merge-title": "Sei sicuro di voler unire {{bikes_count}} biciclette",
+    "unmerge-title": "Sei sicuro di voler dividere {{bikes_count}} biciclette?",
+    "merge-yes": "Sì",
+    "merge-no": "No",
     "merge": "Raggruppare",
     "unmerge": "Unmerge bikes",
     "no-bikes": "Non hai ancora registrato nessuna delle tue biciclette",

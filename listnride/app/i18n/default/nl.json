@@ -209,6 +209,10 @@
       "meta-title": "Huur een racefiets voor Berlin Triathlon 2019 | listnride",
       "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past."
     },
+    "cyclingworld": {
+      "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
+      "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
+    },
     "black-friday": {
       "banner": {
         "title": "Black Friday",
@@ -406,6 +410,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
+      },
+      "unimoke": {
+        "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",
+        "meta-description": "Test ride an UNI Moke E-City Bike today! The E-City Bikes from UNI Moke are available to test and rent on listnride all across Germany!"
       },
       "whyte": {
         "meta-title": "Rent and test ride Whyte bikes in Berlin en Zell am Ziller (AT)| listnride",
@@ -1185,6 +1193,10 @@
   },
   "listings": {
     "my-bikes": "Mijn fietsen",
+    "merge-title": "Weet je het zeker dat je {{bikes_count}} fietsen in 1 cluster wilt samenvoegen?",
+    "unmerge-title": "Are you sure you want to unmerge {{bikes_count}} bikes?",
+    "merge-yes": "Yes",
+    "merge-no": "No, rather not",
     "merge": "samenvoegen",
     "unmerge": "Ontkoppel fietsen",
     "no-bikes": "Je hebt nog geen fietsen online geplaatst.",

@@ -295,7 +295,7 @@
         "question-2": "¿Cuál es la cobertura de seguro máxima de mi bicicleta?",
         "answer-2": "Cada bicicleta está asegurada automáticamente hasta 1.000€ y puede ser asegurada por usted hasta un máximo de 5.000€.\n<br>\nEl pago en caso de pérdida o daño se basa en el valor real de la bicicleta. El precio está determinado individualmente caso por caso, por el\n<a href=\"https://www.gothaer.de\" target=\"_blank\" >Seguro de Gothaer</a>.\n<br>\nRecuerde que al determinar el valor del seguro, serán los usuarios los que pagarán el precio por la tarifa del seguro. Es decir cuanto más asegurada este su bicicleta mayor será el costo del seguro para los usuarios. ",
         "question-3": "¿Qué tengo que hacer si ocurre un reclamo de seguro?",
-        "answer-3": "Si alguna vez se encuentra en una situación en la que su bicicleta se daña o es robada durante el alquiler, póngase en contacto con\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n directamente:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster responderá a su solicitud de manera rápida y eficaz ."
+        "answer-3": "Si alguna vez se encuentra en una situación en la que su bicicleta se daña o es robada durante el alquiler, póngase en contacto con\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n directamente:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>0800 - 0753336\n</ul>\n<br>\nEl personal de Hepster responderá a su solicitud de manera rápida y eficaz ."
       },
       "rider": {
         "description": "Ofrecemos dos paquetes de seguros por cada bicicleta que alquila a través de listnride: El\n<b>seguro básico </b>\nestá incluido en cada alquiler, y el\n<b>seguro premium </b>\nque es opcional y extiende la cobertura del seguro por beneficios adicionales.\n<br>\nSu bicicleta y usted estarán siempre protegidos. ¡Puedes comenzar a pedalear con la conciencia tranquila!",
@@ -317,7 +317,7 @@
         "question-6": "¿Cómo finalizo el seguro después de que termina el alquiler de mi bicicleta?",
         "answer-6": "Con cada alquiler de bicicletas, recibirá un certificado de seguro individual. Esto es\n<b>solo </b>\nválido para la reserva específica y para el\n<b>período de tiempo</b>\n seleccionado por ti, termina automáticamente al finalizar el alquiler de la bicicleta.\n<p>\nTe enviaremos el certificado por correo electrónico o puedes descargarlo de nuestro sitio si lo deseas. ",
         "question-7": "¿A quién debo contactar si necesito reclamar mi seguro?",
-        "answer-7": "Por supuesto, ¡esperamos que esto nunca suceda!\n<br>\n El seguro es ofrecido por nuestro socio de seguros en línea\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n y cubierto por\n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Seguro</a> \ndado que usted es el titular de la póliza de Hepster, lo mejor es ponerse en contacto con Hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nEl personal de Hepster lo apoyará rápida y eficazmente."
+        "answer-7": "Por supuesto, ¡esperamos que esto nunca suceda!\n<br>\n El seguro es ofrecido por nuestro socio de seguros en línea\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n y cubierto por\n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Seguro</a> \ndado que usted es el titular de la póliza de Hepster, lo mejor es ponerse en contacto con Hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n<li>0800 - 0753336\n</ul>\n<br>\nEl personal de Hepster lo apoyará rápida y eficazmente."
       },
       "docs": {
         "tabname": "Todos los documentos"
@@ -374,6 +374,11 @@
   "events": {
     "rapha-super-cross": {
       "text": "Rapha Super Cross regresa al Parque Olímpico de Múnich los días 29 y 30 de octubre para la tercera edición de lo que se ha convertido rápidamente en un legendario festival de ciclocross. Si deseas participar pero no tiene la bici correcta, puedes alquilar una a través de listnride. Hay entusiastas de la bicicleta como tú que ofrecen las bicicletas que puedes ver a continuación. Puedes solicitar y reservar los recorridos antes del evento y recoger la bici según lo acordado con el propietario. Los dueños de las bicis también pueden ofrecer en alquiler las bicis que no usen y así ganar algo de dinero mientras conocen a personas interesantes que participan en el evento. ¡Conviértete en parte de nuestra creciente comunidad!"
+    },
+    "cyclingworld": {
+      "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
+      "description": "What: <b>Gravel Ride CyclingWorld</b> | When: <b> March 24, 2019 </b>| Where: <b>Dusseldorf, Germany</b>",
+      "text": "Gemeinsam mit unserem Partner  LISTNRIDE und Partnermarken 8Bar, Salsa und Veloheld laden wir im Rahmen der Cyclingworld Düsseldorf zur Gravelrunde ins Düsseldorfer Umland. <br>Euch stehen zwei Strecken zur Verfügung, eine flache Runde von 50 Kilometern, die der tollen Tour vom letzten Jahr entspricht, oder eine Runde von 70 Kilometern, die über den Rhein führt und ein paar kleine Anstiege und ruppige Abschnitte rund um Ratingen beinhaltet. Ihr startet in kleinen Teams von 2 bis 6 Personen, navigiert wird per gpx-Datei, die alle Starter/innen im Vorfeld der Tour per Mail bekommen. Die Wahl, welche Tour ihr fahrt, könnt ihr Morgens vorm Start treffen.Nach der Rückkehr zum Areal Böhler erwarten wir euch vor der Cyclingworld mit ein paar Snacks und Drinks, um die Kalorienspeicher wieder aufzufüllen. Ihr könnt im Anschluss an die Tour euer Rad auf einem bewachten Parkplatz abgeben, um stressfrei über die Messe zu bummeln. Eine Eintrittskarte zur Cyclingworld ist im Starterpaket enthalten, genau wie ein paar weitere Kleinigkeiten.LISTNRIDE werden euch über ihre Community Testräder unterschiedlicher Marken anbieten, falls ihr also ein Gravelbike von 8Bar oder anderen fahren möchtet, bucht bitte im Vorfeld dein Wunschrad unter <a href=\"www.listnride.com/events/cyclingworld\" target=\"_blank\">www.listnride.com/events/cyclingworld </a>Wir werden euch via Mail über Updates und alles Wissenswerte zu den Ausfahrten informieren. Wir freuen uns auf eine spannende Cyclingworld und ein paar tolle Stunden mit euch auf und neben dem Rad."
     },
     "black-friday": {
       "title": "Black Friday",
@@ -450,7 +455,7 @@
       "meta-title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
       "meta-description": "¡Participa en la Velothon de Berlín 2017! ¡Alquila una bici de carretera en la comunidad para compartir bicis de listnride y únete a la diversión!",
       "title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
-      "text": "¡Podemos hacer que te enganches! Junto con la comunidad listnride, ofrecemos bicis de carretera adecuadas que puedes alquilar fácilmente el tiempo que quieras. Elige una de las bicicletas siguientes, solicítala para el período requerido y recógela cuando llegue el momento. Tan fácil como eso.\n<br>\n¿No puedes participar? Ayuda a alguien que lo necesite <a href=\"/#/listing-a-bike\">Anuncia tu bici</a>y gana dinero extra.\nJunto a las bicis que puedes alquilar a continuación, te invitamos a dar un paseo el día anterior para socializar y aclimatarnos. Únete a nosotros,  el ritmo será llevadero y te invitamos a comer después. <a href=\"http://en.listnride.com/velothon-coffeespin\">Más información e inscripción </a>.",
+      "text": "¡Podemos hacer que te enganches! Junto con la comunidad listnride, ofrecemos bicis de carretera adecuadas que puedes alquilar fácilmente el tiempo que quieras. Elige una de las bicicletas siguientes, solicítala para el período requerido y recógela cuando llegue el momento. Tan fácil como eso.\n<br>\n¿No puedes participar? Ayuda a alguien que lo necesite <a href=\"/#/listing-a-bike\">Anuncia tu bici</a>y gana dinero extra.\nJunto a las bicis que puedes alquilar a continuación, te invitamos a dar un paseo el día anterior para socializar y aclimatarnos. Únete a nosotros,  el ritmo será llevadero y te invitamos a comer después. Más información e inscripción .",
       "coffeespin": {
         "meta-title": "listnride en la Velothon Berlin",
         "title": "¡Prepárate para la Velothon!",
@@ -482,14 +487,14 @@
       "meta-title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
       "meta-description": "Alquile con facilidad la bicicleta de carretera perfecta para la Clásica de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi.",
       "title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
-      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Hazte con un descuento de 10€  introduciendo este código de promoción: CYCLASSICS2018 en la configuración de tu cuenta antes de reservar. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
+      "text": "¿Necesitas una bici de carretera para la Cyclassics de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos bicis de carretera que puedes alquilar por el período que quieras. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Hazte con un descuento de 10€  introduciendo este código de promoción: CYCLASSICS2018 en la configuración de tu cuenta antes de reservar. ¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
       "description": "Dónde: <b>Hamburgo </b>| Qué: <b>carrera de bicis de carretera de 60, 100 o 160 km </b>| cuándo: <b>19.08.2017</b>"
     },
     "triathlon-hamburg": {
       "meta-title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
       "meta-description": "Alquila con facilidad la bici de carretera perfecta para el Triatlón de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi.",
       "title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
-      "text": "¿Necesitas una bici de carretera para el Triatlón de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos las bicis de carretera ideales. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Asegúrate un descuento de 10 € introduciendo el código de promoción TriathlonHH2018 en la configuración de tu cuenta antes de reservar. <br><br>¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
+      "text": "¿Necesitas una bici de carretera para el Triatlón de Hamburgo? ¡Podemos engancharte! Junto con la comunidad listnride, ofrecemos las bicis de carretera ideales. Basta con que elijas una de las bicis de más abajo, la solicites para el período que necesites y la recojas cuando llegue el momento. Tan fácil como eso. <br><br>Asegúrate un descuento de 10 € introduciendo el código de promoción TriathlonHH2018 en la configuración de tu cuenta antes de reservar. ¿No puedes participar? Ayuda a alguien que lo necesite. ¡Anuncia tu bici y gana dinero extra!",
       "description": "Dónde: <b>Hamburgo</b> | Qué: <b> Triatlón- Distancia Olímpica y Sprint</b> | Cuándo: <b>14-15 de julio de 2018 </b>"
     },
     "riderman-rothaus": {
@@ -692,7 +697,7 @@
       },
       "meta-title": "Miete und Teste die veloheld Räder in München und Dresden",
       "find-out-more": {
-        "description": "Order your new <a0>veloheld bike online</a0> and get your listnride rental reimbursed."
+        "description": "Order your new<a href=\"//veloheld.de\" target=\"_blank\">veloheld bike online</a>.\">and get your listnride rental reimbursed"
       }
     },
     "leaos": {
@@ -749,6 +754,32 @@
       "faq-answer-8": "Sí. Puedes devolver la bici durante los 14 días siguientes a la recepción. La bici deberá estar en su estado original para obtener un reembolso completo. Ten en cuenta que tendrás que asumir el coste de la devolución.",
       "faq-question-9": "¿Las bicis son de uso legal en las calles?",
       "faq-answer-9": "Sí. Nuestras bicis pueden alcanzar una velocidad máxima de 35 km/h, pero por defecto están limitadas según la Norma EN15194 a la velocidad máxima de 25 km/h. Esto significa que el motor sólo te ayudará hasta 25 km/h. Puedes cambiar esta configuración desde la aplicación del teléfono inteligente."
+    },
+    "unimoke": {
+      "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",
+      "meta-descr": "Test ride an UNI Moke E-City Bike today! The E-City Bikes from UNI Moke are available to test and rent on listnride all across Germany!",
+      "title": "Try it. Love it. Ride it.",
+      "description": "Test ride a UNI Moke bike today! The E-City Bikes from UNI Moke are available to rent on listnride all across Germany!",
+      "item1-title": "ALL WEATHER",
+      "item1-description": "Our electric bikes are built to withstand even the worst of urban roads and will allow you to drive safely even in the snow!",
+      "item2-title": "TRUE CARGO",
+      "item2-description": "Transport whatever heavy load you need! UNI Moke is built as a true cargo bike – heavy riders, family trips or trailers? No Problem!",
+      "item3-title": "FULLY ELECTRIC",
+      "item3-description": "Enjoy the sensation of silent, powerful, vibration-free green electric mobility while riding in style with our vintage moped inspired e-bikes",
+      "find-out-more": "Rent and test ride UNI Moke bikes all across Germany",
+      "order-online": "Rent a UNI Moke or UNI Swing and test our vintage design, all-purpose electric bike for fun family and work. Made in Berlin by Urban Drivestyle. Test ride a bike, that is going to change your lifestyle!",
+      "faq-question-1": "WHAT ABOUT WARRANTY ON THE UNI MOKE SWING?",
+      "faq-answer-1": "All UNI Moke Swing e-bikes have a warranty of 3 years on frame and fork. On electronics like battery and motor, a 1-year warranty. Wearing parts, like brakes, tires, and others do not have any warranty!<br>The warranty does not apply on resold UNI Moke Swing bikes and is not transferable in case of a re-sale – You have to be the first and original owner!<br>Any modifications on the frame or the electrical components of the bikes lead to cancelation of warranty. This includes the use of a thumb throttle which may affect the lifetime of the battery, motor, and controller since the bicycle is designed to be a pedal assisted e-bike.",
+      "faq-question-2": "WHICH MOTOR OPTIONS ARE YOU OFFERING FOR THE UNI MOKE SWING?",
+      "faq-answer-2": "The UNI Moke Swing electric bicycle comes in two power versions of the BAFANG G06 hub motor – 250W (street legal in Europe) and 750W (USA).<br>The 250W version is a street legal bicycle/pedelec in Europe and doesn't require registration, insurance or license. The 750W version is only street legal in the United States and a handful of other countries due to their different e-bike laws & restrictions compared to European law. This version is not allowed in some European countries (including Germany) on public grounds without s-pedelec registration/license and compulsory insurance and might therefore only be usable on private property.",
+      "faq-question-3": "HOW FAR CAN I RIDE WITH ONE FULLY CHARGED BATTERY?",
+      "faq-answer-3": "UNI Moke's Swing's battery is built to last up to 50-60km (31-37 miles) on average, riding on flat ground, using pedal assist in medium speed mode and without extra passengers or payload. The range always depends on factors like rider weight, surface type, and incline, wind, and others. To fully recharge the battery it takes 3 - 4 hours with the standard recharging device. The speed charger cuts recharging time in half.",
+      "faq-question-4": "CAN I STILL RIDE UNI MOKE SWING IF THE BATTERY RUNS OUT OF POWER?",
+      "faq-answer-4": "Of course! If you run out of power, you're able to ride UNI Moke Swing like a regular bicycle. The UNI Moke Swing electric bike will always bring you back home safely, even without pedal assistance. The bike's mechanical bicycle gearing enormously simplifies riding without electrical support.",
+      "faq-question-5": "CAN THE BATTERY BE TAKEN OUT OF THE BIKE?",
+      "faq-answer-5": "Yes, it can. Merely push the key into unlock position and remove it, flip up the seat and pull the battery out. This allows you to take the battery inside for recharging at home or work. We recommend always to keep your battery in average temperature surroundings to prevent any affection by low temperatures!",
+      "faq-question-6": "DOES UNI MOKE SWING COME IN DIFFERENT SIZES?",
+      "faq-answer-6": "The UNI Moke electric bicycle is designed to fit it all! Like on a moped, the seating position is variable due to the long saddle while the steering bar is intended to be adjustable in height and position."
     },
     "brompton": {
       "meta-title": "Alquila una bici Brompton con listnride",

@@ -1787,32 +1787,51 @@ listing-card md-card.lnr-bike-card {
   position: relative;
 }
 
-bike-card md-card img.md-card-image,
-listing-card md-card img.md-card-image {
+bike-card md-card img.md-card-image {
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
 }
 
+listing-card md-card img.md-card-image {
+  display: block;
+  width: 100%;
+}
+
 /* TODO: Check opacity hover for Mobile/touch devices */
 .lnr-bike-card__merge-checkbox {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 14px;
+  left: 14px;
   background: #fff;
   opacity: 0;
   transition: opacity .3s;
   z-index: 2;
 }
 
-.lnr-bike-card:hover .lnr-bike-card__merge-checkbox {
-  opacity: 0.6;
+.lnr-card-overlay {
+  position: relative;
 }
 
-.lnr-bike-card .lnr-bike-card__merge-checkbox:hover,
-.lnr-bike-card .lnr-bike-card__merge-checkbox.md-checked,
-.lnr-bike-card.lnr-check-mode .lnr-bike-card__merge-checkbox {
+.lnr-card-overlay:before {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 10%,  rgba(0, 0, 0, 0) 60%);
+  z-index: 1;
+  border-radius: 4px;
+  transition: opacity .3s ease;
+}
+
+.lnr-bike-card.lnr-check-mode .lnr-bike-card__merge-checkbox,
+.lnr-bike-card.lnr-check-mode .lnr-card-overlay:before,
+.lnr-bike-card:hover .lnr-bike-card__merge-checkbox,
+.lnr-bike-card:hover .lnr-card-overlay:before {
   opacity: 1;
 }
 

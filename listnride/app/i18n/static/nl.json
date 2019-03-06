@@ -295,7 +295,7 @@
         "question-2": "Wat is de maximale verzekeringsdekking voor mijn fiets?",
         "answer-2": "Elke fiets is automatisch verzekerd tot 1.000€ en de dekking kan door u worden verhoogd tot een maximum van 5.000€.\n<br>\nDe hoogte van de uitbetaling in geval van schade is gebaseerd op de daadwerkelijke waarde van de fiets. Deze waarde wordt bepaald door de\n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer-verzekering</a>\n op individuele basis.\n<br>\nOnthoud bij het bepalen van de verzekeringswaarde dat huurders een verzekeringspremie betalen, waarvan het bedrag afhangt van de door u gekozen verzekeringswaarde. Dit betekent; hoe hoger u de fiets verzekert, hoe hoger de verzekeringspremie voor de huurder.",
         "question-3": "Wat moet ik doen als een verzekeringsclaim is?",
-        "answer-3": "Mocht u zich ooit in een situatie bevinden waarin uw fiets tijdens een huurperiode is beschadigd of gestolen, neem dan contact op met\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n direct:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhet personeel van de staf zal uw verzoek snel en vakkundig beantwoorden."
+        "answer-3": "Mocht u zich ooit in een situatie bevinden waarin uw fiets tijdens een huurperiode is beschadigd of gestolen, neem dan contact op met\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n direct:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li> 0800 - 0753336\n</ul>\n<br>\nhet personeel van de staf zal uw verzoek snel en vakkundig beantwoorden."
       },
       "rider": {
         "description": "Wij bieden twee verzekeringspakketten aan voor elke fiets die je huurt via lisntride: De \n<b>De Basisverzekering</b> \nis inbegrepen in elke fietshuur in Duitsland en Oostenrijk, de \n<b>Premium verzekering</b>\n is optioneel en breidt de verzekering uit met extra dekking.\n<br>\nJij en Jouw fiets zijn altijd optimaal verzekerd en dus staat niets jouw rit meer in de weg!",
@@ -317,7 +317,7 @@
         "question-6": "Hoe beëindig ik de verzekering nadat mijn fietshuur eindigt?",
         "answer-6": "Bij elke bevestigde fietshuur ontvangt u een individueel verzekeringscertificaat. Deze is\n<b>alleen </b>\ngeldig voor de desbetreffende boeking en voor de\n<b>tijdsperiode </b>\n door jou geselecteerd. De verzekering eindigt automatisch.\n<p>\nU kunt het certificaat rechtstreeks downloaden en per e-mail ontvangen. U hoeft verder niets te doen.",
         "question-7": "Met wie kan ik contact opnemen als ik mijn verzekering in aanspraak neem?",
-        "answer-7": "Natuurlijk hopen we dat dit nooit zal gebeuren!\n<br>\n De verzekering wordt aangeboden door onze online verzekeringspartner\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n en is gedekt door\n<a href=\"www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer-verzekering</a> \nAangezien u zelf de polishouder van de hepster bent, is het het beste om rechtstreeks contact op te nemen met hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>+49 381 - 20 38 88 801\n</ul>\n<br>\nhepster zal je snel en vakkundig te woord staan."
+        "answer-7": "Natuurlijk hopen we dat dit nooit zal gebeuren!\n<br>\n De verzekering wordt aangeboden door onze online verzekeringspartner\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n en is gedekt door\n<a href=\"www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer-verzekering</a> \nAangezien u zelf de polishouder van de hepster bent, is het het beste om rechtstreeks contact op te nemen met hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>0800 - 0753336\n</ul>\n<br>\nhepster zal je snel en vakkundig te woord staan."
       },
       "docs": {
         "tabname": "Verzekeringsvoorwaarden"
@@ -374,6 +374,11 @@
   "events": {
     "rapha-super-cross": {
       "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
+    },
+    "cyclingworld": {
+      "title": "Boek een Gravelbike van gerenommeerde merken 8bar, Salsa, Veloheld of Genesis voor de graveltour op de Cyclingworld Düsseldorf",
+      "description": "Wat: <b>CyclingWorld </b>| Wanneer: <b>23-24 maart 2019 </b>| Waar: <b>Düsseldorf, Duitsland </b>",
+      "text": "Samen met onze partner SCHICKEMÜTZE en de partners 8Bar, Salsa en Veloheld nodigen wij je uit voor de Gravelrunde in de regio Düsseldorf als onderdeel van Cyclingworld Düsseldorf. <br0>Je kunt kiezen tussen twee routes, een vlakke route van 50 kilometer, wat overeenkomt met de grote ronde van vorig jaar, of een route van 70 kilometer, die je over de Rijn leidt en een paar kleine klimmetjes en ruwe stukken rond Ratingen omvat. Je start in kleine teams van 2 tot 6 personen, genavigeerd per gpx-bestand, die alle starters in de aanloop naar de tour per post ontvangen. Je kunt kiezen welke tour je 's ochtends voor de start wilt doen. Na terugkomst op het Böhler terrein wachten we je op voor Cyclingworld met een paar hapjes en drankjes om de caloriereserve aan te vullen. Na de tour kan je je fiets op een bewaakte parkeerplaats achterlaten om zonder stress over de beurs te slenteren. Een toegangsticket voor Cyclingworld is inbegrepen in het startpakket, evenals enkele andere kleine spulletjes. LISTNRIDE biedt u testfietsen van verschillende merken aan via hun community, dus als je een Gravelbike van 8Bar of andere merken wilt rijden, boek dan vooraf je droomfiets op <a1>www.listnride.com/events/cyclingworld </a1>Wij informeren je over updates en alles wat je moet weten over de ritten via mail. We kijken uit naar een spannende Cyclingworld en een paar geweldige uren met je op en naast de fiets."
     },
     "black-friday": {
       "title": "Black Friday",
@@ -750,6 +755,32 @@
       "faq-answer-8": "Ja. Je kan binnen 14 dagen na ontvangst de fiets terug sturen. Om het volledige aankoopbedrag retour te krijgen, dient de fiets in zijn oorspronkelijke toestand en onbeschadigd te zijn. Houd er rekening mee dat de kosten voor het retour zenden zelf betaald moeten worden.",
       "faq-question-9": "Zijn de fiesten legaal?",
       "faq-answer-9": "Ja. Onze fietsen zijn legaal en naar europese richtlijn EN15194 afgesteld met een maximale snelheid van 25 km/u. Op eigen verantwoording kan je de de maximale snelheid via de smartphone App op 35 km/u instellen."
+    },
+    "unimoke": {
+      "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",
+      "meta-descr": "Test ride an UNI Moke E-City Bike today! The E-City Bikes from UNI Moke are available to test and rent on listnride all across Germany!",
+      "title": "Try it. Love it. Ride it.",
+      "description": "Test ride a UNI Moke bike today! The E-City Bikes from UNI Moke are available to rent on listnride all across Germany!",
+      "item1-title": "ALL WEATHER",
+      "item1-description": "Our electric bikes are built to withstand even the worst of urban roads and will allow you to drive safely even in the snow!",
+      "item2-title": "TRUE CARGO",
+      "item2-description": "Transport whatever heavy load you need! UNI Moke is built as a true cargo bike – heavy riders, family trips or trailers? No Problem!",
+      "item3-title": "FULLY ELECTRIC",
+      "item3-description": "Enjoy the sensation of silent, powerful, vibration-free green electric mobility while riding in style with our vintage moped inspired e-bikes",
+      "find-out-more": "Rent and test ride UNI Moke bikes all across Germany",
+      "order-online": "Rent a UNI Moke or UNI Swing and test our vintage design, all-purpose electric bike for fun family and work. Made in Berlin by Urban Drivestyle. Test ride a bike, that is going to change your lifestyle!",
+      "faq-question-1": "WHAT ABOUT WARRANTY ON THE UNI MOKE SWING?",
+      "faq-answer-1": "All UNI Moke Swing e-bikes have a warranty of 3 years on frame and fork. On electronics like battery and motor, a 1-year warranty. Wearing parts, like brakes, tires, and others do not have any warranty!<br>The warranty does not apply on resold UNI Moke Swing bikes and is not transferable in case of a re-sale – You have to be the first and original owner!<br>Any modifications on the frame or the electrical components of the bikes lead to cancelation of warranty. This includes the use of a thumb throttle which may affect the lifetime of the battery, motor, and controller since the bicycle is designed to be a pedal assisted e-bike.",
+      "faq-question-2": "WHICH MOTOR OPTIONS ARE YOU OFFERING FOR THE UNI MOKE SWING?",
+      "faq-answer-2": "The UNI Moke Swing electric bicycle comes in two power versions of the BAFANG G06 hub motor – 250W (street legal in Europe) and 750W (USA).<br>The 250W version is a street legal bicycle/pedelec in Europe and doesn't require registration, insurance or license. The 750W version is only street legal in the United States and a handful of other countries due to their different e-bike laws & restrictions compared to European law. This version is not allowed in some European countries (including Germany) on public grounds without s-pedelec registration/license and compulsory insurance and might therefore only be usable on private property.",
+      "faq-question-3": "HOW FAR CAN I RIDE WITH ONE FULLY CHARGED BATTERY?",
+      "faq-answer-3": "UNI Moke's Swing's battery is built to last up to 50-60km (31-37 miles) on average, riding on flat ground, using pedal assist in medium speed mode and without extra passengers or payload. The range always depends on factors like rider weight, surface type, and incline, wind, and others. To fully recharge the battery it takes 3 - 4 hours with the standard recharging device. The speed charger cuts recharging time in half.",
+      "faq-question-4": "CAN I STILL RIDE UNI MOKE SWING IF THE BATTERY RUNS OUT OF POWER?",
+      "faq-answer-4": "Of course! If you run out of power, you're able to ride UNI Moke Swing like a regular bicycle. The UNI Moke Swing electric bike will always bring you back home safely, even without pedal assistance. The bike's mechanical bicycle gearing enormously simplifies riding without electrical support.",
+      "faq-question-5": "CAN THE BATTERY BE TAKEN OUT OF THE BIKE?",
+      "faq-answer-5": "Yes, it can. Merely push the key into unlock position and remove it, flip up the seat and pull the battery out. This allows you to take the battery inside for recharging at home or work. We recommend always to keep your battery in average temperature surroundings to prevent any affection by low temperatures!",
+      "faq-question-6": "DOES UNI MOKE SWING COME IN DIFFERENT SIZES?",
+      "faq-answer-6": "The UNI Moke electric bicycle is designed to fit it all! Like on a moped, the seating position is variable due to the long saddle while the steering bar is intended to be adjustable in height and position."
     },
     "brompton": {
       "meta-title": "Maak een proefrit met de Brompton vouwfiets via listnride",
