@@ -1200,8 +1200,8 @@
   },
   "listings": {
     "my-bikes": "Mis bicicletas",
-    "merge-title": "¿Estás seguro de que deseas fusionar {{bikes_count}}bicicletas en 1 grupo?",
-    "unmerge-title": "¿Estás seguro de que deseas desmarcar {{bikes_count}}bicicletas?",
+    "merge-title": "¿Estás seguro de que deseas fusionar {{bikes_count}} bicicletas en 1 grupo?",
+    "unmerge-title": "¿Estás seguro de que deseas desmarcar {{bikes_count}} bicicletas?",
     "merge-yes": "Sí",
     "merge-no": "No, gracias",
     "merge": "Agrupar",
