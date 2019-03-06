@@ -336,6 +336,8 @@ angular.module('listings', []).component('listings', {
 
         var mergeController = function () {
           var mergeBikeDialog = this;
+          mergeBikeDialog.bikes_count = listings.checkedBikes.length;
+
           // cancel dialog
           mergeBikeDialog.hide = function () {
             $mdDialog.hide();
@@ -366,8 +368,9 @@ angular.module('listings', []).component('listings', {
           };
         };
 
-        var unmergeController = function (bike) {
+        var unmergeController = function (bike, bikes_count) {
           var unmergeBikeDialog = this;
+          unmergeBikeDialog.bikes_count = bikes_count;
           // cancel dialog
           unmergeBikeDialog.hide = function () {
             $mdDialog.hide();
@@ -539,7 +542,8 @@ angular.module('listings', []).component('listings', {
           clickOutsideToClose: true,
           fullscreen: true,
           locals: {
-            bike: bike
+            bike: bike,
+            bikes_count: bike.rides_count
           }
         });
       }
