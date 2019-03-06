@@ -1203,7 +1203,7 @@
   "listings": {
     "my-bikes": "My Bikes",
     "merge-title": "Are you sure you want to merge {{listings.checkedBikes.length}} bikes",
-    "unmerge-title": "Are you sure you want to unmerge {{listings.bike.rides_count}} bikes?",
+    "unmerge-title": "Are you sure you want to unmerge {{bikes_count}} bikes?",
     "merge": "Merge bikes",
     "unmerge": "Unmerge bikes",
     "no-bikes": "You haven't listed any of your bikes yet.",
