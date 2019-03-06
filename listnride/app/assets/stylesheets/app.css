@@ -1802,8 +1802,8 @@ listing-card md-card img.md-card-image {
 /* TODO: Check opacity hover for Mobile/touch devices */
 .lnr-bike-card__merge-checkbox {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 14px;
+  left: 14px;
   background: #fff;
   opacity: 0;
   transition: opacity .3s;
