@@ -419,6 +419,10 @@
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
       },
+      "unimoke": {
+        "meta-title": "Meta title",
+        "meta-description": "meta-description"
+      },
       "whyte": {
         "meta-title": "Rent and test Whyte bikes in Berlin and Zell am Ziller (AT) | listnride",
         "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
@@ -1203,7 +1207,7 @@
   "listings": {
     "my-bikes": "My Bikes",
     "merge-title": "Are you sure you want to merge {{listings.checkedBikes.length}} bikes",
-    "unmerge-title": "Are you sure you want to unmerge {{listings.bike.rides_count}} bikes?",
+    "unmerge-title": "Are you sure you want to unmerge {{bikes_count}} bikes?",
     "merge-yes": "Yes",
     "merge-no": "No, rather not",
     "merge": "Merge bikes",
