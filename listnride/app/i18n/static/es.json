@@ -276,7 +276,7 @@
       "basic-insurance": {
         "price": "Incluido",
         "title": "Seguro básico",
-        "description": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención de hasta 250€\n</ul>"
+        "description": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención 250€\n</ul>"
       },
       "premium-insurance": {
         "title": "Seguro premium",
@@ -309,11 +309,11 @@
         "question-2": "¿Cuánto cuesta el seguro premium?",
         "answer-2": "Tres euros por día, además de la renta y el listnride-<a href=\"https://www.listnride.es/terms\" target=\"_blank\">tarifas</a>",
         "question-3": "¿Qué cubre el seguro básico?",
-        "answer-3": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención de hasta 250€\n</ul>",
+        "answer-3": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Tarifa de retención 250€\n</ul>",
         "question-4": "¿Qué cubre el seguro premium?",
         "answer-4": "<ul>\n<li>Protección en caso de daños causados involuntariamente por sí mismo o por causas externas\n<li>Protección contra el vandalismo\n<li>Protección de componentes electrónicos y batería para pedelecs\n<li>Protección contra robo\n<li>Número de emergencia 24/7 en caso de robo o daño\n<li>Devolver transporte después de robo o daño\n<li>Reemplazo de bicicletas después de robo o daño\n<li>Sin tarifa de retención\n</ul>",
         "question-5": "¿Hay una tarifa de retención en caso de daño? ¿De cuanto es?",
-        "answer-5": "La tarifa de retención es de hasta 250 € para el seguro básico.\n<br>\nEl seguro premium no tiene tarifa de retención.",
+        "answer-5": "La tarifa de retención es 250 € para el seguro básico.\n<br>\nEl seguro premium no tiene tarifa de retención.",
         "question-6": "¿Cómo finalizo el seguro después de que termina el alquiler de mi bicicleta?",
         "answer-6": "Con cada alquiler de bicicletas, recibirá un certificado de seguro individual. Esto es\n<b>solo </b>\nválido para la reserva específica y para el\n<b>período de tiempo</b>\n seleccionado por ti, termina automáticamente al finalizar el alquiler de la bicicleta.\n<p>\nTe enviaremos el certificado por correo electrónico o puedes descargarlo de nuestro sitio si lo deseas. ",
         "question-7": "¿A quién debo contactar si necesito reclamar mi seguro?",

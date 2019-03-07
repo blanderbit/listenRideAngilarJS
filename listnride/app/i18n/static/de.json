@@ -276,7 +276,7 @@
       "basic-insurance": {
         "price": "Enthalten",
         "title": "Basis-Versicherung",
-        "description": "<ul>\n<li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n<li>Schutz gegen Vandalismus\n<li>Schutz von Elektronik und Akku bei Pedelecs\n<li>Selbstbeteiligung bis zu 250€\n</ul>"
+        "description": "<ul>\n<li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n<li>Schutz gegen Vandalismus\n<li>Schutz von Elektronik und Akku bei Pedelecs\n<li>Selbstbeteiligung 250€\n</ul>"
       },
       "premium-insurance": {
         "title": "Premium-Versicherung",

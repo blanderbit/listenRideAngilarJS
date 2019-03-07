@@ -276,7 +276,7 @@
       "basic-insurance": {
         "price": "Included",
         "title": "Basic Insurance",
-        "description": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>"
+        "description": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee 250€\n</ul>"
       },
       "premium-insurance": {
         "title": "Premium Insurance",
@@ -313,7 +313,7 @@
         "question-4": "What does Premium Insurance cover?",
         "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
         "question-5": "Is there a retention fee in case of damage? How high is it?",
-        "answer-5": "The deterrent fee is up to 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no deterrent fee.",
+        "answer-5": "The retention fee is up to 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no retention fee.",
         "question-6": "How do I end the insurance after my bike rental ends?",
         "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
         "question-7": "Whom do I contact if I need to claim my insurance?",
