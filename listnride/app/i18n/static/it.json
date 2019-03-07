@@ -276,7 +276,7 @@
       "basic-insurance": {
         "price": "Contenuto",
         "title": "Assicurazione di base",
-        "description": "<ul>\n<li>Protezione in caso di danno involontario causato dall'auto e dall'esterno\n<li>Protezione contro il vandalismo\n<li>Protezione per elettronica e batteria per pedelec\n<li>Franchigia fino a 250 €\n</ul>"
+        "description": "<ul>\n<li>Protezione in caso di danno involontario causato dall'auto e dall'esterno\n<li>Protezione contro il vandalismo\n<li>Protezione per elettronica e batteria per pedelec\n<li>Franchigia fino 250 €\n</ul>"
       },
       "premium-insurance": {
         "title": "Assicurazione",
@@ -309,11 +309,11 @@
         "question-2": "Quanto costa l'assicurazione Premium?",
         "answer-2": "Tre euro al giorno oltre al noleggio e al costo del servizio listnride-<a href=\"https://www.listnride.it/terms\" target=\"_blank\">commissioni</a>.",
         "question-3": "Cosa copre l'assicurazione di base?",
-        "answer-3": "<ul>\n<li>Protezione in caso di danno involontario causato dall'auto e dall'esterno\n<li>Protezione contro il vandalismo\n<li>Protezione per elettronica e batteria per pedelec\n<li>Franchigia fino a 250 €\n</ul>",
+        "answer-3": "<ul>\n<li>Protezione in caso di danno involontario causato dall'auto e dall'esterno\n<li>Protezione contro il vandalismo\n<li>Protezione per elettronica e batteria per pedelec\n<li>Franchigia fino 250 €\n</ul>",
         "question-4": "Cosa copre la copertura assicurativa Premium?",
         "answer-4": "<ul>\n<li>Protezione in caso di danno involontario di sé e esterno\n<li>Protezione contro il vandalismo\n<li>Protezione per elettronica e batteria per pedelec\n<li>Protezione contro il furto\n<li>Numero di emergenza 24 ore su 24, 7 giorni su 7 in caso di furto o danneggiamento\n<li>Trasporto dopo il furto o il danneggiamento\n<li>Sostituzione bici dopo il furto o danni\n<li>Nessuna franchigia\n</ul>",
         "question-5": "C'è una tassa di mantenimento in caso di danni? Quanto è alta?",
-        "answer-5": "La franchigia è fino a 250 € per l'assicurazione di base.\n<br>\nL'assicurazione Premium non ha franchigia",
+        "answer-5": "La franchigia è fino 250 € per l'assicurazione di base.\n<br>\nL'assicurazione Premium non ha franchigia",
         "question-6": "Come posso terminare l'assicurazione dopo che il mio noleggio bici si e' concluso ?",
         "answer-6": "Con ogni noleggio di biciclette riceverai un certificato di assicurazione individuale. Questo è\n<b>solo </b>\nvalido per la prenotazione specifica e per il\n<b>periodo di tempo </b>\n selezionato da te. Finisce automaticamente.\n<p>\nPuoi scaricare direttamente il certificato e riceverlo via e-mail. Non devi fare nulla.",
         "question-7": "Chi devo contattare se devo richiedere la mia assicurazione?",
