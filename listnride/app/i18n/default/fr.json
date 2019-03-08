@@ -81,194 +81,191 @@
     "mallorca": "Majorque",
     "sylt": "Sylt",
     "stuttgart": "Stuttgart",
-    "per": "per",
-    "hour": "hour",
-    "hours": "hours",
-    "half-day": "half day",
-    "day": "day",
-    "day-6h": "day (> 6h)",
-    "days": "day(s)",
-    "week": "week",
-    "weeks": "weeks",
-    "discount": "discount",
-    "discount-day": "from 3 days",
-    "discount-week": "from a week",
-    "single-day": "for one day",
-    "duration": "Duration",
-    "subtotal": "subtotal",
-    "lnr-fee": "Service fee",
+    "per": "par",
+    "hour": "heure",
+    "hours": "heures",
+    "half-day": "demi-journée",
+    "day": "jour",
+    "day-6h": "jour (> 6h)",
+    "days": "journée(s)",
+    "week": "semaine",
+    "weeks": "semaines",
+    "discount": "remise",
+    "discount-day": "à partir de 3 jours",
+    "discount-week": "à partir d'une semaine",
+    "single-day": "pour une journée",
+    "duration": "Durée",
+    "subtotal": "sous-total",
+    "lnr-fee": "Frais de service",
     "total": "Total",
-    "from": "From",
-    "from2": "from",
-    "to": "To",
-    "as": "As",
-    "all": "All",
-    "cancel": "Cancel",
-    "send": "Send",
-    "search": "Search",
-    "search-all": "Search all bikes",
-    "search-all-in": "Search all bikes in",
-    "search-bikes": "Search your bikes",
-    "from-place": "from",
-    "contact": "Help & Support",
-    "show-more": "show more",
-    "show-less": "show less",
-    "phone-number": "Phone Number",
-    "wait": "Uploading, this may take a moment...",
-    "lister": "Lister",
-    "rider": "Rider",
-    "reviews": "Reviews",
-    "for": "for",
-    "per-day": "per day",
+    "from": "À partir de",
+    "from2": "à partir de",
+    "to": "À",
+    "as": "Comme",
+    "all": "Tous",
+    "cancel": "Annuler",
+    "send": "Envoyer",
+    "search": "Chercher",
+    "search-all": "Chercher tous les vélos",
+    "search-all-in": "Chercher tous les vélos à",
+    "search-bikes": "Chercher vos vélos",
+    "from-place": "à partir de",
+    "contact": "Aide",
+    "show-more": "montrer plus",
+    "show-less": "montrer moins",
+    "phone-number": "Numéro de téléphone",
+    "wait": "Chargement, cela peut prendre un moment ...",
+    "lister": "Prêteur",
+    "rider": "Cicliste",
+    "reviews": "Avis",
+    "for": "pour",
+    "per-day": "par jour",
     "pd": "p.d.",
-    "Monday": "Monday",
-    "Tuesday": "Tuesday",
-    "Wednesday": "Wednesday",
-    "Thursday": "Thursday",
-    "Friday": "Friday",
-    "Saturday": "Saturday",
-    "Sunday": "Sunday",
-    "Mon": "Mon",
-    "Tue": "Tue",
-    "Wed": "Wed",
-    "Thu": "Thu",
-    "Fri": "Fri",
-    "Sat": "Sat",
-    "Sun": "Sun",
-    "join": "Join",
-    "voucher": "Voucher",
-    "download": "Download",
+    "Monday": "Lundi",
+    "Tuesday": "Mardi",
+    "Wednesday": "Mercredi",
+    "Thursday": "Jeudi",
+    "Friday": "Vendredi",
+    "Saturday": "Samedi",
+    "Sunday": "Dimanche",
+    "Mon": "Lun",
+    "Tue": "Mar",
+    "Wed": "Mer",
+    "Thu": "Jeu",
+    "Fri": "Ven",
+    "Sat": "Sam",
+    "Sun": "Dim",
+    "join": "Joindre",
+    "voucher": "Bon",
+    "download": "Télécharger",
     "Jan": "Jan",
-    "Feb": "Feb",
+    "Feb": "Fév",
     "Mar": "Mar",
-    "Apr": "Apr",
-    "May": "May",
+    "Apr": "Avr",
+    "May": "Mai",
     "Jun": "Jun",
     "Jul": "Jul",
-    "Aug": "Aug",
+    "Aug": "Aoû",
     "Sep": "Sep",
     "Oct": "Oct",
     "Nov": "Nov",
-    "Dec": "Dec",
-    "testimonials-header": "What are people saying?",
-    "balance": "Balance",
-    "tac": "Terms and Conditions",
-    "privacy-policy": "Privacy Policy",
-    "booking-accept-tac": "By booking I accept the",
-    "already-booked": "Already booked",
-    "for-shops": "For Business",
-    "contact-us": "Please get in touch with us via ",
-    "required": "This is required",
-    "update": "Update",
-    "load-more": "Load more",
-    "confirm": "Confirm",
+    "Dec": "Déc",
+    "testimonials-header": "Que disent-ils de nous?",
+    "balance": "Solde",
+    "tac": "Termes et conditions",
+    "privacy-policy": "Politique de confidentialité",
+    "booking-accept-tac": "En réservant, j'accepte les",
+    "already-booked": "Déjà réservé",
+    "for-shops": "Pour les magasins de vélos",
+    "contact-us": "Veuillez entrer en contact avec nous par",
+    "required": "Ceci est requis",
+    "update": "Mettre à jour",
+    "load-more": "Charger plus",
+    "confirm": "Confirmer",
     "confirmation": "Confirmation",
-    "confirmation-text": "Are you sure?",
-    "loading": "Loading",
-    "clear": "Clear",
-    "clear-all": "Clear All",
-    "today": "Today",
-    "yesterday": "Yesterday",
+    "confirmation-text": "Êtes-vous sûr?",
+    "loading": "Chargement",
+    "clear": "Effacer",
+    "clear-all": "Effacer tout",
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
     "press": {
-      "title": "Known from TV & Print",
-      "logo-1": "Insert Logo here",
-      "logo-2": "Insert Logo here",
-      "logo-3": "Insert Logo here",
-      "logo-4": "Insert Logo here"
+      "title": "Vu à la télé et dans la presse",
+      "logo-1": "Insérer le logo ici",
+      "logo-2": "Insérer le logo ici",
+      "logo-3": "Insérer le logo ici",
+      "logo-4": "Insérer le logo ici"
     },
     "find-your-bike": {
-      "header": "Find your perfect bike",
-      "subheader": "Planning your next trip?",
-      "button": "Find your bike"
+      "header": "Trouvez votre vélo parfait",
+      "subheader": "Vous planifiez votre prochain voyage?",
+      "button": "Trouvez votre vélo"
     },
     "rent-your-bike": {
-      "header": "Rent your bike",
-      "subheader": "Meet like-minded and make some pocket money"
+      "header": "Louez votre vélo",
+      "subheader": "Rencontrez des gens qui partagent les mêmes passions et gagnez de l'argent de poche"
     }
   },
   "long-term": {
-    "header": "Choose your rental bike for your long-term stay",
-    "subheader": "listnride offers a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
+    "header": "Choisissez votre vélo de location pour votre séjour",
+    "subheader": "listnride propose une large gamme de vélos de location de haute qualité pour votre séjour. Trouvez la solution de mobilité qui vous convient.",
     "how-to": {
-      "step-1-title": "1. Full Service",
-      "step-1-content": "You decide where and when you need which bicycles. Just provide us the details below and we'll get back to you.",
-      "step-2-title": "2. Attractive Packages",
-      "step-2-content": "Package prices for single or multiple bikes, \nbikes that fits your need and style (eBikes, cargo, children's), appropriate accessories, e.g. Child trailer, lock, helmet, insurance against damage and theft\n",
-      "step-3-title": "3. Simple Booking Procedure",
-      "step-3-content": "Our efficient booking process starts from the your inquiry you made until the payment is processed. A booking confirmation and invoice will be provided to you."
+      "step-1-title": "1. Service complet",
+      "step-1-content": "Vous décidez où et quand vous avez besoin de quels vélos. Fournissez-nous simplement les détails ci-dessous et nous vous contacterons.",
+      "step-2-title": "2. Forfaits attractifs",
+      "step-2-content": "Prix forfaitaires pour un ou plusieurs vélos,\ndes vélos adaptés à vos besoins et à votre style (eBikes, cargo, enfants), accessoires appropriés - par exemple remorque enfant, cadenas, casque, assurance contre dommages et le vol",
+      "step-3-title": "3. Procédure de réservation simple",
+      "step-3-content": "Notre système de réservation efficace commence à partir de votre demande jusqu’à ce que le paiement soit traité. Une confirmation de réservation et une facture vous seront fournies."
     },
-    "meta-title": "If you’re planning a long-term stay, then listnride can provide you with a rental bike that fits you needs and style. Find the right mobility solution.",
-    "meta-description": "listnride, your local expert for bike rental",
+    "meta-title": "Si vous planifiez un séjour à long terme, listnride peut vous fournir un vélo de location qui correspond à vos besoins et à votre style. Trouvez le parfait vélo, et profitez du voyage.",
+    "meta-description": "listnride, votre expert local en location de vélo",
     "opengraph": {
-      "description": "The rental bike that fits you needs and style."
+      "description": "Le vélo de location qui correspond à vos besoins et à votre style."
     },
-    "title": "Rental bikes for your long-term stay"
-  },
-  "test": {
-    "delete-me": "TEST TEXT"
+    "title": "Location de vélos pour votre séjour"
   },
   "imprint": {
-    "germany-address": "Steinstraße 17<br>\n10119 Berlin<br>\nGermany",
-    "contacts": "E-Mail: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com</a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.com</a><br>\nPhone: +49 (0)30-120870330"
+    "germany-address": "Steinstraße 17 <br>\n10119 Berlin <br>\nAllemagne",
+    "contacts": "Email: <a href=\"mailto:contact@listnride.com?Subject=Press%20Contact\" target=\"_top\">contact@listnride.com </a><br>\nWeb: <a href=\"//listnride.com\">www.listnride.fr </a><br>\nTéléphone: +49 (0) 30-120870330"
   },
   "events": {
     "berlin-triathlon": {
-      "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>June 2nd 2019</b>",
-      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
-      "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+      "description": "Quoi: <b>Berlin Triathlon</b> | Où: <b>Berlin</b> | Quand: <b>2 Juin 2019</b>",
+      "meta-title": "Louez un vélo de route pour le Triathlon de Berlin 2019 | listnride",
+      "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour le Triathlon de Berlin 2019. Choisissez le vélo parfait qui répond à vos besoins."
     },
     "cyclingworld": {
-      "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
-      "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
+      "meta-title": "Louez un vélo Gravel de chez 8bar, Salsa ou Veloheld pour le tour sur gravier à Cyclingworld",
+      "meta-description": "Voulez-vous essayer un vélo Gravel? Louez un vélo Gravel de chez 8bar, Salsa, ou Veloheld pour le tour sur gravier à Cyclingworld"
     },
     "black-friday": {
       "banner": {
         "title": "Black Friday",
-        "description": "Get huge discount for your next rental. Only today! ",
-        "check-it": "Check it out"
+        "description": "Seulement valable aujourd'hui! Obtenez un rabais énorme pour votre prochaine location.",
+        "check-it": "Jetez un coup d'oeil"
       }
     },
     "epicgrancanaria": {
-      "meta-title": "Rent a road bike for Epic Gran Canaria | listnride",
-      "meta-description": "The aim of the Epic Gran Canaria is to deliver a professional experience on bike for amateur riders"
+      "meta-title": "Louez un vélo de route pour l'Epic Gran Canaria | listnride",
+      "meta-description": "L’Epic Gran Canaria a pour objectif de fournir aux cyclistes amateurs une expérience professionnelle à vélo"
     },
     "velorace-dresden": {
-      "meta-title": "Rent a road bike for Velorace Dresden 2019 | listnride",
-      "meta-description": "With listnride you can securely rent a road bike online for Velorace Dresden 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Louez un vélo de route pour la Velorace de Dresden 2019 | listnride",
+      "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour la Velorace de Dresden 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "berlin-triathlon-xl": {
-      "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need.",
-      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+      "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour le Triathlon de Berlin 2019. Choisissez le vélo parfait qui répond à vos besoins.",
+      "meta-title": "Louez un vélo de route pour le Triathlon XL de Berlin 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Louez un vélo de route pour le Vätternrundan 2019 | listnride",
+      "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour le Vätternrundan 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "lardita-arezzo": {
-      "meta-title": "Rent a vintage road bike for l'Ardita | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for l'Ardita 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Louez un vélo de route vintage pour l'Ardita | listnride",
+      "meta-description": "Avec listnride, vous pouvez louer en ligne un vélo de route en toute sécurité pour le l'Ardita 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Rent a road bike for the Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for the Granfondo Via del Sale 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Louez un vélo de route pour Granfondo Via del Sale 2019 | listnride",
+      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour la Granfondo Via del Sale 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "giro-sardegna": {
-      "meta-title": "Rent a road bike for the Giro Sardegna 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for the Giro Sardegna 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Louez un vélo de route pour le Giro Sardegna 2019 | listnride",
+      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour le Giro Sardegna 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     }
   },
   "lister": {
-    "chat": "Your booked bike was cancelled."
+    "chat": "La réservation de votre vélo a été annulé."
   },
   "veletage": {
     "event": {
-      "calendar-title": "veletage POP-UP SALON",
-      "select-day": "1. Select the Rental Date ",
-      "select-slot": "2. Select the rental time",
-      "day-error": "Please select a day first",
-      "select-return": "3. Select return time",
-      "time-error": "Please select a pickup time first",
-      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
+      "calendar-title": "Salon Veletage Pop-Up",
+      "select-day": "1. Sélectionnez la date de location",
+      "select-slot": "2. Sélectionnez l'horaire de location",
+      "day-error": "S'il vous plaît, sélectionnez un jour d'abord",
+      "select-return": "3. Sélectionnez l'heure de retour",
+      "time-error": "Veuillez d'abord choisir l'heure pour prendre le vélo",
+      "calendar-subtitle": "Les Championnats du Monde Route UCI auront lieu à Innsbruck-Tirol (Autriche) du 22 au 30 septembre 2018. Testez et louez le vélo de route parfait pour votre parcours."
     }
   },
   "brand-integration": {
