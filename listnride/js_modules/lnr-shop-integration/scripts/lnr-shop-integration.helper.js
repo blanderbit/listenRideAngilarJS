@@ -560,7 +560,7 @@ var lnrHelper = {
         var selectedRides = [];
 
         selectedRides = lnrConstants.rides[userId].filter(function(bike){
-          return response.ids.indexOf(bike.id) !== -1;
+          return response.ids.indexOf(bike.id) === -1;
         });
 
         loaderElement.style.display = 'none';
