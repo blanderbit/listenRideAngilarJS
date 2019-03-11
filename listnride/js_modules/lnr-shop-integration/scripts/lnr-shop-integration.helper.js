@@ -479,7 +479,7 @@ var lnrHelper = {
       brands.push(bike.brand);
     });
 
-    return lnrHelper.uniq(brands);
+    return lnrHelper.uniqArray(brands);
   },
   getBikeCategories: function(bikes) {
     var categories = [];
@@ -488,7 +488,7 @@ var lnrHelper = {
       categories.push(bike.category);
     });
 
-    return lnrHelper.uniq(categories);
+    return lnrHelper.uniqArray(categories);
   },
   /**
    * renders the bikes
@@ -1116,7 +1116,7 @@ var lnrHelper = {
       .replace(/\u200B/g, '') // remove zero width space
       .trim(); // remove spaces
   },
-  uniq: function(arr) {
+  uniqArray: function(arr) {
     function onlyUnique(value, index, self) {
       return self.indexOf(value) === index;
     }
