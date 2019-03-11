@@ -484,6 +484,10 @@ md-icon svg {
   min-width: 152px;
 }
 
+.mdl-grid.mdl-grid--no-spacing > .mdl-cell.lnr-dropdown-parent {
+  margin-bottom: 10px;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -576,7 +580,6 @@ md-icon svg {
 .mdl-grid.mdl-grid-justify-center {
   justify-content: center;
 }
-
 
 /* LOADER */
 

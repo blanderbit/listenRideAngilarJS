@@ -479,7 +479,7 @@ var lnrHelper = {
       brands.push(bike.brand);
     });
 
-    return lnrHelper.uniqArray(brands);
+    return brands.length > 1 ? lnrHelper.uniqArray(brands) : brands;
   },
   getBikeCategories: function(bikes) {
     var categories = [];
@@ -488,7 +488,7 @@ var lnrHelper = {
       categories.push(bike.category);
     });
 
-    return lnrHelper.uniqArray(categories);
+    return categories.length > 1 ? lnrHelper.uniqArray(categories) : categories;
   },
   /**
    * renders the bikes
@@ -529,8 +529,8 @@ var lnrHelper = {
         // render bikes html
         lnrHelper.renderBikesHTML(userId, lnrConstants.rides[userId], userLang);
       } else {
-        var errorNoUserFound = '<p style="flex:1; text-align:center" class="lnr-margin-left"><br><br>We can\'t find user with this ID</p>';
-        lnrHelper.renderHTML(errorNoUserFound);
+        var errorNoUserFound = 'We can\'t find user with this ID';
+        lnrHelper.renderErrorInHTML(errorNoUserFound);
       }
     };
     // send request to server
@@ -710,15 +710,22 @@ var lnrHelper = {
         }
       }
     } else {
-      var errorNoBikesText = '<p style="flex:1; text-align:center" class="lnr-margin-left"><br><br>No bikes available</p>';
-      lnrHelper.renderHTML(errorNoBikesText);
+      var errorNoBikesText = 'No bikes available';
+      lnrHelper.renderErrorInHTML(errorNoBikesText);
     }
   },
-  renderHTML: function(html) {
+  renderErrorInHTML: function(content) {
+    // error message is already exist in DOM then do nothing
+    var errorMessage = document.querySelector('.lnr-error-message');
+    if (errorMessage) return;
+
+    // create, style and insert error message into DOM before brand copyright
     var lnrSection = document.getElementById('listnride');
-    lnrSection.innerHTML = '';
-    lnrSection.innerHTML = html;
-    lnrSection.innerHTML += '<div class="lnr-brand"><span>powered by&nbsp;</span><a href="' + 'https://www.listnride.com' + '" target="_blank">listnride</a></div>';
+    var newEl = document.createElement('p');
+    newEl.innerHTML = content;
+    newEl.setAttribute("style", "flex:1; text-align:center; padding-top: 20px;");
+    newEl.classList.add('lnr-error-message', 'lnr-margin-left');
+    lnrSection.insertBefore(newEl, lnrSection.querySelector('.lnr-brand'));
   },
   /**
    * renders the location and size selectors
