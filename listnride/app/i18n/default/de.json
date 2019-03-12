@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
     "choose-bike-size": "Please, pick a bike size",
     "please-choose-bike-count": "Wähle die Anzahl der Fahrräder",
     "status-labels": {
@@ -213,6 +214,10 @@
       "description": "Was: <b>Berlin Triathlon</b> | Wo: <b>Berlin</b> | Wann: <b>2. Juni 2019</b>",
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon 2019 | listnride",
       "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 einfach online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
+    },
+    "paris-brest-paris": {
+      "meta-title": "Miete ein Rennrad für Paris-Brest-Paris 2019 | listnride",
+      "meta-description": "Miete ein Rennrad für Paris-Brest-Paris 2019 einfach, online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -1204,9 +1209,9 @@
   "listings": {
     "my-bikes": "Meine Räder",
     "merge-title": "Möchtest Du wirklich {{bikes_count}} Bikes in einem Cluster zusammenfassen?",
-    "unmerge-title": "Are you sure you want to unmerge {{bikes_count}} bikes?",
+    "unmerge-title": "Möchtest Du wirklich {{bikes_count}}Fahrräder entmischen?",
     "merge-yes": "Yes",
-    "merge-no": "No, rather not",
+    "merge-no": "Nein, eher nicht",
     "merge": "zusammenführen",
     "unmerge": "Fahrräder entmischen",
     "no-bikes": "Du hast noch keine eigenen Fahrräder online gestellt.",

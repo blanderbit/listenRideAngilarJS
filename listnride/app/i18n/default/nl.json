@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "event-bikes-will-be-soon": "Fietsen voor dit evenement zijn binnenkort beschikbaar",
     "choose-bike-size": "Please, pick a bike size",
     "please-choose-bike-count": "Selecteer het aantal fietsen",
     "status-labels": {
@@ -208,6 +209,10 @@
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
       "meta-title": "Huur een racefiets voor Berlin Triathlon 2019 | listnride",
       "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past."
+    },
+    "paris-brest-paris": {
+      "meta-title": "Huur een racefiets voor Parijs-Brest-Parijs 2019 | listnride",
+      "meta-description": "Huur een racefiets online, gemakkelijk en veilig met listnride voor Parijs-Brest-Parijs 2019. Kies de perfecte fiets die bij u past."
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -1194,9 +1199,9 @@
   "listings": {
     "my-bikes": "Mijn fietsen",
     "merge-title": "Weet je het zeker dat je {{bikes_count}} fietsen in 1 cluster wilt samenvoegen?",
-    "unmerge-title": "Are you sure you want to unmerge {{bikes_count}} bikes?",
-    "merge-yes": "Yes",
-    "merge-no": "No, rather not",
+    "unmerge-title": "Weet je zeker dat je {{bikes_count}}fietsen wilt ontkoppelen?",
+    "merge-yes": "Ja",
+    "merge-no": "Nee, liever niet",
     "merge": "samenvoegen",
     "unmerge": "Ontkoppel fietsen",
     "no-bikes": "Je hebt nog geen fietsen online geplaatst.",

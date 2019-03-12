@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "event-bikes-will-be-soon": "Le biciclette per questo evento saranno presto disponibili",
     "choose-bike-size": "Scegli la taglia",
     "please-choose-bike-count": "Seleziona il numero di biciclette",
     "status-labels": {
@@ -210,6 +211,10 @@
       "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>2 Giugno 2019</b>",
       "meta-title": "Noleggia una bici da strada per il Triathlon di Berlino 2019 | listnride",
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2019. Scegli la bici perfetta per te."
+    },
+    "paris-brest-paris": {
+      "meta-title": "Noleggia una bici da corsa per la Parigi-Brest-Parigi 2019 | listnride",
+      "meta-description": "Noleggia una bici da corsa online in modo facile e sicuro con listnride per la Paris-Brest-Paris 2019. Scegli la bici perfetta per te."
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",

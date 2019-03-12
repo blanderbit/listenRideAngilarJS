@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "event-bikes-will-be-soon": "Bikes for this event will be available soon",
     "choose-bike-size": "Please, pick a bike size",
     "please-choose-bike-count": "Select number of bikes ",
     "status-labels": {
@@ -216,6 +217,10 @@
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>June 2nd 2019</b>",
       "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
       "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+    },
+    "paris-brest-paris": {
+      "meta-title": "Rent a road bike for Paris-Brest-Paris 2019 | listnride",
+      "meta-description": "Rent a road bike online easy and secure with listnride for Paris-Brest-Paris 2019. Choose the perfect bike that fits your need."
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
