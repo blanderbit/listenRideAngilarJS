@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "event-bikes-will-be-soon": "Le biciclette per questo evento saranno presto disponibili",
     "choose-bike-size": "Scegli la taglia",
     "please-choose-bike-count": "Seleziona il numero di biciclette",
     "status-labels": {
@@ -212,8 +213,8 @@
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2019. Scegli la bici perfetta per te."
     },
     "paris-brest-paris": {
-      "meta-title": "Rent a road bike for Paris-Brest-Paris 2019 | listnride",
-      "meta-description": "Rent a road bike online easy and secure with listnride for Paris-Brest-Paris 2019. Choose the perfect bike that fits your need."
+      "meta-title": "Noleggia una bici da corsa per la Parigi-Brest-Parigi 2019 | listnride",
+      "meta-description": "Noleggia una bici da corsa online in modo facile e sicuro con listnride per la Paris-Brest-Paris 2019. Scegli la bici perfetta per te."
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
