@@ -1724,18 +1724,6 @@
           }
         ]
       });
-
-      $stateProvider.state({
-        name: 'paris-brest-paris',
-        url: '/paris-brest-paris',
-        controller: ['$scope', '$state',
-          function ($scope, $state) {
-            $state.go('event', {
-              'event_name': 'paris-brest-paris'
-            })
-          }
-        ]
-      });
     }
   ]);
 })();
