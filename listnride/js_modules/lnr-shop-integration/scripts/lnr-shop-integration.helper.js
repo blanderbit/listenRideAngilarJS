@@ -1124,9 +1124,8 @@ var lnrHelper = {
       .trim(); // remove spaces
   },
   uniqArray: function(arr) {
-    function onlyUnique(value, index, self) {
-      return self.indexOf(value) === index;
-    }
-    return arr.filter(onlyUnique);
+    return arr.filter(function (value, index) {
+      return arr.indexOf(value) === index;
+    });
   }
 };
