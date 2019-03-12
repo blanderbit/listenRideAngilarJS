@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "En savoir plus",
+    "event-bikes-will-be-soon": "Bikes for this event will be available soon",
     "choose-bike-size": "S'il vous plaît, choisissez une taille de vélo",
     "please-choose-bike-count": "Sélectionnez le nombre de vélos",
     "status-labels": {
@@ -216,7 +217,7 @@
     },
     "paris-brest-paris": {
       "meta-title": "Louer un vélo de route pour Paris-Brest-Paris 2019 | listnride",
-      "meta-description": "Rent a road bike online easy and secure with listnride for Paris-Brest-Paris 2019. Choose the perfect bike that fits your need."
+      "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour Paris-Brest-Paris 2019. Choisissez le vélo parfait qui correspond à vos besoins."
     },
     "cyclingworld": {
       "meta-title": "Louez un vélo Gravel de chez 8bar, Salsa ou Veloheld pour le tour sur gravier à Cyclingworld",
