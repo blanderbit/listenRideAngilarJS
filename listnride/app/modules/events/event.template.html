@@ -24,7 +24,8 @@
                 <p translate="events.{{event.name}}.text"></p>
             </div>
         </div>
-        <div ng-if="event.bikes.length">
+        <!-- TODO: remove ng-if with cwd event check after 2-hours calendar implementation -->
+        <div ng-if="event.object !== cyclingworld && event.bikes.length">
             <md-divider></md-divider>
 
             <div flex layout="column" layout-fill>
@@ -40,12 +41,13 @@
                 </div>
                 <div layout="row" layout-wrap layout-padding>
                     <bike-card
-                            ng-repeat="bike in event.bikes | filter : (filterSize != -1 || '') && {size : filterSize}"
-                            bike="bike" show-labels="true" booked="bike.booked" flex="100" flex-gt-xs="50" flex-gt-sm="33">
+                        ng-repeat="bike in event.bikes | filter : (filterSize != -1 || '') && {size : filterSize}"
+                        bike="bike" show-labels="true" booked="bike.booked" flex="100" flex-gt-xs="50" flex-gt-sm="33">
                     </bike-card>
                 </div>
             </div>
         </div>
+        <div ng-if="event.name == 'cyclingworld'" translate="shared.event-bikes-will-be-soon" class="lnr-center lnr-mb-x2"></div>
     </div>
     <footer></footer>
 </md-content>
