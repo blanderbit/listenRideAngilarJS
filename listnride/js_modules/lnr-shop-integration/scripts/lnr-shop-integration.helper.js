@@ -303,6 +303,9 @@ var lnrHelper = {
     // default user rides for all locations
     var rides = lnrConstants.rides[userId];
 
+    // remove temporary solution (after filters sync)
+    lnrHelper.resetFilters([locationButton]);
+
     // if there is only single city
     // there is no need for selection
     if (lnrConstants.cities.length === 1) { return; }
@@ -350,6 +353,9 @@ var lnrHelper = {
     var sizeButtonId = userId + '-lnr-size-button';
     var sizeButton = document.getElementById(sizeButtonId);
 
+    // remove temporary solution (after filters sync)
+    lnrHelper.resetFilters([sizeButton]);
+
     // default user rides for all sizes
     var rides = lnrConstants.rides[userId];
 
@@ -394,6 +400,9 @@ var lnrHelper = {
     // dropdown button
     var dropdownButtonId = userId + '-lnr-' + dropdownType + '-button';
     var dropdownButton = document.getElementById(dropdownButtonId);
+
+    // remove temporary solution (after filters sync)
+    lnrHelper.resetFilters([dropdownButton]);
 
     // default user rides
     var rides = lnrConstants.rides[userId];
@@ -787,6 +796,9 @@ var lnrHelper = {
     var days = 0;
     var selectedRides = [];
 
+    // remove temporary solution (after filters sync)
+    lnrHelper.resetFilters([startDateInput, endDateInput]);
+
     if (startDateInput.value && !endDateInput.value) {
       endDateInput.setAttribute('min', startDateInput.value);
     }
@@ -817,10 +829,10 @@ var lnrHelper = {
     var sizeHTML = [
       '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
       '<div style="margin-left:8px; margin-right:8px;">',
-      '<button type="button" style="color: black;" ',
-      'id="' + id + '-lnr-size-button" ',
-      'onclick="lnrHelper.openSizeSelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></button>',
+        '<button data-dropdown-type="size" type="button" style="color: black;" ',
+        'id="' + id + '-lnr-size-button" ',
+        'onclick="lnrHelper.openSizeSelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-size-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -830,10 +842,10 @@ var lnrHelper = {
     var brandHTML = [
       '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
       '<div style="margin-left:8px; margin-right:8px;">',
-      '<button type="button" style="color: black;" ',
-      'id="' + id + '-lnr-brand-button" ',
-      'onclick="lnrHelper.openBrandSelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></button>',
+        '<button data-dropdown-type="brand" type="button" style="color: black;" ',
+        'id="' + id + '-lnr-brand-button" ',
+        'onclick="lnrHelper.openBrandSelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-brand-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -843,10 +855,10 @@ var lnrHelper = {
     var categoryHTML = [
       '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
       '<div style="margin-left:8px; margin-right:8px;">',
-      '<button type="button" style="color: black;" ',
-      'id="' + id + '-lnr-category-button" ',
-      'onclick="lnrHelper.openCategorySelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></button>',
+        '<button data-dropdown-type="category" type="button" style="color: black;" ',
+        'id="' + id + '-lnr-category-button" ',
+        'onclick="lnrHelper.openCategorySelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-category-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -856,10 +868,10 @@ var lnrHelper = {
     var locationHTML = [
       '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
       '<div style="margin-left:8px; margin-right:8px;">',
-      '<button type="button" style="color: black;" ',
-      'id="' + id + '-lnr-location-button" ',
-      'onclick="lnrHelper.openLocationSelector(' + id + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></button>',
+        '<button data-dropdown-type="location" type="button" style="color: black;" ',
+        'id="' + id + '-lnr-location-button" ',
+        'onclick="lnrHelper.openLocationSelector(' + id + ')" ',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-location-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -875,7 +887,7 @@ var lnrHelper = {
           'min="' + lnrHelper.getMinDate() + '"',
           'id="' + id + '-lnr-start-date-button' + '"',
           'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></input>',
+          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></input>',
         '</div>',
       '</div>',
       // END DATE
@@ -886,7 +898,7 @@ var lnrHelper = {
           'min="' + lnrHelper.getMinDate() + '"',
           'id="' + id + '-lnr-end-date-button' + '"',
           'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button"></input>',
+          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></input>',
           '</div>',
       '</div>'
     ].join("");
@@ -924,8 +936,10 @@ var lnrHelper = {
     var categoryButton = document.getElementById(userId + '-lnr-category-button');
 
     lnrConstants.allLabels = {
+      size: lnrConstants.translations[userLang]['all-sizes'],
       brand: lnrConstants.translations[userLang]['all-brands'],
-      category: lnrConstants.translations[userLang]['all-categories']
+      category: lnrConstants.translations[userLang]['all-categories'],
+      location: lnrConstants.translations[userLang]['all-locations']
     }
 
     // show default location
@@ -1127,5 +1141,24 @@ var lnrHelper = {
     return arr.filter(function (value, index) {
       return arr.indexOf(value) === index;
     });
+  },
+  // TODO: Remove after we will filters data sync
+  resetFilters: function(currentFilters){
+    var filters = document.querySelectorAll('.lnr-filter-trigger');
+
+    // Remove current filter item from selected that we prepare for reseting
+    filters = [].filter.call(filters, function (filterItem) {
+      return currentFilters.indexOf(filterItem) === -1;
+    });
+
+    // set to default state
+    filters.forEach(function(filterItem){
+      if (filterItem.getAttribute('type') === 'date') filterItem.value = '';
+
+      var dropdownType = filterItem.dataset.dropdownType;
+
+      filterItem.innerHTML = lnrConstants.allLabels[dropdownType] + '<div class="dropdown-caret" style="float: right"></div>';
+    });
+
   }
 };
