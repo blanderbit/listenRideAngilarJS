@@ -1142,7 +1142,7 @@ var lnrHelper = {
       return arr.indexOf(value) === index;
     });
   },
-  // TODO: Remove after we will filters data sync
+  // TODO: Remove after we will add feature with filters data sync
   resetFilters: function(currentFilters){
     var filters = document.querySelectorAll('.lnr-filter-trigger');
 
