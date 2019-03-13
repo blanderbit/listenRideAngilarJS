@@ -832,7 +832,7 @@ var lnrHelper = {
         '<button data-dropdown-type="size" type="button" style="color: black;" ',
         'id="' + id + '-lnr-size-button" ',
         'onclick="lnrHelper.openSizeSelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
-        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-size-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -845,7 +845,7 @@ var lnrHelper = {
         '<button data-dropdown-type="brand" type="button" style="color: black;" ',
         'id="' + id + '-lnr-brand-button" ',
         'onclick="lnrHelper.openBrandSelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
-        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-brand-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -858,7 +858,7 @@ var lnrHelper = {
         '<button data-dropdown-type="category" type="button" style="color: black;" ',
         'id="' + id + '-lnr-category-button" ',
         'onclick="lnrHelper.openCategorySelector(' + id + ',' + '\'' + lang + '\'' + ')" ',
-        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-category-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -871,7 +871,7 @@ var lnrHelper = {
         '<button data-dropdown-type="location" type="button" style="color: black;" ',
         'id="' + id + '-lnr-location-button" ',
         'onclick="lnrHelper.openLocationSelector(' + id + ')" ',
-        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></button>',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></button>',
       '<div id="' + id + '-lnr-location-dropdown" class="dropdown-content" style="float: right"></div>',
       '</div>',
       '</div>'
@@ -887,7 +887,7 @@ var lnrHelper = {
           'min="' + lnrHelper.getMinDate() + '"',
           'id="' + id + '-lnr-start-date-button' + '"',
           'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></input>',
+          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
         '</div>',
       '</div>',
       // END DATE
@@ -898,7 +898,7 @@ var lnrHelper = {
           'min="' + lnrHelper.getMinDate() + '"',
           'id="' + id + '-lnr-end-date-button' + '"',
           'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button lnr-filter-trigger"></input>',
+          'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
           '</div>',
       '</div>'
     ].join("");
@@ -1144,7 +1144,7 @@ var lnrHelper = {
   },
   // TODO: Remove after we will add feature with filters data sync
   resetFilters: function(currentFilters){
-    var filters = document.querySelectorAll('.lnr-filter-trigger');
+    var filters = document.querySelectorAll('.js-lnr-filter-trigger');
 
     // Remove current filter item from selected that we prepare for reseting
     filters = [].filter.call(filters, function (filterItem) {
