@@ -187,6 +187,12 @@
       "subheader": "Triff Gleichgesinnte. Verdiene Dir etwas dazu."
     }
   },
+  "cyclingworld": {
+    "event": {
+      "title": "Cyclingworld event bike",
+      "subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
+    }
+  },
   "long-term": {
     "header": "Wähle das passende Leihrad für deinen Langzeit-Aufenthalt",
     "subheader": "listnride bietet eine große Auswahl an hochwertigen Leihrädern für deinen Langzeit-Aufenthalt. Finde das passende Fahrrad für dich",
@@ -777,6 +783,7 @@
   },
   "bike": {
     "rent-bike": "Fahrrad mieten",
+    "for-free": "Free",
     "two-hours": "für 2 Stunden",
     "view-pictures": "Bilder ansehen",
     "for": "für",
