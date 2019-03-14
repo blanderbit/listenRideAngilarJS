@@ -6,100 +6,137 @@ angular.module('bike',[]).component('bike', {
   controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers', 'bikeOptions',
     function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeOptions) {
       var bike = this;
-      bike.colorScheme = mapConfigs.colorScheme();
-      bike.owner = {};
-      bike.owner.display_name = '';
-      bike.owner.picture = '';
 
-      bike.mapOptions = {
-        lat: 0,
-        lng: 0,
-        zoom: 14,
-        radius: 500,
-        scrollwheel: false,
-        draggable: false,
-        gestureHandling: 'cooperative'
-      };
+      bike.$onInit = function() {
+        // variables
+        bike.colorScheme = mapConfigs.colorScheme();
+        bike.owner = {};
+        bike.owner.display_name = '';
+        bike.owner.picture = '';
+        bike.mapOptions = {
+          lat: 0,
+          lng: 0,
+          zoom: 14,
+          radius: 500,
+          scrollwheel: false,
+          draggable: false,
+          gestureHandling: 'cooperative'
+        };
 
-      bike.mobileCalendar = function() {
-        return !!($mdMedia('xs') || $mdMedia('sm'));
-      };
+        // methods
+        bike.isMobileCalendarView = isMobileCalendarView;
+        bike.hasAccessories = hasAccessories;
+        bike.showAttribute = showAttribute;
+        bike.showGalleryDialog = showGalleryDialog;
+        bike.showCalendarDialog = showCalendarDialog;
+
+        // invocations
+        getBikeData();
+      }
+
 
       // TODO: Refactor image savings (.jpg / .JPG)
       // bike.heroshot = function () {
       //   if (bike.data) {
-      //     var heroshot = bike.mobileCalendar() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
+      //     var heroshot = bike.isMobileCalendarView() ? bike.data.image_file_1.small.url : bike.data.image_file_1.large.url;
       //     return heroshot;
       //   }
       // };
 
-      // TODO: move all api calls in service
-      // it is really difficult to test api calls from controller.
-      // controller should only be used for data binding and
-      // not for logic and api calls
-      api.get('/rides/' + $stateParams.bikeId).then(
-        function(response) {
-          bike.showAll = false;
-          bike.data = response.data.current;
-          bike.defaultSize = $stateParams.size || bike.data.size;
+      function getBikeData() {
+        // TODO: move all api calls in service
+        // it is really difficult to test api calls from controller.
+        // controller should only be used for data binding and
+        // not for logic and api calls
+        api.get('/rides/' + $stateParams.bikeId).then(
+          function (response) {
+            bike.showAll = false;
+            bike.data = response.data.current;
+            bike.is_owner = bike.data.user.id === $localStorage.userId;
+            bike.owner.display_name = setName();
+            bike.owner.picture = setPicture();
+            bike.mapOptions.lat = bike.data.lat_rnd;
+            bike.mapOptions.lng = bike.data.lng_rnd;
+            $translate($filter('category')(bike.data.category)).then(
+              function (translation) {
+                bike.category = translation;
+              }
+            );
 
-          if (bike.data.is_cluster) {
-            bike.cluster = response.data.cluster;
-            bike.availableSizes = bike.cluster.sizes;
+            // CLUSTER BIKE LOGIC
+            bike.defaultSize = $stateParams.size || bike.data.size;
+            if (bike.data.is_cluster) {
+              bike.cluster = response.data.cluster;
+              bike.availableSizes = bike.cluster.sizes;
 
-            // remove primary bike from variations array
-            bike.cluster.variations = _.filter(bike.cluster.variations, function (variant) {
-              return variant.id !== bike.data.id;
-            });
-
-            // get size translations
-            bikeOptions.sizeOptions(false, true).then(function (resolve) {
-              _.map(bike.availableSizes, function (option) {
-                option.name = _.find(resolve, function (o) {
-                  return o.value === option.size
-                }).label
+              // remove primary bike from variations array
+              bike.cluster.variations = _.filter(bike.cluster.variations, function (variant) {
+                return variant.id !== bike.data.id;
               });
-            });
 
-            // change some params to cluster merged params
-            bike.data.accessories = bike.cluster.accessories;
-            bike.data.ratings = bike.cluster.ratings;
-          }
+              // get size translations
+              bikeOptions.sizeOptions(false, true).then(function (resolve) {
+                _.map(bike.availableSizes, function (option) {
+                  option.name = _.find(resolve, function (o) {
+                    return o.value === option.size
+                  }).label
+                });
+              });
 
-          bike.is_owner = bike.data.user.id === $localStorage.userId;
-          bike.owner.display_name = setName();
-          bike.owner.picture = setPicture();
-          bike.mapOptions.lat = bike.data.lat_rnd;
-          bike.mapOptions.lng = bike.data.lng_rnd;
-          $translate($filter('category')(bike.data.category)).then(
-            function (translation) {
-              bike.category = translation;
+              // change some params to cluster merged params
+              bike.data.accessories = bike.cluster.accessories;
+              bike.data.ratings = bike.cluster.ratings;
             }
-          );
+
+            // EVENT BIKE LOGIC
+
+            // dummy data
+            // bike.event = {
+            //   id: 30,
+            //   name: 'Cycling World',
+            //   date: '23032019',
+            //   duration: 2,
+            //   type: 'slot',
+            //   slot_range: 2,
+            //   insurance: false
+            // }
+
+            bike.isTwoHoursEventBike = bike.data.family === 30; // cwd event page
 
 
-          var metaData = {
-            name: bike.data.name,
-            brand: bike.data.brand,
-            description: bike.data.description,
-            location: bike.data.city,
-            category: $translate.instant($filter('category')(bike.data.category))
-          };
+            // META
+            var metaData = {
+              name: bike.data.name,
+              brand: bike.data.brand,
+              description: bike.data.description,
+              location: bike.data.city,
+              category: $translate.instant($filter('category')(bike.data.category))
+            };
 
-          ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
-          ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
-          ngMeta.setTag("og:image", bike.data.image_file.url);
-        },
-        function(error) {
-        	$state.go('404');
-        }
-      );
+            ngMeta.setTitle($translate.instant("bike.meta-title", metaData));
+            ngMeta.setTag("description", $translate.instant("bike.meta-description", metaData));
+            ngMeta.setTag("og:image", bike.data.image_file.url);
+          },
+          function (error) {
+            $state.go('404');
+          }
+        );
+      }
 
-      bike.showAttribute = function(attr) {
+      function isMobileCalendarView() {
+        return !!($mdMedia('xs') || $mdMedia('sm'));
+      };
+
+      function hasAccessories() {
+        return bike.data && bike.data.accessories && _.keys(bike.data.accessories).length;
+      }
+
+
+      function showAttribute(attr) {
         return !(attr == false || attr === null || attr === 'null' || typeof attr === 'undefined');
       };
 
-      bike.showGalleryDialog = function(event) {
+      function showGalleryDialog(event) {
         event.stopPropagation();
         $mdDialog.show({
           controller: GalleryDialogController,
@@ -122,7 +159,7 @@ angular.module('bike',[]).component('bike', {
         });
       };
 
-      bike.showCalendarDialog = function(event) {
+      function showCalendarDialog(event) {
         $mdDialog.show({
           controller: CalendarDialogController,
           controllerAs: 'calendarDialog',

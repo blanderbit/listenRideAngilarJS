@@ -74,7 +74,24 @@ angular.module('booking', [])
             function (success) {
               booking.bike = success.data.current;
               booking.coverageTotal = booking.bike.coverage_total || 0;
+              booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
+              booking.bikeSize = booking.bike.size === 0 ? $translate.instant("search.unisize") : booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
+              booking.prices = booking.bike.prices;
+              getLister();
+              updatePrices();
 
+              // EVENT BIKE LOGIC
+              booking.bike.event = {
+                id: 30,
+                name: 'Cycling World',
+                date: '23032019',
+                duration: 2,
+                type: 'slot',
+                slot_range: 2,
+                insurance: false
+              }
+
+              // CLUSTER BIKE LOGIC
               if (booking.bike.is_cluster) {
                 booking.cluster = success.data.cluster;
 
@@ -88,16 +105,6 @@ angular.module('booking', [])
                 booking.bike.accessories = booking.cluster.accessories;
                 booking.bike.ratings = booking.cluster.ratings;
               }
-
-              getLister();
-              booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-              if (booking.bike.size === 0) {
-                booking.bikeSize = $translate.instant("search.unisize");
-              } else {
-                booking.bikeSize = booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
-              }
-              booking.prices = booking.bike.prices;
-              updatePrices();
             },
             function (error) {
               notification.show(error, 'error');
@@ -122,7 +129,7 @@ angular.module('booking', [])
         }
 
         booking.insuranceAllowed = function () {
-          return _.includes(["DE", "AT"], booking.bike.country_code);
+          return _.includes(["DE", "AT"], booking.bike.country_code) && booking.bike.event && booking.bike.event.insurance;
         };
 
         booking.resetPassword = function() {
