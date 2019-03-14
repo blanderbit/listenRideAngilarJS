@@ -47,6 +47,7 @@ angular.module('bike').component('calendar', {
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
+          updateDynamicData();
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
             calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
@@ -55,6 +56,11 @@ angular.module('bike').component('calendar', {
           });
         }
       };
+
+      // some data we don't have on component init
+      function updateDynamicData() {
+        calendar.freeBike = calendar.prices[0].price <= 0;
+      }
 
       function initCalendarPicker() {
         var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function () {
@@ -168,12 +174,13 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
       calendar.event.slots= [];
-      calendar.event.familyId = 777;
-      calendar.event.days = _.range(22, 31);
+      calendar.event.familyId = 30; // cwd event
+      calendar.freeBike = false; //
+      calendar.event.days = _.range(23, 25);
 
-      var slotDuration = 1;
-      var eventYear = 2018;
-      var eventMonth = 8;   // Months start at 0
+      var slotDuration = 2;
+      var eventYear = 2019;
+      var eventMonth = 2;   // Months start at 0
 
       _.forEach(calendar.event.days, function(day) {
         generateSlot(day)

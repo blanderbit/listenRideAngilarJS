@@ -40,9 +40,13 @@
         </div>
       </div>
 
-      <!--TODO REMOVE family check after event calendar refactoring -->
-
-      <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center" ng-if="bike.data.family != 16">
+      <!--TODO: REMOVE family check after event calendar refactoring -->
+      <!-- Don't show detailed price for 2-hours Event Bikes -->
+      <div
+        ng-if="!bike.isTwoHoursEventBike"
+        class="bike__prices"
+        flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center"
+      >
         <div class="bike__prices-item" flex="30" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
             <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
@@ -67,14 +71,22 @@
         </div>
       </div>
 
-      <div class="bike__prices" flex-sm="45" flex-gt-sm="30" layout="row" layout-align="center center" ng-if="bike.data.family == 16">
+
+      <!-- Price view for 2-hours Events -->
+      <div
+        ng-if="bike.isTwoHoursEventBike"
+        class="bike__prices"
+        flex-sm="45" flex-gt-sm="30" layout="row" layout-align="center center"
+      >
         <div class="bike__prices-item" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
-            <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
+            <span ng-if="bike.data.prices[0].price > 0" class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
+            <span ng-if="bike.data.prices[0].price <= 0" class="md-headline">{{ 'bike.for-free' | translate }}</span>
           </div>
           <span class="md-caption">{{ 'bike.two-hours' | translate }}</span>
         </div>
       </div>
+
     </div>
 
     <md-button class="md-raised md-primary lnr-mv lnr-mh-x2" hide show-xs show-sm ng-click="bike.showCalendarDialog()">
@@ -103,7 +115,9 @@
           </div>
         </div>
 
-        <div layout="row" layout-xs="column" layout-align-gt-xs="center center">
+        <div
+          ng-if="bike.hasAccessories()"
+          layout="row" layout-xs="column" layout-align-gt-xs="center center">
           <div flex-gt-xs="25">
             <h3 class="md-body-2">{{ 'list.accessories.label' | translate }}</h3>
           </div>
@@ -193,7 +207,7 @@
 
       <div flex="30" hide-sm hide-xs>
         <calendar
-          ng-if="!bike.mobileCalendar()"
+          ng-if="!bike.isMobileCalendarView()"
           bike="bike.data"
           bike-cluster="bike.cluster"
           bike-id="bike.data.id"
