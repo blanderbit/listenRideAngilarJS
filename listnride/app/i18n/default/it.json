@@ -186,8 +186,8 @@
   },
   "cyclingworld": {
     "event": {
-      "title": "Cyclingworld event bike",
-      "subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
+      "calendar-title": "Cyclingworld event bike",
+      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
     }
   },
   "long-term": {
