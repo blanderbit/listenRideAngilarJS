@@ -92,7 +92,7 @@ angular.module('bike',[]).component('bike', {
 
             // dummy data
             // bike.event = {
-            //   id: 30,
+            //   id: 35,
             //   name: 'Cycling World',
             //   date: '23032019',
             //   duration: 2,
@@ -101,7 +101,7 @@ angular.module('bike',[]).component('bike', {
             //   insurance: false
             // }
 
-            bike.isTwoHoursEventBike = bike.data.family === 30; // cwd event page
+            bike.isTwoHoursEventBike = bike.data.family === 35; // cwd event page
 
 
             // META
