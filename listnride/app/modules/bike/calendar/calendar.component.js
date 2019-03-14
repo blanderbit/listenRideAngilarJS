@@ -163,7 +163,7 @@ angular.module('bike').component('calendar', {
 
       calendar.isDateValid = function() {
         return calendar.startDate && calendar.endDate &&
-          calendar.startDate.getTime() <= calendar.endDate.getTime();
+          calendar.startDate.getTime() < calendar.endDate.getTime();
       }
 
       /* ---------- CODE FOR THE EVENT CALENDAR 1 ---------- */
