@@ -38,7 +38,8 @@
               </div>
             </div>
             <div flex="20">
-              <p class="md-subhead lnr-bold lnr-right" style="margin: 0;">{{ overview.parent.subtotal | currency:"€":2 }}</p>
+              <p ng-if="overview.parent.subtotal > 0" class="md-subhead lnr-bold lnr-right" style="margin: 0;">{{ overview.parent.subtotal | currency:"€":2 }}</p>
+              <p ng-if="overview.parent.subtotal <= 0" class="md-subhead lnr-bold lnr-right" style="margin: 0;">{{ 'bike.for-free' | translate }}</p>
             </div>
           </div>
           <div class="spacer-xs"></div>
