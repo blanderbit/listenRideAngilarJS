@@ -242,20 +242,27 @@ angular.module('bike').component('calendar', {
 
       calendar.event.reserved = function() {
         for (var i = 0; i < calendar.requests.length; i ++) {
-          var startDate = new Date(calendar.requests[i].start_date);
-          var endDate = new Date(calendar.requests[i].end_date);
+          var startDate = new Date(calendar.requests[i].start_date_tz);
+          var endDate = new Date(calendar.requests[i].end_date_tz);
+
           var startDay = startDate.getDate();
-          var startTime = startDate.getHours();
-          var endTime = endDate.getHours();
+          var startTime = moment.utc(calendar.requests[i].start_date_tz).format('HH')
+          var endTime = moment.utc(calendar.requests[i].end_date_tz).format('HH')
           var startYear = startDate.getFullYear();
           var startMonth = startDate.getMonth();
+
+
+
+
+
 
           for (var j = 0; j < calendar.event.slots.length; j ++) {
             if (startYear == eventYear &&
                 startMonth == eventMonth &&
                 calendar.event.slots[j].day == startDay &&
-                startTime >= calendar.event.slots[j].hour &&
-                (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
+                startTime == calendar.event.slots[j].hour) {
+                // Additional Rule: Add this rule to disable time slots before already booked by this user
+                // && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime))
               calendar.event.slots[j].reserved = true;
               calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + ' ('+ $translate.instant('calendar.booked')+')';
               // calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";

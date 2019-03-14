@@ -17,16 +17,16 @@
                 <img flex="100" ng-src="{{ overview.parent.bike.image_file }}" />
               </a>
             </div>
-            <div flex="30" flex-xs="60" layout="column">
+            <div flex="35" flex-xs="60" layout="column">
               <a class="md-title lnr-black" ui-sref="bike({bikeId: overview.parent.bike.id})" target="_blank">{{ overview.parent.bike.brand   }}, {{ overview.parent.bikeCategory }}</a>
               <br>
               <div layout="row" layout-align="space-between none">
                 <span flex="45" class="md-body-2">{{ 'settings.from' | translate }}</span>
-                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.startDate | date }}</span>
+                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.startDate | date }} <i>{{overview.parent.startDate | date:'HH:mm' }}</i></span>
               </div>
               <div layout="row" layout-align="space-between none">
                 <span flex="45" class="md-body-2">{{ 'settings.to' | translate }}</span>
-                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.endDate | date }}</span>
+                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.endDate | date }} <i>{{overview.parent.endDate | date:'HH:mm' }}</i></span>
               </div>
               <div layout="row" layout-align="space-between none">
                 <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>

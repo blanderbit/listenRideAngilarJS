@@ -17,7 +17,7 @@
 
 /**
  * GRID
- *
+ * xs............min-width: 599px
  * gt-sm.........min-width: 960px
  * lg............min-width: 1280px
  * gt-lg.........min-width: 1920px
@@ -1097,10 +1097,17 @@ settings .lnr-clickable .lnr-profile-figure__change {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 settings .lnr-clickable:hover .lnr-profile-figure__change {
   transform: translate(-50%, 0);
+}
+
+@media (max-width: 599px) {
+  settings .lnr-clickable .lnr-profile-figure__change {
+    transform: translate(-50%, 0);
+  }
 }
 
 .cropArea {

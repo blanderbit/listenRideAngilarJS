@@ -35,7 +35,7 @@ angular.module('receipt', []).component('receipt', {
           setDefaultPrices();
         }
 
-        receipt.freeBike = receipt.prices[0].price <= 0;
+        receipt.freeBike = receipt.prices && receipt.prices[0].price <= 0;
       }
 
       function setPrices() {
