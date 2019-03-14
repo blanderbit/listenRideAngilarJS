@@ -27,7 +27,7 @@ angular.module('event', []).component('event', {
           'lardita-arezzo': getRequestUrl('30', 'Arezzo, Tuscany', '', '2019-03-24'),
           'granfondo-via-del-sale': getRequestUrl('30', 'Cesenatico', '', '2019-05-05'),
           'giro-sardegna': getRequestUrl('30', 'Cagliari', '', '2019-04-21'),
-          'cyclingworld': getRequestUrl('43', 'Düsseldorf', '', '2019-03-24'),
+          'cyclingworld': getRequestUrl('43', 'Düsseldorf', '', '2019-03-24', '/rides?family=30'),
           'paris-brest-paris': getRequestUrl('30', 'Rambouillet, France', '', '2019-08-18')
 
           // CUSTOM DESIGN AND OLD PAGES
@@ -71,7 +71,7 @@ angular.module('event', []).component('event', {
         event.getEvents();
       }
 
-      function getRequestUrl(categoryIds, location, priority, date){
+      function getRequestUrl(categoryIds, location, priority, date, specialUrl){
 
         var queryParams = {
           'category' : categoryIds,
@@ -84,7 +84,7 @@ angular.module('event', []).component('event', {
         _.forEach(queryParams, function(value, key) {
           if(value) queryArray.push(key + '=' + encodeURIComponent(value));
         });
-        return '/rides?' + queryArray.join('&');
+        return specialUrl ? specialUrl  : '/rides?' + queryArray.join('&');
       }
       function getEvents() {
         api.get(event.path).then(
