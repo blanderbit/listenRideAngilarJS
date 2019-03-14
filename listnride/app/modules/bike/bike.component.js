@@ -97,7 +97,8 @@ angular.module('bike',[]).component('bike', {
             //   date: '23032019',
             //   duration: 2,
             //   type: 'slot',
-            //   slot_range: 2
+            //   slot_range: 2,
+            //   insurance: false
             // }
 
             bike.isTwoHoursEventBike = bike.data.family === 30; // cwd event page
