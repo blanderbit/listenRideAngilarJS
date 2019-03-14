@@ -189,8 +189,13 @@ angular.module('filter',[])
 
         function filterSize(bikes) {
           if (filter.sizes && filter.currentSize != filter.sizes[0].value) {
-            return _.filter(bikes, function(o){
-              return o.size == filter.currentSize;
+            return _.filter(bikes, function (bike) {
+              if (bike.is_cluster) {
+                var clusterSizes = _.map(bike.cluster.sizes, 'size');
+                return _.includes(clusterSizes, Number(filter.currentSize));
+              } else {
+                return bike.size == filter.currentSize;
+              }
             });
           } else {
             return bikes;

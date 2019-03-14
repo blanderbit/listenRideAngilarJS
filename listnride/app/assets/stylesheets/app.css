@@ -17,7 +17,7 @@
 
 /**
  * GRID
- *
+ * xs............min-width: 599px
  * gt-sm.........min-width: 960px
  * lg............min-width: 1280px
  * gt-lg.........min-width: 1920px
@@ -1078,6 +1078,36 @@ md-tooltip .md-content {
 settings .lnr-profile-lrg {
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow: hidden;
+  background-clip: content-box;
+}
+
+settings .lnr-clickable .lnr-profile-figure__change {
+  width: 100%;
+  height: 25%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .6);
+  transition: transform .2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+settings .lnr-clickable:hover .lnr-profile-figure__change {
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 599px) {
+  settings .lnr-clickable .lnr-profile-figure__change {
+    transform: translate(-50%, 0);
+  }
 }
 
 .cropArea {

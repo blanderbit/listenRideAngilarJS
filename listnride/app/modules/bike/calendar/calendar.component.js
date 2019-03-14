@@ -47,6 +47,7 @@ angular.module('bike').component('calendar', {
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
+          updateDynamicData();
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
             calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
@@ -55,6 +56,11 @@ angular.module('bike').component('calendar', {
           });
         }
       };
+
+      // some data we don't have on component init
+      function updateDynamicData() {
+        calendar.freeBike = calendar.prices[0].price <= 0;
+      }
 
       function initCalendarPicker() {
         var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function () {
@@ -157,7 +163,7 @@ angular.module('bike').component('calendar', {
 
       calendar.isDateValid = function() {
         return calendar.startDate && calendar.endDate &&
-          calendar.startDate.getTime() <= calendar.endDate.getTime();
+          calendar.startDate.getTime() < calendar.endDate.getTime();
       }
 
       /* ---------- CODE FOR THE EVENT CALENDAR 1 ---------- */
@@ -168,12 +174,13 @@ angular.module('bike').component('calendar', {
       calendar.event.pickupSlotId;
       calendar.event.returnSlotId;
       calendar.event.slots= [];
-      calendar.event.familyId = 777;
-      calendar.event.days = _.range(22, 31);
+      calendar.event.familyId = 35; // cwd event
+      calendar.freeBike = false; //
+      calendar.event.days = _.range(23, 25);
 
-      var slotDuration = 1;
-      var eventYear = 2018;
-      var eventMonth = 8;   // Months start at 0
+      var slotDuration = 2;
+      var eventYear = 2019;
+      var eventMonth = 2;   // Months start at 0
 
       _.forEach(calendar.event.days, function(day) {
         generateSlot(day)
@@ -235,20 +242,27 @@ angular.module('bike').component('calendar', {
 
       calendar.event.reserved = function() {
         for (var i = 0; i < calendar.requests.length; i ++) {
-          var startDate = new Date(calendar.requests[i].start_date);
-          var endDate = new Date(calendar.requests[i].end_date);
+          var startDate = new Date(calendar.requests[i].start_date_tz);
+          var endDate = new Date(calendar.requests[i].end_date_tz);
+
           var startDay = startDate.getDate();
-          var startTime = startDate.getHours();
-          var endTime = endDate.getHours();
+          var startTime = moment.utc(calendar.requests[i].start_date_tz).format('HH')
+          var endTime = moment.utc(calendar.requests[i].end_date_tz).format('HH')
           var startYear = startDate.getFullYear();
           var startMonth = startDate.getMonth();
+
+
+
+
+
 
           for (var j = 0; j < calendar.event.slots.length; j ++) {
             if (startYear == eventYear &&
                 startMonth == eventMonth &&
                 calendar.event.slots[j].day == startDay &&
-                startTime >= calendar.event.slots[j].hour &&
-                (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime)) {
+                startTime == calendar.event.slots[j].hour) {
+                // Additional Rule: Add this rule to disable time slots before already booked by this user
+                // && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime))
               calendar.event.slots[j].reserved = true;
               calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + ' ('+ $translate.instant('calendar.booked')+')';
               // calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";

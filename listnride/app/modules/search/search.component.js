@@ -408,7 +408,15 @@ angular.module('search',[]).component('search', {
 
         search.unavailableIds = search.unavailableIds.map(Number);
         search.unavailableBikes = _.remove(search.filteredDateBikes, function (bike) {
-          return _.includes(search.unavailableIds, bike.id);
+          if (bike.is_cluster) {
+            var availableBikeIds = _.difference(
+              _.map(bike.cluster.variations, 'id'),
+              search.unavailableIds
+            );
+            return availableBikeIds.length === 0;
+          } else {
+            return _.includes(search.unavailableIds, bike.id);
+          }
         });
         search.categorizedFilteredBikes = [{
           title: "All Bikes",

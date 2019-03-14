@@ -182,6 +182,12 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "cyclingworld": {
+    "event": {
+      "calendar-title": "Testbikes voor de Cyclingworld",
+      "calendar-subtitle": "Voor de Gravel-rit op zondag en tijdens het hele weekend van de Cyclingworld kun je een 2 uur durende proefrit boeken."
+    }
+  },
   "long-term": {
     "header": "Kies uw huurfiets voor je verblijf",
     "subheader": "listnride biedt een breed scala aan hoogwaardige huurfietsen voor je langere verblijf. Vind de juiste mobiliteitsoplossing.",
@@ -771,6 +777,7 @@
   },
   "bike": {
     "rent-bike": "Fiets huren",
+    "for-free": "Gratis testrijden",
     "two-hours": "voor 2 uur",
     "view-pictures": "Foto's bekijken",
     "meta-title": "Huur de {{name}} - {{category}} van {{brand}} in {{location}}",

@@ -187,6 +187,12 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "cyclingworld": {
+    "event": {
+      "calendar-title": "Testbikes for Cyclingworld",
+      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    }
+  },
   "long-term": {
     "header": "Choose your rental bike for your long-term stay",
     "subheader": "listnride offers a wide range of high quality rental bikes for your long-term stay. Find the right mobility solution for you.",
@@ -780,6 +786,7 @@
   },
   "bike": {
     "rent-bike": "Rent Bike",
+    "for-free": "Test for Free",
     "two-hours": "for 2 hours",
     "view-pictures": "View Pictures",
     "for": "for",

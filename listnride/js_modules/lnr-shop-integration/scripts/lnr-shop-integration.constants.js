@@ -82,35 +82,45 @@ var lnrConstants = {
         "variants_available": "Variants available"
       },
       "all-brands": "All Brands",
-      "all-categories": "All categories"
+      "all-categories": "All categories",
+      "all-locations": "All locations",
+      "all-sizes": "All sizes"
     },
     "de": {
       "statuses": {
         "variants_available": "Varianten verf&uuml;gbar"
       },
       "all-brands": "Alle Marken",
-      "all-categories": "All categories"
+      "all-categories": "All categories",
+      "all-locations": "Alle Standorte",
+      "all-sizes": "Alle Gr&ouml;&szlig;en",
     },
     "nl": {
       "statuses": {
         "variants_available": "Varianten beschikbaar"
       },
       "all-brands": "Alle merken",
-      "all-categories": "All categories"
+      "all-categories": "All categories",
+      "all-locations": "Alle locaties",
+      "all-sizes": "Alle maten"
     },
     "it": {
       "statuses": {
         "variants_available": "Varianti disponibili"
       },
       "all-brands": "Tutte le marche",
-      "all-categories": "All categories"
+      "all-categories": "All categories",
+      "all-locations": "All locations",
+      "all-sizes": "All sizes"
     },
     "es": {
       "statuses": {
         "variants_available": "Variantes disponibles"
       },
       "all-brands": "Todas las marcas",
-      "all-categories": "All categories"
+      "all-categories": "All categories",
+      "all-locations": "All locations",
+      "all-sizes": "All sizes"
     },
   },
   // map of the categories for en, de and nl languages

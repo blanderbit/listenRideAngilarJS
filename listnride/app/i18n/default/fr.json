@@ -187,6 +187,12 @@
       "subheader": "Rencontrez des gens qui partagent les mêmes passions et gagnez de l'argent de poche"
     }
   },
+  "cyclingworld": {
+    "event": {
+      "calendar-title": "Vélos à tester à Cyclingworld",
+      "calendar-subtitle": "Pendant la Gravelride et tout le weekend du Cyclingworld, vous pouvez louer un vélo gratuitement pendant 2 heures. "
+    }
+  },
   "long-term": {
     "header": "Choisissez votre vélo de location pour votre séjour",
     "subheader": "listnride propose une large gamme de vélos de location de haute qualité pour votre séjour. Trouvez la solution de mobilité qui vous convient.",
@@ -777,6 +783,7 @@
   },
   "bike": {
     "rent-bike": "Rent Bike",
+    "for-free": "Testez gratuitement",
     "two-hours": "for 2 hours",
     "view-pictures": "View Pictures",
     "for": "for",

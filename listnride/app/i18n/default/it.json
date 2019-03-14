@@ -184,6 +184,12 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "cyclingworld": {
+    "event": {
+      "calendar-title": "Prova bici per il Cyclingworld ",
+      "calendar-subtitle": "Per il giro Gravel di domenica e durante l'intero weekend del Cyclingworld è possibile prenotare un giro di prova di 2 ore."
+    }
+  },
   "long-term": {
     "header": "Scegli la tua bici a noleggio per il tuo soggiorno di lunga durata",
     "subheader": "listnride offre una vasta gamma di biciclette a noleggio di alta qualità per il tuo soggiorno a lungo termine. Trova la giusta soluzione per te.",
@@ -771,6 +777,7 @@
   },
   "bike": {
     "rent-bike": "Noleggio bicicletta",
+    "for-free": "Prova gratis",
     "two-hours": "for 2 hours",
     "view-pictures": "Visualizza le immagini",
     "for": "per",

@@ -8,7 +8,8 @@ angular.module('categoryFilter', [])
       currentCategories: '=',
       onFilterChange: '<?',
       onlyParentCategories: '<?',
-      hideCategoryCheckbox:'<?'
+      hideCategoryCheckbox:'<?',
+      onlySinglePick: '<?'
     },
     controller: [
       '$translate',
@@ -40,6 +41,7 @@ angular.module('categoryFilter', [])
         };
 
         function checkDisabled(subcategoryId) {
+          if (!categoryFilter.onlySinglePick) return;
           if (categoryFilter.currentCategories.length) {
             return categoryFilter.currentCategories[0] !== subcategoryId;
           }
