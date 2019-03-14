@@ -184,8 +184,8 @@
   },
   "cyclingworld": {
     "event": {
-      "calendar-title": "Cyclingworld event bike",
-      "calendar-subtitle": "The UCI Road World Championships will take place in Innsbruck-Tirol (Austria) from 22nd to 30th September 2018. Test and rent the perfect road bike for your ride. "
+      "calendar-title": "Testbikes voor de Cyclingworld",
+      "calendar-subtitle": "Voor de Gravel-rit op zondag en tijdens het hele weekend van de Cyclingworld kun je een 2 uur durende proefrit boeken."
     }
   },
   "long-term": {
@@ -777,7 +777,7 @@
   },
   "bike": {
     "rent-bike": "Fiets huren",
-    "for-free": "Free",
+    "for-free": "Gratis testrijden",
     "two-hours": "voor 2 uur",
     "view-pictures": "Foto's bekijken",
     "meta-title": "Huur de {{name}} - {{category}} van {{brand}} in {{location}}",
