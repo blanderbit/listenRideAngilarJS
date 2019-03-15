@@ -607,7 +607,7 @@ angular.module('bike').component('calendar', {
             var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
             api.get('/clusters/' + calendar.cluster.id + '?start_date=' + moment(calendar.startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays).then(function (response) {
               _.map(calendar.bikeClusterSizes, function(option){
-                if (!response.data.rides[option.size]) option.notAvailable = true;
+                option.notAvailable = !response.data.rides[option.size];
               });
               calendar.cluster.rides = response.data.rides;
             });
