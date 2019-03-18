@@ -610,6 +610,12 @@ angular.module('bike').component('calendar', {
                 option.notAvailable = !response.data.rides[option.size];
               });
               calendar.cluster.rides = response.data.rides;
+
+              // update scope one more time
+              _.defer(function () {
+                $scope.$apply();
+              });
+
             });
           }
 
