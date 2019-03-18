@@ -23,7 +23,29 @@ angular.module('message',[]).component('message', {
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
       var hasInsurance = !!message.request.insurance;
+
+      message.STATUSES = {
+        'REQUESTED': 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride
+        'ACCEPTED': 2, // You accepted the Request || Lister accepted your Request CONFIRM / CANCEL
+        'CONFIRMED': 3, // Ride confirmed and will rent ride CONFIRM RETURN || You confirmed and will rent a ride
+        'ONE_SIDE_RATE': 4, // Lister confirmed return || Rider leaves rate
+        'BOTH_SIDES_RATE': 5, // Lister and Rider rates each other || Rental complete
+        'RATE_RIDE': 6, // Rider rated lister || Rental complete # Will be skipped
+        'COMPLETE': 7, // Rental complete
+        'LISTER_CANCELED': 8, // Lister cancelled
+        'RIDER_CANCELED': 9, // Rider cancelled
+        'SYSTEM_CANCELED': 10, // Passed due date
+        'MANUALLY_CANCELED': 11 // Canceled manually by us because of various reasons
+      }
+
+      // Dont display messages with following statuses to Rider;
+      var notDisplayableStatusMessagesRider = [message.STATUSES.ACCEPTED, message.STATUSES.COMPLETE, message.STATUSES.ONE_SIDE_RATE];
+      // Dont display messages with following statuses to Lister;
+      var notDisplayableStatusMessagesLister = [message.STATUSES.COMPLETE, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
+
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
+
+      // Request statuses, unused in this controller commented
 
       if (messageDate.format('LL') === todayDate.format('LL')){
         $translate(["shared.today"]).then(
@@ -90,18 +112,29 @@ angular.module('message',[]).component('message', {
         return message.status == null && $localStorage.userId != message.sender;
       };
 
-      message.statusMessage = function() {
+      message.ChangedRequestStatusNotification = function() {
         if (message.request.rideChat) {
-          return message.status != null && message.status != 7 && message.status != 2 && message.status != 4;
+          return message.status != null && !notDisplayableStatusMessagesRider.includes(message.status);
         } else {
-          return message.status != null && message.status != 7 && message.status != 6 && message.status != 2 && message.status != 4;
+          return message.status != null && !notDisplayableStatusMessagesLister.includes(message.status);
         }
-        // return message.status != null && message.status != 7 && (!message.request.rideChat && message.status != 6);
       };
 
-      message.showReturn = function () {
-        return !message.request.rideChat &&
-          message.status === 3 &&
+      message.showReturnButton = function () {
+        return !message.request.rideChat && message.isReturnable()
+      };
+
+      message.userAlreadyRated = function () {
+        return message.request.status >= message.STATUSES.BOTH_SIDES_RATE ||
+          message.request.status == message.STATUSES.ONE_SIDE_RATE && message.currentUserRated();
+      }
+
+      message.currentUserRated = function () {
+        return message.request.ratings[0].author_id == $localStorage.userId;
+      }
+
+      message.isReturnable = function () {
+          return message.status == message.STATUSES.BOTH_SIDES_RATE &&
           message.request.returnable &&
           moment().diff(message.request.start_date) > 0
       };
@@ -127,7 +160,7 @@ angular.module('message',[]).component('message', {
 
         api.put("/requests/" + message.request.id, data).then(
           function(success) {
-            if (statusId === 8) {
+            if (statusId === message.STATUSES.LISTER_CANCELED) {
               $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Reject'});
             }
           },

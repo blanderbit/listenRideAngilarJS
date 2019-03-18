@@ -13,7 +13,7 @@
 </div>
 
 <div
-    ng-if="message.statusMessage() && message.status == 1 && message.request.rideChat"
+    ng-if="message.ChangedRequestStatusNotification() && message.status == message.STATUSES.REQUESTED && message.request.rideChat"
     layout="column"
     layout-align="center center">
   <img
@@ -31,7 +31,7 @@
 </div>
 
 <div
-    ng-if="message.statusMessage() && message.status == 1 && !message.request.rideChat"
+    ng-if="message.ChangedRequestStatusNotification() && message.status == message.STATUSES.REQUESTED && !message.request.rideChat"
     layout="column"
     layout-align="center center">
   <img
@@ -48,7 +48,7 @@
   </input-stars>
 </div>
 
-<div ng-if="message.statusMessage()" layout="row" layout-align="center end">
+<div ng-if="message.ChangedRequestStatusNotification() || message.status == message.STATUSES.COMPLETE" layout="row" layout-align="center end">
   <div
       class="lnr-message status-message"
       flex="40"
@@ -65,7 +65,7 @@
       >
     </p>
     <!-- Insurance Certificates Download -->
-    <div ng-if="message.request.rideChat && message.status == 3 && message.request.insurance.items_uid">
+    <div ng-if="message.request.rideChat && message.status == message.STATUSES.CONFIRMED && message.request.insurance.items_uid">
       <md-divider></md-divider>
       <p
         class="lnr-center">
@@ -81,14 +81,14 @@
     </div>
     <!-- END -->
 
-    <div ng-if="!message.request.rideChat && message.status == 1">
+    <div ng-if="!message.request.rideChat && message.status == message.STATUSES.REQUESTED">
       <div layout-gt-sm="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <confirmation
             button-class="'message-button md-raised md-warn lnr-m-0 md-button md-ink-ripple'"
             button-text="'message.reject'"
             button-disable="message.request.status != 1 || message.buttonClicked"
             confirm-text="'Are you sure?'"
-            on-success="message.updateStatus(8)">
+            on-success="message.updateStatus(message.STATUSES.LISTER_CANCELED)">
         </confirmation>
         <md-button
           class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
@@ -100,11 +100,11 @@
       </div>
     </div>
 
-    <div ng-if="message.showReturn()">
+    <div ng-if="message.showReturnButton()">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
           class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
-          ng-disabled="message.request.status != 3"
+          ng-disabled="message.userAlreadyRated()"
           ng-click="message.showRatingDialog()"
         >
           {{ 'message.confirm_return' | translate }}
@@ -112,30 +112,30 @@
       </div>
     </div>
 
-    <div ng-if="message.request.rideChat && message.status == 1">
+    <div ng-if="message.request.rideChat && message.status == message.STATUSES.REQUESTED">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <confirmation
             button-class="'message-button md-raised lnr-m-0 md-button md-ink-ripple md-warn'"
             button-text="'shared.cancel'"
-            button-disable="message.request.status != 1"
+            button-disable="message.request.status != message.STATUSES.REQUESTED"
             confirm-text="'Are you sure?'"
-            on-success="message.updateStatus(9)">
+            on-success="message.updateStatus(message.STATUSES.RIDER_CANCELED)">
         </confirmation>
       </div>
     </div>
 
-    <div ng-if="message.request.rideChat && message.status == 2">
+    <div ng-if="message.request.rideChat && message.status == message.STATUSES.ACCEPTED">
       <div layout-gt-sm="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
           class="message-button md-raised lnr-m-0 md-button md-ink-ripple md-warn"
-          ng-disabled="message.request.status != 2"
-          ng-click="message.updateStatus(9)"
+          ng-disabled="message.request.status != message.STATUSES.ACCEPTED"
+          ng-click="message.updateStatus(message.STATUSES.RIDER_CANCELED)"
         >
           {{ 'shared.cancel' | translate }}
         </md-button>
         <md-button
           class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
-          ng-disabled="message.request.status != 2"
+          ng-disabled="message.request.status != message.STATUSES.ACCEPTED"
           ng-click="message.confirmBooking()"
         >
           {{ 'message.confirm' | translate }}
@@ -143,11 +143,11 @@
       </div>
     </div>
 
-    <div ng-if="message.request.rideChat && message.status == 5">
+    <div ng-if="message.isReturnable() && message.request.rideChat">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <md-button
           class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
-          ng-disabled="message.request.status != 5"
+          ng-disabled="message.userAlreadyRated()"
           ng-click="message.showRatingDialog()"
         >
           {{ 'message.rate' | translate }}
