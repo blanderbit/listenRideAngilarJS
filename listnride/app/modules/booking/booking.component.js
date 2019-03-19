@@ -81,15 +81,15 @@ angular.module('booking', [])
               updatePrices();
 
               // EVENT BIKE LOGIC
-              booking.bike.event = {
-                id: 35,
-                name: 'Cycling World',
-                date: '23032019',
-                duration: 2,
-                type: 'slot',
-                slot_range: 2,
-                insurance: false
-              }
+              // booking.bike.event = {
+              //   id: 35,
+              //   name: 'Cycling World',
+              //   date: '23032019',
+              //   duration: 2,
+              //   type: 'slot',
+              //   slot_range: 2,
+              //   insurance: false
+              // }
 
               // CLUSTER BIKE LOGIC
               if (booking.bike.is_cluster) {
@@ -129,8 +129,16 @@ angular.module('booking', [])
         }
 
         booking.insuranceAllowed = function () {
-          return _.includes(["DE", "AT"], booking.bike.country_code) && booking.bike.event && booking.bike.event.insurance;
+          return insuranceCountry() && eventBikeIncludeInsurance();
         };
+
+        function insuranceCountry() {
+          return _.includes(["DE", "AT"], booking.bike.country_code)
+        }
+
+        function eventBikeIncludeInsurance() {
+          return booking.bike.event ? booking.bike.event.insurance : true;
+        }
 
         booking.resetPassword = function() {
           //Set from error if any
