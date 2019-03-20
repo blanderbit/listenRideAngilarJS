@@ -315,6 +315,26 @@ angular.module('requests', ['infinite-scroll'])
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
               updateStatus(STATUSES.CONFIRMED, true);
+
+              var bikeData = requests.request;
+              ga('ecommerce:addTransaction', {
+                'id': bikeData.id,
+                'affiliation': bikeData.lister.id,
+                'revenue': bikeData.total,
+                'shipping': '',
+                'tax': ''
+              });
+
+              ga('ecommerce:addItem', {
+                'id': bikeData.id,
+                'name': bikeData.ride.brand + ', ' + bikeData.ride.name + ', ' +bikeData.ride.size,
+                'sku': bikeData.ride.id,
+                'category': bikeData.ride.category.name,
+                'price': bikeData.total,
+                'quantity': '1'
+              });
+              ga('ecommerce:send');
+
               $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Accept'});
             } else {
               // Lister has no payout method yet, so show the payout method dialog
