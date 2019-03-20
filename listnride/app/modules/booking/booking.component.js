@@ -82,7 +82,6 @@ angular.module('booking', [])
 
               // EVENT BIKE LOGIC
               if (booking.bike.family == 35) {
-                booking.coverageTotal = 0;
                 booking.bike.event = {
                   id: 35,
                   name: 'Cycling World',
