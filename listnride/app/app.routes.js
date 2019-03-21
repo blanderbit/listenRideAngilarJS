@@ -19,8 +19,25 @@
   'use strict';
   angular.
   module('listnride').
-  config(['$stateProvider', '$urlRouterProvider',
-    function ($stateProvider, $urlRouterProvider) {
+  config(['$stateProvider', '$urlRouterProvider', '$urlServiceProvider',
+    function ($stateProvider, $urlRouterProvider, $urlServiceProvider) {
+
+      // Custom type
+      $urlServiceProvider.config.type('underscoreEncodedSpaces', {
+        pattern: /[^\/]+/,
+        encode: function (location) {
+          return location.replace(/ /g, '_');
+        },
+        decode: function (location) {
+          return location.replace(/_/g, ' ');
+        },
+        equals: function (left, right) {
+          return left === right;
+        },
+        is: function (value) {
+          return typeof value === 'string';
+        }
+      });
 
       /* ------------------------------------ */
       /* LNR_PAGES */
@@ -1513,10 +1530,25 @@
       /* CITY_PAGES */
       /* ------------------------------------ */
 
+      var redirectHook = ['$transition$', '$state$', function ($transition$, $state$) {
+        var SPACE_URL_ENCODED = encodeURIComponent(' ');
+
+        var rawUrlPath = $urlServiceProvider.url();
+        var redirectedFrom = $transition$.redirectedFrom();
+
+        var isSecondRedirectToSameState = redirectedFrom !== null && redirectedFrom.to().name === $state$.name;
+
+        if (rawUrlPath.indexOf(SPACE_URL_ENCODED) >= 0 && !isSecondRedirectToSameState) {
+          var params = $transition$.targetState().params();
+          return $transition$.router.stateService.target($state$.name, params);
+        }
+      }];
+
       $stateProvider.state({
         name: 'categoryLanding',
-        url: '/{city}/{category}',
+        url: '/{city:underscoreEncodedSpaces}/{category}',
         template: '<category-landing></category-landing>',
+        onEnter: redirectHook,
         meta: {
           disableUpdate: false,
           'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg',
@@ -1526,8 +1558,9 @@
 
       $stateProvider.state({
         name: 'cityLanding',
-        url: '/{city}',
+        url: '/{city:underscoreEncodedSpaces}',
         template: '<city-landing></city-landing>',
+        onEnter: redirectHook,
         meta: {
           disableUpdate: false,
           'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg',
