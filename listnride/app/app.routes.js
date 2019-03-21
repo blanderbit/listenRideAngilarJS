@@ -802,6 +802,27 @@
         }
       });
 
+      // booking calendar
+      $stateProvider.state({
+        name: 'bookingCalendar',
+        url: '/booking-calendar',
+        template: '<booking-calendar></booking-calendar>',
+        reloadOnSearch: false,
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["booking-calendar.meta-title", "booking-calendar.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["booking-calendar.meta-title"]);
+                ngMeta.setTag("description", translations["booking-calendar.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* EVENT_PAGES */
       /* ------------------------------------ */
