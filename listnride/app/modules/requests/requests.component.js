@@ -321,13 +321,11 @@ angular.module('requests', ['infinite-scroll'])
                 'id': bikeData.id,
                 'affiliation': bikeData.lister.id,
                 'revenue': bikeData.total,
-                'shipping': '',
-                'tax': ''
+                'tax': '0.19' // vat tax
               });
-
               ga('ecommerce:addItem', {
                 'id': bikeData.id,
-                'name': bikeData.ride.brand + ', ' + bikeData.ride.name + ', ' +bikeData.ride.size,
+                'name': bikeData.ride.brand + ', ' + bikeData.ride.name + ', ' + bikeData.ride.size,
                 'sku': bikeData.ride.id,
                 'category': bikeData.ride.category.name,
                 'price': bikeData.total,
