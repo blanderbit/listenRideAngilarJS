@@ -61,7 +61,6 @@ angular.module('booking', [])
           // INVOCATIONS
           paymentHelper.setupBraintreeClient();
           getBikeData();
-          updateCluster(booking.startDate, booking.endDate);
 
           // After material tabs inited
           $timeout(function () {
@@ -100,8 +99,8 @@ angular.module('booking', [])
               // CLUSTER BIKE LOGIC
               if (booking.bike.is_cluster) {
                 booking.cluster = success.data.cluster;
-                booking.availableSizes = booking.cluster.sizes;
-                bikeCluster.sizeTranslations(booking.availableSizes);
+                booking.bikeClusterSizes = booking.cluster.sizes;
+                bikeCluster.sizeTranslations(booking.bikeClusterSizes);
 
                 // remove primary bike from variations array
                 booking.cluster.variations = _.filter(booking.cluster.variations, function (variant) {
@@ -119,19 +118,6 @@ angular.module('booking', [])
               $state.go('home');
             }
           );
-        }
-
-        function updateCluster(startDate, endDate) {
-          if (booking.bike.is_cluster) {
-            var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
-            api.get('/clusters/' + booking.cluster.id + '?start_date=' + moment(booking.startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays).then(function (response) {
-              _.map(booking.cluster.sizes, function(option){
-                option.notAvailable = !response.data.rides[option.size];
-              });
-
-              booking.isDateValid = validDates();
-            });
-          }
         }
 
         function getLister() {
@@ -195,7 +181,8 @@ angular.module('booking', [])
             booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
             updatePrices();
             setInitHours();
-            updateCluster(booking.startDate, booking.endDate);
+            booking.isDateValid = validDates();
+            bikeCluster.updateCluster(booking, booking.startDate, booking.endDate, $scope);
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         };
