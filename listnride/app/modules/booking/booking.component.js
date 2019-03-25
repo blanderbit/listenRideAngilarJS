@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
       '$timeout', '$analytics', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeOptions', 'date'
-,      function BookingController(
+      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'date', 'bikeCluster',
+       function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, date) {
+        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, date, bikeCluster) {
         var booking = this;
 
         booking.$onInit = function () {
@@ -97,20 +97,11 @@ angular.module('booking', [])
                 }
               }
 
-
               // CLUSTER BIKE LOGIC
               if (booking.bike.is_cluster) {
                 booking.cluster = success.data.cluster;
                 booking.availableSizes = booking.cluster.sizes;
-
-                // get size translations
-                bikeOptions.sizeOptions(false, true).then(function (resolve) {
-                  _.map(booking.availableSizes, function (option) {
-                    option.name = _.find(resolve, function (o) {
-                      return o.value === option.size;
-                    }).label;
-                  });
-                });
+                bikeCluster.sizeTranslations(booking.availableSizes);
 
                 // remove primary bike from variations array
                 booking.cluster.variations = _.filter(booking.cluster.variations, function (variant) {
