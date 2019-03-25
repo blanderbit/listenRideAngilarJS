@@ -525,6 +525,10 @@ angular.module('requests', ['infinite-scroll'])
               function (error) {
                 notification.show(error, 'error');
               }
+            ).then (
+              function () {
+                loadRequest(requests.request.id, true, 0);
+              }
             );
           }
         ratingDialog.hide = hideDialog;
