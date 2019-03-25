@@ -93,10 +93,7 @@ angular.module('requests', ['infinite-scroll'])
         requests.requestsLeft = false;
         requests.is_rider = function (request) {
           return request.user.id === $localStorage.userId
-        }
-        requests.is_lister = function (request) {
-          return request.user.id !== $localStorage.userId
-        }
+        };
 
         // methods
         // requests.nextPage = nextPage;
@@ -492,15 +489,6 @@ angular.module('requests', ['infinite-scroll'])
         });
       }
 
-      function userAlreadyRated () {
-        return request.status >= STATUSES.BOTH_SIDES_RATE ||
-          request.status == STATUSES.ONE_SIDE_RATE && currentUserRated();
-      }
-
-      function currentUserRated () {
-        return request.ratings[0].author_id == $localStorage.userId;
-      }
-
       function RatingDialogController () {
         var ratingDialog = this;
 
@@ -523,14 +511,14 @@ angular.module('requests', ['infinite-scroll'])
               function () {
                 reloadRequest(requests.request.id);
                 // rating > 3 and user has no business
-                if (parseInt(ratingDialog.rating) > 3 && !$localStorage.isBusiness && userAlreadyRated()) {
-                  // show lister dialog
-                  if (requests.request.is_lister) {
-                    showListerDialog(event);
-                  }
+                if (parseInt(ratingDialog.rating) > 3 && !$localStorage.isBusiness) {
                   // show rider dialog
-                  else if (requests.request.is_rider) {
+                  if (requests.is_rider(requests.request)) {
                     showRiderDialog(event);
+                  }
+                  // show lister dialog
+                  else {
+                    showListerDialog(event);
                   }
                 }
               },
@@ -538,7 +526,7 @@ angular.module('requests', ['infinite-scroll'])
                 notification.show(error, 'error');
               }
             );
-          },
+          }
         ratingDialog.hide = hideDialog;
       };
 
