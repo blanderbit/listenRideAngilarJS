@@ -74,7 +74,7 @@ angular.module('bike',[]).component('bike', {
                 return variant.id !== bike.data.id;
               });
 
-              bikeCluster.sizeTranslations(bike.availableSizes);
+              bikeCluster.getSizeTranslations(bike.availableSizes);
 
               // change some params to cluster merged params
               bike.data.accessories = bike.cluster.accessories;

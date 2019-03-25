@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
       '$timeout', '$analytics', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'date', 'bikeCluster',
+      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeCluster',
        function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, date, bikeCluster) {
+        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeCluster) {
         var booking = this;
 
         booking.$onInit = function () {
@@ -100,7 +100,7 @@ angular.module('booking', [])
               if (booking.bike.is_cluster) {
                 booking.cluster = success.data.cluster;
                 booking.bikeClusterSizes = booking.cluster.sizes;
-                bikeCluster.sizeTranslations(booking.bikeClusterSizes);
+                bikeCluster.getSizeTranslations(booking.bikeClusterSizes);
 
                 // remove primary bike from variations array
                 booking.cluster.variations = _.filter(booking.cluster.variations, function (variant) {

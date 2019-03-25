@@ -3,7 +3,7 @@
 angular.module('listnride')
     .factory('bikeCluster', ['api', 'date', 'bikeOptions', function (api, date, bikeOptions) {
       return {
-        sizeTranslations: function (sizes) {
+        getSizeTranslations: function (sizes) {
           bikeOptions.sizeOptions(false, true).then(function (resolve) {
             _.map(sizes, function (option) {
               option.name = _.find(resolve, function (o) {
