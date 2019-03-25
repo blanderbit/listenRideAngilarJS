@@ -182,7 +182,7 @@ angular.module('booking', [])
             updatePrices();
             setInitHours();
             booking.isDateValid = validDates();
-            bikeCluster.updateCluster(booking, booking.startDate, booking.endDate, $scope);
+            bikeCluster.updateCluster(booking, booking.startDate, booking.endDate);
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         };

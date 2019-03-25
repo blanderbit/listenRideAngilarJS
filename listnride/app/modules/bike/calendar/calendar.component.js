@@ -605,7 +605,7 @@ angular.module('bike').component('calendar', {
           calendar.total = prices.total;
 
           if (calendar.cluster) {
-            bikeCluster.updateCluster(calendar, startDate, endDate, $scope);
+            bikeCluster.updateCluster(calendar, startDate, endDate);
           }
 
         } else {

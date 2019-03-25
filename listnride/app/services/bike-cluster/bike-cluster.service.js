@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('listnride')
-    .factory('bikeCluster', ['api', 'date', 'bikeOptions', function (api, date, bikeOptions) {
+    .factory('bikeCluster', ['api', 'date', 'bikeOptions', '$rootScope', function (api, date, bikeOptions, $rootScope) {
       return {
         getSizeTranslations: function (sizes) {
           bikeOptions.sizeOptions(false, true).then(function (resolve) {
@@ -13,7 +13,7 @@ angular.module('listnride')
           });
         },
 
-        updateCluster: function (component, startDate, endDate, $scope) {
+        updateCluster: function (component, startDate, endDate) {
           var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
           api.get('/clusters/' + component.cluster.id + '?start_date=' + moment(startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays).then(function (response) {
             _.map(component.bikeClusterSizes, function(option){
@@ -23,7 +23,7 @@ angular.module('listnride')
 
             // update scope one more time
             _.defer(function () {
-              $scope.$apply();
+              $rootScope.$apply();
             });
           });
         }
