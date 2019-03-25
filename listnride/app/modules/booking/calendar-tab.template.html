@@ -20,13 +20,40 @@
           <div flex="70" flex-xs="60" layout="column">
             <a class="md-subhead lnr-black" ui-sref="bike({bikeId: calendar.parent.bike.id})" target="_blank">{{ calendar.parent.bike.brand }}, {{ calendar.parent.bikeCategory }}</a>
             <br>
-            <div layout="row" layout-align="space-between none">
-              <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
-              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bikeSize }}</span>
+
+            <div ng-if="calendar.parent.cluster">
+              <div layout="row" layout-align="none center">
+                <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
+                <md-select
+                    flex="65"
+                    ng-model="calendar.parent.pickedBikeSize"
+                    placeholder="{{ 'shared.pick-size' | translate}}"
+                    class="lnr-mt-0 lnr-mb-0"
+                  >
+                    <md-option
+                      ng-repeat="option in calendar.parent.bikeClusterSizes"
+                      value="{{option.size}}"
+                      ng-disabled="option.notAvailable || !calendar.parent.isDateValid"
+                    >
+                      {{ option.name }}
+                      <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
+                    </md-option>
+                  </md-select>
+              </div>
+              <div layout="row" layout-align="none center">
+                <span flex="45"></span>
+                <p flex="65" ng-if="!calendar.parent.isDateValid" translate="shared.firstly-pick-dates"></p>
+              </div>
             </div>
-            <div layout="row" layout-align="space-between none">
+
+            <div ng-if="!calendar.parent.cluster" layout="row" layout-align="space-between none">
+              <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
+              <span flex="65" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bikeSize }}</span>
+            </div>
+
+            <div layout="row" layout-align="space-between none" class="lnr-mt">
               <span flex="45" class="md-body-2">{{ 'booking.overview.location' | translate }}</span>
-              <span flex="55" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bike.city }}</span>
+              <span flex="65" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bike.city }}</span>
             </div>
           </div>
         </div>

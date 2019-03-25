@@ -37,9 +37,10 @@ angular.module('bike').component('calendar', {
       'ENV',
       'calendarHelper',
       'notification',
+      'bikeCluster',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
                                 $mdMedia, $window, $analytics, date, price, api, authentication,
-                                verification, ENV, calendarHelper, notification) {
+                                verification, ENV, calendarHelper, notification, bikeCluster) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.calendarHelper = calendarHelper;
@@ -604,19 +605,7 @@ angular.module('bike').component('calendar', {
           calendar.total = prices.total;
 
           if (calendar.cluster) {
-            var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
-            api.get('/clusters/' + calendar.cluster.id + '?start_date=' + moment(calendar.startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays).then(function (response) {
-              _.map(calendar.bikeClusterSizes, function(option){
-                option.notAvailable = !response.data.rides[option.size];
-              });
-              calendar.cluster.rides = response.data.rides;
-
-              // update scope one more time
-              _.defer(function () {
-                $scope.$apply();
-              });
-
-            });
+            bikeCluster.updateCluster(calendar, startDate, endDate);
           }
 
         } else {
