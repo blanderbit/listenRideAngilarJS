@@ -48,7 +48,7 @@
 
             <div ng-if="!calendar.parent.cluster" layout="row" layout-align="space-between none">
               <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
-              <span flex="65" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.bikeSize }}</span>
+              <span flex="65" class="md-body-1 lnr-lh-body-2">{{ overview.parent.getHumanReadableSize(overview.parent.pickedBikeSize) }}</span>
             </div>
 
             <div layout="row" layout-align="space-between none" class="lnr-mt">

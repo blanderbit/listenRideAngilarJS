@@ -252,11 +252,6 @@ angular.module('bike').component('calendar', {
           var startYear = startDate.getFullYear();
           var startMonth = startDate.getMonth();
 
-
-
-
-
-
           for (var j = 0; j < calendar.event.slots.length; j ++) {
             if (startYear == eventYear &&
                 startMonth == eventMonth &&
@@ -605,7 +600,18 @@ angular.module('bike').component('calendar', {
           calendar.total = prices.total;
 
           if (calendar.cluster) {
-            bikeCluster.updateCluster(calendar, startDate, endDate);
+            // this.cluster = updateCluster(a,b,c,d);
+
+            bikeCluster.getAvailableClusterBikes(calendar.cluster.id, startDate, endDate).then(function (response) {
+              // return new rides that are available in current period
+              calendar.cluster.rides = response.data.rides;
+              bikeCluster.markAvailableSizes(calendar.bikeClusterSizes, calendar.cluster.rides);
+
+              // update scope one more time
+              _.defer(function () {
+                $scope.$apply();
+              });
+            })
           }
 
         } else {
