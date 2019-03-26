@@ -611,8 +611,6 @@ angular.module('bike').component('calendar', {
           calendar.total = prices.total;
 
           if (calendar.cluster) {
-            // this.cluster = updateCluster(a,b,c,d);
-
             bikeCluster.getAvailableClusterBikes(calendar.cluster.id, startDate, endDate).then(function (response) {
               // return new rides that are available in current period
               calendar.cluster.rides = response.data.rides;
