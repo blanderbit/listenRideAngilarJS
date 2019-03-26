@@ -19,6 +19,7 @@
     height: 71px;
     border: 3px solid #ffffff;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .lnr-row-images__item:last-child {
