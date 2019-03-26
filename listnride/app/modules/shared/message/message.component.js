@@ -145,14 +145,13 @@ angular.module('message',[]).component('message', {
 
       message.isReturnable = function () {
         var rentalStarted = moment().diff(message.request.start_date) >= 0;
-        if (!message.request.returnable && !rentalStarted) {
-          return false;
+        if (message.request.returnable && rentalStarted) {
+          if (message.request.rideChat) {
+            return message.status == message.STATUSES.BOTH_SIDES_RATE
+          } else {
+            return message.status == message.STATUSES.CONFIRMED
+          }        
         };
-        if (message.request.rideChat) {
-          return message.status == message.STATUSES.BOTH_SIDES_RATE
-        } else {
-          return message.status == message.STATUSES.CONFIRMED
-        }
       };
 
       // TODO: Unfortunately doublecoded in message.component and requests.component
