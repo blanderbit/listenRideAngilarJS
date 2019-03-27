@@ -33,10 +33,10 @@ angular.module('listnride', [
   'accessoriesFilter',
   'creditCardInput',
   'statusLabels',
+  'bookingCalendar',
   /* app_core_end */
 
   /* app_extras_start */
-  //removeIf(shop)
   'home',
   'seoGrid',
   'search',
@@ -92,7 +92,6 @@ angular.module('listnride', [
   'supercrossMunich',
   'velosoph',
   'coffeespin',
-  //endRemoveIf(shop)
   /* app_extras_end */
 
   /* external_modules_start */
@@ -127,7 +126,7 @@ angular.module('listnride', [
     $compileProvider.debugInfoEnabled(false);
 
     ezfbProvider.setInitParams({
-      appId: '895499350535682',
+      appId: ENV.facebookPlatformKey,
       // Module default is `v2.6`.
       // If you want to use Facebook platform `v2.3`, you'll have to add the following parameter.
       // https://developers.facebook.com/docs/javascript/reference/FB.init

@@ -381,7 +381,7 @@ angular.
 
       var showSignupDialog = function(inviteCode, requesting, event, business) {
         $mdDialog.show({
-          controller: SignupDialogController,
+          controller: ['$mdDialog', SignupDialogController],
           controllerAs: 'signupDialog',
           templateUrl: 'app/services/authentication/signupDialog.template.html',
           parent: angular.element(document.body),
@@ -406,7 +406,7 @@ angular.
 
       var showLoginDialog = function(event) {
         $mdDialog.show({
-          controller: LoginDialogController,
+          controller: ['$mdDialog', 'sha256', 'ezfb', LoginDialogController],
           controllerAs: 'loginDialog',
           templateUrl: 'app/services/authentication/loginDialog.template.html',
           parent: angular.element(document.body),

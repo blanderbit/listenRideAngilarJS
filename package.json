@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "postinstall": "npm install --production --prefix listnride/ && gulp deploy --gulpfile listnride/gulpfile.js"
+    "postinstall": "cd listnride/ && npm install && npm run build && cd .."
   },
   "dependencies": {
     "del": "^3.0.0",
