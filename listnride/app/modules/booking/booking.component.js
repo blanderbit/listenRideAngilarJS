@@ -51,6 +51,7 @@ angular.module('booking', [])
           booking.isOpeningHoursLoaded = false;
           booking.creditCardData = {}
           booking.paymentDescription = '';
+          booking.availableClusterSize = false;
 
           // METHODS
           booking.calendarHelper = calendarHelper;
@@ -190,7 +191,7 @@ angular.module('booking', [])
               // return new rides that are available in current period
               booking.cluster.rides = response.data.rides;
               bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
-
+              booking.availableClusterSize = !!booking.cluster.rides[booking.pickedBikeSize];
               // update scope one more time
               _.defer(function () {
                 $scope.$apply();
@@ -243,7 +244,7 @@ angular.module('booking', [])
 
         booking.nextDisabled = function() {
           switch (getTabNameByOrder(booking.selectedIndex)) {
-            case 'calendar': return !validDates();
+            case 'calendar': return !validDates() || !booking.availableClusterSize;
             case 'sign-in': return false;
             case 'details': return !checkValidDetails();
             case 'payment': return !checkValidPayment();
