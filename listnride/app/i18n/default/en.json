@@ -855,7 +855,7 @@
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}<br>Bike: {{ride.name}}.<br>Date: {{timespan}}.<br>Frame size: {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br><br>Please accept or reject the booking and agree on further details using the chat below.",
+    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}.<br>Bike size:  {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br>Period: {{timespan}}.<br><br><br>Please accept the booking and agree on further details using the chat below. If not possible, please reject.",
     "11": "The booking was cancelled. ",
     "3": "You've accepted the request and so the bike is booked. You'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}} </a> ",
     "5": "Thanks for confirming the return of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
@@ -864,7 +864,7 @@
     "10": "Your booking was cancelled by the system"
   },
   "rideChat": {
-    "1": "You have requested the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from  {{lister.display_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
+    "1": "You have requested the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from  {{lister.display_name}} from {{timespan}}. You can chat with  {{lister.display_name}} below. Only when your request is accepted, payment is done and the bike is booked.",
     "11": "The booking of your rental bike was cancelled.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Did you have a great experience on the bike you rented from {{lister.first_name}}? Share your experience by leaving a short review. This will help future riders better understand what to expect. ",

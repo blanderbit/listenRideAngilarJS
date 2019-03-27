@@ -844,7 +844,7 @@
     "insurance-bike-assist": "Bike Assist-verzekeringscertificaat"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} wil je <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}} huren</a>.<br><br>Bike ID: {{ride.bicycle_number}}<br>Bike: {{ride.name}} <br>Datum: {{timespan}}<br>Frame maat: {{ride.frame_size ? ride.frame_size : 'not specified'}}<br><br>. Accepteer de boeking en spreek verdere details via de onderstaande chat af. Indien je de boeking niet kan aannemen, gelieve deze te annuleren.",
+    "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} wil je <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}} huren</a>.<br><br>Bike ID: {{ride.bicycle_number}}<br>Periode: {{timespan}}<br>Fietsmaat: {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br><br> <br>Accepteer de boeking en spreek verdere details via de onderstaande chat af. Indien je de boeking niet kan aannemen, gelieve deze te annuleren.",
     "11": "De boeking is geannuleerd",
     "3": "Je hebt de boeking bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Bedankt voor het bevestigen van de teruggave van de fiets als ook jouw recensie van {{user.first_name}}. De transactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>",
@@ -853,7 +853,7 @@
     "10": "Je boeking is geannuleerd door systeem."
   },
   "rideChat": {
-    "1": "Je zou graag {{lister.display_name}}<a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> van {{timespan}} huren. Spreek de verdere details met de verhuurder af. Zodra je aanvraag wordt aangenomen, is de boeking rond.",
+    "1": "Je hebt de <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\"> {{ride.name}} </a>van {{lister.display_name}} voor {{timespan}} aangevraagd. Je kan met {{lister.display_name}} via de chat onderaan contact opnemen. Zodra hij je aanvraag accepteert, wordt betaald en is de fiets geboekt.",
     "11": "De boeking van je huurfiets is geannuleerd.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Heb je een geweldige ervaring gehad op de fiets van {{lister.first_name}}. Deel ons je ervaring middels een korte recensie. Dit zal toekomstige fietsers helpen beter te begrijpen wat ze kunnen verwachten.",
