@@ -135,6 +135,7 @@
   <script src="app/services/date/date.service.js"></script>
   <script src="app/services/verification/verification.service.js"></script>
   <script src="app/services/bike-options/bike-options.service.js"></script>
+  <script src="app/services/bike-cluster/bike-cluster.service.js"></script>
   <script src="app/services/map-configs/map-configs.service.js"></script>
   <script src="app/services/helpers/helpers.service.js"></script>
   <script src="app/services/access-control/access-control.service.js"></script>
@@ -357,13 +358,15 @@ function gaOptout() {
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', 'UA-61041935-1', 'auto');
   ga('set', 'anonymizeIp', true);
+  ga('require', 'ecommerce');
 </script>
-  <!-- Coview implementation -->
-<!--<script>
+
+<!--Coview implementation -->
+<script>
   (function(c,o,v,i,e,w){c[v]=c[v]||function(){(c[v].a=c[v].a||[]).push(arguments)};var s=o.createElement(i);s.src=e;s.async=1;var h=o.getElementsByTagName(i)[0];h.parentNode.insertBefore(s,h);c.addEventListener('error',function(err){c[v]('error',err)});c.addEventListener('message',function(msg){c[v]('message',msg)})})(window,document,'coview','script','https://cdn.coview.com/coview.js')
   coview('start', {
     projectKey:'7BwMEOMFov0'
   });
-</script>-->
+</script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers', 'bikeOptions',
-    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeOptions) {
+  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers', 'bikeCluster',
+    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeCluster) {
       var bike = this;
 
       bike.$onInit = function() {
@@ -74,14 +74,7 @@ angular.module('bike',[]).component('bike', {
                 return variant.id !== bike.data.id;
               });
 
-              // get size translations
-              bikeOptions.sizeOptions(false, true).then(function (resolve) {
-                _.map(bike.availableSizes, function (option) {
-                  option.name = _.find(resolve, function (o) {
-                    return o.value === option.size
-                  }).label
-                });
-              });
+              bikeCluster.getSizeTranslations(bike.availableSizes);
 
               // change some params to cluster merged params
               bike.data.accessories = bike.cluster.accessories;

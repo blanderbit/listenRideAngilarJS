@@ -17,7 +17,7 @@
       "credit-card": "Carta di credito",
       "paypal-account": "Conto Paypal"
     },
-    "change": "Change",
+    "change": "Cambia",
     "local-business": "Attività locale",
     "list": "List",
     "map": "Mappa",
@@ -441,7 +441,7 @@
         "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
-        "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Dusseldorf e Bolzano",
+        "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Berlino e Bolzano",
         "meta-descr": "E-bike design - Leaos"
       },
       "brompton": {
@@ -846,19 +846,19 @@
     "insurance-bike-assist": "Certificato di assicurazione Bike Assist"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
+    "1": "{{user.first_name}} {{user.last_name}} da {{user.city}}vorrebbe noleggiare la tua  <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>Bike ID: {{ride.bicycle_number}}<br>Taglia bici: {{ride.frame_size? ride.frame_size:. 'non specificata'}} <br>Periodo: {{timespan}}<br><br><br>Si prega di accettare la prenotazione e concordare ulteriori dettagli utilizzando la chat qui sotto. Se non è possibile, si prega di respingere.",
     "11": "La prenotazione è stata cancellata.",
-    "3": "{{user.zip}} Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I recapiti sono i seguenti, li abbiamo inviati via e-mail. <br><br>Nome:\n{{user.first_name}} {{user.last_name}}<br>Telefono: {{user.pretty_phone_number}} <br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.city}}, {{user.country}}</a>\n",
+    "3": "Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
     "9": "Purtroppo {{user.first_name}} non ha confermato la richiesta",
-    "10": "La tua richiesta è stata annullata dal sistema"
+    "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
-    "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di  {{lister.display_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
+    "1": "Hai richiesto il <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>da {{lister.display_name}}dal{{timespan}}. Puoi chattare con {{lister.display_name}}di seguito. Il pagamento viene effettuato solo quando la tua richiesta è accettata e la bicicletta è prenotata.",
     "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
-    "5": "{{lister.first_name}} ha confermato il ritorno del mezzo e ti ha fatto una recensione. Infine, ti preghiamo di valutare l'esperienza. Questo aiuta molto la nostra comunità e completa il noleggio.",
+    "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
     "6": "Grazie per la valutazione, il noleggio è stato completato con successo.",
     "8": "Purtroppo il noleggiatore non poteva accettare la tua richiesta. Richiedi altre belle biciclette.",
     "9": "Hai annullato la richiesta, ti preghiamo di informare il noleggiatore del motivo per cui non è possibile confermare la prenotazione.",

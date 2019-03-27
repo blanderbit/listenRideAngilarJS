@@ -270,12 +270,12 @@
   },
   "veletage": {
     "event": {
-      "calendar-title": "Salon Veletage Pop-Up",
+      "calendar-title": "Veletage Pop-Up Salon",
       "select-day": "1. Sélectionnez la date de location",
       "select-slot": "2. Sélectionnez l'horaire de location",
       "day-error": "S'il vous plaît, sélectionnez un jour d'abord",
       "select-return": "3. Sélectionnez l'heure de retour",
-      "time-error": "Veuillez d'abord choisir l'heure pour prendre le vélo",
+      "time-error": "Veuillez d'abord choisir l'heure que vous voulez prendre le vélo",
       "calendar-subtitle": "Les Championnats du Monde Route UCI auront lieu à Innsbruck-Tirol (Autriche) du 22 au 30 septembre 2018. Testez et louez le vélo de route parfait pour votre parcours."
     }
   },
@@ -621,7 +621,7 @@
       "redeem-voucher": "Redeem Voucher",
       "add": "Add",
       "success-header": "Congratulations, you have just requested a bike!",
-      "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
+      "success-subheader": "Nous vous avons envoyé un email de confirmation! N'hésitez pas à réserver plus de vélos."
     },
     "calendar": {
       "tab": "Duration",
@@ -813,7 +813,7 @@
     "price": "Price",
     "book": "Book",
     "rating": "Rating",
-    "listChat": "Request by {{user.first_name}}",
+    "listChat": "Demande de {{user.first_name}}",
     "rideChat": "Request to {{lister.first_name}}",
     "ratings": {
       "title": "How did you like the overall experience?",
@@ -852,23 +852,23 @@
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
-    "11": "The booking was cancelled. ",
-    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: <a href=\"//www.google.com/maps/search/?api=1&query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}} </a> ",
-    "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
-    "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
-    "9": "Unfortunately {{user.first_name}} didn't confirm the request",
-    "10": "Your request was cancelled by system"
+    "1": "{{user.first_name}} {{user.last_name}} de {{user.city}}voudrait louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>ID Vélo: {{ride.bicycle_number}}.<br>Vélo: {{ride.name}}.<br>Date: {{timespan}}.<br>Taille du cadre: {{ride.frame_size? ride.frame_size: 'non spécifié'}}. <br><br>Acceptez ou refusez la réservation, et discutez les détails supplémentaires en utilisant le chat ci-dessous.",
+    "11": "La réservation a été annulée.",
+    "3": "Vous avez accepté la demande. Le vélo est maintenant réservé et vous le louez à partir de {{timespan}}! Les coordonnées sont ci-dessous, nous vous les avons également envoyées par email.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
+    "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
+    "8": "Vous avez rejeté la demande. Veuillez donner une raison pourquoi vous ne pouvez pas louer le vélo.",
+    "9": "Malheureusement, {{user.first_name}}n'a pas confirmé la demande.",
+    "10": "Votre réservation a été annulée par le système"
   },
   "rideChat": {
-    "1": "You would like to rent the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from  {{lister.display_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
-    "11": "The booking of your rental bike was cancelled.",
+    "1": "Vous avez fait une demande pour le <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} a partir de {{timespan}}. Vous pouvez parler avec {{lister.display_name}} ci-dessous. C'est seulement quand votre demande será acceptée, que le paiement será effectué et que le vélo será réservé.",
+    "11": "La réservation de votre vélo a été annulée.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
-    "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
+    "5": "Avez-vous eu une bonne expérience avec le vélo de {{lister.first_name}}? Partagez votre expérience en laissant un court commentaire. Cela aidera les futurs cyclistes à mieux comprendre à quoi s'attendre.",
     "6": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
     "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking.",
-    "10": "The request got cancelled."
+    "10": "La demande a été annulée."
   },
   "forms": {
     "first-name": "First Name",

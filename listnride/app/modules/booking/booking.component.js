@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
       '$timeout', '$analytics', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper',
-      function BookingController(
+      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeCluster',
+       function BookingController(
         $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper) {
+        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeCluster) {
         var booking = this;
 
         booking.$onInit = function () {
@@ -57,6 +57,7 @@ angular.module('booking', [])
           booking.authentication = authentication;
           booking.savePaymentOption = savePaymentOption;
           booking.sendCode = sendCode;
+          booking.getHumanReadableSize = getHumanReadableSize;
 
           // INVOCATIONS
           paymentHelper.setupBraintreeClient();
@@ -75,10 +76,11 @@ angular.module('booking', [])
               booking.bike = success.data.current;
               booking.coverageTotal = booking.bike.coverage_total || 0;
               booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-              booking.bikeSize = booking.bike.size === 0 ? $translate.instant("search.unisize") : booking.bike.size + " - " + (parseInt(booking.bike.size) + 10) + "cm";
+              booking.pickedBikeSize = $state.params.size ? $state.params.size : booking.bike.size;
               booking.prices = booking.bike.prices;
               getLister();
               updatePrices();
+
 
               // EVENT BIKE LOGIC
               if (booking.bike.family == 35) {
@@ -97,6 +99,8 @@ angular.module('booking', [])
               // CLUSTER BIKE LOGIC
               if (booking.bike.is_cluster) {
                 booking.cluster = success.data.cluster;
+                booking.bikeClusterSizes = booking.cluster.sizes;
+                bikeCluster.getSizeTranslations(booking.bikeClusterSizes);
 
                 // remove primary bike from variations array
                 booking.cluster.variations = _.filter(booking.cluster.variations, function (variant) {
@@ -164,6 +168,10 @@ angular.module('booking', [])
           );
         };
 
+        function getHumanReadableSize(currentBikeSize) {
+          return currentBikeSize === 0 ? $translate.instant("search.unisize") : currentBikeSize + " - " + (parseInt(currentBikeSize) + 10) + "cm";
+        }
+
         // ===============================
         // >>>> START BOOKING CALENDAR TAB
         // ===============================
@@ -177,9 +185,31 @@ angular.module('booking', [])
             booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
             updatePrices();
             setInitHours();
+            booking.isDateValid = validDates();
+
+            if(booking.bike.is_cluster){
+              bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
+                // return new rides that are available in current period
+                booking.cluster.rides = response.data.rides;
+                bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
+                // update scope one more time
+                _.defer(function () {
+                  $scope.$apply();
+                });
+              })
+            };
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         };
+
+         function validClusterSize() {
+           if (!booking.bike.is_cluster) return true;
+           if (booking.cluster && booking.cluster.rides) {
+             return !!booking.cluster.rides[booking.pickedBikeSize];
+           } else {
+             return false;
+           }
+         }
 
         function setInitHours() {
           var openTime = calendarHelper.getInitHours(booking.openingHours, booking.startDate, booking.endDate);
@@ -223,7 +253,7 @@ angular.module('booking', [])
 
         booking.nextDisabled = function() {
           switch (getTabNameByOrder(booking.selectedIndex)) {
-            case 'calendar': return !validDates();
+            case 'calendar': return !validDates() || !validClusterSize();
             case 'sign-in': return false;
             case 'details': return !checkValidDetails();
             case 'payment': return !checkValidPayment();
@@ -264,10 +294,18 @@ angular.module('booking', [])
           booking.confirmation_3 = '';
         };
 
+        booking.pickAvailableBike = function () {
+          if (booking.pickedBikeSize !== booking.bike.size) {
+            return booking.cluster.rides[booking.pickedBikeSize][0].id;
+          } else {
+            return booking.bikeId;
+          }
+        }
+
         booking.nextAction = function () {
           switch (getTabNameByOrder(booking.selectedIndex)) {
             case 'calendar': {
-              updateState({startDate: booking.startDate, endDate: booking.endDate});
+              updateState({startDate: booking.startDate, endDate: booking.endDate, size: booking.pickedBikeSize, bikeId: booking.pickAvailableBike()});
               setFirstTab();
               break;
             }

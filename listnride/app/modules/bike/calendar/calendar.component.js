@@ -37,12 +37,14 @@ angular.module('bike').component('calendar', {
       'ENV',
       'calendarHelper',
       'notification',
+      'bikeCluster',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
                                 $mdMedia, $window, $analytics, date, price, api, authentication,
-                                verification, ENV, calendarHelper, notification) {
+                                verification, ENV, calendarHelper, notification, bikeCluster) {
       var calendar = this;
       calendar.authentication = authentication;
       calendar.calendarHelper = calendarHelper;
+      calendar.validClusterSize = validClusterSize;
       calendar.requested = false;
 
       calendar.$onChanges = function (changes) {
@@ -158,8 +160,18 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.isFormInvalid = function() {
+
         return !calendar.bikeId || !calendar.isDateValid();
       };
+
+      function validClusterSize() {
+        if (!calendar.bike.is_cluster) return true;
+        if (calendar.cluster && calendar.cluster.rides) {
+          return !!calendar.cluster.rides[calendar.pickedBikeSize];
+        } else {
+          return false;
+        }
+      }
 
       calendar.isDateValid = function() {
         return calendar.startDate && calendar.endDate &&
@@ -250,11 +262,6 @@ angular.module('bike').component('calendar', {
           var endTime = moment.utc(calendar.requests[i].end_date_tz).format('HH')
           var startYear = startDate.getFullYear();
           var startMonth = startDate.getMonth();
-
-
-
-
-
 
           for (var j = 0; j < calendar.event.slots.length; j ++) {
             if (startYear == eventYear &&
@@ -567,7 +574,7 @@ angular.module('bike').component('calendar', {
 
       function isAllClusterReserved(date) {
         // for single bike always return true
-        if (!calendar.bike.is_cluster) return true;
+        if (calendar.bike && !calendar.bike.is_cluster) return true;
 
         var isClusterBikeReserved = true;
         _.forEach(calendar.bikeCluster.variations, function(variant) {
@@ -604,14 +611,19 @@ angular.module('bike').component('calendar', {
           calendar.total = prices.total;
 
           if (calendar.cluster) {
-            var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
-            api.get('/clusters/' + calendar.cluster.id + '?start_date=' + moment(calendar.startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays).then(function (response) {
-              _.map(calendar.bikeClusterSizes, function(option){
-                if (!response.data.rides[option.size]) option.notAvailable = true;
-              });
+            bikeCluster.getAvailableClusterBikes(calendar.cluster.id, startDate, endDate).then(function (response) {
+              // return new rides that are available in current period
               calendar.cluster.rides = response.data.rides;
+
+              bikeCluster.markAvailableSizes(calendar.bikeClusterSizes, calendar.cluster.rides);
+
+              // update scope one more time
+              _.defer(function () {
+                $scope.$apply();
+              });
             });
           }
+
 
         } else {
           calendar.duration = date.duration(undefined, undefined, 0);

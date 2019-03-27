@@ -22,11 +22,12 @@ angular.module('requests', ['infinite-scroll'])
     'date',
     'accessControl',
     'payoutHelper',
+    'notification',
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
       $state, $stateParams, $translate, $mdToast, $analytics, date,
-      accessControl, payoutHelper) {
+      accessControl, payoutHelper, notification) {
 
       var requests = this;
       // user should be logged in
@@ -34,6 +35,20 @@ angular.module('requests', ['infinite-scroll'])
 
       // TODO: remove poller
       var poller;
+
+      var STATUSES = {
+        'REQUESTED': 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride
+        'ACCEPTED': 2, // You accepted the Request || Lister accepted your Request CONFIRM / CANCEL
+        'CONFIRMED': 3, // Ride confirmed and will rent ride CONFIRM RETURN || You confirmed and will rent a ride
+        'ONE_SIDE_RATE': 4, // Lister confirmed return || Rider leaves rate
+        'BOTH_SIDES_RATE': 5, // Lister and Rider rates each other || Rental complete
+        'RATE_RIDE': 6, // Rider rated lister || Rental complete # Will be skipped
+        'COMPLETE': 7, // Rental complete
+        'LISTER_CANCELED': 8, // Lister cancelled
+        'RIDER_CANCELED': 9, // Rider cancelled
+        'SYSTEM_CANCELED': 10, // Passed due date
+        'MANUALLY_CANCELED': 11 // Canceled manually by us because of various reasons
+      }
 
       requests.$onInit = function () {
         // variables
@@ -78,10 +93,7 @@ angular.module('requests', ['infinite-scroll'])
         requests.requestsLeft = false;
         requests.is_rider = function (request) {
           return request.user.id === $localStorage.userId
-        }
-        requests.is_lister = function (request) {
-          return request.user.id !== $localStorage.userId
-        }
+        };
 
         // methods
         // requests.nextPage = nextPage;
@@ -214,7 +226,6 @@ angular.module('requests', ['infinite-scroll'])
             if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
               requests.request = success.data;
               requests.request.glued = true;
-              requests.request = success.data;
               requests.request.lister.picture = setPicture();
               requests.request.lister.display_name = setName();
               requests.request.rideChat = $localStorage.userId == requests.request.user.id;
@@ -300,7 +311,25 @@ angular.module('requests', ['infinite-scroll'])
             if (validPayoutMethod(success.data)) {
               // Lister has already a payout method, so simply accept the request
               requests.loadingChat = true;
-              updateStatus(3, true);
+              updateStatus(STATUSES.CONFIRMED, true);
+
+              var bikeData = requests.request;
+              ga('ecommerce:addTransaction', {
+                'id': bikeData.id,
+                'affiliation': bikeData.lister.id,
+                'revenue': bikeData.total,
+                'tax': '0.19' // vat tax
+              });
+              ga('ecommerce:addItem', {
+                'id': bikeData.id,
+                'name': bikeData.ride.brand + ', ' + bikeData.ride.name + ', ' + bikeData.ride.size,
+                'sku': bikeData.ride.id,
+                'category': bikeData.ride.category.name,
+                'price': bikeData.total,
+                'quantity': '1'
+              });
+              ga('ecommerce:send');
+
               $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Accept'});
             } else {
               // Lister has no payout method yet, so show the payout method dialog
@@ -383,7 +412,7 @@ angular.module('requests', ['infinite-scroll'])
 
           function onSuccessPayoutUpdate(data) {
             requests.loadingChat = true;
-            updateStatus(2, false);
+            updateStatus(STATUSES.ACCEPTED, false);
             hideDialog();
           }
 
@@ -428,6 +457,38 @@ angular.module('requests', ['infinite-scroll'])
         });
       };
 
+      function showListerDialog (event) {
+        $mdDialog.show({
+          // template for referral dialog for lister
+          templateUrl: 'app/modules/referral-link/referral-link.lister.template.html',
+          parent: angular.element(document.body),
+          locals: {close: $mdDialog.hide},
+          controller: angular.noop,
+          controllerAs: 'mdDialog',
+          bindToController: true,
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      }
+
+      function showRiderDialog (event) {
+        $mdDialog.show({
+          // template for referral dialog for rider
+          templateUrl: 'app/modules/referral-link/referral-link.rider.template.html',
+          parent: angular.element(document.body),
+          locals: {close: $mdDialog.hide},
+          controller: angular.noop,
+          controllerAs: 'mdDialog',
+          bindToController: true,
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          fullscreen: true // Only for -xs, -sm breakpoints.
+        });
+      }
+
       function RatingDialogController () {
         var ratingDialog = this;
 
@@ -439,86 +500,37 @@ angular.module('requests', ['infinite-scroll'])
             "rating": {
               "score": ratingDialog.rating,
               "message": ratingDialog.message,
-              "author_id": $localStorage.userId
+              "author_id": $localStorage.userId,
+              "request_id": requests.request.id
             }
           };
-          var newStatus;
-
-          // rider rating
-          if (requests.request.rideChat) {
-            data.rating.ride_id = requests.request.ride.id;
-            newStatus = 6;
-          }
-
-          // lister rating
-          else {
-            data.rating.user_id = requests.request.user.id;
-            newStatus = 5
-          }
 
           requests.loadingChat = true;
           ratingDialog.hide();
-          api.post('/ratings', data).then(
-            function () {
-              var data = {
-                "request": {
-                  "status": newStatus
-                }
-              };
-              api.put("/requests/" + requests.request.id, data).then(
-                function () {
-                  reloadRequest(requests.request.id);
-                  /*
-                  Logic to show the Referal Dialog:
-                  1- If newStatus is 5, rating > 3 and isBusiness is false -> show dialog to lister
-                  2- If newStatus is 6, rating > 3 and isBusiness is false -> show dialog to rider
-                  */
-                  // rating > 3 and user has no business
-                  if (parseInt(ratingDialog.rating) > 3 && $localStorage.isBusiness === false) {
-                    // show lister dialog
-                    if (parseInt(newStatus) === 5) {
-                      $mdDialog.show({
-                        // template for referral dialog for lister
-                        templateUrl: 'app/modules/referral-link/referral-link.lister.template.html',
-                        parent: angular.element(document.body),
-                        locals: {close: $mdDialog.hide},
-                        controller: angular.noop,
-                        controllerAs: 'mdDialog',
-                        bindToController: true,
-                        targetEvent: event,
-                        openFrom: angular.element(document.body),
-                        closeTo: angular.element(document.body),
-                        fullscreen: true // Only for -xs, -sm breakpoints.
-                      });
-                    }
-                    // show rider dialog
-                    else if (parseInt(newStatus) === 6) {
-                      $mdDialog.show({
-                        // template for referral dialog for rider
-                        templateUrl: 'app/modules/referral-link/referral-link.rider.template.html',
-                        parent: angular.element(document.body),
-                        locals: {close: $mdDialog.hide},
-                        controller: angular.noop,
-                        controllerAs: 'mdDialog',
-                        bindToController: true,
-                        targetEvent: event,
-                        openFrom: angular.element(document.body),
-                        closeTo: angular.element(document.body),
-                        fullscreen: true // Only for -xs, -sm breakpoints.
-                      });
-                    }
+          api.post('/requests/' + requests.request.id + '/ratings', data).then(
+              function () {
+                reloadRequest(requests.request.id);
+                // rating > 3 and user has no business
+                if (parseInt(ratingDialog.rating) > 3 && !$localStorage.isBusiness) {
+                  // show rider dialog
+                  if (requests.is_rider(requests.request)) {
+                    showRiderDialog(event);
                   }
-                },
-                function () {
-                  reloadRequest(requests.request.id);
+                  // show lister dialog
+                  else {
+                    showListerDialog(event);
+                  }
                 }
-              );
-            },
-            function () {
-            }
-          );
-        };
-
+              },
+              function (error) {
+                notification.show(error, 'error');
+              }
+            ).then (
+              function () {
+                loadRequest(requests.request.id, true, 0);
+              }
+            );
+          }
         ratingDialog.hide = hideDialog;
       };
 
