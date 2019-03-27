@@ -51,7 +51,8 @@ angular.module('booking', [])
           booking.isOpeningHoursLoaded = false;
           booking.creditCardData = {}
           booking.paymentDescription = '';
-          booking.availableClusterSize = false;
+          booking.availableClusterSize = true;
+          booking.bike.is_cluster = false;
 
           // METHODS
           booking.calendarHelper = calendarHelper;
@@ -187,17 +188,18 @@ angular.module('booking', [])
             setInitHours();
             booking.isDateValid = validDates();
 
-            bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
-              // return new rides that are available in current period
-              booking.cluster.rides = response.data.rides;
-              bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
-              booking.availableClusterSize = !!booking.cluster.rides[booking.pickedBikeSize];
-              // update scope one more time
-              _.defer(function () {
-                $scope.$apply();
-              });
-            })
-
+            if(booking.bike.is_cluster){
+              bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
+                // return new rides that are available in current period
+                booking.cluster.rides = response.data.rides;
+                bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
+                booking.availableClusterSize = !!booking.cluster.rides[booking.pickedBikeSize];
+                // update scope one more time
+                _.defer(function () {
+                  $scope.$apply();
+                });
+              })
+            };
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         };

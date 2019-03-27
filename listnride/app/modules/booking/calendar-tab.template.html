@@ -17,7 +17,7 @@
               <img flex="100" ng-src="{{ calendar.parent.bike.image_file }}" />
             </a>
           </div>
-          <div flex="70" flex-xs="60" layout="column">
+          <div flex="70" flex-xs="100" layout="column">
             <a class="md-subhead lnr-black" ui-sref="bike({bikeId: calendar.parent.bike.id})" target="_blank">{{ calendar.parent.bike.brand }}, {{ calendar.parent.bikeCategory }}</a>
             <br>
 
@@ -48,7 +48,7 @@
 
             <div ng-if="!calendar.parent.cluster" layout="row" layout-align="space-between none">
               <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
-              <span flex="65" class="md-body-1 lnr-lh-body-2">{{ overview.parent.getHumanReadableSize(overview.parent.pickedBikeSize) }}</span>
+              <span flex="65" class="md-body-1 lnr-lh-body-2">{{ calendar.parent.getHumanReadableSize(calendar.parent.pickedBikeSize) }}</span>
             </div>
 
             <div layout="row" layout-align="space-between none" class="lnr-mt">
