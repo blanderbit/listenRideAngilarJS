@@ -51,8 +51,6 @@ angular.module('booking', [])
           booking.isOpeningHoursLoaded = false;
           booking.creditCardData = {}
           booking.paymentDescription = '';
-          booking.availableClusterSize = true;
-          booking.bike.is_cluster = false;
 
           // METHODS
           booking.calendarHelper = calendarHelper;
@@ -193,7 +191,6 @@ angular.module('booking', [])
                 // return new rides that are available in current period
                 booking.cluster.rides = response.data.rides;
                 bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
-                booking.availableClusterSize = !!booking.cluster.rides[booking.pickedBikeSize];
                 // update scope one more time
                 _.defer(function () {
                   $scope.$apply();
@@ -203,6 +200,15 @@ angular.module('booking', [])
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         };
+
+         function validClusterSize() {
+           if (!booking.bike.is_cluster) return true;
+           if (booking.cluster && booking.cluster.rides) {
+             return !!booking.cluster.rides[booking.pickedBikeSize];
+           } else {
+             return false;
+           }
+         }
 
         function setInitHours() {
           var openTime = calendarHelper.getInitHours(booking.openingHours, booking.startDate, booking.endDate);
@@ -246,7 +252,7 @@ angular.module('booking', [])
 
         booking.nextDisabled = function() {
           switch (getTabNameByOrder(booking.selectedIndex)) {
-            case 'calendar': return !validDates() || !booking.availableClusterSize;
+            case 'calendar': return !validDates() || !validClusterSize();
             case 'sign-in': return false;
             case 'details': return !checkValidDetails();
             case 'payment': return !checkValidPayment();

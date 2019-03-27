@@ -24,21 +24,22 @@
             <div ng-if="calendar.parent.cluster">
               <div layout="row" layout-align="none center">
                 <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
-                <md-select
-                    flex="65"
-                    ng-model="calendar.parent.pickedBikeSize"
-                    placeholder="{{ 'shared.pick-size' | translate}}"
-                    class="lnr-mt-0 lnr-mb-0"
-                  >
-                    <md-option
-                      ng-repeat="option in calendar.parent.bikeClusterSizes"
-                      value="{{option.size}}"
-                      ng-disabled="option.notAvailable || !calendar.parent.isDateValid"
+                <div layout="row" flex="65">
+                  <md-select
+                      ng-model="calendar.parent.pickedBikeSize"
+                      placeholder="{{ 'shared.pick-size' | translate}}"
+                      class="lnr-mt-0 lnr-mb-0"
                     >
-                      {{ option.name }}
-                      <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
-                    </md-option>
-                  </md-select>
+                      <md-option
+                        ng-repeat="option in calendar.parent.bikeClusterSizes"
+                        value="{{option.size}}"
+                        ng-disabled="option.notAvailable || !calendar.parent.isDateValid"
+                      >
+                        {{ option.name }}
+                        <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
+                      </md-option>
+                    </md-select>
+                </div>
               </div>
               <div layout="row" layout-align="none center">
                 <span flex="45"></span>
