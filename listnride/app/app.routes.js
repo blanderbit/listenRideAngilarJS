@@ -129,7 +129,7 @@
       // booking
       $stateProvider.state({
         name: 'booking',
-        url: '/booking?bikeId&startDate&endDate&shop',
+        url: '/booking?bikeId&size&startDate&endDate&shop',
         template: '<booking></booking>',
         reloadOnSearch: false,
         resolve: {

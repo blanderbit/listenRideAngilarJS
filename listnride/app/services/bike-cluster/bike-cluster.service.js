@@ -13,18 +13,16 @@ angular.module('listnride')
           });
         },
 
-        updateCluster: function (component, startDate, endDate) {
+        getAvailableClusterBikes: function (clusterId, startDate, endDate) {
           var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
-          api.get('/clusters/' + component.cluster.id + '?start_date=' + moment(startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays).then(function (response) {
-            _.map(component.bikeClusterSizes, function(option){
-              option.notAvailable = !response.data.rides[option.size];
-            });
-            component.cluster.rides = response.data.rides;
 
-            // update scope one more time
-            _.defer(function () {
-              $rootScope.$apply();
-            });
+          return api.get('/clusters/' + clusterId + '?start_date=' + moment(startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays);
+        },
+
+        markAvailableSizes: function (bikeClusterSizes, bikes) {
+          // add special flag to our parameter that will show it's availability
+          _.map(bikeClusterSizes, function (option) {
+            option.notAvailable = !bikes[option.size];
           });
         }
       };
