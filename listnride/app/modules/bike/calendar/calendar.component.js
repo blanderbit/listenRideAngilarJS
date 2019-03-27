@@ -574,7 +574,7 @@ angular.module('bike').component('calendar', {
 
       function isAllClusterReserved(date) {
         // for single bike always return true
-        if (!calendar.bike.is_cluster) return true;
+        if (calendar.bike && !calendar.bike.is_cluster) return true;
 
         var isClusterBikeReserved = true;
         _.forEach(calendar.bikeCluster.variations, function(variant) {

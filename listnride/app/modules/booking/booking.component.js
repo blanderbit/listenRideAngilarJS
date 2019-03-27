@@ -186,20 +186,29 @@ angular.module('booking', [])
             setInitHours();
             booking.isDateValid = validDates();
 
-            bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
-              // return new rides that are available in current period
-              booking.cluster.rides = response.data.rides;
-              bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
-
-              // update scope one more time
-              _.defer(function () {
-                $scope.$apply();
-              });
-            })
-
+            if(booking.bike.is_cluster){
+              bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
+                // return new rides that are available in current period
+                booking.cluster.rides = response.data.rides;
+                bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
+                // update scope one more time
+                _.defer(function () {
+                  $scope.$apply();
+                });
+              })
+            };
           }
           // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
         };
+
+         function validClusterSize() {
+           if (!booking.bike.is_cluster) return true;
+           if (booking.cluster && booking.cluster.rides) {
+             return !!booking.cluster.rides[booking.pickedBikeSize];
+           } else {
+             return false;
+           }
+         }
 
         function setInitHours() {
           var openTime = calendarHelper.getInitHours(booking.openingHours, booking.startDate, booking.endDate);
@@ -243,7 +252,7 @@ angular.module('booking', [])
 
         booking.nextDisabled = function() {
           switch (getTabNameByOrder(booking.selectedIndex)) {
-            case 'calendar': return !validDates();
+            case 'calendar': return !validDates() || !validClusterSize();
             case 'sign-in': return false;
             case 'details': return !checkValidDetails();
             case 'payment': return !checkValidPayment();
