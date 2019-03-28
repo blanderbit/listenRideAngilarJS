@@ -384,7 +384,8 @@
       "title": "Noleggia una bici per l’Gran Fondo Costa del Sol",
       "description": "Che cosa: <b>Gran Fondo Costa del Sol</b> | Quando: <b>14 Settembre 2019</b> | dove: <b>Estepona,  Málaga</b>",
       "text": "La Gran Fondo Costa del Sol è un evento ciclistico con partenza e arrivo a Estepona, Malaga (Costa del Sol). Un test internazionale, con due percorsi, la prima Gran Fondo di 133 km e dislivello positivo di 3400 M+ e la seconda Media Fondo di 94 km e dislivello positivo di 2400 M. <br>\nNoleggia subito la tua bici da strada! Scegli la bici che più si adatta alle tue esigenze e goditi la Gran Fondo.",
-      "meta-title": "Simply rent the perfect road bike for the Gran Fondo Costa del Sol!"
+      "meta-title": "Noleggia la bici da strada per la Gran Fondo Costa del Sol!",
+      "meta-description": "Goditi le splendide montagne della Gran Fondo Costa del Sol noleggiando una bici da strada in carbonio su listnride!"
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -597,6 +598,18 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Oops ... purtroppo non ci sono ancora bici in questa località.",
       "faq": "Le domande frequenti"
+    },
+    "bzen": {
+      "title": "Rent and test a BZEN smart electric city bike today!",
+      "description": "Test ride a BZen smart electric city bikes today! The smart electric city bikes from BZEN are available to rent on listnride all across Germany!",
+      "find-out-more": "Learn more about BZEN bikes",
+      "order-online": "Order your new <a href=\"#\" target=\"_blank\">BZEN Bike</a>and get your listnride rental reimbursed. Find the most frequently asked questions below.",
+      "faq-answer-1": "When the bike is on stock, it takes 5 to 10 business days, depending of the country, to deliver our bike to your door. Shortly after placing an order you will receive an email confirming that your order has been received and is now being processed. Once we ship your order, you will be provided with a track and trace code via email.\nIf the bike is not in stock, then BZen is committed to deliver your bike within one month from the confirmation of the order. \n",
+      "faq-answer-2": "BZEN offers you a 30 days test ride.\nIf you hesitate to buy a BZEN because you are not sure you will like it, we are happy to offer you 30 days to ride the bike of your choice. Order it, have it delivered to your home and if you do not like it, you may return it during the first 30 days free of charge. You will be fully refunded.",
+      "faq-answer-3": "Your bike will be ready to ride in a minute. Unpack, fix the pedals and the handlebar, adjust the saddle and you are ready to pedal away.Simply take your BZEN bike out of the delivery box, take off all the protections, attach the pedals, fix the handlebar, and adjust the saddle to your size and you are ready to GO. The instructions are printed inside the delivery box. If you require additional information, you can find a more detailed instruction notice on the BZEN website under the support section.Our team tests every single bike before packing them with care. Nevertheless, if you see that your bike has been damaged during transport or if you observe a manufacturing fault, please contact our customer experience manager directly at support@bzenbikes.com. We will assist you and resolve the problem as quickly as possible.",
+      "faq-question-8": "Are BZEN bikes Certified?",
+      "faq-answer-8": "Yes. BZEN bikes have been tested by an independent and recognized institute in Germany. They are Certified EN-15194:2017 and fully compliant with the electrically power assisted bicycles European regulation.",
+      "faq-answer-9": "Yes. BZEN is one of the very few bike brands that design, engineer and hand make its frames in Europe. The workshop is located in Silesia, Poland.We are proud at BZEN to make European bicycles. Not only the frames but also every electronic component is designed and manufacture in Europe.Because our bicycles are handcrafted in Europe, our engineers fully optimized the frame and each of the components to optimize their integration, enhance their performance and reduce the bike weight."
     },
     "whyte": {
       "title": "Rent and test ride Whyte bikes in Berlin",
