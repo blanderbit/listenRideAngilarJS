@@ -1,5 +1,5 @@
 'use strict';
-
+import MarkerClusterer from '@google/markerclustererplus';
 
 /*
 Structure of bike search component:

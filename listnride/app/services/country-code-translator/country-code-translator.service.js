@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('listnride')
-  .factory('countryCodeTranslator', function ($translate) {
+  .factory('countryCodeTranslator', ['$translate', function ($translate) {
 
     var data = [
       {
@@ -29,4 +29,5 @@ angular.module('listnride')
       countryCodeFor: countryCodeFor
     }
 
-  });
+  }
+]);

@@ -49,7 +49,7 @@
         url: '/',
         template: '<home></home>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["home.meta-title", "home.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["home.meta-title"]);
@@ -58,7 +58,7 @@
                 // Below is how to set the OG:IMAGE if disableUpdate is true
                 // ngMeta.setTag("og:image", "imageurl.jpg");
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -117,9 +117,9 @@
           }
         },
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -133,9 +133,9 @@
         template: '<booking></booking>',
         reloadOnSearch: false,
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -202,9 +202,9 @@
         url: '/users/{userId:int}',
         template: '<user></user>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -225,9 +225,9 @@
         },
         template: '<requests></requests>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -240,9 +240,9 @@
         url: '/list-bike',
         template: '<list heading="\'list.list-bike\'" is-list-mode=true discount-field-editable=true></list>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", false);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -266,9 +266,9 @@
           }
         },
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -281,9 +281,9 @@
         url: '/invoices',
         template: '<invoices></invoices>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -296,9 +296,9 @@
         url: '/edit-bike/{bikeId:int}',
         template: '<list heading="\'list.edit-bike\'" is-list-mode=false discount-field-editable=true></list>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -311,14 +311,14 @@
         url: '/settings',
         template: '<settings></settings>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["settings.meta-title", "settings.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["settings.meta-title"]);
                 ngMeta.setTag("description", translations["settings.meta-description"]);
                 ngMeta.setTag("noindex", true);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -331,14 +331,14 @@
         url: '/listing-a-bike',
         template: '<listing-a-bike></listing-a-bike>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["list-a-bike.meta-title", "list-a-bike.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["list-a-bike.meta-title"]);
                 ngMeta.setTag("description", translations["list-a-bike.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -351,14 +351,14 @@
         url: '/renting-a-bike',
         template: '<renting-a-bike></renting-a-bike>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["rent-a-bike.meta-title", "rent-a-bike.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["rent-a-bike.meta-title"]);
                 ngMeta.setTag("description", translations["rent-a-bike.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -372,14 +372,14 @@
         templateUrl: 'app/modules/static/about.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.about-us.meta-title", "meta.about-us.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.about-us.meta-title"]);
                 ngMeta.setTag("description", translations["meta.about-us.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -392,14 +392,14 @@
         url: '/invest',
         template: '<invest></invest>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.invest.meta-title", "meta.invest.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.invest.meta-title"]);
                 ngMeta.setTag("description", translations["meta.invest.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -413,14 +413,14 @@
         templateUrl: 'app/modules/static/trust-and-safety.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.trust-and-safety.meta-title", "meta.trust-and-safety.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.trust-and-safety.meta-title"]);
                 ngMeta.setTag("description", translations["meta.trust-and-safety.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -434,14 +434,14 @@
         templateUrl: 'app/modules/static/terms.template.html',
         controller: 'StaticController',
         resolve: {
-              data: function ($translate, ngMeta) {
+              data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                   $translate(["meta.terms-and-conditions.meta-title", "meta.terms-and-conditions.meta-description"])
                       .then(function (translations) {
                           ngMeta.setTitle(translations["meta.terms-and-conditions.meta-title"]);
                           ngMeta.setTag("description", translations["meta.terms-and-conditions.meta-description"]);
                           ngMeta.setTag("noindex", false);
                       })
-              }
+              }]
           },
           meta: {
               disableUpdate: true
@@ -455,14 +455,14 @@
         templateUrl: 'app/modules/static/help.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.contact-and-help.meta-title", "meta.contact-and-help.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.contact-and-help.meta-title"]);
                 ngMeta.setTag("description", translations["meta.contact-and-help.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -482,14 +482,14 @@
           }
         },
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.jobs.meta-title", "meta.jobs.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.jobs.meta-title"]);
                 ngMeta.setTag("description", translations["meta.jobs.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -503,14 +503,14 @@
         templateUrl: 'app/modules/static/press.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.press.meta-title", "meta.press.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.press.meta-title"]);
                 ngMeta.setTag("description", translations["meta.press.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -524,14 +524,14 @@
         templateUrl: 'app/modules/static/imprint.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.imprint.meta-title", "meta.imprint.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.imprint.meta-title"]);
                 ngMeta.setTag("description", translations["meta.imprint.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -545,14 +545,14 @@
         templateUrl: 'app/modules/static/privacy.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.privacy.meta-title", "meta.privacy.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.privacy.meta-title"]);
                 ngMeta.setTag("description", translations["meta.privacy.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -566,14 +566,14 @@
         templateUrl: 'app/modules/static/how-it-works.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.how-it-works.meta-title", "meta.how-it-works.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.how-it-works.meta-title"]);
                 ngMeta.setTag("description", translations["meta.how-it-works.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -587,14 +587,14 @@
         templateUrl: 'app/modules/static/shop-landing.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.shop-landing.meta-title", "meta.shop-landing.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.shop-landing.meta-title"]);
                 ngMeta.setTag("description", translations["meta.shop-landing.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -607,14 +607,14 @@
         url: '/business-community',
         template: '<business-community></business-community>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.business-community.meta-title", "meta.business-community.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.business-community.meta-title"]);
                 ngMeta.setTag("description", translations["meta.business-community.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -634,14 +634,14 @@
           }
         },
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brands.meta-title", "meta.brands.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.brands.meta-title"]);
                 ngMeta.setTag("description", translations["meta.brands.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -655,14 +655,14 @@
         templateUrl: 'app/modules/static/how-to-shoot-bike-photos.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
               $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
                   .then(function () {
                       ngMeta.setTitle("");
                       ngMeta.setTag("description", "");
                       ngMeta.setTag("noindex", false);
                   })
-          }
+          }]
       },
       meta: {
           disableUpdate: true
@@ -675,9 +675,9 @@
         url: '/invite-friends',
         template: '<invite></invite>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", false);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -690,9 +690,9 @@
         url: '/invitation/{inviteCode: string}',
         template: '<invite-landing></invite-landing>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", false);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -706,14 +706,14 @@
         templateUrl: 'app/modules/static/insurance.template.html',
         controller: 'StaticController',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["insurance.meta-title", "insurance.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["insurance.meta-title"]);
                 ngMeta.setTag("description", translations["insurance.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -726,14 +726,14 @@
         url: '/multi-booking?location',
         template: '<multi-booking></multi-booking>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["multi-booking.meta-title", "multi-booking.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["multi-booking.meta-title"]);
                 ngMeta.setTag("description", translations["multi-booking.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -751,14 +751,14 @@
         url: '/long-term?location',
         template: '<multi-booking></multi-booking>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["long-term.meta-title", "long-term.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["long-term.meta-title"]);
                   ngMeta.setTag("description", translations["long-term.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -788,14 +788,14 @@
           }
         },
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["faq.meta-title", "faq.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["faq.meta-title"]);
                 ngMeta.setTag("description", translations["faq.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -809,14 +809,14 @@
         template: '<booking-calendar></booking-calendar>',
         reloadOnSearch: false,
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["booking-calendar.meta-title", "booking-calendar.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["booking-calendar.meta-title"]);
                 ngMeta.setTag("description", translations["booking-calendar.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -832,14 +832,14 @@
         url: '/events/{event_name}',
         template: '<event></event>',
         resolve: {
-          data: function ($translate, ngMeta, $stateParams) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta, $stateParams) {
             $translate(["events." + $stateParams.event_name + ".meta-title", "events." + $stateParams.event_name + ".meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["events." + $stateParams.event_name + ".meta-title"]);
                   ngMeta.setTag("description", translations["events." + $stateParams.event_name + ".meta-description"]);
                   ngMeta.setTag("noindex", false);
                 });
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -851,14 +851,14 @@
         url: '/events/capeargus',
         template: '<cape-argus></cape-argus>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.cape-argus.meta-title", "meta.events.cape-argus.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.cape-argus.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.cape-argus.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -877,14 +877,14 @@
         url: '/events/supercross-munich',
         template: '<supercross-munich></supercross-munich>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.supercross-munich.meta-title", "meta.events.supercross-munich.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.supercross-munich.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.supercross-munich.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -903,14 +903,14 @@
         url: '/events/rapha-super-cross',
         template: '<rapha-super-cross></rapha-super-cross>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.common.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -929,14 +929,14 @@
         url: '/events/in-velo-veritas',
         template: '<in-velo-veritas></in-velo-veritas>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.in-velo-veritas.meta-title", "meta.events.in-velo-veritas.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.in-velo-veritas.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.in-velo-veritas.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -955,14 +955,14 @@
         url: '/events/berliner-fahrradschau',
         template: '<crossride></crossride>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.common.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -981,14 +981,14 @@
         url: '/events/herbstausfahrt',
         template: '<velosoph></velosoph>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.velosoph.meta-title", "meta.events.velosoph.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.velosoph.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.velosoph.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1007,14 +1007,14 @@
         url: '/events/grand-depart',
         template: '<depart></depart>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.depart.meta-title", "meta.events.depart.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.depart.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.depart.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1033,14 +1033,14 @@
         url: '/events/eroica-gaiole',
         template: '<eroica-gaiole></eroica-gaiole>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.eroica-gaiole.meta-title", "meta.events.eroica-gaiole.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.eroica-gaiole.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.eroica-gaiole.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1059,14 +1059,14 @@
         url: '/events/mcbw',
         template: '<mcbw></mcbw>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.common.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1085,14 +1085,14 @@
         url: '/events/constance-spin',
         template: '<constance-spin></constance-spin>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.constance-spin.meta-title", "meta.events.constance-spin.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.constance-spin.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.constance-spin.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1111,14 +1111,14 @@
         url: '/events/velothon-coffeespin',
         template: '<coffeespin></coffeespin>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.common.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1137,14 +1137,14 @@
         url: '/events/pushnpost',
         template: '<pushnpost></pushnpost>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.common.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1163,14 +1163,14 @@
         url: '/events/kuchenundraketen',
         template: '<kuchenundraketen></kuchenundraketen>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.events.common.meta-title", "meta.events.common.meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["meta.events.common.meta-title"]);
                   ngMeta.setTag("description", translations["meta.events.common.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1193,14 +1193,14 @@
         url: '/brands/ampler',
         template: '<ampler></ampler>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.ampler.meta-title", "meta.brand-integration.ampler.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.ampler.meta-title"]);
                         ngMeta.setTag("description", translations["meta.brand-integration.ampler.meta-descr"]);
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1212,7 +1212,7 @@
         url: '/brands/vanmoof',
         template: '<vanmoof></vanmoof>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.vanmoof.meta-title", "meta.brand-integration.vanmoof.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.vanmoof.meta-title"]);
@@ -1220,7 +1220,7 @@
                         ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/vanmoof.jpg");
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1232,7 +1232,7 @@
         url: '/brands/moeve',
         template: '<moeve></moeve>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.moeve.meta-title", "meta.brand-integration.moeve.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.moeve.meta-title"]);
@@ -1240,7 +1240,7 @@
                         ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/moeve.jpg");
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1252,7 +1252,7 @@
         url: '/brands/rethink',
         template: '<rethink></rethink>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.rethink.meta-title", "meta.brand-integration.rethink.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.rethink.meta-title"]);
@@ -1260,7 +1260,7 @@
                         ngMeta.setTag("og:image", "app/assets/ui_images/opengraph/lnr_rethink.jpg");
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1272,14 +1272,14 @@
         url: '/brands/votec',
         template: '<votec></votec>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.votec.meta-title", "meta.brand-integration.votec.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.votec.meta-title"]);
                         ngMeta.setTag("description", translations["meta.brand-integration.votec.meta-descr"]);
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1291,14 +1291,14 @@
         url: '/brands/vello',
         template: '<vello></vello>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.vello.meta-title", "meta.brand-integration.vello.meta-description"])
               .then(function (translations) {
                   ngMeta.setTitle(translations["meta.brand-integration.vello.meta-title"]);
                   ngMeta.setTag("description", translations["meta.brand-integration.vello.meta-description"]);
                   ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1310,14 +1310,14 @@
         url: '/veletage',
         template: '<veletage></veletage>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.veletage.meta-title", "meta.brand-integration.veletage.meta-descr"])
               .then(function (translations) {
                   ngMeta.setTitle(translations["meta.brand-integration.veletage.meta-title"]);
                   ngMeta.setTag("description", translations["meta.brand-integration.veletage.meta-descr"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1329,14 +1329,14 @@
         url: '/brands/bonvelo',
         template: '<bonvelo></bonvelo>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.bonvelo.meta-title", "meta.brand-integration.bonvelo.meta-description"])
               .then(function (translations) {
                   ngMeta.setTitle(translations["meta.brand-integration.bonvelo.meta-title"]);
                   ngMeta.setTag("description", translations["meta.brand-integration.bonvelo.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1348,14 +1348,14 @@
         url: '/brands/swytch',
         template: '<swytch></swytch>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.swytch.meta-title", "meta.brand-integration.swytch.meta-description"])
               .then(function (translations) {
                   ngMeta.setTitle(translations["meta.brand-integration.swytch.meta-title"]);
                   ngMeta.setTag("description", translations["meta.brand-integration.swytch.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1367,14 +1367,14 @@
         url: '/brands/whyte',
         template: '<whyte></whyte>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.whyte.meta-title", "meta.brand-integration.whyte.meta-description"])
               .then(function (translations) {
                   ngMeta.setTitle(translations["meta.brand-integration.whyte.meta-title"]);
                   ngMeta.setTag("description", translations["meta.brand-integration.whyte.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1386,14 +1386,14 @@
         url: '/brands/motoparilla',
         template: '<motoparilla></motoparilla>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.motoparilla.meta-title", "meta.brand-integration.motoparilla.meta-description"])
               .then(function (translations) {
                   ngMeta.setTitle(translations["meta.brand-integration.motoparilla.meta-title"]);
                   ngMeta.setTag("description", translations["meta.brand-integration.motoparilla.meta-description"]);
                   ngMeta.setTag("noindex", false);
                 })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1405,14 +1405,14 @@
         url: '/brands/brompton',
         template: '<brompton></brompton>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.brompton.meta-title", "meta.brand-integration.brompton.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.brompton.meta-title"]);
                         ngMeta.setTag("description", translations["meta.brand-integration.brompton.meta-descr"]);
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1424,14 +1424,14 @@
         url: '/brands/muli',
         template: '<muli></muli>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.muli.meta-title", "meta.brand-integration.muli.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.muli.meta-title"]);
                         ngMeta.setTag("description", translations["meta.brand-integration.muli.meta-descr"]);
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1443,14 +1443,14 @@
         url: '/brands/cocomat',
         template: '<cocomat></cocomat>',
         resolve: {
-            data: function ($translate, ngMeta) {
+            data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
                 $translate(["meta.brand-integration.cocomat.meta-title", "meta.brand-integration.cocomat.meta-descr"])
                     .then(function (translations) {
                         ngMeta.setTitle(translations["meta.brand-integration.cocomat.meta-title"]);
                         ngMeta.setTag("description", translations["meta.brand-integration.cocomat.meta-descr"]);
                         ngMeta.setTag("noindex", false);
                     })
-            }
+            }]
         },
         meta: {
             disableUpdate: true
@@ -1462,14 +1462,14 @@
         url: '/brands/leaos',
         template: '<leaos></leaos>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.leaos.meta-title", "meta.brand-integration.leaos.meta-descr"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.brand-integration.leaos.meta-title"]);
                 ngMeta.setTag("description", translations["meta.brand-integration.leaos.meta-descr"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1481,14 +1481,14 @@
         url: '/brands/veloheld',
         template: '<veloheld></veloheld>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.veloheld.meta-title", "meta.brand-integration.veloheld.meta-descr"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.brand-integration.veloheld.meta-title"]);
                 ngMeta.setTag("description", translations["meta.brand-integration.veloheld.meta-descr"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1500,9 +1500,9 @@
         url: '/factoryberlin',
         template: '<user></user>',
         resolve: {
-          data: function (ngMeta) {
+          data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", false);
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1514,14 +1514,14 @@
         url: '/brands/felt',
         template: '<felt></felt>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data:['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.felt.meta-title", "meta.brand-integration.felt.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.brand-integration.felt.meta-title"]);
                 ngMeta.setTag("description", translations["meta.brand-integration.felt.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
@@ -1533,14 +1533,14 @@
         url: '/brands/unimoke',
         template: '<unimoke></unimoke>',
         resolve: {
-          data: function ($translate, ngMeta) {
+          data: ['$translate', 'ngMeta', function ($translate, ngMeta) {
             $translate(["meta.brand-integration.unimoke.meta-title", "meta.brand-integration.unimoke.meta-description"])
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.brand-integration.unimoke.meta-title"]);
                 ngMeta.setTag("description", translations["meta.brand-integration.unimoke.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
-          }
+          }]
         },
         meta: {
           disableUpdate: true
