@@ -278,6 +278,9 @@
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
+    },
+    "bzen": {
+      "item1-description": "Lichtgewicht, slechts 14,4 k <br>\nBatterij en slimme elektronica zijn volledig geïntegreerd <br>\nComfortabele geometrie, zadel en handgrepen <br>\nMakkelijk om naar binnen te dragen"
     }
   },
   "faq": {
@@ -421,6 +424,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
+      },
+      "bzen": {
+        "meta-title": "Huur en test BZEN, de slimme elektrische stadsfiets in heel Duitsland | listnride",
+        "meta-description": "Test vandaag nog een slimme elektrische stadsfiets! De slimme elektrische stadsfietsen van BZEN zijn te huur op listnride in heel Duitsland!"
       },
       "unimoke": {
         "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",

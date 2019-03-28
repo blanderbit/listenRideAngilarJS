@@ -380,6 +380,11 @@
       "description": "Quoi: <b>Paris-Brest-Paris</b> | Quand: <b>18-22 août 2019</b> | Où: <b>Bergerie National, Rambouillet, France</b>",
       "text": "Paris-Brest-Paris est une course cycliste sans soutien externe, 1 200 km en longueur, de Paris à Brest et de retour. Il a eu lieu pour la première fois en 1891, et a lieu tous les 4 ans. Selon la plupart des registres, il s’agit de l’événement cycliste le plus ancien encore existant aujourd’hui. C’est un point culminant des courses de ce genre - aussi connu sous le nom de “brevets.”  </br></br>\n \nL’histoire, le prestige, et le défi du PBP attire des cyclistes du monde entier. Le fait qu'il n'ait lieu que tous les quatre ans ne fait que renforcer son statut. Cette année, plus de 6 000 coureurs auront la chance de prendre part à cette course historique de longue distance.</br></br>\n\nLes vélos de route à louer seront ajustés pour vous (bike-fitting) et peuvent être récupérés directement dans le parc du château de Rambouillet, dans le quartier de l'Expo. L'équipe sur place feront une partie de la piste, et sont des cyclistes PBP expérimentés.<br><br> Photos de James Robertson"
     },
+    "costadelsol": {
+      "title": "Rent a road bike for Gran Fondo Costa del Sol",
+      "description": "What: <b> Gran Fondo Costa del Sol</b> | <b>When:14 September 2019</b> | Where: <b>Estepona, Málaga, Spain</b>",
+      "text": "The Gran Fondo Costa del Sol will test your legs on a rigorous 133km with over 3400m of elevation. There is also the option to ride the lighter version, at only 94km with 2400m of climbing. The event will start and finish on the sunny coast of Estepona, and will take you through some gorgeous mountain paths in the Sierra Bermeja. You will be climbing the iconic <b>Alto Cortes de la Frontera</b> and the colossal <b>Peñas Blancas</b>, and take in the richness of the environment to the fullest!<br>\nScroll down to choose and rent a light & fast bike below!\n"
+    },
     "cyclingworld": {
       "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
       "description": "What: <b>Gravel Ride CyclingWorld</b> | When: <b> March 24, 2019 </b>| Where: <b>Dusseldorf, Germany</b>",
@@ -591,6 +596,35 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
+    },
+    "bzen": {
+      "title": "Rent and test a BZEN smart electric city bike today!",
+      "description": "Test ride a BZen smart electric city bikes today! The smart electric city bikes from BZEN are available to rent on listnride all across Germany!",
+      "item1-title": "Elegance & style",
+      "item2-title": "Smart - No sweat",
+      "item2-description": "Torque sensor for smooth assist<br>LCD screen with ON/OFF button, battery charge and assist level<br>60 km on one charge<br>",
+      "item3-title": "Clean  - No grease ",
+      "item3-description": "Belt drive, no risk for your clothes, no maintenance<br>Disk brakes of Shimano<br>Pedal with sandy paper. Protect your shoes, no slip<br>",
+      "find-out-more": "Learn more about BZEN bikes",
+      "order-online": "Order your new <a href=\"#\" target=\"_blank\">BZEN Bike</a> and get your listnride rental reimbursed. Find the most frequently asked questions below.",
+      "faq-question-1": "How long will it take to receive my order at home?",
+      "faq-answer-1": "When the bike is on stock, it takes 5 to 10 business days, depending of the country, to deliver our bike to your door. Shortly after placing an order you will receive an email confirming that your order has been received and is now being processed. Once we ship your order, you will be provided with a track and trace code via email.\nIf the bike is not in stock, then BZen is committed to deliver your bike within one month from the confirmation of the order. \n",
+      "faq-question-2": "How to choose my bike and what if I do not like it? ",
+      "faq-answer-2": "BZEN offers you a 30 days test ride.\nIf you hesitate to buy a BZEN because you are not sure you will like it, we are happy to offer you 30 days to ride the bike of your choice. Order it, have it delivered to your home and if you do not like it, you may return it during the first 30 days free of charge. You will be fully refunded.\n",
+      "faq-question-3": "How will the bike be at delivery?",
+      "faq-answer-3": "Your bike will be ready to ride in a minute. Unpack, fix the pedals and the handlebar, adjust the saddle and you are ready to pedal away.Simply take your BZEN bike out of the delivery box, take off all the protections, attach the pedals, fix the handlebar, and adjust the saddle to your size and you are ready to GO. The instructions are printed inside the delivery box. If you require additional information, you can find a more detailed instruction notice on the BZEN website under the support section.Our team tests every single bike before packing them with care. Nevertheless, if you see that your bike has been damaged during transport or if you observe a manufacturing fault, please contact our customer experience manager directly at support@bzenbikes.com. We will assist you and resolve the problem as quickly as possible.",
+      "faq-question-4": "Will I need any tool to adjust my bike?",
+      "faq-answer-4": "For the assembly of the bikes, you'll need 2 regular tools. Allen keys numbers 4 and a flat wrench 15. These 2 tools will be delivered along with the bike. That's it!",
+      "faq-question-5": "To which country do you deliver?",
+      "faq-answer-5": "We deliver to your door within EU, Norway and Switzerland free of delivery charge. (See detail list of Countries at the check out while registering your delivery and invoicing addresses).",
+      "faq-question-6": "How to charge the battery?",
+      "faq-answer-6": "To charge the battery, you must use the appropriate charger that was provided with the bike. You should simply connect the charger to any regular power plug  (220 / 230 V AC) and to the bike",
+      "faq-question-7": "How often should I charge the battery?",
+      "faq-answer-7": "The battery provides your bike an average range of electric assist of 60 km. We recommend you to charge your battery when it reaches 50% charges. It will require only 1 hour to 1.5 hour to fully recharge your battery. And if you run out of battery, your simply pedal like you would be on a regular bike.",
+      "faq-question-8": "Are BZEN bikes Certified?",
+      "faq-answer-8": "Yes. BZEN bikes have been tested by an independent and recognized institute in Germany. They are Certified EN-15194:2017 and fully compliant with the electrically power assisted bicycles European regulation.",
+      "faq-question-9": "Is it true that the bikes are made in Europe?",
+      "faq-answer-9": "Yes. BZEN is one of the very few bike brands that design, engineer and hand make its frames in Europe. The workshop is located in Silesia, Poland.We are proud at BZEN to make European bicycles. Not only the frames but also every electronic component is designed and manufacture in Europe.Because our bicycles are handcrafted in Europe, our engineers fully optimized the frame and each of the components to optimize their integration, enhance their performance and reduce the bike weight."
     },
     "whyte": {
       "title": "Rent and test Whyte bikes in Berlin",
