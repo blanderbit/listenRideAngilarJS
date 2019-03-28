@@ -380,6 +380,12 @@
       "description": "Was: <b>Paris-Brest-Paris</b> | Wann: <b>18-22 August 2019</b> | Wo: <b>Bergerie Nationale, Rambouillet, Frankreich</b>",
       "text": "Paris-Brest-Paris ist eine 1.200 km lange selbsttragende Fahrt von Paris nach Brest in der Bretagne und zurück. Sie wurde 1891 erstmals durchgeführt, findet jede 4 Jahre statt und ist nach den meisten Beschreibungen die älteste noch heute existierende Radsportveranstaltung und der Höhepunkt des Audaxkalenders. </br></br>\n \nDie Geschichte, das Prestige und die Herausforderung von PBP zieht Fahrer aus der ganzen Welt an, und die Tatsache, dass es nur alle vier Jahre stattfindet, trägt nur dazu bei, den Anlass zu verstärken. In diesem Jahr werden mehr als 6.000 weitere Fahrer ihre Chance erhalten, diese historischste aller Langstreckenfahrten zu absolvieren.</br></br>\n \nDie Rennräder werden für eingestellt (bike-fitting) und sind direkt Im Schlosspark Rambouillet, Expo-Bereich abzuholen. Das Team vor Ort fährt teils die Strecke mit und sind erfahrener PBP-fahrer.</br></br>Photographie: James Robertson"
     },
+    "costadelsol": {
+      "title": "Miete ein Rennrad für das Epic Gran Canaria",
+      "description": "Wast: <b>Gran Fondo Costa del Sol</b> | Wann: <b>14 September 2019</b> | Wo: <b>Estepona,  Málaga</b>",
+      "text": "Gran Fondo Costa del Sol ist eine wunderschöne Radsportveranstaltung mit Abfahrt und Ankunft in Estepona, Malaga (Costa del Sol). Ein internationaler Test, mit zwei Routen, dem ersten Gran Fondo von 133 km und 3400 Höhenmeter und dem Medium Fondo von 94 km und 2400 Höhenmeter. Leih dir jetzt dein Rennrad! Wähle das Fahrrad, das zu dir passt und genieße den Gran Fondo.",
+      "meta-title": "Simply rent the perfect road bike for the Gran Fondo Costa del Sol!"
+    },
     "cyclingworld": {
       "title": "Buche dir ein Gravel-Bike der Marken 8bar, Salsa, Veloheld oder Genesis für die Gravel-ausfahrt auf der Cyclingworld Düsseldorf",
       "description": "Was: <b>CyclingWorld </b>| Wann: <b>23.-24. März 2019 </b>| Wo: <b>Düsseldorf, Deutschland </b>",
@@ -591,6 +597,35 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Ups ... hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
+    },
+    "bzen": {
+      "title": "Miete und teste heute noch ein BZEN smart electric Stadtrad!",
+      "description": "Teste heute noch ein intelligentes elektrisches Stadtfahrrad! Die smarten Elektro-City-Bikes von BZEN können in ganz Deutschland gemietet werden!",
+      "item1-title": "Eleganz und Stil",
+      "item2-title": "Smart – kein Schwitzen",
+      "item2-description": "Drehmomentsensor für harmonische Tretunterstützung<br>\nLCD-Display mit Ein-/Aus-Taste, Akkustand und Unterstützungsstufe<br>\n60 km mit einer Akkuladung<br>",
+      "item3-title": "Sauber – kein Fett, kein Öl ",
+      "item3-description": "Riemenantrieb: wartungsfrei, ohne Schmutzgefahr<br>\nShimano Scheibenbremsen<br>\nPedale mit Sandpapier: fester Stand, sanft zum Schuh<br>",
+      "find-out-more": "Erfahre mehr über BZEN Bikes",
+      "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Bestelle dein BZEN online</a> und wir erstatten dir die Miete für deine Testfahrt. Wirf auch einen Blick auf die häufigsten Fragen.",
+      "faq-question-1": "Wie lange dauert es, bis meine Bestellung zu Hause geliefert wird?",
+      "faq-answer-1": "Wenn das Fahrrad auf Lager ist, dauert es je nach Land 5 bis 10 Werktage, um unser Fahrrad vor der Tür zu liefern. Kurz nach der Bestellung erhaltest du eine E-Mail mit der Bestätigung, dass die Bestellung eingegangen ist und nun bearbeitet wird. Sobald wir die Bestellung verschicken, erhalten Sie per E-Mail einen Track & Trace-Code.\nWenn das Fahrrad nicht auf Lager ist, gewährleistet BZEN, Ihr Fahrrad innerhalb eines Monats nach Auftragsbestätigung zu liefern.",
+      "faq-question-2": "Wie wähle ich mein Fahrrad und was ist, wenn es mir nicht gefällt?",
+      "faq-answer-2": "BZEN bietet eine 30-tägige Testfahrt an.\nWenn du noch nicht sicher bist, ein BZEN zu kaufen, bieten wir dir 30 Tage Zeit, um das Fahrrad Ihrer Wahl zu fahren. Bestelle das Rad, lasse es dir nach Hause liefern und wenn Sie es nicht mögen, können Sie es innerhalb der ersten 30 Tage kostenlos zurücksenden. Wir werden dir vollständig zurückerstatten.",
+      "faq-question-3": "Wie wird das Fahrrad bei Auslieferung sein?",
+      "faq-answer-3": "Ihr Fahrrad ist in einer Minute einsatzbereit. Packe die Pedale und den Lenker aus, fixiere den Sattel und los geht's!\nNimm dein BZEN-Fahrrad einfach aus dem Karton, entferne alle Schutzvorrichtungen, bringe die Pedale an, befestige den Lenker und stelle den Sattel auf Ihre Höhe ein. Die Anweisungen sind in der Lieferbox abgedruckt. Wenn Du zusätzliche Informationen benötigst, findest du die auf der BZEN-Website unter der Support-Seite eine detailliertere Anweisungshinweise.\nUnser Team testet jedes einzelne Fahrrad, bevor es sorgfältig verpackt wird. Solltest Du dennoch feststellen, dass dein Fahrrad beim Transport beschädigt wurde oder wenn du einen Herstellungsfehler feststellen, wenden dich bitte direkt an unseren Customer Experience Manager unter support@bzenbikes.com. Wir werden dir helfen und das Problem so schnell wie möglich beheben.",
+      "faq-question-4": "Benötige ich ein Werkzeug, um mein Fahrrad einzustellen?",
+      "faq-answer-4": "Für die Montage der Fahrräder benötigen Sie 2 normale Werkzeuge. Inbusschlüssel Nr. 4 und ein Flachschlüssel 15. Diese 2 Werkzeuge werden zusammen mit dem Fahrrad geliefert. Das ist es!",
+      "faq-question-5": "In welche Länder liefern Sie?",
+      "faq-answer-5": "Wir liefern frei Haus innerhalb der EU, nach Norwegen und in die Schweiz. (Siehe detaillierte Liste der Länder beim Check-out, während der Eingabe der Liefer- und Rechnungsadressen.)",
+      "faq-question-6": "Wie lade ich den Akku auf?",
+      "faq-answer-6": "Um den Akku aufzuladen, müsstest du das entsprechende Ladegerät verwenden, das mit dem Fahrrad geliefert wurde. Schließen Sie das Ladegerät einfach an einen normalen Netzstecker (220/230 V AC) und an das Fahrrad an.",
+      "faq-question-7": "Wie oft sollte ich den Akku aufladen?",
+      "faq-answer-7": "Die Batterie bietet deinem Fahrrad eine durchschnittliche Reichweite von 60 km. Wir empfehlen dir, den Akku zu laden, wenn der Ladezustand bei 50% liegt. Es dauert nur 1 bis 1,5 Stunden, um den Akku vollständig aufzuladen. Und wenn dir die Batterie ausgeht, treten Sie einfach wie ein normales Fahrrad auf die Pedale.",
+      "faq-question-8": "Sind BZEN Bikes zertifiziert?",
+      "faq-answer-8": "Ja. BZEN-Bikes wurden von einem unabhängigen und anerkannten Institut in Deutschland getestet. Sie sind nach EN-15194: 2017 zertifiziert und erfüllen die europäischen Vorschriften für Elektrofahrräder.",
+      "faq-question-9": "Stimmt es, dass die Fahrräder in Europa hergestellt werden?",
+      "faq-answer-9": "Ja. BZEN ist eine der wenigen Fahrradmarken, die in Europa ihre Rahmen entwerfen, konstruieren und von Hand herstellen. Die Werkstatt befindet sich in Schlesien, Polen.\nWir bei BZEN sind stolz darauf, europäische Fahrräder herzustellen. Nicht nur die Rahmen, sondern auch jede elektronische Komponente wird in Europa entwickelt und hergestellt.\nDa unsere Fahrräder in Europa handgefertigt werden, haben unsere Ingenieure den Rahmen und die einzelnen Komponenten vollständig optimiert, um ihre Integration zu optimieren, ihre Leistung zu steigern und das Fahrradgewicht zu reduzieren."
     },
     "whyte": {
       "title": "Miete und teste Whyte Bikes in Berlin",

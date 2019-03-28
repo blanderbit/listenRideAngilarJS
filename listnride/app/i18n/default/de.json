@@ -283,6 +283,9 @@
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
+    },
+    "bzen": {
+      "item1-description": "Leichtgewicht mit 14,4 k <br>\nBatterie und Elektronik sind im Rahmen integriert <br>\nAuf Komfort getrimmt: Geometrie, Sattel und Griffe <br>\nLeicht über ein paar Stufen tragbar"
     }
   },
   "faq": {
@@ -426,6 +429,10 @@
       "ampler": {
         "meta-title": "E Bike Test Programm",
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
+      },
+      "bzen": {
+        "meta-title": "Miete und teste BZEN-Bikes in ganz Deutschland | listnride",
+        "meta-description": "Teste heute noch ein intelligentes elektrisches Stadtfahrrad! Die smarten Elektro-City-Bikes von BZEN können in ganz Deutschland gemietet werden!"
       },
       "unimoke": {
         "meta-title": "Miete und teste UNI Moke E-bikes| listnride",
