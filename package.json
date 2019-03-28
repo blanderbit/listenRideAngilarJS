@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "postinstall": "cd listnride/ && npm install && npm run build && cd ..",
-    "heroku-postbuild": "webpack -p" // runs after installation
+    "heroku-postbuild": "webpack -p"
   },
   "dependencies": {
     "del": "^3.0.0",
