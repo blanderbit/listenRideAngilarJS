@@ -121,6 +121,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --env.development --mode development --watch",
-    "build": "webpack --env.production --mode production --optimize-minimize"
+    "build": "webpack --env.production --mode production --optimize-minimize",
+    "heroku-postbuild": "webpack -p"
   }
 }
