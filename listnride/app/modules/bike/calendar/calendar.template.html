@@ -184,7 +184,7 @@
           <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
         </md-option>
       </md-select>
-      <p ng-if="!calendar.isDateValid()" translate="shared.firstly-pick-dates"></p>
+      <p ng-if="!calendar.isDateValid()" translate="shared.firstly-pick-dates" class="text-error"></p>
     </div>
 
     <div ng-if="!calendar.cluster" >
