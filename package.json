@@ -2,15 +2,17 @@
   "name": "listnride-heroku-middleware",
   "version": "0.0.2",
   "description": "node js packages, wrapping angular app in Heroku",
-  "engines": {
-    "node": "8.9.x",
-    "npm": "5.5.x"
-  },
+  "keywords": [
+    "express",
+    "heroku",
+    "node"
+  ],
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "heroku-postbuild": "webpack -p --config ./listnride/webpack.config.js --progress",
     "postinstall": "cd listnride/ && npm install && npm run build && cd ..",
-    "heroku-postbuild": "webpack -p --config ./listnride/webpack.config.js --progress"
+    "start": "node index.js"
   },
   "dependencies": {
     "del": "^3.0.0",
@@ -48,10 +50,8 @@
     "prerender-node": "^2.5.0",
     "run-sequence": "^2.1.0"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+  "engines": {
+    "node": "8.9.x",
+    "npm": "5.5.x"
+  }
 }

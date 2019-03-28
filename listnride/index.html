@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" href="app/assets/ui_images/favicon-96x96.png" sizes="96x96">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900,400italic">
   <!-- CDN LIBRARIES -->
-  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= API_KEY_GOOGLE_MAPS %>"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= LNR_API_KEY_GOOGLE_MAPS %>"></script>
   <script src="https://js.braintreegateway.com/web/3.28.0/js/client.min.js"></script>
   <script src="https://js.braintreegateway.com/web/3.28.0/js/paypal.js"></script>
   <!-- TODO: remove scheduler -->
@@ -81,11 +81,11 @@
       s.parentNode.insertBefore(t, s)
     }(window,
       document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '<%= API_KEY_FACEBOOK_PIXEL %>'); // Insert your pixel ID here.
+    fbq('init', '<%= LNR_API_KEY_FACEBOOK_PIXEL %>'); // Insert your pixel ID here.
     // fbq('track', 'PageView');
   </script>
   <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<%= API_KEY_FACEBOOK_PIXEL %>&ev=PageView&noscript=1"
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<%= LNR_API_KEY_FACEBOOK_PIXEL %>&ev=PageView&noscript=1"
     />
   </noscript>
   <!-- DO NOT MODIFY -->
@@ -143,7 +143,7 @@
 
 <!-- Analytics Opt-Out Script -->
 <script type="text/javascript">// <![CDATA[
-var gaProperty = '<%= API_KEY_GOOGLE_ANALYTICS %>';
+var gaProperty = '<%= LNR_API_KEY_GOOGLE_ANALYTICS %>';
 var disableStr = 'ga-disable-' + gaProperty;
 if (document.cookie.indexOf(disableStr + '=true') > -1) {
   window[disableStr] = true;
@@ -165,7 +165,7 @@ function gaOptout() {
     a.src = g;
     m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-  ga('create', '<%= API_KEY_GOOGLE_ANALYTICS %>', 'auto');
+  ga('create', '<%= LNR_API_KEY_GOOGLE_ANALYTICS %>', 'auto');
   ga('set', 'anonymizeIp', true);
   ga('require', 'ecommerce');
 </script>
@@ -173,7 +173,7 @@ function gaOptout() {
 <script>
   (function(c,o,v,i,e,w){c[v]=c[v]||function(){(c[v].a=c[v].a||[]).push(arguments)};var s=o.createElement(i);s.src=e;s.async=1;var h=o.getElementsByTagName(i)[0];h.parentNode.insertBefore(s,h);c.addEventListener('error',function(err){c[v]('error',err)});c.addEventListener('message',function(msg){c[v]('message',msg)})})(window,document,'coview','script','https://cdn.coview.com/coview.js')
   coview('start', {
-    projectKey:'<%= API_KEY_COVIEW %>'
+    projectKey:'<%= LNR_API_KEY_COVIEW %>'
   });
 </script>
 </body>

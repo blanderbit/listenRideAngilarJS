@@ -2,8 +2,6 @@ const path = require('path');
 const fs = require('fs');
 
 const jsonMinify = require('jsonminify');
-const dotenv = require('dotenv');
-const dotenvExpand = require('dotenv-expand');
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -170,6 +168,7 @@ module.exports = (webpackEnv) => {
     devServer: {
       port: webpackEnv.PORT || 8080,
       https: true,
+      historyApiFallback: true,
       stats: 'minimal'
     },
     stats: {
@@ -239,10 +238,13 @@ const getPostcssLoader = () => ({
 });
 
 function getConfigValues() {
-  const configValues = dotenv.parse(
-    fs.readFileSync(path.join(__dirname, '.env'))
-  );
-  dotenvExpand({parsed: configValues});
+  const ENV_PREFIX = 'LNR_';
+  const configValues = Object.entries(process.env)
+    .filter(([name, value]) => name.startsWith(ENV_PREFIX))
+    .reduce(
+      (result, [name, value]) => ({...result, [name]: value}),
+      {}
+    );
   return configValues;
 };
 
