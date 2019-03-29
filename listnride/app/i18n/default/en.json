@@ -286,6 +286,12 @@
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
+    },
+    "urwahn": {
+      "item2-description": " "
+    },
+    "bzen": {
+      "item1-description": "Lightweight, Only 14.4 k<br>\nBattery & smart electronics all hidden inside<br> \nComfort geometry, saddle and handgrips<br>\nEasy to carry up stairs\n"
     }
   },
   "faq": {
@@ -356,9 +362,9 @@
     },
     "seo": {
       "city-title": "Rent the perfect bike in {{location}} | listnride",
-      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
+      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
       "category-title": "Rent the perfect {{category}} bike in {{location}} | listnride",
-      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
+      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
       "meta-title": "The listnride business community",
@@ -429,6 +435,14 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
+      },
+      "urwahn": {
+        "meta-title": "",
+        "meta-description": " "
+      },
+      "bzen": {
+        "meta-title": "Rent and test ride BZEN smart electric city bikes all across Germany | listnride",
+        "meta-description": "Test ride a smart electric city bike today! The smart electric city bikes from BZEN are available to rent on listnride all across Germany!"
       },
       "unimoke": {
         "meta-title": "Rent and test ride UNI Moke bikes | listnride",
