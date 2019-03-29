@@ -380,6 +380,12 @@
       "description": "Wat: <b>Paris-Brest-Paris </b>| Wanneer: <b>18-22 augustus 2019 </b>| Waar: <b>Bergerie National, Rambouillet, Frankrijk </b>",
       "text": "Parijs-Brest-Parijs is een 1.200 km zelfvoorzienende fietstocht van Parijs naar Brest in Bretagne en terug. De tocht werd voor het eerst gehouden in 1891, vindt om de 4 jaar plaats en is volgens de meeste gegevens het oudste wielerevenement dat nog steeds bestaat en het hoogtepunt van de evenementenkalender.</br></br>De geschiedenis, het prestige en de uitdaging van PBP trekt fietsers uit de hele wereld aan, en het feit dat het slechts om de vier jaar plaatsvindt, draagt alleen maar bij aan de versterking van het evenement. Dit jaar krijgen meer dan 6.000 renners de kans om deel te nemen aan deze meest historische langeafstandskoersen. </br></br>De te huur aangeboden racefietsen worden voor u afgesteld (bike fitting). Het team ter plaatse rijdt ook een deel van het parcours en is ervaren PBP-rijders en dus goed voorbereid.</br></br> Fotografie door: James Robertson"
     },
+    "costadelsol": {
+      "title": "Huur een racefiets voor Gran Fondo Costa del Sol",
+      "description": "Wat: <b>Gran Fondo Costa del Sol</b> | Wanneer: <b>14 September 2019</b> | Waar: <b>Estepona,  Málaga</b>",
+      "text": "Gran Fondo Costa del Sol is een prachtig fietsevenement met vertrek en aankomst in Estepona, Malaga ( Costa del Sol ). Een internationale beproeving, met twee routes, het eerste Gran Fondo van 133 km en 3400 hoogtemeter en de Medium Fondo van 94 km met 2400 hoogtemeter. Huur nu je racefiets! Kies de fiets die bij je past en geniet van het Gran Fondo.",
+      "meta-title": "Simply rent the perfect road bike for the Gran Fondo Costa del Sol!"
+    },
     "cyclingworld": {
       "title": "Boek een Gravelbike van gerenommeerde merken 8bar, Salsa, Veloheld of Genesis voor de graveltour op de Cyclingworld Düsseldorf",
       "description": "Wat: <b>CyclingWorld </b>| Wanneer: <b>23-24 maart 2019 </b>| Waar: <b>Düsseldorf, Duitsland </b>",
@@ -591,6 +597,35 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Oops..Er worden helaas nog geen fietsen op deze locatie aangeboden.",
       "faq": "The frequently asked questions"
+    },
+    "bzen": {
+      "title": "Huur en test vandaag nog een slimme BZEN stadsfiets!",
+      "description": "Test vandaag nog een BZEN slimme elektrische stadsfiets! De slimme elektrische stadsfietsen van BZEN zijn te huur op de listnride in heel Duitsland!",
+      "item1-title": "Elegantie en stijl",
+      "item2-title": "Slim - Zonder transpireren",
+      "item2-description": "Torquesensor voor soepele ondersteuning <br>\nLCD-scherm met AAN / UIT-knop, batterijlading en supportlevel <br>\n60 km met één lading <br>",
+      "item3-title": "Schoon - Geen vet",
+      "item3-description": "Riemaandrijving, geen risico voor uw kleding, geen onderhoud <br>\nSchijfremmen van Shimano <br>\nPedaal met profiel. Bescherm je schoenen, geen slip <br>",
+      "find-out-more": "Meer informatie over BZEN-fietsen",
+      "order-online": "Bestel je nieuwe <a href=\"#\" target=\"_blank\">BZEN fiets </a> en krijg de kosten van de proefrit terugbetaald. Vind hieronder de meest gestelde vragen.",
+      "faq-question-1": "Hoe lang duurt het om mijn bestelling thuis te ontvangen?",
+      "faq-answer-1": "Wanneer de fiets op voorraad is, duurt het 5 tot 10 werkdagen, afhankelijk van het land, om onze fiets aan de deur af te leveren. Kort na het plaatsen van een bestelling ontvangt u een e-mail waarin wordt bevestigd dat uw bestelling is ontvangen en wordt verwerkt. Zodra we uw bestelling hebben verzonden, ontvangt u via e-mail een track en trace-code.\nAls de fiets niet op voorraad is, commit BZEN zich ertoe om uw fiets binnen één maand na de bevestiging van de bestelling af te leveren.",
+      "faq-question-2": "Hoe mijn fiets te kiezen en wat als deze me niet bevalt?",
+      "faq-answer-2": "BZEN biedt u een proefrit van 30 dagen.\nAls u twijfelt om een BZEN te kopen omdat u niet zeker weet of deze geschikt is, bieden wij u graag 30 dagen de tijd om op de fiets van uw keuze te rijden. Bestel de fiets, laat het bij thuis bezorgen en als het jouw niet bevalt, kan je het tijdens de binnen 30 dagen kosteloos retourneren. Het aankoopbedrag wordt volledig terugbetaald.",
+      "faq-question-3": "Hoe zal de fiets worden afgeleverd?",
+      "faq-answer-3": "Je fiets is zo klaar om te rijden. Bevestig de pedalen en het stuur, fixeer het zadel en je bent klaar om weg te trappen.\nHaal uw BZEN-fiets gewoon uit de doos, verwijder alle beschermmaterialen, bevestig de pedalen, maak het stuur vast en pas het zadel aan uw maat aan en u bent klaar om te gaan. De instructies worden in de doos afgedrukt. Als je meer informatie nodig hebt, kan je een gedetailleerdere instructie vinden op de BZEN-website onder \"support\".\nOns team test elke afzonderlijke fiets voordat deze met zorg wordt verpakt. Als je echter ziet dat je fiets tijdens het transport is beschadigd of als u een fabricagefout constateert, neem dan rechtstreeks contact op met onze manager van de klantenservice op via support@bzenbikes.com. Wij zullen je helpen en het probleem zo snel mogelijk oplossen.",
+      "faq-question-4": "Heb ik een gereedschap nodig om mijn fiets aan te passen?",
+      "faq-answer-4": "Voor de eindmontage van de fiets heeft u 2 reguliere sleutels nodig. Inbus-sleutels nummer 4 en een platte sleutel 15. Deze worden samen met de fiets geleverd. Dat is het!",
+      "faq-question-5": "Naar welk landen wordt geleverd?",
+      "faq-answer-5": "Wij bezorgen aan huis binnen Europa, Noorwegen en Zwitserland zonder verzendkosten. (Zie detaillijst van landen bij het afrekenen en het invullen van je leveradres)",
+      "faq-question-6": "Hoe de batterij op te laden?",
+      "faq-answer-6": "Om de batterij op te laden, moet je de juiste oplader gebruiken die bij de fiets werd geleverd. Sluit de oplader eenvoudig aan op een gewone stroomstekker (220/230 V AC) en op de fiets.",
+      "faq-question-7": "Hoe vaak moet ik de batterij opladen?",
+      "faq-answer-7": "De batterij heeft een bereik van gemiddeld 60 km. We raden je aan om jouw batterij op te laden wanneer deze nog 50% geladen is. Het duurt dan slechts 1 uur tot 1,5 uur om uw batterij weer volledig op te laden. En als je zonder batterij zit, zou je gewone pedaal zoals jij op een gewone fiets zitten.",
+      "faq-question-8": "Zijn BZEN-fietsen gecertificeerd?",
+      "faq-answer-8": "Ja. BZEN-fietsen zijn getest door een onafhankelijk en erkend instituut in Duitsland. Ze zijn gecertificeerd EN-15194: 2017 en volledig compatibel met de elektrische ondersteunde fietsen Europese regelgeving.",
+      "faq-question-9": "Klopt het dat de fietsen in Europa zijn gemaakt?",
+      "faq-answer-9": "Ja. BZEN is een van de weinige fietsmerken die design, ingenieurs en de bouw in Europa vervaardigen. De workshop is gevestigd in Silezië, Polen.\nWe zijn trots op BZEN om Europese fietsen te maken. Niet alleen de frames, maar ook alle elektronische componenten worden in Europa ontworpen en geproduceerd.\nOmdat onze fietsen handgemaakt zijn in Europa, hebben onze ingenieurs het frame en elk onderdeel volledig geoptimaliseerd om hun integratie te optimaliseren, hun prestaties te verbeteren en het fietsgewicht te verminderen."
     },
     "whyte": {
       "title": "Rent and test ride Whyte bikes in Berlin",

@@ -2551,6 +2551,10 @@ button.md-primary.md-cancel-button {
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-costadelsol #hero-shot {
+  background-position: 50% 0;
+}
+
 rapha-super-cross img.event-logo {
   width: 250px;
 }
