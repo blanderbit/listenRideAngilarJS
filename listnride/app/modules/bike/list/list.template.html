@@ -11,9 +11,11 @@
     <div layout="row"
          layout-align="end center"
          ng-if="!list.isListMode">
-      <md-button class="md-raised md-primary"
-                 ng-disabled="!list.isFormValid() || list.submitDisabled"
-                 ng-click="list.onFormSubmit()">
+      <md-button
+        class="md-raised md-primary"
+        ng-disabled="!list.isFormValid() || list.submitDisabled"
+        ng-click="list.onFormSubmit()"
+      >
         {{ 'list.save-changes' | translate }}
       </md-button>
     </div>
