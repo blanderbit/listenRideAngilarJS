@@ -10,7 +10,6 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "webpack -p --config ./listnride/webpack.config.js --progress",
     "postinstall": "cd listnride/ && npm install && npm run build && cd ..",
     "start": "node index.js"
   },
