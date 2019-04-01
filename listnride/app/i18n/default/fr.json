@@ -284,6 +284,9 @@
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
     },
+    "urwahn": {
+      "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
+    },
     "bzen": {
       "item1-description": "Lightweight, Only 14.4 k<br>Battery & smart electronics all hidden inside<br> Comfort geometry, saddle and handgrips<br>Easy to carry up stairs"
     }
@@ -429,6 +432,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
+      },
+      "urwahn": {
+        "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
+        "meta-description": "Book a test drive for the Urwahn Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!"
       },
       "bzen": {
         "meta-title": "Rent and test ride BZEN smart electric city bikes all across Germany | listnride",

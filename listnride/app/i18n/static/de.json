@@ -382,9 +382,9 @@
     },
     "costadelsol": {
       "title": "Miete ein Rennrad für das Epic Gran Canaria",
-      "description": "Wast: <b>Gran Fondo Costa del Sol</b> | Wann: <b>14 September 2019</b> | Wo: <b>Estepona,  Málaga</b>",
-      "text": "Gran Fondo Costa del Sol ist eine wunderschöne Radsportveranstaltung mit Abfahrt und Ankunft in Estepona, Malaga (Costa del Sol). Ein internationaler Test, mit zwei Routen, dem ersten Gran Fondo von 133 km und 3400 Höhenmeter und dem Medium Fondo von 94 km und 2400 Höhenmeter. Leih dir jetzt dein Rennrad! Wähle das Fahrrad, das zu dir passt und genieße den Gran Fondo.",
-      "meta-title": "Simply rent the perfect road bike for the Gran Fondo Costa del Sol!"
+      "description": "Was: <b>Gran Fondo Costa del Sol</b> | Wann: <b>14 September 2019</b> | Wo: <b>Estepona,  Málaga</b>",
+      "text": "<a0 undefined=\"http://www.granfondocostadelsol.com/\">Gran Fondo Costa del Sol</a0>ist eine wunderschöne Radsportveranstaltung mit Abfahrt und Ankunft in Estepona, Malaga (Costa del Sol). Ein internationaler Test, mit zwei Routen, dem ersten Gran Fondo von 133 km und 3400 Höhenmeter und dem Medium Fondo von 94 km und 2400 Höhenmeter. Leih dir jetzt dein Rennrad! Wähle das Fahrrad, das zu dir passt und genieße den Gran Fondo.",
+      "meta-title": "Miete einfach das perfekte Rennrad für den Gran Fondo Costa del Sol!"
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravel-Bike der Marken 8bar, Salsa, Veloheld oder Genesis für die Gravel-ausfahrt auf der Cyclingworld Düsseldorf",
@@ -597,6 +597,29 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Ups ... hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
+    },
+    "urwahn": {
+      "title": "#MadewithLove #Germany #SteelisReal",
+      "description": "Buche dir eine Probefahrt für das Urwahn Stadtfuchs heute! Das stilvolle urban bike kannst du einfach buchen und probefahren in München!",
+      "item1-title": "Stahl neu interpretiert",
+      "item2-title": "Integriertes LED-Lichtsystem ",
+      "item3-title": "Qualität aus Deutschland",
+      "item3-description": "Stahlrahmen vollständig</br>\nin Deutschland gefertigt</br>\nvon ausgewählten</br>\nregionalen Partnern",
+      "find-out-more": "Mehr Erfahren über Urwahn Engineering",
+      "order-online": "Bestelle dein Urwahn und wir erstatten Dir die Miete für deine Testfahrt!\nSiehe unten die häufigsten Fragen und Antworten.",
+      "faq-question-1": "Warum diese Rahmenstruktur?",
+      "faq-answer-1": "Mit dieser neuartige Rahmenstruktur haben wir einen elastischen Hinterbau geschaffen, der Fahrbahnunebenheiten durch die spezielle Form des Hinterbaus ausgleicht, ohne an Tretlagersteifigkeit und Pedalkraft einzubüßen. Mehr Komfort bei gleichzeitig hoher Performance wird bei dir ein gänzlich neues Fahrgefühl hervorrufen.",
+      "faq-question-2": "Ist der filigrane Stahlrahmen sicher?",
+      "faq-answer-2": "In vorgeschriebenen Lastfallszenarien nach internationalen Qualitätsstandards wurde durch die EFBE Prüftechnik GmbH ein 10-jähriger Produktgebrauch simuliert und der Stahlrahmen auf Herz und Nieren geprüft. Mit Stolz blicken wir auf eine erfolgreiche Zertifizierung nach DIN ISO 4210.",
+      "faq-question-3": " Muss ich das LED-Licht laden?",
+      "faq-answer-3": "Das LED-Licht wird es autark und steckerlos über einen der stärksten Nabendynamos auf dem Markt dauerhaft mit Strom versorgt. Du kannst dich wieder auf das Wesentliche konzentrieren ohne befürchten zu müssen, dass dir der Saft ausgeht. Fest mit dem Stahlrahmen vereint, führst du dein Front- und Rücklicht immer mit dir. ",
+      "faq-question-4": "Wie funktioniert das Tracking?",
+      "faq-answer-4": "Du verbindest dein Smartphone per Bluetooth mit deinem Urwahn Bike und lockst es über die Urwahn App. Die eingebaute Sensorik misst grobe Erschütterungen bei Diebstahlversuchen und benachrichtigt dich umgehend mit einer Push-Benachrichtigung. Im Rahmen verbaut, kann das Tracking-System weder zerstört, entfernt noch abgeschaltet werden.",
+      "faq-question-5": "Was ist bei euch Made in Germany?",
+      "faq-answer-5": "Entgegen dem Branchenstandard wird der innovative Urwahn Stahlrahmen vollständig in Deutschland gefertigt. Der finale Zusammenbau unserer Urwahn Bikes unterliegt sehr hohen Qualitätsansprüchen und findet in der Nähe unseres Unternehmenssitzes in Magdeburg statt.",
+      "faq-question-6": "Warum eigentlich Stadtfuchs?",
+      "faq-answer-6": "Mit viel Raffinesse und Ideenreichtum erobert dieser meisterhafte Anpassungskünstler unsere Städte und schlängelt sich auf der Jagd mühe- sowie lautlos durch die kleinsten Winkel. Ähnlich der Hinterläufe eines Fuchses garantiert der elastische Hinterbau dynamische Wendigkeit und gleicht Fahrbahnunebenheiten zu Gunsten deines Fahrkomforts aus.",
+      "item1-description": "Organisches Design mit</br>\nhohem Wiedererkennungswert</br>\nsowie ein elastischer Hinterbau </br>\nfür mehr Fahrkomfort"
     },
     "bzen": {
       "title": "Miete und teste heute noch ein BZEN smart electric Stadtrad!",
