@@ -165,7 +165,7 @@ angular.module('bike').component('calendar', {
       };
 
       function validClusterSize() {
-        if (!calendar.bike.is_cluster) return true;
+        if (calendar.bike && !calendar.bike.is_cluster) return true;
         if (calendar.cluster && calendar.cluster.rides) {
           return !!calendar.cluster.rides[calendar.pickedBikeSize];
         } else {
