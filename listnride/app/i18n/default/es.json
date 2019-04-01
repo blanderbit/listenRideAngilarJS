@@ -283,6 +283,9 @@
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
+    },
+    "urwahn": {
+      "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
     }
   },
   "faq": {
@@ -426,6 +429,10 @@
       "ampler": {
         "meta-title": "Programa de prueba de bicicleta eléctrica",
         "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich."
+      },
+      "urwahn": {
+        "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
+        "meta-description": "Book a test drive for the Urwahn Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!"
       },
       "bzen": {
         "meta-title": "Rent and test ride BZEN smart electric city bikes all across Germany | listnride",
