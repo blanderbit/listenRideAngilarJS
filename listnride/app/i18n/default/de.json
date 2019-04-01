@@ -284,6 +284,9 @@
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
     },
+    "urwahn": {
+      "item2-description": "Organisches Design mit<br>\nhohem Wiedererkennungswert<br>\nsowie ein elastischer Hinterbau <br>\nfür mehr Fahrkomfort"
+    },
     "bzen": {
       "item1-description": "Leichtgewicht mit 14,4 k <br>\nBatterie und Elektronik sind im Rahmen integriert <br>\nAuf Komfort getrimmt: Geometrie, Sattel und Griffe <br>\nLeicht über ein paar Stufen tragbar"
     }
@@ -429,6 +432,10 @@
       "ampler": {
         "meta-title": "E Bike Test Programm",
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
+      },
+      "urwahn": {
+        "meta-title": "Miete und teste ein Urwahn Stadtfuchs in München | listnride",
+        "meta-description": "Buche dir eine Probefahrt für das Urwahn Stadtfuchs heute! Das stilvolle urban bike kannst du einfach buchen und probefahren in München!"
       },
       "bzen": {
         "meta-title": "Miete und teste BZEN-Bikes in ganz Deutschland | listnride",

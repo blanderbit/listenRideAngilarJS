@@ -383,7 +383,7 @@
     "costadelsol": {
       "title": "Rent a road bike for Gran Fondo Costa del Sol",
       "description": "What: <b> Gran Fondo Costa del Sol</b> | <b>When:14 September 2019</b> | Where: <b>Estepona, Málaga, Spain</b>",
-      "text": "The Gran Fondo Costa del Sol will test your legs on a rigorous 133km with over 3400m of elevation. There is also the option to ride the lighter version, at only 94km with 2400m of climbing. The event will start and finish on the sunny coast of Estepona, and will take you through some gorgeous mountain paths in the Sierra Bermeja. You will be climbing the iconic <b>Alto Cortes de la Frontera</b> and the colossal <b>Peñas Blancas</b>, and take in the richness of the environment to the fullest!<br>\nScroll down to choose and rent a light & fast bike below!\n",
+      "text": "The <a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\">Gran Fondo Costa del Sol</a> will test your legs on a rigorous 133km with over 3400m of elevation. There is also the option to ride the lighter version, at only 94km with 2400m of climbing. The event will start and finish on the sunny coast of Estepona, and will take you through some gorgeous mountain paths in the Sierra Bermeja. You will be climbing the iconic <b>Alto Cortes de la Frontera</b> and the colossal <b>Peñas Blancas</b>, and take in the richness of the environment to the fullest!<br>\nScroll down to choose and rent a light & fast bike below!",
       "meta-title": "Louez facilement le vélo de route idéal pour le Gran Fondo Costa del Sol!",
       "meta-description": "Profitez des magnifiques montagnes pendant la Gran Fondo Costa del Sol, en louant un vélo de route en carbone sur listnride!"
     },
@@ -598,6 +598,27 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
+    },
+    "urwahn": {
+      "title": " MadewithLove #Germany #SteelisReal",
+      "description": "Book a test drive for the Urwahn Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!",
+      "item1-title": "Steel revamped",
+      "item2-title": "Integrated LED-light system",
+      "item3-title": " Quality made in Germany",
+      "item3-description": "Steel frame completely</br>\nmade in Germany</br>\nby selected regional partners ",
+      "find-out-more": " Learn more about Urwahn",
+      "order-online": " Order your Urwahn and we'll refund the rent for your test drive! Find below for the most frequently asked questions and answers.",
+      "faq-question-1": " Why this frame structure?",
+      "faq-answer-1": " With this novel frame structure, we have created an elastic rear triangle, that balances road bumps by the special shape of the rear triangle, without sacrificing rigidity and pedal force. More comfort combined with high performance will give you a completely new driving experience.",
+      "faq-question-2": " Is the filigree steel frame safe?",
+      "faq-answer-2": " In prescribed load case scenarios according to international quality standards, EFBE Prüftechnik GmbH simulated a 10-year product use and put the steel frame through its paces. We proudly look forward to a successful certification according to DIN ISO 4210.",
+      "faq-question-3": "Do I have to charge the LED light?",
+      "faq-answer-3": " The LED light is supplied by one of the strongest hub dynamos on the market, which is self-sufficient and plug-less, and permanently supplies it with electricity. You can concentrate on the essentials without having to worry about running out of juice. Firmly united with the steel frame, you always carry your front and rear lights with you. ",
+      "faq-answer-4": "You can connect your smartphone via Bluetooth with your Urwahn Bike and lock it via the Urwahn App. The built-in sensor measures gross shocks in theft attempts and notifies you immediately with a push notification. Installed in the frame, the trackingsystem can neither be destroyed, removed nor switched off.",
+      "faq-question-5": " What is Made in Germany with your Bike?",
+      "faq-answer-5": "Contrary to the industry standard, the innovative Urwahn steel frame is manufactured entirely in Germany. The final assembly of our Urwahn Bikes is subject to very high quality standards and takes place near our headquarters in Magdeburg.",
+      "faq-answer-6": " With a great deal of refinement and inventiveness, this masterful adaptation artist conquers our cities and winds his way through the smallest corners effortlessly and silently. Similar to the hind legs of a fox, the elastic rear triangle guarantees dynamic maneuverability and compensates for uneven road surfaces in favor of your riding comfort.",
+      "item1-description": "Organic design with</br>\nhigh recognition value</br>\nand an elastic rear triangle</br>\nfor more driving comfort"
     },
     "bzen": {
       "title": "Rent and test a BZEN smart electric city bike today!",
