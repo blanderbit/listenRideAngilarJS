@@ -76,6 +76,8 @@ angular.module('listnride', [
   'whyteIntegration',
   'feltIntegration',
   'unimokeIntegration',
+  'bzenIntegration',
+  'urwahnIntegration',
   /* EVENTS_PAGE */
   'event',
   'capeArgus',
