@@ -454,7 +454,7 @@ angular.module('list', ['ngLocale'])
 
           if (list.variations) {
             _.forEach(list.variations, function (item) {
-              isValid = isValid && _.isNumber(item.size)
+              isValid = isValid && _.isNumber(+item.size);
             });
           }
 
