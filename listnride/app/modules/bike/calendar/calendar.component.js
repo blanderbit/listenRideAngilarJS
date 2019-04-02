@@ -47,6 +47,13 @@ angular.module('bike').component('calendar', {
       calendar.validClusterSize = validClusterSize;
       calendar.requested = false;
 
+      function getHumanReadableDate(date) {
+        date = new Date(date);
+        return date.getFullYear() + "-" +  (date.getMonth()+1) + "-" + date.getDate();
+      }
+
+      calendar.defaultDateRange = $state.params.startDate ? (getHumanReadableDate($state.params.startDate) + ' to ' + getHumanReadableDate($state.params.endDate)) : '';
+
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
           updateDynamicData();
@@ -84,7 +91,7 @@ angular.module('bike').component('calendar', {
             }
             angular.element('#bikeCalendar').dateRangePicker({
               alwaysOpen: true,
-              container: '#bikeCalendar',
+              container: '#bikeCalendarWrapper',
               beforeShowDay: classifyDate,
               inline: true,
               selectForward: true,
