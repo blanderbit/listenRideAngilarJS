@@ -173,6 +173,7 @@
       <div class="md-body-2">{{ 'shared.pick-size' | translate }}</div>
       <md-select
         ng-model="calendar.pickedBikeSize"
+        ng-change="calendar.updateStateSize()"
         placeholder="{{ 'shared.pick-size' | translate}}"
       >
         <md-option

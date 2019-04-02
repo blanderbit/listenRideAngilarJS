@@ -59,6 +59,16 @@ angular.module('bike').component('calendar', {
         }
       };
 
+      calendar.updateStateSize = function(){
+        updateState({size: calendar.pickedBikeSize});
+      }
+
+      function updateState (params) {
+        $state.go(
+          $state.current, params
+        );
+      }
+
       // some data we don't have on component init
       function updateDynamicData() {
         calendar.freeBike = calendar.prices[0].price <= 0;
@@ -624,6 +634,7 @@ angular.module('bike').component('calendar', {
             });
           }
 
+          updateState({startDate: startDate, endDate: endDate, size: calendar.pickedBikeSize});
 
         } else {
           calendar.duration = date.duration(undefined, undefined, 0);
