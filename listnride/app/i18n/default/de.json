@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Mehr erfahren",
     "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
+    "for-count-hours": "für {{hoursSlot}} Stunden",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Bitte wähle eine Fahrradgröße",
     "please-choose-bike-count": "Wähle die Anzahl der Fahrräder",
     "status-labels": {
@@ -224,6 +227,12 @@
     "paris-brest-paris": {
       "meta-title": "Miete ein Rennrad für Paris-Brest-Paris 2019 | listnride",
       "meta-description": "Miete ein Rennrad für Paris-Brest-Paris 2019 einfach, online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
+    },
+    "8bar-clubride": {
+      "meta-title": "Miete ein Rennrad für die 8bar Clubride",
+      "meta-description": "Nehme teil an unserer wöchentlichen Clubride und teste eines der neuesten 8bar Rennräder kostenlos. Einfach online buchen und im Showroom abholen",
+      "calendar-title": "Testräder für die 8bar Clubride",
+      "calendar-subtitle": "Buche ein kostenloses 8bar bike für unser Club Ride"
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
