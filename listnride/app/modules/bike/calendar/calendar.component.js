@@ -41,18 +41,21 @@ angular.module('bike').component('calendar', {
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
                                 $mdMedia, $window, $analytics, date, price, api, authentication,
                                 verification, ENV, calendarHelper, notification, bikeCluster) {
+      //variables
+
       var calendar = this;
       calendar.authentication = authentication;
       calendar.calendarHelper = calendarHelper;
-      calendar.validClusterSize = validClusterSize;
       calendar.requested = false;
+      calendar.defaultDateRange = '';
+
+      //methods
+      calendar.validClusterSize = validClusterSize;
 
       function getHumanReadableDate(date) {
         date = new Date(date);
         return date.getFullYear() + "-" +  (date.getMonth()+1) + "-" + date.getDate();
       }
-
-      calendar.defaultDateRange = $state.params.startDate ? (getHumanReadableDate($state.params.startDate) + ' to ' + getHumanReadableDate($state.params.endDate)) : '';
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
@@ -60,6 +63,13 @@ angular.module('bike').component('calendar', {
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
             calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
+            calendar.startDate = $state.params.startDate ? new Date($state.params.startDate) : null;
+            calendar.endDate = $state.params.endDate ? new Date($state.params.endDate) : null;
+            if(calendar.startDate && calendar.endDate){
+              calendar.defaultDateRange = (getHumanReadableDate(calendar.startDate) + ' to ' + getHumanReadableDate(calendar.endDate));
+              setInitHours();
+              dateChange(calendar.startDate, calendar.endDate);
+            }
             initOverview();
             initCalendarPicker();
           });
