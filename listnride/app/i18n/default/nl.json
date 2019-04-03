@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Meer info",
     "event-bikes-will-be-soon": "Fietsen voor dit evenement zijn binnenkort beschikbaar",
+    "for-count-hours": "voor {{hoursSlot}} uur",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Kies je fietsmaat",
     "please-choose-bike-count": "Selecteer het aantal fietsen",
     "status-labels": {
@@ -219,6 +222,12 @@
     "paris-brest-paris": {
       "meta-title": "Huur een racefiets voor Parijs-Brest-Parijs 2019 | listnride",
       "meta-description": "Huur een racefiets online, gemakkelijk en veilig met listnride voor Parijs-Brest-Parijs 2019. Kies de perfecte fiets die bij u past."
+    },
+    "8bar-clubride": {
+      "meta-title": "Meta title",
+      "meta-description": "Meta Description",
+      "calendar-title": "Test bikes for 8bar club ride",
+      "calendar-subtitle": "Boek je gratis fiets voor de 8bar club-ride"
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
