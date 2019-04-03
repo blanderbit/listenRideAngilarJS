@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "En savoir plus",
     "event-bikes-will-be-soon": "Les vélos pour cet événement seront bientôt disponibles",
+    "for-count-hours": "for {{hoursSlot}} hours",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "S'il vous plaît, choisissez une taille de vélo",
     "please-choose-bike-count": "Sélectionnez le nombre de vélos",
     "status-labels": {
@@ -224,6 +227,12 @@
     "paris-brest-paris": {
       "meta-title": "Louez un vélo de route pour Paris-Brest-Paris 2019 | listnride",
       "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour Paris-Brest-Paris 2019. Choisissez le vélo parfait qui correspond à vos besoins."
+    },
+    "8bar-clubride": {
+      "meta-title": "Louez un vélo de route pour les sorties de 8bar",
+      "meta-description": "Rejoignez-nous lors de nos sorties hebdomadaires dans le club et testez gratuitement l'un de nos derniers vélos de route. Il suffit de réserver ici. Le vélo sera disponible dans notre salle d'exposition.",
+      "calendar-title": "Vélos a essayer pour les sorties de 8bar",
+      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
     },
     "cyclingworld": {
       "meta-title": "Louez un vélo Gravel de chez 8bar, Salsa ou Veloheld pour le tour sur gravier à Cyclingworld",

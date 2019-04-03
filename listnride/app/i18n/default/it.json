@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Per saperne di più",
     "event-bikes-will-be-soon": "Le biciclette per questo evento saranno presto disponibili",
+    "for-count-hours": "for {{hoursSlot}} hours",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Scegli la taglia",
     "please-choose-bike-count": "Seleziona il numero di biciclette",
     "status-labels": {
@@ -221,6 +224,12 @@
     "paris-brest-paris": {
       "meta-title": "Noleggia una bici da corsa per la Parigi-Brest-Parigi 2019 | listnride",
       "meta-description": "Noleggia una bici da corsa online in modo facile e sicuro con listnride per la Paris-Brest-Paris 2019. Scegli la bici perfetta per te."
+    },
+    "8bar-clubride": {
+      "meta-title": "Partecipa",
+      "meta-description": "Descrizione",
+      "calendar-title": "Prova le bici per il giro del club 8bar",
+      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -869,7 +878,7 @@
     "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
-    "1": "Hai richiesto il <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>da {{lister.display_name}}dal{{timespan}}. Puoi chattare con {{lister.display_name}}di seguito. Il pagamento viene effettuato solo quando la tua richiesta è accettata e la bicicletta è prenotata.",
+    "1": "Hai richiesto il <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> da {{lister.display_name}} dal {{timespan}}. Puoi chattare con {{lister.display_name}}di seguito. Il pagamento viene effettuato solo quando la tua richiesta è accettata e la bicicletta è prenotata.",
     "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
