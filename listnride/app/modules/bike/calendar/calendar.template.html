@@ -1,9 +1,9 @@
-<div id="bikeCalendar" ng-hide="calendar.isSlotableEvent"></div>
+<div id="bikeCalendar" ng-hide="calendar.isOnSlotableEvent"></div>
 
 
 
 <!--        EVENT CALENDAR PICKUP+RETURN        -->
-<!-- <div layout="column" layout-margin ng-if="calendar.isSlotableEvent">
+<!-- <div layout="column" layout-margin ng-if="calendar.isOnSlotableEvent">
   <p class="md-headline lnr-center">E-Bike Days Calendar</p>
   <p class="md-body-1 lnr-center">During the E-Bike Days, you can test ride a great variety of high end e-bikes. Just select which day and time you want to rent it. All rentals are free!</p>
   <md-input-container class="md-block">
@@ -54,10 +54,10 @@
 <!--      END EVENT CALENDAR        -->
 
 <!--        EVENT CALENDAR FIXED SLOT        -->
-<div layout="column" layout-margin ng-if="calendar.isSlotableEvent">
+<div layout="column" layout-margin ng-if="calendar.isOnSlotableEvent">
 
-  <p class="md-headline lnr-center" translate="events.{{calendar.eventName}}.title"></p>
-  <p class="md-body-1 lnr-center" translate="events.{{calendar.eventName}}.subtitle"></p>
+  <p class="md-headline lnr-center" translate="events.{{calendar.eventName}}.calendar-title"></p>
+  <p class="md-body-1 lnr-center" translate="events.{{calendar.eventName}}.calendar-subtitle"></p>
 
   <md-input-container class="md-block" ng-if="calendar.event.days.length > 1">
     <label>{{ 'veletage.event.select-day' | translate }}</label>
@@ -125,7 +125,12 @@
 </div>
 <!--      END EVENT CALENDAR        -->
 
-<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="!calendar.isSlotableEvent && calendar.startDate">
+<div
+  ng-if="!calendar.isOnSlotableEvent && calendar.startDate"
+  id="timeRange"
+  layout="row"
+  layout-align="start center"
+  layout-padding>
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select
