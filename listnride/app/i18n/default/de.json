@@ -368,9 +368,9 @@
     },
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
-      "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
+      "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
       "category-title": "Miete das perfekte {{category}}-Rad in {{location}} | listnride",
-      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
+      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
     },
     "business-community": {
       "meta-title": "Die listnride Business Community",
@@ -1354,7 +1354,7 @@
   "invite-landing": {
     "meta-title": "listnride | 10€ für dich!",
     "meta-description": "Lade deine Freunde per E-Mail ein, oder teile deinen Link auf Facebook und schenke ihnen dadurch 10€. Für jede Anmeldung über deinen Link, erhälst du 10€ Gutschrift, sobald deine Freunde aktiv werden! (Leihen und Verleihen)",
-    "header": "hat dir 10€ geschenkt",
+    "header": "hat dir 10€ geschenkt",
     "subheader": "Willkommen bei listnride, der Bike Sharing Community",
     "subsubheader": "listnride ist eine Community die passionierte Radfahrer zusammen bringt um sich gegenseitig zu unterstützen. Du benötigst ein Fahrrad für ein bestimmtes Terrain? Du wirst es hier finden! Du möchtest deine Räder mit anderen teilen? Biete Sie an und verdiene zusätzliches Taschengeld!",
     "subsubsubheader": "{{ name }} hat dich eingeladen. Melde dich einfach kurz an um deine 10€ zu erhalten! Der Gutschein wird deinem Nutzerkonto sofort gutgeschrieben und kann sofort genutzt werden.",

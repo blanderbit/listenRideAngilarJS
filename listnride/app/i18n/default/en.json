@@ -371,9 +371,9 @@
     },
     "seo": {
       "city-title": "Rent the perfect bike in {{location}} | listnride",
-      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
+      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
       "category-title": "Rent the perfect {{category}} bike in {{location}} | listnride",
-      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
+      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
       "meta-title": "The listnride business community",

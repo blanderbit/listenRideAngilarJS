@@ -368,9 +368,9 @@
     },
     "seo": {
       "city-title": "Alquila la bicicleta perfecta en {{location}} | listnride",
-      "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
+      "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
       "category-title": "Alquila una {{category}} bici en {{location}} | listnride",
-      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
+      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
     },
     "business-community": {
       "meta-title": "La comunidad empresarial de listnride",

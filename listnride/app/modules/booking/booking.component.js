@@ -95,6 +95,7 @@ angular.module('booking', [])
                 }
               }
 
+
               // CLUSTER BIKE LOGIC
               if (booking.bike.is_cluster) {
                 booking.cluster = success.data.cluster;
