@@ -27,9 +27,10 @@ angular.module('event', []).component('event', {
           'lardita-arezzo': getRequestUrl('30', 'Arezzo, Tuscany', '', '2019-03-24'),
           'granfondo-via-del-sale': getRequestUrl('30', 'Cesenatico', '', '2019-05-05'),
           'giro-sardegna': getRequestUrl('30', 'Cagliari', '', '2019-04-21'),
-          'cyclingworld': getRequestUrl('43', 'Düsseldorf', '', '2019-03-24', '/rides?family=35'),
+          'cyclingworld': getRequestUrl('', '', '', '', '/rides?family=35'),
           'paris-brest-paris': getRequestUrl('30', 'Rambouillet, France', '', '2019-08-18'),
-          'costadelsol': getRequestUrl('30', 'Marbella, Málaga, Spain', '', '2019-09-15')
+          'costadelsol': getRequestUrl('30', 'Marbella, Málaga, Spain', '', '2019-09-15'),
+          '8bar-clubride': getRequestUrl('', '', '', '', '/rides?family=36'),
 
           // CUSTOM DESIGN AND OLD PAGES
 

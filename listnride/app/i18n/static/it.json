@@ -315,7 +315,7 @@
         "question-5": "C'è una tassa di mantenimento in caso di danni? Quanto è alta?",
         "answer-5": "La franchigia è fino 250 € per l'assicurazione di base.\n<br>\nL'assicurazione Premium non ha franchigia",
         "question-6": "Come posso terminare l'assicurazione dopo che il mio noleggio bici si e' concluso ?",
-        "answer-6": "Con ogni noleggio di biciclette riceverai un certificato di assicurazione individuale. Questo è\n<b>solo </b>\nvalido per la prenotazione specifica e per il\n<b>periodo di tempo </b>\n selezionato da te. Finisce automaticamente.\n<p>\nPuoi scaricare direttamente il certificato e riceverlo via e-mail. Non devi fare nulla.",
+        "answer-6": "Con ogni noleggio di biciclette riceverai un certificato di assicurazione individuale. Questo è\n<b>solo </b>\nvalido per la prenotazione specifica e per il\n<b>periodo di tempo </b>\n selezionato da te. Finisce automaticamente.\n<p>\nPuoi scaricare direttamente il certificato e riceverlo via e-mail. Non devi fare nulla.",
         "question-7": "Chi devo contattare se devo richiedere la mia assicurazione?",
         "answer-7": "Naturalmente speriamo che questo non accadrà mai!\n<br>\n L'assicurazione è offerta dal nostro partner assicurativo online\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n e coperto dall'\n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Assicurazione Gothaer</a> \nPoiché tu stesso sei l'assicurato da hepster, è meglio contattare hepster:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com </a>\n<li>0800 - 0753336\n</ul>\n<br>\nlo staff di hepster ti supporterà in modo rapido e competente."
       },
@@ -386,6 +386,11 @@
       "text": "La <a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\">Gran Fondo Costa del Sol</a> è un evento ciclistico con partenza e arrivo a Estepona, Malaga (Costa del Sol). Un test internazionale, con due percorsi, la prima Gran Fondo di 133 km e dislivello positivo di 3400 M+ e la seconda Media Fondo di 94 km e dislivello positivo di 2400 M. <br>\nNoleggia subito la tua bici da strada! Scegli la bici che più si adatta alle tue esigenze e goditi la Gran Fondo.",
       "meta-title": "Noleggia la bici da strada per la Gran Fondo Costa del Sol!",
       "meta-description": "Goditi le splendide montagne della Gran Fondo Costa del Sol noleggiando una bici da strada in carbonio su listnride!"
+    },
+    "8bar-clubride": {
+      "title": "Join our 8bar Clubride and ride a test bike for free!",
+      "description": "What: <b>8bar Club Ride</b> | When: <b>Every Tuesday, from April 9</b> | Where: <b>8bar Showroom</b>",
+      "text": "When you’re part of our community you will always find someone to ride with. During the summer, you can ride our weekly club rides every Tuesday evening from the 8bar showroom Berlin, or at our “member only” rides or events. Beside the fact that you’ll be saving on application fees to any 8bar-hosted or -sponsored cycling event, you can get a special discount on all 8bar products. And last but not least, every year you’ll get a fresh new cycling kit."
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",

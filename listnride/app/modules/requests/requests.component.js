@@ -233,7 +233,7 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
               requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
               var endDate = new Date(requests.request.end_date);
-              requests.request.returnable = (new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), 0, 0, 0) < Date.now());
+              requests.request.returnable = (endDate.getTime() < Date.now());
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;

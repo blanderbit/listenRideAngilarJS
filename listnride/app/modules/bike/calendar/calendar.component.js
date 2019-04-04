@@ -59,11 +59,13 @@ angular.module('bike').component('calendar', {
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
-          updateDynamicData();
+
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
+
             initOverview();
             initCalendarPicker();
+            checkEventBike();
           });
         }
       };
@@ -101,7 +103,7 @@ angular.module('bike').component('calendar', {
           if (calendar.requests !== undefined) {
             deregisterRequestsWatcher();
             calendar.owner = calendar.userId == $localStorage.userId;
-            if (calendar.bikeFamily == calendar.event.familyId) {
+            if (calendar.isOnSlotableEvent) {
               calendar.event.reserved();
             }
             angular.element('#bikeCalendar').dateRangePicker({
@@ -174,7 +176,7 @@ angular.module('bike').component('calendar', {
 
 
       function verifyOnConfirm() {
-        if (calendar.bikeFamily == calendar.event.familyId || isUserVerified()) {
+        if (calendar.isOnSlotableEvent || isUserVerified()) {
           calendar.confirmBooking();
         }
         else {
@@ -210,107 +212,126 @@ angular.module('bike').component('calendar', {
           calendar.startDate.getTime() < calendar.endDate.getTime();
       }
 
-      /* ---------- CODE FOR THE EVENT CALENDAR 1 ---------- */
+      // EVENT BIKE CODE
+      function checkEventBike() {
+        calendar.isOnSlotableEvent = _.indexOf([35, 36], calendar.bikeFamily) !== -1;
+        if (!calendar.isOnSlotableEvent) return;
 
-      //TODO: We need to update this not scalable example of code.
+        //TODO: We need to update this not scalable example of code.
+        calendar.event = {};
+        calendar.event.date = '28042019';
+        calendar.event.startDay = 9;
+        calendar.event.endDay = 9;
+        calendar.event.pickupSlotId;
+        calendar.event.returnSlotId;
+        calendar.event.slots = [];
+        calendar.eventName = '8bar-clubride';
+        calendar.freeBike = calendar.prices[0].price <= 0;
+        calendar.event.days = _.range(calendar.event.startDay, calendar.event.endDay+1); // last number not included
+        // every Tuesday event
+        calendar.event.days = [9,16,23,30];
+        // if event duration is only one day we should pick it automatically
+        if (calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
 
-      calendar.event = {};
-      calendar.event.pickupSlotId;
-      calendar.event.returnSlotId;
-      calendar.event.slots= [];
-      calendar.event.familyId = 35; // cwd event
-      calendar.freeBike = false; //
-      calendar.event.days = _.range(23, 25);
+        calendar.event.changePickupSlot = changePickupSlot;
+        calendar.event.changeReturnSlot = changeReturnSlot;
 
-      var slotDuration = 2;
-      var eventYear = 2019;
-      var eventMonth = 2;   // Months start at 0
+        var slotDuration = 3; // hours range
+        calendar.eventYear = 2019;
+        var eventMonth = 3; // Months start at 0
+        var eventStartTime = 18;
+        var eventEndTime = 21;
 
-      _.forEach(calendar.event.days, function(day) {
-        generateSlot(day)
-      });
-
-      function generateSlot(day) {
-        _.forEach(_.range(9, 20, 2), function(hour) {
-          var slot = {
-            pickupEnabled: hour !== 19,
-            overnight: false,
-            reserved: false,
-            day: day,
-            month: eventMonth,
-            year: eventYear,
-            text: hour + ":00 - "+ (hour + 2) + ":00",
-            hour: hour
-          };
-          calendar.event.slots.push(slot)
-        });
-      };
-
-      calendar.event.changePickupSlot = function() {
-        // Define picked slot as pickupSlot
-        calendar.event.slots[calendar.event.pickupSlotId].pickup = true;
-        // Enable all following slots as returnSlots if no booking is in between
-        var bookingInBetween = false;
-        _.each(calendar.event.slots, function(value, index) {
-          if (index >= calendar.event.pickupSlotId) {
-            if (value.reserved && calendar.event.slots[index-1].reserved) {
-              bookingInBetween = true;
-            }
-            value.returnDisabled = bookingInBetween;
-          } else {
-            value.returnDisabled = true;
-          }
+        _.forEach(calendar.event.days, function (day) {
+          generateSlot(day)
         });
 
-        var slot = calendar.event.slots[calendar.event.pickupSlotId];
-        calendar.startDate = new Date(eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
-
-        // Presets returnSlot to be (slotDuration) after pickupSlot
-        calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId);
-        // calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
-        calendar.event.changeReturnSlot();
-        dateChange(calendar.startDate, calendar.endDate);
-      };
-
-      calendar.event.changeReturnSlot = function() {
-        var slot = calendar.event.slots[calendar.event.returnSlotId];
-
-        if (slot.overnight) {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day + 1, slot.hour + 2, 0, 0, 0);
-        } else {
-          calendar.endDate = new Date(eventYear, eventMonth, slot.day, slot.hour + 2, 0, 0, 0);
+        // if there is only one time slot available we should pick the first one
+        if (calendar.event.slots.length == 1) {
+          calendar.event.pickupSlotId = 0;
+          calendar.event.changePickupSlot();
         }
 
-        dateChange(calendar.startDate, calendar.endDate);
-      };
+        function generateSlot(day) {
+          _.forEach(_.range(eventStartTime, eventEndTime, slotDuration), function (hour) {
+            var slot = {
+              pickupEnabled: hour < eventEndTime,
+              overnight: false,
+              reserved: false,
+              day: day,
+              month: eventMonth,
+              year: calendar.eventYear,
+              text: hour + ":00 - " + (hour + slotDuration) + ":00",
+              hour: hour
+            };
+            calendar.event.slots.push(slot)
+          });
+        };
 
-      calendar.event.reserved = function() {
-        for (var i = 0; i < calendar.requests.length; i ++) {
-          var startDate = new Date(calendar.requests[i].start_date_tz);
-          var endDate = new Date(calendar.requests[i].end_date_tz);
+        function changePickupSlot () {
+          // Define picked slot as pickupSlot
+          calendar.event.slots[calendar.event.pickupSlotId].pickup = true;
+          // Enable all following slots as returnSlots if no booking is in between
+          var bookingInBetween = false;
+          _.each(calendar.event.slots, function (value, index) {
+            if (index >= calendar.event.pickupSlotId) {
+              if (value.reserved && calendar.event.slots[index - 1].reserved) {
+                bookingInBetween = true;
+              }
+              value.returnDisabled = bookingInBetween;
+            } else {
+              value.returnDisabled = true;
+            }
+          });
 
-          var startDay = startDate.getDate();
-          var startTime = moment.utc(calendar.requests[i].start_date_tz).format('HH')
-          var endTime = moment.utc(calendar.requests[i].end_date_tz).format('HH')
-          var startYear = startDate.getFullYear();
-          var startMonth = startDate.getMonth();
+          var slot = calendar.event.slots[calendar.event.pickupSlotId];
+          calendar.startDate = new Date(calendar.eventYear, eventMonth, slot.day, slot.hour, 0, 0, 0);
 
-          for (var j = 0; j < calendar.event.slots.length; j ++) {
-            if (startYear == eventYear &&
+          // Presets returnSlot to be (slotDuration) after pickupSlot
+          calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId);
+          // calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
+          calendar.event.changeReturnSlot();
+          dateChange(calendar.startDate, calendar.endDate);
+        };
+
+        function changeReturnSlot() {
+          var slot = calendar.event.slots[calendar.event.returnSlotId];
+
+          if (slot.overnight) {
+            calendar.endDate = new Date(calendar.eventYear, eventMonth, slot.day + 1, slot.hour + slotDuration, 0, 0, 0);
+          } else {
+            calendar.endDate = new Date(calendar.eventYear, eventMonth, slot.day, slot.hour + slotDuration, 0, 0, 0);
+          }
+
+          dateChange(calendar.startDate, calendar.endDate);
+        };
+
+        calendar.event.reserved = function () {
+          for (var i = 0; i < calendar.requests.length; i++) {
+            var startDate = new Date(calendar.requests[i].start_date_tz);
+            var endDate = new Date(calendar.requests[i].end_date_tz);
+
+            var startDay = startDate.getDate();
+            var startTime = moment.utc(calendar.requests[i].start_date_tz).format('HH')
+            var endTime = moment.utc(calendar.requests[i].end_date_tz).format('HH')
+            var startYear = startDate.getFullYear();
+            var startMonth = startDate.getMonth();
+
+            for (var j = 0; j < calendar.event.slots.length; j++) {
+              if (startYear == calendar.eventYear &&
                 startMonth == eventMonth &&
                 calendar.event.slots[j].day == startDay &&
                 startTime == calendar.event.slots[j].hour) {
                 // Additional Rule: Add this rule to disable time slots before already booked by this user
                 // && (calendar.event.slots[j].overnight || calendar.event.slots[j].hour + slotDuration <= endTime))
-              calendar.event.slots[j].reserved = true;
-              calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + ' ('+ $translate.instant('calendar.booked')+')';
-              // calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
+                calendar.event.slots[j].reserved = true;
+                calendar.event.slots[j].text = calendar.event.slots[j].text.split(" ", 1) + ' (' + $translate.instant('calendar.booked') + ')';
+                // calendar.event.slots[j].text = calendar.event.slots[j].text + " (booked)";
+              }
             }
           }
-        }
-      };
-
-      /* ------------------------------------------------- */
+        };
+      }
 
       calendar.availabilityMessage = function($index, date) {
         if (!calendar.isOptionEnabled($index, calendar.bikeOwner.opening_hours, date)) {
@@ -323,7 +344,7 @@ angular.module('bike').component('calendar', {
 
       // This function handles booking and all necessary validations
       calendar.confirmBooking = function () {
-        if (calendar.bikeFamily === calendar.event.familyId || calendar.rider.status === 3) {
+        if (calendar.isOnSlotableEvent || calendar.rider.status === 3) {
           showBookingDialog();
         } else {
           // User did not enter any payment method yet

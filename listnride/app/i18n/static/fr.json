@@ -242,19 +242,19 @@
     "faq-header": "Les 10 questions les plus fréquemment posées",
     "faqs": {
       "top": {
-        "answer-1": "Vous cherchez un vélo à Vienne? Il suffit de taper Vienne dans la barre de recherche. Notre moteur de recherche ultra rapide vous montrera tous les résultats, y compris une carte. La recherche d'un lieu est actuellement la seule option de recherche. Pour affiner votre résultat de recherche, vous pouvez également utiliser les filtres: Intervalle de temps, Toutes les tailles, Type de vélo et Marques.",
-        "answer-2": "There is a calendar on the bike’s detail page. Black numbers represent bookable days, greyed-out numbers are not available and red numbers represent already booked days.",
-        "answer-3": "Click on sign-up and fill out the required information with a few details to get the best out of listnride and meet people with great bikes. You can also use the one-click Facebook registration for signing-up. In order to request a bike, you need to verify your mobile number, e-mail address and provide a valid method of payment. Your personal data will be stored safely. Through this process we can mediate a valid rental contract for both parties and make sure payments happen in a secure manner.",
-        "answer-4": "The first step is to request the bike. Select the rental days and exact times of the bike on its detail page. If you’re planning to pick up and return the bike on the same day, click twice on the date and then choose the time slot. After requesting the bike you can start a direct chat with the Lister. Once the Lister has accepted your request, the bike is booked for you.",
-        "answer-5": "Click on “List a Bike” and add information about your bike including brand, description, pictures, rental price and accessories that you can provide with the bike. When done, click “List my Bike”. Your bike is now available for rentals to the community.",
-        "answer-6": "You are completely free to decide on the rental price. Note that the weekly price can’t be lower than the daily price. To determine the most appropriate rental price, you can compare your bike to similar available bikes on listnride.",
-        "answer-7": "You will receive an email and sms notification, informing you on the new booking request, containing all relevant details.\nLogin and go to “Requests” to accept or reject the booking and start a chat with the Rider if there is something to clarify.\nIf you accept the request, the booking is done and the rental is paid. You will receive a booking confirmation with all the relevant information and contact details of the Rider via email.",
-        "answer-8": "Nothing! Listing any number of bikes is free.",
-        "answer-9": "We support payment through Paypal and the most common credit cards e.g. Mastercard and Visa. Offline or cash payments are in violation with our Terms and Conditions. It might result in a removal of your account from listnride. It is in your own interest to avoid cash payments as it makes it harder for us to protect your information and puts you at a greater risk of fraud and other security issues, e.g. your bike will not be insured.",
-        "answer-10": "You will need to enter your payment data before you can request any bike. The payment will take place only after the Lister has accepted your request. So if you or the Lister cancels a request no payment will be triggered.",
-        "question-1": "How do I search for a bike?",
-        "question-2": "How do I know if the bike is available?",
-        "question-3": "How do I create an account?",
+        "answer-1": "Vous cherchez un vélo à Vienne? Il suffit de taper Vienne dans la barre de recherche. Notre moteur de recherche ultra rapide vous montrera tous les résultats, et vous pourrez voir sur la carte où se trouvent tous les vélos.  Pour affiner votre résultat de recherche, vous pouvez également utiliser les filtres: Intervalle de temps, Toutes les tailles, Type de vélo et Marques.",
+        "answer-2": "Pour chaque vélo choisi, vous avez un calendrier qui montre toutes les dates disponibles à la location. Les numéros en noir représentent les jours réservables, les numéros en gris sont pas disponibles et les numéros en rouge représentent les jours déjà réservés.",
+        "answer-3": "Pour créer un compte,  appuyez sur le bouton \"Inscrivez-vous.\" Vous pouvez aussi vous inscrire avec un seul clic grâce à  Facebook. Pour faire une demande d'un vélo, vous devez vérifier votre numéro de téléphone portable, votre adresse e-mail et fournir un mode de paiement valide. Vos données personnelles seront stockées en toute sécurité. Grâce à ce processus, nous pouvons négocier un contrat de location valide pour les deux parties et assurer que les paiements sont effectués de manière sécurisée.",
+        "answer-4": "La première étape consiste à faire une demander pour le vélo. Sélectionnez les jours de location et les heures exactes de la location sur sa page de détails. Si vous envisagez de récupérer et de rendre le vélo le même jour, cliquez deux fois sur la date, puis choisissez la plage horaire. Après avoir demandé le vélo, vous pouvez discuter directement avec le Lister. Une fois que le Lister a accepté votre demande, le vélo est réservé pour vous.",
+        "answer-5": "Cliquez sur «Enregistrer un Vélo» et ajoutez les informations sur votre vélo, y compris la marque, la description, des images, le prix de la location et les accessoires que vous pouvez fournir. Une fois terminé, cliquez sur «Enregistrer mon vélo». Votre vélo sera désormais disponible à la location!",
+        "answer-6": "Vous êtes entièrement libre de décider du prix de la location. Notez que vous pouvez définir un rabais pour chaque jour suivant, ainsi qu'un prix hebdomadaire et mensuel. Pour déterminer le prix de location le plus approprié, vous pouvez comparer votre vélo à des vélos similaires disponibles sur listnride.",
+        "answer-7": "Vous recevrez une notification par e-mail et SMS, vous informant de la nouvelle demande de réservation, contenant tous les détails pertinents.\nConnectez-vous et allez à «Demandes» pour accepter ou refuser la réservation. Vous pouvez aussi communiquer avec le loueur pour clarifier n'importe détail.\nSi vous acceptez la demande, la réservation est faite et la location est payée. Vous recevrez une confirmation de réservation avec toutes les informations pertinentes et les coordonnées du coureur par e-mail.",
+        "answer-8": "C'est gratuit! Vous pouvez inscrire autant de vélos que vous souhaitez, gratuitement.",
+        "answer-9": "Nous acceptons les paiements via Paypal et les cartes de crédit les plus courantes, par exemple Mastercard et Visa. Les paiements en dehors du site ou en espèces sont en violation de nos Conditions Générales. Cela pourrait entraîner la suppression de votre compte listnride. Il est dans votre intérêt d'éviter les paiements en espèces car cela nous empêche de protéger vos informations et vous expose à un risque accru de fraude et d'autres problèmes de sécurité, par exemple votre vélo ne serait pas assuré.",
+        "answer-10": "Vous devrez introduire vos données de paiement avant de pouvoir louer un vélo. Le paiement n'aura lieu qu'une fois que le propriétaire a accepté votre demande. Donc, si vous ou le propriétaire annulez une demande, aucun paiement ne sera déclenché.",
+        "question-1": "Comment rechercher un vélo?",
+        "question-2": "Comment savoir si le vélo est disponible?",
+        "question-3": "Comment créer un compte?",
         "question-4": "Comment louer un vélo?",
         "question-5": "Comment enregistrer mes vélos?",
         "question-6": "Comment choisir le prix de la location?",
@@ -268,7 +268,7 @@
   "insurance": {
     "main": {
       "title": "Notre assurance vous protège. Peu importe si vous le propriétaire ou le locataire.",
-      "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone. By e-mail. Simple. Straight forward. ",
+      "description": "La location de votre vélo spécial exige de la confiance. Que se passe-t-il en cas de vol lors d'un prêt? Et si ils le retournent abimé? Toutes les locations en Allemagne et en Autriche sont assurées. Notre partenaire <a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>sera à vos côtés lorsque vous aurez besoin d’aide. Par téléphone ou par email. Tout simple et direct.",
       "logo-description": "Assuré par"
     },
     "facts": {
@@ -276,51 +276,51 @@
       "basic-insurance": {
         "price": "Inclus",
         "title": "Assurance de base",
-        "description": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>"
+        "description": "<ul>\n<li>Protection en cas de dommage involontaire auto-infligé ou causé par un tiers involontaire\n<li>Protection contre le vandalisme\n<li>Protection des pièces électriques et de la batterie pour pedelecs\n<li>Frais de rétention: 250 €\n</ul>"
       },
       "premium-insurance": {
         "title": "Assurance Premium",
         "price": "3 €",
         "price-description": "par jour",
-        "description": "<ul>\n <li>Protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>"
+        "description": "<ul>\n<li>Protection en cas de dommages involontaires ou causés par un tiers\n<li>Protection contre le vandalisme\n<li>Protection des composants électriques et de la batterie pour pedelecs\n<li>Protection contre le vol\n<li>Numéro d'urgence 24/7 en cas de vol ou de détérioration\n<li>Service de transport après un vol ou une détérioration\n<li>Remplacement du vélo après un vol ou une détérioration\n<li>Pas de frais de rétention\n</ul>"
       }
     },
     "faqs": {
       "title": "Plus de questions? Ici vous trouverez toutes les réponses!",
       "lister": {
-        "description": "As a lister on listnride you want to be sure that you and your bike are protected against all eventualities. That's why every rental in Germany and Austria, through listnride, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and guarantees. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via mail.",
+        "description": "En tant que Lister sur listnride, vous voulez être sûr que votre vélo soit protégé contre toutes les éventualités. C'est pourquoi chaque location en Allemagne et en Autriche, par le biais de listnride, est automatiquement assurée. Les Riders qui demandent votre vélo peuvent éventuellement réserver le forfait premium pour bénéficier de services et de garanties supplémentaires. Ce service est gratuit pour vous en tant que Lister.\n<p>\nSi vous avez d'autres questions, n'hésitez pas à nous contacter à tout moment par e-mail. ",
         "question-1": "Combien coûte l'assurance?",
         "tabname": "Pour le Propriétaire",
         "answer-1": "Rien! L'assurance n'étant achetée que par les coureurs, il n'y a aucun coût supplémentaire pour vous en tant que propriétaire. Cependant, sachez que votre prix de location quotidien sera un peu plus cher pour ceux qui louent. Le coût de l'assurance de base correspond à 0,1% de la valeur d'assurance de votre vélo. Si votre vélo est assuré jusqu'à 1 000 €, les coureurs paient un euro supplémentaire par jour de location. Avec une valeur d'assurance pouvant atteindre 5 000 €, il y aura un surcharge de 5 € supplémentaires par jour de location.",
         "question-2": "Quelle est la valeur d'assurance maximale pour mon vélo?",
-        "answer-2": "Every bike is automatically insured up to 1,000€ and can be insured by you up to a maximum of 5,000€. \n<br>\nThe actual payout in case of loss or damage is based on the actual value of the bike. It is determined by the \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\n individually case by case.\n<br>\nPlease remember when determining the insurance value that riders pay for the insurance fee, the amount of which depends on your chosen insurance value. This means; the higher you insure the bike, the higher the insurance fee for the Rider will be.",
-        "question-3": "What do I have to do if an insurance claim occurs?",
+        "answer-2": "Chaque vélo est automatiquement assuré jusqu'à 1 000 € et peut être ajusté jusqu'à 5 000 €.\n<br>\nLe paiement effectif en cas de perte ou de dommage est basé sur la valeur réelle du vélo, qui est déterminé par le\n<a href=\"https://www.gothaer.de\" target=\"_blank\">l'Assurance Gothaer </a>\n individuellement au cas par cas.\n<br>\nVeuillez vous rappeler lors de la détermination de la valeur d’assurance que les coureurs paient pour les frais d’assurance, dont le montant dépend de la valeur d’assurance choisie. Cela signifie que plus vous assurerez le vélo, plus les frais d'assurance pour le coureur seront élevés.",
+        "question-3": "Que dois-je faire si une réclamation d'assurance survient?",
         "answer-3": "Should you ever find yourself in a situation where your bike is damaged or stolen during a rental, please contact\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n directly:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>0800 - 0753336\n</ul>\n<br> \nhepster staff will answer your request quickly and competently."
       },
       "rider": {
-        "description": "We offer two insurance packages for each bike you rent via lisntride: The \n<b>Basic Insurance</b> \nis included in every rental, the \n<b>Premium Insurance</b>\n is optional and extends the insurance cover by additional benefits.\n<br> \nYour bike and you are always optimally protected. You can start cycling with a clear conscience!",
-        "question-8": "Are there any coverage restrictions?",
-        "answer-8": "Some cases of damage may result in a reduction of compensation, for example:\n<br>\n <ul>\n  <li>In case of damage that does not affect the usability of the bike\n  <li>In case of simple theft, if your bicycle was not secured in any usual way\n </ul>\n<p>\nIn any case, damage caused by one of the following is excluded from insurance cover:\n<br>\n <ul>\n  <li>Intentional actions by you\n  <li>Manipulation of the drive system (e.g. tuning)\n </ul>",
-        "question-9": "What are my obligations?",
+        "description": "Nous proposons deux formules d’assurance pour chaque vélo que vous louez via lisntride:\n<b>l'Assurance de base </b>\nest incluse dans chaque location,\n<b>l'Assurance Premium </b>\n est facultative et étend la couverture d’assurance par des avantages supplémentaires.\n<br>\nVotre vélo et vous êtes toujours protégés de manière optimale. Vous pouvez commencer la location du vélo en toute conscience!",
+        "question-8": "Y a-t-il des restrictions de couverture?",
+        "answer-8": "Certains dommages peuvent entraîner une réduction de l’indemnisation, par exemple:\n<br>\n<ul>\n<li>En cas de dommage n'affectant pas la convivialité du vélo\n<li>En cas de vol, si votre vélo n'a pas été sécurisé de manière habituelle\n</ul>\n<p>\nEn tout état de cause, les dommages causés par l’un des éléments suivants sont exclus de la couverture d’assurance:\n<br>\n<ul>\n<li>Actions intentionnelles de votre part\n<li>Manipulation du système d'entraînement (par exemple, réglage)\n</ul>",
+        "question-9": "Quelles sont mes obligations?",
         "answer-9": "For example, there are the following obligations for you:\n        <br>\n        <ul>\n            <li>In the event of an insurance case you must provide hepster with complete and truthful information of what happened</li>\n            <li>In the event of an insurance case you must inform hepster of any claim you bring forth immediately</li>\n        </ul>",
-        "question-1": "How much does Basic Insurance cost?",
-        "tabname": "For Rider",
-        "answer-1": "The cost of the Basic Insurance is only 0.1% of the insurance value of the bike you have booked.\n<br>\nIf a bike is insured up to 1.000 €, then you pay exactly one Euro per rental day for the Basic Insurance.",
-        "question-2": "How much does Premium Insurance cost?",
-        "answer-2": "Three Euros per day in addition to the rent and the listnride-<a href=\"https://www.listnride.com/terms\" target=\"_blank\">fees</a>.",
+        "question-1": "Combien coûte l'assurance de base?",
+        "tabname": "Pour le Rider",
+        "answer-1": "Le coût de l'assurance de base ne représente que 0,1% de la valeur d'assurance du vélo que vous avez réservé.\n<br>\nSi un vélo est assuré jusqu'à 1 000 €, vous payez exactement un euro par jour de location pour l'assurance de base.",
+        "question-2": "Combien coûte l'assurance Premium?",
+        "answer-2": "Trois euros par jour en plus de la location et des <a href=\"https://www.listnride.com/terms\" target=\"_blank\">frais de service</a> de listnride.",
         "question-3": "What does the Basic Insurance cover?",
         "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>",
-        "question-4": "What does Premium Insurance cover?",
+        "question-4": "Que couvre l'assurance Premium?",
         "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
-        "question-5": "Is there a retention fee in case of damage? How high is it?",
+        "question-5": "Y at-il des frais de rétention en cas de dommage? À quelle hauteur est-ce?",
         "answer-5": "The deterrent fee is up to 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no deterrent fee.",
-        "question-6": "How do I end the insurance after my bike rental ends?",
+        "question-6": "Comment puis-je mettre fin à l'assurance après la fin de ma location de vélo?",
         "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
         "question-7": "Whom do I contact if I need to claim my insurance?",
         "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>0800 - 0753336\n</ul>\n<br>\nhepster staff will support you quickly and competently."
       },
       "docs": {
-        "tabname": "Insurance Documents"
+        "tabname": "Documents d'assurance"
       },
       "description-lister": "As a lister on listnride you want to be sure that you and your bike are protected against all risk. That's why every rental in Germany and Austria, through listnride is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and coverage. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via <a3>E-Mail</a3>.",
       "description-rider": "We offer two insurance packages for each bike you rent in Germany and Austria via lisntride: The <b1>Basic insurance</b1> is included in every rental, the <b2>Premium insurance</b2> is optional and extends the insurance cover with extra benefits.<br3>You and your bike are always optimally protected and there is nothing more in the way for you to ride!",
@@ -386,6 +386,11 @@
       "text": "The <a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\">Gran Fondo Costa del Sol</a> will test your legs on a rigorous 133km with over 3400m of elevation. There is also the option to ride the lighter version, at only 94km with 2400m of climbing. The event will start and finish on the sunny coast of Estepona, and will take you through some gorgeous mountain paths in the Sierra Bermeja. You will be climbing the iconic <b>Alto Cortes de la Frontera</b> and the colossal <b>Peñas Blancas</b>, and take in the richness of the environment to the fullest!<br>\nScroll down to choose and rent a light & fast bike below!",
       "meta-title": "Louez facilement le vélo de route idéal pour le Gran Fondo Costa del Sol!",
       "meta-description": "Profitez des magnifiques montagnes pendant la Gran Fondo Costa del Sol, en louant un vélo de route en carbone sur listnride!"
+    },
+    "8bar-clubride": {
+      "title": "Join our 8bar Clubride and ride a test bike for free!",
+      "description": "Quoi: <b>Sortie 8bar </b>| Quand: <b>tous les mardis à partir du 2 avril </b>| Où: <b>magasin 8bar </b>",
+      "text": "When you’re part of our community you will always find someone to ride with. During the summer, you can ride our weekly club rides every Tuesday evening from the 8bar showroom Berlin, or at our “member only” rides or events. Beside the fact that you’ll be saving on application fees to any 8bar-hosted or -sponsored cycling event, you can get a special discount on all 8bar products. And last but not least, every year you’ll get a fresh new cycling kit."
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",

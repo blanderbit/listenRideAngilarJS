@@ -1,11 +1,13 @@
-<div id="bikeCalendarWrapper" ng-hide="calendar.bikeFamily == calendar.event.familyId">
+<div id="bikeCalendarWrapper" ng-hide="calendar.isOnSlotableEvent">
   <input hide id="bikeCalendar" ng-model="calendar.defaultDateRange">
 </div>
 
 
 
+
+
 <!--        EVENT CALENDAR PICKUP+RETURN        -->
-<!-- <div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
+<!-- <div layout="column" layout-margin ng-if="calendar.isOnSlotableEvent">
   <p class="md-headline lnr-center">E-Bike Days Calendar</p>
   <p class="md-body-1 lnr-center">During the E-Bike Days, you can test ride a great variety of high end e-bikes. Just select which day and time you want to rent it. All rentals are free!</p>
   <md-input-container class="md-block">
@@ -56,24 +58,32 @@
 <!--      END EVENT CALENDAR        -->
 
 <!--        EVENT CALENDAR FIXED SLOT        -->
-<div layout="column" layout-margin ng-if="calendar.bikeFamily == calendar.event.familyId">
-  <p class="md-headline lnr-center">{{ 'cyclingworld.event.calendar-title' | translate }}</p>
-  <p class="md-body-1 lnr-center">{{ 'cyclingworld.event.calendar-subtitle' | translate }}</p>
-  <md-input-container class="md-block">
+<div layout="column" layout-margin ng-if="calendar.isOnSlotableEvent">
+
+  <p class="md-headline lnr-center" translate="events.{{calendar.eventName}}.calendar-title"></p>
+  <p class="md-body-1 lnr-center" translate="events.{{calendar.eventName}}.calendar-subtitle"></p>
+
+  <md-input-container class="md-block" ng-if="calendar.event.days.length > 1">
     <label>{{ 'veletage.event.select-day' | translate }}</label>
     <md-select ng-model="calendar.day">
       <md-option
         ng-repeat="i in calendar.event.days"
         value="{{i}}"
       >
-        {{i}} {{ 'shared.Mar' | translate }} 2019
+      <!-- TODO: make date dynamic -->
+        {{i}} {{ 'shared.Apr' | translate }} {{calendar.eventYear}}
       </md-option>
     </md-select>
   </md-input-container>
+  <span ng-if="calendar.event.days.length == 1">
+    <b>{{ 'shared.rental-date' | translate }}:</b> {{calendar.event.days[0]}} {{ 'shared.Apr' | translate }} {{calendar.eventYear}}
+  </span>
 
-  <md-input-container class="md-block">
+  <md-input-container class="md-block" ng-hide="calendar.event.slots.length <= 1">
     <label>{{ 'veletage.event.select-slot' | translate }}</label>
-    <md-select ng-model="calendar.event.pickupSlotId" ng-change="calendar.event.changePickupSlot()">
+    <md-select
+      ng-model="calendar.event.pickupSlotId"
+      ng-change="calendar.event.changePickupSlot()">
 
       <md-option ng-if="!calendar.day">
         {{ 'veletage.event.day-error' | translate }}
@@ -91,9 +101,15 @@
     </md-select>
   </md-input-container>
 
+    <span ng-if="calendar.event.slots.length == 1">
+      <b>{{ 'shared.rental-time' | translate }}:</b> {{calendar.event.slots[0].text}}
+    </span>
+
   <md-input-container class="md-block" ng-hide="true">
     <label>{{ 'veletage.event.select-return' | translate }}</label>
-    <md-select ng-model="calendar.event.returnSlotId" ng-change="calendar.event.changeReturnSlot()">
+    <md-select
+      ng-model="calendar.event.returnSlotId"
+      ng-change="calendar.event.changeReturnSlot()">
 
       <md-option ng-if="!calendar.day">
         {{ 'veletage.event.time-error' | translate }}
@@ -113,7 +129,12 @@
 </div>
 <!--      END EVENT CALENDAR        -->
 
-<div id="timeRange" layout="row" layout-align="start center" layout-padding ng-if="calendar.bikeFamily != calendar.event.familyId && calendar.startDate">
+<div
+  ng-if="!calendar.isOnSlotableEvent && calendar.startDate"
+  id="timeRange"
+  layout="row"
+  layout-align="start center"
+  layout-padding>
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select

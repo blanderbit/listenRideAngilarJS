@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Mehr erfahren",
     "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
+    "for-count-hours": "für {{hoursSlot}} Stunden",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Bitte wähle eine Fahrradgröße",
     "please-choose-bike-count": "Wähle die Anzahl der Fahrräder",
     "status-labels": {
@@ -225,6 +228,12 @@
       "meta-title": "Miete ein Rennrad für Paris-Brest-Paris 2019 | listnride",
       "meta-description": "Miete ein Rennrad für Paris-Brest-Paris 2019 einfach, online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
     },
+    "8bar-clubride": {
+      "meta-title": "Miete ein Rennrad für die 8bar Clubride",
+      "meta-description": "Nehme teil an unserer wöchentlichen Clubride und teste eines der neuesten 8bar Rennräder kostenlos. Einfach online buchen und im Showroom abholen",
+      "calendar-title": "Testräder für die 8bar Clubride",
+      "calendar-subtitle": "Buche ein kostenloses 8bar bike für unser Club Ride"
+    },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
       "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
@@ -359,9 +368,9 @@
     },
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
-      "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
+      "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
       "category-title": "Miete das perfekte {{category}}-Rad in {{location}} | listnride",
-      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
+      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
     },
     "business-community": {
       "meta-title": "Die listnride Business Community",
@@ -979,8 +988,8 @@
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
     "newsletter-subheader": "Erhalte unseren Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
-    "meta-title": "listnride - Die Bike-Sharing-Community",
-    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
+    "meta-title": "Fahrradverleih: Miete ein Rennrad, MTB oder E-Bike | listnride",
+    "meta-description": "Miete das perfekte Fahrrad zu deinem Stil und Zweck. Einfach online buchen, bequem und sicher."
   },
   "autocomplete": {
     "default-placeholder": "Wo willst du ein Rad ausleihen?"
@@ -1345,7 +1354,7 @@
   "invite-landing": {
     "meta-title": "listnride | 10€ für dich!",
     "meta-description": "Lade deine Freunde per E-Mail ein, oder teile deinen Link auf Facebook und schenke ihnen dadurch 10€. Für jede Anmeldung über deinen Link, erhälst du 10€ Gutschrift, sobald deine Freunde aktiv werden! (Leihen und Verleihen)",
-    "header": "hat dir 10€ geschenkt",
+    "header": "hat dir 10€ geschenkt",
     "subheader": "Willkommen bei listnride, der Bike Sharing Community",
     "subsubheader": "listnride ist eine Community die passionierte Radfahrer zusammen bringt um sich gegenseitig zu unterstützen. Du benötigst ein Fahrrad für ein bestimmtes Terrain? Du wirst es hier finden! Du möchtest deine Räder mit anderen teilen? Biete Sie an und verdiene zusätzliches Taschengeld!",
     "subsubsubheader": "{{ name }} hat dich eingeladen. Melde dich einfach kurz an um deine 10€ zu erhalten! Der Gutschein wird deinem Nutzerkonto sofort gutgeschrieben und kann sofort genutzt werden.",
