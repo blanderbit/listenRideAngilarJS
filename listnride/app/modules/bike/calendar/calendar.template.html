@@ -194,9 +194,9 @@
 
     <div ng-if="calendar.cluster">
       <div class="md-body-2">{{ 'shared.pick-size' | translate }}</div>
+      <!-- ng-change="calendar.updateStateSize()" -->
       <md-select
         ng-model="calendar.pickedBikeSize"
-        ng-change="calendar.updateStateSize()"
         placeholder="{{ 'shared.pick-size' | translate}}"
       >
         <md-option

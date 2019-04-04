@@ -667,7 +667,7 @@ angular.module('bike').component('calendar', {
             });
           }
 
-          updateState({startDate: startDate, duration: calendar.durationDays, size: calendar.pickedBikeSize});
+          // updateState({startDate: startDate, duration: calendar.durationDays, size: calendar.pickedBikeSize});
 
         } else {
           calendar.duration = date.duration(undefined, undefined, 0);
