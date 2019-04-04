@@ -232,7 +232,7 @@
       "meta-title": "Louez un vélo de route pour les sorties de 8bar",
       "meta-description": "Rejoignez-nous lors de nos sorties hebdomadaires dans le club et testez gratuitement l'un de nos derniers vélos de route. Il suffit de réserver ici. Le vélo sera disponible dans notre salle d'exposition.",
       "calendar-title": "Vélos a essayer pour les sorties de 8bar",
-      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+      "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
     },
     "cyclingworld": {
       "meta-title": "Louez un vélo Gravel de chez 8bar, Salsa ou Veloheld pour le tour sur gravier à Cyclingworld",
@@ -988,8 +988,8 @@
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
     "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
-    "meta-title": "listnride - The bike sharing community",
-    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+    "meta-title": "Location de vélos: Louez un vélo de route, un VTT ou un vélo électrique | listnride",
+    "meta-description": "Louez le parfait vélo qui correspond à votre style et à vos besoins. Réservez confortablement en ligne, en toute sécurité."
   },
   "autocomplete": {
     "default-placeholder": "Where would you like to rent a bike?"

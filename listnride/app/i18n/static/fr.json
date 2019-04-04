@@ -276,7 +276,7 @@
       "basic-insurance": {
         "price": "Inclus",
         "title": "Assurance de base",
-        "description": "<ul>\n<li>Protection en cas de dommages involontaires ou causés par un tiers\n<li>Protection contre le vandalisme\n<li>Protection des composants électriques et de la batterie pour pedelecs\n<li>Frais de rétention 250 €\n</ul>"
+        "description": "<ul>\n<li>Protection en cas de dommage involontaire auto-infligé ou causé par un tiers involontaire\n<li>Protection contre le vandalisme\n<li>Protection des pièces électriques et de la batterie pour pedelecs\n<li>Frais de rétention: 250 €\n</ul>"
       },
       "premium-insurance": {
         "title": "Assurance Premium",
@@ -300,7 +300,7 @@
       "rider": {
         "description": "Nous proposons deux formules d’assurance pour chaque vélo que vous louez via lisntride:\n<b>l'Assurance de base </b>\nest incluse dans chaque location,\n<b>l'Assurance Premium </b>\n est facultative et étend la couverture d’assurance par des avantages supplémentaires.\n<br>\nVotre vélo et vous êtes toujours protégés de manière optimale. Vous pouvez commencer la location du vélo en toute conscience!",
         "question-8": "Y a-t-il des restrictions de couverture?",
-        "answer-8": "Certains dommages peuvent entraîner une réduction de l’indemnisation, par exemple:\n<br>\n<ul>\n<li>En cas de dommage n'affectant pas la convivialité de la moto\n<li>En cas de vol simple, si votre vélo n'a pas été sécurisé de manière habituelle\n</ul>\n<p>\nEn tout état de cause, les dommages causés par l’un des éléments suivants sont exclus de la couverture d’assurance:\n<br>\n<ul>\n<li>Actions intentionnelles de votre part\n<li>Manipulation du système d'entraînement (par exemple, réglage)\n</ul>",
+        "answer-8": "Certains dommages peuvent entraîner une réduction de l’indemnisation, par exemple:\n<br>\n<ul>\n<li>En cas de dommage n'affectant pas la convivialité du vélo\n<li>En cas de vol, si votre vélo n'a pas été sécurisé de manière habituelle\n</ul>\n<p>\nEn tout état de cause, les dommages causés par l’un des éléments suivants sont exclus de la couverture d’assurance:\n<br>\n<ul>\n<li>Actions intentionnelles de votre part\n<li>Manipulation du système d'entraînement (par exemple, réglage)\n</ul>",
         "question-9": "Quelles sont mes obligations?",
         "answer-9": "For example, there are the following obligations for you:\n        <br>\n        <ul>\n            <li>In the event of an insurance case you must provide hepster with complete and truthful information of what happened</li>\n            <li>In the event of an insurance case you must inform hepster of any claim you bring forth immediately</li>\n        </ul>",
         "question-1": "Combien coûte l'assurance de base?",
@@ -388,9 +388,9 @@
       "meta-description": "Profitez des magnifiques montagnes pendant la Gran Fondo Costa del Sol, en louant un vélo de route en carbone sur listnride!"
     },
     "8bar-clubride": {
-      "title": "Title",
+      "title": "Join our 8bar Clubride and ride a test bike for free!",
       "description": "Quoi: <b>Sortie 8bar </b>| Quand: <b>tous les mardis à partir du 2 avril </b>| Où: <b>magasin 8bar </b>",
-      "text": "TEXT"
+      "text": "When you’re part of our community you will always find someone to ride with. During the summer, you can ride our weekly club rides every Tuesday evening from the 8bar showroom Berlin, or at our “member only” rides or events. Beside the fact that you’ll be saving on application fees to any 8bar-hosted or -sponsored cycling event, you can get a special discount on all 8bar products. And last but not least, every year you’ll get a fresh new cycling kit."
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
