@@ -52,11 +52,6 @@ angular.module('bike').component('calendar', {
       //methods
       calendar.validClusterSize = validClusterSize;
 
-      function getHumanReadableDate(date) {
-        date = new Date(date);
-        return date.getFullYear() + "-" +  (date.getMonth()+1) + "-" + date.getDate();
-      }
-
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
 
@@ -80,18 +75,13 @@ angular.module('bike').component('calendar', {
         );
       }
 
-      // some data we don't have on component init
-      function updateDynamicData() {
-        calendar.freeBike = calendar.prices[0].price <= 0;
-      }
-
       function setCalendarDefaultParams() {
         calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
         calendar.startDate = $state.params.startDate ? new Date($state.params.startDate) : null;
 
         if(calendar.startDate) {
-          calendar.endDate = new Date(calendar.startDate.getFullYear(), calendar.startDate.getMonth(), calendar.startDate.getDate() + ($state.params.duration - 1));
-          calendar.defaultDateRange = (getHumanReadableDate(calendar.startDate) + ' to ' + getHumanReadableDate(calendar.endDate));
+          calendar.endDate = new Date(calendar.startDate.getFullYear(), calendar.startDate.getMonth(), calendar.startDate.getDate() + ($state.params.duration - 1)); // to prevent adding extra day decrease duration which includes startDay
+          calendar.defaultDateRange = (moment(calendar.startDate).format('YYYY-MM-DD') + ' to ' + moment(calendar.endDate).format('YYYY-MM-DD'));
           setInitHours();
           dateChange(calendar.startDate, calendar.endDate);
         }
