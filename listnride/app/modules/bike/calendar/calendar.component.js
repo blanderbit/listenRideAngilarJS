@@ -41,18 +41,22 @@ angular.module('bike').component('calendar', {
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
                                 $mdMedia, $window, $analytics, date, price, api, authentication,
                                 verification, ENV, calendarHelper, notification, bikeCluster) {
+
+      //variables
       var calendar = this;
       calendar.authentication = authentication;
       calendar.calendarHelper = calendarHelper;
-      calendar.validClusterSize = validClusterSize;
       calendar.requested = false;
+      calendar.defaultDateRange = '';
+
+      //methods
+      calendar.validClusterSize = validClusterSize;
 
       calendar.$onChanges = function (changes) {
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
 
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
-            calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
 
             initOverview();
             initCalendarPicker();
@@ -61,8 +65,30 @@ angular.module('bike').component('calendar', {
         }
       };
 
+      calendar.updateStateSize = function(){
+        updateState({size: calendar.pickedBikeSize});
+      }
+
+      function updateState (params) {
+        $state.go(
+          $state.current, params
+        );
+      }
+
+      function setCalendarDefaultParams() {
+        calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
+        calendar.startDate = $state.params.startDate ? new Date($state.params.startDate) : null;
+
+        if(calendar.startDate) {
+          calendar.endDate = new Date(calendar.startDate.getFullYear(), calendar.startDate.getMonth(), calendar.startDate.getDate() + ($state.params.duration - 1)); // to prevent adding extra day decrease duration which includes startDay
+          calendar.defaultDateRange = (moment(calendar.startDate).format('YYYY-MM-DD') + ' to ' + moment(calendar.endDate).format('YYYY-MM-DD'));
+          setInitHours();
+          dateChange(calendar.startDate, calendar.endDate);
+        }
+      }
 
       function initCalendarPicker() {
+        setCalendarDefaultParams();
         var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function () {
           if (calendar.requests !== undefined) {
             deregisterRequestsWatcher();
@@ -72,7 +98,7 @@ angular.module('bike').component('calendar', {
             }
             angular.element('#bikeCalendar').dateRangePicker({
               alwaysOpen: true,
-              container: '#bikeCalendar',
+              container: '#bikeCalendarWrapper',
               beforeShowDay: classifyDate,
               inline: true,
               selectForward: true,
@@ -641,6 +667,7 @@ angular.module('bike').component('calendar', {
             });
           }
 
+          updateState({startDate: startDate, duration: calendar.durationDays, size: calendar.pickedBikeSize});
 
         } else {
           calendar.duration = date.duration(undefined, undefined, 0);
