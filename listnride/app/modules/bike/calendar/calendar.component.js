@@ -67,7 +67,7 @@ angular.module('bike').component('calendar', {
           if (calendar.requests !== undefined) {
             deregisterRequestsWatcher();
             calendar.owner = calendar.userId == $localStorage.userId;
-            if (calendar.isSlotableEvent) {
+            if (calendar.isOnSlotableEvent) {
               calendar.event.reserved();
             }
             angular.element('#bikeCalendar').dateRangePicker({
@@ -140,7 +140,7 @@ angular.module('bike').component('calendar', {
 
 
       function verifyOnConfirm() {
-        if (calendar.isSlotableEvent || isUserVerified()) {
+        if (calendar.isOnSlotableEvent || isUserVerified()) {
           calendar.confirmBooking();
         }
         else {
@@ -178,11 +178,12 @@ angular.module('bike').component('calendar', {
 
       // EVENT BIKE CODE
       function checkEventBike() {
-        calendar.isSlotableEvent = _.indexOf([35, 36], calendar.bikeFamily) !== -1;
-        if (!calendar.isSlotableEvent) return;
+        calendar.isOnSlotableEvent = _.indexOf([35, 36], calendar.bikeFamily) !== -1;
+        if (!calendar.isOnSlotableEvent) return;
 
         //TODO: We need to update this not scalable example of code.
         calendar.event = {};
+        calendar.event.date = '28042019';
         calendar.event.startDay = 9;
         calendar.event.endDay = 9;
         calendar.event.pickupSlotId;
@@ -191,6 +192,8 @@ angular.module('bike').component('calendar', {
         calendar.eventName = '8bar-clubride';
         calendar.freeBike = calendar.prices[0].price <= 0;
         calendar.event.days = _.range(calendar.event.startDay, calendar.event.endDay+1); // last number not included
+        // every Tuesday event
+        calendar.event.days = [9,16,23,30];
         // if event duration is only one day we should pick it automatically
         if (calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
 
@@ -305,7 +308,7 @@ angular.module('bike').component('calendar', {
 
       // This function handles booking and all necessary validations
       calendar.confirmBooking = function () {
-        if (calendar.isSlotableEvent || calendar.rider.status === 3) {
+        if (calendar.isOnSlotableEvent || calendar.rider.status === 3) {
           showBookingDialog();
         } else {
           // User did not enter any payment method yet

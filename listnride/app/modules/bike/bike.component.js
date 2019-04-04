@@ -87,7 +87,8 @@ angular.module('bike',[]).component('bike', {
             // bike.event = {
             //   id: 35,
             //   name: 'Cycling World',
-            //   date: '23032019',
+            //   date: '2019-03-23', <- valid date format
+            //   repeatable: false or ['week', 'day', 'month', 'year']
             //   duration: 2,
             //   type: 'slot',
             //   slot_range: 2,
