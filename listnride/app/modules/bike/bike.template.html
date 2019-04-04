@@ -43,7 +43,7 @@
       <!--TODO: REMOVE family check after event calendar refactoring -->
       <!-- Don't show detailed price for 2-hours Event Bikes -->
       <div
-        ng-if="!bike.isSlotableEvent"
+        ng-if="!bike.isOnSlotableEvent"
         class="bike__prices"
         flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center"
       >
@@ -74,7 +74,7 @@
 
       <!-- Price view for 2-hours Events -->
       <div
-        ng-if="bike.isSlotableEvent"
+        ng-if="bike.isOnSlotableEvent"
         class="bike__prices"
         flex-sm="45" flex-gt-sm="30" layout="row" layout-align="center center"
       >
