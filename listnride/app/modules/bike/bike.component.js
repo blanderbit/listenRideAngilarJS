@@ -94,7 +94,9 @@ angular.module('bike',[]).component('bike', {
             //   insurance: false
             // }
 
+            bike.isOnSlotableEvent = _.indexOf([35,36], bike.data.family) !== -1;
             bike.isTwoHoursEventBike = bike.data.family === 35; // cwd event page
+            bike.isThreeHoursEventBike = bike.data.family === 36; // 8bar event page
 
 
             // META

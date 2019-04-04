@@ -43,7 +43,7 @@
       <!--TODO: REMOVE family check after event calendar refactoring -->
       <!-- Don't show detailed price for 2-hours Event Bikes -->
       <div
-        ng-if="!bike.isTwoHoursEventBike"
+        ng-if="!bike.isOnSlotableEvent"
         class="bike__prices"
         flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center"
       >
@@ -74,7 +74,7 @@
 
       <!-- Price view for 2-hours Events -->
       <div
-        ng-if="bike.isTwoHoursEventBike"
+        ng-if="bike.isOnSlotableEvent"
         class="bike__prices"
         flex-sm="45" flex-gt-sm="30" layout="row" layout-align="center center"
       >
@@ -83,7 +83,15 @@
             <span ng-if="bike.data.prices[0].price > 0" class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
             <span ng-if="bike.data.prices[0].price <= 0" class="md-headline">{{ 'bike.for-free' | translate }}</span>
           </div>
-          <span class="md-caption">{{ 'bike.two-hours' | translate }}</span>
+          <span ng-if="bike.isTwoHoursEventBike" class="md-caption">{{ 'bike.two-hours' | translate }}</span>
+          <!-- TODO: Fill hoursSlot value from Backend -->
+          <span
+            ng-if="bike.isThreeHoursEventBike"
+            class="md-caption"
+            translate="shared.for-count-hours"
+            translate-values="{hoursSlot: 3}">
+            {{ 'shared.for' | translate }}
+          </span>
         </div>
       </div>
 
