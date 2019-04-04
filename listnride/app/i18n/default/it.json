@@ -226,10 +226,10 @@
       "meta-description": "Noleggia una bici da corsa online in modo facile e sicuro con listnride per la Paris-Brest-Paris 2019. Scegli la bici perfetta per te."
     },
     "8bar-clubride": {
-      "meta-title": "Partecipa",
-      "meta-description": "Descrizione",
+      "meta-title": "Rent a road bike for the 8bar club ride",
+      "meta-description": "Join us on our weekly club ride and test one the latest 8bar road bikes for free. Simply book here and pick up at our showroom.",
       "calendar-title": "Prova le bici per il giro del club 8bar",
-      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+      "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -982,8 +982,8 @@
     "list-a-bike-subheader": "Inserisci la tua bicicletta per il noleggio, incontra nuove persone divertenti e guadagna qualche soldo extra.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
     "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
-    "meta-title": "listnride - La bike sharing community",
-    "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
+    "meta-title": "Noleggio bici: noleggio bici da corsa, MTB o e-bike | listnride",
+    "meta-description": "Noleggia la bici perfetta per il tuo stile e le tue esigenze. Semplicemente prenotala online."
   },
   "autocomplete": {
     "default-placeholder": "Dove vorresti noleggiare una bicicletta ?"
