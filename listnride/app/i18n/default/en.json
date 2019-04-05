@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Learn More",
     "event-bikes-will-be-soon": "Bikes for this event will be available soon",
+    "for-count-hours": "for {{hoursSlot}} hours",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Please, pick a bike size",
     "please-choose-bike-count": "Select number of bikes ",
     "status-labels": {
@@ -227,6 +230,12 @@
     "paris-brest-paris": {
       "meta-title": "Rent a road bike for Paris-Brest-Paris 2019 | listnride",
       "meta-description": "Rent a road bike online easy and secure with listnride for Paris-Brest-Paris 2019. Choose the perfect bike that fits your need."
+    },
+    "8bar-clubride": {
+      "meta-title": "Rent a road bike for the 8bar club ride",
+      "meta-description": "Join us on our weekly club ride and test one the latest 8bar road bikes for free. Simply book here and pick up at our showroom.",
+      "calendar-title": "Test bikes for the 8bar club ride",
+      "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -982,8 +991,8 @@
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
     "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
-    "meta-title": "listnride - The bike sharing community",
-    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+    "meta-title": "Bike rental: Hire a road bike, MTB or e-bike| listnride",
+    "meta-description": "Rent the perfect bike that suits your style and needs. Simply book online, safe and secure. "
   },
   "autocomplete": {
     "default-placeholder": "Where would you like to rent a bike?"

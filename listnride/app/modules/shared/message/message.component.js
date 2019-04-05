@@ -19,7 +19,6 @@ angular.module('message',[]).component('message', {
   controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api', 'ENV',
     function MessageController($translate, $localStorage, $mdDialog, $analytics, api, ENV) {
       var message = this;
-      var time = message.time.toString();
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
       var hasInsurance = !!message.request.insurance;

@@ -383,8 +383,14 @@
     "costadelsol": {
       "title": "Miete ein Rennrad für das Epic Gran Canaria",
       "description": "Was: <b>Gran Fondo Costa del Sol</b> | Wann: <b>14 September 2019</b> | Wo: <b>Estepona,  Málaga</b>",
-      "text": "<a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\">Gran Fondo Costa del Sol</a> ist eine wunderschöne Radsportveranstaltung mit Abfahrt und Ankunft in Estepona, Malaga (Costa del Sol). Ein internationaler Test, mit zwei Routen, dem ersten Gran Fondo von 133 km und 3400 Höhenmeter und dem Medium Fondo von 94 km und 2400 Höhenmeter. Leih dir jetzt dein Rennrad! Wähle das Fahrrad, das zu dir passt und genieße den Gran Fondo.",
-      "meta-title": "Miete einfach das perfekte Rennrad für den Gran Fondo Costa del Sol!"
+      "text": "<a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\">Gran Fondo Costa del Sol</a> ist eine wunderschöne Radsportveranstaltung mit Abfahrt und Ankunft in Estepona, Malaga (Costa del Sol). Ein internationaler Test, mit zwei Routen, dem ersten Gran Fondo von 133 km und 3400 Höhenmeter und dem Medium Fondo von 94 km und 2400 Höhenmeter. Du wirst den berühmten <b>Alto Cortes de la Frontera</b> und den kolossalen <b>Peñas Blancas</b>steigen und den Reichtum der Umgebung in vollen Zügen genießen!<br> Leih dir jetzt dein Rennrad! Wähle das Fahrrad, das zu dir passt und genieße den Gran Fondo.",
+      "meta-title": "Miete einfach das perfekte Rennrad für den Gran Fondo Costa del Sol!",
+      "meta-description": "Enjoy the beautiful mountains of the Gran Fondo Costa del Sol by renting a carbon road bike from listnride!"
+    },
+    "8bar-clubride": {
+      "title": "Nehme teil an unserer 8bar Clubride und fahre kostenlos mit einer 8bar Rennrad!",
+      "description": "Was: <b>8bar Clubride </b>| When: <b>Jeden Dienstag ab dem 9. April </b>| Wobei: <b>8bar Showroom </b>",
+      "text": "\"Wenn du Teil unserer Community wirst, findest du immer jemanden, mit dem du fahren kannst. Entweder bei unseren wöchentlichen Clubrides jeden Dienstagabend aus dem 8bar Showroom Berlin im Sommer oder bei unseren \"Member only\" Rides oder Veranstaltungen. Außerdem sparst du dir die Anmeldegebühren für jedes 8bar Hosted oder Sponsored Cycling Event, bekommst spezielle Rabatte auf alle 8bar Produkte und last but not least ein neues Cycling Kit jährlich.\"\n"
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravel-Bike der Marken 8bar, Salsa, Veloheld oder Genesis für die Gravel-ausfahrt auf der Cyclingworld Düsseldorf",

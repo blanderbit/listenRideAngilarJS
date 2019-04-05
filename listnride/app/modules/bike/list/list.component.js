@@ -452,11 +452,13 @@ angular.module('list', ['ngLocale'])
         list.isVariationsValid = function () {
           var isValid = true;
 
-          if (list.variations) {
+          if (list.variations && list.variations.length) {
             _.forEach(list.variations, function (item) {
-              isValid = isValid && item.size;
+              item.size = parseInt(item.size);
+              isValid = isValid && !isNaN(item.size) &&_.isNumber(item.size);
             });
           }
+
           return isValid;
         };
 

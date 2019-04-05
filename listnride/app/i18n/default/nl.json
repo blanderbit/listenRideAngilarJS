@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Meer info",
     "event-bikes-will-be-soon": "Fietsen voor dit evenement zijn binnenkort beschikbaar",
+    "for-count-hours": "voor {{hoursSlot}} uur",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Kies je fietsmaat",
     "please-choose-bike-count": "Selecteer het aantal fietsen",
     "status-labels": {
@@ -219,6 +222,12 @@
     "paris-brest-paris": {
       "meta-title": "Huur een racefiets voor Parijs-Brest-Parijs 2019 | listnride",
       "meta-description": "Huur een racefiets online, gemakkelijk en veilig met listnride voor Parijs-Brest-Parijs 2019. Kies de perfecte fiets die bij u past."
+    },
+    "8bar-clubride": {
+      "meta-title": "Rent a road bike for the 8bar club ride",
+      "meta-description": "Join us on our weekly club ride and test one the latest 8bar road bikes for free. Simply book here and pick up at our showroom.",
+      "calendar-title": "Test bikes for 8bar club ride",
+      "calendar-subtitle": "Boek je gratis fiets voor de 8bar club-ride"
     },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -970,8 +979,8 @@
     "list-a-bike-subheader": "biedt je fiets te huur aan, ontmoet leuke nieuwe mensen en spek je banksaldo.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
     "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
-    "meta-title": "listnride - De bike sharing community",
-    "meta-description": "Huur de perfekte fiets van de listnride community. Boek een fiets naar jouw smaak en gebruik online."
+    "meta-title": "Fietsverhuur: huur een racefiets, MTB of e-bike | listnride",
+    "meta-description": "Huur de perfecte fiets die bij je stijl en behoeften past. Boek eenvoudig online, veilig en zeker."
   },
   "autocomplete": {
     "default-placeholder": "Waar wil je een fiets huren?"
