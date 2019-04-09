@@ -70,9 +70,11 @@ angular.module('bike').component('calendar', {
       }
 
       function updateState (params) {
-        $state.go(
-          $state.current, params
-        );
+        if(!calendar.isOnSlotableEvent) {
+          $state.go(
+            $state.current, params
+          );
+        }
       }
 
       function setCalendarDefaultParams() {
@@ -80,7 +82,7 @@ angular.module('bike').component('calendar', {
         calendar.startDate = $state.params.startDate ? new Date($state.params.startDate) : null;
 
         if(calendar.startDate) {
-          calendar.endDate = new Date(calendar.startDate.getFullYear(), calendar.startDate.getMonth(), calendar.startDate.getDate() + ($state.params.duration - 1)); // to prevent adding extra day decrease duration which includes startDay
+          calendar.endDate = new Date(moment(calendar.startDate).add($state.params.duration, 'days').subtract(1, 'days')); // subtract startDay from calculation + localize end day
           calendar.defaultDateRange = (moment(calendar.startDate).format('YYYY-MM-DD') + ' to ' + moment(calendar.endDate).format('YYYY-MM-DD'));
           setInitHours();
           dateChange(calendar.startDate, calendar.endDate);
@@ -667,7 +669,7 @@ angular.module('bike').component('calendar', {
             });
           }
 
-          // updateState({startDate: startDate, duration: calendar.durationDays, size: calendar.pickedBikeSize});
+          updateState({startDate: startDate, duration: calendar.durationDays, size: calendar.pickedBikeSize});
 
         } else {
           calendar.duration = date.duration(undefined, undefined, 0);
