@@ -301,15 +301,15 @@
     }
   },
   "faq": {
-    "meta-title": "Frequently Asked Questions",
-    "meta-description": "The most frequently asked questions by Listers and Riders are answered here to help you get started. Whether you are looking for the perfect bike to rent that serves your needs. Or to list that very special bike of yours."
+    "meta-title": "Questions fréquentes",
+    "meta-description": "Les questions les plus fréquemment posées par les Listers et les Riders sont répondues ici pour vous aider à démarrer. "
   },
   "multi-booking": {
-    "meta-title": "Group booking",
+    "meta-title": "Réservation de Groupe",
     "opengraph": {
-      "description": "The rental bike that fits you needs and style."
+      "description": "Le vélo de location qui correspond à vos besoins et à votre style."
     },
-    "no-accessories": "No accessories",
+    "no-accessories": "Pas d'accessoires",
     "meta-description": "Book your bikes with our group booking form",
     "title": "Group bookings",
     "header": "We are happy to help you with your group booking",
@@ -368,9 +368,9 @@
     },
     "seo": {
       "city-title": "Rent the perfect bike in {{location}} | listnride",
-      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
+      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
       "category-title": "Rent the perfect {{category}} bike in {{location}} | listnride",
-      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
+      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
       "meta-title": "The listnride business community",
@@ -888,7 +888,7 @@
     "11": "La réservation de votre vélo a été annulée.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Avez-vous eu une bonne expérience avec le vélo de {{lister.first_name}}? Partagez votre expérience en laissant un court commentaire. Cela aidera les futurs cyclistes à mieux comprendre à quoi s'attendre.",
-    "6": "Thanks for rating, the rental was successfully completed.",
+    "7": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
     "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking.",
     "10": "La demande a été annulée."
@@ -1053,7 +1053,7 @@
       "special": "Special",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road and touring bikes",
+      "road": "Road - touring ",
       "transport": "Transport"
     },
     "details": {

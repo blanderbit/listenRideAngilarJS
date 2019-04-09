@@ -880,7 +880,7 @@
     "11": "De boeking van je huurfiets is geannuleerd.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Heb je een geweldige ervaring gehad op de fiets van {{lister.first_name}}. Deel ons je ervaring middels een korte recensie. Dit zal toekomstige fietsers helpen beter te begrijpen wat ze kunnen verwachten.",
-    "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
+    "7": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
     "8": "Helaas heeft de verhuurder je aanvraag afgewezen. Gelukkig zijn er genoeg andere mooie fietsen die je kan aanvragen.",
     "9": "Je hebt de aanvraag afgewezen. Stuur de verhuuder kort een berichtje, waarom je aanvraag niet geboekt hebt.",
     "10": "Het verzoek is geannuleerd."
@@ -1043,7 +1043,7 @@
       "special": "Uniek",
       "urban": "Urban",
       "e-bike": "Elektrische fiets",
-      "road": "Race & Touringfietsen",
+      "road": "Racefiets - Tourfiets",
       "transport": "Transport"
     },
     "details": {
