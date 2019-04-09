@@ -302,78 +302,78 @@
         "question-8": "Y a-t-il des restrictions de couverture?",
         "answer-8": "Certains dommages peuvent entraîner une réduction de l’indemnisation, par exemple:\n<br>\n<ul>\n<li>En cas de dommage n'affectant pas la convivialité du vélo\n<li>En cas de vol, si votre vélo n'a pas été sécurisé de manière habituelle\n</ul>\n<p>\nEn tout état de cause, les dommages causés par l’un des éléments suivants sont exclus de la couverture d’assurance:\n<br>\n<ul>\n<li>Actions intentionnelles de votre part\n<li>Manipulation du système d'entraînement (par exemple, réglage)\n</ul>",
         "question-9": "Quelles sont mes obligations?",
-        "answer-9": "For example, there are the following obligations for you:\n        <br>\n        <ul>\n            <li>In the event of an insurance case you must provide hepster with complete and truthful information of what happened</li>\n            <li>In the event of an insurance case you must inform hepster of any claim you bring forth immediately</li>\n        </ul>",
+        "answer-9": "Par exemple, les obligations suivantes s’imposent à vous:\n        <br>\n        <ul>\n            <li>En cas d'assurance, vous devez fournir à hepster les informations complètes et véridiques sur ce qui s'est passé </li>\n            <li>Vous devez immédiatement informer hepster de toute réclamation que vous présentez </li>\n        </ul>",
         "question-1": "Combien coûte l'assurance de base?",
         "tabname": "Pour le Rider",
         "answer-1": "Le coût de l'assurance de base ne représente que 0,1% de la valeur d'assurance du vélo que vous avez réservé.\n<br>\nSi un vélo est assuré jusqu'à 1 000 €, vous payez exactement un euro par jour de location pour l'assurance de base.",
         "question-2": "Combien coûte l'assurance Premium?",
         "answer-2": "Trois euros par jour en plus de la location et des <a href=\"https://www.listnride.com/terms\" target=\"_blank\">frais de service</a> de listnride.",
-        "question-3": "What does the Basic Insurance cover?",
-        "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee up to 250€\n</ul>",
+        "question-3": "Que couvre l'assurance de base?",
+        "answer-3": "<ul>\n<li>Protection en cas de dommages involontaires ou causés par un tiers\n<li>Protection contre le vandalisme\n<li>Protection de l'électronique et de la batterie pour pedelecs\n<li>Frais de rétention 250 €\n</ul>",
         "question-4": "Que couvre l'assurance Premium?",
-        "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
-        "question-5": "Y at-il des frais de rétention en cas de dommage? À quelle hauteur est-ce?",
-        "answer-5": "The deterrent fee is up to 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no deterrent fee.",
+        "answer-4": "<ul>\n<li>protection en cas de dommages auto et externes non intentionnels\n<li>Protection contre le vandalisme\n<li>Protection de l'électronique et de la batterie pour pedelecs\n<li>Protection contre le vol\n<li>Numéro d'urgence 24/7 en cas de vol ou de détérioration\n<li>Retourner le transport après un vol ou une détérioration\n<li>Remplacement du vélo après un vol ou une détérioration\n<li>Pas de frais de rétention\n</ul>",
+        "question-5": "Y at-il des frais de rétention en cas de dommage? Qu'elles sont elles?",
+        "answer-5": "La rétention est de 250€ pour l'assurance de base.\n<br>\nL'assurance Premium ne comporte aucun frais de rétention.",
         "question-6": "Comment puis-je mettre fin à l'assurance après la fin de ma location de vélo?",
-        "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
-        "question-7": "Whom do I contact if I need to claim my insurance?",
+        "answer-6": "Avec chaque location de vélo, vous recevrez un certificat d'assurance individuel. C'est\n<b>seulement </b>\nvalable pour la réservation spécifique et pour la\n<b>période </b>\n sélectionné par vous. Cela se termine automatiquement.\n<p>\nNous vous enverrons le certificat par email, ou vous pouvez le  télécharger directement depuis notre site.",
+        "question-7": "Qui dois-je contacter si j'ai besoin de réclamer mon assurance?",
         "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>0800 - 0753336\n</ul>\n<br>\nhepster staff will support you quickly and competently."
       },
       "docs": {
         "tabname": "Documents d'assurance"
       },
-      "description-lister": "As a lister on listnride you want to be sure that you and your bike are protected against all risk. That's why every rental in Germany and Austria, through listnride is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and coverage. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via <a3>E-Mail</a3>.",
-      "description-rider": "We offer two insurance packages for each bike you rent in Germany and Austria via lisntride: The <b1>Basic insurance</b1> is included in every rental, the <b2>Premium insurance</b2> is optional and extends the insurance cover with extra benefits.<br3>You and your bike are always optimally protected and there is nothing more in the way for you to ride!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Bike Insurance - Terms and Conditions </a0>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">E-Bike Malfunction Insurance - Terms and Conditions</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description </a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "description-lister": "En tant que Lister sur listnride, vous voulez être sûr que vous et votre vélo êtes protégés contre tous les risques. C'est pourquoi chaque location en Allemagne et en Autriche, via listnride, est automatiquement assurée avec effet immédiat. Les Riders qui louent votre vélo peuvent éventuellement réserver le forfait Premium pour bénéficier de services et d'une couverture supplémentaires. Ce service est gratuit pour vous en tant que Lister.\n<p>\nSi vous avez d'autres questions, n'hésitez pas à nous contacter à tout moment par <a3>e-Mail </a3>.",
+      "description-rider": "Nous proposons deux formules d’assurance pour chaque vélo que vous louez via lisntride:\n<b1>l'Assurance de base</b1>\nest incluse dans chaque location,\n<b2>l'Assurance Premium</b2>\n est facultative et étend la couverture d’assurance par des avantages supplémentaires.<br3> Votre vélo et vous êtes toujours protégés de manière optimale. Vous pouvez commencer la location du vélo en toute conscience!",
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Assurance vélo - Conditions générales </a0>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Assurance contre les dysfonctionnements du vélo électrique - Conditions générales </a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Assurance de base - Description de la couverture </a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Assurance Premium - Description de la couverture </a>"
     }
   },
   "business-community": {
-    "meta-title": "The listnride business community",
+    "meta-title": "La communeauté business de listnride",
     "requests": {
-      "title": "Manage all your rentals from one place",
-      "description": "Receive booking requests instead of endless emails, you are always in control. Improve your customer communication, no more forms or miscommunication."
+      "title": "Gérez toutes vos locations à partir d'un seul endroit",
+      "description": "Au lieu de recevoir sans cesse des demandes de réservation par emails ou par coup de fils, vous pouvez gérer les demandes sur notre site. Vous restez toujours en contrôle. Améliorez la communication avec vos clients, sans l'utilisation de formulaires, et sans problèmes de communication."
     },
     "bike-page": {
-      "title": "Bikes come first ",
-      "description": "Each bike has a unique profile with detailed information that allows our users to rent the bike of his choice in seconds."
+      "title": "Les vélos avant tout",
+      "description": "Chaque vélo a un profil unique, contenant des informations détaillées qui permettent à nos utilisateurs de louer le vélo de leur choix en quelques secondes."
     },
     "companies": {
-      "title": "Other Businesses that joined our listnride business community"
+      "title": "Autres entreprises ayant rejoint notre communauté listnride"
     },
     "plugin-wp": {
-      "title": "Listnride Booking Plug-in ",
-      "description": "We developed a free to install booking plugin so your customers can rent your bikes directly from your website, 24/7.",
-      "install": "Install on Wordpress",
-      "link": "Please use our <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">installation documentation</a> if you don't use Wordpress."
+      "title": "Reservations à travers le Plug-in de listnride",
+      "description": "Nous avons développé un plugin de réservation gratuit pour que vos clients puissent louer vos vélos directement sur votre site web, 24h / 24 et 7j / 7.",
+      "install": "Installer sur Wordpress",
+      "link": "Veuillez utiliser notre <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">documentation d'installation </a>si vous n'utilisez pas Wordpress."
     },
-    "meta-description": "Join the listnride business community for bike rental",
-    "title": "Join the listnride bike rental community today",
-    "subtitle": "No contracts, no monthly fees, only a commission per booking.",
-    "description": "With listnride you can manage all your rental in one place. No more forms or miscommunication. Accept or reject bookings requests online, so you stay always in control. Ready to join listnride?",
+    "meta-description": "Rejoignez la communauté listnride dès aujourd'hui",
+    "title": "Rejoignez la communauté listnride dès aujourd'hui",
+    "subtitle": "Pas de contrat, pas de frais mensuels, seulement une commission par réservation.",
+    "description": "Avec listnride, vous pouvez gérer toutes vos locations en un seul endroit. Plus de formulaires ou de problèmes de communication. Acceptez ou refusez les demandes de réservation en ligne afin de garder le contrôle. Prêt à rejoindre listnride?",
     "feature-1": {
-      "title": "Benefit from our large network",
-      "description": "We promote your bikes through our platform and our media channels. So our international clients can easily find and book your bikes. "
+      "title": "Profitez de notre grand réseau",
+      "description": "Nous promouvons vos vélos via notre plate-forme et nos canaux médiatiques. Ainsi, nos clients internationaux peuvent facilement trouver et réserver vos vélos."
     },
     "feature-2": {
-      "title": "Simplified rental process",
-      "description": "No more emails and telephone calls taking away all your time. Simply receive booking request that you can accept."
+      "title": "Processus de location simplifié",
+      "description": "Finis les courriels et les appels téléphoniques qui vous prennent tout votre temps. Recevez simplement des demandes de réservation en ligne que vous pouvez facilement accepter."
     },
     "feature-3": {
-      "title": "Get more rentals ",
+      "title": "Obtenez plus de demandes de location",
       "description": "Our Objective is it to help grow your business, while reducing the admin and complexity."
     },
     "text-2": {
-      "title": "Join the listnride Business Community!",
-      "description": "Register now and set up your own shop page instantly. Or contact us personally. We will be happy to help, contact us at: <br><a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> "
+      "title": "Rejoignez la communauté business de listnride!",
+      "description": "Inscrivez-vous maintenant et créez votre propre page instantanément. Ou contactez-nous personnellement, nous serons heureux de vous aider: <br><a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "text-3": {
-      "column-1": "listnride is already the largest community for bicycle sharing in Europe and with that a specialist for private and commercial bike rental. We know what our customers are looking for and so can direct them to your listnride shop page to easily find and book your rental bikes.",
-      "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help to find a new bike (purchase)."
+      "column-1": "listnride est déjà la plus grande communauté européenne de location de vélos et avec elle un spécialiste de la location de vélos privés et commerciaux. Nous savons ce que nos clients recherchent et pouvons donc les diriger directement vers la page de votre boutique listnride pour trouver et réserver vos vélos de location.",
+      "column-2": "Nous pensons qu’il est important d’offrir à notre communauté de cyclistes une large gamme de vélos, du crosser au vélo de route, en passant par le vélo de randonnée ou le vélo cargo. Avec vous, nous pouvons non seulement offrir à nos utilisateurs le vélo de location idéal pour les vacances, mais également les aider à trouver le vélo qu'ils souhaitent acheter."
     }
   },
   "events": {
     "rapha-super-cross": {
-      "text": "Rapha Super Cross returns to Munich’s Olympic Park on 29-30 October, for the third edition of what has quickly become a legendary cyclocross festival. If you would like to participate but are not having the right bicycle, you can rent one through listnride. Bike enthusiasts like you are offering the different bikes below. You can request and book the rides prior to the event and pick-up your bike as agreed with the owner. Bike owners can also offer their idle bike for rent and so make some money while meeting interesting people participating in the event. Become a part of our growing community!"
+      "text": "Rapha Super Cross retourne au parc olympique de Munich les 29 et 30 octobre pour la troisième édition de ce qui est rapidement devenu un festival de cyclo-cross légendaire. Si vous souhaitez participer mais que vous n'avez pas le bon vélo, vous pouvez en louer un sur listnride. Nous vous proposons les différents vélos ci-dessous. Vous pouvez demander et réserver les vélos avant l'événement et récupérer votre vélo comme convenu avec le propriétaire. Les propriétaires de vélos peuvent également proposer leur vélo de location à la location et gagner ainsi de l'argent en rencontrant des personnes intéressantes participant à l'événement. Devenez membre de notre communauté grandissante!"
     },
     "paris-brest-paris": {
       "title": "Louez le vélo de route idéal pour Paris-Brest-Paris 2019",
@@ -393,21 +393,21 @@
       "text": "When you’re part of our community you will always find someone to ride with. During the summer, you can ride our weekly club rides every Tuesday evening from the 8bar showroom Berlin, or at our “member only” rides or events. Beside the fact that you’ll be saving on application fees to any 8bar-hosted or -sponsored cycling event, you can get a special discount on all 8bar products. And last but not least, every year you’ll get a fresh new cycling kit."
     },
     "cyclingworld": {
-      "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
-      "description": "What: <b>Gravel Ride CyclingWorld</b> | When: <b> March 24, 2019 </b>| Where: <b>Dusseldorf, Germany</b>",
-      "text": "En collaboration avec notre partenaire SCHICKEMÜTZE et les marques partenaires 8Bar, Salsa et Veloheld, nous vous invitons à joindre la Gravelrunde dans la région de Düsseldorf dans le cadre de Cyclingworld Düsseldorf. </br>Vous avez le choix entre deux itinéraires: un parcours plat de 50 km, qui correspond au grand parcours de l’année dernière, ou un parcours de 70 km à travers le Rhin comprenant quelques petites montées et sections rugueuses autour de Ratingen. Vous commencerez par petites équipes de 2 à 6 personnes, naviguant grâce au fichier gpx, que tous les partants recevront avant le tour par courrier. Vous pouvez choisir le circuit que vous souhaitez rouler le matin avant le départ. Après votre retour dans la région de Böhler, nous vous attendrons devant Cyclingworld avec quelques collations et des boissons pour reconstituer les réserves de calories. Après la visite, vous pourrez laisser votre vélo dans un parking surveillé pour vous promener sans stress dans la foire. Un ticket d’entrée à Cyclingworld est inclus dans le forfait de départ, ainsi que quelques autres petites choses. LISTNRIDE vous proposera des vélos d’essais de différentes marques via leur communauté. Donc si vous souhaitez rouler un vélo Gravel de 8Bar ou autre, veuillez réserver votre vélo de rêve à l'avance sur <a href=\"www.listnride.com/events/cyclingworld\" target=\"_blank\">www.listnride.com/events/cyclingworld </a>Nous vous informerons par e-mail à propos des mises à jour et de toutes les informations utiles concernant les randonnées. Nous nous attendons donc à une géniale édition de Cyclingworld, et de passer quelques bonnes heures avec vous - à pied et à vélo!"
+      "title": "Réservez un vélo Gravel de marques renommées telles que 8bar, Salsa, Veloheld ou Genesis pour la Gravel Ride à Cyclingworld Düsseldorf",
+      "description": "Quoi: <b>CyclingWorld </b>| Quand: <b>les 23 et 24 mars 2019 </b>| Où: <b>Düsseldorf, Allemagne </b>",
+      "text": "En collaboration avec notre partenaire SCHICKEMÜTZE et les marques partenaires 8Bar, Salsa et Veloheld, nous vous invitons à visiter le Gravelrunde dans la région de Düsseldorf dans le cadre de Cyclingworld Düsseldorf. </br>Vous avez le choix entre deux itinéraires: un parcours plat de 50 km, qui correspond au grand parcours de l’année dernière, ou un parcours de 70 km à travers le Rhin comprenant quelques petites montées et sections rugueuses autour de Ratingen. Vous commencerez par petites équipes de 2 à 6 personnes, naviguant dans le fichier gpx-file, que tous les partants recevront avant la visite par courrier. Vous pouvez choisir le circuit que vous souhaitez entreprendre le matin avant le départ. Après votre retour dans la région de Böhler, nous vous attendrons devant Cyclingworld avec quelques collations et des boissons pour reconstituer les réserves de calories. Après la visite, vous pourrez laisser votre vélo sur un parking surveillé pour vous promener sans stress dans la foire. Un billet d’entrée à Cyclingworld est inclus dans le forfait de départ, ainsi que quelques autres petites choses. LISTNRIDE vous proposera des vélos d’essais de différentes marques via sa communauté. Si vous souhaitez piloter une Gravelbike de 8Bar ou autre, veuillez réserver votre vélo de rêve à l’avance. Nous vous informerons par e-mail des mises à jour et de tout ce qui vaut la peine d'être informé sur les manèges. Nous attendons avec impatience un monde passionnant sur Cycling et quelques bonnes heures avec vous, à vélo ou à vélo.<a href=\"www.listnride.com/events/cyclingworld\" target=\"_blank\"></a>"
     },
     "black-friday": {
       "title": "Black Friday",
       "pre": {
-        "subtitle": "Get huge discounts for<br> your next rental"
+        "subtitle": "Obtenez des rabais énormes pour <br>votre prochaine location"
       },
-      "use-code": "Use this code",
+      "use-code": "Utilisez ce code",
       "steps": {
-        "header": "How does it work?",
-        "step1": "Find a bike",
-        "step2": "Select rental period",
-        "step3": "Redeem voucher & request bike"
+        "header": "Comment ça fonctionne?",
+        "step1": "Trouver un vélo",
+        "step2": "Sélectionnez la période de location",
+        "step3": "Utiliser le voucher & demander un vélo"
       },
       "footer-text": "This voucher is only valid until 31.12.2018. <br>\nFind more information on how to redeem a voucher <a href=\"/faq?group=7\" target=\"_blank\">here</a>.<br>\nDid you know that all bike rentals in Austria and Germany are <a href=\"/insurance\" target=\"_blank\">insured</a>?",
       "subtitle": "Get 30€ for your next rental. <br>Only today."

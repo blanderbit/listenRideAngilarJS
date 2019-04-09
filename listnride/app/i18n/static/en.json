@@ -309,13 +309,13 @@
         "question-2": "How much does Premium Insurance cost?",
         "answer-2": "Three euros per day in addition to the rent and the listnride<a href=\"https://www.listnride.com/terms\" target=\"_blank\">service fees</a>.",
         "question-3": "What does the Basic Insurance cover?",
-        "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention 250€\n</ul>",
+        "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee 250€\n</ul>",
         "question-4": "What does Premium Insurance cover?",
         "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
         "question-5": "Is there a retention fee in case of damage? How high is it?",
         "answer-5": "The retention fee is 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no retention fee.",
         "question-6": "How do I end the insurance after my bike rental ends?",
-        "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
+        "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou will receive the certificate by email, or can download it directly from our website.",
         "question-7": "Whom do I contact if I need to claim my insurance?",
         "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>0800 - 0753336\n</ul>\n<br>\nhepster staff will support you quickly and competently."
       },
@@ -335,10 +335,10 @@
     },
     "bike-page": {
       "title": "Bikes come first ",
-      "description": "Each bike has a unique profile with detailed information that allows our users to rent the bike of his choice in seconds."
+      "description": "Each bike has a unique profile with detailed information that allows our users to rent the bike of their choice in seconds."
     },
     "companies": {
-      "title": "Other Businesses that joined our listnride business community"
+      "title": "Other businesses that joined our listnride community"
     },
     "plugin-wp": {
       "title": "Listnride Booking Plug-in ",
@@ -346,7 +346,7 @@
       "install": "Install on Wordpress",
       "link": "Please use our <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">installation documentation</a> if you don't use Wordpress."
     },
-    "meta-description": "Join the listnride business community for bike rental",
+    "meta-description": "Join the listnride community for bike rental",
     "title": "Join the listnride bike rental community today",
     "subtitle": "No contracts, no monthly fees, only a commission per booking.",
     "description": "With listnride you can manage all your rental in one place. No more forms or miscommunication. Accept or reject bookings requests online, so you stay always in control. Ready to join listnride?",
@@ -356,7 +356,7 @@
     },
     "feature-2": {
       "title": "Simplified rental process",
-      "description": "No more emails and telephone calls taking away all your time. Simply receive booking request that you can accept."
+      "description": "No more emails and telephone calls taking away all your time. Simply receive booking requests online that you can readily accept."
     },
     "feature-3": {
       "title": "Get more rentals ",
@@ -364,11 +364,11 @@
     },
     "text-2": {
       "title": "Join the listnride Business Community!",
-      "description": "Register now and set up your own shop page instantly. Or contact us personally. We will be happy to help, contact us at: <br><a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> "
+      "description": "Register now and set up your own shop page instantly. Or contact us personally, we will be happy to help: <br><a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> "
     },
     "text-3": {
-      "column-1": "listnride is already the largest community for bicycle sharing in Europe and with that a specialist for private and commercial bike rental. We know what our customers are looking for and so can direct them to your listnride shop page to easily find and book your rental bikes.",
-      "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help to find a new bike (purchase)."
+      "column-1": "listnride is already the largest community for bicycle rental in Europe and with that a specialist for private and commercial bike rental. We know what our customers are looking for and so can direct them to your listnride shop page to easily find and book your rental bikes.",
+      "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help them find the bike they want to buy."
     }
   },
   "events": {
@@ -393,7 +393,7 @@
       "text": "When you’re part of our community you will always find someone to ride with. During the summer, you can ride our weekly club rides every Tuesday evening from the 8bar showroom Berlin, or at our “member only” rides or events. Beside the fact that you’ll be saving on application fees to any 8bar-hosted or -sponsored cycling event, you can get a special discount on all 8bar products. And last but not least, every year you’ll get a fresh new cycling kit."
     },
     "cyclingworld": {
-      "title": "Book a Gravel bike from renowned brands 8bar, Salsa, Veloheld or Genesis for the gravel ride on the Cyclingworld Düsseldorf",
+      "title": "Book a Gravel bike from renowned brands such as 8bar, Salsa, Veloheld or Genesis for the gravel ride on the Cyclingworld Düsseldorf",
       "description": "What: <b>CyclingWorld</b> | When: <b> March 23-24, 2019 </b>| Where: <b>Dusseldorf, Germany</b>",
       "text": "Together with our partner SCHICKEMÜTZE and partner brands 8Bar, Salsa and Veloheld, we invite you to the Gravelrunde in the Düsseldorf region as part of Cyclingworld Düsseldorf. </br>You can choose between two routes, a flat round of 50 kilometres, which corresponds to last year's great tour, or a round of 70 kilometres, which leads across the Rhine and includes a few small climbs and rough sections around Ratingen. You will start in small teams of 2 to 6 people, navigated by gpx-file, which all starters will receive in advance of the tour by mail. You can choose which tour you want to take in the morning before the start. After returning to the Böhler area, we will be awaiting you in front of Cyclingworld with a few snacks and drinks to replenish the calorie reserves. After the tour you can leave your bike at a guarded parking lot to stroll around the fair without stress. An admission ticket to Cyclingworld is included in the starter package, as well as a few other small things. LISTNRIDE will offer you test bikes of different brands via their community, so if you want to ride a Gravelbike from 8Bar or others, please book your dream bike in advance at <a href=\"www.listnride.com/events/cyclingworld\" target=\"_blank\">www.listnride.com/events/cyclingworld </a>We will inform you about updates and everything worth knowing about the rides via mail. We are looking forward to an exciting Cyclingworld and a few great hours with you on and off the bike."
     },

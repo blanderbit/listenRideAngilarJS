@@ -368,9 +368,9 @@
     },
     "seo": {
       "city-title": "Alquila la bicicleta perfecta en {{location}} | listnride",
-      "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
+      "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
       "category-title": "Alquila una {{category}} bici en {{location}} | listnride",
-      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
+      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
     },
     "business-community": {
       "meta-title": "La comunidad empresarial de listnride",
@@ -886,7 +886,7 @@
     "11": "La reserva de su bicicleta fue cancelada.",
     "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "¿Tuviste una gran experiencia con la bicicleta que alquilaste de {{lister.first_name}}? Comparte tu experiencia dejando una breve reseña. Esto ayudará a los futuros corredores a comprender mejor qué esperar.",
-    "6": "Gracias por la valoración, el alquiler se realizó con éxito.",
+    "7": "Gracias por la valoración, el alquiler se realizó con éxito.",
     "8": "Lamentablemente, el anunciante no pudo aceptar tu solicitud, pero puedes solicitar otras bicis estupendas.",
     "9": "Cancelaste la solicitud, por favor dile al anunciante por qué no pudiste confirmar la reserva.",
     "10": "Se canceló la solicitud."
@@ -1051,7 +1051,7 @@
       "special": "Especial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Bici de carretera y de turismo",
+      "road": "Bici de carretera",
       "transport": "Transporte"
     },
     "details": {

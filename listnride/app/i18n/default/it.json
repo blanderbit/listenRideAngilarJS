@@ -882,7 +882,7 @@
     "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
-    "6": "Grazie per la valutazione, il noleggio è stato completato con successo.",
+    "7": "Grazie per la valutazione, il noleggio è stato completato con successo.",
     "8": "Purtroppo il noleggiatore non poteva accettare la tua richiesta. Richiedi altre belle biciclette.",
     "9": "Hai annullato la richiesta, ti preghiamo di informare il noleggiatore del motivo per cui non è possibile confermare la prenotazione.",
     "10": "La richiesta è stata annullata."
@@ -1047,7 +1047,7 @@
       "special": "Speciale",
       "urban": "Urban",
       "e-bike": "Bici Elettrica",
-      "road": "Bici da strada e da turismo",
+      "road": "Bici da strada ",
       "transport": "Per il trasporto"
     },
     "details": {

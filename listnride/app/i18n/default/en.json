@@ -305,7 +305,7 @@
   },
   "faq": {
     "meta-title": "Frequently Asked Questions",
-    "meta-description": "The most frequently asked questions by Listers and Riders are answered here to help you get started. Whether you are looking for the perfect bike to rent that serves your needs. Or to list that very special bike of yours."
+    "meta-description": "The most frequently asked questions by Listers and Riders are answered here to help you get started."
   },
   "multi-booking": {
     "meta-title": "Group booking",
@@ -371,9 +371,9 @@
     },
     "seo": {
       "city-title": "Rent the perfect bike in {{location}} | listnride",
-      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
+      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
       "category-title": "Rent the perfect {{category}} bike in {{location}} | listnride",
-      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
+      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
     },
     "business-community": {
       "meta-title": "The listnride business community",
@@ -891,7 +891,7 @@
     "11": "The booking of your rental bike was cancelled.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Did you have a great experience on the bike you rented from {{lister.first_name}}? Share your experience by leaving a short review. This will help future riders better understand what to expect. ",
-    "6": "Thanks for rating, the rental was successfully completed.",
+    "7": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
     "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking.",
     "10": "The request got cancelled."
@@ -1056,7 +1056,7 @@
       "special": "Special",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road and touring bikes",
+      "road": "Road",
       "transport": "Transport"
     },
     "details": {
