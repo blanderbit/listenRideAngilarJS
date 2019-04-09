@@ -83,9 +83,11 @@ angular.module('booking', [])
 
 
               // EVENT BIKE LOGIC
-              if (booking.bike.family == 35) {
+              booking.isOnSlotableEvent = _.indexOf([35, 36], booking.bike.family) !== -1;
+
+              if (booking.isOnSlotableEvent) {
                 booking.bike.event = {
-                  id: 35,
+                  id: booking.bike.family,
                   name: 'Cycling World',
                   date: '23032019',
                   duration: 2,
