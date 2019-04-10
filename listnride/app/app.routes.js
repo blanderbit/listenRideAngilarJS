@@ -98,7 +98,7 @@
       // bikes/{id}
       $stateProvider.state({
         name: 'bike',
-        url: '/bikes/{bikeId:int}?size&startDate&duration',
+        url: '/bikes/{bikeId:int}?size&start_date&duration',
         template: '<bike></bike>',
         reloadOnSearch: false,
         params: {

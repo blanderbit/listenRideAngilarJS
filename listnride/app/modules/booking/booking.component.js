@@ -77,7 +77,7 @@ angular.module('booking', [])
               booking.bike = success.data.current;
               booking.coverageTotal = booking.bike.coverage_total || 0;
               booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-              booking.pickedBikeSize = $state.params.size ? $state.params.size : booking.bike.size;
+              booking.pickedBikeSize = $state.params.size ? +$state.params.size : booking.bike.size;
               booking.prices = booking.bike.prices;
               getLister();
               updatePrices();

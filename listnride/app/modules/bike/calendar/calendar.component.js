@@ -79,11 +79,13 @@ angular.module('bike').component('calendar', {
 
       function setCalendarDefaultParams() {
         calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
-        calendar.startDate = $state.params.startDate ? new Date($state.params.startDate) : null;
+        calendar.startDate = $state.params.start_date ? new Date($state.params.start_date) : null;
 
         if(calendar.startDate) {
-          calendar.endDate = new Date(moment(calendar.startDate).add($state.params.duration, 'days').subtract(1, 'days')); // subtract startDay from calculation + localize end day
+          calendar.endDate = new Date(moment(calendar.startDate).add($state.params.duration, 'days'));
           calendar.defaultDateRange = (moment(calendar.startDate).format('YYYY-MM-DD') + ' to ' + moment(calendar.endDate).format('YYYY-MM-DD'));
+          calendar.startDate.setHours(calendar.startTime, 0, 0, 0);
+          calendar.endDate.setHours(calendar.endTime, 0, 0, 0);
           setInitHours();
           dateChange(calendar.startDate, calendar.endDate);
         }
@@ -140,7 +142,8 @@ angular.module('bike').component('calendar', {
         $state.go('booking', {
           bikeId: calendar.pickAvailableBike(),
           startDate: calendar.startDate,
-          endDate: calendar.endDate
+          endDate: calendar.endDate,
+          size: calendar.pickedBikeSize
         });
       };
 
@@ -669,7 +672,10 @@ angular.module('bike').component('calendar', {
             });
           }
 
-          updateState({startDate: startDate, duration: calendar.durationDays, size: calendar.pickedBikeSize});
+          updateState({
+            start_date: startDate,
+            duration: moment(endDate).diff(moment(startDate), 'd'),
+            size: calendar.pickedBikeSize});
 
         } else {
           calendar.duration = date.duration(undefined, undefined, 0);
