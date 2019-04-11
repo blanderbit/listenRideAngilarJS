@@ -37,10 +37,11 @@ angular.module('bike').component('calendar', {
       'ENV',
       'calendarHelper',
       'notification',
+      'bikeOptions',
       'bikeCluster',
     function CalendarController($scope, $localStorage, $state, $mdDialog, $translate, $mdToast,
                                 $mdMedia, $window, $analytics, date, price, api, authentication,
-                                verification, ENV, calendarHelper, notification, bikeCluster) {
+                                verification, ENV, calendarHelper, notification, bikeOptions, bikeCluster) {
 
       //variables
       var calendar = this;
@@ -53,8 +54,8 @@ angular.module('bike').component('calendar', {
       calendar.validClusterSize = validClusterSize;
 
       calendar.$onChanges = function (changes) {
+        calendar.humanReadableSize = bikeOptions.getHumanReadableSize(calendar.bikeSize);
         if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
-
           api.get('/users/' + changes.userId.currentValue).then(function (response) {
             calendar.bikeOwner = response.data;
 
