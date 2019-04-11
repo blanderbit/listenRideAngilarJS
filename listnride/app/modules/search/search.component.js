@@ -84,9 +84,18 @@ angular.module('search',[]).component('search', {
         };
 
         // invocations
+        getUrlParams();
         populateBikes(search.location);
         setMetaTags(search.location);
       };
+
+      function getUrlParams() {
+        search.urlParams = {
+          size : $stateParams.sizes,
+          start_date : $stateParams.start_date,
+          duration : $stateParams.duration
+        };
+      }
 
       search.updateState = function(params, cb) {
         $state.go(
@@ -94,6 +103,7 @@ angular.module('search',[]).component('search', {
           params,
           { notify: false }
         ).then(function(){
+          getUrlParams();
           $timeout(function () {
             refreshMarkerCluster(search.map);
           },0);

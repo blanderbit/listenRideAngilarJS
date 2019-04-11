@@ -675,7 +675,7 @@ angular.module('bike').component('calendar', {
           }
 
           updateState({
-            start_date: startDate,
+            start_date: moment(startDate).format('YYYY-MM-DD'),
             duration: moment(endDate).diff(moment(startDate), 'd'),
             size: calendar.pickedBikeSize});
 

@@ -67,6 +67,7 @@
           location="search.latLng"
           titles="search.titles"
           card-index="$index"
+          url-params="search.urlParams"
           ng-hide="search.bikes !== undefined && search.bikes.length === 0"
           class="lnr-m-0">
         </cardgrid>
@@ -96,7 +97,10 @@
 
       <info-window id="searchMapWindow">
         <div ng-non-bindable="">
-          <bike-card bike="search.selectedBike"></bike-card>
+          <bike-card
+            bike="search.selectedBike"
+            url-params="search.urlParams"
+          ></bike-card>
         </div>
       </info-window>
     </ng-map>
