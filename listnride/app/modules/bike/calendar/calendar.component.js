@@ -77,6 +77,13 @@ angular.module('bike').component('calendar', {
         }
       }
 
+      function setInitialDateTime(startDate, endDate) {
+        startDate.setHours(calendar.startTime, 0, 0, 0);
+        endDate.setHours(calendar.endTime, 0, 0, 0);
+        setInitHours();
+        dateChange(startDate, endDate);
+      }
+
       function setCalendarDefaultParams() {
         calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
         calendar.startDate = $state.params.start_date ? new Date($state.params.start_date) : null;
@@ -84,10 +91,7 @@ angular.module('bike').component('calendar', {
         if(calendar.startDate) {
           calendar.endDate = new Date(moment(calendar.startDate).add($state.params.duration, 'days'));
           calendar.defaultDateRange = (moment(calendar.startDate).format('YYYY-MM-DD') + ' to ' + moment(calendar.endDate).format('YYYY-MM-DD'));
-          calendar.startDate.setHours(calendar.startTime, 0, 0, 0);
-          calendar.endDate.setHours(calendar.endTime, 0, 0, 0);
-          setInitHours();
-          dateChange(calendar.startDate, calendar.endDate);
+          setInitialDateTime(calendar.startDate, calendar.endDate);
         }
       }
 
@@ -113,15 +117,12 @@ angular.module('bike').component('calendar', {
               language: $translate.preferredLanguage(),
             }).bind('datepicker-change', function (event, obj) {
               var start = obj.date1;
-              start.setHours(calendar.startTime, 0, 0, 0);
               var end = obj.date2;
-              end.setHours(calendar.endTime, 0, 0, 0);
 
               $scope.$apply(function () {
                 calendar.startDate = start;
                 calendar.endDate = end;
-                setInitHours();
-                dateChange(calendar.startDate, calendar.endDate);
+                setInitialDateTime(calendar.startDate, calendar.endDate);
               });
             });
           }
