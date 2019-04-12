@@ -13,25 +13,72 @@ angular
 
 function PaymentHelperController(ENV, api, authentication, notification) {
   return {
-    btAuthorization: ENV.btKey,
     btClient: '',
     btPpInstance: '',
+    btThreeDSecure: null,
+    fetchClientToken: function() {
+      return api.get('/users/' + authentication.userId() + '/payment_methods/new').then(function(response) {
+        return response.data.token;
+      });
+    },
+    fetchPaymentMethodNonce: function() {
+      return api.get('/users/' + authentication.userId() + '/payment_methods/nonce').then(function(response) {
+        return response.data.nonce;
+      });
+    },
+    createBrainTreeClient: function(clientToken) {
+      return braintree.client.create({
+        authorization: clientToken
+      });
+    },
+    createThreeDSecure: function(btClient) {
+      return braintree.threeDSecure.create({
+        client: btClient
+      });
+    },
+    createPaypalClient: function(btClient) {
+      return braintree.paypalCheckout.create({
+        client: btClient
+      });
+    },
     setupBraintreeClient: function () {
       var self = this;
-      braintree.client.create({
-        authorization: self.btAuthorization
-      }, function (err, client) {
-        if (err) {
-          // TODO: show braintree errors. Find documentation
-          return;
-        }
-        self.btClient = client;
-        braintree.paypal.create({
-          client: self.btClient
-        }, function (ppErr, ppInstance) {
-          self.btPpInstance = ppInstance;
+
+      return self.fetchClientToken()
+        .then(self.createBrainTreeClient)
+        .then(function(btClient) {
+          self.btClient = btClient;
+          return self.btClient;
+        })
+        .then(self.createThreeDSecure)
+        .then(function(threeDSecure) {
+          self.btThreeDSecure = threeDSecure;
+          return self.btClient;
+        })
+        .then(self.createPaypalClient)
+        .then(
+          function(ppClient) {
+            self.btPpInstance = ppClient;
+            return self;
+          },
+          function() { return self; }
+        );
+    },
+    authenticateThreeDSecure: function(amount, addFrameCb, removeFrameCb) {
+      var self = this;
+
+      return self.setupBraintreeClient()
+        .then(self.fetchPaymentMethodNonce)
+        .then(function(nonce) {
+          return self.btThreeDSecure.verifyCard(
+            {
+              amount: amount,
+              nonce: nonce,
+              addFrame: addFrameCb,
+              removeFrame: removeFrameCb
+            }
+          );
         });
-      });
     },
     btPostCreditCard: function(creditCardData, cb, cbError) {
       notification.show(null, null, 'booking.payment.getting-saved');
@@ -59,7 +106,6 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
             function () {
               if (typeof cb == 'function') cb(data.payment_method);
-              notification.show(success, null, 'toasts.add-payment-success');
             },
             function (error) {
               if (typeof cbError == 'function') cbError();
