@@ -401,7 +401,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride community and join in on the fun!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -425,7 +425,7 @@
       },
       "depart": {
         "meta-title": "Rent a road bike for the Grand Départ on listnride",
-        "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community."
+        "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride community."
       },
       "supercross-munich": {
         "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
@@ -533,21 +533,21 @@
     },
     "press": {
       "meta-title": "listnride press",
-      "meta-description": "We love bike sharing. And we’ll gladly answer all your questions."
+      "meta-description": "We love bike rentals. And we’ll gladly answer all your questions."
     },
     "invest": {
-      "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+      "meta-title": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike rental community.",
       "meta-description": "Visit Seedrs to learn more about investing in listnride."
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Website Terms & Conditions",
-      "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-description": "The Terms and Conditions of listnride apply to the use of the online platform."
     },
     "trust-and-safety": {
       "meta-title": "Bicycle rental with insurance"
     },
     "how-it-works": {
-      "meta-title": "Bike sharing made easy",
+      "meta-title": "Bike rental made easy",
       "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!"
     },
     "jobs": {
@@ -564,7 +564,7 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride applies to the use of the online platform.",
+      "meta-description": "The Privacy Policy of listnride applies to the use of the online platform.",
       "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
@@ -655,7 +655,7 @@
       "choose-duration": "Choose your rental duration",
       "pickup-time": "Pickup time",
       "return-time": "Return time",
-      "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike sharing community."
+      "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike rental platform."
     }
   },
   "toasts": {
@@ -768,9 +768,9 @@
     "private-tip": "This information will not be open to the public",
     "public-tip": "This information will be visible on your profile page",
     "1": {
-      "text1": "Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.",
+      "text1": "Welcome to our passionate bike rental platform, featuring lots of bikes and bike enthusiasts all over the world.",
       "text-invited": "As you've got invited by a friend, we've just put a voucher in your account. It gets redeemed automatically for your first rental!",
-      "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority. We therefore kindly ask you to verify your profile through a few simple steps. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
+      "text2": "We're a close-knit community, so the trust and safety of you and the other users have highest priority. We therefore kindly ask you to verify your profile through a few simple steps. The more information you enter, the higher are chances for your rental requests to be accepted."
     },
     "2": {
       "title": "Upload your profile picture",
@@ -1293,11 +1293,11 @@
     },
     "search-section": {
       "header": "Where would you like to go?",
-      "subheader": "listnride’s bike sharing service is becoming available in more and more locations."
+      "subheader": "listnride’s bike rental service is becoming available in more and more locations."
     },
     "testmonials-section": {
       "header": "What do our riders say about us?",
-      "subheader": "More and more people are discovering the benefits of bike sharing via listnride. Check out some of their testimonials:"
+      "subheader": "More and more people are discovering the benefits of bike rental via listnride. Check out some of their testimonials:"
     }
   },
   "list-a-bike": {
@@ -1317,7 +1317,7 @@
       "header": "Safety first!",
       "subheader": "listnride has your back.",
       "precautions-title": "We take the necessary precautions.",
-      "precautions-content": "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike sharing scene.",
+      "precautions-content": "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike rental scene.",
       "control-title": "You stay in control.",
       "control-content": "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment.",
       "covered-title": "You're covered.",
@@ -1332,7 +1332,7 @@
     },
     "testmonials-section": {
       "header": "Renting out bikes: What do our listers say about us?",
-      "subheader": "Many people have already become a sharing part of our listnride community. Read about their personal experiences:"
+      "subheader": "Many people have already become a part of our listnride community. Read about their personal experiences:"
     }
   },
   "invoices": {
@@ -1346,7 +1346,7 @@
     "payout": "Payout",
     "you_paid": "You paid",
     "invoice": "Invoice",
-    "billing": "Billing",
+    "billing": "Invoices",
     "download-csv": "Download CSV",
     "download-pdf": "Download PDF",
     "no-rentals": "You had no rentals yet",
@@ -1358,11 +1358,11 @@
     "meta-title": "listnride | 10€ for you!",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
     "header": "sent you 10€",
-    "subheader": "Welcome to listnride, the Bike Sharing Community",
-    "subsubheader": "listnride is the bike sharing community that brings together cycling enthusiasts of all sorts. Members can rent out their own bikes via our website or app, or rent a bike that perfectly suits their style and needs.",
+    "subheader": "Welcome to listnride, the bike rental platform",
+    "subsubheader": "listnride is the bike rental platform that brings together cycling enthusiasts of all sorts. Members can rent out their own bikes via our website or app, or rent a bike that suits their style and needs.",
     "subsubsubheader": "You've been invited by {{ name }}. Sign up now and you'll get a 10€ voucher added to your account. It can be used for your next bike rental. ",
     "sign-up-get-voucher": "Sign up to get the Voucher",
-    "how-lnr-works": "Bike sharing without the hassle",
+    "how-lnr-works": "Bike rental without the hassle",
     "explanation-1-title": "1. Find and request",
     "explanation-1-description": "Find the right bike near you and request it.",
     "explanation-2-title": "2. Book and pick it up",
@@ -1377,7 +1377,7 @@
     "login": "Log in to get your invite link",
     "info-section": {
       "header": "Earn 10€ credit when a friend accepts your invite and rents a bike or lists one of their own.",
-      "subheader": "Are you enthusiastic about listnride and want to spread the word? Then invite your friends to become part of the listnride bike sharing community.",
+      "subheader": "Are you enthusiastic about listnride and want to spread the word? Then invite your friends to become part of the listnride community.",
       "invite-friends": "Invite friends",
       "community": "Help grow the community",
       "earn-credit": "Earn listnride credit"
@@ -1408,7 +1408,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} has invited you to join listnride!",
-      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!  Join listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose! Sign up and immediately receive a 10€ credit. {{voucher_url}} Do you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too! Have fun, and enjoy the ride!"
+      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!  Join listnride, the fastest growing bike rental platform, and get access to countless bikes for every purpose! Sign up and immediately receive a 10€ credit. {{voucher_url}} Do you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too! Have fun, and enjoy the ride!"
     }
   },
   "error-404": {
