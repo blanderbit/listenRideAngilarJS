@@ -557,6 +557,7 @@ angular.module('booking', [])
 
             return paymentHelper.authenticateThreeDSecure(
               booking.total.toFixed(2),
+              booking.user,
               function(err, iframe) {
                 my3DSContainer.appendChild(iframe);
                 document.body.appendChild(my3DSContainer);
@@ -593,7 +594,7 @@ angular.module('booking', [])
             var data = {
               user_id: $localStorage.userId,
               ride_id: booking.bikeId,
-              three_d_secure_nonce: nonce,
+              payment_method_nonce: nonce,
               start_date: startDate_utc.toISOString(),
               end_date: endDate_utc.toISOString(),
               instant: !!booking.shopBooking,

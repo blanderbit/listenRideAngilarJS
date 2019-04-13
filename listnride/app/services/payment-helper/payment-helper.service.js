@@ -33,6 +33,7 @@ function PaymentHelperController(ENV, api, authentication, notification) {
     },
     createThreeDSecure: function(btClient) {
       return braintree.threeDSecure.create({
+        version: 2,
         client: btClient
       });
     },
@@ -64,19 +65,35 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           function() { return self; }
         );
     },
-    authenticateThreeDSecure: function(amount, addFrameCb, removeFrameCb) {
+    authenticateThreeDSecure: function(amount, user, addFrameCb, removeFrameCb) {
       var self = this;
 
       return self.setupBraintreeClient()
         .then(self.fetchPaymentMethodNonce)
         .then(function(nonce) {
+          var location = user.locations.billing_address || user.locations.primary;
+
           return self.btThreeDSecure.verifyCard(
             {
               amount: amount,
               nonce: nonce,
+              additionalInformation: {
+                billingGivenName: user.firstName,
+                billingSurname: user.lastName,
+                billingPhoneNumber: user.pretty_phone_number,
+                billingAddress: {
+                  streetAddress: location.street,
+                  locality: location.city,
+                  countryCodeAlpha2: location.alpha2_country_code
+                },
+                email: user.email
+              },
               addFrame: addFrameCb,
-              removeFrame: removeFrameCb
-            }
+              removeFrame: removeFrameCb,
+              onLookupComplete: function(data, next) {
+                next();
+              }
+           }
           );
         });
     },
