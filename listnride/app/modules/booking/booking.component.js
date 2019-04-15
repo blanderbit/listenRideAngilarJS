@@ -60,7 +60,7 @@ angular.module('booking', [])
           booking.getHumanReadableSize = getHumanReadableSize;
 
           // INVOCATIONS
-          paymentHelper.setupBraintreeClient();
+          paymentHelper.setupBraintreeClient(onSuccessPaymentValidation);
           getBikeData();
 
           // After material tabs inited
@@ -352,10 +352,6 @@ angular.module('booking', [])
           paymentHelper.btPostCreditCard(booking.creditCardData, onSuccessPaymentValidation);
         };
 
-        booking.openPaypal = function() {
-          paymentHelper.btPostPaypal(onSuccessPaymentValidation);
-        };
-
         function savePaymentOption() {
           if (booking.paymentMethod === 'current') {
             booking.nextTab();
@@ -575,8 +571,8 @@ angular.module('booking', [])
         }
 
         booking.book = function () {
-          booking.inProcess = true;
           $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
+          booking.inProcess = true;
 
           getThreeDSecureNonce().then(function(nonce) {
             var startDate = booking.startDate;
