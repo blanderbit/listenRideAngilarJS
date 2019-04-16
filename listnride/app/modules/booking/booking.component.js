@@ -7,11 +7,11 @@ angular.module('booking', [])
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
     controller: [
-      '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
+      '$q', '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
       '$timeout', '$analytics', '$translate', '$filter', 'authentication',
       'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeCluster',
        function BookingController(
-        $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
+        $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
         $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeCluster) {
         var booking = this;
 
@@ -58,6 +58,7 @@ angular.module('booking', [])
           booking.savePaymentOption = savePaymentOption;
           booking.sendCode = sendCode;
           booking.getHumanReadableSize = getHumanReadableSize;
+          booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
 
           // INVOCATIONS
           paymentHelper.setupBraintreeClient();
@@ -120,6 +121,10 @@ angular.module('booking', [])
               $state.go('home');
             }
           );
+        }
+
+        function isCreditCardPayment() {
+          return booking.user.payment_method.payment_type === 'credit-card';
         }
 
         function getLister() {
@@ -348,10 +353,6 @@ angular.module('booking', [])
           paymentHelper.btPostCreditCard(booking.creditCardData, onSuccessPaymentValidation);
         };
 
-        booking.openPaypal = function() {
-          paymentHelper.btPostPaypal(onSuccessPaymentValidation);
-        };
-
         function savePaymentOption() {
           if (booking.paymentMethod === 'current') {
             booking.nextTab();
@@ -547,46 +548,72 @@ angular.module('booking', [])
           }
         };
 
+        function getThreeDSecureNonce() {
+          if (isCreditCardPayment()) {
+            var my3DSContainer = document.createElement('div');
+
+            return paymentHelper.authenticateThreeDSecure(
+              booking.total.toFixed(2),
+              booking.user,
+              function(err, iframe) {
+                my3DSContainer.appendChild(iframe);
+                document.body.appendChild(my3DSContainer);
+              },
+              function() {
+                document.body.removeChild(my3DSContainer);
+              }
+            ).then(function(response) {
+              return response.nonce;
+            });
+          }
+          else {
+            return $q.when(null);
+          }
+        }
+
         booking.book = function () {
           $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
           booking.inProcess = true;
-          var startDate = booking.startDate;
-          var endDate = booking.endDate;
 
-          // The local timezone-dependent dates get converted into neutral,
-          // non-timezone utc dates, preserving the actually selected date values
-          var startDate_utc = new Date(
-            Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
-          );
-          var endDate_utc = new Date(
-            Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
-          );
+          getThreeDSecureNonce().then(function(nonce) {
+            var startDate = booking.startDate;
+            var endDate = booking.endDate;
 
-          var data = {
-            user_id: $localStorage.userId,
-            ride_id: booking.bikeId,
-            start_date: startDate_utc.toISOString(),
-            end_date: endDate_utc.toISOString(),
-            instant: !!booking.shopBooking,
-            insurance: {
-              premium: booking.isPremium
-            }
-          };
+            // The local timezone-dependent dates get converted into neutral,
+            // non-timezone utc dates, preserving the actually selected date values
+            var startDate_utc = new Date(
+              Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
+            );
+            var endDate_utc = new Date(
+              Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
+            );
 
-
-          api.post('/requests', data).then(
-            function(success) {
-              $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
-              if (!booking.shopBooking) {
-                $state.go('requests', {requestId: success.data.id});
+            var data = {
+              user_id: $localStorage.userId,
+              ride_id: booking.bikeId,
+              payment_method_nonce: nonce,
+              start_date: startDate_utc.toISOString(),
+              end_date: endDate_utc.toISOString(),
+              instant: !!booking.shopBooking,
+              insurance: {
+                premium: booking.isPremium
               }
-              booking.booked = true;
-            },
-            function(error) {
-              booking.inProcess = false;
-              notification.show(error, 'error');
-            }
-          );
+            };
+
+            api.post('/requests', data).then(
+              function(success) {
+                $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+                if (!booking.shopBooking) {
+                  $state.go('requests', {requestId: success.data.id});
+                }
+                booking.booked = true;
+              },
+              function(error) {
+                booking.inProcess = false;
+                notification.show(error, 'error');
+              }
+            );
+          });
         };
       }
     ]

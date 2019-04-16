@@ -80,12 +80,7 @@
             <ng-form name="settingsAccount.parent.paymentForm">
               <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'paypal'">
                 <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
-                <md-button
-                  class="md-raised md-primary lnr-m-0"
-                  ng-click="settingsAccount.parent.openPaypal()"
-                >
-                  {{ 'booking.payment.pay-paypal' | translate }}
-                </md-button>
+                <paypal-checkout-button on-success="settingsAccount.parent.onSuccessPaymentUpdate"></paypal-checkout-button>
               </div>
               <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'credit-card'">
                 <credit-card-input data="settingsAccount.parent.creditCardData"></credit-card-input>

@@ -64,13 +64,7 @@
               >
             </div>
           </div>
-          <md-button
-            class="md-raised md-primary payment__paypal-btn"
-            ng-hide="payment.parent.paymentMethod != 2"
-            ng-click="payment.parent.openPaypal()"
-          >
-            {{ 'booking.payment.pay-paypal' | translate }}
-          </md-button>
+          <paypal-checkout-button ng-hide="payment.parent.paymentMethod != 2" on-success="payment.parent.onSuccessPaymentValidation"></paypal-checkout-button>
           <!-- END PAYPAL METHOD -->
           <md-divider></md-divider>
           <!-- CURRENT PAYMENT METHOD -->
