@@ -37,14 +37,18 @@ angular.module('listnride')
         })
       },
 
-      sizeOptions: function (withAllSizesLabel, withKidsSizes) {
+      sizeOptions: function (withAllSizesLabel, withKidsSizes, withUnisize) {
         var self = this;
 
         return $translate(this.sharedTranslationKeys()).then(
           function (translations) {
-            var sizes = [
-              { value: 0, label: translations['search.unisize']}
-            ];
+
+            var sizes = [];
+
+            // show 'Unisize' option until onlyNumarableSizes is false
+            if (withUnisize !== null) {
+              sizes.unshift({ value: 0, label: translations['search.unisize']});
+            }
 
             // show 'all sizes' option if used for search purposes
             if (withAllSizesLabel) {
