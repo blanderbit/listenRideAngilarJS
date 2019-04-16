@@ -71,14 +71,15 @@ angular.module('bike').component('calendar', {
       }
 
       function updateState (params) {
-        if(!calendar.isOnSlotableEvent) {
-          $state.go(
-            $state.current, params
-          );
-        }
+        //calendar.isOnSlotableEvent checks if bike related to event 8bar-clubride
+        //TODO update it after new logic for event bike will be implemented
+        if (calendar.isOnSlotableEvent) return;
+        $state.go(
+          $state.current, params
+        );
       }
 
-      function setInitialDateTime(startDate, endDate) {
+      function setDateTime(startDate, endDate) {
         startDate.setHours(calendar.startTime, 0, 0, 0);
         endDate.setHours(calendar.endTime, 0, 0, 0);
         setInitHours();
@@ -92,7 +93,7 @@ angular.module('bike').component('calendar', {
         if(calendar.startDate) {
           calendar.endDate = new Date(moment(calendar.startDate).add($state.params.duration, 'days'));
           calendar.defaultDateRange = (moment(calendar.startDate).format('YYYY-MM-DD') + ' to ' + moment(calendar.endDate).format('YYYY-MM-DD'));
-          setInitialDateTime(calendar.startDate, calendar.endDate);
+          setDateTime(calendar.startDate, calendar.endDate);
         }
       }
 
@@ -123,7 +124,7 @@ angular.module('bike').component('calendar', {
               $scope.$apply(function () {
                 calendar.startDate = start;
                 calendar.endDate = end;
-                setInitialDateTime(calendar.startDate, calendar.endDate);
+                setDateTime(calendar.startDate, calendar.endDate);
               });
             });
           }
