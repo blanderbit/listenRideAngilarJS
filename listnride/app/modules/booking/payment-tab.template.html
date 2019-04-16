@@ -64,11 +64,7 @@
               >
             </div>
           </div>
-          <md-button
-            id="paypal-checkout"
-            ng-hide="payment.parent.paymentMethod != 2"
-          >
-          </md-button>
+          <paypal-checkout-button ng-hide="payment.parent.paymentMethod != 2" on-success="payment.parent.onSuccessPaymentValidation"></paypal-checkout-button>
           <!-- END PAYPAL METHOD -->
           <md-divider></md-divider>
           <!-- CURRENT PAYMENT METHOD -->

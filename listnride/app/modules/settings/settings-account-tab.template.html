@@ -1,4 +1,4 @@
-<md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column" md-on-select="settingsAccount.parent.setupBraintree()">
+<md-tab class="account" label="{{ 'settings.account' | translate }}" layout="column">
   <br>
   <div class="tab-content md-padding" layout="column" layout-align="space-between none" layout-padding layout="column">
 
@@ -78,10 +78,9 @@
               <md-radio-button value="paypal">{{ 'settings.paypal' | translate }}</md-radio-button>
             </md-radio-group>
             <ng-form name="settingsAccount.parent.paymentForm">
-              <div ng-show="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'paypal'">
+              <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'paypal'">
                 <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
-                <md-button id="paypal-checkout">
-                </md-button>
+                <paypal-checkout-button on-success="settingsAccount.parent.onSuccessPaymentUpdate"></paypal-checkout-button>
               </div>
               <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'credit-card'">
                 <credit-card-input data="settingsAccount.parent.creditCardData"></credit-card-input>

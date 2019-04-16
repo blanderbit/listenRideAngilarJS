@@ -58,9 +58,10 @@ angular.module('booking', [])
           booking.savePaymentOption = savePaymentOption;
           booking.sendCode = sendCode;
           booking.getHumanReadableSize = getHumanReadableSize;
+          booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
 
           // INVOCATIONS
-          paymentHelper.setupBraintreeClient(onSuccessPaymentValidation);
+          paymentHelper.setupBraintreeClient();
           getBikeData();
 
           // After material tabs inited

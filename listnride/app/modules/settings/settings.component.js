@@ -92,7 +92,6 @@ angular.module('settings',[])
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
         settings.updateNewsletter = updateNewsletter;
-        settings.setupBraintree = setupBraintree;
 
         // invocations
         userApi.getUserData().then(function (response) {
@@ -100,10 +99,6 @@ angular.module('settings',[])
           setUserData(response.data);
         });
       };
-
-      function setupBraintree() {
-        paymentHelper.setupBraintreeClient(onSuccessPaymentUpdate);
-      }
 
       function setUserData(data) {
         settings.user = data;
@@ -447,7 +442,7 @@ angular.module('settings',[])
       function tokenizeCard () {
         settings.paymentLoading = true;
         paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate, settings.onErrorPaymentUpdate);
-      };
+      }
 
       function onSuccessPaymentUpdate(data) {
         // reset form and data after success

@@ -33,6 +33,7 @@ angular.module('listnride', [
   'accessoriesFilter',
   'creditCardInput',
   'statusLabels',
+  'paypalCheckoutButton',
   /* app_core_end */
 
   /* app_extras_start */

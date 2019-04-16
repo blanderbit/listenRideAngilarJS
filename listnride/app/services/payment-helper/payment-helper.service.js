@@ -37,61 +37,7 @@ function PaymentHelperController(ENV, api, authentication, notification) {
         client: btClient
       });
     },
-    createPaypalClient: function(btClient, onPaypalSuccessPayment) {
-      var paypalClient;
-
-      return braintree.paypalCheckout.create({
-        client: btClient
-      }).then(function (clientInstance) {
-        paypalClient = clientInstance;
-        return clientInstance;
-      }).then(function (paypalCheckoutInstance) {
-
-
-        paypal.Button.render({
-          env: 'sandbox', // 'production' or 'sandbox'
-
-          payment: function () {
-            return paypalCheckoutInstance.createPayment({
-              flow: 'vault'
-            });
-          },
-
-          onAuthorize: function (data, actions) {
-            return paypalCheckoutInstance.tokenizePayment(data)
-              .then(function (payload) {
-                var data = {
-                  "payment_method": {
-                    "payment_method_nonce": payload.nonce,
-                    "email": payload.details.email,
-                    "payment_type": "paypal-account"
-                  }
-                };
-
-                api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
-                  function () {
-                    onPaypalSuccessPayment(data.payment_method);
-                  },
-                  function (error) {
-                    notification.show(error, 'error');
-                  }
-                );
-              });
-          },
-
-          onCancel: function (data) {
-            console.log('checkout.js payment cancelled', JSON.stringify(data, 0, 2));
-          },
-
-          onError: function (err) {
-            console.error('checkout.js error', err);
-          }
-        }, '#paypal-checkout');
-      }).then(function () {
-        return paypalClient;
-      });
-    },
-    setupBraintreeClient: function(onPaypalSuccessPayment) {
+    setupBraintreeClient: function() {
       var self = this;
 
       return self.fetchClientToken()
@@ -103,18 +49,11 @@ function PaymentHelperController(ENV, api, authentication, notification) {
         .then(self.createThreeDSecure)
         .then(function(threeDSecure) {
           self.btThreeDSecure = threeDSecure;
-
-          return self.createPaypalClient(self.btClient, onPaypalSuccessPayment);
+          return self.btThreeDSecure;
         })
-        .then(
-          function(ppClient) {
-            self.btPpInstance = ppClient;
-            return self;
-          },
-          function() {
-            return self;
-          }
-        );
+        .then(function() {
+          return self.btClient;
+        });
     },
     authenticateThreeDSecure: function(amount, user, addFrameCb, removeFrameCb) {
       var self = this;
@@ -196,6 +135,18 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           notification.show(null, null, 'shared.errors.unexpected-payment-type');
           return false;
       }
+    },
+    savePaypalPaymentMethod: function(payload) {
+      var data = {
+        "payment_method": {
+          "payment_method_nonce": payload.nonce,
+          "email": payload.details.email,
+          "payment_type": "paypal-account"
+        }
+      };
+
+      api.post('/users/' + authentication.userId() + '/payment_methods', data);
+      return data.payment_method;
     }
-  }
+  };
 }
