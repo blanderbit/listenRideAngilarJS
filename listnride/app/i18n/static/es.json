@@ -395,7 +395,9 @@
     "granfondo-bikedivision": {
       "title": "Alquila una bici de carretera para la Granfondo Bike Division",
       "description": "Dónde: <b>Peschiera del Garda</b>  | Qué:  <b>Granfondo Bike Division</b>  | Cuándo: <b>22.09.2019</b>",
-      "text": "La Granfondo Peschiera del Garda se llevó a cabo por primera vez en 2015 con gran éxito, y recientemente es conocido como la mejor Granfondo italiana. </br>\nDisfruta un día inolvidable, con más de 1000 participantes en un lugar pintoresco entre los paisajes montañosos del Lago de Garda, con un equipo experimentado y especializado. La próxima edición será la 5ª <a href=\"http://www.gfbikedivisionpeschiera.com/en/\" target=\"_blank\">Granfondo Bike Division Peschiera del Garda</a>, y tomará lugar el domingo 22 de septiembre de 2019, una carrera cada vez más emocionante gracias a la entrada del temido MURO DEL GARDA que sólo los más hábiles serán capaces de superar. Un evento diseñado y construido para los aficionados, nacido del deseo de combinar el ciclismo y el turismo sostenible. Un día dedicado a los valores del deporte para vivir entre la diversión, la pasión y el deseo de nuevos retos."
+      "text": "La Granfondo Peschiera del Garda se llevó a cabo por primera vez en 2015 con gran éxito, y recientemente es conocido como la mejor Granfondo italiana. </br>\nDisfruta un día inolvidable, con más de 1000 participantes en un lugar pintoresco entre los paisajes montañosos del Lago de Garda, con un equipo experimentado y especializado. La próxima edición será la 5ª <a href=\"http://www.gfbikedivisionpeschiera.com/en/\" target=\"_blank\">Granfondo Bike Division Peschiera del Garda</a>, y tomará lugar el domingo 22 de septiembre de 2019, una carrera cada vez más emocionante gracias a la entrada del temido MURO DEL GARDA que sólo los más hábiles serán capaces de superar. Un evento diseñado y construido para los aficionados, nacido del deseo de combinar el ciclismo y el turismo sostenible. Un día dedicado a los valores del deporte para vivir entre la diversión, la pasión y el deseo de nuevos retos.",
+      "meta-title": "Alquila una bici de carretera para la Granfondo Bike Division\n",
+      "meta-description": "La Granfondo Peschiera del Garda se llevó a cabo por primera vez en 2015 con gran éxito, y recientemente es conocido como la mejor Granfondo italiana. \nDisfruta un día inolvidable, con más de 1000 participantes en un lugar pintoresco entre los paisajes montañosos del Lago de Garda, con un equipo experimentado y especializado. La próxima edición será la 5ª <a href=\"http://www.gfbikedivisionpeschiera.com\">Granfondo Bike Division Peschiera del Garda</a>, y tomará lugar el domingo 22 de septiembre de 2019, una carrera cada vez más emocionante gracias a la entrada del temido MURO DEL GARDA que sólo los más hábiles serán capaces de superar. Un evento diseñado y construido para los aficionados, nacido del deseo de combinar el ciclismo y el turismo sostenible. Un día dedicado a los valores del deporte para vivir entre la diversión, la pasión y el deseo de nuevos retos."
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -660,6 +662,35 @@
       "faq-answer-8": "Yes. BZEN bikes have been tested by an independent and recognized institute in Germany. They are Certified EN-15194:2017 and fully compliant with the electrically power assisted bicycles European regulation.",
       "faq-question-9": "Is it true that the bikes are made in Europe?",
       "faq-answer-9": "Yes. BZEN is one of the very few bike brands that design, engineer and hand make its frames in Europe. The workshop is located in Silesia, Poland.We are proud at BZEN to make European bicycles. Not only the frames but also every electronic component is designed and manufacture in Europe.Because our bicycles are handcrafted in Europe, our engineers fully optimized the frame and each of the components to optimize their integration, enhance their performance and reduce the bike weight."
+    },
+    "cowboybikes": {
+      "title": "Dummy text here",
+      "description": "Dummy text here",
+      "item1-title": "Dummy text here",
+      "item2-title": "Dummy text here",
+      "item2-description": "Dummy text here",
+      "item3-title": "Dummy text here",
+      "item3-description": "Dummy text here",
+      "find-out-more": "Learn more about Cowboy bikes",
+      "order-online": "Dummy text here",
+      "faq-question-1": "Dummy text here",
+      "faq-answer-1": "Dummy text here",
+      "faq-question-2": "Dummy text here",
+      "faq-answer-2": "Dummy text here",
+      "faq-question-3": "Dummy text here",
+      "faq-answer-3": "Dummy text here",
+      "faq-question-4": "Dummy text here",
+      "faq-answer-4": "Dummy text here",
+      "faq-question-5": "Dummy text here",
+      "faq-answer-5": "Dummy text here",
+      "faq-question-6": "Dummy text here",
+      "faq-answer-6": "Dummy text here",
+      "faq-question-7": "Dummy text here",
+      "faq-answer-7": "Dummy text here",
+      "faq-question-8": "Dummy text here",
+      "faq-answer-8": "Dummy text here",
+      "faq-question-9": "Dummy text here",
+      "faq-answer-9": "Dummy text here"
     },
     "whyte": {
       "title": "Rent and test ride Whyte bikes in Berlin",

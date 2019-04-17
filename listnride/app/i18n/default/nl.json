@@ -38,6 +38,8 @@
     "please-select": "Ajb. selecteren",
     "errors": {
       "email-required": "Vul een geldig emailadres in",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Ongeldige betalingsmethode ",
       "email-not-valid": "Vul een geldig emailadres in",
       "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",

@@ -60,12 +60,11 @@ angular.module('booking', [])
           booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
 
           // INVOCATIONS
-          paymentHelper.setupBraintreeClient();
           getBikeData();
 
           // After material tabs inited
           $timeout(function () {
-            authentication.loggedIn() ? booking.reloadUser() : setFirstTab();
+            authentication.loggedIn() ? booking.reloadUser().then(function() { paymentHelper.setupBraintreeClient() }) : setFirstTab();
           }, 0);
 
         };
@@ -374,7 +373,7 @@ angular.module('booking', [])
         }
 
         booking.reloadUser = function() {
-          api.get('/users/' + $localStorage.userId).then(
+          return api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
               booking.user.firstName = success.data.first_name;

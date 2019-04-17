@@ -395,7 +395,9 @@
     "granfondo-bikedivision": {
       "title": "Noleggia la tua bici per la Granfondo Bike Division",
       "description": "Dove: <b>Peschiera del Garda</b> | cosa: <b>Granfondo Bike Division</b> | quando: <b>22.09.2019</b>",
-      "text": "Dopo aver partecipato alle principali Granfondo in Italia e all’estero, nel 2015 finalmente è nata la prima Granfondo interamente targata Bike Division. Un successo da subito con oltre 1000 partenti in una location suggestiva tra i paesaggi mozzafiato del Lago di Garda, uno staff esperto e specializzato, un percorso entusiasmante con un’area espositiva allestita in una cornice unica: tutto questo e molto di più sarà la 5° <a href=\"http://www.gfbikedivisionpeschiera.com/en/\" target=\"_blank\">Granfondo Bike Division Peschiera del Garda</a>, domenica 22 Settembre 2019 , una gara sempre più avvincente grazie anche allo spettacolare ingresso del temuto MURO DEL GARDA che solo i più abili riusciranno a superare. Un evento pensato e costruito per gli appassionati, nato dal desiderio di coniugare ciclismo e turismo sostenibile. Una giornata all’insegna dei valori dello sport da vivere tra divertimento, passione e voglia di nuove sfide"
+      "text": "Dopo aver partecipato alle principali Granfondo in Italia e all’estero, nel 2015 finalmente è nata la prima Granfondo interamente targata Bike Division. Un successo da subito con oltre 1000 partenti in una location suggestiva tra i paesaggi mozzafiato del Lago di Garda, uno staff esperto e specializzato, un percorso entusiasmante con un’area espositiva allestita in una cornice unica: tutto questo e molto di più sarà la 5° <a href=\"http://www.gfbikedivisionpeschiera.com/en/\" target=\"_blank\">Granfondo Bike Division Peschiera del Garda</a>, domenica 22 Settembre 2019 , una gara sempre più avvincente grazie anche allo spettacolare ingresso del temuto MURO DEL GARDA che solo i più abili riusciranno a superare. Un evento pensato e costruito per gli appassionati, nato dal desiderio di coniugare ciclismo e turismo sostenibile. Una giornata all’insegna dei valori dello sport da vivere tra divertimento, passione e voglia di nuove sfide",
+      "meta-title": "Noleggia la tua bici per la Granfondo Bike Division",
+      "meta-description": "Dopo aver partecipato alle principali Granfondo in Italia e all’estero, nel 2015 finalmente è nata la prima Granfondo interamente targata Bike Division. Un successo da subito con oltre 1000 partenti in una location suggestiva tra i paesaggi mozzafiato del Lago di Garda, uno staff esperto e specializzato, un percorso entusiasmante con un’area espositiva allestita in una cornice unica: tutto questo e molto di più sarà la 5° <a href=\"http://www.gfbikedivisionpeschiera.com\">Granfondo Bike Division Peschiera del Garda </a>, domenica 22 Settembre 2019 , una gara sempre più avvincente grazie anche allo spettacolare ingresso del temuto MURO DEL GARDA che solo i più abili riusciranno a superare. Un evento pensato e costruito per gli appassionati, nato dal desiderio di coniugare ciclismo e turismo sostenibile. Una giornata all’insegna dei valori dello sport da vivere tra divertimento, passione e voglia di nuove sfide"
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
@@ -660,6 +662,35 @@
       "faq-answer-8": "Yes. BZEN bikes have been tested by an independent and recognized institute in Germany. They are Certified EN-15194:2017 and fully compliant with the electrically power assisted bicycles European regulation.",
       "faq-question-9": "Is it true that the bikes are made in Europe?",
       "faq-answer-9": "Yes. BZEN is one of the very few bike brands that design, engineer and hand make its frames in Europe. The workshop is located in Silesia, Poland.We are proud at BZEN to make European bicycles. Not only the frames but also every electronic component is designed and manufacture in Europe.Because our bicycles are handcrafted in Europe, our engineers fully optimized the frame and each of the components to optimize their integration, enhance their performance and reduce the bike weight."
+    },
+    "cowboybikes": {
+      "title": "Dummy text here",
+      "description": "Dummy text here",
+      "item1-title": "Dummy text here",
+      "item2-title": "Dummy text here",
+      "item2-description": "Dummy text here",
+      "item3-title": "Dummy text here",
+      "item3-description": "Dummy text here",
+      "find-out-more": "Learn more about Cowboy bikes",
+      "order-online": "Dummy text here",
+      "faq-question-1": "Dummy text here",
+      "faq-answer-1": "Dummy text here",
+      "faq-question-2": "Dummy text here",
+      "faq-answer-2": "Dummy text here",
+      "faq-question-3": "Dummy text here",
+      "faq-answer-3": "Dummy text here",
+      "faq-question-4": "Dummy text here",
+      "faq-answer-4": "Dummy text here",
+      "faq-question-5": "Dummy text here",
+      "faq-answer-5": "Dummy text here",
+      "faq-question-6": "Dummy text here",
+      "faq-answer-6": "Dummy text here",
+      "faq-question-7": "Dummy text here",
+      "faq-answer-7": "Dummy text here",
+      "faq-question-8": "Dummy text here",
+      "faq-answer-8": "Dummy text here",
+      "faq-question-9": "Dummy text here",
+      "faq-answer-9": "Dummy text here"
     },
     "whyte": {
       "title": "Rent and test ride Whyte bikes in Berlin",
