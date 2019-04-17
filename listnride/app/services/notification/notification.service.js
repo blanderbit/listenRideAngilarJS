@@ -14,6 +14,7 @@ angular
 function notificationController($mdToast, $translate) {
  return {
   show: function (response, type, translateKey) {
+    var self = this;
     var type = type || 'success';
 
     if (translateKey) {
@@ -27,7 +28,7 @@ function notificationController($mdToast, $translate) {
 
       if (type === 'error' && response.data && response.data.errors && response.data.errors.length) {
         // TODO: Add multiply errors
-        return showToast(response.data.errors[0].detail)
+        return self.showToast(response.data.errors[0].detail)
       } else if (response.status != -1) {
         responseText = 'shared.notifications.'+ response.status
       } else {
@@ -39,20 +40,19 @@ function notificationController($mdToast, $translate) {
 
     function convertToKey(text) {
       $translate(text).then(function (success) {
-        showToast(success)
+        self.showToast(success)
       }, function (error) {
-        showToast(error)
+        self.showToast(error)
       });
     };
-
-    function showToast(text) {
-      $mdToast.show(
-        $mdToast.simple()
-          .textContent(text)
-          .hideDelay(4000)
-          .position('top center')
-      );
-    }
+  },
+  showToast: function (text) {
+    $mdToast.show(
+      $mdToast.simple()
+      .textContent(text)
+      .hideDelay(4000)
+      .position('top center')
+    );
   }
  }
 }

@@ -8,11 +8,11 @@ angular.module('booking', [])
     controllerAs: 'booking',
     controller: [
       '$q', '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
-      '$timeout', '$analytics', '$translate', '$filter', 'authentication',
+      '$timeout', '$analytics', '$translate', '$filter', '$mdDialog', 'authentication',
       'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeOptions', 'bikeCluster',
        function BookingController(
         $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster) {
+        $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster) {
         var booking = this;
 
         booking.$onInit = function () {
@@ -34,6 +34,7 @@ angular.module('booking', [])
           booking.startDate = $stateParams.startDate ? new Date($stateParams.startDate) : null;
           booking.endDate = $stateParams.endDate ? new Date($stateParams.endDate) : null;
           // default
+          booking.bookDisabled = false;
           booking.user = {};
           booking.bike = {};
           booking.phoneConfirmed = 'progress';
@@ -58,6 +59,7 @@ angular.module('booking', [])
           booking.savePaymentOption = savePaymentOption;
           booking.sendCode = sendCode;
           booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
+          booking.loggedIn = loggedIn;
 
           // INVOCATIONS
           getBikeData();
@@ -68,6 +70,10 @@ angular.module('booking', [])
           }, 0);
 
         };
+
+        function loggedIn() {
+          return authentication.loggedIn();
+        }
 
         function getBikeData() {
           api.get('/rides/' + booking.bikeId).then(
@@ -259,7 +265,7 @@ angular.module('booking', [])
             case 'sign-in': return false;
             case 'details': return !checkValidDetails();
             case 'payment': return !checkValidPayment();
-            case 'overview': return false;
+            case 'overview': return booking.bookDisabled;
           }
         };
 
@@ -543,21 +549,46 @@ angular.module('booking', [])
           }
         };
 
+        var authenticateThreeDSecureController = function () {
+          var self = this;
+        }
+
         function getThreeDSecureNonce() {
           if (isCreditCardPayment()) {
             var my3DSContainer = document.createElement('div');
+            booking.bookDisabled = true;
 
             return paymentHelper.authenticateThreeDSecure(
               booking.total.toFixed(2),
               booking.user,
               function(err, iframe) {
-                my3DSContainer.appendChild(iframe);
-                document.body.appendChild(my3DSContainer);
+                $mdDialog.show({
+                  controller: authenticateThreeDSecureController,
+                  controllerAs: 'threeDSecureDialog',
+                  template:
+                    '<md-dialog aria-label="List dialog">' +
+                    '  <md-dialog-content>' +
+                        '<div id="three-d-secure"></div>' +
+                        '</md-dialog-content>' +
+                    '</md-dialog>',
+                  parent: angular.element(document.body),
+                  targetEvent: event,
+                  openFrom: angular.element(document.body),
+                  closeTo: angular.element(document.body),
+                  clickOutsideToClose: true,
+                  fullscreen: true,
+                  escapeToClose: false,
+                  onComplete: function() {
+                    document.getElementById('three-d-secure').appendChild(iframe);
+                  }
+                });
               },
               function() {
-                document.body.removeChild(my3DSContainer);
+                $mdDialog.cancel();
+                booking.bookDisabled = false;
               }
             ).then(function(response) {
+              booking.bookDisabled = false;
               return response.nonce;
             });
           }

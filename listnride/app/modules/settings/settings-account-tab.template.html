@@ -78,11 +78,11 @@
               <md-radio-button value="paypal">{{ 'settings.paypal' | translate }}</md-radio-button>
             </md-radio-group>
             <ng-form name="settingsAccount.parent.paymentForm">
-              <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'paypal'">
+              <div ng-show="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'paypal'">
                 <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
                 <paypal-checkout-button on-success="settingsAccount.parent.onSuccessPaymentUpdate"></paypal-checkout-button>
               </div>
-              <div ng-if="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'credit-card'">
+              <div ng-show="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'credit-card'">
                 <credit-card-input data="settingsAccount.parent.creditCardData"></credit-card-input>
                 <md-button
                   class="md-raised md-primary lnr-m-0"
