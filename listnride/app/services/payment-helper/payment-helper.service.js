@@ -13,8 +13,8 @@ angular
 
 function PaymentHelperController(ENV, api, authentication, notification) {
   return {
-    btClient: '',
-    btPpInstance: '',
+    btClient: null,
+    btPpInstance: null,
     btThreeDSecure: null,
     fetchClientToken: function() {
       return api.get('/users/' + authentication.userId() + '/payment_methods/new').then(function(response) {
