@@ -1564,6 +1564,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'cowboybikes',
+        url: '/brands/cowboybikes',
+        template: '<cowboybikes></cowboybikes>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.cowboybikes.meta-title", "meta.brand-integration.cowboybikes.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.cowboybikes.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.cowboybikes.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* CITY_PAGES */
       /* ------------------------------------ */
