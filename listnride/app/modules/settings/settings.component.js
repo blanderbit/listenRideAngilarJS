@@ -98,6 +98,8 @@ angular.module('settings',[])
           settings.loaded = true;
           setUserData(response.data);
         });
+        // init braintree client
+        paymentHelper.setupBraintreeClient();
       };
 
       function setUserData(data) {
