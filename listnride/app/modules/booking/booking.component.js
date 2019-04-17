@@ -58,6 +58,7 @@ angular.module('booking', [])
           booking.savePaymentOption = savePaymentOption;
           booking.sendCode = sendCode;
           booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
+          booking.loggedIn = loggedIn;
 
           // INVOCATIONS
           getBikeData();
@@ -68,6 +69,10 @@ angular.module('booking', [])
           }, 0);
 
         };
+
+        function loggedIn() {
+          return authentication.loggedIn();
+        }
 
         function getBikeData() {
           api.get('/rides/' + booking.bikeId).then(
