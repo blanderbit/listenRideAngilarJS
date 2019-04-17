@@ -16,6 +16,7 @@ angular.module('cardgrid', []).component('cardgrid', {
     location: '<',
     categorizedBikes: '=',
     titles: '=',
+    urlParams: '<'
   },
   controller: [
       '$translate',

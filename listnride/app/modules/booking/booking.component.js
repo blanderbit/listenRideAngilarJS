@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$q', '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
       '$timeout', '$analytics', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeCluster',
+      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeOptions', 'bikeCluster',
        function BookingController(
         $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeCluster) {
+        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster) {
         var booking = this;
 
         booking.$onInit = function () {
@@ -57,7 +57,6 @@ angular.module('booking', [])
           booking.authentication = authentication;
           booking.savePaymentOption = savePaymentOption;
           booking.sendCode = sendCode;
-          booking.getHumanReadableSize = getHumanReadableSize;
           booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
 
           // INVOCATIONS
@@ -78,6 +77,7 @@ angular.module('booking', [])
               booking.coverageTotal = booking.bike.coverage_total || 0;
               booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
               booking.pickedBikeSize = $state.params.size ? $state.params.size : booking.bike.size;
+              booking.humanReadableSize = bikeOptions.getHumanReadableSize(booking.pickedBikeSize);
               booking.prices = booking.bike.prices;
               getLister();
               updatePrices();
@@ -174,10 +174,6 @@ angular.module('booking', [])
             { notify: false }
           );
         };
-
-        function getHumanReadableSize(currentBikeSize) {
-          return currentBikeSize === 0 ? $translate.instant("search.unisize") : currentBikeSize + " - " + (parseInt(currentBikeSize) + 10) + "cm";
-        }
 
         // ===============================
         // >>>> START BOOKING CALENDAR TAB

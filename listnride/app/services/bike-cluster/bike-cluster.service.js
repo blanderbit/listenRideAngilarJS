@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('listnride')
-    .factory('bikeCluster', ['api', 'date', 'bikeOptions', '$rootScope', function (api, date, bikeOptions, $rootScope) {
+    .factory('bikeCluster', ['api', 'date', 'bikeOptions', function (api, date, bikeOptions) {
       return {
         getSizeTranslations: function (sizes) {
           bikeOptions.sizeOptions(false, true).then(function (resolve) {

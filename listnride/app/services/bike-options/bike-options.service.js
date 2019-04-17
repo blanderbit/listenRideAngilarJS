@@ -85,6 +85,11 @@ angular.module('listnride')
         ];
       },
 
+      getHumanReadableSize: function (bikeSize) {
+        bikeSize = parseInt(bikeSize);
+        return bikeSize === 0 ? $translate.instant("search.unisize") : bikeSize + " - " + (bikeSize + 10) + " cm";
+      },
+
       // All categories and subcategories keys
       categoriesTranslationKeys: function () {
         return [
