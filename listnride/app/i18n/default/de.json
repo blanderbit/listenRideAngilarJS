@@ -38,6 +38,8 @@
     "please-select": "Bitte auswählen",
     "errors": {
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Zahlungsart nicht gültig",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
       "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",

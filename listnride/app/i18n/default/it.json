@@ -38,6 +38,8 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Tipo di pagamento non previsto",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
