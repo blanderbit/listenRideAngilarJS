@@ -38,6 +38,8 @@
     "please-select": "Veuillez choisir",
     "errors": {
       "email-required": "Veuillez entrer votre adresse email",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Type de paiement non valide",
       "email-not-valid": "Veuillez entrer votre adresse email",
       "phone-not-valid": "S'il vous plaît entrer un numéro de téléphone valide",
