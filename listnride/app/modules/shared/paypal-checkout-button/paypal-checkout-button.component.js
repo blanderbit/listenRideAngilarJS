@@ -31,7 +31,15 @@ angular
             notification.show(null, null, 'shared.errors.payment-paypal-error');
             // for developers
             console.error('checkout.js error', err);
-          }
+          },
+          locale: 'en_US',
+          style: {
+            shape: 'rect',
+            color: 'blue',
+            size: 'medium',
+            label: 'paypal',
+            tagline: 'false'
+          },
         }, buttonId);
       });
     }
