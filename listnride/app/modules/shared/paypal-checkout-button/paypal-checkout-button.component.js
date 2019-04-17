@@ -2,7 +2,7 @@
 
 angular
   .module('paypalCheckoutButton', [])
-  .directive('paypalCheckoutButton', ['paymentHelper', 'ENV', function(paymentHelper, ENV) {
+  .directive('paypalCheckoutButton', ['paymentHelper', 'ENV', 'notification', function (paymentHelper, ENV, notification) {
 
     function initPaypalCheckoutButton($scope, btClient, buttonId) {
       return braintree.paypalCheckout.create({
@@ -24,10 +24,12 @@ angular
           },
 
           onCancel: function (data) {
-            console.log('checkout.js payment cancelled', JSON.stringify(data, 0, 2));
+            notification.show(null, null, 'shared.errors.payment-cancelled');
           },
 
           onError: function (err) {
+            notification.show(null, null, 'shared.errors.payment-paypal-error');
+            // for developers
             console.error('checkout.js error', err);
           }
         }, buttonId);
