@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Leer más",
+    "label_new": "¿Nuevo",
     "event-bikes-will-be-soon": "Las bicis para este evento estarán pronto disponibles.",
     "for-count-hours": "for {{hoursSlot}} hours",
     "rental-date": "Rental date",
@@ -38,6 +39,8 @@
     "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
+      "payment-cancelled": "Pago cancelado",
+      "payment-paypal-error": "Lo sentimos, tu pago de PayPal falló",
       "unexpected-payment-type": "Tipo de pago inesperado",
       "email-not-valid": "Por favor, introduce una dirección de correo electrónico válida",
       "phone-not-valid": "Por favor ingresa un número de teléfono válido",
@@ -368,9 +371,9 @@
     },
     "seo": {
       "city-title": "Alquila la bicicleta perfecta en {{location}} | listnride",
-      "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
+      "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
       "category-title": "Alquila una {{category}} bici en {{location}} | listnride",
-      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
+      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
     },
     "business-community": {
       "meta-title": "La comunidad empresarial de listnride",
@@ -441,6 +444,10 @@
       "ampler": {
         "meta-title": "Programa de prueba de bicicleta eléctrica",
         "meta-descr": "Pruebe montar una e-bike hoy! Las ebikes de Ampler están disponibles en listnride. Alquile uno en Amsterdam, Berlín, Düsseldorf, Munich o Zurich."
+      },
+      "cowboybikes": {
+        "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
+        "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
       },
       "urwahn": {
         "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
@@ -873,7 +880,7 @@
     "insurance-bike-assist": "Certificado de seguro para la asistencia de la bicicleta"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} de {{user.city}} le gustaría alquilar su <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>Número de la Bicicleta: {{ride.bicycle_number}}.<br>Bicicleta: {{ride.name}}.<br>Fecha: {{timespan}}. <br>Tamaño del marco: {{ride.frame_size? ride.frame_size: 'no especificado'}}. <br><br>Por favor, acepta o rechaza la solicitud, y discute más detalles utilizando el chat.",
+    "1": "{{user.first_name}} {{user.last_name}} de {{user.city}} le gustaría alquilar su <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>Número de la Bicicleta: {{ride.bicycle_number}}.<br>Bicicleta: {{ride.name}}.<br>Fecha: {{timespan_short}}. <br>Tamaño del marco: {{ride.frame_size? ride.frame_size: 'no especificado'}}. <br><br>Por favor, acepta o rechaza la solicitud, y discute más detalles utilizando el chat.",
     "11": "Su reservación fue cancelada.",
     "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br>\nNombre: {{user.first_name}}{{user.last_name}}\n<br>\nTeléfono: {{user.pretty_phone_number}}\n<br>Dirección: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}},{{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Gracias por confirmar la recuperación de tu bicicleta y calificar {{user.first_name}}. El alquiler fue un éxito y el dinero se transferirá a la cuenta bancaria que proporcionó durante los siguientes 7 días hábiles. <br><br>En caso de alguna duda o sugerencia, estaremos encantados de recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
@@ -886,7 +893,7 @@
     "11": "La reserva de su bicicleta fue cancelada.",
     "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "¿Tuviste una gran experiencia con la bicicleta que alquilaste de {{lister.first_name}}? Comparte tu experiencia dejando una breve reseña. Esto ayudará a los futuros corredores a comprender mejor qué esperar.",
-    "6": "Gracias por la valoración, el alquiler se realizó con éxito.",
+    "7": "Gracias por la valoración, el alquiler se realizó con éxito.",
     "8": "Lamentablemente, el anunciante no pudo aceptar tu solicitud, pero puedes solicitar otras bicis estupendas.",
     "9": "Cancelaste la solicitud, por favor dile al anunciante por qué no pudiste confirmar la reserva.",
     "10": "Se canceló la solicitud."
@@ -1051,7 +1058,7 @@
       "special": "Especial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Bici de carretera y de turismo",
+      "road": "Bici de carretera",
       "transport": "Transporte"
     },
     "details": {

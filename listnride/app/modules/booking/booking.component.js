@@ -7,12 +7,12 @@ angular.module('booking', [])
     templateUrl: 'app/modules/booking/booking.template.html',
     controllerAs: 'booking',
     controller: [
-      '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
-      '$timeout', '$analytics', '$translate', '$filter', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeCluster',
+      '$q', '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
+      '$timeout', '$analytics', '$translate', '$filter', '$mdDialog', 'authentication',
+      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeOptions', 'bikeCluster',
        function BookingController(
-        $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-        $translate, $filter, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeCluster) {
+        $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
+        $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster) {
         var booking = this;
 
         booking.$onInit = function () {
@@ -34,6 +34,7 @@ angular.module('booking', [])
           booking.startDate = $stateParams.startDate ? new Date($stateParams.startDate) : null;
           booking.endDate = $stateParams.endDate ? new Date($stateParams.endDate) : null;
           // default
+          booking.bookDisabled = false;
           booking.user = {};
           booking.bike = {};
           booking.phoneConfirmed = 'progress';
@@ -57,18 +58,22 @@ angular.module('booking', [])
           booking.authentication = authentication;
           booking.savePaymentOption = savePaymentOption;
           booking.sendCode = sendCode;
-          booking.getHumanReadableSize = getHumanReadableSize;
+          booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
+          booking.loggedIn = loggedIn;
 
           // INVOCATIONS
-          paymentHelper.setupBraintreeClient();
           getBikeData();
 
           // After material tabs inited
           $timeout(function () {
-            authentication.loggedIn() ? booking.reloadUser() : setFirstTab();
+            authentication.loggedIn() ? booking.reloadUser().then(function() { paymentHelper.setupBraintreeClient() }) : setFirstTab();
           }, 0);
 
         };
+
+        function loggedIn() {
+          return authentication.loggedIn();
+        }
 
         function getBikeData() {
           api.get('/rides/' + booking.bikeId).then(
@@ -77,6 +82,7 @@ angular.module('booking', [])
               booking.coverageTotal = booking.bike.coverage_total || 0;
               booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
               booking.pickedBikeSize = $state.params.size ? $state.params.size : booking.bike.size;
+              booking.humanReadableSize = bikeOptions.getHumanReadableSize(booking.pickedBikeSize);
               booking.prices = booking.bike.prices;
               getLister();
               updatePrices();
@@ -120,6 +126,10 @@ angular.module('booking', [])
               $state.go('home');
             }
           );
+        }
+
+        function isCreditCardPayment() {
+          return booking.user.payment_method.payment_type === 'credit-card';
         }
 
         function getLister() {
@@ -169,10 +179,6 @@ angular.module('booking', [])
             { notify: false }
           );
         };
-
-        function getHumanReadableSize(currentBikeSize) {
-          return currentBikeSize === 0 ? $translate.instant("search.unisize") : currentBikeSize + " - " + (parseInt(currentBikeSize) + 10) + "cm";
-        }
 
         // ===============================
         // >>>> START BOOKING CALENDAR TAB
@@ -259,7 +265,7 @@ angular.module('booking', [])
             case 'sign-in': return false;
             case 'details': return !checkValidDetails();
             case 'payment': return !checkValidPayment();
-            case 'overview': return false;
+            case 'overview': return booking.bookDisabled;
           }
         };
 
@@ -334,8 +340,9 @@ angular.module('booking', [])
           };
           api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
-              booking.processing = false;
-              booking.nextTab();
+              booking.reloadUser().then(function () {
+                booking.processing = false;
+              });
             },
             function (error) {
               booking.processing = false;
@@ -346,10 +353,6 @@ angular.module('booking', [])
 
         booking.tokenizeCard = function() {
           paymentHelper.btPostCreditCard(booking.creditCardData, onSuccessPaymentValidation);
-        };
-
-        booking.openPaypal = function() {
-          paymentHelper.btPostPaypal(onSuccessPaymentValidation);
         };
 
         function savePaymentOption() {
@@ -377,7 +380,7 @@ angular.module('booking', [])
         }
 
         booking.reloadUser = function() {
-          api.get('/users/' + $localStorage.userId).then(
+          return api.get('/users/' + $localStorage.userId).then(
             function (success) {
               booking.user = success.data;
               booking.user.firstName = success.data.first_name;
@@ -547,46 +550,100 @@ angular.module('booking', [])
           }
         };
 
+        var authenticateThreeDSecureController = function () {
+          var self = this;
+        }
+
+        function getThreeDSecureNonce() {
+          if (isCreditCardPayment()) {
+            var my3DSContainer = document.createElement('div');
+            booking.bookDisabled = true;
+
+            return paymentHelper.authenticateThreeDSecure(
+              booking.total.toFixed(2),
+              booking.user,
+              function(err, iframe) {
+                $mdDialog.show({
+                  controller: authenticateThreeDSecureController,
+                  controllerAs: 'threeDSecureDialog',
+                  template:
+                    '<md-dialog aria-label="List dialog">' +
+                    '  <md-dialog-content>' +
+                        '<div id="three-d-secure"></div>' +
+                        '</md-dialog-content>' +
+                    '</md-dialog>',
+                  parent: angular.element(document.body),
+                  targetEvent: event,
+                  openFrom: angular.element(document.body),
+                  closeTo: angular.element(document.body),
+                  clickOutsideToClose: true,
+                  fullscreen: true,
+                  escapeToClose: false,
+                  onComplete: function() {
+                    document.getElementById('three-d-secure').appendChild(iframe);
+                  },
+                  onRemoving: function() {
+                    booking.bookDisabled = false;
+                  }
+                });
+              },
+              function() {
+                $mdDialog.cancel();
+                booking.bookDisabled = false;
+              }
+            ).then(function(response) {
+              booking.bookDisabled = false;
+              return response.nonce;
+            });
+          }
+          else {
+            return $q.when(null);
+          }
+        }
+
         booking.book = function () {
           $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
           booking.inProcess = true;
-          var startDate = booking.startDate;
-          var endDate = booking.endDate;
 
-          // The local timezone-dependent dates get converted into neutral,
-          // non-timezone utc dates, preserving the actually selected date values
-          var startDate_utc = new Date(
-            Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
-          );
-          var endDate_utc = new Date(
-            Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
-          );
+          getThreeDSecureNonce().then(function(nonce) {
+            var startDate = booking.startDate;
+            var endDate = booking.endDate;
 
-          var data = {
-            user_id: $localStorage.userId,
-            ride_id: booking.bikeId,
-            start_date: startDate_utc.toISOString(),
-            end_date: endDate_utc.toISOString(),
-            instant: !!booking.shopBooking,
-            insurance: {
-              premium: booking.isPremium
-            }
-          };
+            // The local timezone-dependent dates get converted into neutral,
+            // non-timezone utc dates, preserving the actually selected date values
+            var startDate_utc = new Date(
+              Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
+            );
+            var endDate_utc = new Date(
+              Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
+            );
 
-
-          api.post('/requests', data).then(
-            function(success) {
-              $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
-              if (!booking.shopBooking) {
-                $state.go('requests', {requestId: success.data.id});
+            var data = {
+              user_id: $localStorage.userId,
+              ride_id: booking.bikeId,
+              payment_method_nonce: nonce,
+              start_date: startDate_utc.toISOString(),
+              end_date: endDate_utc.toISOString(),
+              instant: !!booking.shopBooking,
+              insurance: {
+                premium: booking.isPremium
               }
-              booking.booked = true;
-            },
-            function(error) {
-              booking.inProcess = false;
-              notification.show(error, 'error');
-            }
-          );
+            };
+
+            api.post('/requests', data).then(
+              function(success) {
+                $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+                if (!booking.shopBooking) {
+                  $state.go('requests', {requestId: success.data.id});
+                }
+                booking.booked = true;
+              },
+              function(error) {
+                booking.inProcess = false;
+                notification.show(error, 'error');
+              }
+            );
+          });
         };
       }
     ]

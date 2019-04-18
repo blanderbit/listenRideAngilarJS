@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "label_new": "Nuovo",
     "event-bikes-will-be-soon": "Le biciclette per questo evento saranno presto disponibili",
     "for-count-hours": "for {{hoursSlot}} hours",
     "rental-date": "Rental date",
@@ -38,6 +39,8 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Tipo di pagamento non previsto",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
@@ -438,6 +441,10 @@
       "ampler": {
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+      },
+      "cowboybikes": {
+        "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
+        "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
       },
       "urwahn": {
         "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
@@ -869,7 +876,7 @@
     "insurance-bike-assist": "Certificato di assicurazione Bike Assist"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} da {{user.city}}vorrebbe noleggiare la tua  <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>Bike ID: {{ride.bicycle_number}}<br>Taglia bici: {{ride.frame_size? ride.frame_size:. 'non specificata'}} <br>Periodo: {{timespan}}<br><br><br>Si prega di accettare la prenotazione e concordare ulteriori dettagli utilizzando la chat qui sotto. Se non è possibile, si prega di respingere.",
+    "1": "{{user.first_name}} {{user.last_name}} da {{user.city}} vorrebbe noleggiare la tua <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}.<br>Taglia bici: {{ride.frame_size ? ride.frame_size: 'non specificata'}}.<br>Periodo: {{timespan_short}}.<br><br><br>Si prega di accettare la prenotazione e concordare ulteriori dettagli utilizzando la chat qui sotto. Se non è possibile, si prega di respingere.",
     "11": "La prenotazione è stata cancellata.",
     "3": "Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
@@ -882,7 +889,7 @@
     "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
-    "6": "Grazie per la valutazione, il noleggio è stato completato con successo.",
+    "7": "Grazie per la valutazione, il noleggio è stato completato con successo.",
     "8": "Purtroppo il noleggiatore non poteva accettare la tua richiesta. Richiedi altre belle biciclette.",
     "9": "Hai annullato la richiesta, ti preghiamo di informare il noleggiatore del motivo per cui non è possibile confermare la prenotazione.",
     "10": "La richiesta è stata annullata."
@@ -1047,7 +1054,7 @@
       "special": "Speciale",
       "urban": "Urban",
       "e-bike": "Bici Elettrica",
-      "road": "Bici da strada e da turismo",
+      "road": "Bici da strada ",
       "transport": "Per il trasporto"
     },
     "details": {

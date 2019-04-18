@@ -32,12 +32,9 @@
               placeholder="{{ 'requests.ratings.rating_text_lister' | translate }}"
               ng-model="ratingDialog.message"
               md-maxlength="800"
-              required rows="3"
+              rows="3"
               md-select-on-focus>
             </textarea>
-            <div ng-messages="ratingDialog.ratingForm.message.$error" role="alert">
-              <div ng-message="required">{{'shared.required' | translate}}</div>
-            </div>
           </md-input-container>
         </div>
         <div class="md-dialog-buttons" layout="row" layout-align="end">

@@ -151,7 +151,8 @@ module.exports = function () {
           webappUrl: "http://www.staging.listnride.com",
           defaultTranslation: 'default',
           staticTranslation: 'static',
-          btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
+          btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5',
+          brainTreeEnv: 'sandbox'
         }
       },
       imageOptions: {
@@ -174,7 +175,8 @@ module.exports = function () {
           webappUrl: "http://www.staging.listnride.com",
           defaultTranslation: 'default',
           staticTranslation: 'static',
-          btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5'
+          btKey: 'sandbox_jcmqgjqd_t4ptn54mswxmpnd5',
+          brainTreeEnv: 'sandbox'
         }
       },
       imageminOptions: {
@@ -197,7 +199,8 @@ module.exports = function () {
           webappUrl: "http://www.listnride.com",
           defaultTranslation: 'default',
           staticTranslation: 'static',
-          btKey: 'production_xwwb75fg_h63v2c4vq6tbjq58'
+          btKey: 'production_xwwb75fg_h63v2c4vq6tbjq58',
+          brainTreeEnv: 'production'
         }
       },
       imageminOptions: {

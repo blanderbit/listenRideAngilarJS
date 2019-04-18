@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('listnride')
-    .factory('bikeCluster', ['api', 'date', 'bikeOptions', '$rootScope', function (api, date, bikeOptions, $rootScope) {
+    .factory('bikeCluster', ['api', 'date', 'bikeOptions', function (api, date, bikeOptions) {
       return {
         getSizeTranslations: function (sizes) {
           bikeOptions.sizeOptions(false, true).then(function (resolve) {
@@ -22,7 +22,7 @@ angular.module('listnride')
         markAvailableSizes: function (bikeClusterSizes, bikes) {
           // add special flag to our parameter that will show it's availability
           _.map(bikeClusterSizes, function (option) {
-            option.notAvailable = !bikes[option.size];
+            option.notAvailable = bikes ? !bikes[option.size] : true;
           });
         }
       };

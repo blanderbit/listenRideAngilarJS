@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "label_new": "Nieuw",
     "event-bikes-will-be-soon": "Fietsen voor dit evenement zijn binnenkort beschikbaar",
     "for-count-hours": "voor {{hoursSlot}} uur",
     "rental-date": "Rental date",
@@ -38,6 +39,8 @@
     "please-select": "Ajb. selecteren",
     "errors": {
       "email-required": "Vul een geldig emailadres in",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Ongeldige betalingsmethode ",
       "email-not-valid": "Vul een geldig emailadres in",
       "phone-not-valid": "Voer alstublieft een geldig telefoonnummer in",
@@ -436,6 +439,10 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
+      },
+      "cowboybikes": {
+        "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
+        "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
       },
       "urwahn": {
         "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
@@ -867,7 +874,7 @@
     "insurance-bike-assist": "Bike Assist-verzekeringscertificaat"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} wil je <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}} huren</a>.<br><br>Bike ID: {{ride.bicycle_number}}<br>Periode: {{timespan}}<br>Fietsmaat: {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br><br> <br>Accepteer de boeking en spreek verdere details via de onderstaande chat af. Indien je de boeking niet kan aannemen, gelieve deze te annuleren.",
+    "1": "{{user.first_name}} {{user.last_name}} uit {{user.city}} wil je <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}} huren</a>.<br><br>Bike ID: {{ride.bicycle_number}}<br>Periode: {{timespan_short}}<br>Fietsmaat: {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br><br> <br>Accepteer de boeking en spreek verdere details via de onderstaande chat af. Indien je de boeking niet kan aannemen, gelieve deze te annuleren.",
     "11": "De boeking is geannuleerd",
     "3": "Je hebt de boeking bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Bedankt voor het bevestigen van de teruggave van de fiets als ook jouw recensie van {{user.first_name}}. De transactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>",
@@ -880,7 +887,7 @@
     "11": "De boeking van je huurfiets is geannuleerd.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Heb je een geweldige ervaring gehad op de fiets van {{lister.first_name}}. Deel ons je ervaring middels een korte recensie. Dit zal toekomstige fietsers helpen beter te begrijpen wat ze kunnen verwachten.",
-    "6": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
+    "7": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
     "8": "Helaas heeft de verhuurder je aanvraag afgewezen. Gelukkig zijn er genoeg andere mooie fietsen die je kan aanvragen.",
     "9": "Je hebt de aanvraag afgewezen. Stuur de verhuuder kort een berichtje, waarom je aanvraag niet geboekt hebt.",
     "10": "Het verzoek is geannuleerd."
@@ -1043,7 +1050,7 @@
       "special": "Uniek",
       "urban": "Urban",
       "e-bike": "Elektrische fiets",
-      "road": "Race & Touringfietsen",
+      "road": "Racefiets - Tourfiets",
       "transport": "Transport"
     },
     "details": {

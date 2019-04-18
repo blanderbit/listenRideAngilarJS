@@ -38,7 +38,7 @@ angular.module('message',[]).component('message', {
       }
 
       // Dont display messages with following statuses to Rider;
-      var riderNotDisplayableMessages = [message.STATUSES.ACCEPTED, message.STATUSES.COMPLETE, message.STATUSES.ONE_SIDE_RATE];
+      var riderNotDisplayableMessages = [message.STATUSES.ACCEPTED, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
       // Dont display messages with following statuses to Lister;
       var listerNotDisplayableMessages = [message.STATUSES.COMPLETE, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
 

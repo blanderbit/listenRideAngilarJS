@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "label_new": "Neu",
     "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
     "for-count-hours": "für {{hoursSlot}} Stunden",
     "rental-date": "Rental date",
@@ -38,6 +39,8 @@
     "please-select": "Bitte auswählen",
     "errors": {
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Zahlungsart nicht gültig",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
       "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",
@@ -368,9 +371,9 @@
     },
     "seo": {
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
-      "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
+      "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
       "category-title": "Miete das perfekte {{category}}-Rad in {{location}} | listnride",
-      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
+      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
     },
     "business-community": {
       "meta-title": "Die listnride Business Community",
@@ -441,6 +444,10 @@
       "ampler": {
         "meta-title": "E Bike Test Programm",
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
+      },
+      "cowboybikes": {
+        "meta-title": "Miete und teste Cowboy-Bikes noch heute! Das ist Cowboy. Das Elektrofahrrad für Stadtfahrer.",
+        "meta-description": "Teste noch heute ein Cowboy Smart Electric Urban Bike! Das smarte Elektrofahrrad für Urban Riders. Miete es einfach auf listnride!"
       },
       "urwahn": {
         "meta-title": "Miete und teste ein Urwahn Stadtfuchs in München | listnride",
@@ -875,7 +882,7 @@
     "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} von {{user.city}} möchten dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten <br><br>Bike ID: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan}}. <br>. <br><br>. Bitte klicke auf akzeptieren um die Buchung anzunehmen und vereinbare weitere Details in dem Chat unten. Wenn die Buchung nicht möglich ist bitte ablehnen.",
+    "1": "{{user.first_name}} {{user.last_name}} von {{user.city}} möchten dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten <br><br>Bike ID: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>. Bitte klicke auf akzeptieren um die Buchung anzunehmen und vereinbare weitere Details in dem Chat unten. Wenn die Buchung nicht möglich ist bitte ablehnen.",
     "11": "Die Buchung wurde storniert.",
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
@@ -888,7 +895,7 @@
     "11": "Die Buchung deines Leihrades wurde storniert.",
     "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hattest du eine großartige Erfahrung mit dem Fahrrad von {{lister.first_name}}? Teile uns deine Ihre Erfahrungen, indem Du eine kurze Bewertung hinterlast. Dies hilft zukünftigen Radfahrern, besser zu verstehen, was zu erwarten ist.",
-    "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
+    "7": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
     "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest.",
     "10": "Die Anfrage wurde abgebrochen."
@@ -1053,7 +1060,7 @@
       "special": "Spezial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Renn- & Touringräder",
+      "road": "Rennrad - Tourenrad",
       "transport": "Transport"
     },
     "details": {
@@ -1354,7 +1361,7 @@
   "invite-landing": {
     "meta-title": "listnride | 10€ für dich!",
     "meta-description": "Lade deine Freunde per E-Mail ein, oder teile deinen Link auf Facebook und schenke ihnen dadurch 10€. Für jede Anmeldung über deinen Link, erhälst du 10€ Gutschrift, sobald deine Freunde aktiv werden! (Leihen und Verleihen)",
-    "header": "hat dir 10€ geschenkt",
+    "header": "hat dir 10€ geschenkt",
     "subheader": "Willkommen bei listnride, der Bike Sharing Community",
     "subsubheader": "listnride ist eine Community die passionierte Radfahrer zusammen bringt um sich gegenseitig zu unterstützen. Du benötigst ein Fahrrad für ein bestimmtes Terrain? Du wirst es hier finden! Du möchtest deine Räder mit anderen teilen? Biete Sie an und verdiene zusätzliches Taschengeld!",
     "subsubsubheader": "{{ name }} hat dich eingeladen. Melde dich einfach kurz an um deine 10€ zu erhalten! Der Gutschein wird deinem Nutzerkonto sofort gutgeschrieben und kann sofort genutzt werden.",

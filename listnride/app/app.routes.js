@@ -98,7 +98,7 @@
       // bikes/{id}
       $stateProvider.state({
         name: 'bike',
-        url: '/bikes/{bikeId:int}?size&startDate&duration',
+        url: '/bikes/{bikeId:int}?size&start_date&duration',
         template: '<bike></bike>',
         reloadOnSearch: false,
         params: {
@@ -1555,6 +1555,25 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.brand-integration.urwahn.meta-title"]);
                 ngMeta.setTag("description", translations["meta.brand-integration.urwahn.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'cowboybikes',
+        url: '/brands/cowboybikes',
+        template: '<cowboybikes></cowboybikes>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.cowboybikes.meta-title", "meta.brand-integration.cowboybikes.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.cowboybikes.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.cowboybikes.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }
