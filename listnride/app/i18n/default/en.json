@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "label_new": "New",
     "event-bikes-will-be-soon": "Bikes for this event will be available soon",
     "for-count-hours": "for {{hoursSlot}} hours",
     "rental-date": "Rental date",

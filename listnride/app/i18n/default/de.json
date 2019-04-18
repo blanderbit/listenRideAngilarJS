@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "label_new": "Neu",
     "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
     "for-count-hours": "für {{hoursSlot}} Stunden",
     "rental-date": "Rental date",
