@@ -445,8 +445,8 @@
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
       },
       "cowboybikes": {
-        "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
-        "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
+        "meta-title": "Miete und teste Cowboy-Bikes noch heute! Das ist Cowboy. Das Elektrofahrrad für Stadtfahrer.",
+        "meta-description": "Teste noch heute ein Cowboy Smart Electric Urban Bike! Das smarte Elektrofahrrad für Urban Riders. Miete es einfach auf listnride!"
       },
       "urwahn": {
         "meta-title": "Miete und teste ein Urwahn Stadtfuchs in München | listnride",
@@ -881,7 +881,7 @@
     "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} von {{user.city}} möchten dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten <br><br>Bike ID: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan}}. <br>. <br><br>. Bitte klicke auf akzeptieren um die Buchung anzunehmen und vereinbare weitere Details in dem Chat unten. Wenn die Buchung nicht möglich ist bitte ablehnen.",
+    "1": "{{user.first_name}} {{user.last_name}} von {{user.city}} möchten dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten <br><br>Bike ID: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>. Bitte klicke auf akzeptieren um die Buchung anzunehmen und vereinbare weitere Details in dem Chat unten. Wenn die Buchung nicht möglich ist bitte ablehnen.",
     "11": "Die Buchung wurde storniert.",
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",

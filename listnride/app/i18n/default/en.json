@@ -39,7 +39,7 @@
     "errors": {
       "email-required": "Please enter your email address, email is required",
       "payment-cancelled": "Payment cancelled",
-      "payment-paypal-error": "Sorry, your PayPal method is failed",
+      "payment-paypal-error": "Sorry, your PayPal payment failed",
       "unexpected-payment-type": "Payment type not valid",
       "email-not-valid": "Please, enter a valid email address",
       "phone-not-valid": "Please, enter a valid phone number",
@@ -884,7 +884,7 @@
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}.<br>Bike size:  {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br>Period: {{timespan}}.<br><br><br>Please accept the booking and agree on further details using the chat below. If not possible, please reject.",
+    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}.<br>Bike size:  {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br>Period: {{timespan_short}}.<br><br><br>Please accept the booking and agree on further details using the chat below. If not possible, please reject.",
     "11": "The booking was cancelled. ",
     "3": "You've accepted the request and so the bike is booked. You'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}} </a> ",
     "5": "Thanks for confirming the return of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
