@@ -234,6 +234,9 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
               var endDate = new Date(requests.request.end_date);
               requests.request.returnable = (endDate.getTime() < Date.now());
+              var startDate = new Date(requests.request.start_date);
+              requests.request.timespan_short = moment(startDate).format('DD.MM, HH:mm') + ' - ' + moment(endDate).format('DD.MM, HH:mm');
+              requests.request.timespan = moment(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment(endDate).format('DD.MM.YY, HH:mm');
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;
