@@ -22,7 +22,7 @@ angular.module('listnride')
         markAvailableSizes: function (bikeClusterSizes, bikes) {
           // add special flag to our parameter that will show it's availability
           _.map(bikeClusterSizes, function (option) {
-            option.notAvailable = !bikes[option.size];
+            option.notAvailable = bikes ? !bikes[option.size] : true;
           });
         }
       };
