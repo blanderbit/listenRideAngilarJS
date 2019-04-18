@@ -342,7 +342,6 @@ angular.module('booking', [])
             function (success) {
               booking.reloadUser().then(function () {
                 booking.processing = false;
-                booking.nextTab();
               });
             },
             function (error) {
