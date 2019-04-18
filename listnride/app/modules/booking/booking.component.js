@@ -340,8 +340,10 @@ angular.module('booking', [])
           };
           api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
-              booking.processing = false;
-              booking.nextTab();
+              booking.reloadUser().then(function () {
+                booking.processing = false;
+                booking.nextTab();
+              });
             },
             function (error) {
               booking.processing = false;
