@@ -7,18 +7,13 @@ angular.module('bikeCountFilter', [])
     bindings: {
       currentValues: '=',
       onFilterChange: '<?',
-      showAllSizesLabel: '<?',//to show allSizes value set true value
-      showUnisize:'<?', //to hide Unisize value set it to null
-      showKidsSizes: '<?'//to hide kidsSizes set it null
+      excludedValues: '<?',
     },
     controller: [
       '$translate',
       'bikeOptions',
       function BikeCountFilterController($translate, bikeOptions) {
         var bikeCountFilter = this;
-        //bikeCountFilter.showAllSizesLabel = true
-        //bikeCountFilter.showUnisize = true
-        //bikeCountFilter.showKidsSizes = true;
 
         bikeCountFilter.$onInit = function () {
           // methods
@@ -30,7 +25,7 @@ angular.module('bikeCountFilter', [])
           bikeCountFilter.sizes = [];
 
           //invocations
-          bikeOptions.sizeOptions(bikeCountFilter.showAllSizesLabel, bikeCountFilter.showKidsSizes, bikeCountFilter.showUnisize).then(function (resolve) {
+          bikeOptions.sizeOptions(bikeCountFilter.excludedValues).then(function (resolve) {
             bikeCountFilter.sizes = resolve;
             if (!bikeCountFilter.currentValues.length) bikeCountFilter.currentValues = [bikeCountFilter.sizes[0].value];
           });

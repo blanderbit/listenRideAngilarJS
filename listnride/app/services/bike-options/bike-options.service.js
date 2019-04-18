@@ -37,29 +37,31 @@ angular.module('listnride')
         })
       },
 
-      sizeOptions: function (withAllSizesLabel, withKidsSizes, withUnisize) {
+      sizeOptions: function (excludedValues, withKidsSizes) {
         var self = this;
 
         return $translate(this.sharedTranslationKeys()).then(
           function (translations) {
 
-            var sizes = [];
-
-            // show 'Unisize' option until onlyNumarableSizes is false
-            if (withUnisize !== null) {
-              sizes.unshift({ value: 0, label: translations['search.unisize']});
-            }
-
-            // show 'all sizes' option if used for search purposes
-            if (withAllSizesLabel) {
-              sizes.unshift({ value: -1, label: translations['search.all-sizes']});
-            }
+            var sizes = [
+              { value: -1, label: translations['search.all-sizes']},
+              { value: 0, label: translations['search.unisize']}
+            ];
 
             sizes = sizes.concat(self.adultSizeOptions());
 
             // show kids sizes by default
             if (withKidsSizes !== null) {
-              sizes = sizes.concat(self.kidsSizeOptions())
+              sizes = sizes.concat(self.kidsSizeOptions());
+            }
+
+            //exclude any size from array by it's value
+            if (excludedValues && excludedValues.length) {
+              _.forEach(excludedValues, function (value) {
+                sizes =  _.filter(sizes, function (o) {
+                  return o.value !== +value;
+                });
+              });
             }
 
             return sizes;
