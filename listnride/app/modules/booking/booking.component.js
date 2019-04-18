@@ -580,6 +580,9 @@ angular.module('booking', [])
                   escapeToClose: false,
                   onComplete: function() {
                     document.getElementById('three-d-secure').appendChild(iframe);
+                  },
+                  onRemoving: function() {
+                    booking.bookDisabled = false;
                   }
                 });
               },
