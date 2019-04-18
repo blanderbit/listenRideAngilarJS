@@ -31,6 +31,7 @@ module.exports = (webpackEnv) => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
+              plugins: ['angularjs-annotate'],
               sourceMaps: true,
               cacheDirectory: true
             }
