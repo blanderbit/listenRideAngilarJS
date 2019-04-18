@@ -69,6 +69,10 @@ angular.module('listnride')
         );
       },
 
+      excludeAllSizesLabel: function () {
+        return [-1];
+      },
+
       adultSizeOptions: function() {
         return [
           { value: 155, label: "155 cm - 165 cm" },
