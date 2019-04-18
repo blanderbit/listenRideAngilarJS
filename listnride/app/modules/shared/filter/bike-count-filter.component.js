@@ -16,8 +16,9 @@ angular.module('bikeCountFilter', [])
       'bikeOptions',
       function BikeCountFilterController($translate, bikeOptions) {
         var bikeCountFilter = this;
-        var ALL_SIZES_VALUE = -1;
-        var DEFAULT_VALUE = 0;
+        //bikeCountFilter.showAllSizesLabel = true
+        //bikeCountFilter.showUnisize = true
+        //bikeCountFilter.showKidsSizes = true;
 
         bikeCountFilter.$onInit = function () {
           // methods
@@ -28,21 +29,16 @@ angular.module('bikeCountFilter', [])
           bikeCountFilter.currentValues = bikeCountFilter.currentValues || [];
           bikeCountFilter.sizes = [];
 
+          //invocations
           bikeOptions.sizeOptions(bikeCountFilter.showAllSizesLabel, bikeCountFilter.showKidsSizes, bikeCountFilter.showUnisize).then(function (resolve) {
             bikeCountFilter.sizes = resolve;
+            if (!bikeCountFilter.currentValues.length) bikeCountFilter.currentValues = [bikeCountFilter.sizes[0].value];
           });
-
-          // invocations
-          if (!bikeCountFilter.currentValues.length) setDefault();
         };
 
-        function setDefault() {
-          var defaultValueOnInit = bikeCountFilter.hideAllSizesLabel ? DEFAULT_VALUE : ALL_SIZES_VALUE;
-          bikeCountFilter.currentValues = [defaultValueOnInit];
-        }
 
         function increaseBikesCount() {
-          bikeCountFilter.currentValues.push(bikeCountFilter.defaultValueIndex);
+          bikeCountFilter.currentValues.push(bikeCountFilter.currentValues[0]);
           if (typeof bikeCountFilter.onFilterChange === "function") bikeCountFilter.onFilterChange();
         }
 
