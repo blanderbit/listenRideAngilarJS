@@ -232,9 +232,10 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
               requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
+              var startDate = new Date(requests.request.start_date);
               var endDate = new Date(requests.request.end_date);
               requests.request.returnable = (endDate.getTime() < Date.now());
-              var startDate = new Date(requests.request.start_date);
+              // these timespans we use in localizations only
               requests.request.timespan_short = moment(startDate).format('DD.MM, HH:mm') + ' - ' + moment(endDate).format('DD.MM, HH:mm');
               requests.request.timespan = moment(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment(endDate).format('DD.MM.YY, HH:mm');
 
@@ -558,8 +559,7 @@ angular.module('requests', ['infinite-scroll'])
 
         if (requests.filters.type === 'all') {
           requests.requests = angular.copy(requests.all_requests);
-        }
-        else {
+        } else {
           requests.requests = requests.all_requests.filter(function (response) {
             var condition = response.user.id !== $localStorage.userId;
             return (requests.filters.type === 'lister') ? condition : !condition;
