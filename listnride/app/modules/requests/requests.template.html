@@ -49,9 +49,11 @@
       <div>
         <div ng-repeat="request in requests.requests | orderBy:'-start_date' track by request.id" >
           <md-divider md-insets></md-divider>
-          <md-list-item class="requests-list-item md-2-line"
-                        ng-class="{'request-filter-switch-active':requests.selected === request.id}"
-                        ng-click="requests.loadRequest(request.id, true, $index)">
+          <md-list-item
+            class="requests-list-item md-2-line"
+            ng-class="{'request-filter-switch-active':requests.selected === request.id}"
+            ng-click="requests.loadRequest(request.id, true, $index)"
+          >
             <img ng-src="{{request.image}}" class="md-avatar" alt="{{request.ride}}" />
             <div class="md-list-item-text" layout="column">
               <div layout="row">
@@ -60,7 +62,8 @@
                 <div flex></div>
                 <div class="unread-indicator" ng-if="!request.message.is_read && request.message.receiver == requests.userId"></div>
               </div>
-              <p>{{requests.request.timespan}}</p>
+              <p>{{request.start_date | amDateFormat:'DD.MM.YY, HH:mm'}}
+                - {{request.end_date | amDateFormat:'DD.MM.YY, HH:mm'}}</p>
             </div>
           </md-list-item>
         </div>
