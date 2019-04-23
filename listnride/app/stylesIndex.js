@@ -1,6 +1,6 @@
 import '../js_modules/angular-material-minimal/angular-material.min.css';
 import '../js_modules/daterangepicker/daterangepicker.css';
-import '../js_modules/bryntum-scheduler/scheduler.material.min.css';
+import '../js_modules/bryntum-scheduler/scheduler.material.css';
 import './assets/stylesheets/app.css';
 import './assets/stylesheets/galleries.css';
 import './services/verification/verification.css';
