@@ -1,1 +1,11 @@
-<div class="booking-calendar"></div>
+<div class="booking-calendar">
+  <menu class="booking-calendar-controls">
+    <md-button class="md-button md-primary md-raised" ng-click="bookingCalendar.gotoToday()">
+      {{ 'booking-calendar.today' | translate }}
+    </md-button>
+  </menu>
+
+  <md-divider class="booking-calendar-divider"></md-divider>
+
+  <div class="scheduler-container"></div>
+</div>
