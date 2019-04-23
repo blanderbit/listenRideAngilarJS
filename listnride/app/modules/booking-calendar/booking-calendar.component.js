@@ -1,10 +1,10 @@
-'use strict';
+import { Scheduler } from '../../../js_modules/bryntum-scheduler/scheduler.module.min';
 
 angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'booking-calendar',
-  controller: ['$state', '$translate', '$translatePartialLoader', '$stateParams', 'ENV',
-    function BookingCalendarController($state, $translate, $tpl, $stateParams, ENV) {
+  controller: 
+    function BookingCalendarController() {
       var bookingCalendar = this;
 
       bookingCalendar.$onInit = function () {
@@ -13,7 +13,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       }
 
       function initScheduler() {
-        var scheduler = new bryntum.scheduler.Scheduler({
+        var scheduler = new Scheduler({
           appendTo: document.querySelector('.booking-calendar'),
           height: 400,
 
@@ -53,5 +53,4 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         });
       }
     }
-  ]
 });

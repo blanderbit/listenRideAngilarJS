@@ -39,23 +39,7 @@ module.exports = (webpackEnv) => {
         },
         {
           test: /\.css$/,
-          include: /app|js_modules/,
-          use: [
-            {
-              loader: MiniCssExtractPlugin.loader
-            },
-            {
-              loader: 'css-loader',
-              options: {
-                url: false
-              }
-            },
-            getPostcssLoader()
-          ]
-        },
-        {
-          test: /\.css$/,
-          include: /node_modules/,
+          include: /app|js_modules|node_modules/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
