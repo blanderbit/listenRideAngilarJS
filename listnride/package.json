@@ -115,13 +115,11 @@
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.2.1"
+    "webpack-dev-server": "^3.2.1",
+    "babel-plugin-angularjs-annotate": "^0.10.0"
   },
   "scripts": {
     "start": "webpack-dev-server -r dotenv/config --env.development --mode development --watch",
     "build": "webpack -r dotenv/config --env.production --mode production --optimize-minimize"
-  },
-  "devDependencies": {
-    "babel-plugin-angularjs-annotate": "^0.10.0"
   }
 }
