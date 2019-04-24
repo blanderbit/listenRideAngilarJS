@@ -37,40 +37,39 @@ angular.module('listnride')
         })
       },
 
-      sizeOptions: function (excludedValues, withKidsSizes) {
+      allSizesValue: -1,
+
+      unisizeValue: 0,
+
+      kidsSizesValues: function(){
+        return _.map(this.kidsSizeOptions(), 'value');
+      },
+
+      sizeOptions: function (excludedValues) {
         var self = this;
 
         return $translate(this.sharedTranslationKeys()).then(
           function (translations) {
-
+            excludedValues = _.flattenDeep(excludedValues); //spread included array
             var sizes = [
-              { value: -1, label: translations['search.all-sizes']},
-              { value: 0, label: translations['search.unisize']}
+              { value: self.allSizesValue, label: translations['search.all-sizes']},
+              { value: self.unisizeValue, label: translations['search.unisize']}
             ];
 
-            sizes = sizes.concat(self.adultSizeOptions());
-
-            // show kids sizes by default
-            if (withKidsSizes !== null) {
-              sizes = sizes.concat(self.kidsSizeOptions());
-            }
+            sizes = sizes
+              .concat(self.adultSizeOptions())
+              .concat(self.kidsSizeOptions());
 
             //exclude any size from array by it's value
             if (excludedValues && excludedValues.length) {
-              _.forEach(excludedValues, function (value) {
-                sizes =  _.filter(sizes, function (o) {
-                  return o.value !== +value;
-                });
+              sizes = _.reject(sizes, function (size) {
+                return _.indexOf(excludedValues, size.value) !== -1;
               });
             }
 
             return sizes;
           }
         );
-      },
-
-      excludeAllSizesLabel: function () {
-        return [-1];
       },
 
       adultSizeOptions: function() {

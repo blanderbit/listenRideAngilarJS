@@ -57,7 +57,7 @@ angular.module('event', []).component('event', {
         event.hasLogo = false;
         event.path = event.object[event.name];
         event.imagePath = 'app/assets/ui_images/events/' + event.name + '_hero.jpg';
-        bikeOptions.sizeOptions(false, null).then(function (resolve) {
+        bikeOptions.sizeOptions(bikeOptions.kidsSizesValues()).then(function (resolve) {
           event.sizes = resolve;
         });
 

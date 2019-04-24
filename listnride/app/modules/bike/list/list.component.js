@@ -65,7 +65,7 @@ angular.module('list', ['ngLocale'])
           list.removedImages = [];
           list.startImage = 1;
           list.sizeOptions = [];
-          bikeOptions.sizeOptions(bikeOptions.excludeAllSizesLabel).then(function (resolve) {
+          bikeOptions.sizeOptions(bikeOptions.allSizesValue).then(function (resolve) {
             list.sizeOptions = resolve
           });
           bikeOptions.accessoryOptions().then(function (resolve) {

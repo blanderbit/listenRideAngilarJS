@@ -25,9 +25,10 @@ angular.module('multiBooking', []).component('multiBooking', {
         multiBooking.categoryValid = categoryValid;
 
         // variables
-        multiBooking.ALL_SIZES = '-1';
-        multiBooking.UNISIZE = '0';
-        multiBooking.excludedBikeSizes = [multiBooking.ALL_SIZES, multiBooking.UNISIZE];
+        multiBooking.excludedBikeSizes = [
+          bikeOptions.allSizesValue,
+          bikeOptions.unisizeValue
+        ];
         multiBooking.START_TIME = '9';
         multiBooking.END_TIME = '18';
         multiBooking.current_day = (new Date()).setHours(0, 0, 0, 0);
