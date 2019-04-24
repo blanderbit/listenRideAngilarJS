@@ -3,6 +3,15 @@
 angular.module('listnride')
   .factory('bikeOptions', ['$translate', function ($translate) {
     return {
+
+      allSizesValue: -1,
+
+      unisizeValue: 0,
+
+      kidsSizesValues: function(){
+        return _.map(this.kidsSizeOptions(), 'value');
+      },
+
       // All accessories keys
       accessoriesTranslationKeys: function () {
         return [
@@ -35,14 +44,6 @@ angular.module('listnride')
             { model: "gps", label: "gps", iconFileName: "accessoire_gps.svg", name: translations["list.accessories.gps"] }
           ];
         })
-      },
-
-      allSizesValue: -1,
-
-      unisizeValue: 0,
-
-      kidsSizesValues: function(){
-        return _.map(this.kidsSizeOptions(), 'value');
       },
 
       sizeOptions: function (excludedValues) {
