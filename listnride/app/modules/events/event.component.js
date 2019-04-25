@@ -30,7 +30,7 @@ angular.module('event', []).component('event', {
           'cyclingworld': getRequestUrl('', '', '', '', '/rides?family=35'),
           'paris-brest-paris': getRequestUrl('30', 'Rambouillet, France', '', '2019-08-18'),
           'costadelsol': getRequestUrl('30', 'Marbella, Málaga, Spain', '', '2019-09-15'),
-          '8bar-clubride': '/rides?family=36',
+          '8bar-clubride': '/rides?family=36&zero=true',
           'granfondo-bikedivision': getRequestUrl('30', 'Peschiera del Garda, Verona, italy', '', '2019-09-22', '4415'),
 
           // CUSTOM DESIGN AND OLD PAGES
