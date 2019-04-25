@@ -18,14 +18,26 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     };
 
     function initScheduler() {
-      var scheduler = new Scheduler({
+      window.scheduler = new Scheduler({
         appendTo: document.querySelector('.scheduler-container'),
 
         columns: [{
           text: 'Name',
           field: 'name',
-          width: 160
+          width: 300,
         }],
+        
+        readOnly: true,
+
+        features : {
+          contextMenu: false,
+          eventFilter: false,
+          headerContextMenu: false,
+          timeRanges: {
+            showCurrentTimeLine: true,
+            showHeaderElements  : true,
+          },
+        },
 
         resources: [{
             id: 1,
@@ -42,18 +54,20 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
           {
             resourceId: 1,
-            startDate: '2017-01-01',
-            endDate: '2017-01-10'
+            startDate: '2019-04-11',
+            endDate: '2019-04-15',
+            name: 'foo',
           },
           {
             resourceId: 2,
-            startDate: '2017-01-02',
-            endDate: '2017-01-09'
+            startDate: '2019-04-13',
+            endDate: '2019-04-19',
+            name: 'bar',
           }
         ],
 
-        startDate: new Date(2017, 0, 1),
-        endDate: new Date(2017, 0, 10)
+        startDate: new Date(2019, 3, 1),
+        endDate: new Date(2019, 3, 30)
       });
     }
   }
