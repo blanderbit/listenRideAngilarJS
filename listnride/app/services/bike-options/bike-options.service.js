@@ -3,6 +3,15 @@
 angular.module('listnride')
   .factory('bikeOptions', ['$translate', function ($translate) {
     return {
+
+      allSizesValue: -1,
+
+      unisizeValue: 0,
+
+      kidsSizesValues: function(){
+        return _.map(this.kidsSizeOptions(), 'value');
+      },
+
       // All accessories keys
       accessoriesTranslationKeys: function () {
         return [
@@ -37,25 +46,26 @@ angular.module('listnride')
         })
       },
 
-      sizeOptions: function (withAllSizesLabel, withKidsSizes) {
+      sizeOptions: function (excludedValues) {
         var self = this;
 
         return $translate(this.sharedTranslationKeys()).then(
           function (translations) {
+            excludedValues = _.flattenDeep(excludedValues); //spread included array
             var sizes = [
-              { value: 0, label: translations['search.unisize']}
+              { value: self.allSizesValue, label: translations['search.all-sizes']},
+              { value: self.unisizeValue, label: translations['search.unisize']}
             ];
 
-            // show 'all sizes' option if used for search purposes
-            if (withAllSizesLabel) {
-              sizes.unshift({ value: -1, label: translations['search.all-sizes']});
-            }
+            sizes = sizes
+              .concat(self.adultSizeOptions())
+              .concat(self.kidsSizeOptions());
 
-            sizes = sizes.concat(self.adultSizeOptions());
-
-            // show kids sizes by default
-            if (withKidsSizes !== null) {
-              sizes = sizes.concat(self.kidsSizeOptions())
+            //exclude any size from array by it's value
+            if (excludedValues && excludedValues.length) {
+              sizes = _.reject(sizes, function (size) {
+                return _.indexOf(excludedValues, size.value) !== -1;
+              });
             }
 
             return sizes;

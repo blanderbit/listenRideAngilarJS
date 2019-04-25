@@ -4,7 +4,7 @@ angular.module('listnride')
     .factory('bikeCluster', ['api', 'date', 'bikeOptions', function (api, date, bikeOptions) {
       return {
         getSizeTranslations: function (sizes) {
-          bikeOptions.sizeOptions(false, true).then(function (resolve) {
+          bikeOptions.sizeOptions([bikeOptions.allSizesValue]).then(function (resolve) {
             _.map(sizes, function (option) {
               option.name = _.find(resolve, function (o) {
                 return o.value === option.size;
