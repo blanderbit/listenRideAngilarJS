@@ -7900,8 +7900,8 @@ button.b-button.b-raised.b-light-gray {
       padding-left: 0; }
     .b-cell-editor .b-numberfield input,
     .b-cell-editor .b-textfield input {
-      padding: 0.8em calc(0.5em - 0 0 1px 0); }
-
+      padding: 0.8em calc(0.5em - 1px);
+    }
 .b-cell-editor-hidden {
   display: none; }
 
