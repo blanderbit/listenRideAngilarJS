@@ -3,12 +3,14 @@ booking-calendar {
   display: flex;
   flex: 1 1 auto;
   height: 100%;
+  max-width: 100%;
 }
 
 .booking-calendar {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+  max-width: 100%;
 }
 
 .booking-calendar-controls {
@@ -27,4 +29,5 @@ booking-calendar {
 /* Bryntum scheduler container */
 .booking-calendar .scheduler-container {
   flex: 1 1 auto;
+  max-width: 100%;
 }
