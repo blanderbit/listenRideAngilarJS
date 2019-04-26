@@ -10,5 +10,6 @@ angular.module('listnride.constant', [])
     defaultTranslation: 'default',
     staticTranslation: 'static',
     btKey: config.API_KEY_BRAINTREE,
-    facebookPlatformKey: config.API_KEY_FACEBOOK_PLATFORM
+    facebookPlatformKey: config.API_KEY_FACEBOOK_PLATFORM,
+    brainTreeEnv: config.API_BRAINTREE_ENV
   });

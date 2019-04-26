@@ -41,7 +41,7 @@
     "font-awesome": "^4.7.0",
     "international-phone-number": "0.0.11",
     "intl-tel-input": "^11.1.3",
-    "jquery": "^3.1.1",
+    "jquery": "^3.4.0",
     "moment": "^2.24.0",
     "ng-file-upload": "^12.2.12",
     "ng-img-crop": "^0.2.0",

@@ -1,7 +1,11 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "label_new": "Nuovo",
     "event-bikes-will-be-soon": "Le biciclette per questo evento saranno presto disponibili",
+    "for-count-hours": "for {{hoursSlot}} hours",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Scegli la taglia",
     "please-choose-bike-count": "Seleziona il numero di biciclette",
     "status-labels": {
@@ -17,7 +21,7 @@
       "credit-card": "Carta di credito",
       "paypal-account": "Conto Paypal"
     },
-    "change": "Change",
+    "change": "Cambia",
     "local-business": "Attività locale",
     "list": "List",
     "map": "Mappa",
@@ -35,6 +39,8 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Tipo di pagamento non previsto",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
@@ -222,6 +228,12 @@
       "meta-title": "Noleggia una bici da corsa per la Parigi-Brest-Parigi 2019 | listnride",
       "meta-description": "Noleggia una bici da corsa online in modo facile e sicuro con listnride per la Paris-Brest-Paris 2019. Scegli la bici perfetta per te."
     },
+    "8bar-clubride": {
+      "meta-title": "Rent a road bike for the 8bar club ride",
+      "meta-description": "Join us on our weekly club ride and test one the latest 8bar road bikes for free. Simply book here and pick up at our showroom.",
+      "calendar-title": "Prova le bici per il giro del club 8bar",
+      "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
+    },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
       "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
@@ -280,6 +292,12 @@
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
+    },
+    "urwahn": {
+      "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
+    },
+    "bzen": {
+      "item1-description": "Lightweight, Only 14.4 k<br>Battery & smart electronics all hidden inside<br> Comfort geometry, saddle and handgrips<br>Easy to carry up stairs"
     }
   },
   "faq": {
@@ -424,6 +442,18 @@
         "meta-title": "E-Bike Test ",
         "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
       },
+      "cowboybikes": {
+        "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
+        "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
+      },
+      "urwahn": {
+        "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
+        "meta-description": "Book a test drive for the Urwahn Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!"
+      },
+      "bzen": {
+        "meta-title": "Rent and test ride BZEN smart electric city bikes all across Germany | listnride",
+        "meta-description": "Test ride a smart electric city bike today! The smart electric city bikes from BZEN are available to rent on listnride all across Germany!"
+      },
       "unimoke": {
         "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",
         "meta-description": "Test ride an UNI Moke E-City Bike today! The E-City Bikes from UNI Moke are available to test and rent on listnride all across Germany!"
@@ -441,7 +471,7 @@
         "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
-        "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Dusseldorf e Bolzano",
+        "meta-title": "Noleggia e prova le E-Bikes Leaos a Monaco di Baviera, Berlino e Bolzano",
         "meta-descr": "E-bike design - Leaos"
       },
       "brompton": {
@@ -846,20 +876,20 @@
     "insurance-bike-assist": "Certificato di assicurazione Bike Assist"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} di {{user.city}} vorrebbe noleggiare la tua <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> dal {{timespan}}. Accetto ulteriori dettagli utilizzando la chat.",
+    "1": "{{user.first_name}} {{user.last_name}} da {{user.city}} vorrebbe noleggiare la tua <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}.<br>Taglia bici: {{ride.frame_size ? ride.frame_size: 'non specificata'}}.<br>Periodo: {{timespan_short}}.<br><br><br>Si prega di accettare la prenotazione e concordare ulteriori dettagli utilizzando la chat qui sotto. Se non è possibile, si prega di respingere.",
     "11": "La prenotazione è stata cancellata.",
-    "3": "{{user.zip}} Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I recapiti sono i seguenti, li abbiamo inviati via e-mail. <br><br>Nome:\n{{user.first_name}} {{user.last_name}}<br>Telefono: {{user.pretty_phone_number}} <br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.city}}, {{user.country}}</a>\n",
+    "3": "Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
     "9": "Purtroppo {{user.first_name}} non ha confermato la richiesta",
-    "10": "La tua richiesta è stata annullata dal sistema"
+    "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
-    "1": "Vorresti noleggiare la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di  {{lister.display_name}} dal {{timespan}}. Acconsento a fornire al noleggiatore ulteriori dettagli. Non appena accetta la tua richiesta, la bicicletta sarà prenotata.",
+    "1": "Hai richiesto il <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> da {{lister.display_name}} dal {{timespan}}. Puoi chattare con {{lister.display_name}}di seguito. Il pagamento viene effettuato solo quando la tua richiesta è accettata e la bicicletta è prenotata.",
     "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
-    "5": "{{lister.first_name}} ha confermato il ritorno del mezzo e ti ha fatto una recensione. Infine, ti preghiamo di valutare l'esperienza. Questo aiuta molto la nostra comunità e completa il noleggio.",
-    "6": "Grazie per la valutazione, il noleggio è stato completato con successo.",
+    "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
+    "7": "Grazie per la valutazione, il noleggio è stato completato con successo.",
     "8": "Purtroppo il noleggiatore non poteva accettare la tua richiesta. Richiedi altre belle biciclette.",
     "9": "Hai annullato la richiesta, ti preghiamo di informare il noleggiatore del motivo per cui non è possibile confermare la prenotazione.",
     "10": "La richiesta è stata annullata."
@@ -959,8 +989,8 @@
     "list-a-bike-subheader": "Inserisci la tua bicicletta per il noleggio, incontra nuove persone divertenti e guadagna qualche soldo extra.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
     "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
-    "meta-title": "listnride - La bike sharing community",
-    "meta-description": "Noleggia la bicicletta perfetta nella comunità listnride. Trovane una che si adatti al tuo stile e alle tue esigenze."
+    "meta-title": "Noleggio bici: noleggio bici da corsa, MTB o e-bike | listnride",
+    "meta-description": "Noleggia la bici perfetta per il tuo stile e le tue esigenze. Semplicemente prenotala online."
   },
   "autocomplete": {
     "default-placeholder": "Dove vorresti noleggiare una bicicletta ?"
@@ -1024,7 +1054,7 @@
       "special": "Speciale",
       "urban": "Urban",
       "e-bike": "Bici Elettrica",
-      "road": "Bici da strada e da turismo",
+      "road": "Bici da strada ",
       "transport": "Per il trasporto"
     },
     "details": {

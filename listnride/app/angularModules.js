@@ -43,6 +43,7 @@ import './modules/shared/filter/accessories-filter.component.js';
 import './modules/shared/credit-card-input/credit-card-input.component.js';
 import './modules/shared/status-labels/status-labels.component.js';
 import './modules/booking-calendar/booking-calendar.component.js';
+import './modules/shared/paypal-checkout-button/paypal-checkout-button.component.js';
 // core services
 import './services/base64/base64.service.js';
 import './services/authentication/authentication.service.js';
@@ -51,6 +52,7 @@ import './services/api/api.service.js';
 import './services/date/date.service.js';
 import './services/verification/verification.service.js';
 import './services/bike-options/bike-options.service.js';
+import './services/bike-cluster/bike-cluster.service.js';
 import './services/map-configs/map-configs.service.js';
 import './services/helpers/helpers.service.js';
 import './services/access-control/access-control.service.js';
@@ -114,6 +116,9 @@ import './modules/brand-integration/swytch.component.js';
 import './modules/brand-integration/whyte.component.js';
 import './modules/brand-integration/felt.component.js';
 import './modules/brand-integration/unimoke.component.js';
+import './modules/brand-integration/bzen.component.js';
+import './modules/brand-integration/urwahn.component.js';
+import './modules/brand-integration/cowboybikes.component.js';
 // events
 import './modules/events/event.component.js';
 import './modules/events/crossride/crossride.component.js';

@@ -19,7 +19,6 @@ angular.module('message',[]).component('message', {
   controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api', 'ENV',
     function MessageController($translate, $localStorage, $mdDialog, $analytics, api, ENV) {
       var message = this;
-      var time = message.time.toString();
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
       var hasInsurance = !!message.request.insurance;
@@ -39,9 +38,9 @@ angular.module('message',[]).component('message', {
       }
 
       // Dont display messages with following statuses to Rider;
-      var notDisplayableStatusMessagesRider = [message.STATUSES.ACCEPTED, message.STATUSES.COMPLETE, message.STATUSES.ONE_SIDE_RATE];
+      var riderNotDisplayableMessages = [message.STATUSES.ACCEPTED, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
       // Dont display messages with following statuses to Lister;
-      var notDisplayableStatusMessagesLister = [message.STATUSES.COMPLETE, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
+      var listerNotDisplayableMessages = [message.STATUSES.COMPLETE, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
 
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
@@ -112,11 +111,12 @@ angular.module('message',[]).component('message', {
         return message.status == null && $localStorage.userId != message.sender;
       };
 
-      message.ChangedRequestStatusNotification = function() {
+      message.displayableStatusMessage = function() {
+        if (!message.status) return false;
         if (message.request.rideChat) {
-          return message.status != null && !notDisplayableStatusMessagesRider.includes(message.status);
+          return !riderNotDisplayableMessages.includes(message.status);
         } else {
-          return message.status != null && !notDisplayableStatusMessagesLister.includes(message.status);
+          return !listerNotDisplayableMessages.includes(message.status);
         }
       };
 
@@ -129,14 +129,28 @@ angular.module('message',[]).component('message', {
           message.request.status == message.STATUSES.ONE_SIDE_RATE && message.currentUserRated();
       }
 
+      message.displayableNotification = function () {
+        if (message.request.rideChat) {
+          return message.displayableStatusMessage();
+        } else {
+          return message.status == message.STATUSES.BOTH_SIDES_RATE && message.userAlreadyRated()
+           || message.displayableStatusMessage() && message.status !== message.STATUSES.BOTH_SIDES_RATE;
+        }
+      }
+
       message.currentUserRated = function () {
         return message.request.ratings[0].author_id == $localStorage.userId;
       }
 
       message.isReturnable = function () {
-          return message.status == message.STATUSES.BOTH_SIDES_RATE &&
-          message.request.returnable &&
-          moment().diff(message.request.start_date) > 0
+        var rentalStarted = moment().diff(message.request.start_date) >= 0;
+        if (message.request.returnable && rentalStarted) {
+          if (message.request.rideChat) {
+            return message.status == message.STATUSES.BOTH_SIDES_RATE
+          } else {
+            return message.status == message.STATUSES.CONFIRMED
+          }        
+        };
       };
 
       // TODO: Unfortunately doublecoded in message.component and requests.component

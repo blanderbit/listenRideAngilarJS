@@ -64,7 +64,6 @@ angular.module('settings',[])
         settings.paymentLoading = false;
         settings.creditCardData = {};
         settings.tokenizeCard = tokenizeCard;
-        settings.openPaypal = openPaypal;
         settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
         settings.onErrorPaymentUpdate = onErrorPaymentUpdate;
         settings.isPayoutExist = isPayoutExist;
@@ -98,8 +97,9 @@ angular.module('settings',[])
         userApi.getUserData().then(function (response) {
           settings.loaded = true;
           setUserData(response.data);
-          paymentHelper.setupBraintreeClient();
         });
+        // init braintree client
+        paymentHelper.setupBraintreeClient();
       };
 
       function setUserData(data) {
@@ -444,11 +444,7 @@ angular.module('settings',[])
       function tokenizeCard () {
         settings.paymentLoading = true;
         paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate, settings.onErrorPaymentUpdate);
-      };
-
-      function openPaypal () {
-        paymentHelper.btPostPaypal(settings.onSuccessPaymentUpdate);
-      };
+      }
 
       function onSuccessPaymentUpdate(data) {
         // reset form and data after success

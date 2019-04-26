@@ -259,6 +259,7 @@ var lnrConstants = {
   defaultRideSizes: [155, 165, 175, 185, 195],
   sizes: {},
   rides: {},
+  unavailableRides: {},
   userId: {},
   userLang: {},
   defaultFilterLabel: {

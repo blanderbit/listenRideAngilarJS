@@ -131,8 +131,6 @@ angular.module('listings', []).component('listings', {
           availabilityDialog.inputs = [];
           availabilityDialog.isChanged = false;
           availabilityDialog.removedInputs = [];
-          availabilityDialog.maxInputs = 5;
-          availabilityDialog.isMaxInputs = false;
           availabilityDialog.disabledDates = [];
           availabilityDialog.addInput = addInput;
           availabilityDialog.destroyInput = destroyInput;
@@ -142,7 +140,6 @@ angular.module('listings', []).component('listings', {
           availabilityDialog.save = save;
           availabilityDialog.destroy = destroy;
           availabilityDialog.close = close;
-          availabilityDialog._checkMax = _checkMax;
           availabilityDialog.setData = setData;
           availabilityDialog.takeDisabledDates = takeDisabledDates;
           availabilityDialog.requests = bike.requests;
@@ -166,10 +163,6 @@ angular.module('listings', []).component('listings', {
             }
           }
 
-          function _checkMax() {
-            availabilityDialog.isMaxInputs = availabilityDialog.inputs.length >= availabilityDialog.maxInputs ? true : false;
-          }
-
           function setData() {
             // clear array
             availabilityDialog.isChanged = false;
@@ -185,7 +178,6 @@ angular.module('listings', []).component('listings', {
             // if it's no availabities let's create one clear range
             if (!availabilityDialog.inputs.length) availabilityDialog.addInput();
 
-            availabilityDialog._checkMax();
             availabilityDialog.disabledDates = availabilityDialog.takeDisabledDates();
           }
 
@@ -217,10 +209,7 @@ angular.module('listings', []).component('listings', {
           }
 
           function addInput() {
-            if (!availabilityDialog.isMaxInputs) {
-              availabilityDialog.inputs.push({});
-              availabilityDialog._checkMax();
-            }
+            availabilityDialog.inputs.push({});
           }
 
           function destroyInput(index) {

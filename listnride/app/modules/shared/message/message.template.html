@@ -13,7 +13,7 @@
 </div>
 
 <div
-    ng-if="message.ChangedRequestStatusNotification() && message.status == message.STATUSES.REQUESTED && message.request.rideChat"
+    ng-if="message.displayableNotification() && message.status == message.STATUSES.REQUESTED && message.request.rideChat"
     layout="column"
     layout-align="center center">
   <img
@@ -31,7 +31,7 @@
 </div>
 
 <div
-    ng-if="message.ChangedRequestStatusNotification() && message.status == message.STATUSES.REQUESTED && !message.request.rideChat"
+    ng-if="message.displayableNotification() && message.status == message.STATUSES.REQUESTED && !message.request.rideChat"
     layout="column"
     layout-align="center center">
   <img
@@ -48,7 +48,7 @@
   </input-stars>
 </div>
 
-<div ng-if="message.ChangedRequestStatusNotification() || message.status == message.STATUSES.COMPLETE" layout="row" layout-align="center end">
+<div ng-if="message.displayableNotification()" layout="row" layout-align="center end">
   <div
       class="lnr-message status-message"
       flex="40"

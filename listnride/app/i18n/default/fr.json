@@ -1,7 +1,11 @@
 {
   "shared": {
     "learn-more": "En savoir plus",
+    "label_new": "New",
     "event-bikes-will-be-soon": "Les vélos pour cet événement seront bientôt disponibles",
+    "for-count-hours": "for {{hoursSlot}} hours",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "S'il vous plaît, choisissez une taille de vélo",
     "please-choose-bike-count": "Sélectionnez le nombre de vélos",
     "status-labels": {
@@ -35,6 +39,8 @@
     "please-select": "Veuillez choisir",
     "errors": {
       "email-required": "Veuillez entrer votre adresse email",
+      "payment-cancelled": "Paiement annulé",
+      "payment-paypal-error": "Désolé, votre paiement PayPal a échoué",
       "unexpected-payment-type": "Type de paiement non valide",
       "email-not-valid": "Veuillez entrer votre adresse email",
       "phone-not-valid": "S'il vous plaît entrer un numéro de téléphone valide",
@@ -225,6 +231,12 @@
       "meta-title": "Louez un vélo de route pour Paris-Brest-Paris 2019 | listnride",
       "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour Paris-Brest-Paris 2019. Choisissez le vélo parfait qui correspond à vos besoins."
     },
+    "8bar-clubride": {
+      "meta-title": "Louez un vélo de route pour les sorties de 8bar",
+      "meta-description": "Rejoignez-nous lors de nos sorties hebdomadaires dans le club et testez gratuitement l'un de nos derniers vélos de route. Il suffit de réserver ici. Le vélo sera disponible dans notre salle d'exposition.",
+      "calendar-title": "Vélos a essayer pour les sorties de 8bar",
+      "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
+    },
     "cyclingworld": {
       "meta-title": "Louez un vélo Gravel de chez 8bar, Salsa ou Veloheld pour le tour sur gravier à Cyclingworld",
       "meta-description": "Voulez-vous essayer un vélo Gravel? Louez un vélo Gravel de chez 8bar, Salsa, ou Veloheld pour le tour sur gravier à Cyclingworld"
@@ -270,12 +282,12 @@
   },
   "veletage": {
     "event": {
-      "calendar-title": "Salon Veletage Pop-Up",
+      "calendar-title": "Veletage Pop-Up Salon",
       "select-day": "1. Sélectionnez la date de location",
       "select-slot": "2. Sélectionnez l'horaire de location",
       "day-error": "S'il vous plaît, sélectionnez un jour d'abord",
       "select-return": "3. Sélectionnez l'heure de retour",
-      "time-error": "Veuillez d'abord choisir l'heure pour prendre le vélo",
+      "time-error": "Veuillez d'abord choisir l'heure que vous voulez prendre le vélo",
       "calendar-subtitle": "Les Championnats du Monde Route UCI auront lieu à Innsbruck-Tirol (Autriche) du 22 au 30 septembre 2018. Testez et louez le vélo de route parfait pour votre parcours."
     }
   },
@@ -283,37 +295,43 @@
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
+    },
+    "urwahn": {
+      "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
+    },
+    "bzen": {
+      "item1-description": "Lightweight, Only 14.4 k<br>Battery & smart electronics all hidden inside<br> Comfort geometry, saddle and handgrips<br>Easy to carry up stairs"
     }
   },
   "faq": {
-    "meta-title": "Frequently Asked Questions",
-    "meta-description": "The most frequently asked questions by Listers and Riders are answered here to help you get started. Whether you are looking for the perfect bike to rent that serves your needs. Or to list that very special bike of yours."
+    "meta-title": "Questions fréquentes",
+    "meta-description": "Les questions les plus fréquemment posées par les Listers et les Riders sont répondues ici pour vous aider à démarrer. "
   },
   "multi-booking": {
-    "meta-title": "Group booking",
+    "meta-title": "Réservation de Groupe",
     "opengraph": {
-      "description": "The rental bike that fits you needs and style."
+      "description": "Le vélo de location qui correspond à vos besoins et à votre style."
     },
-    "no-accessories": "No accessories",
-    "meta-description": "Book your bikes with our group booking form",
-    "title": "Group bookings",
-    "header": "We are happy to help you with your group booking",
-    "subheader": "Let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
+    "no-accessories": "Pas d'accessoires",
+    "meta-description": "Réservez vos vélos avec notre formulaire de réservation de groupe",
+    "title": "Réservation de Groupe",
+    "header": "Nous sommes heureux de vous aider avec votre réservation de groupe",
+    "subheader": "Laissez-nous vous aider à vous organiser pour votre prochain voyage à vélo. Indiquez-nous vos préférences et nous ferons le reste pour que vous passiez le plus de temps possible à profiter du trajet.",
     "how-to": {
-      "step-1-title": "1. Search & find",
+      "step-1-title": "1. Rechercher et trouver",
       "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
-      "step-2-title": "1. Define & request",
-      "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
-      "step-3-title": "3. Accept offer & book online",
-      "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. "
+      "step-2-title": "1. Définir et demander",
+      "step-2-content": "Dites-nous quels vélos vous souhaitez louer et nous ferons le reste. Il suffit de nous fournir les détails et nous vous contacterons!",
+      "step-3-title": "3. Accepter l'offre et réserver en ligne",
+      "step-3-content": "Nous vous enverrons un devis et un lien vous permettant de réserver en ligne ou de nous fournir une confirmation écrite de votre réservation."
     },
-    "your-booking-details": "Your booking details",
-    "what-bike-kind": "What kind of bike?",
-    "where-to-rent": "Where do you want to rent?",
-    "rental-period": "Rental period",
-    "how-many-bikes": "How many bikes?",
-    "do-you-need-accessories": "Do you need accessories?",
-    "your-contact-details": "Your contact details",
+    "your-booking-details": "Les détails de votre réservation",
+    "what-bike-kind": "Quel type de vélo?",
+    "where-to-rent": "Où voulez-vous louer?",
+    "rental-period": "Durée de location",
+    "how-many-bikes": "Combien de vélos?",
+    "do-you-need-accessories": "Avez-vous besoin d'accessoires?",
+    "your-contact-details": "Vos coordonnées ",
     "thanks-for-request": "Thanks for your bike rental request",
     "we-will-back-shortly": "We will get back to you shortly",
     "take-back-to-search": "Take me back to my search",
@@ -383,7 +401,7 @@
       },
       "velothon-bikerental": {
         "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-description": "Participez au Velothon Berlin 2018! Louez un vélo de route depuis la communauté listnride et amusez-vous!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -407,7 +425,7 @@
       },
       "depart": {
         "meta-title": "Rent a road bike for the Grand Départ on listnride",
-        "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community."
+        "meta-description": "Joignez-vous à listnride et à Schicke Mütze pour une sortie en l'honneur du Grand Départ. Louez un vélo de route haut de gamme auprès de la communauté listnride."
       },
       "supercross-munich": {
         "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
@@ -426,6 +444,18 @@
       "ampler": {
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
+      },
+      "cowboybikes": {
+        "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
+        "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
+      },
+      "urwahn": {
+        "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
+        "meta-description": "Book a test drive for the Urwahn Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!"
+      },
+      "bzen": {
+        "meta-title": "Rent and test ride BZEN smart electric city bikes all across Germany | listnride",
+        "meta-description": "Test ride a smart electric city bike today! The smart electric city bikes from BZEN are available to rent on listnride all across Germany!"
       },
       "unimoke": {
         "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",
@@ -507,21 +537,21 @@
     },
     "press": {
       "meta-title": "listnride press",
-      "meta-description": "We love bike sharing. And we’ll gladly answer all your questions."
+      "meta-description": "Nous aimons la location de vélos. Et nous nous ferons un plaisir de répondre à toutes vos questions."
     },
     "invest": {
-      "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+      "meta-title": "listnride fait du crowdfunding! Faites-en partie et investissez dans le développement de la première communauté de location de vélos en Europe.",
       "meta-description": "Visit Seedrs to learn more about investing in listnride."
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Website Terms & Conditions",
-      "meta-description": "The Terms and Conditions of the Bike-Sharing-Community listnride apply to the use of the online platform."
+      "meta-description": "Les termes et conditions de listnride s'appliquent à l'utilisation de la plateforme en ligne."
     },
     "trust-and-safety": {
       "meta-title": "Bicycle rental with insurance"
     },
     "how-it-works": {
-      "meta-title": "Bike sharing made easy",
+      "meta-title": "La location de vélo rendue facile",
       "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!"
     },
     "jobs": {
@@ -538,7 +568,7 @@
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
-      "meta-description": "The Privacy Policy of the Bike-Sharing-Community listnride applies to the use of the online platform.",
+      "meta-description": "La politique de confidentialité de listnride s'applique à l'utilisation de la plateforme en ligne.",
       "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
       "use-opt-in-button": "I got that."
     }
@@ -621,7 +651,7 @@
       "redeem-voucher": "Redeem Voucher",
       "add": "Add",
       "success-header": "Congratulations, you have just requested a bike!",
-      "success-subheader": "We've sent you a confirmation email. Feel free to book more bikes, afterwards."
+      "success-subheader": "Nous vous avons envoyé un email de confirmation! N'hésitez pas à réserver plus de vélos."
     },
     "calendar": {
       "tab": "Duration",
@@ -629,7 +659,7 @@
       "choose-duration": "Choose your rental duration",
       "pickup-time": "Pickup time",
       "return-time": "Return time",
-      "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike sharing community."
+      "intro-description": "Votre réservation est traitée de manière sécurisée par listnride, la plus grande plateforme de location de vélos d'Europe."
     }
   },
   "toasts": {
@@ -742,9 +772,9 @@
     "private-tip": "This information will not be open to the public",
     "public-tip": "This information will be visible on your profile page",
     "1": {
-      "text1": "Welcome to our passionate bike sharing community, featuring lots of bikes and bike enthusiasts all over the world.",
+      "text1": "Bienvenue sur notre plateforme de location de vélos passionnée, qui regroupe de nombreux vélos et passionnés de vélo du monde entier.",
       "text-invited": "As you've got invited by a friend, we've just put a voucher in your account. It gets redeemed automatically for your first rental!",
-      "text2": "We're a sharing community, so the trust and safety of you and the other users have highest priority. We therefore kindly ask you to verify your profile through a few simple steps. The better the information you enter, the higher are chances that your requests will be accepted and bikes will be requested."
+      "text2": "Nous sommes une communauté soudée. La priorité est donc accordée à la confiance et à la sécurité de vos utilisateurs. Nous vous demandons donc de bien vouloir vérifier votre profil en quelques étapes simples. Plus vous entrez d’informations, plus vos demandes de location seront acceptées."
     },
     "2": {
       "title": "Upload your profile picture",
@@ -813,7 +843,7 @@
     "price": "Price",
     "book": "Book",
     "rating": "Rating",
-    "listChat": "Request by {{user.first_name}}",
+    "listChat": "Demande de {{user.first_name}}",
     "rideChat": "Request to {{lister.first_name}}",
     "ratings": {
       "title": "How did you like the overall experience?",
@@ -852,23 +882,23 @@
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} from {{user.city}} would like to rent your <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from {{timespan}}. Agree on further details using the chat.",
-    "11": "The booking was cancelled. ",
-    "3": "You've accepted the request. The bike is now booked and you'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: <a href=\"//www.google.com/maps/search/?api=1&query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}} </a> ",
-    "5": "Thanks for confirming retrieval of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:\"hello@listnride.com\">hello@listnride.com</a>",
-    "8": "You rejected the request. Please tell the rider why you can't rent him the bike.",
-    "9": "Unfortunately {{user.first_name}} didn't confirm the request",
-    "10": "Your request was cancelled by system"
+    "1": "{{user.first_name}} {{user.last_name}} de {{user.city}}voudrait louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>ID Vélo: {{ride.bicycle_number}}.<br>Taille du cadre: {{ride.frame_size? ride.frame_size: 'non spécifié'}}. <br>Date: {{timespan_short}}.<br><br><br>Acceptez ou refusez la réservation, et discutez les détails supplémentaires en utilisant le chat ci-dessous.",
+    "11": "La réservation a été annulée.",
+    "3": "Vous avez accepté la demande. Le vélo est maintenant réservé et vous le louez à partir de {{timespan}}! Les coordonnées sont ci-dessous, nous vous les avons également envoyées par email.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
+    "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
+    "8": "Vous avez rejeté la demande. Veuillez donner une raison pourquoi vous ne pouvez pas louer le vélo.",
+    "9": "Malheureusement, {{user.first_name}}n'a pas confirmé la demande.",
+    "10": "Votre réservation a été annulée par le système"
   },
   "rideChat": {
-    "1": "You would like to rent the <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> from  {{lister.display_name}} from {{timespan}}. Agree with the lister on further details. As soon as he accepts your request, the bike gets booked.",
-    "11": "The booking of your rental bike was cancelled.",
+    "1": "Vous avez fait une demande pour le <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} a partir de {{timespan}}. Vous pouvez parler avec {{lister.display_name}} ci-dessous. C'est seulement quand votre demande será acceptée, que le paiement será effectué et que le vélo será réservé.",
+    "11": "La réservation de votre vélo a été annulée.",
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
-    "5": "{{lister.first_name}} has confirmed the return of the ride and gave you a review. Finally, please also rate the ride. This helps our community a lot and completes the rental.",
-    "6": "Thanks for rating, the rental was successfully completed.",
+    "5": "Avez-vous eu une bonne expérience avec le vélo de {{lister.first_name}}? Partagez votre expérience en laissant un court commentaire. Cela aidera les futurs cyclistes à mieux comprendre à quoi s'attendre.",
+    "7": "Thanks for rating, the rental was successfully completed.",
     "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
     "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking.",
-    "10": "The request got cancelled."
+    "10": "La demande a été annulée."
   },
   "forms": {
     "first-name": "First Name",
@@ -965,8 +995,8 @@
     "list-a-bike-subheader": "List your bike for rent, meet fun new people and earn some extra cash.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
     "newsletter-subheader": "Receive our email about new bikes, tours and discounts for your rides.",
-    "meta-title": "listnride - The bike sharing community",
-    "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+    "meta-title": "Location de vélos: Louez un vélo de route, un VTT ou un vélo électrique | listnride",
+    "meta-description": "Louez le parfait vélo qui correspond à votre style et à vos besoins. Réservez confortablement en ligne, en toute sécurité."
   },
   "autocomplete": {
     "default-placeholder": "Where would you like to rent a bike?"
@@ -1030,7 +1060,7 @@
       "special": "Special",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Road and touring bikes",
+      "road": "Road - touring ",
       "transport": "Transport"
     },
     "details": {
@@ -1267,11 +1297,11 @@
     },
     "search-section": {
       "header": "Where would you like to go?",
-      "subheader": "listnride’s bike sharing service is becoming available in more and more locations."
+      "subheader": "Le service de location de vélos par listnride devient disponible en des lieux de plus en plus nombreux."
     },
     "testmonials-section": {
       "header": "What do our riders say about us?",
-      "subheader": "More and more people are discovering the benefits of bike sharing via listnride. Check out some of their testimonials:"
+      "subheader": "De plus en plus de gens découvrent les avantages de la location de vélo via listnride. Découvrez quelques-uns de leurs témoignages:"
     }
   },
   "list-a-bike": {
@@ -1291,7 +1321,7 @@
       "header": "Safety first!",
       "subheader": "listnride has your back.",
       "precautions-title": "We take the necessary precautions.",
-      "precautions-content": "You want to rent out your bike – but not to just anybody. That’s why we verify the identity of all our users for you. And our user ratings help you find out whether they play fair in the bike sharing scene.",
+      "precautions-content": "Vous voulez faire louer votre vélo - mais pas à n'importe qui. C’est pourquoi nous vérifions pour vous l’identité de tous nos utilisateurs. Et nos évaluations des utilisateurs vous aident à savoir s’ils sont bon joueurs sur la scène de locations de vélos.",
       "control-title": "You stay in control.",
       "control-content": "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment.",
       "covered-title": "You're covered.",
@@ -1306,7 +1336,7 @@
     },
     "testmonials-section": {
       "header": "Renting out bikes: What do our listers say about us?",
-      "subheader": "Many people have already become a sharing part of our listnride community. Read about their personal experiences:"
+      "subheader": "De nombreuses personnes font déjà partie de notre communauté listnride. Lisez ici à propos de leurs expériences personnelles:"
     }
   },
   "invoices": {
@@ -1320,7 +1350,7 @@
     "payout": "Payout",
     "you_paid": "You paid",
     "invoice": "Invoice",
-    "billing": "Billing",
+    "billing": "Factures",
     "download-csv": "Download CSV",
     "download-pdf": "Download PDF",
     "no-rentals": "You had no rentals yet",
@@ -1332,11 +1362,11 @@
     "meta-title": "listnride | 10€ for you!",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
     "header": "sent you 10€",
-    "subheader": "Welcome to listnride, the Bike Sharing Community",
-    "subsubheader": "listnride is the bike sharing community that brings together cycling enthusiasts of all sorts. Members can rent out their own bikes via our website or app, or rent a bike that perfectly suits their style and needs.",
+    "subheader": "Bienvenue sur listnride, la plateforme de location de vélos",
+    "subsubheader": "listnride est la plate-forme de location de vélos qui réunit des passionnés de cyclisme de toutes sortes. Les membres peuvent faire louer leurs propres vélos via notre site, ou louer un vélo qui correspond à leur style et à leurs besoins.",
     "subsubsubheader": "You've been invited by {{ name }}. Sign up now and you'll get a 10€ voucher added to your account. It can be used for your next bike rental. ",
     "sign-up-get-voucher": "Sign up to get the Voucher",
-    "how-lnr-works": "Bike sharing without the hassle",
+    "how-lnr-works": "Location de vélo sans tracas",
     "explanation-1-title": "1. Find and request",
     "explanation-1-description": "Find the right bike near you and request it.",
     "explanation-2-title": "2. Book and pick it up",
@@ -1351,7 +1381,7 @@
     "login": "Log in to get your invite link",
     "info-section": {
       "header": "Earn 10€ credit when a friend accepts your invite and rents a bike or lists one of their own.",
-      "subheader": "Are you enthusiastic about listnride and want to spread the word? Then invite your friends to become part of the listnride bike sharing community.",
+      "subheader": "Êtes-vous enthousiaste à propos de listnride et souhaitez-vous passer le mot? Invitez ensuite vos amis à faire partie de la communauté listnride.",
       "invite-friends": "Invite friends",
       "community": "Help grow the community",
       "earn-credit": "Earn listnride credit"
@@ -1382,7 +1412,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} has invited you to join listnride!",
-      "email-body": "{{first_name}} has given you 10€ for your first adventure on the bike of your choice!  Join listnride, the fastest growing bike sharing community, and get access to countless bikes for every purpose! Sign up and immediately receive a 10€ credit. {{voucher_url}} Do you want to thank {{first_name}}? Rent a bike or list your bike and {{first_name}} receives a 10€ credit, too! Have fun, and enjoy the ride!"
+      "email-body": "{{first_name}}vous a donné 10 € pour votre première location! Rejoignez listnride, la plate-forme de location de vélos à la croissance la plus rapide, et accédez à d'innombrables vélos pour tous les besoins! Inscrivez-vous et recevez immédiatement un crédit de 10 €. {{voucher_url}}Souhaitez-vous remercier {{first_name}}? Louez un vélo ou enregistrez un de vos vélos et {{first_name}}recevra également un crédit de 10 €! Profitez-en!"
     }
   },
   "error-404": {

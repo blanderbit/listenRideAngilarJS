@@ -13,25 +13,79 @@ angular
 
 function PaymentHelperController(ENV, api, authentication, notification) {
   return {
-    btAuthorization: ENV.btKey,
-    btClient: '',
-    btPpInstance: '',
-    setupBraintreeClient: function () {
-      var self = this;
-      braintree.client.create({
-        authorization: self.btAuthorization
-      }, function (err, client) {
-        if (err) {
-          // TODO: show braintree errors. Find documentation
-          return;
-        }
-        self.btClient = client;
-        braintree.paypal.create({
-          client: self.btClient
-        }, function (ppErr, ppInstance) {
-          self.btPpInstance = ppInstance;
-        });
+    btClient: null,
+    btPpInstance: null,
+    btThreeDSecure: null,
+    fetchClientToken: function() {
+      return api.get('/users/' + authentication.userId() + '/payment_methods/new').then(function(response) {
+        return response.data.token;
       });
+    },
+    fetchPaymentMethodNonce: function() {
+      return api.get('/users/' + authentication.userId() + '/payment_methods/nonce').then(function(response) {
+        return response.data.nonce;
+      });
+    },
+    createBrainTreeClient: function(clientToken) {
+      return braintree.client.create({
+        authorization: clientToken
+      });
+    },
+    createThreeDSecure: function(btClient) {
+      return braintree.threeDSecure.create({
+        version: 2,
+        client: btClient
+      });
+    },
+    setupBraintreeClient: function() {
+      var self = this;
+
+      return self.fetchClientToken()
+        .then(self.createBrainTreeClient)
+        .then(function(btClient) {
+          self.btClient = btClient;
+          return self.btClient;
+        })
+        .then(self.createThreeDSecure)
+        .then(function(threeDSecure) {
+          self.btThreeDSecure = threeDSecure;
+          return self.btThreeDSecure;
+        })
+        .then(function() {
+          return self.btClient;
+        });
+    },
+    authenticateThreeDSecure: function(amount, user, addFrameCb, removeFrameCb) {
+      var self = this;
+
+      return self.setupBraintreeClient()
+        .then(self.fetchPaymentMethodNonce)
+        .then(function(nonce) {
+          var location = user.locations.billing_address || user.locations.primary;
+
+          return self.btThreeDSecure.verifyCard(
+            {
+              amount: amount,
+              nonce: nonce,
+              additionalInformation: {
+                billingGivenName: user.firstName,
+                billingSurname: user.lastName,
+                billingPhoneNumber: user.pretty_phone_number,
+                billingAddress: {
+                  streetAddress: location.street,
+                  locality: location.city,
+                  countryCodeAlpha2: location.alpha2_country_code
+                },
+                email: user.email
+              },
+              addFrame: addFrameCb,
+              removeFrame: removeFrameCb,
+              onLookupComplete: function(data, next) {
+                next();
+              }
+           }
+          );
+        });
     },
     btPostCreditCard: function(creditCardData, cb, cbError) {
       notification.show(null, null, 'booking.payment.getting-saved');
@@ -59,7 +113,6 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
             function () {
               if (typeof cb == 'function') cb(data.payment_method);
-              notification.show(success, null, 'toasts.add-payment-success');
             },
             function (error) {
               if (typeof cbError == 'function') cbError();
@@ -68,30 +121,6 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           );
         }
       });
-    },
-    btPostPaypal: function(cb) {
-      this.btPpInstance.tokenize({ flow: 'vault' },
-        function (tokenizeErr, payload) {
-          if (tokenizeErr) return;
-
-          var data = {
-            "payment_method": {
-              "payment_method_nonce": payload.nonce,
-              "email": payload.details.email,
-              "payment_type": "paypal-account"
-            }
-          };
-
-          api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
-            function () {
-              cb(data.payment_method);
-            },
-            function (error) {
-              notification.show(error, 'error');
-            }
-          );
-        }
-      );
     },
     updatePaymentUserData: function(currentPaymentData, newData) {
       return Object.assign({}, newData);
@@ -106,6 +135,18 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           notification.show(null, null, 'shared.errors.unexpected-payment-type');
           return false;
       }
+    },
+    savePaypalPaymentMethod: function(payload) {
+      var data = {
+        "payment_method": {
+          "payment_method_nonce": payload.nonce,
+          "email": payload.details.email,
+          "payment_type": "paypal-account"
+        }
+      };
+
+      api.post('/users/' + authentication.userId() + '/payment_methods', data);
+      return data.payment_method;
     }
-  }
+  };
 }
