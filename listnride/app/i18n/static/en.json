@@ -114,7 +114,7 @@
     "faq": {
       "group-1": {
         "title": "Getting Started",
-        "description": "We help you to find the perfect bike for your needs. You will experience what it means to be part of our bike-sharing community.",
+        "description": "We help you to find the perfect bike for your needs.",
         "answer-1": "Looking for a bike in Vienna? Just type Vienna in the search bar. Our super fast search engine will show you all results including a map view with the locations. Searching for a location is currently the only search option. ",
         "answer-2": "The search result will show you all bikes in a given location. To narrow your search result, you can use the filters: Time Span, All Sizes, Bike Type and All Brands.",
         "answer-3": "There is a calendar on the bike’s detail page. Black numbers represent bookable days, greyed-out numbers are not available and red numbers represent already booked days.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
@@ -140,7 +140,7 @@
         "answer-9": "You will receive an e-mail and sms notification, informing you on the new booking request, containing all relevant details.\nLogin and go to “Requests” to accept or reject the booking and start a chat with the Rider if there is something to clarify.\nIf you accept the request the booking is done and the rental is paid for. You will receive a booking confirmation with all the relevant information and contact details of the Rider via e-mail.",
         "answer-10": "Sure. Click the red button to reject the requests and ask the Rider to request the bike for a different date and time. Please be so kind to let the Riders know why you rejected their request.",
         "answer-11": "The Rider might be new in town and need a bit more time to find the location, just allow the Rider a time buffer of 15-30 minutes. If a Rider doesn’t show up after that, first try to get in touch directly through the mobile number provided to you. If you still can’t get a hold of the Rider, feel free to no longer be obliged by the agreement. \n<br>\nWe would appreciate a  \n<a href=\"mailto:contact@listnride.com?subject=Rider does not show for pick-up\">short message</a> \njust to see if we may support you.",
-        "answer-12": "Also here some flexibility is required, just allow the Rider a time buffer of 10-15 minutes. If the Rider doesn’t return the bike after that, get in touch directly through the phone number provided. If it doesn’t work, \n<a href=\"mailto:contact@listnride.com?subject=Rider does not show for return\">contact us</a> \nand we will upport you.",
+        "answer-12": "Also here some flexibility is required, just allow the Rider a time buffer of 10-15 minutes. If the Rider doesn’t return the bike after that, get in touch directly through the phone number provided. If it doesn’t work, \n<a href=\"mailto:contact@listnride.com?subject=Rider does not show for return\">contact us</a> \nand we will support you.",
         "answer-13": "To confirm the return of your bike, login to your account, go the specific request and click the “Confirm Return” button in the chat.",
         "question-1": "How do I list my bike?",
         "question-2": "What makes a bike attractive to Riders?",
@@ -150,7 +150,7 @@
         "question-6": "I need to change the details of my bike. How do I do that?",
         "question-7": "I have more bikes of the same type, can I duplicate them?",
         "question-8": "How can I delete my bike?",
-        "question-9": "Ho do I know if my bike is requested?",
+        "question-9": "How do I know if my bike is requested?",
         "question-10": "Can I reject a request or ask the Rider to change the rental period?",
         "question-11": "What if the Rider doesn’t show up as agreed to pick up my bike?",
         "question-12": "What if the Rider doesn’t return the bike on time?",
@@ -186,7 +186,7 @@
       },
       "group-4": {
         "title": "Payment & Service fees",
-        "description": "Information on the costs of joining listnride,  how and when you pay for your rental and how you will receive your rental amounts when renting out your bike",
+        "description": "Information on the costs of joining listnride, how and when you pay for your rental and how you will receive your rental amounts when renting out your bike",
         "answer-1": "Nothing! Listing any number of bikes is free.",
         "answer-2": "Within seven days after the end of the rental period you will receive your rental payout to the payout method provided in your account settings. We will deduct 7.5% (excl. VAT) as the listnride service fee from your rental amount.",
         "answer-3": "We support payment through Paypal and the most common credit cards e.g. Mastercard and Visa. Offline or cash payments are in violation with our Terms and Conditions. It might result in a removal of your account from listnride. It is in your own interest to avoid cash payments as it makes it harder for us to protect your information and puts you at a greater risk of fraud and other security issues, e.g. your bike will not be insured.",
@@ -209,19 +209,19 @@
         "answer-2": "Free cancellation is possible if this takes place no later than 5 days before the start of the rental period and the rental period is longer than 24 hours (for example from 9.00 to 12.00 the next day). In all other cases, there are costs associated with the cancellation.",
         "answer-3": "Riders will get a full refund of the rental price, if the cancellation is made at least five days before the start of the rental period.\nIf the cancellation is made less than five days before the start of the rental period, but at least 24 hours before the start of the rental period Riders will get 50% of the net rental price refunded. If the cancellation is made less than 24 hours before, Riders don’t get any refund.",
         "answer-4": "listnride service fees are not refundable in case of cancellation by the Rider.\nIn case of cancellation by the Lister, the Rider will receive compensation of both the rental price as well as listnride service fees.",
-        "answer-5": "In principle, you can cancel your booking at any time. Cancelling a booking can have far-reaching consequences for the travel and/or plans of the rider. Because cancellations disrupt Riders' plans and affect trust in the listnride community. There is no cancellation fee, but we insist you comply with their reservation.",
+        "answer-5": "In principle, you can cancel your booking at any time. Cancelling a booking can have far-reaching consequences for the travel and/or plans of the rider, and can affect trust in the listnride community. There is no cancellation fee, but we insist you comply with their reservation.",
         "question-1": "How do I cancel my booking as Rider or Lister? ",
         "question-2": "How long after acceptance of my request can I cancel a booking as a Rider?",
         "question-3": "Do I get a refund of the entire rental price?",
         "question-4": "Is the listnride service fee refundable?",
-        "question-5": "How long after accepting a request can I cancel as a Lister? "
+        "question-5": "As a lister, how long after accepting a request can I cancel? "
       },
       "group-7": {
         "title": "Vouchers & Credits",
-        "description": "Use vouchers to get credit for bike rentals. Here you can learn how to redeem them. You can also invite friends to get credit.",
-        "answer-1": "You can get vouchers by inviting your friends to join our bike-sharing community through Facebook or via email. Log into your profile, go to the \n<a href=\"http://www.listnride.com/invite-friends\" target=\"_blank\">invite Friends</a> \npage and share the link. If your friends rent or list a bike using the link, you will receive a 10€ credit as a thank you. \nYou can use that credit for your next rental.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-7.answer-1.jpg\">\n",
+        "description": "Use vouchers to get credit for bike rentals. Here you can find out how to redeem them. You can also invite friends to get credit.",
+        "answer-1": "You can get vouchers by inviting your friends to join our bike-rental community through Facebook or via email. Log into your profile, go to the \n<a href=\"http://www.listnride.com/invite-friends\" target=\"_blank\">Invite Friends</a> \npage and share the link. When your friends rent or list a bike using the link, you will receive a 10€ credit as a thank you. \nYou can use that credit for your next rental.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-7.answer-1.jpg\">",
         "answer-2": "To use vouchers, just enter the voucher code in the entry field “<b>Redeem Voucher</b>” when you request a bike. Or you can enter the code in your account settings, in the section “<b>Vouchers</b>”.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-7.answer-2.jpg\">",
-        "answer-3": "You can use vouchers every time you request a bike, but a single code can only be used once. If you don’t use the total amount at once, the saldo will be saved in your account and can be used for your next rental.",
+        "answer-3": "You can use vouchers every time you request a bike, but a single code can only be used once. If you don’t use the total amount at once, the remainder will be saved in your account and can be used for your next rental.",
         "question-1": "How do I get a voucher? ",
         "question-2": "How can I use vouchers?",
         "question-3": "When can I use vouchers?"
@@ -229,9 +229,9 @@
       "group-8": {
         "title": "Ratings & Feedback",
         "description": "Learn how to get ratings, give ratings and provide feedback to the listnride community.",
-        "answer-1": "After you have confirmed the return of your bike, you and the Rider will be asked to rate the bike and rental experience by means of a 5-star rating system. This is how you can get ratings for your bike. The review you get from the Rider will be published on your profile page.",
+        "answer-1": "After you have confirmed the return of your bike, you and the Rider will be asked to rate the bike and rental experience by means of a 5-star rating system. The review you get from the Rider will be published on your profile page.",
         "answer-2": "To improve your ratings we suggest that your bike matches your bike description, that you are on time, help the Rider get ready for the ride and give some tips about where to go and what to do in your area.",
-        "answer-3": "After the rental period ended you and the Lister will be asked to rate the bike and the rental experience by means of a 5-star rating system. This is how you can rate the bike and the Lister.\nThe review you get from the Lister will be published on your profile page.",
+        "answer-3": "After the rental period ended you and the Lister will be asked to rate the bike and the rental experience by means of a 5-star rating system. The review you get from the Lister will be published on your profile page.",
         "answer-4": "If you get an unjustified negative feedback please first get back to the author and kindly ask for an explanation. In case you don’t get a reply or you are unable to solve the issue, you can contact us.",
         "question-1": "How do I get ratings for my bikes?",
         "question-2": "How can I improve the ratings for my bike?",
@@ -247,7 +247,7 @@
         "answer-3": "Click on sign-up and fill out the required information with a few details to get the best out of listnride and meet people with great bikes. You can also use the one-click Facebook registration for signing-up. In order to request a bike, you need to verify your mobile number, e-mail address and provide a valid method of payment. Your personal data will be stored safely. Through this process we can mediate a valid rental contract for both parties and make sure payments happen in a secure manner.",
         "answer-4": "The first step is to request the bike. Select the rental days and exact times of the bike on its detail page. If you’re planning to pick up and return the bike on the same day, click twice on the date and then choose the time slot. After requesting the bike you can start a direct chat with the Lister. Once the Lister has accepted your request, the bike is booked for you.",
         "answer-5": "Click on “List a Bike” and add information about your bike including brand, description, pictures, rental price and accessories that you can provide with the bike. When done, click “List my Bike”. Your bike is now available for rentals to the community.",
-        "answer-6": "You are completely free to decide on the rental price. Note that the weekly price can’t be lower than the daily price. To determine the most appropriate rental price, you can compare your bike to similar available bikes on listnride.",
+        "answer-6": "You are completely free to decide on the rental price. Note that you can set a discount for each following day, as well as set a weekly and monthly price. To determine the most appropriate rental price, you can compare your bike to similar available bikes on listnride.",
         "answer-7": "You will receive an email and sms notification, informing you on the new booking request, containing all relevant details.\nLogin and go to “Requests” to accept or reject the booking and start a chat with the Rider if there is something to clarify.\nIf you accept the request, the booking is done and the rental is paid. You will receive a booking confirmation with all the relevant information and contact details of the Rider via email.",
         "answer-8": "Nothing! Listing any number of bikes is free.",
         "answer-9": "We support payment through Paypal and the most common credit cards e.g. Mastercard and Visa. Offline or cash payments are in violation with our Terms and Conditions. It might result in a removal of your account from listnride. It is in your own interest to avoid cash payments as it makes it harder for us to protect your information and puts you at a greater risk of fraud and other security issues, e.g. your bike will not be insured.",
@@ -268,7 +268,7 @@
   "insurance": {
     "main": {
       "title": "Our insurance protects you. No matter if lister or rider.",
-      "description": "Renting your special bike means having confidence. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. And our partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone. By e-mail. Simple. Straight forward. ",
+      "description": "Renting your special bike demands trust. What if it gets stolen during lending? What if it comes back to you damaged? All listnride rentals in Germany and Austria are insured. Our partner <a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> will be there for you when you need help. By phone or by e-mail. Simple and straight forward. ",
       "logo-description": "coverage provided by"
     },
     "facts": {
@@ -276,29 +276,29 @@
       "basic-insurance": {
         "price": "Included",
         "title": "Basic Insurance",
-        "description": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee 250€\n</ul>"
+        "description": "<ul>\n <li>Protection in case of unintentional self-inflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee 250€\n</ul>"
       },
       "premium-insurance": {
         "title": "Premium Insurance",
         "price": "3€",
         "price-description": "per day",
-        "description": "<ul>\n <li>Protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>"
+        "description": "<ul>\n <li>Protection in case of unintentional self-inflicted and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>"
       }
     },
     "faqs": {
       "title": "More questions? Here you will find answers!",
       "lister": {
-        "description": "As a lister on listnride you want to be sure that you and your bike are protected against all eventualities. That's why every rental in Germany and Austria, through listnride, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and guarantees. This service is free for you as a Lister.\n<p>\nIf you have further questions, contact us around the clock via mail.",
+        "description": "As a lister on listnride you want to be sure that you and your bike are protected against all eventualities. That's why every rental in Germany and Austria, through listnride, is automatically insured with immediate effect. Riders who request your bike can optionally book the premium package to get additional services and guarantees. This service is free for you as a Lister.\n<p>\nIf you have further questions, feel free to contact us anytime via e-mail.",
         "question-1": "How much does the insurance cost?",
         "tabname": "For Lister",
         "answer-1": "Nothing! Since the insurance is only purchased by riders, there are no additional costs for you as lister. However, do realise that your daily rental price will be a bit more expensive for riders. The cost of the basic insurance is 0.1% of the insurance value of your bike. If you have your bike insured up to 1,000€, then riders pay an additional Euro per rental day. With an insurance value of up to 5,000€, there is an additional 5€ per rental day.",
         "question-2": "What is the maximum listnride insurance coverage for my bike?",
-        "answer-2": "Every bike is automatically insured up to 1,000€ and can be insured by you up to a maximum of 5,000€. \n<br>\nThe actual payout in case of loss or damage is based on the actual value of the bike. It is determined by the \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\n individually case by case.\n<br>\nPlease remember when determining the insurance value that riders pay for the insurance fee, the amount of which depends on your chosen insurance value. This means; the higher you insure the bike, the higher the insurance fee for the Rider will be.",
+        "answer-2": "Every bike is automatically insured up to 1,000€ and can be insured by you up to a maximum of 5,000€. \n<br>\nThe actual payout in case of loss or damage is based on the actual value of the bike, which is determined by the \n<a href=\"https://www.gothaer.de\" target=\"_blank\">Gothaer Insurance</a>\n individually case by case.\n<br>\nPlease remember when determining the insurance value that riders pay for the insurance fee, the amount of which depends on your chosen insurance value. This means that the more you insure the bike, the higher the insurance fee for the Rider will be.",
         "question-3": "What do I have to do if an insurance claim occurs?",
         "answer-3": "Should you ever find yourself in a situation where your bike is damaged or stolen during a rental, please contact\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n directly:\n<ul>\n<li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>0800 - 0753336\n</ul>\n<br> \nhepster staff will answer your request quickly and competently."
       },
       "rider": {
-        "description": "We offer two insurance packages for each bike you rent via lisntride: The \n<b>Basic Insurance</b> \nis included in every rental, the \n<b>Premium Insurance</b>\n is optional and extends the insurance cover by additional benefits.\n<br> \nYour bike and you are always optimally protected. You can start cycling with a clear conscience!",
+        "description": "We offer two insurance packages for each bike you rent via lisntride: The \n<b>Basic Insurance</b> \nis included in every rental, the \n<b>Premium Insurance</b>\n is optional and extends the insurance cover by additional benefits.\n<br> \nYour bike and you are always optimally protected. You can start the rental with a clear conscience!",
         "question-8": "Are there any coverage restrictions?",
         "answer-8": "Some cases of damage may result in a reduction of compensation, for example:\n<br>\n <ul>\n  <li>In case of damage that does not affect the usability of the bike\n  <li>In case of simple theft, if your bicycle was not secured in any usual way\n </ul>\n<p>\nIn any case, damage caused by one of the following is excluded from insurance cover:\n<br>\n <ul>\n  <li>Intentional actions by you\n  <li>Manipulation of the drive system (e.g. tuning)\n </ul>",
         "question-9": "What are my obligations?",
@@ -307,15 +307,15 @@
         "tabname": "For Rider",
         "answer-1": "The cost of the Basic Insurance is only 0.1% of the insurance value of the bike you have booked.\n<br>\nIf a bike is insured up to 1.000 €, then you pay exactly one Euro per rental day for the Basic Insurance.",
         "question-2": "How much does Premium Insurance cost?",
-        "answer-2": "Three Euros per day in addition to the rent and the listnride-<a href=\"https://www.listnride.com/terms\" target=\"_blank\">fees</a>.",
+        "answer-2": "Three euros per day in addition to the rent and the listnride<a href=\"https://www.listnride.com/terms\" target=\"_blank\">service fees</a>.",
         "question-3": "What does the Basic Insurance cover?",
-        "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention 250€\n</ul>",
+        "answer-3": "<ul>\n <li>Protection in case of unintentional selfinflicted or third party caused damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Retention fee 250€\n</ul>",
         "question-4": "What does Premium Insurance cover?",
         "answer-4": "<ul>\n <li>protection in case of unintentional self- and external damage\n <li>Protection against vandalism\n <li>Protection of electronics and battery for pedelecs\n <li>Theft protection\n <li>24/7 emergency number in case of theft or damage\n <li>Return transport after theft or damage\n <li>Bike replacement after theft or damage\n <li>No retention fee\n</ul>",
         "question-5": "Is there a retention fee in case of damage? How high is it?",
         "answer-5": "The retention fee is 250€ for the Basic Insurance.\n<br>\nThe Premium Insurance has no retention fee.",
         "question-6": "How do I end the insurance after my bike rental ends?",
-        "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou can download the certificate directly and will receive it by e-mail. You don't have to do anything.",
+        "answer-6": "With every bike rental you will receive an individual insurance certificate. This is \n<b>only</b> \nvalid for the specific booking and for the \n<b>time period</b>\n selected by you. It ends automatically.\n<p>\nYou will receive the certificate by email, or can download it directly from our website.",
         "question-7": "Whom do I contact if I need to claim my insurance?",
         "answer-7": "Of course we hope that this will never happen!\n<br>\n The insurance is offered by our online insurance partner \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n and covered by \n<a href=\"http://www.gothaer.de\" target=\"https://www.gothaer.de/\">Gothaer Insurance</a>\nSince you yourself are the policyholder of hepster, it is best to contact hepster:\n<ul>\n <li><a href=\"mailto:schaden@hepster.com?subject=Damage after listnride rental\">schaden@hepster.com</a>\n <li>0800 - 0753336\n</ul>\n<br>\nhepster staff will support you quickly and competently."
       },
@@ -335,10 +335,10 @@
     },
     "bike-page": {
       "title": "Bikes come first ",
-      "description": "Each bike has a unique profile with detailed information that allows our users to rent the bike of his choice in seconds."
+      "description": "Each bike has a unique profile with detailed information that allows our users to rent the bike of their choice in seconds."
     },
     "companies": {
-      "title": "Other Businesses that joined our listnride business community"
+      "title": "Other businesses that joined our listnride community"
     },
     "plugin-wp": {
       "title": "Listnride Booking Plug-in ",
@@ -346,7 +346,7 @@
       "install": "Install on Wordpress",
       "link": "Please use our <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">installation documentation</a> if you don't use Wordpress."
     },
-    "meta-description": "Join the listnride business community for bike rental",
+    "meta-description": "Join the listnride community for bike rental",
     "title": "Join the listnride bike rental community today",
     "subtitle": "No contracts, no monthly fees, only a commission per booking.",
     "description": "With listnride you can manage all your rental in one place. No more forms or miscommunication. Accept or reject bookings requests online, so you stay always in control. Ready to join listnride?",
@@ -356,7 +356,7 @@
     },
     "feature-2": {
       "title": "Simplified rental process",
-      "description": "No more emails and telephone calls taking away all your time. Simply receive booking request that you can accept."
+      "description": "No more emails and telephone calls taking away all your time. Simply receive booking requests online that you can readily accept."
     },
     "feature-3": {
       "title": "Get more rentals ",
@@ -364,11 +364,11 @@
     },
     "text-2": {
       "title": "Join the listnride Business Community!",
-      "description": "Register now and set up your own shop page instantly. Or contact us personally. We will be happy to help, contact us at: <br><a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> "
+      "description": "Register now and set up your own shop page instantly. Or contact us personally, we will be happy to help: <br><a href=\"mailto:contact@listnride.com\">contact@listnride.com</a> "
     },
     "text-3": {
-      "column-1": "listnride is already the largest community for bicycle sharing in Europe and with that a specialist for private and commercial bike rental. We know what our customers are looking for and so can direct them to your listnride shop page to easily find and book your rental bikes.",
-      "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help to find a new bike (purchase)."
+      "column-1": "listnride is already the largest community for bicycle rental in Europe and with that a specialist for private and commercial bike rental. We know what our customers are looking for and so can direct them to your listnride shop page to easily find and book your rental bikes.",
+      "column-2": "We believe it is important to offer our bicycle minded community a wide range of bicycles, from a crosser to a road bike and from a touring bike to a cargo bike. Together with you, we can not only offer our users the perfect rental bike for the holiday, but also help them find the bike they want to buy."
     }
   },
   "events": {
@@ -380,8 +380,27 @@
       "description": "What: <b>Paris-Brest-Paris</b> | When: <b>18-22 August 2019</b> | Where: <b>Bergerie National, Rambouillet, France</b>",
       "text": "Paris-Brest-Paris is a 1,200 km self-supporting tour from Paris to Brest in Brittany and back. It was first held in 1891, takes place every 4 years and, according to most records, is the oldest cycling event still existing today and the highlight of the calendar.</br></br>\nThe history, prestige and challenge of PBP attracts cyclists from all over the world, and the fact that it only takes place every four years only helps to reinforce the event. This year, more than 6,000 riders will be given the chance to take part in this most historic of long-distance races.</br></br>\nRoad bikes for rent will be adjusted for you (bike-fitting) and can be picked up directly in the Rambouillet Castle Park, Expo area. The team on site rides part of the track and are experienced PBP riders and so very well prepared.<br><br>* Photography by James Robertson"
     },
+    "costadelsol": {
+      "title": "Rent a road bike for Gran Fondo Costa del Sol",
+      "description": "What: <b>Gran Fondo Costa del Sol</b> | When: <b>14 September 2019</b> | Where: <b>Estepona, Málaga, Spain</b>",
+      "text": "The <a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\"> Gran Fondo Costa del Sol</a> will test your legs on a rigorous 133km with over 3400m of elevation. There is also the option to ride the lighter version, at only 94km with 2400m of climbing. The event will start and finish on the sunny coast of Estepona, and will take you through some gorgeous mountain paths in the Sierra Bermeja. You will be climbing the iconic <b>Alto Cortes de la Frontera</b> and the colossal <b>Peñas Blancas</b>, and take in the richness of the environment to the fullest!<br>\nScroll down to choose and rent a light & fast bike below!",
+      "meta-title": "Simply rent the perfect road bike for the Gran Fondo Costa del Sol!",
+      "meta-description": "Enjoy the beautiful mountains of the Gran Fondo Costa del Sol by renting a carbon road bike from listnride!"
+    },
+    "8bar-clubride": {
+      "title": "Join our 8bar Clubride and ride a test bike for free!",
+      "description": "What: <b>8bar Club Ride</b> | When: <b>Every Tuesday, from April 9</b> | Where: <b>8bar Showroom</b>",
+      "text": "When you’re part of our community you will always find someone to ride with. During the summer, you can ride our weekly club rides every Tuesday evening from the 8bar showroom Berlin, or at our “member only” rides or events. Beside the fact that you’ll be saving on application fees to any 8bar-hosted or -sponsored cycling event, you can get a special discount on all 8bar products. And last but not least, every year you’ll get a fresh new cycling kit."
+    },
+    "granfondo-bikedivision": {
+      "title": "Rent your road bike the Granfondo Bike Division",
+      "description": " Where: <b>Peschiera del Garda</b> | what:  <b>Granfondo Bike division</b> | when: <b>22.09.2019</b>",
+      "text": "The Gran Fondo Bike Division Peschiera del Garda had a great start in 2015, and has been confirmed as one of the most remarkable and enjoyable Italian Granfondo during the 2016 edition, with more than 1000 participants in a picturesque location, with the breathtaking scenery of Lake Garda, an experienced and specialized staff, an exciting course with an Expo area. \nSince its debut, these are the ingredients that have made it a successful international event, and this is what you will find during the 5th edition of the <a href=\"http://www.gfbikedivisionpeschiera.com/en/\" target=\"_blank\">Granfondo Bike Division Peschiera del Garda</a>, on Sunday, September 22th, 2019. </br>\nThe route is now even more challenging with the ambitious MURO DEL GARDA, a 400m climb, which only the most trained will conquer. An event made for cycling lovers, passionate about tourism, curious to discover new amazing sceneries and to challenge themselves with passion and fun during in an thrilling Granfondo! ",
+      "meta-title": "Rent a road bike the Granfondo Bike Division",
+      "meta-description": " The Gran Fondo Bike Division Peschiera del Garda had a great start in 2015, and has been confirmed as one of the most remarkable and enjoyable Italian Granfondo during the 2016 edition, with more than 1000 participants in a picturesque location, with the breathtaking scenery of Lake Garda, an experienced and specialized staff, an exciting course with an Expo area. \nSince its debut, these are the ingredients that have made it a successful international event, and this is what you will find during the 5th edition of the <a href=\"http://www.gfbikedivisionpeschiera.com\"> Granfondo Bike Division Peschiera del Garda </a> , on Sunday, September 22th, 2019.  \n The route is now even more challenging with the ambitious MURO DEL GARDA, a 400m climb, which only the most trained will conquer. An event made for cycling lovers, passionate about tourism, curious to discover new amazing sceneries and to challenge themselves with passion and fun during in an thrilling Granfondo! "
+    },
     "cyclingworld": {
-      "title": "Book a Gravel bike from renowned brands 8bar, Salsa, Veloheld or Genesis for the gravel ride on the Cyclingworld Düsseldorf",
+      "title": "Book a Gravel bike from renowned brands such as 8bar, Salsa, Veloheld or Genesis for the gravel ride on the Cyclingworld Düsseldorf",
       "description": "What: <b>CyclingWorld</b> | When: <b> March 23-24, 2019 </b>| Where: <b>Dusseldorf, Germany</b>",
       "text": "Together with our partner SCHICKEMÜTZE and partner brands 8Bar, Salsa and Veloheld, we invite you to the Gravelrunde in the Düsseldorf region as part of Cyclingworld Düsseldorf. </br>You can choose between two routes, a flat round of 50 kilometres, which corresponds to last year's great tour, or a round of 70 kilometres, which leads across the Rhine and includes a few small climbs and rough sections around Ratingen. You will start in small teams of 2 to 6 people, navigated by gpx-file, which all starters will receive in advance of the tour by mail. You can choose which tour you want to take in the morning before the start. After returning to the Böhler area, we will be awaiting you in front of Cyclingworld with a few snacks and drinks to replenish the calorie reserves. After the tour you can leave your bike at a guarded parking lot to stroll around the fair without stress. An admission ticket to Cyclingworld is included in the starter package, as well as a few other small things. LISTNRIDE will offer you test bikes of different brands via their community, so if you want to ride a Gravelbike from 8Bar or others, please book your dream bike in advance at <a href=\"www.listnride.com/events/cyclingworld\" target=\"_blank\">www.listnride.com/events/cyclingworld </a>We will inform you about updates and everything worth knowing about the rides via mail. We are looking forward to an exciting Cyclingworld and a few great hours with you on and off the bike."
     },
@@ -408,12 +427,12 @@
     "lardita-arezzo": {
       "title": "Rent a vintage road bike for L’ Ardita \n",
       "description": "What:  <b> L’Ardita cyclostoric of the Alpe di Poti </b> | When: <b>24.3.2019 </b> | Where: <b> Arezzo, Tuscany</b>",
-      "text": "Heart of the festival is \"L 'Ardita\" the cyclostoric of the Alpe di Poti for vintage road bike. \nSunday, March 24, 2019 will face once again the Alpe di Poti, stage of the Giro d'Italia 2016 but also of many important races in the 70's and 80's. L' Ardita ,  has the particularity of evoking the cycling of the past, You need a vintage bike for <a href=\"https://www.lardita.com/eng\" target=\"_blank\"> L’ Ardita? </a>  can hook you up! Together with the listnride community, we provide suitable vintage road bikes which you can easily rent for the event. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that"
+      "text": "Heart of the festival is \"L'Ardita\" the cyclostoric of the Alpe di Poti for vintage road bike. \nSunday, March 24, 2019 will face once again the Alpe di Poti, stage of the Giro d'Italia 2016 but also of many important races in the 70's and 80's. L' Ardita ,  has the particularity of evoking the cycling of the past, You need a vintage bike for <a href=\"https://www.lardita.com/eng\" target=\"_blank\"> L’Ardita? </a> Together with the listnride community, we provide suitable vintage road bikes which you can easily rent for the event. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that"
     },
     "granfondo-via-del-sale": {
       "title": "Rent a road bike for the Granfondo Via del Sale",
       "description": "What:  <b> 23ª Granfondo Via del Sale </b> | When: <b>5.5.2019</b> | Where: <b> Fantini Club-Cervia (RA), Emilia Romagna </b>",
-      "text": "At its 23rd edition, the Via del Sale is one of the reference Granfondo in Italy, able to involve 6,000 participants and generate over 28,000 visitors. \nIn addition to these record numbers, there are more than 100 companies that each year choose to participate in the largest outdoor expo in Italy. \n3 different routes: Long route: 174 Km. Average route: 118 Km, Short route: 77 Km\nThe most famous climb? Certainly Montevecchio, the legendary \"Cima Pantani\". A place that we care about very much, become the main symbol of our Granfondo. A unique memory of the unforgettable Pirate, who came here to train for his great victories.\n Do you need a bike for the \n<a target=\"_blank\" href=\"http://granfondoviadelsale.com/\"> Granfondo Via del Sale ? </a>Together with the community of listnride, we provide you with road bikes, which you can easily rent for the event. Just choose one of the bikes below, request it for the desired period, and take it at the appropriate time.\nPhoto: Sportograf"
+      "text": "At its 23rd edition, the Via del Sale is one of the reference Granfondo in Italy, with 6,000 participants and over 28,000 visitors. \nIn addition to these record numbers, there are more than 100 companies that each year choose to participate in the largest outdoor expo in Italy. \n3 different routes: Long route: 174 Km. Average route: 118 Km, Short route: 77 Km\nThe most famous climb? Certainly Montevecchio, the legendary \"Cima Pantani\". A place that we care about very much, become the main symbol of our Granfondo. A unique memory of the unforgettable Pirate, who came here to train for his great victories.\n Do you need a bike for the \n<a target=\"_blank\" href=\"http://granfondoviadelsale.com/\"> Granfondo Via del Sale ? </a>Together with the community of listnride, we provide you with road bikes, which you can easily rent for the event. Just choose one of the bikes below, request it for the desired period, and take it at the appropriate time.\nPhoto: Sportograf"
     },
     "giro-sardegna": {
       "title": "Rent a road bike for the Giro Sardegna",
@@ -442,12 +461,12 @@
     "toros-de-gravel": {
       "title": "Rent a gravel bike for Toros de Gravel",
       "description": "what: <b>Toros de Gravel</b> | when: <b>October 13th</b> | where: <b>Sineu - Mallorca</b>",
-      "text": "Toros de Gravel will be the first gravel event ever held on Mallorca.  Designed to be a challenging but laid back ride, the route will explore little known corners of the island with checkpoints and racing segments before finishing at the Sineu velodrome for a rocking after party.  Suitable gravel bikes you can rent directly here, by clicking on the bike and requesting it."
+      "text": "Toros de Gravel will be the first gravel event ever held on Mallorca.  Designed to be a challenging but laid back ride, the route will explore little known corners of the island with checkpoints and racing segments before finishing at the Sineu velodrome for a rocking after party. You can rent suitable gravel bikes directly here, by clicking on the bike and requesting it."
     },
     "eroica-gaiole": {
-      "title": "Rent your vintage road bike for Eroica on listnride",
+      "title": "Rent your vintage road bike for l'Eroica on listnride",
       "description": "where: <b>Gaiole in Chianti, Tuscany</b> | what: <b>Eroica vintage road bike cycling event</b> | when: <b>7.10.2018</b>",
-      "text": "Eroica is a world famous cycling event. It has the particularity of evoking the cycling of the past, with routes that take place mostly on white roads with vintage road bikes and vintage clothing.You need a Eroica bike ? We can hook you up! Together with the listnride community, we provide suitable vintage road bikes which you can easily rent for the event. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that."
+      "text": "L'Eroica is a world famous cycling event. It has the particularity of evoking the cycling of the past, with routes that take place mostly on white roads with vintage road bikes and vintage clothing.You need a Eroica bike ? We can hook you up! Together with the listnride community, we provide suitable vintage road bikes which you can easily rent for the event. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that."
     },
     "in-velo-veritas": {
       "meta-title": "In Velo Veritas - Rent a bike with listnride",
@@ -458,7 +477,7 @@
     },
     "velothon-bikerental": {
       "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-      "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride bike sharing community and join in on the fun!",
+      "meta-description": "Take part in the Velothon Berlin 2017! Rent a road bike from the listnride community and join in on the fun!",
       "title": "Simply rent the perfect road bike for the Velothon Berlin",
       "text": "We can hook you up! Together with the listnride community, we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that.\n<br>\nYou can’t participate? Help out someone in need. <a href=\"/#/listing-a-bike\">List your bike</a> and make some extra pocket money!",
       "coffeespin": {
@@ -511,13 +530,13 @@
     },
     "depart": {
       "meta-title": "Rent a road bike for the Grand Départ on listnride",
-      "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community.",
-      "text-1": "Calling all cyclists in town for the start of the Tour de France in Düsseldorf - Let’s ride!<br><br>Together with our friends at <a href=\"http://schickemuetze.de\">Schicke Mütze</a>, we invite you to an easy paced social ride. We will ride a nice tour through the hilly surroundings of Düsseldorf, starting and finishing at the Schicke Mütze shop.<br><br>If you still need a road bike for the ride, you’re welcome to rent a high-end bike from the listnride bike-sharing community. See you out there :)",
+      "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride community.",
+      "text-1": "Calling all cyclists in town for the start of the Tour de France in Düsseldorf - Let’s ride!<br><br>Together with our friends at <a href=\"http://schickemuetze.de\">Schicke Mütze</a>, we invite you to an easy paced social ride. We will ride a nice tour through the hilly surroundings of Düsseldorf, starting and finishing at the Schicke Mütze shop.<br><br>If you still need a road bike for the ride, you’re welcome to rent a high-end bike from the listnride community. See you out there :)",
       "title": "Join us for a social ride and discover Düsseldorf's beautiful surroundings!",
       "text-2": "<b>On Friday, June 30, 2017</b><br><br><b>Start with coffee at the Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Departure at 10:00 hours<br><br>Distance up to 60 km<br><br>Tempo 24-27 kmh, easy going<br><br>After the ride from 18:00 - BBQ & Drinks @ Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Requirements Road bike, helmet and click pedal</b>",
       "sign-up": "Sign up for free",
       "description": "Still need a road bike for the big weekend?",
-      "subdescription": "Don't hesitate to book a great bike from our bike-sharing community."
+      "subdescription": "Don't hesitate to rent a great bike from our community."
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -537,7 +556,7 @@
     "cwd": {
       "home": {
         "title": "listnride at the Cycling World Düsseldorf",
-        "description": "Düsseldorf will host a new lifestyle trade fair around cycling: the Cycling World. We, listnride will be at the main entrance with selected brands and manufacturers such as Ampler and Cervélo, to present our bike sharing platform with exclusive of test-rides. In addition, we invite you to explore the surrounding countryside on two guided roadbike tours to bring the motivation gained at the fair straight to the road!",
+        "description": "Düsseldorf will host a new lifestyle trade fair around cycling: the CyclingWorld. We, listnride will be at the main entrance with selected brands and manufacturers such as Ampler and Cervélo, to present our bike rental platform. In addition, we invite you to explore the surrounding countryside on two guided road bike tours to bring the motivation gained at the fair straight to the road!",
         "pp-title": "Saturday",
         "kr-title": "Sunday",
         "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
@@ -592,6 +611,88 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
+    },
+    "urwahn": {
+      "title": " MadewithLove #Germany #SteelisReal",
+      "description": "Book a test drive for the <a href=\"https://www.urwahnbikes.com\" target=\"_blank\">Urwahn</a> Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!",
+      "item1-title": "Steel revamped",
+      "item2-title": "Integrated LED-light system",
+      "item3-title": " Quality made in Germany",
+      "item3-description": "Steel frame completely</br>\nmade in Germany</br>\nby selected regional partners",
+      "find-out-more": " Learn more about Urwahn",
+      "order-online": "Order your <a href=\"https://www.urwahnbikes.com\" target=\"_blank\">Urwahn</a> and we'll refund the rent for your test drive! Find below for the most frequently asked questions and answers.",
+      "faq-question-1": " Why this frame structure?",
+      "faq-answer-1": "With this novel frame structure, we have created an elastic rear triangle, that balances road bumps by the special shape of the rear triangle, without sacrificing rigidity and pedal force. More comfort combined with high performance will give you a completely new driving experience.",
+      "faq-question-2": " Is the filigree steel frame safe?",
+      "faq-answer-2": "In prescribed load case scenarios according to international quality standards, EFBE Prüftechnik GmbH simulated a 10-year product use and put the steel frame through its paces. We proudly look forward to a successful certification according to DIN ISO 4210.",
+      "faq-question-3": "Do I have to charge the LED light?",
+      "faq-answer-3": " The LED light is supplied by one of the strongest hub dynamos on the market, which is self-sufficient and plug-less, and permanently supplies it with electricity. You can concentrate on the essentials without having to worry about running out of juice. Firmly united with the steel frame, you always carry your front and rear lights with you. ",
+      "faq-question-4": " How does the tracking work?",
+      "faq-answer-4": "You can connect your smartphone via Bluetooth with your Urwahn Bike and lock it via the Urwahn App. The built-in sensor measures gross shocks in theft attempts and notifies you immediately with a push notification. Installed in the frame, the trackingsystem can neither be destroyed, removed nor switched off.",
+      "faq-question-5": " What is Made in Germany with your Bike?",
+      "faq-answer-5": "Contrary to the industry standard, the innovative Urwahn steel frame is manufactured entirely in Germany. The final assembly of our Urwahn Bikes is subject to very high quality standards and takes place near our headquarters in Magdeburg.",
+      "faq-question-6": " Why Stadtfuchs?",
+      "faq-answer-6": " With a great deal of refinement and inventiveness, this masterful adaptation artist conquers our cities and winds his way through the smallest corners effortlessly and silently. Similar to the hind legs of a fox, the elastic rear triangle guarantees dynamic maneuverability and compensates for uneven road surfaces in favor of your riding comfort.",
+      "item1-description": "Organic design with</br>\nhigh recognition value</br>\nand an elastic rear triangle</br>\nfor more driving comfort"
+    },
+    "bzen": {
+      "title": "Rent and test a BZEN smart electric city bike today!",
+      "description": "Test ride a BZEN smart electric city bikes today! The smart electric city bikes from BZEN are available to rent on listnride all across Germany!",
+      "item1-title": "Elegance & style",
+      "item2-title": "Smart - No sweat",
+      "item2-description": "Torque sensor for smooth assist<br>\nLCD screen with ON/OFF button, battery charge and assist level<br>\n60 km on one charge<br>",
+      "item3-title": "Clean  - No grease ",
+      "item3-description": "Belt drive, no risk for your clothes, no maintenance<br>\nDisk brakes of Shimano<br>\nPedal with sandy paper. Protect your shoes, no slip<br>",
+      "find-out-more": "Learn more about BZEN bikes",
+      "order-online": "Order your new <a href=\"http://www.bzenbikes.com\" target=\"_blank\">BZEN Bike</a> and get your listnride rental reimbursed. Find the most frequently asked questions below.",
+      "faq-question-1": "How long will it take to receive my order at home?",
+      "faq-answer-1": "When the bike is on stock, it takes 5 to 10 business days, depending of the country, to deliver our bike to your door. Shortly after placing an order you will receive an email confirming that your order has been received and is now being processed. Once we ship your order, you will be provided with a track and trace code via email.\nIf the bike is not in stock, then BZen is committed to deliver your bike within one month from the confirmation of the order. \n",
+      "faq-question-2": "How to choose my bike and what if I do not like it? ",
+      "faq-answer-2": "BZEN offers you a 30 days test ride.\nIf you hesitate to buy a BZEN because you are not sure you will like it, we are happy to offer you 30 days to ride the bike of your choice. Order it, have it delivered to your home and if you do not like it, you may return it during the first 30 days free of charge. You will be fully refunded.\n",
+      "faq-question-3": "How will the bike be at delivery?",
+      "faq-answer-3": "Your bike will be ready to ride in a minute. Unpack, fix the pedals and the handlebar, adjust the saddle and you are ready to pedal away.\nSimply take your BZEN bike out of the delivery box, take off all the protections, attach the pedals, fix the handlebar, and adjust the saddle to your size and you are ready to GO. The instructions are printed inside the delivery box. If you require additional information, you can find a more detailed instruction notice on the BZEN website under the support section.\nOur team tests every single bike before packing them with care. Nevertheless, if you see that your bike has been damaged during transport or if you observe a manufacturing fault, please contact our customer experience manager directly at support@bzenbikes.com. We will assist you and resolve the problem as quickly as possible.",
+      "faq-question-4": "Will I need any tool to adjust my bike?",
+      "faq-answer-4": "For the assembly of the bikes, you'll need 2 regular tools. Allen keys numbers 4 and a flat wrench 15. These 2 tools will be delivered along with the bike. That's it!",
+      "faq-question-5": "To which country do you deliver?",
+      "faq-answer-5": "We deliver to your door within EU, Norway and Switzerland free of delivery charge. (See detail list of Countries at the check out while registering your delivery and invoicing addresses).",
+      "faq-question-6": "How to charge the battery?",
+      "faq-answer-6": "To charge the battery, you must use the appropriate charger that was provided with the bike. You should simply connect the charger to any regular power plug  (220 / 230 V AC) and to the bike. ",
+      "faq-question-7": "How often should I charge the battery?",
+      "faq-answer-7": "The battery provides your bike an average range of electric assist of 60 km. We recommend you to charge your battery when it reaches 50% charges. It will require only 1 hour to 1.5 hour to fully recharge your battery. And if you run out of battery, your simply pedal like you would be on a regular bike.",
+      "faq-question-8": "Are BZEN bikes Certified?",
+      "faq-answer-8": "Yes. BZEN bikes have been tested by an independent and recognized institute in Germany. They are Certified EN-15194:2017 and fully compliant with the electrically power assisted bicycles European regulation.",
+      "faq-question-9": "Is it true that the bikes are made in Europe?",
+      "faq-answer-9": "Yes. BZEN is one of the very few bike brands that design, engineer and hand make its frames in Europe. The workshop is located in Silesia, Poland.\nWe are proud at BZEN to make European bicycles. Not only the frames but also every electronic component is designed and manufacture in Europe.\nBecause our bicycles are handcrafted in Europe, our engineers fully optimized the frame and each of the components to optimize their integration, enhance their performance and reduce the bike weight."
+    },
+    "cowboybikes": {
+      "title": "Take the Streets",
+      "item1-description": "No buttons, no gears. </br>\nIntuitive motor assistance adapts</br> \nautomatically to power the speed you need. \n",
+      "description": "Designed to feel the road. And beat the commute.</br>\nGet around your city on an award-winning bike.\n",
+      "item1-title": "The road is yours",
+      "item2-title": "Safety comes fierce",
+      "item2-description": "On the prowl at dusk, or awake at dawn.</br> \nIntensifying lights and hydraulic brakes ever there as you slow.</br>\nAnd then, you’re off",
+      "item3-title": "Track every trace",
+      "item3-description": "Built-in GPS tracking ensures your bike is always in range. </br>\nStay connected when it’s locked nearby, no move without you.</br>",
+      "find-out-more": "Rent and test ride Cowboy bikes today! Meet Cowboy. The electric bike for urban riders.",
+      "order-online": "Cowboy is the first connected bike that gives people the freedom to take the streets. Designed to be beautiful and agile in both mechanics and technology, one ride and you’ll want this bike to be yours too.Through a passion for design and technology working in harmony to unlock a new path for people and systems, we are creating a new experience for people to move freely around cities.</br>\n<a href=\"https://cowboy.com/\" target=\"_blank\">Learn more on Cowboy.com</a>",
+      "faq-question-1": "Do you sell different frame sizes?",
+      "faq-answer-1": "Currently we sell a universal model that fits people between 170cm and 195cm. The saddle can be easily adjusted with an allen key (detailed instructions can be found in the manual). If you are unsure about the height that suits you, rent a test ride and we'll help you with the fine tuning",
+      "faq-question-2": "What is the maximum speed of the bike?",
+      "faq-answer-2": "The maximum speed of our bike is 25km/h. The cowboy bike is not a pedelec, i.e. you do not need a license plate or a driver's license. Nevertheless, we recommend you to wear a helmet.\n\nOn private terrain, you can also activate the 'off-road' mode in our app, in which you can ride up to 30km/h. However, we must point out that this 'off-road' mode is not allowed on public roads in Europe.",
+      "faq-question-3": "Can I attach accessories to my bike?",
+      "faq-answer-3": "Yes, of course! Our bike is compatible with the majority of standard accessories on the market: mudguards, childseats, luggage racks, etc.</br>\nThe following items are included in an accessory box that comes with the bike:\n<ul>\n<li>Front lights</li>\n<li>Rear lights</li>\n<li>Bell</li>\n<li>Front reflector</li>\n<li>Rear reflector</li>\n<li>Spoke reflectors</li>\n</ul>",
+      "faq-question-4": "How is the app connected to the bike?",
+      "faq-answer-4": "The connection between the bike and the app is made via Bluetooth. If Bluetooth is not enabled on your phone, the app automatically prompts you to turn it on to connect to your bike.",
+      "faq-question-5": "What happens if my cell phone battery goes flat while riding?",
+      "faq-answer-5": "Your smartphone is only needed to turn on the bicycle's electrical assistance. This means that if your smartphone goes off while riding, the bike will continue to function normally, but you will not be able to turn it off at the end of the ride. To avoid this, you can turn on auto-shutdown in the app to make sure your bike automatically shuts off after a period of inactivity.",
+      "faq-question-6": "How is the Cowboy Bike protected against theft?",
+      "faq-answer-6": "Bicycle theft is a problem we want to tackle at Cowboy. Two main functions have therefore been integrated into the app to prevent this.</br>\n<h4>Digital Keys</h4>\nYou're the only person who can turn on the electrical support of your bike through the app. Each bike is linked to a unique account in the app.</br>\n<h4>Find my Bike</h4>\nYou can not find your bike? Just go to the navigation screen in the app to see the last known location. Click on the pin to display the date and time the bike sent this position.",
+      "faq-question-7": "Where can I buy a Cowboy Bike?",
+      "faq-answer-7": "We sell our bikes exclusively online to offer a competitive price while maintaining a direct relationship with our customers.</br>\nOf course we fully understand if you would like to test the bike before buying in 'real life'. Do not hesitate to take a wild ride on our bike. We will soon offer test drives in several cities in Germany. Our experts will provide you with all the necessary information and help you to place an order if you liked the test ride.",
+      "faq-question-8": "How does the customer service work?",
+      "faq-answer-8": "Offering excellent customer service is very important to us.\n<h4>Standard Components</h4>\nFor normal maintenance and standard repairs (such as a flat tire), you can simply contact your local bike shop. A list of recommended retailers can be found below. Do not hesitate to contact us if you can recommend another shop. We would be happy to include them in this list.</br>\nThe specific components for e-bikes, i.e. the battery, the engine and the belt are specially designed for our bike. For this we have an on-demand repair service in Germany: just contact us and we will come to your home to solve the problem. If you have any questions or problems write us on the chat on our website and we will make sure you get the help you need.",
+      "faq-question-9": "What are the specifications of the bike?",
+      "faq-answer-9": "<h4>Size</h4>\n  Wheel: 27,5\" / 38-584mm</br>\n  Rider height: von 170 bis 195cm</br>\n  Seat tube diameter: 27,2mm</br>\n  <h4>Weight</h4>\n  16kg (with battery)</br>\n  <h4>Color</h4>\n    Black</br>\n    <h4>Motor</h4>\n      Type: Hub motor</br>\n      Power: 250W</br>\n      Torque: 30Nm</br>\n      <h4>Battery</h4>\n      Weight: 2,4kg</br>\n      Range: up to 70km</br>\n      Charging time: 3,3h</br>\n      Watt hour: 360Wh</br>\n      Capacity: 10Ah</br>\n      Lifespan: 500 Zyklen</br>\n      Technology: Lithium-ion</br>\n      <h4>Charger</h4>\n      Tensioj: 36V</br>\n      <h4>Speen</h4>\n      Normal mode: until 25km/h </br>\n      Off-road mode: until 30km/h (only allowed on private property) </br>\n      <h4>Transmission</h4>\n      Type: Single-speed"
     },
     "whyte": {
       "title": "Rent and test Whyte bikes in Berlin",
@@ -1047,10 +1148,10 @@
   "about-us": {
     "title": "About us",
     "header": "About listnride",
-    "subheader": "How conventional bike rental services inspired us to create a diverse bike sharing community.",
+    "subheader": "How conventional bike rental services inspired us to create a diverse community.",
     "community": {
       "title": "listnride: the idea that sparked a community",
-      "content": "Here at listnride, we all love bikes. Each of us has their personal favorite that they cherish, and we enjoy the wonderful diversity of two-wheelers: from urban bikes to mountain bikes, from speedy road bikes to super-fast S-pedelecs, from eccentric ponies to reliable pack mules. That’s why we began asking ourselves: Why isn’t it possible to choose and have a specific bike that you need for a particular purpose at any time, regardless of whether you’re traveling or in your home town? Will we always be stuck with the low-entry bikes from the local rental shop? And thus the idea of setting up the listnride bike sharing community was born."
+      "content": "Here at listnride, we all love bikes. Each of us has their personal favorite that they cherish, and we enjoy the wonderful diversity of two-wheelers: from urban bikes to mountain bikes, from speedy road bikes to super-fast S-pedelecs. That’s why we began asking ourselves: Why isn’t it possible to choose and have a specific bike that you need for a particular purpose at any time, regardless of whether you’re traveling or in your home town? Will we always be stuck with the low-entry bikes from the local rental shop? And thus the idea of setting up listnride, the bike rental platform, was born."
     },
     "future": {
       "title": "listnride: full speed ahead",
@@ -1133,7 +1234,7 @@
     },
     "contact-section": {
       "header": "No answer for your matter?",
-      "subheader": "Contact us if you have any special questions or if any issues arise during the bike sharing process on listnride.",
+      "subheader": "Contact us if you have any special questions or if any issues arise during the rental process on listnride.",
       "title": "Can’t find the answer you need in our FAQ section? Then choose one of the following:",
       "list-1": "I would like to report a suspicious request",
       "list-2": "I would like to report a suspicious listing",
@@ -1149,21 +1250,21 @@
     "comm-and-pr": "Communications and PR",
     "kit": {
       "title": "Press kit",
-      "content": "Others call themselves bike rental systems. We are a bike sharing community. Find out more in our press kit, which can be ",
+      "content": "Find out more about our startup and how it all began in our press kit, which can be ",
       "download": "found here",
       "link": "https://goo.gl/forms/JxtwvX16isstcH1U2"
     },
     "contact": {
       "title": "Press contact",
-      "content": "Do you have further questions about listnride or need more information about bike sharing systems, rental bikes and mobility concepts? Then you can contact us directly:"
+      "content": "Do you have further questions about listnride or need more information about bike rental systems and mobility concepts? Contact us directly:"
     },
     "meta-title": "listnride press",
-    "meta-description": "We love bike sharing. And we’ll gladly answer all your questions."
+    "meta-description": "We love bikes and we love sharing. And we’ll gladly answer all your questions."
   },
   "invest": {
-    "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+    "meta-title": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike rental platform.",
     "meta-description": "Visit Seedrs to learn more about investing in listnride.",
-    "description": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike sharing community.",
+    "description": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike rental platform.",
     "subdescription": "Learn more about listnride in our <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">investor presentation</a> and why it is worth to invest.",
     "subsubdescription": "Soon, a crowdfunding campaign will start on <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, Europe's largest equity crowdfunding platform. As an early adopter, business partner or friend, we're giving you first access, before we launch to the public. Tell us your level of interest and preregister without obligation.",
     "learn-more": "Crowdfunding FAQ",
@@ -1180,7 +1281,7 @@
     "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUNT?",
     "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around €10 (exact amount depends on exchange rates). We are happy to receive any amount!",
     "faq-question-5": "WHAT HAS LISTNRIDE ACCOMPLISHED SO FAR?",
-    "faq-answer-5": "Since our official start in September 2016, launching a fully functional web platform: listnride has grown to be the largest community bike-sharing platform in the German speaking market (DE, AT, CH), with over 10.000 bikes listed and 15.000 registered users. listnride has already over 450 bike shops integrated and 8 innovative bike brands up and running with test ride programs. We have built up a strong presence in Berlin, Munich, Vienna, Amsterdam and Mallorca and are expanding into other large cities like Hamburg, Zurich and Düsseldorf.",
+    "faq-answer-5": "Since our official start in September 2016, when we launched a fully functional site: listnride has grown to be the largest bike rental platform in the German speaking market (DE, AT, CH), with over 10.000 bikes listed and 15.000 registered users. listnride has already over 450 bike shops integrated and 8 innovative bike brands up and running with test ride programs. We have built up a strong presence in Berlin, Munich, Vienna, Amsterdam and Mallorca and are expanding into other large cities like Hamburg, Zurich and Düsseldorf.",
     "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
     "faq-answer-6": "To make a profit on your investment, you will generally need to sell your shares for more than the amount you invested. In a best case scenario, the value of your shares will rise in line with the growth of business you invested in, and you will be able to see your shares when the business floats on a stock exchange or is bought by another company (i.e. an exit event). More info <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">here</a>",
     "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
@@ -1195,7 +1296,7 @@
     "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.\n<br>\nThank you for using listnride!"
   },
   "trust-and-safety": {
-    "meta-description": "Trust is the be-all and end-all of a sharing community. We support fairness and security through verification and insurance for every rental.",
+    "meta-description": "Trust is the be-all and end-all of a community. We support fairness and security through verification and insurance for every rental.",
     "title": "Trust & Safety",
     "description": "listnride is a community of bike lovers and bicycle enthusiasts. People like you and me. That's why we want to keep the trouble away from you, so you can focus on enjoying your ride.",
     "header": "Pedalling without worries",
@@ -1225,15 +1326,15 @@
       "description": "If you rent a bicycle in Germany or Austria, a basic insurance is included in the rent. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> \nand the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nwe have two strong partners on our side to help you when needed.\n<p>\nJust choose the right insurance package for you when booking your bike and off you go."
     },
     "outro": {
-      "description": "listnride is Europe's largest bike-sharing community. We offer cycling enthusiasts easy access to high quality bikes. Always the perfect bike! simply book online."
+      "description": "listnride is Europe's largest bike rental platform. We offer cycling enthusiasts easy access to high quality bikes. Simply book online."
     }
   },
   "how-it-works": {
-    "meta-title": "Bike sharing made easy",
+    "meta-title": "Bike rental made easy",
     "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!",
-    "title": "Bike sharing without the hassle",
+    "title": "Bike rental without the hassle",
     "header": "listnride helps you get into gear",
-    "subheader": "Renting out a bicycle on our bike sharing platform is as easy as meeting up for coffee:",
+    "subheader": "Renting out a bicycle on our platform is as easy as meeting up for coffee:",
     "lister-section": {
       "header": "How to list a bike",
       "step-1-title": "List a bike",
@@ -1327,7 +1428,7 @@
     "subtitle": "Effective Date: May 24, 2018",
     "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.\n<br>\nHere you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.\n<br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
     "meta-title": "Privacy Policy of listnride",
-    "meta-description": "The Privacy Policy of the bike sharing community listnride applies to the use of the online platform."
+    "meta-description": "The Privacy Policy of listnride applies to the use of the online platform."
   },
   "seo": {
     "cities-title": "Planning to Travel? Check out more cities:"

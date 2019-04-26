@@ -8,7 +8,8 @@ angular.module('bikeCard',[]).component('bikeCard', {
     booked: '<',
     home: '<',
     seo: '<',
-    showLabels: '<'
+    showLabels: '<',
+    urlParams:'<'
   },
   controller: ['$mdMedia', 'helpers',
     function BikeCardController($mdMedia, helpers) {

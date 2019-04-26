@@ -1,7 +1,11 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "label_new": "Neu",
     "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
+    "for-count-hours": "für {{hoursSlot}} Stunden",
+    "rental-date": "Rental date",
+    "rental-time": "Rental time",
     "choose-bike-size": "Bitte wähle eine Fahrradgröße",
     "please-choose-bike-count": "Wähle die Anzahl der Fahrräder",
     "status-labels": {
@@ -17,7 +21,7 @@
       "credit-card": "Kreditkarte",
       "paypal-account": "Paypal-Konto"
     },
-    "change": "Change",
+    "change": "Ändern",
     "local-business": "Gewerbliche Anbieter",
     "list": "List",
     "map": "Karte",
@@ -35,6 +39,8 @@
     "please-select": "Bitte auswählen",
     "errors": {
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
+      "payment-cancelled": "Payment cancelled",
+      "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Zahlungsart nicht gültig",
       "email-not-valid": "Bitte gib eine gültige E-Mail-Adresse ein",
       "phone-not-valid": "Bitte gib eine gültige Telefonnummer ein",
@@ -225,6 +231,12 @@
       "meta-title": "Miete ein Rennrad für Paris-Brest-Paris 2019 | listnride",
       "meta-description": "Miete ein Rennrad für Paris-Brest-Paris 2019 einfach, online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
     },
+    "8bar-clubride": {
+      "meta-title": "Miete ein Rennrad für die 8bar Clubride",
+      "meta-description": "Nehme teil an unserer wöchentlichen Clubride und teste eines der neuesten 8bar Rennräder kostenlos. Einfach online buchen und im Showroom abholen",
+      "calendar-title": "Testräder für die 8bar Clubride",
+      "calendar-subtitle": "Buche ein kostenloses 8bar bike für unser Club Ride"
+    },
     "cyclingworld": {
       "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
       "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
@@ -283,6 +295,12 @@
     "leaos": {
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
+    },
+    "urwahn": {
+      "item2-description": "Organisches Design mit<br>\nhohem Wiedererkennungswert<br>\nsowie ein elastischer Hinterbau <br>\nfür mehr Fahrkomfort"
+    },
+    "bzen": {
+      "item1-description": "Leichtgewicht mit 14,4 k <br>\nBatterie und Elektronik sind im Rahmen integriert <br>\nAuf Komfort getrimmt: Geometrie, Sattel und Griffe <br>\nLeicht über ein paar Stufen tragbar"
     }
   },
   "faq": {
@@ -427,6 +445,18 @@
         "meta-title": "E Bike Test Programm",
         "meta-descr": "Teste noch heute ein Ampler E-bike! Die Elektrofahrräder stehen jetzt zum Testen in Amsterdam Berlin, Düsseldorf, München und Zürich für dich bereit."
       },
+      "cowboybikes": {
+        "meta-title": "Miete und teste Cowboy-Bikes noch heute! Das ist Cowboy. Das Elektrofahrrad für Stadtfahrer.",
+        "meta-description": "Teste noch heute ein Cowboy Smart Electric Urban Bike! Das smarte Elektrofahrrad für Urban Riders. Miete es einfach auf listnride!"
+      },
+      "urwahn": {
+        "meta-title": "Miete und teste ein Urwahn Stadtfuchs in München | listnride",
+        "meta-description": "Buche dir eine Probefahrt für das Urwahn Stadtfuchs heute! Das stilvolle urban bike kannst du einfach buchen und probefahren in München!"
+      },
+      "bzen": {
+        "meta-title": "Miete und teste BZEN-Bikes in ganz Deutschland | listnride",
+        "meta-description": "Teste heute noch ein intelligentes elektrisches Stadtfahrrad! Die smarten Elektro-City-Bikes von BZEN können in ganz Deutschland gemietet werden!"
+      },
       "unimoke": {
         "meta-title": "Miete und teste UNI Moke E-bikes| listnride",
         "meta-description": "Leihe Dir eine UNI Moke oder eine UNI Swing und teste unser vintage Design, Allzweck E-Bike für Fun, Family &amp; Work. Hergestellt von Urban Drivestyle in Berlin."
@@ -444,7 +474,7 @@
         "meta-description": "Teste noch heute ein Switch E-Bike! Die E-Bikes von Swytch stehen zum Testen in Berlin zur Verfügung!"
       },
       "leaos": {
-        "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Düsseldorf und Bozen",
+        "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Berlin und Bozen",
         "meta-descr": "Das Design E-Bike - Leaos"
       },
       "brompton": {
@@ -621,7 +651,7 @@
       "redeem-voucher": "Rabattcode einlösen",
       "add": "Ok",
       "success-header": "Glückwunsch, du hast gerade ein Rad angefragt!",
-      "success-subheader": "We've sent you a confirmation email. Feel free to book more other bikes, too."
+      "success-subheader": "Wir haben dir eine Bestätigungsmail geschickt. Fühl dich frei, weitere Fahrräder zu buchen."
     },
     "calendar": {
       "tab": "Dauer",
@@ -813,7 +843,7 @@
     "price": "Preis",
     "book": "Buchen",
     "rating": "Bewertung",
-    "listChat": "Anfrage von {{user.first_name}}",
+    "listChat": "Buchungsanfrage von {{user.first_name}}",
     "rideChat": "Anfrage an {{lister.first_name}}",
     "ratings": {
       "title": "Wie hat dir die Gesamterfahrung gefallen?",
@@ -852,20 +882,20 @@
     "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} würde gerne dein <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Sobald du die Anfrage annimmst, wird sie gebucht. Vereinbare alle weiteren Details über den Chat.",
-    "11": "Your request was manually cancelled",
+    "1": "{{user.first_name}} {{user.last_name}} von {{user.city}} möchten dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten <br><br>Bike ID: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>. Bitte klicke auf akzeptieren um die Buchung anzunehmen und vereinbare weitere Details in dem Chat unten. Wenn die Buchung nicht möglich ist bitte ablehnen.",
+    "11": "Die Buchung wurde storniert.",
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
-    "10": "Ihre Anfrage wurde vom System abgebrochen."
+    "10": "Ihre Buchung wurde vom System storniert"
   },
   "rideChat": {
-    "1": "Du würdest gerne  {{lister.display_name}} <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{timespan}} mieten. Vereinbare mit dem Vermieter die weiteren Details. Sobald dieser deine Anfrage akzeptiert hat, ist das Rad gebucht.",
-    "11": "The request got cancelled.",
+    "1": "Du hast das <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{lister.display_name}} für {{timespan}}angefordert. Du kannst unten mit {{lister.display_name}} chatten. Erst wenn deine Anfrage akzeptiert wird, erfolgt die Zahlung und ist das Fahrrad gebucht.",
+    "11": "Die Buchung deines Leihrades wurde storniert.",
     "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
-    "5": "{{lister.first_name}} hat die Rückgabe des Rades bestätigt und dich bewertet.<br>Zu guter Letzt, bitte bewerte die Erfahrung. Dies hilft der Gemeinschaft sehr und schließt die Vermietung ab.",
-    "6": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
+    "5": "Hattest du eine großartige Erfahrung mit dem Fahrrad von {{lister.first_name}}? Teile uns deine Ihre Erfahrungen, indem Du eine kurze Bewertung hinterlast. Dies hilft zukünftigen Radfahrern, besser zu verstehen, was zu erwarten ist.",
+    "7": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
     "9": "Du hast die Anfrage abgebrochen. Bitte schreib dem Verleiher, warum du die Buchung nicht bestätigen konntest.",
     "10": "Die Anfrage wurde abgebrochen."
@@ -965,8 +995,8 @@
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
     "newsletter-subheader": "Erhalte unseren Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
-    "meta-title": "listnride - Die Bike-Sharing-Community",
-    "meta-description": "Miete Dir von der listnride-Community ein Fahrrad, wie du es gerade magst und brauchst. Ganz nach deinem Stil und Einsatzzweck."
+    "meta-title": "Fahrradverleih: Miete ein Rennrad, MTB oder E-Bike | listnride",
+    "meta-description": "Miete das perfekte Fahrrad zu deinem Stil und Zweck. Einfach online buchen, bequem und sicher."
   },
   "autocomplete": {
     "default-placeholder": "Wo willst du ein Rad ausleihen?"
@@ -1030,7 +1060,7 @@
       "special": "Spezial",
       "urban": "Urban",
       "e-bike": "E-Bike",
-      "road": "Renn- & Touringräder",
+      "road": "Rennrad - Tourenrad",
       "transport": "Transport"
     },
     "details": {

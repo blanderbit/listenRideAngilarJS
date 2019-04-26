@@ -93,10 +93,7 @@ angular.module('requests', ['infinite-scroll'])
         requests.requestsLeft = false;
         requests.is_rider = function (request) {
           return request.user.id === $localStorage.userId
-        }
-        requests.is_lister = function (request) {
-          return request.user.id !== $localStorage.userId
-        }
+        };
 
         // methods
         // requests.nextPage = nextPage;
@@ -235,8 +232,12 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
               requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
+              var startDate = new Date(requests.request.start_date);
               var endDate = new Date(requests.request.end_date);
-              requests.request.returnable = (new Date(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), 0, 0, 0) < Date.now());
+              requests.request.returnable = (endDate.getTime() < Date.now());
+              // these timespans we use in localizations only
+              requests.request.timespan_short = moment(startDate).format('DD.MM, HH:mm') + ' - ' + moment(endDate).format('DD.MM, HH:mm');
+              requests.request.timespan = moment(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment(endDate).format('DD.MM.YY, HH:mm');
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;
@@ -492,15 +493,6 @@ angular.module('requests', ['infinite-scroll'])
         });
       }
 
-      function userAlreadyRated () {
-        return request.status >= STATUSES.BOTH_SIDES_RATE ||
-          request.status == STATUSES.ONE_SIDE_RATE && currentUserRated();
-      }
-
-      function currentUserRated () {
-        return request.ratings[0].author_id == $localStorage.userId;
-      }
-
       function RatingDialogController () {
         var ratingDialog = this;
 
@@ -523,22 +515,26 @@ angular.module('requests', ['infinite-scroll'])
               function () {
                 reloadRequest(requests.request.id);
                 // rating > 3 and user has no business
-                if (parseInt(ratingDialog.rating) > 3 && !$localStorage.isBusiness && userAlreadyRated()) {
-                  // show lister dialog
-                  if (requests.request.is_lister) {
-                    showListerDialog(event);
-                  }
+                if (parseInt(ratingDialog.rating) > 3 && !$localStorage.isBusiness) {
                   // show rider dialog
-                  else if (requests.request.is_rider) {
+                  if (requests.is_rider(requests.request)) {
                     showRiderDialog(event);
+                  }
+                  // show lister dialog
+                  else {
+                    showListerDialog(event);
                   }
                 }
               },
               function (error) {
                 notification.show(error, 'error');
               }
+            ).then (
+              function () {
+                loadRequest(requests.request.id, true, 0);
+              }
             );
-          },
+          }
         ratingDialog.hide = hideDialog;
       };
 
@@ -563,8 +559,7 @@ angular.module('requests', ['infinite-scroll'])
 
         if (requests.filters.type === 'all') {
           requests.requests = angular.copy(requests.all_requests);
-        }
-        else {
+        } else {
           requests.requests = requests.all_requests.filter(function (response) {
             var condition = response.user.id !== $localStorage.userId;
             return (requests.filters.type === 'lister') ? condition : !condition;

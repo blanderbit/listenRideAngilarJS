@@ -2551,6 +2551,10 @@ button.md-primary.md-cancel-button {
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-costadelsol #hero-shot {
+  background-position: 50% 0;
+}
+
 rapha-super-cross img.event-logo {
   width: 250px;
 }
@@ -2986,7 +2990,6 @@ md-icon[md-font-icon].fa--lh20 {
 
 .date-picker-wrapper--two-months .month-wrapper {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .date-picker-wrapper--two-months .gap {
@@ -2995,9 +2998,8 @@ md-icon[md-font-icon].fa--lh20 {
 }
 
 .date-picker-wrapper--two-months .month-wrapper table {
-  flex: 0 0 49.5%;
-  max-width: 49.7%;
-  width: 49.5%;
+  flex: 0 0 50%;
+  max-width: 50%;
   min-width: 320px;
 }
 
@@ -3698,10 +3700,8 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   /* DATE PICKER */
 
   .date-picker-wrapper.date-picker-wrapper--ngDialog {
-    max-width: 700px;
-    left: 0 !important;
-    right: 0;
-    margin: 0 auto;
+    left: 50% !important;
+    transform: translateX(-50%);
   }
 
   /* Multi Booking */
@@ -3725,6 +3725,11 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .date-picker-wrapper.date-picker-wrapper--ngDialog,
   .date-picker-wrapper.date-picker-wrapper--ngDialog .month-wrapper {
     max-width: 320px;
+    flex-wrap: wrap;
+  }
+
+  .date-picker-wrapper--two-months .gap {
+    display: none;
   }
 }
 

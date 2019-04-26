@@ -3,8 +3,8 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers', 'bikeOptions',
-    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeOptions) {
+  controller: ['api', '$stateParams', '$localStorage', '$mdDialog', '$mdMedia', '$translate', '$filter', '$state', 'ngMeta', 'price', 'mapConfigs', 'helpers', 'bikeCluster',
+    function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeCluster) {
       var bike = this;
 
       bike.$onInit = function() {
@@ -74,14 +74,7 @@ angular.module('bike',[]).component('bike', {
                 return variant.id !== bike.data.id;
               });
 
-              // get size translations
-              bikeOptions.sizeOptions(false, true).then(function (resolve) {
-                _.map(bike.availableSizes, function (option) {
-                  option.name = _.find(resolve, function (o) {
-                    return o.value === option.size
-                  }).label
-                });
-              });
+              bikeCluster.getSizeTranslations(bike.availableSizes);
 
               // change some params to cluster merged params
               bike.data.accessories = bike.cluster.accessories;
@@ -94,14 +87,17 @@ angular.module('bike',[]).component('bike', {
             // bike.event = {
             //   id: 35,
             //   name: 'Cycling World',
-            //   date: '23032019',
+            //   date: '2019-03-23', <- valid date format
+            //   repeatable: false or ['week', 'day', 'month', 'year']
             //   duration: 2,
             //   type: 'slot',
             //   slot_range: 2,
             //   insurance: false
             // }
 
+            bike.isOnSlotableEvent = _.indexOf([35,36], bike.data.family) !== -1;
             bike.isTwoHoursEventBike = bike.data.family === 35; // cwd event page
+            bike.isThreeHoursEventBike = bike.data.family === 36; // 8bar event page
 
 
             // META

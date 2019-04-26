@@ -34,6 +34,7 @@ angular.module('listnride', [
   'creditCardInput',
   'statusLabels',
   'bookingCalendar',
+  'paypalCheckoutButton',
   /* app_core_end */
 
   /* app_extras_start */
@@ -77,6 +78,9 @@ angular.module('listnride', [
   'whyteIntegration',
   'feltIntegration',
   'unimokeIntegration',
+  'bzenIntegration',
+  'urwahnIntegration',
+  'cowboybikesIntegration',
   /* EVENTS_PAGE */
   'event',
   'capeArgus',
