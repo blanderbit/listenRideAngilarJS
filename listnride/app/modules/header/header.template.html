@@ -20,7 +20,7 @@
       ng-if="header.showSearch"
       ng-hide="header.hideSearch()">
     </autocomplete>
-  
+
     <span flex></span>
 
     <div hide show-xs ng-if="header.hideSearch() && header.showSearch">
@@ -42,7 +42,7 @@
     <div class="lnr-nav-menu" hide show-gt-sm>
       <md-menu md-position-mode="target bottom">
         <md-button class="md-right-arrow" md-no-ink ng-click="$mdOpenMenu($event)">{{ 'shared.learn-more' | translate }}</md-button>
-        <md-menu-content width="2">        
+        <md-menu-content width="2">
           <md-menu-item>
             <md-button md-no-ink ui-sref="howItWorks">{{ 'shared.how-it-works' | translate }}</md-button>
           </md-menu-item>
@@ -82,7 +82,7 @@
           <img class="lnr-profile-sm" ng-src="{{header.authentication.profilePicture()}}"></img>
         </md-button>
 
-        <md-menu-content>
+        <md-menu-content class="header__menu">
           <md-menu-item>
             <md-button ui-sref="user({userId: header.authentication.userId()})">
               {{ 'settings.profile' | translate }}
@@ -90,6 +90,9 @@
           </md-menu-item>
           <md-menu-item>
             <md-button md-no-ink ui-sref="requests">{{ 'shared.requests' | translate }}</md-button>
+          </md-menu-item>
+          <md-menu-item>
+            <md-button md-no-ink ui-sref="bookingCalendar">{{ 'shared.booking-calendar' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
             <md-button md-no-ink ui-sref="listings">{{ 'listings.my-bikes' | translate }}</md-button>
