@@ -1,7 +1,37 @@
 <div class="booking-calendar">
   <menu class="booking-calendar-controls">
-    <md-button class="md-button md-primary md-raised" ng-click="bookingCalendar.gotoToday()">
+    <!-- Go to today -->
+    <md-button md-no-ink
+               class="request-filter-switch md-noink"
+               ng-click="bookingCalendar.gotoToday()">
       {{ 'booking-calendar.today' | translate }}
+    </md-button>
+
+    <md-button class="md-icon-button" ng-click="bookingCalendar.shiftPrevious()">
+      <md-icon md-font-icon="fa-chevron-left" class="fa"></md-icon>
+    </md-button>
+
+    <section layout="row">
+      <md-button
+        ng-repeat="viewPreset in bookingCalendar.viewPresetOptions"
+        class="request-filter-switch "
+        ng-class="{
+          'request-filter-switch-active': bookingCalendar.scheduler.viewPreset.name === viewPreset.key,
+          'left': $first,
+          'middle': $middle,
+          'right': $last
+        }"
+        ng-click="bookingCalendar.setViewPreset(viewPreset.key)"
+        translate="{{ viewPreset.label }}"></md-button>
+    </section>
+
+    <md-button class="md-icon-button" ng-click="bookingCalendar.shiftNext()">
+      <md-icon md-font-icon="fa-chevron-right" class="fa"></md-icon>
+    </md-button>
+
+    <!-- Go to date -->
+    <md-button class="md-icon-button go-to-date-button" ng-click="settings.addChild(day)">
+      <md-icon md-font-icon="fa-calendar-o" class="fa"></md-icon>
     </md-button>
   </menu>
 

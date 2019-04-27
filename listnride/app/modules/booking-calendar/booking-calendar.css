@@ -13,21 +13,35 @@ booking-calendar {
   max-width: 100%;
 }
 
+/* Calendar controls START */
 .booking-calendar-controls {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
+  align-items: center;
   padding: 0;
-  margin: 5px 0;
+  margin: 0;
   border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.booking-calendar-controls > * + *,
+.booking-calendar-controls .md-icon-button {
+  margin: 0 0 0 10px;
 }
 
 .booking-calendar-divider {
   margin-bottom: 10px;
 }
+/* Calendar controls END */
 
-/* Bryntum scheduler container */
+/* Bryntum Scheduler styles START */
 .booking-calendar .scheduler-container {
   flex: 1 1 auto;
   max-width: 100%;
 }
+
+/* hide current time label (leave the line only) */
+.booking-calendar .scheduler-container .b-sch-current-time > label {
+  display: none;
+}
+/* Bryntum Scheduler styles END */
