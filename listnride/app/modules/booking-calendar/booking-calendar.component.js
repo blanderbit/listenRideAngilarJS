@@ -4,6 +4,8 @@ import {
   DateHelper
 } from '../../../js_modules/bryntum-scheduler/scheduler.module.min';
 
+import { bikeCellRenderer } from './assets/bike-cell-renderer';
+
 import './booking-calendar.css';
 
 const dropTimezone = date =>
@@ -18,14 +20,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     bookingCalendar.$onInit = () => {
       initScheduler();
-    };
-
-    bookingCalendar.gotoToday = () => {
-      bookingCalendar.scheduler.setTimeSpan(
-        ...viewPresetOptions
-          .get(bookingCalendar.scheduler.viewPreset.name)
-          .getTimeSpan(new Date())
-      );
     };
 
     const viewPresetOptions = new Map([
@@ -51,7 +45,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           key: 'month',
           label: 'booking-calendar.month',
           getTimeSpan: date => {
-            console.log(date);
             return [
               DateHelper.getFirstDateOfMonth(date),
               DateHelper.getLastDateOfMonth(date)
@@ -62,6 +55,14 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     ]);
 
     bookingCalendar.viewPresetOptions = Array.from(viewPresetOptions.values());
+
+    bookingCalendar.gotoToday = () => {
+      bookingCalendar.scheduler.setTimeSpan(
+          ...viewPresetOptions
+              .get(bookingCalendar.scheduler.viewPreset.name)
+              .getTimeSpan(new Date())
+      );
+    };
 
     bookingCalendar.setViewPreset = presetName => {
       const anchorDate = bookingCalendar.scheduler.startDate; // date that new time span should contain
@@ -136,7 +137,11 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             type: 'tree',
             text: 'Name',
             field: 'name',
-            width: 300
+            width: 300,
+            leafIconCls: null,
+            renderer({ cellElement, record }) {
+              return bikeCellRenderer({ cellElement, record });
+            }
           }
         ],
         rowHeight: 85,
@@ -160,17 +165,20 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           {
             id: 1,
             name: 'Dan Stevenson',
+            imageUrl: 'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12271/1555531251-hell_rider.jpeg',
             expanded: true,
             children: [
               {
                 id: 3,
-                name: 'Barbra Streisand'
+                name: 'Barbra Streisand',
+                isVariant: true,
               }
             ]
           },
           {
             id: 2,
-            name: 'Talisha Babin'
+            name: 'Talisha Babin',
+            imageUrl: 'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12275/1555610029-barbie.jpeg',
           }
         ],
 
