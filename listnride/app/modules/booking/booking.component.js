@@ -550,12 +550,36 @@ angular.module('booking', [])
           }
         };
 
-        var authenticateThreeDSecureController = function () {
-          var self = this;
-        }
 
         function authenticateThreeDSecure() {
           var threeDSecureAuthenticationResult = $q.defer();
+
+          function showAuthThreeDSecureDialog(options) {
+            // threeDSecureAuthenticationResult.reject();
+            $mdDialog.show({
+              template: '<md-dialog aria-label="List dialog">' +
+                '  <md-dialog-content>' +
+                '<div id="three-d-secure"></div>' +
+                '</md-dialog-content>' +
+                '</md-dialog>',
+              parent: angular.element(document.body),
+              targetEvent: event,
+              openFrom: angular.element(document.body),
+              closeTo: angular.element(document.body),
+              clickOutsideToClose: true,
+              fullscreen: true,
+              escapeToClose: false,
+              onComplete: function () {
+                document.getElementById('three-d-secure').appendChild(options.iframe);
+              },
+              onRemoving: function () {
+                if (!booking.isThreeDSecureSuccess) {
+                  threeDSecureAuthenticationResult.reject();
+                }
+                booking.bookDisabled = false;
+              }
+            });
+          }
 
           if (isCreditCardPayment()) {
             var my3DSContainer = document.createElement('div');
@@ -565,45 +589,24 @@ angular.module('booking', [])
               booking.total.toFixed(2),
               booking.user,
               function(err, iframe) {
-                $mdDialog.show({
-                  controller: authenticateThreeDSecureController,
-                  controllerAs: 'threeDSecureDialog',
-                  template:
-                    '<md-dialog aria-label="List dialog">' +
-                    '  <md-dialog-content>' +
-                        '<div id="three-d-secure"></div>' +
-                        '</md-dialog-content>' +
-                    '</md-dialog>',
-                  parent: angular.element(document.body),
-                  targetEvent: event,
-                  openFrom: angular.element(document.body),
-                  closeTo: angular.element(document.body),
-                  clickOutsideToClose: true,
-                  fullscreen: true,
-                  escapeToClose: false,
-                  onComplete: function() {
-                    document.getElementById('three-d-secure').appendChild(iframe);
-                  },
-                  onRemoving: function() {
-                    booking.bookDisabled = false;
-                    threeDSecureAuthenticationResult.reject();
-                  }
-                });
+                showAuthThreeDSecureDialog({'err':err, 'iframe':iframe});
               },
               function() {
                 $mdDialog.cancel();
                 booking.bookDisabled = false;
               }
-            ).then(function(response) {
-              booking.bookDisabled = false;
+            ).then(
+              function(response) {
+                booking.bookDisabled = false;
 
-              if (response.liabilityShiftPossible && !response.liabilityShifted) {
-                threeDSecureAuthenticationResult.reject();
+                if (response.liabilityShiftPossible && !response.liabilityShifted) {
+                  threeDSecureAuthenticationResult.reject();
+                }
+                else {
+                  threeDSecureAuthenticationResult.resolve(response.nonce);
+                }
               }
-              else {
-                threeDSecureAuthenticationResult.resolve(response.nonce);
-              }
-            });
+            );
           }
           else {
             threeDSecureAuthenticationResult.resolve();
@@ -618,6 +621,8 @@ angular.module('booking', [])
 
           authenticateThreeDSecure().then(
             function(nonce) {
+              booking.isThreeDSecureSuccess = true;
+
               var startDate = booking.startDate;
               var endDate = booking.endDate;
 
@@ -652,12 +657,13 @@ angular.module('booking', [])
                 },
                 function(error) {
                   booking.inProcess = false;
+                  booking.isThreeDSecureSuccess = false;
                   notification.show(error, 'error');
                 }
               );
             },
             function() {
-              notification.showToast('3D secure authentication failed.');
+              notification.show(null, null, 'shared.errors.three-d-secure-failed');
             }
           );
         };
