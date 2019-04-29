@@ -554,12 +554,14 @@ angular.module('booking', [])
           var self = this;
         }
 
-        function getThreeDSecureNonce() {
+        function authenticateThreeDSecure() {
+          var threeDSecureAuthenticationResult = $q.defer();
+
           if (isCreditCardPayment()) {
             var my3DSContainer = document.createElement('div');
             booking.bookDisabled = true;
 
-            return paymentHelper.authenticateThreeDSecure(
+            paymentHelper.authenticateThreeDSecure(
               booking.total.toFixed(2),
               booking.user,
               function(err, iframe) {
@@ -584,6 +586,7 @@ angular.module('booking', [])
                   },
                   onRemoving: function() {
                     booking.bookDisabled = false;
+                    threeDSecureAuthenticationResult.reject();
                   }
                 });
               },
@@ -593,57 +596,70 @@ angular.module('booking', [])
               }
             ).then(function(response) {
               booking.bookDisabled = false;
-              return response.nonce;
+
+              if (response.liabilityShiftPossible && !response.liabilityShifted) {
+                threeDSecureAuthenticationResult.reject();
+              }
+              else {
+                threeDSecureAuthenticationResult.resolve(response.nonce);
+              }
             });
           }
           else {
-            return $q.when(null);
+            threeDSecureAuthenticationResult.resolve();
           }
+
+          return threeDSecureAuthenticationResult.promise;
         }
 
         booking.book = function () {
           $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
           booking.inProcess = true;
 
-          getThreeDSecureNonce().then(function(nonce) {
-            var startDate = booking.startDate;
-            var endDate = booking.endDate;
+          authenticateThreeDSecure().then(
+            function(nonce) {
+              var startDate = booking.startDate;
+              var endDate = booking.endDate;
 
-            // The local timezone-dependent dates get converted into neutral,
-            // non-timezone utc dates, preserving the actually selected date values
-            var startDate_utc = new Date(
-              Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
-            );
-            var endDate_utc = new Date(
-              Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
-            );
+              // The local timezone-dependent dates get converted into neutral,
+              // non-timezone utc dates, preserving the actually selected date values
+              var startDate_utc = new Date(
+                Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
+              );
+              var endDate_utc = new Date(
+                Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
+              );
 
-            var data = {
-              user_id: $localStorage.userId,
-              ride_id: booking.bikeId,
-              payment_method_nonce: nonce,
-              start_date: startDate_utc.toISOString(),
-              end_date: endDate_utc.toISOString(),
-              instant: !!booking.shopBooking,
-              insurance: {
-                premium: booking.isPremium
-              }
-            };
-
-            api.post('/requests', data).then(
-              function(success) {
-                $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
-                if (!booking.shopBooking) {
-                  $state.go('requests', {requestId: success.data.id});
+              var data = {
+                user_id: $localStorage.userId,
+                ride_id: booking.bikeId,
+                payment_method_nonce: nonce,
+                start_date: startDate_utc.toISOString(),
+                end_date: endDate_utc.toISOString(),
+                instant: !!booking.shopBooking,
+                insurance: {
+                  premium: booking.isPremium
                 }
-                booking.booked = true;
-              },
-              function(error) {
-                booking.inProcess = false;
-                notification.show(error, 'error');
-              }
-            );
-          });
+              };
+
+              api.post('/requests', data).then(
+                function(success) {
+                  $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+                  if (!booking.shopBooking) {
+                    $state.go('requests', {requestId: success.data.id});
+                  }
+                  booking.booked = true;
+                },
+                function(error) {
+                  booking.inProcess = false;
+                  notification.show(error, 'error');
+                }
+              );
+            },
+            function() {
+              notification.showToast('3D secure authentication failed.');
+            }
+          );
         };
       }
     ]
