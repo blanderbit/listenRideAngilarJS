@@ -44,4 +44,24 @@ booking-calendar {
 .booking-calendar .scheduler-container .b-sch-current-time > label {
   display: none;
 }
+
+.booking-calendar .b-tree-cell { 
+  padding: 0;
+}
+
+.booking-calendar .b-tree-cell-inner {
+  padding: 15px 20px !important; /* bryntum sets inline padding to leaf cells */
+}
+
+.booking-calendar .b-tree-expander {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+
+.booking-calendar .bike-column img {
+  height: 55px;
+  margin-right: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
 /* Bryntum Scheduler styles END */
