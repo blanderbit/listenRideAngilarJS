@@ -10,6 +10,7 @@ npm-debug.log
 /*.env
 listnride/.tmp
 app.constants.js
+listnride/.env
 listnride/js_modules/lnr-shop-integration/dist
 listnride/js_modules/lnr-shop-solution/dist
 .vscode
