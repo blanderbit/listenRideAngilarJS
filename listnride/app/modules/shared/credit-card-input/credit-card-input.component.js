@@ -44,21 +44,23 @@ angular.module('creditCardInput', []).component('creditCardInput', {
           creditCardInput.creditCardForm.expiryDate = creditCardInput.month[0];
         }
         creditCardInput.oldExpiryDateLength = creditCardInput.expiryDateLength;
-      };
+      }
 
-      // TODO: remove hardcoded current year and month
       function validateExpiryDate() {
+        var currentDate = new Date();
         var dateInput = $scope.creditCardForm.expiryDate;
-        if (creditCardInput.expiryDateLength != 5) {
+        var selectedYear = moment.parseTwoDigitYear(creditCardInput.year);
+
+        if (creditCardInput.expiryDateLength !== 5) {
           dateInput.$setValidity('dateFormat', false);
         } else {
-          if (creditCardInput.year > 18 &&
-              creditCardInput.year < 25 &&
+          if (selectedYear > currentDate.getFullYear() &&
               creditCardInput.month >= 1 &&
               creditCardInput.month <= 12) {
             dateInput.$setValidity('dateFormat', true);
-          } else if (creditCardInput.year == 18 &&
-                     creditCardInput.month >= 2 &&
+          }
+          else if (selectedYear === currentDate.getFullYear() &&
+                     creditCardInput.month >= (currentDate.getMonth() + 1) &&
                      creditCardInput.month <= 12) {
             dateInput.$setValidity('dateFormat', true);
           } else {
