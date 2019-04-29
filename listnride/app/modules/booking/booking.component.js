@@ -573,6 +573,7 @@ angular.module('booking', [])
                 document.getElementById('three-d-secure').appendChild(options.iframe);
               },
               onRemoving: function () {
+                // TODO: find a more clear way to don't show an error message when 3DSecure success
                 if (!booking.isThreeDSecureSuccess) {
                   threeDSecureAuthenticationResult.reject();
                 }
