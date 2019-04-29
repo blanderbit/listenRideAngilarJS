@@ -550,100 +550,123 @@ angular.module('booking', [])
           }
         };
 
-        var authenticateThreeDSecureController = function () {
-          var self = this;
-        }
 
-        function getThreeDSecureNonce() {
+        function authenticateThreeDSecure() {
+          var threeDSecureAuthenticationResult = $q.defer();
+
+          function showAuthThreeDSecureDialog(options) {
+            // threeDSecureAuthenticationResult.reject();
+            $mdDialog.show({
+              template: '<md-dialog aria-label="List dialog">' +
+                '  <md-dialog-content>' +
+                '<div id="three-d-secure"></div>' +
+                '</md-dialog-content>' +
+                '</md-dialog>',
+              parent: angular.element(document.body),
+              targetEvent: event,
+              openFrom: angular.element(document.body),
+              closeTo: angular.element(document.body),
+              clickOutsideToClose: true,
+              fullscreen: true,
+              escapeToClose: false,
+              onComplete: function () {
+                document.getElementById('three-d-secure').appendChild(options.iframe);
+              },
+              onRemoving: function () {
+                // TODO: find a more clear way to don't show an error message when 3DSecure success
+                if (!booking.isThreeDSecureSuccess) {
+                  threeDSecureAuthenticationResult.reject();
+                }
+                booking.bookDisabled = false;
+              }
+            });
+          }
+
           if (isCreditCardPayment()) {
             var my3DSContainer = document.createElement('div');
             booking.bookDisabled = true;
 
-            return paymentHelper.authenticateThreeDSecure(
+            paymentHelper.authenticateThreeDSecure(
               booking.total.toFixed(2),
               booking.user,
               function(err, iframe) {
-                $mdDialog.show({
-                  controller: authenticateThreeDSecureController,
-                  controllerAs: 'threeDSecureDialog',
-                  template:
-                    '<md-dialog aria-label="List dialog">' +
-                    '  <md-dialog-content>' +
-                        '<div id="three-d-secure"></div>' +
-                        '</md-dialog-content>' +
-                    '</md-dialog>',
-                  parent: angular.element(document.body),
-                  targetEvent: event,
-                  openFrom: angular.element(document.body),
-                  closeTo: angular.element(document.body),
-                  clickOutsideToClose: true,
-                  fullscreen: true,
-                  escapeToClose: false,
-                  onComplete: function() {
-                    document.getElementById('three-d-secure').appendChild(iframe);
-                  },
-                  onRemoving: function() {
-                    booking.bookDisabled = false;
-                  }
-                });
+                showAuthThreeDSecureDialog({'err':err, 'iframe':iframe});
               },
               function() {
                 $mdDialog.cancel();
                 booking.bookDisabled = false;
               }
-            ).then(function(response) {
-              booking.bookDisabled = false;
-              return response.nonce;
-            });
+            ).then(
+              function(response) {
+                booking.bookDisabled = false;
+
+                if (response.liabilityShiftPossible && !response.liabilityShifted) {
+                  threeDSecureAuthenticationResult.reject();
+                }
+                else {
+                  threeDSecureAuthenticationResult.resolve(response.nonce);
+                }
+              }
+            );
           }
           else {
-            return $q.when(null);
+            threeDSecureAuthenticationResult.resolve();
           }
+
+          return threeDSecureAuthenticationResult.promise;
         }
 
         booking.book = function () {
           $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
           booking.inProcess = true;
 
-          getThreeDSecureNonce().then(function(nonce) {
-            var startDate = booking.startDate;
-            var endDate = booking.endDate;
+          authenticateThreeDSecure().then(
+            function(nonce) {
+              booking.isThreeDSecureSuccess = true;
 
-            // The local timezone-dependent dates get converted into neutral,
-            // non-timezone utc dates, preserving the actually selected date values
-            var startDate_utc = new Date(
-              Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
-            );
-            var endDate_utc = new Date(
-              Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
-            );
+              var startDate = booking.startDate;
+              var endDate = booking.endDate;
 
-            var data = {
-              user_id: $localStorage.userId,
-              ride_id: booking.bikeId,
-              payment_method_nonce: nonce,
-              start_date: startDate_utc.toISOString(),
-              end_date: endDate_utc.toISOString(),
-              instant: !!booking.shopBooking,
-              insurance: {
-                premium: booking.isPremium
-              }
-            };
+              // The local timezone-dependent dates get converted into neutral,
+              // non-timezone utc dates, preserving the actually selected date values
+              var startDate_utc = new Date(
+                Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
+              );
+              var endDate_utc = new Date(
+                Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
+              );
 
-            api.post('/requests', data).then(
-              function(success) {
-                $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
-                if (!booking.shopBooking) {
-                  $state.go('requests', {requestId: success.data.id});
+              var data = {
+                user_id: $localStorage.userId,
+                ride_id: booking.bikeId,
+                payment_method_nonce: nonce,
+                start_date: startDate_utc.toISOString(),
+                end_date: endDate_utc.toISOString(),
+                instant: !!booking.shopBooking,
+                insurance: {
+                  premium: booking.isPremium
                 }
-                booking.booked = true;
-              },
-              function(error) {
-                booking.inProcess = false;
-                notification.show(error, 'error');
-              }
-            );
-          });
+              };
+
+              api.post('/requests', data).then(
+                function(success) {
+                  $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+                  if (!booking.shopBooking) {
+                    $state.go('requests', {requestId: success.data.id});
+                  }
+                  booking.booked = true;
+                },
+                function(error) {
+                  booking.inProcess = false;
+                  booking.isThreeDSecureSuccess = false;
+                  notification.show(error, 'error');
+                }
+              );
+            },
+            function() {
+              notification.show(null, null, 'shared.errors.three-d-secure-failed');
+            }
+          );
         };
       }
     ]
