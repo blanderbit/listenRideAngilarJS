@@ -4,7 +4,7 @@
     <md-button
       class="md-lined"
       ng-click="bookingCalendar.gotoToday()">
-      {{ 'booking-calendar.today' | translate }}
+      {{ 'shared.today' | translate }}
     </md-button>
 
     <md-button class="md-icon-button" ng-click="bookingCalendar.shiftPrevious()">
@@ -15,7 +15,7 @@
       <md-icon md-font-icon="fa-chevron-right" class="fa"></md-icon>
     </md-button>
 
-    <section layout="row">
+    <section layout="row" class="view-presets-selector">
       <md-button
         ng-repeat="viewPreset in bookingCalendar.viewPresetOptions"
         class="request-filter-switch "

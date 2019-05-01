@@ -14,12 +14,16 @@ const dropTimezone = date =>
 angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'bookingCalendar',
-  controller: function BookingCalendarController() {
+  controller: function BookingCalendarController($translate) {
     'use strict';
     const bookingCalendar = this;
 
     bookingCalendar.$onInit = () => {
-      initScheduler();
+      $translate([
+        'shared.id',
+        'booking.overview.size',
+        'shared.label_new'
+      ]).then(translations => initScheduler(translations));
     };
 
     const viewPresetOptions = new Map([
@@ -27,7 +31,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         'week',
         {
           key: 'week',
-          label: 'booking-calendar.week',
+          label: 'shared.week',
           getTimeSpan: date => {
             const firstday = DateHelper.add(
               date,
@@ -43,7 +47,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         'month',
         {
           key: 'month',
-          label: 'booking-calendar.month',
+          label: 'shared.month',
           getTimeSpan: date => {
             return [
               DateHelper.getFirstDateOfMonth(date),
@@ -80,7 +84,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       bookingCalendar.scheduler.shiftNext();
     };
 
-    function initScheduler() {
+    function initScheduler(translations) {
       PresetManager.registerPreset('week', {
         tickWidth: 150,
         displayDateFormat: 'MMMM DD, HH:mm',
@@ -139,13 +143,16 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             field: 'name',
             width: 300,
             leafIconCls: null,
+            expandIconCls: 'fa-chevron-down',
+            collapseIconCls: 'fa-chevron-up',
             renderer({ cellElement, record }) {
-              return bikeCellRenderer({ cellElement, record });
+              return bikeCellRenderer({ cellElement, record, translations });
             }
           }
         ],
         rowHeight: 85,
 
+        zoomOnMouseWheel: false,
         zoomOnTimeAxisDoubleClick: false,
         viewPreset: defaultPreset,
         weekStartDay: 1, // monday
@@ -164,21 +171,40 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         resources: [
           {
             id: 1,
-            name: 'Dan Stevenson',
-            imageUrl: 'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12271/1555531251-hell_rider.jpeg',
+            name: 'Destroyer of Worlds',
+            imageUrl:
+              'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12271/1555531251-hell_rider.jpeg',
             expanded: true,
+            size: 52,
+            isNew: true,
             children: [
               {
                 id: 3,
-                name: 'Barbra Streisand',
+                size: 52,
                 isVariant: true,
+                variantIndex: 1
+              },
+              {
+                id: 4,
+                size: 54,
+                isVariant: true,
+                isNew: true,
+                variantIndex: 2
+              },
+              {
+                id: 5,
+                size: 56,
+                isVariant: true,
+                variantIndex: 3
               }
             ]
           },
           {
             id: 2,
-            name: 'Talisha Babin',
-            imageUrl: 'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12275/1555610029-barbie.jpeg',
+            name: 'Barbie Ride',
+            imageUrl:
+              'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12275/1555610029-barbie.jpeg',
+            size: 52
           }
         ],
 
