@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Meer info",
     "label_new": "Nieuw",
+    "booking-calendar": "Booking Calendar",
+    "month": "Month",
+    "id": "ID",
     "event-bikes-will-be-soon": "Fietsen voor dit evenement zijn binnenkort beschikbaar",
     "for-count-hours": "voor {{hoursSlot}} uur",
     "rental-date": "Rental date",
@@ -39,6 +42,7 @@
     "please-select": "Ajb. selecteren",
     "errors": {
       "email-required": "Vul een geldig emailadres in",
+      "three-d-secure-failed": "3D secure authentication failed",
       "payment-cancelled": "Payment cancelled",
       "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Ongeldige betalingsmethode ",

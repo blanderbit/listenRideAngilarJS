@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Per saperne di più",
     "label_new": "Nuovo",
+    "booking-calendar": "Booking Calendar",
+    "month": "Month",
+    "id": "ID",
     "event-bikes-will-be-soon": "Le biciclette per questo evento saranno presto disponibili",
     "for-count-hours": "for {{hoursSlot}} hours",
     "rental-date": "Rental date",
@@ -39,6 +42,7 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
+      "three-d-secure-failed": "3D secure authentication failed",
       "payment-cancelled": "Payment cancelled",
       "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Tipo di pagamento non previsto",
