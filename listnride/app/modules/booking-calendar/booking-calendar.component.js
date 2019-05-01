@@ -4,7 +4,9 @@ import {
   DateHelper
 } from '../../../js_modules/bryntum-scheduler/scheduler.module.min';
 
-import { bikeCellRenderer } from './assets/bike-cell-renderer';
+import { bikeColumnRenderer } from './renderers/bike-column/bike-column-renderer';
+import { bikeEventPopupRenderer } from './renderers/bike-event-popup/bike-event-popup-renderer';
+import { bikeEventRenderer } from './renderers/bike-event/bike-event-renderer';
 
 import './booking-calendar.css';
 
@@ -62,9 +64,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     bookingCalendar.gotoToday = () => {
       bookingCalendar.scheduler.setTimeSpan(
-          ...viewPresetOptions
-              .get(bookingCalendar.scheduler.viewPreset.name)
-              .getTimeSpan(new Date())
+        ...viewPresetOptions
+          .get(bookingCalendar.scheduler.viewPreset.name)
+          .getTimeSpan(new Date())
       );
     };
 
@@ -135,6 +137,20 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       bookingCalendar.scheduler = new Scheduler({
         appendTo: document.querySelector('.scheduler-container'),
         readOnly: true,
+        zoomOnMouseWheel: false,
+        zoomOnTimeAxisDoubleClick: false,
+        viewPreset: defaultPreset,
+        weekStartDay: 1, // monday
+        barMargin: 2,
+        rowHeight: 85,
+
+        eventRenderer: ({ eventRecord, resourceRecord, tplData }) =>
+          bikeEventRenderer({
+            eventRecord,
+            resourceRecord,
+            tplData,
+            translations
+          }),
 
         columns: [
           {
@@ -145,17 +161,10 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             leafIconCls: null,
             expandIconCls: 'fa-chevron-down',
             collapseIconCls: 'fa-chevron-up',
-            renderer({ cellElement, record }) {
-              return bikeCellRenderer({ cellElement, record, translations });
-            }
+            renderer: ({ cellElement, record }) =>
+              bikeColumnRenderer({ cellElement, record, translations })
           }
         ],
-        rowHeight: 85,
-
-        zoomOnMouseWheel: false,
-        zoomOnTimeAxisDoubleClick: false,
-        viewPreset: defaultPreset,
-        weekStartDay: 1, // monday
 
         features: {
           contextMenu: false,
@@ -165,7 +174,14 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             showCurrentTimeLine: true,
             showHeaderElements: true
           },
-          tree: true
+          tree: true,
+          eventTooltip: {
+            anchor: false,
+            // hideDelay: 15 * 60 * 1000,
+            cls: 'bike-event-popup-tooltip',
+            template: ({ eventRecord }) =>
+              bikeEventPopupRenderer({ eventRecord, translations })
+          }
         },
 
         resources: [
@@ -180,12 +196,14 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             children: [
               {
                 id: 3,
+                name: 'Destroyer of Worlds',
                 size: 52,
                 isVariant: true,
                 variantIndex: 1
               },
               {
                 id: 4,
+                name: 'Destroyer of Worlds',
                 size: 54,
                 isVariant: true,
                 isNew: true,
@@ -193,6 +211,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
               },
               {
                 id: 5,
+                name: 'Destroyer of Worlds',
                 size: 56,
                 isVariant: true,
                 variantIndex: 3
@@ -209,19 +228,29 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         ],
 
         events: [
-          // the date format used is configurable, defaults to the simplified ISO format (e.g. 2017-10-05T14:48:00.000Z)
-          // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
           {
             resourceId: 3,
-            startDate: '2019-04-11 08:00:00',
-            endDate: '2019-04-15 12:00:00',
-            name: 'foo'
+            startDate: '2019-05-11 08:00:00',
+            endDate: '2019-05-15 12:00:00',
+            isPending: true
+          },
+          {
+            resourceId: 4,
+            startDate: '2019-05-06 14:00:00',
+            endDate: '2019-05-09 12:00:00',
+            isAccepted: true
+          },
+          {
+            resourceId: 5,
+            startDate: '2019-05-10 09:00:00',
+            endDate: '2019-05-15 00:00:00',
+            isNotAvailable: true
           },
           {
             resourceId: 2,
-            startDate: '2019-04-13 15:00:00',
-            endDate: '2019-04-19 12:30:00',
-            name: 'bar'
+            startDate: '2019-05-13 15:00:00',
+            endDate: '2019-05-19 12:30:00',
+            isPending: true
           }
         ],
 

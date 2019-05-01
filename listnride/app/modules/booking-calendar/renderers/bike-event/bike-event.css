@@ -1,0 +1,45 @@
+/*
+  BIKE EVENTS STYLES
+ */
+
+.booking-calendar .b-sch-event {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  outline: none !important; /* do not highlight selected event */
+}
+
+.booking-calendar .b-sch-event * {
+  font-weight: 300;
+}
+
+.booking-calendar .b-sch-event.pending {
+  background: repeating-linear-gradient(
+      135deg,
+      #7ab2f8,
+      #7ab2f8 20px,
+      #94c2fa 20px,
+      #94c2fa 40px
+  ) !important;
+}
+
+.booking-calendar .b-sch-event.accepted {
+  background-color: rgb(91, 191, 141) !important;
+}
+
+.booking-calendar .b-sch-event.not-available {
+  background-color: rgba(122, 178, 248, 0.5) !important;
+}
+
+.booking-calendar .b-sch-event .event-status {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+} 
+
+.booking-calendar .b-sch-event .event-status .fa {
+  margin-right: 3px;
+  font-size: 16px;
+} 
