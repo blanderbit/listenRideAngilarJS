@@ -14,11 +14,15 @@ const dropTimezone = date =>
 angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'bookingCalendar',
-  controller: function BookingCalendarController($translate) {
+  controller: function BookingCalendarController($translate, accessControl) {
     'use strict';
     const bookingCalendar = this;
 
     bookingCalendar.$onInit = () => {
+      if (accessControl.requireLogin()) {
+        return;
+      }
+      
       $translate([
         'shared.id',
         'booking.overview.size',
