@@ -1,3 +1,5 @@
+import './bike-column.css';
+
 function newBadgeRenderer({ record, translations }) {
   const { isNew } = record.originalData;
   return isNew
@@ -18,7 +20,7 @@ function bikeMetaInfoRenderer({ record, translations }) {
   `;
 }
 
-export function bikeCellRenderer({ cellElement, record, translations }) {
+export function bikeColumnRenderer({ cellElement, record, translations }) {
   cellElement.classList.add('bike-column');
 
   let html = '';

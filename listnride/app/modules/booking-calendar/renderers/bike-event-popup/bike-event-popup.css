@@ -1,0 +1,18 @@
+/*
+  BIKE EVENTS POPUP STYLES
+ */
+
+.bike-event-popup-tooltip {
+  padding: 10px;
+  overflow: hidden;
+  box-shadow: none !important;
+}
+
+.bike-event-popup-tooltip .b-content-element {
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: rgba(85,85,85,1.0);
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.09), 
+              0px 4px 5px 0px rgba(0, 0, 0, 0.06), 
+              0px 1px 10px 0px rgba(0, 0, 0, 0.05);
+}
