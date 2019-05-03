@@ -601,11 +601,10 @@ angular.module('booking', [])
               function(response) {
                 booking.bookDisabled = false;
 
-                if (response.liabilityShiftPossible && !response.liabilityShifted) {
-                  threeDSecureAuthenticationResult.reject();
-                }
-                else {
-                  threeDSecureAuthenticationResult.resolve(response.nonce);
+                if (response.liabilityShiftPossible) {
+                  response.liabilityShifted ? threeDSecureAuthenticationResult.resolve(response.nonce) : threeDSecureAuthenticationResult.reject();
+                } else {
+                  threeDSecureAuthenticationResult.resolve();
                 }
               }
             );
