@@ -191,8 +191,8 @@ angular.module('booking', [])
             var startDate = new Date(booking.dateRange.start_date);
             booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
             booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
-            updatePrices();
             setInitHours();
+            updatePrices();
             booking.isDateValid = validDates();
 
             if(booking.bike.is_cluster){
@@ -235,6 +235,7 @@ angular.module('booking', [])
           booking[slotDate] = date;
 
           validDates();
+          updatePrices();
         };
 
         function validDates() {
