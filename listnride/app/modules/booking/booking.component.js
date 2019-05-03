@@ -304,7 +304,7 @@ angular.module('booking', [])
         };
 
         booking.pickAvailableBike = function () {
-          if (booking.pickedBikeSize !== booking.bike.size) {
+          if (booking.cluster && (booking.pickedBikeSize !== booking.bike.size)) {
             return booking.cluster.rides[booking.pickedBikeSize][0].id;
           } else {
             return booking.bikeId;
