@@ -573,12 +573,31 @@ md-icon svg {
   margin-left: 3px;
 }
 
-.mdl-grid.mdl-grid-align-end {
+.mdl-grid.mdl-grid-align-end,
+.layout-align-flex-end {
   align-items: flex-end;
 }
 
 .mdl-grid.mdl-grid-justify-center {
   justify-content: center;
+}
+
+.lnr-clr-blue {
+  color: #7ab2f8;
+}
+
+.lnr-week {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.lnr-price {
+  border-right: 1px dashed #d3d8dc;
+  padding: 0 8px;
+}
+
+.lnr-price:last-child {
+  border-right: none;
 }
 
 /* LOADER */
