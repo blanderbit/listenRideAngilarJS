@@ -146,7 +146,7 @@ angular.module('filter',[])
 
         function initializeSimpleSizeFilter() {
           filter.sizes = [];
-          bikeOptions.sizeOptions('search').then(function (resolve) {
+          bikeOptions.sizeOptions().then(function (resolve) {
             filter.sizes = resolve
           });
           if (filter.currentSize === '') filter.currentSize = '-1';

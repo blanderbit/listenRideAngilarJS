@@ -2,10 +2,13 @@
   "shared": {
     "learn-more": "En savoir plus",
     "label_new": "New",
+    "booking-calendar": "Booking Calendar",
+    "month": "Month",
+    "id": "ID",
     "event-bikes-will-be-soon": "Les vélos pour cet événement seront bientôt disponibles",
-    "for-count-hours": "for {{hoursSlot}} hours",
-    "rental-date": "Rental date",
-    "rental-time": "Rental time",
+    "for-count-hours": "pour {{hoursSlot}}heures",
+    "rental-date": "Date de la location",
+    "rental-time": "L'heure de la location",
     "choose-bike-size": "S'il vous plaît, choisissez une taille de vélo",
     "please-choose-bike-count": "Sélectionnez le nombre de vélos",
     "status-labels": {
@@ -39,6 +42,7 @@
     "please-select": "Veuillez choisir",
     "errors": {
       "email-required": "Veuillez entrer votre adresse email",
+      "three-d-secure-failed": "3D secure authentication failed",
       "payment-cancelled": "Paiement annulé",
       "payment-paypal-error": "Désolé, votre paiement PayPal a échoué",
       "unexpected-payment-type": "Type de paiement non valide",
@@ -233,9 +237,9 @@
     },
     "8bar-clubride": {
       "meta-title": "Louez un vélo de route pour les sorties de 8bar",
-      "meta-description": "Rejoignez-nous lors de nos sorties hebdomadaires dans le club et testez gratuitement l'un de nos derniers vélos de route. Il suffit de réserver ici. Le vélo sera disponible dans notre salle d'exposition.",
-      "calendar-title": "Vélos a essayer pour les sorties de 8bar",
-      "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
+      "meta-description": "Roulez avec nous chaque semaine et testez gratuitement l’un des derniers vélos de route de 8bar. Il suffit de réserver ici, et le vélo sera disponible dans notre salle d'exposition.",
+      "calendar-title": "Louez un vélo de route pour les sorties de 8bar",
+      "calendar-subtitle": "Réservez votre vélo 8bar gratuit pour notre Club Ride hebdomadaire"
     },
     "cyclingworld": {
       "meta-title": "Louez un vélo Gravel de chez 8bar, Salsa ou Veloheld pour le tour sur gravier à Cyclingworld",
@@ -297,7 +301,7 @@
       "subdescription-not-use": "Design. Art. Passion."
     },
     "urwahn": {
-      "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
+      "item2-description": "Conception organique avec <br>\nvaleur de reconnaissance élevée <br>\net un triangle arrière élastique <br>\npour plus de confort de conduite"
     },
     "bzen": {
       "item1-description": "Lightweight, Only 14.4 k<br>Battery & smart electronics all hidden inside<br> Comfort geometry, saddle and handgrips<br>Easy to carry up stairs"
@@ -319,7 +323,7 @@
     "subheader": "Laissez-nous vous aider à vous organiser pour votre prochain voyage à vélo. Indiquez-nous vos préférences et nous ferons le reste pour que vous passiez le plus de temps possible à profiter du trajet.",
     "how-to": {
       "step-1-title": "1. Rechercher et trouver",
-      "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
+      "step-1-content": "Gagnez un temps précieux pour profiter au maximum de votre trajet à destination. Facile et transparent, tous les jours, à tout moment.",
       "step-2-title": "1. Définir et demander",
       "step-2-content": "Dites-nous quels vélos vous souhaitez louer et nous ferons le reste. Il suffit de nous fournir les détails et nous vous contacterons!",
       "step-3-title": "3. Accepter l'offre et réserver en ligne",
@@ -332,19 +336,19 @@
     "how-many-bikes": "Combien de vélos?",
     "do-you-need-accessories": "Avez-vous besoin d'accessoires?",
     "your-contact-details": "Vos coordonnées ",
-    "thanks-for-request": "Thanks for your bike rental request",
-    "we-will-back-shortly": "We will get back to you shortly",
-    "take-back-to-search": "Take me back to my search",
-    "accessories": "Accessories"
+    "thanks-for-request": "Merci pour votre demande de location de vélo",
+    "we-will-back-shortly": "Nous reviendrons vers vous sous peu",
+    "take-back-to-search": "Ramenez-moi à ma recherche",
+    "accessories": "Accessoires"
   },
   "insurance": {
     "facts": {
       "basic-insurance": {
-        "price-description": "included in every rental in Germany and Austria"
+        "price-description": "inclus dans chaque location en Allemagne et en Autriche"
       }
     },
-    "meta-title": "Insurance for every rental in Germany and Austria",
-    "meta-description": "Every rental in Germany and Austria through listnride is automatically insured."
+    "meta-title": "Assurance pour chaque location en Allemagne et en Autriche",
+    "meta-description": "Chaque location en Allemagne et en Autriche par listnride est automatiquement assurée."
   },
   "meta": {
     "cities": {
@@ -511,8 +515,8 @@
         "meta-descr": "VOTEC - Fusion of Functionality, Design and Quality"
       },
       "vanmoof": {
-        "meta-title": "Rent and test the Electrified S E-Bikes in Berlin, Munich and Hamburg",
-        "meta-descr": "The perfect city bike - VanMoof"
+        "meta-title": "Louez et testez les vélos électriques électrifiés en S à Berlin, Munich et Hambourg",
+        "meta-descr": "Le vélo de ville parfait - VanMoof"
       },
       "moeve": {
         "meta-title": "Rent and test Moeve bikes in Munich and Amsterdam",
@@ -1042,6 +1046,7 @@
   },
   "list": {
     "edit-bike": "Edit Bike",
+    "half-day-price": "half day price",
     "save-changes": "Save changes",
     "list-your-bike": "List your bike",
     "back": "Back",

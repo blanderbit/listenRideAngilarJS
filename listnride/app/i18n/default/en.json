@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Learn More",
     "label_new": "New",
+    "booking-calendar": "Booking Calendar",
+    "month": "Month",
+    "id": "ID",
     "event-bikes-will-be-soon": "Bikes for this event will be available soon",
     "for-count-hours": "for {{hoursSlot}} hours",
     "rental-date": "Rental date",
@@ -39,6 +42,7 @@
     "please-select": "Please select",
     "errors": {
       "email-required": "Please enter your email address, email is required",
+      "three-d-secure-failed": "3D secure authentication failed",
       "payment-cancelled": "Payment cancelled",
       "payment-paypal-error": "Sorry, your PayPal payment failed",
       "unexpected-payment-type": "Payment type not valid",
@@ -322,7 +326,7 @@
     "subheader": "Let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
     "how-to": {
       "step-1-title": "1. Search & find",
-      "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day any time. ",
+      "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day, any time. ",
       "step-2-title": "1. Define & request",
       "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
       "step-3-title": "3. Accept offer & book online",
@@ -1045,6 +1049,7 @@
   },
   "list": {
     "edit-bike": "Edit Bike",
+    "half-day-price": "1/2-day price",
     "save-changes": "Save changes",
     "list-your-bike": "List your bike",
     "back": "Back",

@@ -191,8 +191,8 @@ angular.module('booking', [])
             var startDate = new Date(booking.dateRange.start_date);
             booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
             booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
-            updatePrices();
             setInitHours();
+            updatePrices();
             booking.isDateValid = validDates();
 
             if(booking.bike.is_cluster){
@@ -235,6 +235,7 @@ angular.module('booking', [])
           booking[slotDate] = date;
 
           validDates();
+          updatePrices();
         };
 
         function validDates() {
@@ -303,7 +304,7 @@ angular.module('booking', [])
         };
 
         booking.pickAvailableBike = function () {
-          if (booking.pickedBikeSize !== booking.bike.size) {
+          if (booking.cluster && (booking.pickedBikeSize !== booking.bike.size)) {
             return booking.cluster.rides[booking.pickedBikeSize][0].id;
           } else {
             return booking.bikeId;
@@ -600,11 +601,10 @@ angular.module('booking', [])
               function(response) {
                 booking.bookDisabled = false;
 
-                if (response.liabilityShiftPossible && !response.liabilityShifted) {
-                  threeDSecureAuthenticationResult.reject();
-                }
-                else {
-                  threeDSecureAuthenticationResult.resolve(response.nonce);
+                if (response.liabilityShiftPossible) {
+                  response.liabilityShifted ? threeDSecureAuthenticationResult.resolve(response.nonce) : threeDSecureAuthenticationResult.reject();
+                } else {
+                  threeDSecureAuthenticationResult.resolve();
                 }
               }
             );

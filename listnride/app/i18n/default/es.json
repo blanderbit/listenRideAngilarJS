@@ -2,6 +2,9 @@
   "shared": {
     "learn-more": "Leer más",
     "label_new": "¿Nuevo",
+    "booking-calendar": "Booking Calendar",
+    "month": "Month",
+    "id": "ID",
     "event-bikes-will-be-soon": "Las bicis para este evento estarán pronto disponibles.",
     "for-count-hours": "for {{hoursSlot}} hours",
     "rental-date": "Rental date",
@@ -39,6 +42,7 @@
     "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
+      "three-d-secure-failed": "3D secure authentication failed",
       "payment-cancelled": "Pago cancelado",
       "payment-paypal-error": "Lo sentimos, tu pago de PayPal falló",
       "unexpected-payment-type": "Tipo de pago inesperado",
@@ -1040,6 +1044,7 @@
   },
   "list": {
     "edit-bike": "Editar bici",
+    "half-day-price": "half day price",
     "save-changes": "Guardar ",
     "list-your-bike": "Registra tu bici",
     "back": "Anterior",
