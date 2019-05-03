@@ -87,6 +87,7 @@ angular.module('list', ['ngLocale'])
           list.equipmentCategories = [51, 52, 53, 54];
           list.insuranceCountries = ['DE', 'AT'];
           list.variations = [];
+          list.canSetHalfDayPrice = true;
 
           // methods
           list.getUserData = getUserData;
