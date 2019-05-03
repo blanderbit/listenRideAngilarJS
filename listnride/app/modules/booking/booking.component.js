@@ -304,7 +304,7 @@ angular.module('booking', [])
         };
 
         booking.pickAvailableBike = function () {
-          if (booking.pickedBikeSize !== booking.bike.size) {
+          if (booking.cluster && (booking.pickedBikeSize !== booking.bike.size)) {
             return booking.cluster.rides[booking.pickedBikeSize][0].id;
           } else {
             return booking.bikeId;
@@ -601,11 +601,10 @@ angular.module('booking', [])
               function(response) {
                 booking.bookDisabled = false;
 
-                if (response.liabilityShiftPossible && !response.liabilityShifted) {
-                  threeDSecureAuthenticationResult.reject();
-                }
-                else {
-                  threeDSecureAuthenticationResult.resolve(response.nonce);
+                if (response.liabilityShiftPossible) {
+                  response.liabilityShifted ? threeDSecureAuthenticationResult.resolve(response.nonce) : threeDSecureAuthenticationResult.reject();
+                } else {
+                  threeDSecureAuthenticationResult.resolve();
                 }
               }
             );
