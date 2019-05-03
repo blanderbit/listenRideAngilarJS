@@ -505,12 +505,6 @@ md-icon svg {
   overflow-y: auto;
 }
 
-@media (max-width: 680px) {
-  .dropdown-content {
-    min-width: 138px;
-  }
-}
-
 .dropdown-content a {
   color: #584e4e;
   padding: 12px 16px;
@@ -632,5 +626,19 @@ md-icon svg {
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 680px) {
+  .dropdown-content {
+    min-width: 138px;
+  }
+
+  .lnr-price {
+    font-size: 12px;
+  }
+
+  .lnr-price_num {
+    font-size: 16px;
   }
 }
