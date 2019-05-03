@@ -151,7 +151,7 @@ angular.module('bike').component('calendar', {
       };
 
       calendar.pickAvailableBike = function () {
-        if (calendar.pickedBikeSize !== calendar.bikeSize) {
+        if (calendar.cluster && (calendar.pickedBikeSize !== calendar.bikeSize)) {
           return calendar.cluster.rides[calendar.pickedBikeSize][0].id;
         } else {
           return calendar.bikeId;
