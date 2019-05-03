@@ -2,8 +2,8 @@
   "shared": {
     "learn-more": "Mehr erfahren",
     "label_new": "Neu",
-    "booking-calendar": "Booking Calendar",
-    "month": "Month",
+    "booking-calendar": "Buchungskalender",
+    "month": "Monat",
     "id": "ID",
     "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
     "for-count-hours": "für {{hoursSlot}} Stunden",
@@ -42,7 +42,7 @@
     "please-select": "Bitte auswählen",
     "errors": {
       "email-required": "Bitte gib Deine E-Mail-Adresse ein, die E-Mailadresse ist erforderlich",
-      "three-d-secure-failed": "3D secure authentication failed",
+      "three-d-secure-failed": "Die 3D-secure Authentifizierung ist fehlgeschlagen",
       "payment-cancelled": "Payment cancelled",
       "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Zahlungsart nicht gültig",
@@ -1046,6 +1046,7 @@
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
+    "half-day-price": "Halbtagespreis",
     "save-changes": "Speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
