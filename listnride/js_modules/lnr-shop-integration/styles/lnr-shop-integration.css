@@ -596,6 +596,11 @@ md-icon svg {
   padding: 0 8px;
 }
 
+.lnr-price_num {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 .lnr-price:last-child {
   border-right: none;
 }
