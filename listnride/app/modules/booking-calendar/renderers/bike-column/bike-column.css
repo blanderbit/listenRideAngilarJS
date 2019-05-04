@@ -56,21 +56,8 @@
   margin: 0 10px 0 0;
 }
 
-.booking-calendar .bike-column .bike-meta .bike-new-badge {
+.booking-calendar .bike-column .bike-meta .booking-calendar__badge {
   margin-left: auto;
-  padding: 3px 5px;
-  font-size: 0.7em;
-  font-weight: 500;
-  color: #ffffff;
-  border-radius: 10px;
-  background-color: #7ab2f8;
-}
-
-.booking-calendar .bike-column .bike-meta .bike-new-badge::after {
-  margin-left: 5px;
-  font-family: FontAwesome;
-  font-size: 0.8em;
-  content: '\f054'; /* fa-chevron-right */
 }
 
 .booking-calendar .bike-column .bike-name {
