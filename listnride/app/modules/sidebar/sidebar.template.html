@@ -13,6 +13,7 @@
         </a>
       </div>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="requests" ng-click="sidebar.toggle()">{{ 'shared.requests' | translate }}</md-button>
+      <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="bookingCalendar" ng-click="sidebar.toggle()">{{ 'shared.booking-calendar' | translate }}</md-button>
       <md-button ng-if="sidebar.authentication.loggedIn()" ui-sref="listings" ng-click="sidebar.toggle()">{{ 'listings.my-bikes' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showSignupDialog()">{{ 'forms.sign-up' | translate }}</md-button>
       <md-button ng-if="!sidebar.authentication.loggedIn()" ng-click="sidebar.toggle(); sidebar.authentication.showLoginDialog()">{{ 'forms.log-in' | translate }}</md-button>
