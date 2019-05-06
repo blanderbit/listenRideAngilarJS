@@ -80,6 +80,7 @@ angular.module('listnride', [
   'bzenIntegration',
   'urwahnIntegration',
   'cowboybikesIntegration',
+  'argon18Integration',
   /* EVENTS_PAGE */
   'event',
   'capeArgus',
