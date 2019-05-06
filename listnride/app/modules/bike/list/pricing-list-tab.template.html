@@ -10,12 +10,19 @@
           <div flex="45" ng-if="pricingTab.parent.canSetHalfDayPrice">
             <md-input-container class="md-block">
               <label>{{'list.half-day-price' | translate}} </label>
-              <input type="text" name="price_half_days" ng-pattern="/^\d+$/"
-                placeholder="{{'list.pricing.set_custom_price' | translate}}" maxlength="3"
-                ng-model="pricingTab.parent.form.prices[1].price" ng-change="pricingTab.parent.disableDiscounts()"
-                ng-model-options='{ debounce: 300 }' ng-disabled="!pricingTab.parent.form.custom_price" required>
-              <div ng-messages="pricingTab.parent.priceForm.price_2_days.$error"
-                ng-show="pricingTab.parent.priceForm.price_2_days.$dirty">
+              <input
+                ng-model="pricingTab.parent.form.new_prices.half_day"
+                ng-disabled="true"
+                ng-model-options='{ debounce: 300 }'
+                ng-pattern="/^\d+$/"
+                name="price_half_days"
+                placeholder="{{'list.pricing.set_custom_price' | translate}}"
+                type="text"
+                maxlength="3"
+                required>
+              <div
+                ng-messages="pricingTab.parent.priceForm.price_half_days.$error"
+                ng-show="pricingTab.parent.priceForm.price_half_days.$dirty">
                 <div ng-message="required">{{'list.pricing.validations.required.price' | translate}}</div>
               </div>
             </md-input-container>
@@ -24,10 +31,17 @@
             <!-- Daily Price -->
            <md-input-container class="md-block">
              <label>{{ 'list.pricing.header' | translate }} (€)</label>
-             <input type="number" name="daily_price" ng-pattern="/^\d+$/" min="1" maxlength="3"
-               placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
-               ng-model="pricingTab.parent.form.prices[0].price" ng-change="pricingTab.parent.setCustomPrices(true)"
-               ng-model-options='{ debounce: 300 }' required>
+             <input
+              ng-model="pricingTab.parent.form.prices[0].price"
+              ng-change="pricingTab.parent.setCustomPrices(true)"
+              ng-model-options='{ debounce: 300 }'
+              ng-pattern="/^\d+$/"
+              name="daily_price"
+              placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
+              type="number"
+              min="1"
+              maxlength="3"
+              required>
              <div ng-messages="pricingTab.parent.priceForm.daily_price.$error"
                ng-show="pricingTab.parent.priceForm.daily_price.$dirty">
                <div ng-message="required">{{'list.pricing.validations.required.daily_price' | translate}}</div>

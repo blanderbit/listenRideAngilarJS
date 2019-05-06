@@ -53,6 +53,10 @@ angular.module('list', ['ngLocale'])
             accessories: {},
             images: [],
             coverage_total: 0,
+            prices: [],
+            new_prices: {
+              half_day: 50
+            },
             location: {
               country: '',
               city: '',
@@ -145,6 +149,7 @@ angular.module('list', ['ngLocale'])
                   price: undefined
                 }
               }
+
               list.form.discounts = {
                 "daily": 10,
                 "weekly": 20
@@ -192,8 +197,11 @@ angular.module('list', ['ngLocale'])
                 data.subCategory = data.category;
 
                 // form data for edit bikes
-                list.form = data;
+                list.form = Object.assign(list.form, data);
                 list.form.prices = prices;
+
+                // TODO: make half day prices
+                list.form.new_prices.half_day = list.form.prices[0].price / 2;
 
                 // if custom price is enabled
                 if (list.form.custom_price && !list.businessUser) {
@@ -359,6 +367,10 @@ angular.module('list', ['ngLocale'])
 
         // set the custom prices for a bike
         list.setCustomPrices = function (dailyPriceChanged) {
+          // TODO: make re-calc for half day
+          list.form.new_prices.half_day = list.form.prices[0].price / 2
+
+
           // business users get their prices proposed according to a fixed scheme
           if (list.businessUser) {
             list.form.prices = price.proposeCustomPrices(list.form);
