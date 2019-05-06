@@ -1,12 +1,12 @@
 import './bike-event.css';
 
-function statusRenderer({eventRecord, resourceRecord, tplData, translations}) {
+function statusRenderer({ eventRecord, translations }) {
   const { isPending, isAccepted, isNotAvailable } = eventRecord.originalData;
   if (isPending) {
     return `
       <span class="event-status pending">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        Request waiting
+        ${translations['booking-calendar.event.request-waiting']}
       </span>
     `;
   }
@@ -14,7 +14,7 @@ function statusRenderer({eventRecord, resourceRecord, tplData, translations}) {
     return `
       <span class="event-status pending">
         <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-        Accepted
+        ${translations['booking-calendar.event.accepted']}
       </span>
     `;
   }
@@ -22,14 +22,19 @@ function statusRenderer({eventRecord, resourceRecord, tplData, translations}) {
     return `
       <span class="event-status pending">
         <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-        Not available
+        ${translations['booking-calendar.event.not-available']}
       </span>
     `;
   }
   return '';
 }
 
-export function bikeEventRenderer({eventRecord, resourceRecord, tplData, translations}) {
+export function bikeEventRenderer({
+  eventRecord,
+  resourceRecord,
+  tplData,
+  translations
+}) {
   const { name } = resourceRecord.originalData;
   const { isPending, isAccepted, isNotAvailable } = eventRecord.originalData;
 
@@ -39,7 +44,7 @@ export function bikeEventRenderer({eventRecord, resourceRecord, tplData, transla
 
   const html = `
     <div class="event-name">${name}</div>
-    ${statusRenderer({ eventRecord, resourceRecord, tplData, translations })}
+    ${statusRenderer({ eventRecord, translations })}
   `;
 
   return html;

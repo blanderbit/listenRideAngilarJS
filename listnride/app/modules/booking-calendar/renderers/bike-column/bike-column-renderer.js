@@ -3,7 +3,9 @@ import './bike-column.css';
 function newBadgeRenderer({ record, translations }) {
   const { isNew } = record.originalData;
   return isNew
-    ? `<span class="bike-new-badge">${translations['shared.label_new']}</span>`
+    ? `<span class="booking-calendar__badge booking-calendar__badge--blue booking-calendar__badge--chevron">
+         ${translations['shared.label_new']}
+       </span>`
     : '';
 }
 

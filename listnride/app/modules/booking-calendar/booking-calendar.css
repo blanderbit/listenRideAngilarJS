@@ -65,3 +65,27 @@ booking-calendar {
   cursor: auto;
   background-color: initial !important;
 }
+
+.booking-calendar__badge {
+  padding: 3px 7px;
+  font-size: 0.75em;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #ffffff;
+  border-radius: 10px;
+  line-height: 12px;
+}
+
+.booking-calendar__badge--chevron::after {
+  font-family: FontAwesome;
+  font-size: 0.8em;
+  content: '\f054'; /* fa-chevron-right */
+}
+
+.booking-calendar__badge--blue {
+  background-color: #7ab2f8;
+}
+
+.booking-calendar__badge--green {
+  background-color: rgb(95,198,147);
+}

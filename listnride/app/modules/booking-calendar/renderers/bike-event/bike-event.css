@@ -36,7 +36,7 @@
 .booking-calendar .b-sch-event .event-status {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 12px;
 } 
 
 .booking-calendar .b-sch-event .event-status .fa {
