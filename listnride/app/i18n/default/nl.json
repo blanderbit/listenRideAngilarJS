@@ -448,6 +448,10 @@
         "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
         "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
       },
+      "argon18": {
+        "meta-title": "dummy text here",
+        "meta-description": "dummy text here"
+      },
       "urwahn": {
         "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
         "meta-description": "Book a test drive for the Urwahn Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!"
@@ -1458,5 +1462,22 @@
     "submit-btn": "Ok",
     "submit-btn-save": "Opslaan",
     "choose-range": "Kies de periode"
+  },
+  "booking-calendar": {
+    "event": {
+      "accepted": "Accepted",
+      "request-waiting": "Request waiting",
+      "not-available": "Not available",
+      "waiting": "Waiting",
+      "not-available-header": "Bike is not available",
+      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
+      "see-settings": "See settings",
+      "date": "Date",
+      "pickup": "Pickup",
+      "booking-id": "Booking ID",
+      "rider": "Rider",
+      "contact": "Contact",
+      "view-booking": "View booking"
+    }
   }
 }
