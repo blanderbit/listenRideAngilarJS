@@ -731,15 +731,30 @@
       "find-out-more": {
         "title": "Aprende más sobre las bicicletas Felt",
         "description": "Busca un concesionario y compra tu <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Bicicleta Felt</a>, y obtén un reembolso del alquiler. Consulta las <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">preguntas frecuentes </a>y aprende más sobre las bicicletas Felt."
-      },
-      "faq-answer-1": "FAQ ANSWER #1",
-      "faq-answer-2": "FAQ ANSWER #2",
-      "faq-answer-3": "FAQ ANSWER #3",
-      "faq-answer-4": "FAQ ANSWER #4",
-      "faq-question-1": "faq-question-1",
-      "faq-question-2": "faq-question-2",
-      "faq-question-3": "faq-question-3",
-      "faq-question-4": "faq-question-4"
+      }
+    },
+
+    "argon18": {
+      "title": "Dummy text here",
+      "description": "Dummy text here",
+      "item1-title": "Dummy text here",
+      "item1-description": "Dummy text here",
+      "item2-title": "Dummy text here",
+      "item2-description": "Dummy text here",
+      "item3-title": "Dummy text here",
+      "item3-description": "Dummy text here",
+      "find-out-more": "Dummy text here",
+      "order-online": "Dummy text here",
+      "faq-question-1": "Dummy text here",
+      "faq-answer-1": "Dummy text here",
+      "faq-question-2": "Dummy text here",
+      "faq-answer-2": "Dummy text here",
+      "faq-question-3": "Dummy text here",
+      "faq-answer-3": "Dummy text here",
+      "faq-question-4": "Dummy text here",
+      "faq-answer-4": "Dummy text here",
+      "faq-question-5": "Dummy text here",
+      "faq-answer-5": "Dummy text here"
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",

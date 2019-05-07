@@ -2,8 +2,8 @@
   "shared": {
     "learn-more": "Per saperne di più",
     "label_new": "Nuovo",
-    "booking-calendar": "Booking Calendar",
-    "month": "Month",
+    "booking-calendar": "Calendario delle prenotazioni",
+    "month": "Mese",
     "id": "ID",
     "event-bikes-will-be-soon": "Le biciclette per questo evento saranno presto disponibili",
     "for-count-hours": "for {{hoursSlot}} hours",
@@ -42,7 +42,7 @@
     "please-select": "Per favore seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
-      "three-d-secure-failed": "3D secure authentication failed",
+      "three-d-secure-failed": "Autenticazione sicura 3D fallita",
       "payment-cancelled": "Payment cancelled",
       "payment-paypal-error": "Sorry, your PayPal method is failed",
       "unexpected-payment-type": "Tipo di pagamento non previsto",
@@ -449,6 +449,10 @@
       "cowboybikes": {
         "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
         "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
+      },
+      "argon18": {
+        "meta-title": "dummy text here",
+        "meta-description": "dummy text here"
       },
       "urwahn": {
         "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
@@ -1040,6 +1044,7 @@
   },
   "list": {
     "edit-bike": "Modifica la bicicletta",
+    "half-day-price": "Prezzo mezza giornata",
     "save-changes": "Salva modifiche",
     "list-your-bike": "Registra la tua bicicletta",
     "back": "Indietro",
@@ -1463,5 +1468,22 @@
     "submit-btn": "Ok",
     "submit-btn-save": "Salva",
     "choose-range": "Scegli il tuo periodo"
+  },
+  "booking-calendar": {
+    "event": {
+      "accepted": "Accepted",
+      "request-waiting": "Request waiting",
+      "not-available": "Not available",
+      "waiting": "Waiting",
+      "not-available-header": "Bike is not available",
+      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
+      "see-settings": "See settings",
+      "date": "Date",
+      "pickup": "Pickup",
+      "booking-id": "Booking ID",
+      "rider": "Rider",
+      "contact": "Contact",
+      "view-booking": "View booking"
+    }
   }
 }

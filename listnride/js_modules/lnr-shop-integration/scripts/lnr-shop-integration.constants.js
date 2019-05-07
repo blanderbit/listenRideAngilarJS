@@ -84,7 +84,10 @@ var lnrConstants = {
       "all-brands": "All Brands",
       "all-categories": "All categories",
       "all-locations": "All locations",
-      "all-sizes": "All sizes"
+      "all-sizes": "All sizes",
+      "from": "from",
+      "per-day": "per day",
+      "week": "week"
     },
     "de": {
       "statuses": {
@@ -94,6 +97,9 @@ var lnrConstants = {
       "all-categories": "All categories",
       "all-locations": "Alle Standorte",
       "all-sizes": "Alle Gr&ouml;&szlig;en",
+      "from": "ab",
+      "per-day": "per day",
+      "week": "week"
     },
     "nl": {
       "statuses": {
@@ -102,7 +108,10 @@ var lnrConstants = {
       "all-brands": "Alle merken",
       "all-categories": "All categories",
       "all-locations": "Alle locaties",
-      "all-sizes": "Alle maten"
+      "all-sizes": "Alle maten",
+      "from": "van",
+      "per-day": "per day",
+      "week": "week"
     },
     "it": {
       "statuses": {
@@ -111,7 +120,10 @@ var lnrConstants = {
       "all-brands": "Tutte le marche",
       "all-categories": "All categories",
       "all-locations": "All locations",
-      "all-sizes": "All sizes"
+      "all-sizes": "All sizes",
+      "from": "from",
+      "per-day": "per day",
+      "week": "week"
     },
     "es": {
       "statuses": {
@@ -120,7 +132,10 @@ var lnrConstants = {
       "all-brands": "Todas las marcas",
       "all-categories": "All categories",
       "all-locations": "All locations",
-      "all-sizes": "All sizes"
+      "all-sizes": "All sizes",
+      "from": "from",
+      "per-day": "per day",
+      "week": "week"
     },
   },
   // map of the categories for en, de and nl languages

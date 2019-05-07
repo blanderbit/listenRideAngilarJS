@@ -601,6 +601,8 @@ var lnrHelper = {
           rideId = ride.id,
           categoryDesc = lnrHelper.categoryFilter(userId, category),
           price = Math.ceil(ride.price_from),
+          dailyPrice = Math.ceil(ride.prices.daily_price),
+          weeklyPrice = Math.ceil(ride.prices.weekly_price),
           imageUrl = ride.image_file,
           rideDescription = ride.description;
 
@@ -656,16 +658,23 @@ var lnrHelper = {
           '</div>',
           '</div>',
           '</a>',
-          '<md-card-title layout="row" class="layout-row">',
-          '<md-card-title-text class="layout-align-space-around-start layout-column">' +
-          '<span class="md-subhead">' + brand + ', ' + rideName + '</span>',
-          '<span>' + categoryDesc + ', ' + readableSize + '</span>' +
-          '</md-card-title-text>',
-          '<div layout="column" class="layout-align-space-around-center layout-column">',
-          '<span style="text-align: center">' + basicInfo.dayText + '</span>',
-          '<span class="md-headline">' + price + '&euro;</span>',
-          ' </div>',
+
+          '<md-card-title layout="row" class="layout-row layout-align-flex-end">',
+            '<md-card-title-text class="layout-align-space-around-start layout-column">' +
+              '<span class="md-subhead">' + brand + ', ' + rideName + '</span>',
+              '<span>' + categoryDesc + ', ' + readableSize + '</span>' +
+            '</md-card-title-text>',
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="md-headline lnr-price_num">' + dailyPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
+            ' </div>',
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="lnr-clr-blue lnr-week">' + lnrConstants.translations[userLang]["week"] + '</span>',
+              '<span class="md-headline lnr-price_num">' + weeklyPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
+            '</div>',
           '</md-card-title>',
+
           '</md-card>',
           '</bike-card>',
           '<div class="lnr-brand">',

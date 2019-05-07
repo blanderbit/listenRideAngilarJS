@@ -119,6 +119,9 @@ function PaymentHelperController(ENV, api, authentication, notification) {
               notification.show(error, 'error');
             }
           );
+        } else {
+          notification.showToast(err.message);
+          if (typeof cbError == 'function') cbError();
         }
       });
     },
