@@ -40,6 +40,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         'booking-calendar.event.accepted',
         'booking-calendar.event.request-waiting',
         'booking-calendar.event.not-available',
+        'seo.bikes',
         // event popups
         'booking-calendar.event.waiting',
         'booking-calendar.event.not-available-header',
@@ -179,6 +180,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         weekStartDay: 1, // monday
         barMargin: 2,
         rowHeight: 85,
+        eventSelectedCls: 'selected-event',
+        focusCls: 'focused-event',
 
         eventRenderer: ({ eventRecord, resourceRecord, tplData }) =>
           bikeEventRenderer({
@@ -226,10 +229,11 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             name: 'Destroyer of Worlds and outer space',
             imageUrl:
               'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12271/1555531251-hell_rider.jpeg',
-            expanded: true,
+            expanded: false,
             size: 52,
             category: 10,
             isNew: true,
+            isCluster: true,
             children: [
               {
                 id: 3,
@@ -271,6 +275,12 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
         events: [
           {
+            resourceId: 1,
+            startDate: '2019-05-06 14:00:00',
+            endDate: '2019-05-15 12:00:00',
+            bikesCount: 3,
+          },
+          {
             resourceId: 3,
             startDate: '2019-05-11 08:00:00',
             endDate: '2019-05-15 12:00:00',
@@ -309,6 +319,13 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         endDate
       });
 
+      bookingCalendar.scheduler.on({
+        eventclick : ({ resourceRecord }) => {
+          bookingCalendar.scheduler.toggleCollapse(resourceRecord);
+        }
+      });
+
+      // for dubugging:
       window.scheduler = bookingCalendar.scheduler;
     }
   }

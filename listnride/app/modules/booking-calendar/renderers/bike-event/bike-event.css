@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px;
-  outline: none !important; /* do not highlight selected event */
+  cursor: default;
 }
 
 .booking-calendar .b-sch-event * {
@@ -31,6 +31,12 @@
 
 .booking-calendar .b-sch-event.not-available {
   background-color: rgba(122, 178, 248, 0.5) !important;
+}
+
+.booking-calendar .b-sch-event.cluster {
+  background-color: rgb(217, 222, 222) !important;
+  color: #212121;
+  cursor: pointer;
 }
 
 .booking-calendar .b-sch-event .event-status {
