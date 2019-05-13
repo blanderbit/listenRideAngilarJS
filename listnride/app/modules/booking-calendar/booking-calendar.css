@@ -94,3 +94,14 @@ booking-calendar {
 .booking-calendar__badge--green {
   background-color: rgb(95,198,147);
 }
+
+.booking-calendar .variant-row {
+  background-color: rgb(245, 247, 247);
+}
+
+.booking-calendar .b-sch-dayheadercell-today,
+.booking-calendar .b-sch-dayheadercell-today:hover,
+.booking-calendar .b-sch-dayheadercell-today:focus {
+  background-color: rgb(85, 85, 85) !important;
+  color: #ffffff;
+}
