@@ -19,6 +19,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
   controller: function BookingCalendarController(
     $translate,
     $state,
+    $mdMenu,
     $filter,
     accessControl,
     bikeOptions
@@ -54,6 +55,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         'booking-calendar.event.view-booking',
         ...bikeOptions.categoriesTranslationKeys()
       ]).then(translations => initScheduler(translations));
+
+      initDatepicker();
     };
 
     const viewPresetOptions = new Map([
@@ -112,6 +115,10 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     bookingCalendar.shiftNext = () => {
       bookingCalendar.scheduler.shiftNext();
+    };
+
+    bookingCalendar.openDatepickerMenu = ($mdOpenMenu, $event) => {
+      $mdOpenMenu($event);
     };
 
     function initScheduler(translations) {
@@ -216,7 +223,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           tree: true,
           eventTooltip: {
             anchor: false,
-            // hideDelay: 15 * 60 * 1000,
             cls: 'bike-event-popup',
             template: ({ eventRecord }) =>
               bikeEventPopupRenderer({ eventRecord, translations, getters })
@@ -278,7 +284,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             resourceId: 1,
             startDate: '2019-05-06 14:00:00',
             endDate: '2019-05-15 12:00:00',
-            bikesCount: 3,
+            bikesCount: 3
           },
           {
             resourceId: 3,
@@ -320,13 +326,42 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       });
 
       bookingCalendar.scheduler.on({
-        eventclick : ({ resourceRecord }) => {
+        eventclick: ({ resourceRecord }) => {
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
         }
       });
 
       // for dubugging:
       window.scheduler = bookingCalendar.scheduler;
+    }
+
+    function initDatepicker() {
+      getDatepickerElement()
+        .dateRangePicker({
+          alwaysOpen: true,
+          container: '#booking-calendar-datepicker',
+          inline: true,
+          showTopbar: false,
+          singleMonth: true,
+          startOfWeek: 'monday',
+          language: $translate.preferredLanguage(),
+          singleDate: true
+        })
+        .bind('datepicker-change', (event, { value }) => {
+          bookingCalendar.scheduler.setTimeSpan(
+            ...viewPresetOptions
+              .get(bookingCalendar.scheduler.viewPreset.name)
+              .getTimeSpan(new Date(value))
+          );
+          $mdMenu.hide();
+          getDatepickerElement()
+            .data('dateRangePicker')
+            .clear();
+        });
+    }
+
+    function getDatepickerElement() {
+      return angular.element('#booking-calendar-datepicker');
     }
   }
 });

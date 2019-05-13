@@ -7,14 +7,17 @@
       {{ 'shared.today' | translate }}
     </md-button>
 
+    <!-- Go to the prev time span -->
     <md-button class="md-icon-button" ng-click="bookingCalendar.shiftPrevious()">
       <md-icon md-font-icon="fa-chevron-left" class="fa"></md-icon>
     </md-button>
 
+    <!-- Go to the next time span -->
     <md-button class="md-icon-button" ng-click="bookingCalendar.shiftNext()">
       <md-icon md-font-icon="fa-chevron-right" class="fa"></md-icon>
     </md-button>
 
+    <!-- Switch between view presets -->
     <section layout="row" class="view-presets-selector">
       <md-button
         ng-repeat="viewPreset in bookingCalendar.viewPresetOptions"
@@ -30,12 +33,18 @@
     </section>
 
     <!-- Go to date -->
-    <md-button class="md-icon-button go-to-date-button" ng-click="settings.addChild(day)">
-      <md-icon md-font-icon="fa-calendar-o" class="fa"></md-icon>
-    </md-button>
+    <md-menu md-position-mode="target bottom">
+      <md-button 
+        class="md-icon-button" 
+        ng-click="bookingCalendar.openDatepickerMenu($mdOpenMenu, $event)">
+        <md-icon md-font-icon="fa-calendar-o" class="fa"></md-icon>
+      </md-button>
+      <md-menu-content id="booking-calendar-datepicker"></md-menu-content>
+    </md-menu>
   </menu>
 
   <md-divider class="booking-calendar-divider"></md-divider>
 
+  <!-- Scheduler -->
   <div class="scheduler-container"></div>
 </div>

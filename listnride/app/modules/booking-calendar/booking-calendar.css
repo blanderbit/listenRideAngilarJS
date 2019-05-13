@@ -41,6 +41,11 @@ booking-calendar {
 .booking-calendar-divider {
   margin-bottom: 10px;
 }
+
+#booking-calendar-datepicker {
+  padding: 0;
+  max-height: none !important;
+}
 /* Calendar controls END */
 
 /*
