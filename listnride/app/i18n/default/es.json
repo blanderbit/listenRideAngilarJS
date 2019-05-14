@@ -1444,8 +1444,7 @@
     "imprint": "Marca",
     "about": "Sobre nosotros",
     "press": "Prensa",
-    "jobs": "Empleo",
-    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
+    "jobs": "Empleo"
   },
   "seo": {
     "header": "Alquila las mejores bicicletas en",
@@ -1487,6 +1486,10 @@
       "rider": "Rider",
       "contact": "Contact",
       "view-booking": "View booking"
-    }
+    },
+    "previous-month": "Previous month",
+    "next-month": "Next month",
+    "previous-week": "Previous week",
+    "next-week": "Next week"
   }
 }
