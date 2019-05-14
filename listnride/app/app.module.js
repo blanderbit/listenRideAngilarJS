@@ -201,7 +201,7 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTag('og:image', 'http://www.listnride.com/app/assets/ui_images/opengraph/lnr_standard.jpg');
   }
 ])
-.run(['$translate', 'ngMeta', '$rootScope', '$location', 'authentication', 'api', function($translate, ngMeta, $rootScope, $location, authentication, api) {
+.run(['$translate', 'ngMeta', '$rootScope', '$location', 'authentication', 'api', '$state', function($translate, ngMeta, $rootScope, $location, authentication, api, $state) {
   // load partial translations based on the language selected
   $rootScope.$on('$translatePartialLoaderStructureChanged', function () {
     $translate.refresh();
@@ -224,6 +224,6 @@ angular.module('listnride', [
   // on route change we ask if users token is still valid
   $rootScope.$on("$locationChangeStart", function (event, next, current) {
     authentication.checkTokenExpiration();
+    $state.params.hideCoview ? coview('hideChatButton') : coview('showChatButton');
   });
-
 }]);
