@@ -44,6 +44,10 @@ angular.module('argon18Integration', []).component('argon18', {
           {
             question: 'brand-integration.argon18.faq-question-5',
             answer: 'brand-integration.argon18.faq-answer-5',
+          },
+          {
+            question: 'brand-integration.argon18.faq-question-6',
+            answer: 'brand-integration.argon18.faq-answer-6',
           }
         ];
 
