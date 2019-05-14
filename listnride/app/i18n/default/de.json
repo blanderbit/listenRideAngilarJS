@@ -453,6 +453,10 @@
         "meta-title": "Miete und teste Cowboy-Bikes noch heute! Das ist Cowboy. Das Elektrofahrrad für Stadtfahrer.",
         "meta-description": "Teste noch heute ein Cowboy Smart Electric Urban Bike! Das smarte Elektrofahrrad für Urban Riders. Miete es einfach auf listnride!"
       },
+      "argon18": {
+        "meta-title": "dummy text here",
+        "meta-description": "dummy text here"
+      },
       "urwahn": {
         "meta-title": "Miete und teste ein Urwahn Stadtfuchs in München | listnride",
         "meta-description": "Buche dir eine Probefahrt für das Urwahn Stadtfuchs heute! Das stilvolle urban bike kannst du einfach buchen und probefahren in München!"
@@ -1470,5 +1474,22 @@
     "submit-btn": "Ok",
     "submit-btn-save": "Speichern",
     "choose-range": "Wähle deinen Zeitraum"
+  },
+  "booking-calendar": {
+    "event": {
+      "accepted": "Accepted",
+      "request-waiting": "Request waiting",
+      "not-available": "Not available",
+      "waiting": "Waiting",
+      "not-available-header": "Bike is not available",
+      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
+      "see-settings": "See settings",
+      "date": "Date",
+      "pickup": "Pickup",
+      "booking-id": "Booking ID",
+      "rider": "Rider",
+      "contact": "Contact",
+      "view-booking": "View booking"
+    }
   }
 }
