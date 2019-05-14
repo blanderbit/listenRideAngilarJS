@@ -611,6 +611,18 @@
       "no-bikes-found": "Oops..Er worden helaas nog geen fietsen op deze locatie aangeboden.",
       "faq": "The frequently asked questions"
     },
+    "rossignol": {
+      "title": "Rent and test ride Rossignol bikes",
+      "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
+      "item1-title": "Design",
+      "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
+      "item2-title": "E Track",
+      "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
+      "item3-title": "Another Best Day",
+      "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
+      "find-out-more": "Learn more about Rossignol bikes",
+      "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the whole range of Rossignol bikes. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, contact@listnride.com\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailtto:contact@listnride.com\">contact@listnride.com</a>"
+    },
     "urwahn": {
       "title": " MadewithLove #Germany #SteelisReal",
       "description": "Book a test drive for the <a href=\"https://www.urwahnbikes.com/\" target=\"_blank\">Urwahn </a>Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!",
@@ -734,12 +746,12 @@
       }
     },
     "argon18": {
-      "title": "Dummy text here",
+      "title": "Rent and test ride Argon 18 road bikes and gravel bikes! World leader in high-end bicycle manufacturing\n",
       "faq-question-6": "Dummy text here",
       "faq-answer-6": "Dummy text here",
-      "description": "Dummy text here",
-      "item1-title": "Dummy text here",
-      "item1-description": "Dummy text here",
+      "description": "In our Berlin Experience Center you can rent and test ride Argon 18 road bikes and gravel bikes! World leader in high-end bicycle manufacturing! Simply book online and visit our showroom for pick-up.",
+      "item1-title": "THE QUINTESSENCE OF CYCLING",
+      "item1-description": "Argon 18 entwickelt und konstruiert High-End-Bikes in Kanada mit modernster Technologie. Hinter ihren schlanken und innovativen Designs verbirgt sich ein hervorragendes Handling und eine hervorragende Aerodynamik, so dass du deine beste Leistung erbringen und die Fahrt genießen kannst. <br> <br1> Design. Innovation. Performance.",
       "item2-title": "Dummy text here",
       "item2-description": "Dummy text here",
       "item3-title": "Dummy text here",
