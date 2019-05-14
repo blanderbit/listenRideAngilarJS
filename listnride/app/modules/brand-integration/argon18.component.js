@@ -44,22 +44,6 @@ angular.module('argon18Integration', []).component('argon18', {
           {
             question: 'brand-integration.argon18.faq-question-5',
             answer: 'brand-integration.argon18.faq-answer-5',
-          },
-          {
-            question: 'brand-integration.argon18.faq-question-6',
-            answer: 'brand-integration.argon18.faq-answer-6',
-          },
-          {
-            question: 'brand-integration.argon18.faq-question-7',
-            answer: 'brand-integration.argon18.faq-answer-7',
-          },
-          {
-            question: 'brand-integration.argon18.faq-question-8',
-            answer: 'brand-integration.argon18.faq-answer-8',
-          },
-          {
-            question: 'brand-integration.argon18.faq-question-9',
-            answer: 'brand-integration.argon18.faq-answer-9',
           }
         ];
 
