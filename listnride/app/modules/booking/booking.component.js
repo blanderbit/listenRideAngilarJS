@@ -554,6 +554,11 @@ angular.module('booking', [])
 
         function authenticateThreeDSecure() {
           var threeDSecureAuthenticationResult = $q.defer();
+          // TODO: temporary solution until September fixes (on bank side)
+          threeDSecureAuthenticationResult.resolve();
+          return threeDSecureAuthenticationResult.promise;
+
+          ////////////
 
           function showAuthThreeDSecureDialog(options) {
             // threeDSecureAuthenticationResult.reject();
