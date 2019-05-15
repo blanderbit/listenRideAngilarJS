@@ -64,7 +64,11 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         'week',
         {
           key: 'week',
-          label: 'shared.week',
+          labels: {
+            option: 'shared.week',
+            prev: 'booking-calendar.previous-week',
+            next: 'booking-calendar.next-week'
+          },
           getTimeSpan: date => {
             const firstday = DateHelper.add(
               date,
@@ -80,7 +84,11 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         'month',
         {
           key: 'month',
-          label: 'shared.month',
+          labels: {
+            option: 'shared.month',
+            prev: 'booking-calendar.previous-month',
+            next: 'booking-calendar.next-month'
+          },
           getTimeSpan: date => {
             return [
               DateHelper.getFirstDateOfMonth(date),
@@ -95,9 +103,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     bookingCalendar.gotoToday = () => {
       bookingCalendar.scheduler.setTimeSpan(
-        ...viewPresetOptions
-          .get(bookingCalendar.scheduler.viewPreset.name)
-          .getTimeSpan(new Date())
+        ...bookingCalendar.getCurrentViewPreset().getTimeSpan(new Date())
       );
     };
 
@@ -119,6 +125,18 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     bookingCalendar.openDatepickerMenu = ($mdOpenMenu, $event) => {
       $mdOpenMenu($event);
+    };
+
+    bookingCalendar.getCurrentViewPreset = () => {
+      return viewPresetOptions.get(bookingCalendar.scheduler.viewPreset.name);
+    };
+
+    bookingCalendar.getShiftButtonTooltip = (direction) => {
+      if (!bookingCalendar.scheduler) {
+        // scheduler hasn't been instantiated yet
+        return '';
+      }
+      return bookingCalendar.getCurrentViewPreset().labels[direction];
     };
 
     function initScheduler(translations) {
@@ -143,7 +161,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         headerConfig: {
           top: {
             unit: 'month',
-            dateFormat: 'MMMM YYYY'
+            dateFormat: 'MMMM YYYY',
+            // align: 'start',
           },
           middle: {
             unit: 'day',
@@ -164,7 +183,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         headerConfig: {
           top: {
             unit: 'month',
-            dateFormat: 'MMMM YYYY'
+            dateFormat: 'MMMM YYYY',
+            // align: 'start',
           },
           middle: {
             unit: 'day',
@@ -247,7 +267,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                 size: 52,
                 category: 11,
                 isVariant: true,
-                variantIndex: 1
+                variantIndex: 1,
+                cls: 'variant-row'
               },
               {
                 id: 4,
@@ -257,7 +278,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                 category: 12,
                 isVariant: true,
                 isNew: true,
-                variantIndex: 2
+                variantIndex: 2,
+                cls: 'variant-row'
               },
               {
                 id: 5,
@@ -265,7 +287,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                 size: 56,
                 category: 20,
                 isVariant: true,
-                variantIndex: 3
+                variantIndex: 3,
+                cls: 'variant-row'
               }
             ]
           },
@@ -349,8 +372,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         })
         .bind('datepicker-change', (event, { value }) => {
           bookingCalendar.scheduler.setTimeSpan(
-            ...viewPresetOptions
-              .get(bookingCalendar.scheduler.viewPreset.name)
+            ...bookingCalendar
+              .getCurrentViewPreset()
               .getTimeSpan(new Date(value))
           );
           $mdMenu.hide();
