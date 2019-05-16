@@ -144,11 +144,12 @@ angular.module('list', ['ngLocale'])
               }
 
               list.form.prices = [];
-              for (var day = 0; day < 9; day += 1) {
-                list.form.prices[day] = {
-                  price: undefined
-                }
-              }
+              // for (var day = 0; day < 9; day += 1) {
+              //   list.form.prices[day] = {
+              //     price: undefined
+              //   }
+              // }
+              list.form.prices = prices.setDefaultPrices();
 
               list.form.discounts = {
                 "daily": 10,

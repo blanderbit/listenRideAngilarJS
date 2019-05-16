@@ -90,6 +90,12 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         return data.prices;
       },
 
+      setDefaultPrices: function() {
+        var prices = [];
+
+        return prices;
+      },
+
       // server to client transformation
       // all prices are calculated based on daily price
       // daily price is user provided always as integer
