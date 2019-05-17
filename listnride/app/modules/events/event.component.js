@@ -32,6 +32,9 @@ angular.module('event', []).component('event', {
           'costadelsol': getRequestUrl('30', 'Marbella, Málaga, Spain', '', '2019-09-15'),
           '8bar-clubride': '/rides?family=36&zero=true',
           'granfondo-bikedivision': getRequestUrl('30', 'Peschiera del Garda, Verona, italy', '', '2019-09-22', '4415'),
+          'radfahren-neu-entdecken-eschborn': '/rides?family=37&zero=true',
+          'radfahren-neu-entdecken-kassel': '/rides?family=38&zero=true',
+          'radfahren-neu-entdecken-hofheim': '/rides?family=39&zero=true',
 
           // CUSTOM DESIGN AND OLD PAGES
 
