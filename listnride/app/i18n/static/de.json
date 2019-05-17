@@ -611,6 +611,18 @@
       "no-bikes-found": "Ups ... hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
     },
+    "rossignol": {
+      "title": "Rent and test ride Rossignol bikes",
+      "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
+      "item1-title": "Design",
+      "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
+      "item2-title": "E Track",
+      "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
+      "item3-title": "Another Best Day",
+      "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
+      "find-out-more": "Learn more about Rossignol bikes",
+      "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"https://www.rossignol.com/int-en/rossignol-bike/rossignol-rike-mountain-bikes.html\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
+    },
     "urwahn": {
       "title": "#MadewithLove #Germany #SteelisReal",
       "description": "Buche dir eine Probefahrt für das <a href=\"https://www.urwahnbikes.com\" target=\"_blank\">Urwahn</a> Stadtfuchs heute! Das stilvolle urban bike kannst du einfach buchen und probefahren in München!",
@@ -731,15 +743,31 @@
       "find-out-more": {
         "title": "Learn more about Felt Bicycles",
         "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
-      },
-      "faq-answer-1": "FAQ ANSWER #1",
-      "faq-answer-2": "FAQ ANSWER #2",
-      "faq-answer-3": "FAQ ANSWER #3",
-      "faq-answer-4": "FAQ ANSWER #4",
-      "faq-question-1": "faq-question-1",
-      "faq-question-2": "faq-question-2",
-      "faq-question-3": "faq-question-3",
-      "faq-question-4": "faq-question-4"
+      }
+    },
+    "argon18": {
+      "title": "THE QUINTESSENCE OF CYCLING",
+      "faq-question-6": "Ich möchte eine Argon 18 ausprobieren. Bietet ihr Demo-Räder an?",
+      "faq-answer-6": "Einfach hier auf der Seite deine Probefahrt buchen und uns im list and ride experience center besuchen. ",
+      "description": "Argon 18 entwickelt und konstruiert High-End-Bikes in Kanada mit modernster Technologie. Hinter ihren schlanken und innovativen Designs verbirgt sich ein hervorragendes Handling und eine hervorragende Aerodynamik, so dass du deine beste Leistung erbringen und die Fahrt genießen kannst.  </br></br> Design. Innovation. Performance.",
+      "item1-title": "Eindeutiges Design",
+      "item1-description": "innovatives Design, mit hervorragendem Handling und Aerodynamik</br>\nGibt Ihnen die beste Leistung, um die Fahrt zu genießen!",
+      "item2-title": "Spitzen-Innovation ",
+      "item2-description": "Der Goldstandard im Radfahren durch Attitude und Stolz; Wir beweisen täglich, dass wir in der Lage sind, das Beste zu leisten.",
+      "item3-title": "Best Performance",
+      "item3-description": "Komfort, Steifheit und Gewicht in einer optimalen Balance",
+      "find-out-more": "Buche dir eine Probefahrt für Argon 18.",
+      "order-online": "Weltweit führend in der High-End-Fahrradherstellung</br></br>Exzellenz ist keine Frage des reinen Glücks. Es ist das Ergebnis sorgfältiger und meisterhafter Handwerksarbeit. Argon 18 ist bekannt für die Integration intensiver Forschung in das Design und die Entwicklung seiner Fahrräder, die innovativ und doch klassisch, spektakulär und elegant sind. Mehr erfahren auf Argon18</br>\nDein Argon18 kann direkt online unter <a href=\"https://www.argon18bike.com/\" target=\"_blank\">https://www.argon18bike.com</a> bestellt werden.",
+      "faq-question-1": "Wo kann man kaufen und seinen Service durchführen lassen? ",
+      "faq-answer-1": "Bei unserem Händler in Berlin - List and Ride - kannst du dein Fahrrad konfigurieren und direkt online bestellen. Das Fahrrad wird in den List and Ride Showroom ausgeliefert und steht sofort für dich zum Ausrollen bereit. Weitere Händler findest du unter <a href=\"https://www.argon18bike.com/\" target=\"_blank\">  www.argon18bike.com</a>",
+      "faq-question-2": "Welche Rahmengröße passt zu meiner Größe?",
+      "faq-answer-2": "Obwohl es einfach wäre, dir zu sagen, welche Fahrradgröße am besten zu dir passt, ist eine gute Passform die Grundlage für eine gute Fahrt. Dein Händler ist die beste Quelle für einen genauen und professionellen Montageservice. Die Größentabelle für unsere Produkte findest du auf der entsprechenden Bike-Seite unter <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-3": "Wie kann ich die Gewährleistung registrieren?",
+      "faq-answer-3": "Du kannst deine Gewährleistung auf <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a> eintragen </br>Oder </br> Du kannst dich an den autorisierten Einzelhändler wenden, der dir das Produkt verkauft hat. Die Liste unserer autorisierten Händler finden Sie auf unserer Website.",
+      "faq-question-4": "Gilt die Garantie auch für einen Zweitbesitzer?",
+      "faq-answer-4": "Nur der Erstbesitzer ist von unserer Gewährleistung betroffen.",
+      "faq-question-5": "Ich möchte einen Argon 18 Artikel online kaufen. Ist die Gewährleistung anwendbar?",
+      "faq-answer-5": "Die Garantie gilt nur, wenn ein autorisierter Argon 18 Händler das Fahrrad verkauft. Einige unserer Händler verkaufen unsere Produkte online. Die Liste unserer autorisierten Händler findest du auf unserer Website."
     },
     "swytch": {
       "title": "Miete und teste Swytch E-bikes in Berlin",
@@ -806,17 +834,7 @@
       "find-out-more": {
         "title": "Erfahre mehr über veloheld Räder",
         "description": "Bestelle Dein neues <a href=\"//veloheld.de\" target=\"_blank\">veloheld Rad online</a> und erhalte den listnride Mietpreis angerechnet. "
-      },
-      "faq-question-1": "Enter Text.",
-      "faq-answer-1": "Enter Text.",
-      "faq-question-2": "Enter Text.",
-      "faq-answer-2": "Enter Text.",
-      "faq-question-3": "Enter Text.",
-      "faq-answer-3": "Enter Text.",
-      "faq-question-4": "Enter Text.",
-      "faq-answer-4": "Enter Text.",
-      "faq-question-5": "Enter Text.",
-      "faq-answer-5": "Enter Text."
+      }
     },
     "leaos": {
       "description": "Das Design E-Bike - Leaos",
@@ -876,7 +894,7 @@
     "unimoke": {
       "meta-title": "UNI Moke-Bikes probefahren und mieten | listnride",
       "meta-descr": "Leihe Dir eine UNI Moke oder eine UNI Swing und teste unser vintage Design, Allzweck E-Bike für Fun, Family &amp; Work. Hergestellt von Urban Drivestyle in Berlin.",
-      "title": "Ausprobieren.Verlieben.Losfahren.",
+      "title": "Ausprobieren. Verlieben. Losfahren.",
       "description": "Leihe Dir eine UNI Moke oder eine UNI Swing und teste unser vintage Design, Allzweck E-Bike für Fun, Family &amp; Work. Hergestellt von Urban Drivestyle in Berlin.",
       "item1-title": "ALL-WETTER",
       "item1-description": "Unsere E-Bikes bieten besten Fahrkomfort und Sicherheit bei jedem Wetter: durchextra dicke Ballonreifen und einen robusten Stahlrahmen. Damit meisterst Du Tramschienen, Schlaglöcher und Matschwetter ohne Probleme",

@@ -611,6 +611,18 @@
       "no-bikes-found": "Oops ... purtroppo non ci sono ancora bici in questa località.",
       "faq": "Le domande frequenti"
     },
+    "rossignol": {
+      "title": "Rent and test ride Rossignol bikes",
+      "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
+      "item1-title": "Design",
+      "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
+      "item2-title": "E Track",
+      "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
+      "item3-title": "Another Best Day",
+      "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
+      "find-out-more": "Learn more about Rossignol bikes",
+      "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"https://www.rossignol.com/int-en/rossignol-bike/rossignol-rike-mountain-bikes.html\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
+    },
     "urwahn": {
       "title": " MadewithLove #Germany #SteelisReal",
       "description": "Book a test drive for the <a href=\"https://www.urwahnbikes.com\" target=\"_blank\">Urwahn</a> Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!",
@@ -731,15 +743,31 @@
       "find-out-more": {
         "title": "Ulteriori informazioni su Felt Bicycles",
         "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
-      },
-      "faq-answer-1": "FAQ ANSWER #1",
-      "faq-answer-2": "FAQ ANSWER #2",
-      "faq-answer-3": "FAQ ANSWER #3",
-      "faq-answer-4": "FAQ ANSWER #4",
-      "faq-question-1": "faq-question-1",
-      "faq-question-2": "faq-question-2",
-      "faq-question-3": "faq-question-3",
-      "faq-question-4": "faq-question-4"
+      }
+    },
+    "argon18": {
+      "title": "THE QUINTESSENCE OF CYCLING",
+      "faq-question-6": "I want to try an Argon 18 bike. Do you offer demo rides?",
+      "faq-answer-6": "Just book your test ride here on the page and visit us at the list and ride experience center. ",
+      "description": "Argon 18 develops and engineers high-end bikes in Canada using state-of-the-art technology. Behind their sleek and innovative designs, you’ll find superior handling and aerodynamics so that you can give your best performance and enjoy the ride. </br> </br>Design. Innovation. Performance. ",
+      "item1-title": "Unique Design",
+      "item1-description": "innovative designs, with superior handling and aerodynamics </br>Gives you best performance to enjoy the ride!",
+      "item2-title": "Cutting-edge Innovation",
+      "item2-description": "The gold standard in cycling through attitude and pride; We prove daily, that we have what it takes.",
+      "item3-title": "Best Performance",
+      "item3-description": "comfort, stiffness and weight in an optimal balance",
+      "find-out-more": "Rent and test ride Argon 18 road bikes and gravel bikes! ",
+      "order-online": "World leader in high-end bicycle manufacturing </br></br>Excellence is not a question of sheer luck. It is the result of meticulous and master craftsmanship. Argon 18 is renowned for integrating intensive research into the design and development of its bikes, which are innovative yet classic, spectacular and sleek.</br>Order your Argon18 directly online on <a href=\"https://www.argon18bike.com/\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-1": "Where can I buy and get my service done? ",
+      "faq-answer-1": "At our dealer in Berlin - List and Ride - you can configure your bike and order directly online. The bike will be shipped to the List and Ride Showroom and ready for you to roll out, straight away. Other dealers can be found on <a href=\"https://www.argon18bike.com/\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-2": "What frame size will best fit me?",
+      "faq-answer-2": "Although it would be simple to tell you which bike size would best fit you, a good fit is the basis for a good ride. Your dealer is the best source for an accurate and professional fitting service. You will find the sizing chart for our products in the appropriate Bike page on <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-3": "How can I register my warranty?",
+      "faq-answer-3": "You can register your warranty on <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a></br>Or </br> You can go to the authorized retailer that sold you the product. You will find the list of our authorized retailers on our website.",
+      "faq-question-4": "Is the warranty applicable to a second owner?",
+      "faq-answer-4": "Only the first owner is covered by our warranty.",
+      "faq-question-5": "I want to buy an Argon 18 product online. Is the warranty applicable?",
+      "faq-answer-5": "The warranty is only applicable if an authorized Argon 18 dealer sells the bike. Some of our retailers do sell our products online. You will find the list of our authorized retailers on our website."
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",

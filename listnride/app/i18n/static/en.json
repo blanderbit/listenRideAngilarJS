@@ -612,6 +612,18 @@
       "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
     },
+    "rossignol": {
+      "title": "Rent and test ride Rossignol bikes",
+      "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
+      "item1-title": "Design",
+      "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
+      "item2-title": "E Track",
+      "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E-Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E-Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
+      "item3-title": "Another Best Day",
+      "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
+      "find-out-more": "Learn more about Rossignol bikes",
+      "order-online": "Visit the List and Ride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the whole range of Rossignol bikes. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, contact@listnride.com\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailtto:contact@listnride.com\">contact@listnride.com</a>"
+    },
     "urwahn": {
       "title": "MadewithLove #Germany #SteelisReal",
       "description": "Book a test drive for the <a href=\"https://www.urwahnbikes.com\" target=\"_blank\">Urwahn</a> Stadtfuchs today! The stylish urban bike you can easily book and test drive in Munich!",
@@ -732,15 +744,31 @@
       "find-out-more": {
         "title": "Learn more about Felt Bicycles",
         "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
-      },
-      "faq-answer-1": "FAQ ANSWER #1",
-      "faq-answer-2": "FAQ ANSWER #2",
-      "faq-answer-3": "FAQ ANSWER #3",
-      "faq-answer-4": "FAQ ANSWER #4",
-      "faq-question-1": "faq-question-1",
-      "faq-question-2": "faq-question-2",
-      "faq-question-3": "faq-question-3",
-      "faq-question-4": "faq-question-4"
+      }
+    },
+    "argon18": {
+      "title": "THE QUINTESSENCE OF CYCLING",
+      "faq-question-6": "I want to try an Argon 18 bike. Do you offer demo rides?",
+      "faq-answer-6": "Just book your test ride here on the page and visit us at the list and ride experience center. ",
+      "description": "Argon 18 develops and engineers high-end bikes in Canada using state-of-the-art technology. Behind their sleek and innovative designs, you’ll find superior handling and aerodynamics so that you can give your best performance and enjoy the ride. </br> </br>Design. Innovation. Performance. ",
+      "item1-title": "Unique Design",
+      "item1-description": "innovative designs, with superior handling and aerodynamics </br>Gives you best performance to enjoy the ride!",
+      "item2-title": "Cutting-edge Innovation",
+      "item2-description": "The gold standard in cycling through attitude and pride; We prove daily, that we have what it takes.\n",
+      "item3-title": "Best Performance",
+      "item3-description": "comfort, stiffness and weight in an optimal balance",
+      "find-out-more": "Rent and test ride Argon 18 road bikes and gravel bikes! ",
+      "order-online": "World leader in high-end bicycle manufacturing </br></br>\nExcellence is not a question of sheer luck. It is the result of meticulous and master craftsmanship. Argon 18 is renowned for integrating intensive research into the design and development of its bikes, which are innovative yet classic, spectacular and sleek.</br>\nOrder your Argon18 directly online on <a href=\"https://www.argon18bike.com/\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-1": "Where can I buy and get my service done? ",
+      "faq-answer-1": "At our dealer in Berlin - List and Ride - you can configure your bike and order directly online. The bike will be shipped to the List and Ride Showroom and ready for you to roll out, straight away. Other dealers can be found on <a href=\"https://www.argon18bike.com/\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-2": "What frame size will best fit me?",
+      "faq-answer-2": "Although it would be simple to tell you which bike size would best fit you, a good fit is the basis for a good ride. Your dealer is the best source for an accurate and professional fitting service. You will find the sizing chart for our products in the appropriate Bike page on <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-3": "How can I register my warranty?",
+      "faq-answer-3": "You can register your warranty on <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a>\n</br>Or \n</br>You can go to the authorized retailer that sold you the product. You will find the list of our authorized retailers on our website.",
+      "faq-question-4": "Is the warranty applicable to a second owner?",
+      "faq-answer-4": "Only the first owner is covered by our warranty.",
+      "faq-question-5": "I want to buy an Argon 18 product online. Is the warranty applicable?",
+      "faq-answer-5": "The warranty is only applicable if an authorized Argon 18 dealer sells the bike. Some of our retailers do sell our products online. You will find the list of our authorized retailers on our website."
     },
     "swytch": {
       "title": "Rent and test ride Swytch ebikes in Berlin",
@@ -807,17 +835,7 @@
       "find-out-more": {
         "title": "Learn more about veloheld bikes",
         "description": "Order your new <a href=\"//veloheld.de\" target=\"_blank\">veloheld bike online</a> and get your listnride rental reimbursed."
-      },
-      "faq-question-1": "Enter Text.",
-      "faq-answer-1": "Enter Text.",
-      "faq-question-2": "Enter Text.",
-      "faq-answer-2": "Enter Text.",
-      "faq-question-3": "Enter Text.",
-      "faq-answer-3": "Enter Text.",
-      "faq-question-4": "Enter Text.",
-      "faq-answer-4": "Enter Text.",
-      "faq-question-5": "Enter Text.",
-      "faq-answer-5": "Enter Text."
+      }
     },
     "leaos": {
       "description": "The design e-bike - Leaos",
@@ -907,7 +925,7 @@
       "description": "Rent a Brompton and test its excellent riding and folding characteristics.",
       "subdescription": "Experience cities in a different way - with a bike perfect for the city.",
       "item1-title": "Free of charge to bring along",
-      "item1-description": "Free to take along in local public transport (May be stowed in bag / transfer)",
+      "item1-description": "Free to take along in local public transport (May be stowed in bag / luggage)",
       "item2-title": "Unique folding system",
       "item2-description": "Folding in 10-20 seconds<br>Folding Size (HxWxD): 59cm x 57cm x 27cm<br>Easy to carry around (9-13 kg)",
       "item3-title": "London cult bike",
@@ -933,7 +951,7 @@
       "title": "Designed for daily urban life",
       "description": "Test and rent muli in Berlin or Munich",
       "subdescription": "The muli is a hybrid between a compact citybike and a big cargo-bike. This combination makes a bike that perfectly suits daily city life.",
-      "item1-description": "Length <b>198cm</b><br>Weight <b>24kg</b><br>Total Payload <b>170kg</b><br>Handlebar Adustability <b>10cm</b>",
+      "item1-description": "Length <b>198cm</b><br>Weight <b>24kg</b><br>Total Payload <b>170kg</b><br>Handlebar Adjustability <b>10cm</b>",
       "item2-description": "Basket Width <b>28-60cm</b><br>Basket Payload <b>70kg</b><br>Basket Volume <b>90l</b><br>Eurobox <b>40x60cm</b>",
       "available-cities": "Available in Berlin and Munich",
       "find-out-more": "Questions?",
@@ -975,7 +993,7 @@
       "subdescription": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!",
       "item1-title": "Your Bike - Your Style",
       "item1-description": "4 frame sizes available<br>8 stylish colour variations<br>Lots of customizable accessories",
-      "item2-title": "The Prefect Urban Ride",
+      "item2-title": "The Perfect Urban Bike",
       "item2-description": "Quick and agile handling<br>Durable powder coated finish<br>High quality components<br>Pure riding pleasure",
       "item3-title": "Great Price - Solid Value",
       "item3-description": "Singlespeed bikes starting from 349€<br>High customer satisfaction<br>Personalized service<br>Speedy delivery to Berlin",
@@ -983,7 +1001,7 @@
       "testimonial-1": "Nice, clean design, and arrived neatly pre-assembled. I’m loving the ride.",
       "testimonial-2": "Very friendly customer service, quick processing of the order and super fast response to my questions.",
       "testimonial-3": "Bonvelo is awesome. Everything is right here. Great customer service -- they responded quickly even when I asked a question on Sunday. The delivery time was really fast, and the bike arrived almost fully assembled, with just a couple easy things to finish. The bike looks great, and the price was even better. Will definitely recommend. Cheers from Munich!",
-      "find-out-more": "Learn more about bonvelo Bikes",
+      "find-out-more": "Learn more about bonvelo bikes",
       "faq-description": "When you order your <a href=\"https://bonvelo.de\">bonvelo</a>, we will refund you the cost of your rental / test ride in Berlin!",
       "faq-question-1": "What is a Singlespeed / Fixie bike?",
       "faq-answer-1": "For fast urban riding in (mostly) flat cities, the simplest way is to have just one gear. Singlespeed / Fixie bikes also benefit from a cleaner, more minimalist appearance. In addition to that, you can choose the position of the rear wheel; set it up as a singlespeed (freewheel / coasting possible), or as a fixed gear.",
@@ -1115,7 +1133,7 @@
       "item3-title": "Economical ",
       "item3-description": "You want your bike´s e-drive to last for life? binova guarantees a long life span for your binova flow.",
       "test-bike": "Test the new rethink models!",
-      "choose-location": "Wähle deine Stadt",
+      "choose-location": "Choose your city",
       "find-out-more": "Learn more about rethink",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
     },

@@ -226,6 +226,33 @@
       "meta-title": "Huur een racefiets voor Berlin Triathlon 2019 | listnride",
       "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past."
     },
+    "radfahren-neu-entdecken-eschborn": {
+      "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "description": "Was: <b>Radfahren neu entdecken</b>  |  Where: <b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
+      "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
+      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
+      "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "meta-description": "esten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
+    },
+    "radfahren-neu-entdecken-kassel": {
+      "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "description": "Was: <b>Radfahren neu entdecken</b>  |  Where: <b>In deiner Kommune</b>  |  When: <b>1.9. - 30.11. 2019</b>",
+      "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. September bis zum 30. November 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
+      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
+      "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
+    },
+    "radfahren-neu-entdecken-hofheim": {
+      "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "description": "Was: <b>Radfahren neu entdecken</b>  |  Where: <b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
+      "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.\n",
+      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
+      "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
+    },
     "paris-brest-paris": {
       "meta-title": "Huur een racefiets voor Parijs-Brest-Parijs 2019 | listnride",
       "meta-description": "Huur een racefiets online, gemakkelijk en veilig met listnride voor Parijs-Brest-Parijs 2019. Kies de perfecte fiets die bij u past."
@@ -444,9 +471,17 @@
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test een elektrische fiets vandaag! De elektrische fietsen van Ampler zijn nu direkt beschikbaar op listnride. Huur er één in Amsterdam, Berlijn, Düsseldorf, München of Zürich."
       },
+      "rossignol": {
+        "meta-title": "Rent and test ride Rossignol bikes. Rossignol bikes are available to rent on listnride.",
+        "meta-description": "Test ride a Rossignol bike today! Rossignol bikes are available to rent on listnride. The newest mountain bikes from Rossignol will help you hit the trail. "
+      },
       "cowboybikes": {
         "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
         "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
+      },
+      "argon18": {
+        "meta-title": "Rent and test ride Argon 18 road bikes and gravel bikes! World leader in high-end bicycle manufacturing",
+        "meta-description": "In our Berlin Experience Center you can rent and test ride Argon 18 road bikes and gravel bikes! World leader in high-end bicycle manufacturing! Simply book online and visit our showroom for pick-up."
       },
       "urwahn": {
         "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
@@ -1458,5 +1493,26 @@
     "submit-btn": "Ok",
     "submit-btn-save": "Opslaan",
     "choose-range": "Kies de periode"
+  },
+  "booking-calendar": {
+    "event": {
+      "accepted": "Accepted",
+      "request-waiting": "Request waiting",
+      "not-available": "Not available",
+      "waiting": "Waiting",
+      "not-available-header": "Bike is not available",
+      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
+      "see-settings": "See settings",
+      "date": "Date",
+      "pickup": "Pickup",
+      "booking-id": "Booking ID",
+      "rider": "Rider",
+      "contact": "Contact",
+      "view-booking": "View booking"
+    },
+    "previous-month": "Previous month",
+    "next-month": "Next month",
+    "previous-week": "Previous week",
+    "next-week": "Next week"
   }
 }

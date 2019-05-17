@@ -558,12 +558,12 @@
         "description": "Düsseldorf accueillera un nouveau salon du lifestyle axé sur le cyclisme: le CyclingWorld. Listnride sera présent à l’entrée principale avec des marques et fabricants sélectionnés tels que Ampler et Cervélo, pour présenter notre plateforme de location de vélos. De plus, nous vous invitons à explorer la campagne environnante lors de deux visites guidées à vélo pour amener la motivation acquise au salon juste sur la route!",
         "pp-title": "Samedi",
         "kr-title": "Dimanche",
-        "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
-        "kr-description": "Together with the Schickemütze we host a group ride which will take you out the city to the beautiful country-side where an abounded rocket station will be one of the highlights. Rental bikes are available by Cervélo and Ridley.",
+        "pp-description": "Que vous soyez un coureur chevronné ou tout nouveau, le Push'n'Post Ride est l’occasion idéale de participer à une sortie sociale dans le magnifique cadre de Düsseldorf pendant le CWD. Le trajet est organisé par Cervelo et Cycle Cafe.",
+        "kr-description": "En collaboration avec Schickemütze, nous organisons une sortie en groupe qui vous mènera dans la magnifique campagne. Des vélos de location de Cervélo et Ridley seront disponibles.",
         "title2": "Nous avons des vélos parfaits à essayer, de Ampler und Cervélo",
         "subtitle2": "Que vous souhaitiez essayer le vélo un jour ou une semaine, réservez-le simplement gratuitement",
-        "ampler": "The Estonian start-up will provide innovative and urban E-Bikes to test ride. Choose between Hawk, the dynamic single-speed and Bilberry, the comfortable city-bike and get to know e-bikes on a whole new level.",
-        "cervelo": "The Canadian roadbike manufacturer Cervélo will bring the latest models to the Cycling World, which you can test out during one of the social rides over the weekend.",
+        "ampler": "La start-up estonienne fournira des vélos électriques innovants et urbains à tester. Choisissez entre Hawk, le single-speed rapide, et Bilberry, le vélo de ville confortable, et découvrez les vélos électriques à un tout autre niveau.",
+        "cervelo": "Le fabricant canadien de vélos de route, Cervélo, présentera les derniers modèles au monde du cyclisme, que vous pourrez tester lors de l'une des sorties sociales pendant le week-end.",
         "our-bikes": "Voir tous nos vélos"
       },
       "pp": {
@@ -610,6 +610,18 @@
       "choose-location": "Choose a test location",
       "no-bikes-found": "Oups ... il n'y a malheureusement pas encore de vélos enregistrés à cet endroit.",
       "faq": "Les questions fréquemment posées"
+    },
+    "rossignol": {
+      "title": "Rent and test ride Rossignol bikes",
+      "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
+      "item1-title": "Design",
+      "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
+      "item2-title": "E Track",
+      "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
+      "item3-title": "Another Best Day",
+      "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
+      "find-out-more": "Learn more about Rossignol bikes",
+      "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the whole range of Rossignol bikes. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, contact@listnride.com\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailtto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "urwahn": {
       "title": " MadewithLove #Germany #SteelisReal",
@@ -698,69 +710,85 @@
       "description": "Les excellents avis de ces vélos sont en partie attribuables à une autre série de chiffres. Ceux qui composent la géométrie et le caractère uniques de Whyte. Qu'il s'agisse de leurs vélos ultra-légers, de leurs vélos de la série pur-sang EWS G170, de leurs vélos de course d'entrée de gamme de la série 600 ou de leurs vélos de route Wessex primés et révolutionnaires, chaque Whyte est conçu pour créer une chimie unique en votre compagnie. plus vite, plus loin et plus confortablement en toute confiance.",
       "feature-1": {
         "title": "The Whyte Way",
-        "description": "The true definition of freedom is that you can do whatever you want whenever you want. For Whyte bikes that means they are designed to work at their best whenever you need them to and no matter the weather conditions."
+        "description": "La vraie définition de la liberté est que vous pouvez faire ce que vous voulez quand vous le voulez. Pour les vélos Whyte, cela signifie qu'elles sont conçues pour fonctionner au mieux chaque fois que vous en avez besoin et quelles que soient les conditions météorologiques."
       },
       "feature-2": {
         "title": "Whyte Bikes Work",
-        "description": "Building an ever ready bike isn’t just about the frame, it’s about equipping it right too. Whyte bikes don’t just mean blindly jumping on every passing parts bandwagon and asking you to make sense of the mess either. Instead Whyte bikes have always been way ahead of the curve with similarly radical components so that you hit the ground running while other brands are still scrambling to react."
+        "description": "Construire un vélo toujours prêt n’est pas seulement une affaire de cadre, il faut aussi bien l’équiper. Les vélos de Whyte ont toujours été très en avance sur la courbe avec des composants modernes, de sorte que vous serez prêt à démarrer alors que d'autres marques continuent à se battre pour réagir."
       },
       "feature-3": {
         "title": "Whyte Racing",
-        "description": "Nothing sharpens your focus like racing and Whyte bikes are designed with that in mind, pushing you and the bike to the limit. Always! The Whyte teams have scored multiple wins and podium positions from the lunatic 38km long glacier to valley bottom Mega Avalanche enduro, to National championship XC, or ultra distance MTB orienteering, and endurance racing events."
+        "description": "Rien n'aiguise votre concentration comme les vélos de course et les vélos Whyte sont conçus dans cet esprit, vous poussant, vous et le vélo, jusqu'à la limite. Les équipes Whyte ont remporté de nombreuses victoires et monté sur le podium, du glacier de 38 km au Mega Avalanche enduro, en passant par le championnat national XC, le VTT d'orientation ou les courses d'endurance sur ultra distance."
       },
       "find-out-more": {
-        "title": "Learn more about Whyte bikes",
-        "description": "Order your new <a href=\"//whytebikes.de/\" target=\"_blank\">Whyte bike</a> online and get your listnride rental reimbursed (valid for purchases at Whyte Germany only)."
+        "title": "En savoir plus sur les vélos Whyte",
+        "description": "Commandez votre nouveau <a href=\"//whytebikes.de/\" target=\"_blank\">vélo Whyte </a>en ligne et obtenez le remboursement de votre location (valide pour les achats en Allemagne uniquement)."
       }
     },
     "felt": {
-      "title": "Rent and test ride Felt road bikes in Munich",
-      "description": "As countless frame makers experimented with new materials and unorthodox aesthetics, Felt Bicycles focused on function over form, on a painstakingly iterative design process, and on adapting the bike’s characteristics to the fit needs of the rider, rather than the other way around. Felt’s goal is to produce the best bicycle possible, regardless of how long it takes.",
+      "title": "Louer et tester des vélos de route Felt à Munich",
+      "description": "D'innombrables fabricants de cadres ont expérimenté de nouveaux matériaux et une esthétique peu orthodoxe. Felt Bicycles s'est concentré sur la fonction plutôt que sur la forme, sur un processus de conception minutieusement itératif et sur l'adaptation des caractéristiques du vélo aux besoins du coureur, plutôt que l'inverse. L'objectif de Felt est de produire le meilleur vélo possible, quel que soit le temps qu'il faudra.",
       "feature-1": {
-        "title": "Design Methodology",
-        "description": "The introduction of a new Felt bicycle comes at the conclusion of a long, thoughtful, and rigorous process. The amount of time from initial concept to a new bike can take years to complete."
+        "title": "Méthodologie de conception",
+        "description": "L'introduction d'un nouveau vélo Felt marque la fin d'un processus long, réfléchi et rigoureux. Le temps écoulé entre le concept initial et le nouveau vélo peut prendre des années."
       },
       "feature-2": {
-        "title": "Carbon Fiber",
-        "description": "Lighter than aluminum, stronger than steel, and with Felt’s manufacturing techniques, carbon fiber bicycles offer an unmatched combination of ride compliance, stiffness, strength, and efficiency."
+        "title": "Fibre de carbone",
+        "description": "Plus légers que l’aluminium, plus solides que l’acier, et grâce aux techniques de fabrication de Felt, les vélos en fibre de carbone offrent une combinaison inégalée de souplesse, de rigidité, de résistance et d’efficacité."
       },
       "feature-3": {
         "title": "Aero Science",
         "description": "Felt aero bikes are wind tunnel developed. They are bringing prototypes to the wind tunnel, making changes, and then going back and refining the design before the carbon fiber molds are ever cut."
       },
       "find-out-more": {
-        "title": "Learn more about Felt Bicycles",
-        "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
-      },
-      "faq-answer-1": "FAQ ANSWER #1",
-      "faq-answer-2": "FAQ ANSWER #2",
-      "faq-answer-3": "FAQ ANSWER #3",
-      "faq-answer-4": "FAQ ANSWER #4",
-      "faq-question-1": "faq-question-1",
-      "faq-question-2": "faq-question-2",
-      "faq-question-3": "faq-question-3",
-      "faq-question-4": "faq-question-4"
+        "title": "En savoir plus sur les vélos Felt",
+        "description": "Trouvez un revendeur et achetez votre <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Vélo Felt </a>et obtenez le remboursement de votre location. Découvrez leur <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ </a>et découvrez-en davantage sur les vélos Felt."
+      }
+    },
+    "argon18": {
+      "title": "THE QUINTESSENCE OF CYCLING",
+      "faq-question-6": "I want to try an Argon 18 bike. Do you offer demo rides?",
+      "faq-answer-6": "Just book your test ride here on the page and visit us at the list and ride experience center. ",
+      "description": "Argon 18 develops and engineers high-end bikes in Canada using state-of-the-art technology. Behind their sleek and innovative designs, you’ll find superior handling and aerodynamics so that you can give your best performance and enjoy the ride. </br> </br>Design. Innovation. Performance. ",
+      "item1-title": "Unique Design",
+      "item1-description": "innovative designs, with superior handling and aerodynamics </br>Gives you best performance to enjoy the ride!",
+      "item2-title": "Cutting-edge Innovation",
+      "item2-description": "The gold standard in cycling through attitude and pride; We prove daily, that we have what it takes.",
+      "item3-title": "Best Performance",
+      "item3-description": "comfort, stiffness and weight in an optimal balance",
+      "find-out-more": "Rent and test ride Argon 18 road bikes and gravel bikes! ",
+      "order-online": "World leader in high-end bicycle manufacturing </br></br>Excellence is not a question of sheer luck. It is the result of meticulous and master craftsmanship. Argon 18 is renowned for integrating intensive research into the design and development of its bikes, which are innovative yet classic, spectacular and sleek.</br>Order your Argon18 directly online on <a href=\"https://www.argon18bike.com/\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-1": "Where can I buy and get my service done? ",
+      "faq-answer-1": "At our dealer in Berlin - List and Ride - you can configure your bike and order directly online. The bike will be shipped to the List and Ride Showroom and ready for you to roll out, straight away. Other dealers can be found on <a href=\"https://www.argon18bike.com/\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-2": "What frame size will best fit me?",
+      "faq-answer-2": "Although it would be simple to tell you which bike size would best fit you, a good fit is the basis for a good ride. Your dealer is the best source for an accurate and professional fitting service. You will find the sizing chart for our products in the appropriate Bike page on <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a>",
+      "faq-question-3": "How can I register my warranty?",
+      "faq-answer-3": "You can register your warranty on <a href=\"https://www.argon18bike.com\" target=\"_blank\">www.argon18bike.com</a></br>Or </br> You can go to the authorized retailer that sold you the product. You will find the list of our authorized retailers on our website.",
+      "faq-question-4": "Is the warranty applicable to a second owner?",
+      "faq-answer-4": "Only the first owner is covered by our warranty.",
+      "faq-question-5": "I want to buy an Argon 18 product online. Is the warranty applicable?",
+      "faq-answer-5": "The warranty is only applicable if an authorized Argon 18 dealer sells the bike. Some of our retailers do sell our products online. You will find the list of our authorized retailers on our website."
     },
     "swytch": {
-      "title": "Rent and test ride Swytch ebikes in Berlin",
-      "description": "Choose between 40km or 80km range ebikes.",
+      "title": "Louer et tester des vélos Swytch à Berlin",
+      "description": "Choisissez entre des vélos électriques avec une portée de 40 km ou de 80 km.",
       "feature-1": {
         "description": "36V, 250W power\n<br>\nFront hub motor wheel\n<br>\nHigh torque\n<br>\n25km/h top speed",
-        "title": "High performance"
+        "title": "Haute performance"
       },
       "feature-2": {
-        "title": "Lightweight",
-        "description": "Instantly removable\n<br>\nDiscreet hub motor\n<br>\n3.9kg additional weight\n<br>\nPortable power pack"
+        "title": "Léger",
+        "description": "Instantanément amovible\n<br>\nMoteur de moyeu discret\n<br>\n3,9 kg de poids supplémentaire\n<br>\nBloc d'alimentation portable"
       },
       "feature-3": {
-        "title": "Long range",
-        "description": "40km or 80km range\n<br>\n3-6 hour charge\n<br>\nUSB output for phone chargers\n<br>\nEasy to charge port for indoor use"
+        "title": "Longue portée",
+        "description": "Portée 40 km ou 80 km\n<br>\nCharge de 3-6 heures\n<br>\nSortie USB pour chargeurs de téléphone\n<br>\nPort facile à charger pour une utilisation en intérieur"
       },
       "find-out-more": {
         "title": "En savoir plus sur les vélos électriques Swytch",
-        "description": "Order your new \n<a href=\"//swytchbike.com\" target=\"_blank\">Swytch ebike</a> \nonline and get your listnride rental reimbursed. Find the most frequently asked questions below."
+        "description": "Commandez votre nouveau\n<a href=\"//swytchbike.com\" target=\"_blank\">Swytch ebike </a>\nen ligne et obtenez votre location de listnride remboursée. Trouvez les questions les plus fréquemment posées ci-dessous."
       },
-      "faq-question-1": "How often do I have to charge the battery?",
+      "faq-question-1": "À quelle fréquence dois-je charger la batterie?",
       "faq-answer-1": "The average range of the electric assist is 40km or 80km depending on which kit you purchase. If you run out of battery, you simply pedal on like you would on a regular bike. Charging the battery from drained to full takes only 3 hours for the 40km range kit and 6 hours for the 80km range kit. It charges at a rate of about 16km an hour.",
       "faq-question-2": "Que se passe-t-il quand la batterie meurt?",
       "faq-answer-2": "If you run out of battery, you simply pedal on like you would on a regular bike. One of the great benefits of the Swytch kit is that if you decide to ‘Swytch’ back to regular use of the bike, it will feel exactly like a regular ride without any additional drag.",
@@ -806,23 +834,13 @@
       "find-out-more": {
         "title": "Learn more about veloheld bikes",
         "description": "Order your new <a href=\"//veloheld.de\" target=\"_blank\">veloheld bike online</a> and get your listnride rental reimbursed."
-      },
-      "faq-question-1": "Enter Text.",
-      "faq-answer-1": "Enter Text.",
-      "faq-question-2": "Enter Text.",
-      "faq-answer-2": "Enter Text.",
-      "faq-question-3": "Enter Text.",
-      "faq-answer-3": "Enter Text.",
-      "faq-question-4": "Enter Text.",
-      "faq-answer-4": "Enter Text.",
-      "faq-question-5": "Enter Text.",
-      "faq-answer-5": "Enter Text."
+      }
     },
     "leaos": {
-      "description": "The design e-bike - Leaos",
+      "description": "Le vélo électrique design - Leaos",
       "subdescription": "Design. Art. Passion.",
-      "feature1-title": "Italian Design",
-      "feature1-description": "Pure Elegance.\nCompletely new riding experience.\nPerfect symbiosis of motor and rider.\n100% made in Italy.",
+      "feature1-title": "Design italien",
+      "feature1-description": "Pure élégance.\nComplètement nouvelle expérience de conduite.\nSymbiose parfaite du moteur et du coureur.\n100% fabriqué en Italie.",
       "feature2-title": "Joyride",
       "feature2-description": "Upright or sportive riding position. \nFrictionless gear hub. \nDigital display. \nFrom 14kg.",
       "feature3-title": "Electric Assist",
@@ -852,32 +870,32 @@
       "item2-description": "Upright riding position<br>Comfortable seat and grips<br>Stable kickstand<br>Lightweight",
       "item3-title": "Electric Assist",
       "item3-description": "Smooth and quiet pedal assist<br>Comfortable user experience<br>Easy to charge<br>Long lasting",
-      "find-out-more": "Learn more about Ampler Bikes",
-      "order-online": "<a href=\"https://amplerbikes.com/bikes\" target=\"_BLANK\">Order one of their bikes online</a> and get your rental reimbursed.<br>See the most frequently asked questions below.",
-      "faq-question-1": "How often do I have to charge the battery?",
-      "faq-answer-1": "The average range of the electric assist is 70 km, and if you run out of juice, you simply pedal on like you would on a regular bike. Charging the battery from drained to full takes only 3 hours. You can connect your charger to any regular power outlet.",
-      "faq-question-2": "What happens when the battery dies?",
-      "faq-answer-2": "After running out of battery power or turning off the assist, you can still ride with Ampler as you would do with a regular bicycle.",
-      "faq-question-3": "Can the battery be removed?",
-      "faq-answer-3": "Yes. The frame and the battery are designed in such a way that every professional bike shop could remove the battery, and if needed, replace it with a new one in under one hour.",
-      "faq-question-4": "How do I take care of the bike?",
-      "faq-answer-4": "Maintenance is carried out as on a regular bicycle and every professional bike shop will be able to maintain our bikes.",
-      "faq-question-5": "How are the bikes delivered?",
-      "faq-answer-5": "Bikes are safely packed in a box and require minimal assembling.",
-      "faq-question-6": "How to assemble the bike when delivered to my door?",
-      "faq-answer-6": "Assembling the bike is super simple. We include the instructions with the bike. You can do it yourself or, if you prefer, take it to a local bike shop.",
-      "faq-question-7": "Do you offer warranty?",
-      "faq-answer-7": "Yes. All Ampler bikes are covered for 2 years. However, the normal wear of tires, brake pads, chainrings, chain and bearings is an inevitable part of cycling thus not covered.",
-      "faq-question-8": "Can I return the bike?",
-      "faq-answer-8": "Yes. You can return the bike in 14 days after receiving it. The bike must be in its original condition for full refund. Please note that have to pay the return postage yourself.",
-      "faq-question-9": "Are the bikes street legal?",
-      "faq-answer-9": "Yes. Our bikes are capable of a top speed of 35km/h but by default are limited according to EN15194 to the top speed of 25 km/h. This means that the motor will only help you up to 25km/h. You can change these settings from the smartphone app."
+      "find-out-more": "En savoir plus sur les vélos Ampler",
+      "order-online": "<a href=\"https://amplerbikes.com/bikes\" target=\"_BLANK\">Commandez leur vélo en ligne </a>et obtenez le remboursement de votre location. <br>Visitez ci-dessous les questions fréquentes.",
+      "faq-question-1": "À quelle fréquence dois-je charger la batterie?",
+      "faq-answer-1": "La portée de l’assistance électrique est de 70 km en moyenne, et si vous manquez de jus, vous pédalez comme si vous étiez sur un vélo ordinaire. Ça prend seulement 3 heures pour charger une batterie complètement épuisée. Vous pouvez connecter votre chargeur à n’importe quelle prise de courant ordinaire.",
+      "faq-question-2": "Que se passe-t-il quand la batterie meurt?",
+      "faq-answer-2": "Quand la batterie est déchargée, ou quand vous désactivez  l'assistance électrique, vous pouvez toujours utiliser votre Ampler comme vous le feriez avec un vélo ordinaire.",
+      "faq-question-3": "Est-ce que la batterie peut être retirée?",
+      "faq-answer-3": "Oui. Le cadre et la batterie sont conçus de manière à ce que chaque magasin vélo professionnel puisse retirer la batterie et, si nécessaire, la remplacer par une nouvelle en moins d'une heure.",
+      "faq-question-4": "Comment puis-je entretenir le vélo?",
+      "faq-answer-4": "L'entretien est effectué comme sur un vélo ordinaire et chaque magasin de vélo professionnel pourra entretenir nos vélos.",
+      "faq-question-5": "Comment seront les vélos livrés?",
+      "faq-answer-5": "Les vélos sont emballés en toute sécurité dans une boîte et nécessitent un assemblage minimal.",
+      "faq-question-6": "Comment assembler le vélo lorsqu'il est livré à ma porte?",
+      "faq-answer-6": "Assembler le vélo est super simple. Nous incluons les instructions avec le vélo. Vous pouvez le faire vous-même ou, si vous préférez, l'apporter dans un magasin de vélo local.",
+      "faq-question-7": "Offrez-vous une garantie?",
+      "faq-answer-7": "Oui. Tous les vélos Ampler sont couverts pendant 2 ans. Cependant, l'usure normale des pneus, des garnitures de frein, des plateaux, des chaînes et des roulements est une partie inévitable du cyclisme et n'est donc pas couverte.",
+      "faq-question-8": "Puis-je retourner le vélo?",
+      "faq-answer-8": "Oui. Vous pouvez rendre le vélo dans les 14 jours suivant sa réception. Le vélo doit être dans son état d'origine pour un remboursement complet. Veuillez noter que vous devez payer les frais de retour vous-même.",
+      "faq-question-9": "Est ce que les vélos sont légalement utilisables sur les rues?",
+      "faq-answer-9": "Oui. Nos vélos peuvent atteindre une vitesse maximale de 35 km/h, mais sont limitées par défaut, conformément à la norme EN15194, à une vitesse maximale de 25 km/h. Cela signifie que le moteur ne vous aidera que jusqu'à 25 km/h. Vous pouvez modifier ces paramètres à partir de l'application pour smartphone."
     },
     "unimoke": {
-      "meta-title": "Rent and test ride UNI Moke bikes all across Germany | listnride",
+      "meta-title": "Location et test de vélos UNI Moke | listnride",
       "meta-descr": "Test ride an UNI Moke E-City Bike today! The E-City Bikes from UNI Moke are available to test and rent on listnride all across Germany!",
-      "title": "Try it. Love it. Ride it.",
-      "description": "Test ride a UNI Moke bike today! The E-City Bikes from UNI Moke are available to rent on listnride all across Germany!",
+      "title": "Essayez-le. Aimez-le. Montez-le.",
+      "description": "Testez aujourd'hui un vélo électrique UNI Moke. Construit pour le plaisir, la famille et le travail par Urban Drivestyle à Berlin, en Allemagne.",
       "item1-title": "ALL WEATHER",
       "item1-description": "Our electric bikes are built to withstand even the worst of urban roads and will allow you to drive safely even in the snow!",
       "item2-title": "TRUE CARGO",
@@ -900,19 +918,19 @@
       "faq-answer-6": "The UNI Moke electric bicycle is designed to fit it all! Like on a moped, the seating position is variable due to the long saddle while the steering bar is intended to be adjustable in height and position."
     },
     "brompton": {
-      "meta-title": "Rent a Brompton bike with listnride",
-      "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt.",
+      "meta-title": "Louez un vélo Brompton avec listnride",
+      "meta-description": "Testez le vélo Brompton aujourd'hui! Ces vélos pliants urbains sont disponibles sur listnride. Louez-en un à Berlin, Munich, Hambourg, Düsseldorf ou Francfort.",
       "title": "#RIDEBROMPTON",
-      "description": "Rent a Brompton and test its excellent riding and folding characteristics.",
-      "subdescription": "Experience cities in a different way - with a bike perfect for the city.",
-      "item1-title": "Free of charge to bring along",
-      "item1-description": "Free to take along in local public transport (May be stowed in bag / transfer)",
-      "item2-title": "Unique folding system",
-      "item2-description": "Folding in 10-20 seconds<br>Folding Size (HxWxD): 59cm x 57cm x 27cm<br>Easy to carry around (9-13 kg)",
-      "item3-title": "London cult bike",
-      "item3-description": "Top riding characteristics<br>English style<br>Handmade in London",
-      "find-out-more": "Learn more about Brompton",
-      "find-out-more-ext": "Learn more about Brompton at <a href=\"http://www.brompton.com\" target=\"_blank\">www.brompton.com</a>",
+      "description": "Louez une Brompton et testez ses excellentes caractéristiques de conduite et de pliage.",
+      "subdescription": "Découvrez les villes différemment - avec un vélo parfait pour la ville.",
+      "item1-title": "Gratuit à emporter",
+      "item1-description": "Gratuit à emporter dans les transports en commun locaux (peut être rangé dans un sac / bagage)",
+      "item2-title": "Système de pliage unique",
+      "item2-description": "La Brompton se plie en 10-20 secondes <br>Taille en se pliant (HxLxP): 59cm x 57cm x 27cm <br>Facile à transporter (9-13 kg)",
+      "item3-title": "Vélo culte de Londres",
+      "item3-description": "Caractéristiques de conduite optimales <br>Style anglais <br>Fait à la main à Londres",
+      "find-out-more": "En savoir plus sur Brompton",
+      "find-out-more-ext": "Pour en savoir plus sur Brompton, visitez <a href=\"http://www.brompton.com\" target=\"_blank\">www.brompton.com </a>",
       "faq-question-1": "What types of handlebars are available?",
       "faq-answer-1": "Three different types:<br>M-Type - Classic shape, upright riding position<br>H-Type - For taller riders and everyone who likes to ride upright<br>S-Type Straight shape, sporty riding position",
       "faq-question-2": "How do I know which model it is?",
@@ -927,19 +945,19 @@
       "faq-answer-6": "The Brompton has 3 folding axles, one for the two wheels and one for the steering rod. They are secured by easy-to-operate rotary locks. After folding, the chain and gear shift is inside so that they can not come into contact with clothing and luggage. <a href=\"http://brompton.com/The-Bike/How-it-works\" target=\"blank\">(Video)</a>"
     },
     "muli": {
-      "meta-title": "Rent a Muli cargo bike with listnride",
-      "meta-description": "Test ride a Muli cargo bike today! These urban cargo bikes are available on listnride. Rent one in Berlin or Munich.",
+      "meta-title": "Louez un vélo cargo Muli avec listnride",
+      "meta-description": "Testez un vélo cargo Muli aujourd'hui! Ces vélos de fret urbains sont disponibles sur listnride. Louez-en un à Berlin ou à Munich.",
       "title": "Designed for daily urban life",
-      "description": "Test and rent muli in Berlin or Munich",
-      "subdescription": "The muli is a hybrid between a compact citybike and a big cargo-bike. This combination makes a bike that perfectly suits daily city life.",
-      "item1-description": "Length <b>198cm</b><br>Weight <b>24kg</b><br>Total Payload <b>170kg</b><br>Handlebar Adustability <b>10cm</b>",
-      "item2-description": "Basket Width <b>28-60cm</b><br>Basket Payload <b>70kg</b><br>Basket Volume <b>90l</b><br>Eurobox <b>40x60cm</b>",
-      "available-cities": "Available in Berlin and Munich",
+      "description": "Testez et louez muli à Berlin ou à Munich",
+      "subdescription": "Le muli est un hybride entre un citybike compact et un grand vélo cargo. Cette combinaison fait un vélo qui convient parfaitement à la vie quotidienne en ville.",
+      "item1-description": "Longueur <b>198cm </b><br>Poids <b>24 kg </b><br>Total Payload <b>170 kg </b><br>Guidons <b>10cm </b>",
+      "item2-description": "Largeur panier <b>28-60cm </b><br>Panier Payload <b>70 kg </b><br>Volume du panier <b>90l </b><br>Eurobox <b>40x60cm </b>",
+      "available-cities": "Disponible à Berlin et à Munich",
       "find-out-more": "Questions?",
       "find-out-more-description": "Learn more about <a href=\"https://muli-cycles.de/7-shop\" target=\"_blank\">muli cycles</a> and how to buy one or check out their <a href=\"https://muli-cycles.de/content/8-faq\" target=\"_blank\">FAQ.</a>"
     },
     "vello": {
-      "meta-title": "Rent and test VELLO E-Bikes in Berlin & Munich",
+      "meta-title": "Louez et testez les vélos électriques VELLO à Berlin et à Munich",
       "meta-description": "VELLO BIKE+ The First Self-Charging Electric Folding Bike. The VELLO BIKE is a high-performance folding bike developed for the perfect urban cycling experience.",
       "title": "Rent and test VELLO E-Bikes in Berlin & Munich",
       "description": "The VELLO BIKE+ sets a new standard: using four electronic sensors, the energy supply is optimized for use, and activated only when you need it. When climbing uphill the power is there to assist you, and when you’re cruising downhill energy is recovered and fed back into the battery. The combination of a lightweight (from 10.9kg) folding bike, with a unique power system which gives you unlimited support, makes this the ultimate means of urban transportation. battery power.",
@@ -949,7 +967,7 @@
       "item2-description": "With an ultra-portable design, the VELLO is the lightest E-Bike on the market (clocking in at less than 12kg/ 26lbs), and capable of folding down to suitcase size for easy transport and carrying.",
       "item3-title": "4 Different Models",
       "item3-description": "VELLO bikes are available in 4 different models, with e-drive and without: \"Urbano\", \"Rocky\", \"Speedster\" und \"VELLO BIKE+\". All models offer the best of urban riding, and come with high-end city, trekking, or road bike components.",
-      "available-cities": "Available in Berlin and Munich",
+      "available-cities": "Disponible à Berlin et à Munich",
       "question": "Questions?",
       "faq-question": "Learn more about <a href=\"http://www.vellobike.com\" target=\"_BLANK\">VELLO bikes</a> and how to buy one or check out their <a href=\"http://www.vello.bike/help-faq-en\" target=\"_BLANK\">FAQ</a>."
     },
@@ -964,26 +982,26 @@
       "item2-description": "The right clothing is almost as important as the perfect bike. With our many years of experience, we know what you need and can help you find what’s best for you. We carry clothing from Cafe du Cycliste, ashmei, Huez* and Velocio.",
       "item3-title": "Great Service",
       "item3-description": "Once you’ve found the perfect bike, we can help dial it in with a professional bike fitting. And before you hit the road, enjoy a cup of our delicious coffee.",
-      "rent-title": "Rent our Bikes",
+      "rent-title": "Louez vos vélos",
       "find-out-more": "Learn more about Veletage on <a href=\"https://www.facebook.com/veletage\" target=\"_BLANK\">Facebook</a> or <a href=\"https://www.instagram.com/veletage\" target=\"_BLANK\">Instagram</a> and sign up for our newsletter <a href=\"http://www.veletage.com/nl/nl.html\" target=\"_BLANK\">Velozette</a>."
     },
     "bonvelo": {
-      "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
-      "meta-description": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!",
-      "description": "bonvelo – Singlespeed & Fixie Bikes designed in Hamburg",
-      "subdescription": "The singlespeed/fixed-gear \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!",
-      "item1-title": "Your Bike - Your Style",
-      "item1-description": "4 frame sizes available<br>8 stylish colour variations<br>Lots of customizable accessories",
-      "item2-title": "The Prefect Urban Ride",
-      "item2-description": "Quick and agile handling<br>Durable powder coated finish<br>High quality components<br>Pure riding pleasure",
-      "item3-title": "Great Price - Solid Value",
+      "meta-title": "Louez et testez les vélos Bonvelo Singlespeed à Berlin et à Munich",
+      "meta-description": "Le \"bonvelo BLIZZ\" à vitesse fixe / à engrenage fixe est disponible à la location et aux essais à Berlin dans quatre tailles de cadre. Réservez-en un sur listnride aujourd'hui!",
+      "description": "bonvelo - Des vélos Singlespeed & Fixie conçus à Hambourg",
+      "subdescription": "Le \"bonvelo BLIZZ\" à vitesse fixe / à engrenage fixe est disponible à la location et aux essais à Berlin dans quatre tailles de cadre. Réservez-en un sur listnride aujourd'hui!",
+      "item1-title": "Votre vélo - votre style",
+      "item1-description": "4 tailles de cadre disponibles <br>8 variations de couleurs élégantes <br>De nombreux accessoires personnalisables",
+      "item2-title": "Le vélo urbain parfait",
+      "item2-description": "Manipulation rapide et agile <br>Finition en poudre durable <br>Composants de haute qualité <br>",
+      "item3-title": "Excellent rapport qualité-prix - valeur sûre",
       "item3-description": "Singlespeed bikes starting from 349€<br>High customer satisfaction<br>Personalized service<br>Speedy delivery to Berlin",
-      "test-bike": "Test a bonvelo bike in Berlin, Munich or Hamburg",
+      "test-bike": "Testez un vélo bonvelo à Berlin, Munich ou Hambourg",
       "testimonial-1": "Nice, clean design, and arrived neatly pre-assembled. I’m loving the ride.",
       "testimonial-2": "Very friendly customer service, quick processing of the order and super fast response to my questions.",
       "testimonial-3": "Bonvelo is awesome. Everything is right here. Great customer service -- they responded quickly even when I asked a question on Sunday. The delivery time was really fast, and the bike arrived almost fully assembled, with just a couple easy things to finish. The bike looks great, and the price was even better. Will definitely recommend. Cheers from Munich!",
-      "find-out-more": "Learn more about bonvelo Bikes",
-      "faq-description": "When you order your <a href=\"https://bonvelo.de\">bonvelo</a>, we will refund you the cost of your rental / test ride in Berlin!",
+      "find-out-more": "En savoir plus sur les vélos bonvelo",
+      "faq-description": "Lorsque vous commandez votre <a href=\"https://bonvelo.de\">bonvelo </a>, nous vous rembourserons le coût de votre location!",
       "faq-question-1": "What is a Singlespeed / Fixie bike?",
       "faq-answer-1": "For fast urban riding in (mostly) flat cities, the simplest way is to have just one gear. Singlespeed / Fixie bikes also benefit from a cleaner, more minimalist appearance. In addition to that, you can choose the position of the rear wheel; set it up as a singlespeed (freewheel / coasting possible), or as a fixed gear.",
       "faq-question-2": "What exactly is the difference between a Singlespeed and a Fixie?",
@@ -999,36 +1017,36 @@
       "bottom-text": "To ride in maximum style, we’ve also got bonvelo hoodies, shirts and backpacks. Check out our selection at <a href=\"https://bonvelo.de/wear\">bonvelo.de/wear</a>"
     },
     "motoparilla": {
-      "meta-title": "Rent and Test the Moto Parilla Carbon SUV E-Bike in Munich",
-      "meta-description": "The Carbon SUV E-Bike from Moto Parilla can be tested in Munich. Simply book online and enjoy the ride!",
-      "description": "Moto Parilla – Carbon SUV E-Bikes designed in Italy",
-      "subdescription": "The perfect blend of design, engineering and art delivered in a revolutionary new mode of transportation. Book one on listnride today!",
-      "item1-title": "Oversized Tires",
-      "item1-description": "Offering better balance for beginners or casual riders, these fat tires will take you places you've never been before. The oversized tires provide improved grip and traction on the most challenging terrain.",
-      "item2-title": "Comfort and Design",
-      "item2-description": "Due to its commanding presence, the Carbon SUV is bound to make an impression on friends and people you pass along the street. Riding such a bike is the only way to understand why everybody is talking about it - it's an experience like no other.",
-      "item3-title": "Electric Motor",
-      "item3-description": "Pedal-assist or throttle modes offer you the most comfort when commuting, providing a smooth ride without the need to pedal. The throttle override toggle allows the rider to add power in any driving mode.",
-      "test-bike": "Test a Moto Parilla Carbon SUV E-Bike in Munich",
-      "testimonial-1": "This bike is essentially a powered mountain bike on stereoids that's made primarily of carbon fiber",
-      "testimonial-2": "This E-Bike is part speedway dragster, part bionic arm",
-      "testimonial-3": "Wow! I want one, if not to ride then to look at. It really is a work of art!",
-      "find-out-more": "Learn more about the Moto Parilla Carbon SUV E-Bike",
+      "meta-title": "Louez et testez le vélo électrique SUV Moto Parilla Carbon à Munich",
+      "meta-description": "Le vélo électrique SUV Carbon de Moto Parilla peut être testé à Munich. Il suffit de réserver en ligne!",
+      "description": "Moto Parilla - Des vélos électriques SUV Carbon conçus en Italie",
+      "subdescription": "Le mélange parfait de design, d'ingénierie et d'art livré dans un nouveau mode de transport révolutionnaire. Réservez-en un sur listnride aujourd'hui!",
+      "item1-title": "Pneus surdimensionnés",
+      "item1-description": "Offrant un meilleur équilibre pour les coureurs débutants ou occasionnels, ces gros pneus vous emmèneront dans des endroits jamais vus auparavant. Les pneus surdimensionnés offrent une adhérence et une traction améliorées sur les terrains les plus difficiles.",
+      "item2-title": "Confort et Design",
+      "item2-description": "En raison de sa présence dominante, le SUV Carbon impressionera sûrement vos amis et les personnes que vous croisez dans la rue. Rouler sur un tel vélo est le seul moyen de comprendre pourquoi tout le monde en parle - c’est une expérience unique.",
+      "item3-title": "Moteur électrique",
+      "item3-description": "Les modes à assistance par pédale ou à accélération vous offrent le plus de confort possible en déplacement, offrant une conduite douce sans pédaler. La bascule de neutralisation de l'accélérateur permet au conducteur d'ajouter de la puissance dans n'importe quel mode de conduite.",
+      "test-bike": "Testez un vélo électrique SUV Moto Parilla Carbon à Munich",
+      "testimonial-1": "Ce vélo est essentiellement un vélo de montagne motorisé sur des stéréoïdes principalement en fibre de carbone.",
+      "testimonial-2": "Ce vélo électrique est prêt pour la course",
+      "testimonial-3": "Hou la la! J'en veux un, même si c'est juste pour le regarder. C'est vraiment une oeuvre d'art!",
+      "find-out-more": "En savoir plus sur le vélo électrique Moto Parilla Carbon SUV",
       "faq-description": "Learn more about the SUV e-bike and how you can <a href=\"http://www.motoparilla.it/store\">buy one</a> or look at the <a href=\"http://www.motoparilla.it/faq/\">FAQ</a>.",
-      "faq-question-1": "How high can the seat extend?",
-      "faq-answer-1": "The seat can extend a full 5 cm.",
-      "faq-question-2": "Where is the battery located?",
-      "faq-answer-2": "With an effortless push of a button, you’ll access to the battery inside the frame lifting the cover.",
-      "faq-question-3": "Is the battery replacable?",
-      "faq-answer-3": "Yes, it is possible to replace the battery."
+      "faq-question-1": "À quelle hauteur le siège peut-il s'étendre?",
+      "faq-answer-1": "Le siège peut s’étendre sur 5 cm.",
+      "faq-question-2": "Où se trouve la batterie?",
+      "faq-answer-2": "En appuyant simplement sur un bouton, vous accédez à la batterie à l’intérieur du cadre en soulevant le couvercle.",
+      "faq-question-3": "La batterie est-elle remplaçable?",
+      "faq-answer-3": "Oui, il est possible de remplacer la batterie."
     },
     "votec": {
-      "meta-title": "Rent and Test the newest Votec Bikes",
-      "meta-descr": "VOTEC - Fusion of Functionality, Design and Quality",
-      "title": "VOTEC - Fusion of Functionality, Design and Quality",
-      "description": "Rent and Test the newest Votec Bikes",
-      "subdescription": "Since ever Votec stands for high-quality bike, guaranteeing a maximum of riding fun. The VOTEC team is highly experienced in all kinds of cycling. Therefore our customers get only products which the whole team is satisfied with until it goes into production.",
-      "item1-title": "Experience",
+      "meta-title": "Louez et testez les derniers vélos Votec",
+      "meta-descr": "VOTEC - Fusion de fonctionnalité, design et qualité",
+      "title": "VOTEC - Fusion de fonctionnalité, design et qualité",
+      "description": "Louez et testez les derniers vélos Votec",
+      "subdescription": "Depuis toujours, Votec est synonyme de vélo de haute qualité, garantissant un maximum de plaisir de conduire. L’équipe de VOTEC est très expérimentée dans tous les types de cyclisme. Par conséquent, nos clients n’obtiennent que des produits dont toute l’équipe est satisfaite jusqu’à la production.",
+      "item1-title": "Expérience",
       "item1-description": "The VOTEC team transfers its professional expertise directly on the bike - the countless positive reviews in all classes of road- and mountain - bikes give a clear tone.",
       "item2-title": "Quality",
       "item2-description": "VOTEC Bikes are tested to the roots by the independent Zetler Institution for Cycle technique. We trust our bikes and fully believe in the quality, meaning for you 10 years of warranty for alumnium frames and 6 years on carbon frames.",
@@ -1081,7 +1099,7 @@
       "item2-description": "The framework has two colors. By hand the flowing color process and the graphic theme (plumage of a seagull) are spreaded in airbrush technology. A powdered, mat and high-resistance layer seals the frame.",
       "item3-title": "Frame geometry",
       "item3-description": "Perfect ergonomics and effective power transmission - the frame geometry was tailored to cyfly and the driver. Fast advance combined with comfortable seat position.",
-      "choose-location": "Choose your city",
+      "choose-location": "Choisissez votre ville",
       "find-out-more": "Learn more about the Cyfly by Moeve",
       "order-online": "<a href=\"https://www.moeve-bikes.de/cyfly/\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed. See the most frequently asked questions below.",
       "faq-question-1": "What is Cyfly?",
@@ -1114,7 +1132,7 @@
       "item3-title": "Economical ",
       "item3-description": "You want your bike´s e-drive to last for life? binova guarantees a long life span for your binova flow.",
       "test-bike": "Test the new rethink models!",
-      "choose-location": "Wähle deine Stadt",
+      "choose-location": "Choisissez votre ville",
       "find-out-more": "Learn more about rethink",
       "order-online": "<a href=\"https://www.rethink-bikes.de\" target=\"_blank\">Order one of their bikes online</a> and get your rental reimbursed."
     },
@@ -1145,7 +1163,7 @@
     }
   },
   "about-us": {
-    "title": "About us",
+    "title": "À propos de nous",
     "header": "About listnride",
     "subheader": "Comment les services de location de vélos traditionnels nous ont inspiré à créer une communauté diversifiée.",
     "community": {

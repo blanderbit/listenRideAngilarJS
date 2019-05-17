@@ -140,6 +140,16 @@ angular.module('bike').component('calendar', {
         dateChange(calendar.startDate, calendar.endDate);
       };
 
+      calendar.onDayRangeChange = function() {
+        var dayRangeParsed = JSON.parse(calendar.event.dayRange);
+        calendar.startDate = new Date(dayRangeParsed.startDate);
+        calendar.endDate = new Date(dayRangeParsed.endDate);
+
+        calendar.endDate.setHours(9, 0, 0, 0);
+        calendar.startDate.setHours(9, 0, 0, 0);
+        dateChange(calendar.startDate, calendar.endDate);
+      }
+
       calendar.onBooking = function(){
         $mdDialog.hide();
         $state.go('booking', {
@@ -171,7 +181,6 @@ angular.module('bike').component('calendar', {
           }
         );
       };
-
 
       function verifyOnConfirm() {
         if (calendar.isOnSlotableEvent || isUserVerified()) {
@@ -212,37 +221,147 @@ angular.module('bike').component('calendar', {
 
       // EVENT BIKE CODE
       function checkEventBike() {
-        calendar.isOnSlotableEvent = _.indexOf([35, 36], calendar.bikeFamily) !== -1;
+        calendar.isOnSlotableEvent = _.indexOf([35, 36, 37, 38, 39], calendar.bikeFamily) !== -1;
         if (!calendar.isOnSlotableEvent) return;
 
+        calendar.isRangedDateEvent = _.indexOf([37, 38, 39], calendar.bikeFamily) !== -1;
+
         //TODO: We need to update this not scalable example of code.
+
+        var EVENTS = {
+          36: {
+            name: '8bar-clubride',
+            type: 'selected dates',
+            dates: ['10.05.2019', '15.05.2019'] // generateTuesdays(10) <- generate 10 Tuesdays
+          },
+          37: {
+            name: 'radfahren-neu-entdecken-eschborn',
+            type: 'selected date ranges',
+            dates: [
+              {
+                startDate: '20190604',
+                endDate: '20190618'
+              },
+              {
+                startDate: '20190618',
+                endDate: '20190702'
+              },
+              {
+                startDate: '20190702',
+                endDate: '20190716'
+              },
+              {
+                startDate: '20190716',
+                endDate: '20190730'
+              },
+              {
+                startDate: '20190730',
+                endDate: '20190813'
+              },
+              {
+                startDate: '20190813',
+                endDate: '20190827'
+              }
+            ]
+          },
+          38: {
+            name: 'radfahren-neu-entdecken-kassel',
+            type: 'selected date ranges',
+            dates: [{
+                startDate: '20190613',
+                endDate: '20190627'
+              },
+              {
+                startDate: '20190627',
+                endDate: '20190711'
+              },
+              {
+                startDate: '20190711',
+                endDate: '20190725'
+              },
+              {
+                startDate: '20190725',
+                endDate: '20190808'
+              },
+              {
+                startDate: '20190808',
+                endDate: '20190822'
+              },
+              {
+                startDate: '20190822',
+                endDate: '20190905'
+              }
+            ]
+          },
+          39: {
+            name: 'radfahren-neu-entdecken-hofheim',
+            type: 'selected date ranges',
+            dates: [{
+                startDate: '20190606',
+                endDate: '20190619'
+              },
+              {
+                startDate: '20190619',
+                endDate: '20190704'
+              },
+              {
+                startDate: '20190704',
+                endDate: '20190718'
+              },
+              {
+                startDate: '20190718',
+                endDate: '20190801'
+              },
+              {
+                startDate: '20190801',
+                endDate: '20190815'
+              },
+              {
+                startDate: '20190815',
+                endDate: '20190828'
+              }
+            ]
+          },
+        }
+
+
         calendar.event = {};
-        calendar.event.date = '28042019';
-        calendar.event.startDay = 9;
-        calendar.event.endDay = 9;
-        calendar.event.pickupSlotId;
-        calendar.event.returnSlotId;
         calendar.event.slots = [];
-        calendar.eventName = '8bar-clubride';
+        calendar.event.slotsDayRanges = []
+        calendar.eventName = EVENTS[calendar.bikeFamily].name;
         calendar.freeBike = calendar.prices[0].price <= 0;
-        calendar.event.days = _.range(calendar.event.startDay, calendar.event.endDay+1); // last number not included
-        // every Tuesday event
-        calendar.event.days = [7,14,21,28];
-        // if event duration is only one day we should pick it automatically
-        if (calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
 
-        calendar.event.changePickupSlot = changePickupSlot;
-        calendar.event.changeReturnSlot = changeReturnSlot;
+        if (calendar.isRangedDateEvent) {
+          _.forEach(EVENTS[calendar.bikeFamily].dates, function(dateRange) {
+            generateSlotableDateRanges(dateRange);
+          });
+          checkDateRangeReserved();
+        } else {
+          // prepare specific data
+          calendar.event.date = '28042019';
+          calendar.event.startDay = 9;
+          calendar.event.endDay = 9;
+          calendar.event.pickupSlotId;
+          calendar.event.returnSlotId;
+          calendar.event.days = _.range(calendar.event.startDay, calendar.event.endDay + 1); // last number not included
+          // every Tuesday event
+          calendar.event.days = [7, 14, 21, 28];
+          // if event duration is only one day we should pick it automatically
+          if (calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
 
-        var slotDuration = 3; // hours range
-        calendar.eventYear = 2019;
-        var eventMonth = 4; // Months start at 0
-        var eventStartTime = 18;
-        var eventEndTime = 21;
+          calendar.event.changePickupSlot = changePickupSlot;
+          calendar.event.changeReturnSlot = changeReturnSlot;
 
-        _.forEach(calendar.event.days, function (day) {
-          generateSlot(day)
-        });
+          var slotDuration = 3; // hours range
+          calendar.eventYear = 2019;
+          var eventMonth = 4; // Months start at 0
+          var eventStartTime = 18;
+          var eventEndTime = 21;
+
+          _.forEach(calendar.event.days, function (day) {
+            generateSlot(day)
+          });
+        }
 
         // if there is only one time slot available we should pick the first one
         if (calendar.event.slots.length == 1) {
@@ -265,6 +384,36 @@ angular.module('bike').component('calendar', {
             calendar.event.slots.push(slot)
           });
         };
+
+        function generateSlotableDateRanges(range) {
+          var slot = {
+            selectboxText: moment(range.startDate).format('DD-MM-YYYY') + ' - ' + moment(range.endDate).format('DD-MM-YYYY'),
+            startDate: new Date(moment(range.startDate)),
+            endDate: new Date(moment(range.endDate)),
+            isReserved: false
+          }
+
+          calendar.event.slotsDayRanges.push(slot);
+        }
+
+        function checkDateRangeReserved() {
+          for (var i = 0; i < calendar.requests.length; i++) {
+            // set Hours to 0, because we check only day/month/year
+            var startDate = new Date(calendar.requests[i].start_date_tz);
+            startDate = startDate.setHours(0, 0, 0, 0);
+            var endDate = new Date(calendar.requests[i].end_date_tz);
+            endDate = endDate.setHours(0, 0, 0, 0);
+
+            for (var j = 0; j < calendar.event.slotsDayRanges.length; j++) {
+              var currentDay = calendar.event.slotsDayRanges[j];
+
+              if (moment(startDate).isBetween(currentDay.startDate, currentDay.endDate, null, '[]') &&
+                  moment(endDate).isBetween(currentDay.startDate, currentDay.endDate, null, '[]')) {
+                currentDay.isReserved = true;
+              }
+            }
+          }
+        }
 
         function changePickupSlot () {
           // Define picked slot as pickupSlot

@@ -3,62 +3,11 @@
 </div>
 
 
+<!-- #########  SLOTABLE EVENTS   ############ -->
 
-
-
-<!--        EVENT CALENDAR PICKUP+RETURN        -->
-<!-- <div layout="column" layout-margin ng-if="calendar.isOnSlotableEvent">
-  <p class="md-headline lnr-center">E-Bike Days Calendar</p>
-  <p class="md-body-1 lnr-center">During the E-Bike Days, you can test ride a great variety of high end e-bikes. Just select which day and time you want to rent it. All rentals are free!</p>
-  <md-input-container class="md-block">
-    <label>1. Select the Rental Day</label>
-    <md-select ng-model="calendar.day">
-      <md-option value="19">
-        Friday, 19th of May
-      </md-option>
-      <md-option value="20">
-        Saturday, 20th of May
-      </md-option>
-      <md-option value="20">
-        Sunday, 21th of May
-      </md-option>
-    </md-select>
-  </md-input-container>
-
-  <md-input-container class="md-block">
-    <label>2. Select pickup time</label>
-    <md-select ng-model="calendar.event.pickupSlotId" ng-change="calendar.event.changePickupSlot()">
-
-      <md-option ng-if="!calendar.day">
-        Please select a day first
-      </md-option>
-
-      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.reserved" ng-if="calendar.day == slot.day && slot.pickupEnabled" value="{{$index}}">
-        {{slot.text}}
-      </md-option>
-
-    </md-select>
-  </md-input-container>
-
-  <md-input-container class="md-block">
-    <label>3. Select return time</label>
-    <md-select ng-model="calendar.event.returnSlotId" ng-change="calendar.event.changeReturnSlot()">
-
-      <md-option ng-if="!calendar.day">
-        Please select a pickup time first
-      </md-option>
-
-      <md-option ng-repeat="slot in calendar.event.slots" ng-disabled="slot.returnDisabled" ng-if="calendar.day == slot.day" value="{{$index}}">
-        {{slot.text}}
-      </md-option>
-
-    </md-select>
-  </md-input-container>
-</div> -->
-<!--      END EVENT CALENDAR        -->
-
-<!--        EVENT CALENDAR FIXED SLOT        -->
-<div layout="column" layout-margin ng-if="calendar.isOnSlotableEvent">
+<!-- TODO: move to specific component -->
+<!-- EVENT CALENDAR FIXED SLOT -->
+<div ng-if="calendar.isOnSlotableEvent" layout="column" layout-margin>
 
   <p class="md-headline lnr-center" translate="events.{{calendar.eventName}}.calendar-title"></p>
   <p class="md-body-1 lnr-center" translate="events.{{calendar.eventName}}.calendar-subtitle"></p>
@@ -75,9 +24,26 @@
       </md-option>
     </md-select>
   </md-input-container>
+
   <span ng-if="calendar.event.days.length == 1">
     <b>{{ 'shared.rental-date' | translate }}:</b> {{calendar.event.days[0]}} {{ 'shared.May' | translate }} {{calendar.eventYear}}
   </span>
+
+  <!-- DATE RANGES SLOTS -->
+  <md-input-container class="md-block" ng-if="calendar.event.slotsDayRanges.length > 1">
+    <label>{{ 'availability.choose-range' | translate }}</label>
+    <md-select
+      ng-model="calendar.event.dayRange"
+      ng-change="calendar.onDayRangeChange()"
+    >
+      <md-option
+        ng-repeat="day in calendar.event.slotsDayRanges"
+        ng-disabled="day.isReserved"
+        value="{{day}}">
+        {{day.selectboxText}}
+      </md-option>
+    </md-select>
+  </md-input-container>
 
   <md-input-container class="md-block" ng-hide="calendar.event.slots.length <= 1">
     <label>{{ 'veletage.event.select-slot' | translate }}</label>
@@ -101,10 +67,12 @@
     </md-select>
   </md-input-container>
 
-    <span ng-if="calendar.event.slots.length == 1">
-      <b>{{ 'shared.rental-time' | translate }}:</b> {{calendar.event.slots[0].text}}
-    </span>
+  <!-- IF ONLY ONE SLOT AVAILABLE -->
+  <span ng-if="calendar.event.slots.length == 1">
+    <b>{{ 'shared.rental-time' | translate }}:</b> {{calendar.event.slots[0].text}}
+  </span>
 
+  <!-- RETURN TIME -->
   <md-input-container class="md-block" ng-hide="true">
     <label>{{ 'veletage.event.select-return' | translate }}</label>
     <md-select
@@ -127,10 +95,11 @@
     </md-select>
   </md-input-container>
 </div>
-<!--      END EVENT CALENDAR        -->
+<!-- END EVENT CALENDAR -->
 
+<!-- TIME RANGES for Slotable events -->
 <div
-  ng-if="!calendar.isOnSlotableEvent && calendar.startDate"
+  ng-if="!calendar.isOnSlotableEvent && calendar.startDate && !calendar.isRangedDateEvent"
   id="timeRange"
   layout="row"
   layout-align="start center"
@@ -171,6 +140,8 @@
     </md-select>
   </md-input-container>
 </div>
+
+<!-- ########################################## -->
 
 <div id="formSubmit" layout="column" layout-align="center stretch">
   <div id="requestOverview" layout="column" layout-align="center stretch" layout-padding>
