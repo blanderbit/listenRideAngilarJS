@@ -42,7 +42,7 @@
     "please-select": "Por favor selecciona",
     "errors": {
       "email-required": "Introduce una dirección de correo electrónico válida",
-      "three-d-secure-failed": "3D secure authentication failed",
+      "three-d-secure-failed": "Falló la autenticación segura 3D",
       "payment-cancelled": "Pago cancelado",
       "payment-paypal-error": "Lo sentimos, tu pago de PayPal falló",
       "unexpected-payment-type": "Tipo de pago inesperado",
