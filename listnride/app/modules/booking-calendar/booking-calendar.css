@@ -99,9 +99,27 @@ booking-calendar {
   background-color: rgb(245, 247, 247);
 }
 
+/* Highlight axis cells START */
+/* saturday */
+.booking-calendar .b-sch-dayheadercell-6,
+.booking-calendar .b-sch-dayheadercell-6:hover,
+.booking-calendar .b-sch-dayheadercell-6:focus,
+/* sunday */
+.booking-calendar .b-sch-dayheadercell-0,
+.booking-calendar .b-sch-dayheadercell-0:hover,
+.booking-calendar .b-sch-dayheadercell-0:focus {
+  background-color: rgba(217, 222, 222, 0.33) !important;
+}
+/* today */
 .booking-calendar .b-sch-dayheadercell-today,
 .booking-calendar .b-sch-dayheadercell-today:hover,
 .booking-calendar .b-sch-dayheadercell-today:focus {
   background-color: rgb(85, 85, 85) !important;
   color: #ffffff;
+}
+/* Highlight axis cells END */
+
+/* Current time line */
+.booking-calendar .b-grid-subgrid .b-sch-line {
+  border-left: 2px solid rgb(188, 216, 251);
 }
