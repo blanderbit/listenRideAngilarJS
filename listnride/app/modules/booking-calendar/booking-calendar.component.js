@@ -3,6 +3,7 @@ import {
   PresetManager,
   DateHelper
 } from '../../../js_modules/bryntum-scheduler/scheduler.module.min';
+import { get } from 'lodash';
 
 import { bikeColumnRenderer } from './renderers/bike-column/bike-column-renderer';
 import { bikeEventPopupRenderer } from './renderers/bike-event-popup/bike-event-popup-renderer';
@@ -17,12 +18,15 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'bookingCalendar',
   controller: function BookingCalendarController(
+    $localStorage,
+    $q,
     $translate,
     $state,
     $mdMenu,
     $filter,
     accessControl,
-    bikeOptions
+    bikeOptions,
+    api
   ) {
     'use strict';
     const bookingCalendar = this;
@@ -32,31 +36,12 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         return;
       }
 
-      $translate([
-        // bikes column
-        'shared.id',
-        'booking.overview.size',
-        'shared.label_new',
-        // events
-        'booking-calendar.event.accepted',
-        'booking-calendar.event.request-waiting',
-        'booking-calendar.event.not-available',
-        'seo.bikes',
-        // event popups
-        'booking-calendar.event.waiting',
-        'booking-calendar.event.not-available-header',
-        'booking-calendar.event.not-available-text',
-        'booking-calendar.event.see-settings',
-        'booking-calendar.event.date',
-        'booking-calendar.event.pickup',
-        'booking-calendar.event.booking-id',
-        'booking-calendar.event.rider',
-        'booking-calendar.event.contact',
-        'booking-calendar.event.view-booking',
-        ...bikeOptions.categoriesTranslationKeys()
-      ]).then(translations => initScheduler(translations));
-
-      initDatepicker();
+      $q.all([getTranslationsForScheduler(), getRides()]).then(
+        ([translations, rides]) => {
+          initScheduler({ translations, rides });
+          initDatepicker();
+        }
+      );
     };
 
     const viewPresetOptions = new Map([
@@ -70,13 +55,13 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             next: 'booking-calendar.next-week'
           },
           getTimeSpan: date => {
-            const firstday = DateHelper.add(
+            const firstDayOfWeek = DateHelper.add(
               date,
               -1 * date.getDay() + 1,
               'day'
             );
-            const lastday = DateHelper.add(firstday, 6, 'day');
-            return [firstday, lastday].map(dropTimezone);
+            const lastDayOfWeek = DateHelper.add(firstDayOfWeek, 6, 'day');
+            return [firstDayOfWeek, lastDayOfWeek].map(dropTimezone);
           }
         }
       ],
@@ -131,7 +116,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       return viewPresetOptions.get(bookingCalendar.scheduler.viewPreset.name);
     };
 
-    bookingCalendar.getShiftButtonTooltip = (direction) => {
+    bookingCalendar.getShiftButtonTooltip = direction => {
       if (!bookingCalendar.scheduler) {
         // scheduler hasn't been instantiated yet
         return '';
@@ -139,7 +124,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       return bookingCalendar.getCurrentViewPreset().labels[direction];
     };
 
-    function initScheduler(translations) {
+    function initScheduler({ translations, rides }) {
       // getters needed for event popups
       const getters = {
         getCategoryLabel: category =>
@@ -161,8 +146,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         headerConfig: {
           top: {
             unit: 'month',
-            dateFormat: 'MMMM YYYY',
-            // align: 'start',
+            dateFormat: 'MMMM YYYY'
           },
           middle: {
             unit: 'day',
@@ -183,8 +167,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         headerConfig: {
           top: {
             unit: 'month',
-            dateFormat: 'MMMM YYYY',
-            // align: 'start',
+            dateFormat: 'MMMM YYYY'
           },
           middle: {
             unit: 'day',
@@ -249,100 +232,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           }
         },
 
-        resources: [
-          {
-            id: 1,
-            name: 'Destroyer of Worlds and outer space',
-            imageUrl:
-              'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12271/1555531251-hell_rider.jpeg',
-            expanded: false,
-            size: 52,
-            category: 10,
-            isNew: true,
-            isCluster: true,
-            children: [
-              {
-                id: 3,
-                name: 'Destroyer of Worlds and outer space',
-                size: 52,
-                category: 11,
-                isVariant: true,
-                variantIndex: 1,
-                cls: 'variant-row'
-              },
-              {
-                id: 4,
-                name:
-                  'TestTestTestTestTestTestTestTestTestTestTestTestTestTest',
-                size: 54,
-                category: 12,
-                isVariant: true,
-                isNew: true,
-                variantIndex: 2,
-                cls: 'variant-row'
-              },
-              {
-                id: 5,
-                name: 'Destroyer of Worlds and outer space',
-                size: 56,
-                category: 20,
-                isVariant: true,
-                variantIndex: 3,
-                cls: 'variant-row'
-              }
-            ]
-          },
-          {
-            id: 2,
-            name: 'Barbie Ride',
-            imageUrl:
-              'https://listnride-staging.s3.eu-central-1.amazonaws.com/uploads/ride/image_file_1/12275/1555610029-barbie.jpeg',
-            size: 52,
-            category: 21
-          }
-        ],
+        resources: rides.bikes,
 
-        events: [
-          {
-            resourceId: 1,
-            startDate: '2019-05-06 14:00:00',
-            endDate: '2019-05-15 12:00:00',
-            bikesCount: 3
-          },
-          {
-            resourceId: 3,
-            startDate: '2019-05-11 08:00:00',
-            endDate: '2019-05-15 12:00:00',
-            isPending: true,
-            bookingId: 1,
-            rider: 'John Johnsen',
-            contact: '0173 263 273 283'
-          },
-          {
-            resourceId: 4,
-            startDate: '2019-05-06 14:00:00',
-            endDate: '2019-05-09 12:00:00',
-            isAccepted: true,
-            bookingId: 2,
-            rider: 'John Johnsen',
-            contact: '0173 263 273 283'
-          },
-          {
-            resourceId: 5,
-            startDate: '2019-05-10 09:00:00',
-            endDate: '2019-05-15 00:00:00',
-            isNotAvailable: true
-          },
-          {
-            resourceId: 2,
-            startDate: '2019-05-13 15:00:00',
-            endDate: '2019-05-19 12:30:00',
-            isPending: true,
-            bookingId: 3,
-            rider: 'John Johnsen',
-            contact: '0173 263 273 283'
-          }
-        ],
+        events: rides.events,
 
         startDate,
         endDate
@@ -350,12 +242,10 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       bookingCalendar.scheduler.on({
         eventclick: ({ resourceRecord }) => {
+          // expand bike cluster on cluster event click
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
         }
       });
-
-      // for dubugging:
-      window.scheduler = bookingCalendar.scheduler;
     }
 
     function initDatepicker() {
@@ -385,6 +275,117 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     function getDatepickerElement() {
       return angular.element('#booking-calendar-datepicker');
+    }
+
+    function getTranslationsForScheduler() {
+      return $translate([
+        // bikes column
+        'shared.id',
+        'booking.overview.size',
+        'shared.label_new',
+        // events
+        'booking-calendar.event.accepted',
+        'booking-calendar.event.request-waiting',
+        'booking-calendar.event.not-available',
+        'seo.bikes',
+        // event popups
+        'booking-calendar.event.waiting',
+        'booking-calendar.event.not-available-header',
+        'booking-calendar.event.not-available-text',
+        'booking-calendar.event.see-settings',
+        'booking-calendar.event.date',
+        'booking-calendar.event.pickup',
+        'booking-calendar.event.booking-id',
+        'booking-calendar.event.rider',
+        'booking-calendar.event.contact',
+        'booking-calendar.event.view-booking',
+        ...bikeOptions.categoriesTranslationKeys()
+      ]);
+    }
+
+    function getRides() {
+      return api
+        .get(`/users/${$localStorage.userId}/rides`)
+        .then(({ data }) => data.bikes)
+        .then(bikes =>
+          bikes.reduce(
+            (acc, bike) => {
+              const bikeResource = {
+                id: bike.id,
+                name: bike.name,
+                isCluster: bike.is_cluster,
+                category: bike.category,
+                imageUrl: bike.image_file,
+                size: bike.size,
+                isVariant: false,
+                isNew: false,
+                children: []
+              };
+
+              if (bikeResource.isCluster) {
+                /*
+                 Variant's structure:
+                 {
+                  id: string, // unique id
+                  name: string, // cluster bike name
+                  size: string, // bike size
+                  category: number, // bike category
+                  isNew: boolean, // flag to show badge "New"
+                  variantIndex: number, // index in a list of variants
+                  isVariant: true, // always true for variants
+                  cls: 'variant-row' // always the same, must be present for styling
+                }
+                */
+                bikeResource.children = Array.from(
+                  { length: bike.rides_count },
+                  (_, i) => ({
+                    ...bikeResource,
+                    id: `${bike.id}-${i}`,
+                    isCluster: false,
+                    isVariant: true,
+                    variantIndex: i + 1,
+                    cls: 'variant-row'
+                  })
+                );
+              }
+
+              acc.bikes.push(bikeResource);
+
+              acc.events.push(
+                // accepted/pending events
+                ...bike.requests.map(request => {
+                  return {
+                    resourceId: bike.id,
+                    startDate: request.start_date,
+                    endDate: request.end_date,
+                    bookingId: request.id,
+                    isPending: true,
+                    isNotAvailable: false,
+                    isAccepted: false,
+                    rider: 'John Johnsen',
+                    contact: '0173 263 273 283'
+                  };
+                }),
+                // not available events
+                ...Object.values(get(bike, 'availabilities', {}))
+                  .filter(({ active }) => active)
+                  .map(({ start_date, duration }) => {
+                    return {
+                      resourceId: bike.id,
+                      startDate: DateHelper.format(new Date(start_date), 'YYYY-MM-DD'), // do not specify timezone Z
+                      duration: duration + 1,
+                      isNotAvailable: true,
+                      isPending: false,
+                      isAccepted: false,
+                    };
+                  })
+              );
+
+              return acc;
+            },
+            { bikes: [], events: [] }
+          )
+        );
     }
   }
 });
