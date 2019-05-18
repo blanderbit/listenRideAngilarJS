@@ -41,6 +41,11 @@ booking-calendar {
 .booking-calendar-divider {
   margin-bottom: 10px;
 }
+
+#booking-calendar-datepicker {
+  padding: 0;
+  max-height: none !important;
+}
 /* Calendar controls END */
 
 /*
@@ -88,4 +93,15 @@ booking-calendar {
 
 .booking-calendar__badge--green {
   background-color: rgb(95,198,147);
+}
+
+.booking-calendar .variant-row {
+  background-color: rgb(245, 247, 247);
+}
+
+.booking-calendar .b-sch-dayheadercell-today,
+.booking-calendar .b-sch-dayheadercell-today:hover,
+.booking-calendar .b-sch-dayheadercell-today:focus {
+  background-color: rgb(85, 85, 85) !important;
+  color: #ffffff;
 }
