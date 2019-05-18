@@ -1604,6 +1604,44 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'argon18',
+        url: '/brands/argon18',
+        template: '<argon18></argon18>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.argon18.meta-title", "meta.brand-integration.argon18.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.argon18.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.argon18.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'rossignol',
+        url: '/brands/rossignol',
+        template: '<rossignol></rossignol>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.rossignol.meta-title", "meta.brand-integration.rossignol.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.rossignol.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.rossignol.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* CITY_PAGES */
       /* ------------------------------------ */
