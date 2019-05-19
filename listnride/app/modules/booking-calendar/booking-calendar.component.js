@@ -192,6 +192,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         rowHeight: 85,
         eventSelectedCls: 'selected-event',
         focusCls: 'focused-event',
+        emptyText: translations['booking-calendar.empty-text'],
 
         eventRenderer: ({ eventRecord, resourceRecord, tplData }) =>
           bikeEventRenderer({
@@ -246,6 +247,28 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
         }
       });
+
+      bookingCalendar.scheduler.filterOutEmptyResources = () => {
+        bookingCalendar.scheduler.resourceStore.clearFilters();
+        return (
+          bookingCalendar.scheduler.resourceStore.allCount &&
+          bookingCalendar.scheduler.resourceStore.filterBy(resource => {
+            return resource.events.some(event => {
+              return DateHelper.intersectSpans(
+                event.startDate,
+                event.endDate,
+                bookingCalendar.scheduler.startDate,
+                bookingCalendar.scheduler.endDate
+              );
+            });
+          })
+        );
+      };
+
+      bookingCalendar.scheduler.on(
+        'timeaxischange',
+        bookingCalendar.scheduler.filterOutEmptyResources
+      );
     }
 
     function initDatepicker() {
@@ -283,6 +306,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         'shared.id',
         'booking.overview.size',
         'shared.label_new',
+        'booking-calendar.empty-text',
         // events
         'booking-calendar.event.accepted',
         'booking-calendar.event.request-waiting',
