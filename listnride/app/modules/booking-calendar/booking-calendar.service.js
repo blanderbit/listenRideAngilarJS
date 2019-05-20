@@ -16,7 +16,7 @@ angular
           'shared.id',
           'booking.overview.size',
           'shared.label_new',
-          'booking-calendar.empty-text',
+          'booking-calendar.no-bikes-to-display',
           // events
           'booking-calendar.event.accepted',
           'booking-calendar.event.request-waiting',

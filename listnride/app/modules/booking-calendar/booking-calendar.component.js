@@ -235,7 +235,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         rowHeight: 85,
         eventSelectedCls: 'selected-event',
         focusCls: 'focused-event',
-        emptyText: translations['booking-calendar.empty-text'],
+        emptyText: translations['booking-calendar.no-bikes-to-display'],
 
         eventRenderer: ({ eventRecord, resourceRecord, tplData }) =>
           bikeEventRenderer({
