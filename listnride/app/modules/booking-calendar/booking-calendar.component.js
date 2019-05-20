@@ -3,7 +3,6 @@ import {
   PresetManager,
   DateHelper
 } from '../../../js_modules/bryntum-scheduler/scheduler.module.min';
-import { get } from 'lodash';
 
 import { bikeColumnRenderer } from './renderers/bike-column/bike-column-renderer';
 import { bikeEventPopupRenderer } from './renderers/bike-event-popup/bike-event-popup-renderer';
@@ -18,30 +17,34 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'bookingCalendar',
   controller: function BookingCalendarController(
-    $localStorage,
     $q,
     $translate,
     $state,
     $mdMenu,
     $filter,
     accessControl,
-    bikeOptions,
-    api
+    bookingCalendarService
   ) {
     'use strict';
     const bookingCalendar = this;
+
+    bookingCalendar.filters = {
+      onlyWithEvents: false,
+      location: null
+    };
 
     bookingCalendar.$onInit = () => {
       if (accessControl.requireLogin()) {
         return;
       }
 
-      $q.all([getTranslationsForScheduler(), getRides()]).then(
-        ([translations, rides]) => {
-          initScheduler({ translations, rides });
-          initDatepicker();
-        }
-      );
+      $q.all([
+        bookingCalendarService.getTranslationsForScheduler(),
+        bookingCalendarService.getRides()
+      ]).then(([translations, rides]) => {
+        initScheduler({ translations, rides });
+        initDatepicker();
+      });
     };
 
     const viewPresetOptions = new Map([
@@ -124,12 +127,52 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       return bookingCalendar.getCurrentViewPreset().labels[direction];
     };
 
+    bookingCalendar.filterBikes = () => {
+      // check that scheduler has been instantiated
+      if (!bookingCalendar.scheduler) {
+        return;
+      }
+
+      // clear filter, so filtered out entries could reappear
+      bookingCalendar.scheduler.resourceStore.clearFilters();
+
+      // check if there are filters to apply
+      if (Object.values(bookingCalendar.filters).every(filter => !filter)) {
+        return;
+      }
+
+      // set bikes filter
+      bookingCalendar.scheduler.resourceStore.filterBy(resource => {
+        let eventsCountMatch = true;
+        let locationMatch = true;
+
+        // filter by events presence
+        if (bookingCalendar.filters.onlyWithEvents) {
+          eventsCountMatch = resource.events.some(event => {
+            return DateHelper.intersectSpans(
+              event.startDate,
+              event.endDate,
+              bookingCalendar.scheduler.startDate,
+              bookingCalendar.scheduler.endDate
+            );
+          });
+        }
+
+        // filter by location
+        if (bookingCalendar.filters.location) {
+          locationMatch =
+            resource.data.location.id === bookingCalendar.filters.location;
+        }
+
+        return eventsCountMatch && locationMatch;
+      });
+    };
+
     function initScheduler({ translations, rides }) {
       // getters needed for event popups
       const getters = {
         getCategoryLabel: category =>
           translations[$filter('category')(category)],
-        // TODO: verify link addresses
         getBikeListingsHref: () => $state.href('listings'),
         getBookingHref: requestId => $state.href('requests', { requestId })
       };
@@ -234,7 +277,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         },
 
         resources: rides.bikes,
-
         events: rides.events,
 
         startDate,
@@ -248,27 +290,12 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         }
       });
 
-      bookingCalendar.scheduler.filterOutEmptyResources = () => {
-        bookingCalendar.scheduler.resourceStore.clearFilters();
-        return (
-          bookingCalendar.scheduler.resourceStore.allCount &&
-          bookingCalendar.scheduler.resourceStore.filterBy(resource => {
-            return resource.events.some(event => {
-              return DateHelper.intersectSpans(
-                event.startDate,
-                event.endDate,
-                bookingCalendar.scheduler.startDate,
-                bookingCalendar.scheduler.endDate
-              );
-            });
-          })
-        );
-      };
+      // on start/end date change
+      bookingCalendar.scheduler.on('timeaxischange', () => {
+        bookingCalendar.filterBikes();
+      });
 
-      bookingCalendar.scheduler.on(
-        'timeaxischange',
-        bookingCalendar.scheduler.filterOutEmptyResources
-      );
+      bookingCalendar.filterBikes();
     }
 
     function initDatepicker() {
@@ -298,118 +325,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     function getDatepickerElement() {
       return angular.element('#booking-calendar-datepicker');
-    }
-
-    function getTranslationsForScheduler() {
-      return $translate([
-        // bikes column
-        'shared.id',
-        'booking.overview.size',
-        'shared.label_new',
-        'booking-calendar.empty-text',
-        // events
-        'booking-calendar.event.accepted',
-        'booking-calendar.event.request-waiting',
-        'booking-calendar.event.not-available',
-        'seo.bikes',
-        // event popups
-        'booking-calendar.event.waiting',
-        'booking-calendar.event.not-available-header',
-        'booking-calendar.event.not-available-text',
-        'booking-calendar.event.see-settings',
-        'booking-calendar.event.date',
-        'booking-calendar.event.pickup',
-        'booking-calendar.event.booking-id',
-        'booking-calendar.event.rider',
-        'booking-calendar.event.contact',
-        'booking-calendar.event.view-booking',
-        ...bikeOptions.categoriesTranslationKeys()
-      ]);
-    }
-
-    function getRides() {
-      return api
-        .get(`/users/${$localStorage.userId}/rides`)
-        .then(({ data }) => data.bikes)
-        .then(bikes =>
-          bikes.reduce(
-            (acc, bike) => {
-              const bikeResource = {
-                id: bike.id,
-                name: bike.name,
-                isCluster: bike.is_cluster,
-                category: bike.category,
-                imageUrl: bike.image_file,
-                size: bike.size,
-                isVariant: false,
-                isNew: false,
-                children: []
-              };
-
-              if (bikeResource.isCluster) {
-                /*
-                 Variant's structure:
-                 {
-                  id: string, // unique id
-                  name: string, // cluster bike name
-                  size: string, // bike size
-                  category: number, // bike category
-                  isNew: boolean, // flag to show badge "New"
-                  variantIndex: number, // index in a list of variants
-                  isVariant: true, // always true for variants
-                  cls: 'variant-row' // always the same, must be present for styling
-                }
-                */
-                bikeResource.children = Array.from(
-                  { length: bike.rides_count },
-                  (_, i) => ({
-                    ...bikeResource,
-                    id: `${bike.id}-${i}`,
-                    isCluster: false,
-                    isVariant: true,
-                    variantIndex: i + 1,
-                    cls: 'variant-row'
-                  })
-                );
-              }
-
-              acc.bikes.push(bikeResource);
-
-              acc.events.push(
-                // accepted/pending events
-                ...bike.requests.map(request => {
-                  return {
-                    resourceId: bike.id,
-                    startDate: request.start_date,
-                    endDate: request.end_date,
-                    bookingId: request.id,
-                    isPending: true,
-                    isNotAvailable: false,
-                    isAccepted: false,
-                    rider: 'John Johnsen',
-                    contact: '0173 263 273 283'
-                  };
-                }),
-                // not available events
-                ...Object.values(get(bike, 'availabilities', {}))
-                  .filter(({ active }) => active)
-                  .map(({ start_date, duration }) => {
-                    return {
-                      resourceId: bike.id,
-                      startDate: DateHelper.format(new Date(start_date), 'YYYY-MM-DD'), // do not specify timezone Z
-                      duration: duration + 1,
-                      isNotAvailable: true,
-                      isPending: false,
-                      isAccepted: false,
-                    };
-                  })
-              );
-
-              return acc;
-            },
-            { bikes: [], events: [] }
-          )
-        );
     }
   }
 });

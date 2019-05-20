@@ -1528,7 +1528,6 @@
     "previous-month": "Previous month",
     "next-month": "Next month",
     "previous-week": "Previous week",
-    "next-week": "Next week",
-    "empty-text": "No bikes to display"
+    "next-week": "Next week"
   }
 }

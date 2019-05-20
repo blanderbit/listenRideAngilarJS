@@ -17,20 +17,26 @@ booking-calendar {
   max-width: 100%;
 }
 
-/* Calendar controls START */
-.booking-calendar-controls {
+/* Calendar navigation START */
+.booking-calendar__controls {
+  display: flex;
+  padding: 0 10px;
+  margin: 0;
+  align-items: center;
+}
+
+.booking-calendar__nav {
   display: flex;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  margin: 0;
+  margin: 0 auto;
   text-transform: capitalize;
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.booking-calendar-controls > * + *,
-.booking-calendar-controls .md-icon-button {
+.booking-calendar__nav > * + *,
+.booking-calendar__nav .md-icon-button {
   margin: 0 0 0 10px;
 }
 
