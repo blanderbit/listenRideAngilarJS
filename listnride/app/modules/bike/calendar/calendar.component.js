@@ -153,19 +153,15 @@ angular.module('bike').component('calendar', {
       calendar.onBooking = function(){
         $mdDialog.hide();
         $state.go('booking', {
-          bikeId: calendar.pickAvailableBike(),
+          bikeId: calendar.pickAvailableBikeId(),
           startDate: calendar.startDate,
           endDate: calendar.endDate,
           size: calendar.pickedBikeSize
         });
       };
 
-      calendar.pickAvailableBike = function () {
-        if (calendar.cluster && (calendar.pickedBikeSize !== calendar.bikeSize)) {
-          return calendar.cluster.rides[calendar.pickedBikeSize][0].id;
-        } else {
-          return calendar.bikeId;
-        }
+      calendar.pickAvailableBikeId = function () {
+        return calendar.cluster ? calendar.cluster.rides[calendar.pickedBikeSize][0].id : calendar.bikeId;
       }
 
       calendar.onBikeRequest = function() {
