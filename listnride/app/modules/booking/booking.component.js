@@ -303,18 +303,14 @@ angular.module('booking', [])
           booking.confirmation_3 = '';
         };
 
-        booking.pickAvailableBike = function () {
-          if (booking.cluster && (booking.pickedBikeSize !== booking.bike.size)) {
-            return booking.cluster.rides[booking.pickedBikeSize][0].id;
-          } else {
-            return booking.bikeId;
-          }
+        booking.pickAvailableBikeId = function () {
+          return booking.cluster ? booking.cluster.rides[booking.pickedBikeSize][0].id : booking.bikeId;
         }
 
         booking.nextAction = function () {
           switch (getTabNameByOrder(booking.selectedIndex)) {
             case 'calendar': {
-              updateState({startDate: booking.startDate, endDate: booking.endDate, size: booking.pickedBikeSize, bikeId: booking.pickAvailableBike()});
+              updateState({startDate: booking.startDate, endDate: booking.endDate, size: booking.pickedBikeSize, bikeId: booking.pickAvailableBikeId()});
               setFirstTab();
               break;
             }
