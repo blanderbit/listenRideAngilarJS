@@ -42,6 +42,7 @@ import './modules/shared/filter/category-filter.component.js';
 import './modules/shared/filter/accessories-filter.component.js';
 import './modules/shared/credit-card-input/credit-card-input.component.js';
 import './modules/shared/status-labels/status-labels.component.js';
+import './modules/booking-calendar/booking-calendar.service.js';
 import './modules/booking-calendar/booking-calendar.component.js';
 import './modules/shared/paypal-checkout-button/paypal-checkout-button.component.js';
 // core services
