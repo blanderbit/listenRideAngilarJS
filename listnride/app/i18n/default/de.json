@@ -481,7 +481,7 @@
         "meta-description": "Test ride a Rossignol bike today! Rossignol bikes are available to rent on listnride. The newest mountain bikes from Rossignol will help you hit the trail. "
       },
       "cowboybikes": {
-        "meta-title": "Miete und teste Cowboy-Bikes noch heute! Das ist Cowboy. Das Elektrofahrrad für Stadtfahrer.",
+        "meta-title": "Miete und teste Cowboy Bikes noch heute! Cowboy - Das Elektrofahrrad für Stadtfahrer.",
         "meta-description": "Teste noch heute ein Cowboy Smart Electric Urban Bike! Das smarte Elektrofahrrad für Urban Riders. Miete es einfach auf listnride!"
       },
       "argon18": {
@@ -1524,6 +1524,8 @@
     "previous-month": "Previous month",
     "next-month": "Next month",
     "previous-week": "Previous week",
-    "next-week": "Next week"
+    "next-week": "Next week",
+    "filter-by-requests": "With requests only",
+    "no-bikes-to-display": "No bikes to display"
   }
 }
