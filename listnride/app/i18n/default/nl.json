@@ -1513,6 +1513,8 @@
     "previous-month": "Previous month",
     "next-month": "Next month",
     "previous-week": "Previous week",
-    "next-week": "Next week"
+    "next-week": "Next week",
+    "filter-by-requests": "With requests only",
+    "no-bikes-to-display": "No bikes to display"
   }
 }
