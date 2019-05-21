@@ -341,7 +341,7 @@ angular.module('bike').component('calendar', {
           calendar.event.returnSlotId;
           calendar.event.days = _.range(calendar.event.startDay, calendar.event.endDay + 1); // last number not included
           // every Tuesday event
-          calendar.event.days = [7, 14, 21, 28];
+          calendar.event.days = [21, 25, 28];
           // if event duration is only one day we should pick it automatically
           if (calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
 
