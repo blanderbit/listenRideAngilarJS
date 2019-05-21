@@ -17,7 +17,16 @@ booking-calendar {
   max-width: 100%;
 }
 
-/* Calendar navigation START */
+/* Calendar controls START */
+.booking-calendar__filters {
+  display: flex;
+  align-items: center;
+}
+
+.booking-calendar__filters > * + * {
+  margin: 0 0 0 20px;
+}
+
 .booking-calendar__controls {
   display: flex;
   padding: 0 10px;
@@ -32,7 +41,6 @@ booking-calendar {
   align-items: center;
   margin: 0 auto;
   text-transform: capitalize;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
 .booking-calendar__nav > * + *,

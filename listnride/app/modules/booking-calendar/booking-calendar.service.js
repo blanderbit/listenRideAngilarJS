@@ -118,10 +118,12 @@ angular
                       };
                     })
                 );
+                
+                acc.locations.set(bike.location.id, bike.location);
 
                 return acc;
               },
-              { bikes: [], events: [] }
+              { bikes: [], events: [], locations: new Map() }
             )
           );
       }
