@@ -28,7 +28,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     'use strict';
     const bookingCalendar = this;
 
-    bookingCalendar.anyLocationKey = 'NULL';
+    bookingCalendar.anyLocationKey = 'ANY_LOCATION';
     bookingCalendar.locationOptions = [];
     bookingCalendar.filters = {
       onlyWithEvents: false,
