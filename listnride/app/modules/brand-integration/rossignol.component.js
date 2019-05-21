@@ -33,7 +33,7 @@ angular.module('rossignolIntegration', []).component('rossignol', {
         rossignol.isEmpty = _.isEmpty;
 
         // invocations
-        rossignol.splitFaq();
+        // rossignol.splitFaq();
         rossignol.getBikes();
       }
 
