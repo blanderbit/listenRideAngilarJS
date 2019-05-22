@@ -119,11 +119,11 @@ angular
                     })
                 );
                 
-                acc.locations.set(bike.location.id, bike.location);
+                acc.locations.add(bike.location.city);
 
                 return acc;
               },
-              { bikes: [], events: [], locations: new Map() }
+              { bikes: [], events: [], locations: new Set() }
             )
           );
       }

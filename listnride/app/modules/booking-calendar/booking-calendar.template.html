@@ -18,8 +18,8 @@
         <md-option value="{{bookingCalendar.anyLocationKey}}">
           {{ 'booking-calendar.any-location' | translate }}
         </md-option>
-        <md-option ng-repeat="location in bookingCalendar.locationOptions" value="{{location.id}}">
-          {{location.city}}
+        <md-option ng-repeat="location in bookingCalendar.locationOptions" value="{{location}}">
+          {{location}}
         </md-option>
       </md-select>
     </section>

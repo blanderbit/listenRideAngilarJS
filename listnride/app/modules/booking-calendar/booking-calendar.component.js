@@ -44,7 +44,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         bookingCalendarService.getTranslationsForScheduler(),
         bookingCalendarService.getRides()
       ]).then(([translations, rides]) => {
-        bookingCalendar.locationOptions = Array.from(rides.locations.values());
+        bookingCalendar.locationOptions = Array.from(rides.locations);
         initScheduler({ translations, rides });
         initDatepicker();
       });
@@ -167,7 +167,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         ) {
           locationMatch =
             resource.data.location &&
-            String(resource.data.location.id) === bookingCalendar.filters.location;
+            String(resource.data.location.city) === bookingCalendar.filters.location;
         }
 
         return eventsCountMatch && locationMatch;
