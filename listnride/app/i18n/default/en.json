@@ -4,7 +4,7 @@
     "label_new": "New",
     "booking-calendar": "Booking Calendar",
     "month": "Month",
-    "id": "ID",
+    "id": "Bike ID",
     "event-bikes-will-be-soon": "Bikes for this event will be available soon",
     "for-count-hours": "for {{hoursSlot}} hours",
     "rental-date": "Rental date",
@@ -238,7 +238,7 @@
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Eschborn</b>  |  Wann: <b>1.6. - 31.08. 2019</b>",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
-      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-title": "E-Bikes einfach kostenlos Probefahren",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
       "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "meta-description": "esten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
@@ -247,7 +247,7 @@
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Kassel</b>  |  Wann: <b>1.6. - 31.08. 2019</b>",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
-      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-title": "E-Bikes einfach kostenlos Probefahren",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
       "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
@@ -256,7 +256,7 @@
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren!",
       "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Hofheim</b>  |  Wann: <b>1.6. - 31.08. 2019</b>",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.\n",
-      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-title": "E-Bikes einfach kostenlos Probefahren",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
       "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
@@ -267,7 +267,7 @@
     },
     "8bar-clubride": {
       "meta-title": "Rent a road bike for the 8bar club ride",
-      "meta-description": "Join us on our weekly club ride and test one the latest 8bar road bikes for free. Simply book here and pick up at our showroom.",
+      "meta-description": "Join our 8bar Clubride and try out one of our 8bar bikes.\nFor only 8,-- EUR you can test ride the bike during the Clubride and receive a filled 8bar bike bottle for free.",
       "calendar-title": "Test bikes for the 8bar club ride",
       "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
     },
