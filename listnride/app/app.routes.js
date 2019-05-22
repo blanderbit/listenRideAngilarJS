@@ -217,6 +217,7 @@
         url: '/requests/?requestId',
         reloadOnSearch: false,
         params: {
+          hideCoview: true,
           hideFooter: true,
           requestId: {
             squash: true,
@@ -227,6 +228,7 @@
         resolve: {
           data: function (ngMeta) {
             ngMeta.setTag("noindex", true);
+            coview('hideChatButton');
           }
         },
         meta: {
