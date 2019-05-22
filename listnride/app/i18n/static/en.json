@@ -617,7 +617,7 @@
       "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
       "item1-title": "Design",
       "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
-      "item2-title": "E Track",
+      "item2-title": "E-Track",
       "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E-Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E-Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
       "item3-title": "Another Best Day",
       "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
@@ -1214,7 +1214,7 @@
         "question-13": "How do I delete my bike listing?",
         "answer-13": "In case you no longer can or want to offer a certain bike for rent, you can delete it by going to “Listed rides” in the account menu. If you’re using our iPhone app, swipe the bike you would like to delete to the left and click “delete”. If you’re using our website, select “Delete ride.” After a few seconds, you’ll see a confirmation message that says “Bike successfully deleted.”",
         "question-14": "How do I rent out my bike through listnride?",
-        "answer-14": "Once you receive a request for your bike, open the app or go to our website and log into your account. Click on your account page in the top right corner and click on “Request to me” in the account menu. Here you will see the request that has been sent to you. Click on the request and reply to the requester by either accepting or rejecting the request. You can also chat with the requester at the same time to clarify any details. Once you accept the request, the other person needs to confirm his/her request and pay in advance. As soon as the confirmation and payment are complete, you will receive a notification via e-mail as well as a status update in your account.",
+        "answer-14": "Once you receive a request for your bike, go to our website and log into your account. Click on your account page in the top right corner and click on “Request to me” in the account menu. Here you will see the request that has been sent to you. Click on the request and reply to the requester by either accepting or rejecting the request. You can also chat with the requester at the same time to clarify any details. Once you accept the request, the other person needs to confirm his/her request and pay in advance. As soon as the confirmation and payment are complete, you will receive a notification via e-mail as well as a status update in your account.",
         "question-15": "What do I do if the rental period initially requested is not the same as the actual period?",
         "answer-15": "If the final rental period has changed while you are communicating with the requester, it’s wise to ask them for a new request with the correct date and time, so that the rental is covered by the listnride guarantee.",
         "question-16": "What do I do if the requested rental period is inconvenient?",
@@ -1327,7 +1327,7 @@
     "control": {
       "logo": "insert logo here",
       "header": "Your data in good hands",
-      "description": "Your address and the location of your bike are not publicly visible. Only after a booking is confirmed, contact details of both sides are shared."
+      "description": "Your address and the location of your bike are not publicly visible. The contact details are only shared after a booking is confirmed."
     },
     "safe": {
       "logo": "insert logo here",
