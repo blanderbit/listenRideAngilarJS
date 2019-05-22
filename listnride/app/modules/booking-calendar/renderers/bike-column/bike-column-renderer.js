@@ -10,14 +10,27 @@ function newBadgeRenderer({ record, translations }) {
 }
 
 function bikeMetaInfoRenderer({ record, translations }) {
-  const { id, size } = record.originalData;
-  return `
-    <dl class="bike-meta">
+  const { id, size, variantsCount, isCluster } = record.originalData;
+  let content = '';
+  
+  if (isCluster) {
+    content += `
+      <dt>${translations['shared.status-labels.variants_available']}</dt>
+      <dd>${variantsCount}</dd>
+    `
+  } else {
+    content += `
       <dt>${translations['shared.id']}</dt>
       <dd>${id}</dd>
       <dt>${translations['booking.overview.size']}</dt>
       <dd>${size}</dd>
       ${newBadgeRenderer({ record, translations })}
+    `;
+  }
+  
+  return `
+    <dl class="bike-meta">
+      ${content}
     </dl>
   `;
 }
@@ -34,7 +47,7 @@ export function bikeColumnRenderer({ cellElement, record, translations }) {
     `;
   } else {
     html += `
-      <img class="bike-img" src="${imageUrl}" />
+      <div class="bike-img-wrap"><img class="bike-img" src="${imageUrl}" alt="${name}" /></div>
       <div class="bike-details">
         <p class="bike-name" title="${name}">${name}</p>
         ${bikeMetaInfoRenderer({ record, translations })}

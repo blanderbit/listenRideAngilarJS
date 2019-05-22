@@ -29,9 +29,14 @@
   max-width: 100%;
 }
 
-.booking-calendar .bike-column .bike-img {
-  height: 55px;
+.booking-calendar .bike-column .bike-img-wrap {
+  flex-shrink: 0;
+  width: 85px;
   margin-right: 10px;
+}
+
+.booking-calendar .bike-column .bike-img {
+  width: 100%;
   border: 1px solid rgba(0,0,0,0.12);
 }
 
@@ -40,6 +45,7 @@
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
+  min-height: 60px;
   overflow: hidden; /* is needed for bike name text overflow */
 }
 

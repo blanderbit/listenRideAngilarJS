@@ -16,6 +16,7 @@ angular
           'shared.id',
           'booking.overview.size',
           'shared.label_new',
+          'shared.status-labels.variants_available',
           'booking-calendar.no-bikes-to-display',
           // events
           'booking-calendar.event.accepted',
@@ -58,21 +59,9 @@ angular
                 };
 
                 if (bikeResource.isCluster) {
-                  /*
-                 Variant's structure:
-                 {
-                  id: string, // unique id
-                  name: string, // cluster bike name
-                  size: string, // bike size
-                  category: number, // bike category
-                  isNew: boolean, // flag to show badge "New"
-                  variantIndex: number, // index in a list of variants
-                  isVariant: true, // always true for variants
-                  cls: 'variant-row' // always the same, must be present for styling
-                }
-                */
+                  bikeResource.variantsCount = bike.rides_count;
                   bikeResource.children = Array.from(
-                    { length: bike.rides_count },
+                    { length: bikeResource.variantsCount },
                     (_, i) => ({
                       ...bikeResource,
                       id: `${bike.id}-${i}`,
