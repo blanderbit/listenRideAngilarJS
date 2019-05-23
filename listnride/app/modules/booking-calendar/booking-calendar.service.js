@@ -15,6 +15,7 @@ angular
           // bikes column
           'shared.id',
           'booking.overview.size',
+          'search.unisize',
           'shared.label_new',
           'shared.status-labels.variants_available',
           'booking-calendar.no-bikes-to-display',
