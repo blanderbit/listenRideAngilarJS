@@ -2,9 +2,26 @@
   <menu class="booking-calendar__controls">
     <section class="booking-calendar__filters">
       <!-- Filter by requests -->
-      <md-switch md-no-ink ng-model="bookingCalendar.filters.onlyWithEvents" ng-change="bookingCalendar.filterBikes()">
+      <md-switch 
+        md-no-ink 
+        ng-model="bookingCalendar.filters.onlyWithEvents" 
+        ng-change="bookingCalendar.filterBikes()">
         {{ 'booking-calendar.filter-by-requests' | translate }}
       </md-switch>
+
+      <!-- Filter by location -->
+      <md-select 
+        ng-if="bookingCalendar.locationOptions.length > 1"
+        ng-model="bookingCalendar.filters.location"
+        ng-change="bookingCalendar.filterBikes()"
+        class="md-no-underline">
+        <md-option value="{{bookingCalendar.anyLocationKey}}">
+          {{ 'booking-calendar.any-location' | translate }}
+        </md-option>
+        <md-option ng-repeat="location in bookingCalendar.locationOptions" value="{{location}}">
+          {{location}}
+        </md-option>
+      </md-select>
     </section>
     
     

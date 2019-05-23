@@ -30,9 +30,11 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     'use strict';
     const bookingCalendar = this;
 
+    bookingCalendar.anyLocationKey = 'ANY_LOCATION';
+    bookingCalendar.locationOptions = [];
     bookingCalendar.filters = {
       onlyWithEvents: false,
-      location: null
+      location: bookingCalendar.anyLocationKey
     };
 
     bookingCalendar.$onInit = () => {
@@ -53,6 +55,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         bookingCalendarService.getTranslationsForScheduler(),
         bookingCalendarService.getRides()
       ]).then(([translations, rides]) => {
+        bookingCalendar.locationOptions = Array.from(rides.locations);
         initScheduler({ translations, rides, goToDate });
         initDatepicker();
       });
@@ -170,9 +173,12 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         }
 
         // filter by location
-        if (bookingCalendar.filters.location) {
+        if (
+          bookingCalendar.filters.location !== bookingCalendar.anyLocationKey
+        ) {
           locationMatch =
-            resource.data.location.id === bookingCalendar.filters.location;
+            resource.data.location &&
+            String(resource.data.location.city) === bookingCalendar.filters.location;
         }
 
         return eventsCountMatch && locationMatch;
