@@ -805,7 +805,7 @@
       // booking calendar
       $stateProvider.state({
         name: 'bookingCalendar',
-        url: '/booking-calendar',
+        url: '/booking-calendar?goToDate',
         template: '<booking-calendar></booking-calendar>',
         reloadOnSearch: false,
         resolve: {

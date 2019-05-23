@@ -3,6 +3,7 @@ import {
   PresetManager,
   DateHelper
 } from '../../../js_modules/bryntum-scheduler/scheduler.module.min';
+import moment from 'moment';
 
 import { bikeColumnRenderer } from './renderers/bike-column/bike-column-renderer';
 import { bikeEventPopupRenderer } from './renderers/bike-event-popup/bike-event-popup-renderer';
@@ -20,6 +21,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     $q,
     $translate,
     $state,
+    $stateParams,
     $mdMenu,
     $filter,
     accessControl,
@@ -40,12 +42,21 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         return;
       }
 
+      const parsedGoToDate = moment(
+        $stateParams.goToDate,
+        'YYYY-MM-DDTHH:mm:ssZ',
+        true
+      );
+      const goToDate = parsedGoToDate.isValid()
+        ? parsedGoToDate.toDate()
+        : new Date();
+
       $q.all([
         bookingCalendarService.getTranslationsForScheduler(),
         bookingCalendarService.getRides()
       ]).then(([translations, rides]) => {
         bookingCalendar.locationOptions = Array.from(rides.locations);
-        initScheduler({ translations, rides });
+        initScheduler({ translations, rides, goToDate });
         initDatepicker();
       });
     };
@@ -174,7 +185,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       });
     };
 
-    function initScheduler({ translations, rides }) {
+    function initScheduler({ translations, rides, goToDate }) {
       // getters needed for event popups
       const getters = {
         getCategoryLabel: category =>
@@ -228,7 +239,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       const defaultPreset = 'month';
       const [startDate, endDate] = viewPresetOptions
         .get(defaultPreset)
-        .getTimeSpan(new Date());
+        .getTimeSpan(goToDate);
 
       bookingCalendar.scheduler = new Scheduler({
         appendTo: document.querySelector('.scheduler-container'),
