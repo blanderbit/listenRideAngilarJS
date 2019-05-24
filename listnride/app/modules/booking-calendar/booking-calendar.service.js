@@ -7,8 +7,19 @@ angular
     $localStorage,
     $translate,
     bikeOptions,
-    api
+    api,
+    MESSAGE_STATUSES
   ) {
+    const ALLOWED_REQUEST_STATUSES = [
+      MESSAGE_STATUSES.REQUESTED,
+      MESSAGE_STATUSES.ACCEPTED,
+      MESSAGE_STATUSES.CONFIRMED,
+      MESSAGE_STATUSES.ONE_SIDE_RATE,
+      MESSAGE_STATUSES.BOTH_SIDES_RATE,
+      MESSAGE_STATUSES.RATE_RIDE,
+      MESSAGE_STATUSES.COMPLETE,
+    ];
+
     return {
       getTranslationsForScheduler() {
         return $translate([
@@ -41,81 +52,109 @@ angular
 
       getRides() {
         return api
-          .get(`/users/${$localStorage.userId}/rides`)
+          .get(`/users/${$localStorage.userId}/rides?detailed=true`)
           .then(({ data }) => data.bikes)
-          .then(bikes =>
-            bikes.reduce(
-              (acc, bike) => {
-                const bikeResource = {
-                  id: bike.id,
-                  name: `${bike.brand} ${bike.name}`,
-                  location: bike.location,
-                  isCluster: bike.is_cluster,
-                  category: bike.category,
-                  imageUrl: bike.image_file,
-                  size: bike.size,
-                  isVariant: false,
-                  isNew: false,
-                  children: []
-                };
+          .then(bikes => this.parseBikes(bikes));
+      },
 
-                if (bikeResource.isCluster) {
-                  bikeResource.variantsCount = bike.rides_count;
-                  bikeResource.children = Array.from(
-                    { length: bikeResource.variantsCount },
-                    (_, i) => ({
-                      ...bikeResource,
-                      id: `${bike.id}-${i}`,
-                      isCluster: false,
-                      isVariant: true,
-                      variantIndex: i + 1,
-                      cls: 'variant-row'
-                    })
-                  );
-                }
+      parseBikes(bikes) {
+        return bikes.reduce(
+          (acc, bike) => {
+            const bikeResource = {
+              id: bike.id,
+              name: `${bike.brand} ${bike.name}`,
+              location: bike.location,
+              isCluster: bike.is_cluster,
+              isVariant: false,
+              category: bike.category,
+              imageUrl: bike.image_file,
+              size: bike.size,
+              isNew: false,
+              children: []
+            };
 
-                acc.bikes.push(bikeResource);
-
+            if (bikeResource.isCluster) {
+              bike.rides.forEach((bikeVariant, index) => {
+                const bikeVariantId = `${bike.id}-${index}`;
+                bikeResource.children.push({
+                  ...bikeResource,
+                  children: [],
+                  id: bikeVariantId,
+                  size: bikeVariant.size,
+                  isCluster: false,
+                  isVariant: true,
+                  variantIndex: index + 1,
+                  cls: 'variant-row'
+                });
                 acc.events.push(
-                  // accepted/pending events
-                  ...bike.requests.map(request => {
-                    return {
-                      resourceId: bike.id,
-                      startDate: request.start_date,
-                      endDate: request.end_date,
-                      bookingId: request.id,
-                      isPending: true,
-                      isNotAvailable: false,
-                      isAccepted: false,
-                      rider: 'John Johnsen',
-                      contact: '0173 263 273 283'
-                    };
-                  }),
-                  // not available events
-                  ...Object.values(get(bike, 'availabilities', {}))
-                    .filter(({ active }) => active)
-                    .map(({ start_date, duration }) => {
-                      return {
-                        resourceId: bike.id,
-                        startDate: DateHelper.format(
-                          new Date(start_date),
-                          'YYYY-MM-DD'
-                        ), // do not specify timezone Z
-                        duration: duration + 1,
-                        isNotAvailable: true,
-                        isPending: false,
-                        isAccepted: false
-                      };
-                    })
+                  ...this.parseRequests({
+                    id: bikeVariantId,
+                    isCluster: false,
+                    requests: bikeVariant.requests
+                  })
                 );
-                
-                acc.locations.add(bike.location.en_city);
+              });
+            }
 
-                return acc;
-              },
-              { bikes: [], events: [], locations: new Set() }
-            )
-          );
+            acc.bikes.push(bikeResource);
+
+            acc.events.push(
+              // accepted/pending events
+              ...this.parseRequests({
+                id: bikeResource.id,
+                isCluster: bikeResource.isCluster,
+                requests: bike.requests
+              }),
+              // not available events
+              ...Object.values(get(bike, 'availabilities', {}))
+                .filter(({ active }) => active)
+                .map(({ start_date, duration }) => {
+                  return {
+                    resourceId: bike.id,
+                    startDate: DateHelper.format(
+                      new Date(start_date),
+                      'YYYY-MM-DD'
+                    ), // do not specify timezone Z
+                    duration: duration + 1,
+                    isNotAvailable: true,
+                    isPending: false,
+                    isAccepted: false
+                  };
+                })
+            );
+
+            acc.locations.add(bike.location.en_city);
+
+            return acc;
+          },
+          { bikes: [], events: [], locations: new Set() }
+        );
+      },
+
+      parseRequests({ id, isCluster, requests }) {
+        return requests
+          .filter(request => ALLOWED_REQUEST_STATUSES.includes(request.status))
+          .map(rawRequest => {
+            console.count('COUNT')
+            const request = {
+              resourceId: id,
+              bookingId: rawRequest.id,
+              startDate: rawRequest.start_date,
+              endDate: rawRequest.end_date,
+              isCluster,
+              isPending: rawRequest.status === MESSAGE_STATUSES.REQUESTED,
+              isAccepted:rawRequest.status !== MESSAGE_STATUSES.REQUESTED, // we show only pending and accepted requests. Canceled requests are filtered out
+              isNotAvailable: false
+            };
+
+            if (!isCluster) {
+              const { first_name, last_name } = rawRequest.rider;
+              request.rider = `${first_name} ${last_name}`;
+              request.contact = rawRequest.rider.phone_number;
+            }
+
+            return request;
+          });
       }
     };
   });

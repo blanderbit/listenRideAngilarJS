@@ -10,7 +10,7 @@ function newBadgeRenderer({ record, translations }) {
 }
 
 function bikeMetaInfoRenderer({ record, translations }) {
-  const { id, size, variantsCount, isCluster } = record.originalData;
+  const { id, size, children, isCluster } = record.originalData;
   let content = '';
 
   const sizeDisplay =
@@ -22,8 +22,8 @@ function bikeMetaInfoRenderer({ record, translations }) {
   if (isCluster) {
     content += `
       <dt>${translations['shared.status-labels.variants_available']}</dt>
-      <dd>${variantsCount}</dd>
-    `;
+      <dd>${children.length}</dd>
+    `
   } else {
     content += `
       <dt>${translations['shared.id']}</dt>

@@ -18,6 +18,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'bookingCalendar',
   controller: function BookingCalendarController(
+    $log,
     $q,
     $translate,
     $state,
@@ -302,6 +303,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       bookingCalendar.scheduler.on({
         eventclick: ({ resourceRecord }) => {
+          $log.debug('Clicked bike request:', resourceRecord.originalData);
           // expand bike cluster on cluster event click
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
         }
