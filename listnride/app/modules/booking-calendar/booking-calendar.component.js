@@ -43,14 +43,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         return;
       }
 
-      const parsedGoToDate = moment(
-        $stateParams.goToDate,
-        'YYYY-MM-DDTHH:mm:ss.SSSZ',
-        true
-      );
-      const goToDate = parsedGoToDate.isValid()
-        ? parsedGoToDate.toDate()
-        : new Date();
+      const goToDate = getDateFromStateParams();
 
       $q.all([
         bookingCalendarService.getTranslationsForScheduler(),
@@ -187,6 +180,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     };
 
     function initScheduler({ translations, rides, goToDate }) {
+      registerViewPresets();
+
       // getters needed for event popups
       const getters = {
         getCategoryLabel: category =>
@@ -194,48 +189,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         getBikeListingsHref: () => $state.href('listings'),
         getBookingHref: requestId => $state.href('requests', { requestId })
       };
-
-      PresetManager.registerPreset('week', {
-        tickWidth: 150,
-        displayDateFormat: 'MMMM DD, HH:mm',
-        shiftUnit: 'week',
-        shiftIncrement: 1,
-        timeResolution: {
-          unit: 'week',
-          increment: 1
-        },
-        headerConfig: {
-          top: {
-            unit: 'month',
-            dateFormat: 'MMMM YYYY'
-          },
-          middle: {
-            unit: 'day',
-            dateFormat: 'dddd DD'
-          }
-        }
-      });
-
-      PresetManager.registerPreset('month', {
-        tickWidth: 50,
-        displayDateFormat: 'MMMM DD, HH:mm',
-        shiftUnit: 'month',
-        shiftIncrement: 1,
-        timeResolution: {
-          unit: 'month',
-          increment: 1
-        },
-        headerConfig: {
-          top: {
-            unit: 'month',
-            dateFormat: 'MMMM YYYY'
-          },
-          middle: {
-            unit: 'day',
-            dateFormat: 'DD'
-          }
-        }
-      });
 
       const defaultPreset = 'month';
       const [startDate, endDate] = viewPresetOptions
@@ -303,7 +256,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       bookingCalendar.scheduler.on({
         eventclick: ({ resourceRecord }) => {
-          $log.debug('Clicked bike request:', resourceRecord.originalData);
+          $log.debug('Clicked bike event:', resourceRecord.originalData);
           // expand bike cluster on cluster event click
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
         }
@@ -344,6 +297,59 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     function getDatepickerElement() {
       return angular.element('#booking-calendar-datepicker');
+    }
+
+    function registerViewPresets() {
+      PresetManager.registerPreset('week', {
+        tickWidth: 150,
+        displayDateFormat: 'MMMM DD, HH:mm',
+        shiftUnit: 'week',
+        shiftIncrement: 1,
+        timeResolution: {
+          unit: 'week',
+          increment: 1
+        },
+        headerConfig: {
+          top: {
+            unit: 'month',
+            dateFormat: 'MMMM YYYY'
+          },
+          middle: {
+            unit: 'day',
+            dateFormat: 'dddd DD'
+          }
+        }
+      });
+
+      PresetManager.registerPreset('month', {
+        tickWidth: 50,
+        displayDateFormat: 'MMMM DD, HH:mm',
+        shiftUnit: 'month',
+        shiftIncrement: 1,
+        timeResolution: {
+          unit: 'month',
+          increment: 1
+        },
+        headerConfig: {
+          top: {
+            unit: 'month',
+            dateFormat: 'MMMM YYYY'
+          },
+          middle: {
+            unit: 'day',
+            dateFormat: 'DD'
+          }
+        }
+      });
+    }
+
+    function getDateFromStateParams() {
+      const goToDate = moment(
+        $stateParams.goToDate,
+        'YYYY-MM-DDTHH:mm:ss.SSSZ',
+        true
+      );
+      return goToDate.isValid() ? goToDate.toDate() : new Date(); // today
     }
   }
 });
