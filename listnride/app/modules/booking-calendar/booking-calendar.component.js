@@ -66,11 +66,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             next: 'booking-calendar.next-week'
           },
           getTimeSpan: date => {
-            const firstDayOfWeek = DateHelper.add(
-              date,
-              -1 * date.getDay() + 1,
-              'day'
-            );
+            const day = date.getDay();
+            const diff = (day === 0 ? -6 : 1) - day;
+            const firstDayOfWeek = DateHelper.add(date, diff, 'day');
             const lastDayOfWeek = DateHelper.add(firstDayOfWeek, 6, 'day');
             return [firstDayOfWeek, lastDayOfWeek].map(dropTimezone);
           }

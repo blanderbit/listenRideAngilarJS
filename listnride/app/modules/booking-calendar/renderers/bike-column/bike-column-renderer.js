@@ -1,8 +1,8 @@
 import './bike-column.css';
 
 function newBadgeRenderer({ record, translations }) {
-  const { isNew } = record.originalData;
-  return isNew
+  const { requestsWithNewMessages } = record.originalData;
+  return requestsWithNewMessages && requestsWithNewMessages.length > 0
     ? `<span class="booking-calendar__badge booking-calendar__badge--blue booking-calendar__badge--chevron">
          ${translations['shared.label_new']}
        </span>`
@@ -23,6 +23,7 @@ function bikeMetaInfoRenderer({ record, translations }) {
     content += `
       <dt>${translations['shared.status-labels.variants_available']}</dt>
       <dd>${children.length}</dd>
+      ${newBadgeRenderer({ record, translations })}
     `
   } else {
     content += `
