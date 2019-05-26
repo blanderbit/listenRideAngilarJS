@@ -156,3 +156,9 @@
     </div>
   </div>
 </div>
+
+<div class="lnr-center" ng-if="!message.request.rideChat && message.status == message.STATUSES.REQUESTED">
+  <a ui-sref="bookingCalendar({ goToDate: message.request.start_date })">
+    {{ 'message.go-to-calendar' | translate }}
+  </a>
+</div>

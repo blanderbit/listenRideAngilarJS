@@ -44,7 +44,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       const parsedGoToDate = moment(
         $stateParams.goToDate,
-        'YYYY-MM-DDTHH:mm:ssZ',
+        'YYYY-MM-DDTHH:mm:ss.SSSZ',
         true
       );
       const goToDate = parsedGoToDate.isValid()
