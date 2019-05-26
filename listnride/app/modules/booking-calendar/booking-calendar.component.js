@@ -267,20 +267,21 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             const event = bookingCalendar.scheduler.eventStore.find(
               ({ bookingId }) => bookingId === request.bookingId
             );
-            if (
-              bike.isCluster &&
-              !bike.isExpanded(bookingCalendar.scheduler.resourceStore)
-            ) {
+            // expand cluster first
+            if (!bike.isExpanded(bookingCalendar.scheduler.resourceStore)) {
               bookingCalendar.scheduler.expand(bike);
             }
+            // go to the correct time span
             bookingCalendar.scheduler.setTimeSpan(
               ...bookingCalendar
                 .getCurrentViewPreset()
                 .getTimeSpan(new Date(event.startDate))
             );
+            // when we are sure that event is on a view,
+            // scroll event into view and highlight it
             bookingCalendar.scheduler.scrollEventIntoView(event, {
               highlight: true,
-              focus: true,
+              focus: true
             });
           }
         }
