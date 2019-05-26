@@ -914,6 +914,7 @@
   },
   "message": {
     "accept": "Accept",
+    "go-to-calendar": "Go to Calendar",
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
