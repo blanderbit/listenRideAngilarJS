@@ -909,6 +909,7 @@
   },
   "message": {
     "accept": "Aceptar",
+    "go-to-calendar": "Go to Calendar",
     "reject": "Rechazar",
     "rate": "Tarifa",
     "confirm": "Confirmar",

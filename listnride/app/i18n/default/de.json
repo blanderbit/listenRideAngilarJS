@@ -911,6 +911,7 @@
   },
   "message": {
     "accept": "Akzeptieren",
+    "go-to-calendar": "Go to Calendar",
     "reject": "Ablehnen",
     "rate": "Bewertung",
     "confirm": "Bestätigen",

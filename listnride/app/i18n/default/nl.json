@@ -903,6 +903,7 @@
   },
   "message": {
     "accept": "Accepteren",
+    "go-to-calendar": "Go to Calendar",
     "reject": "afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",

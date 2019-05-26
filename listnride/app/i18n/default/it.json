@@ -905,6 +905,7 @@
   },
   "message": {
     "accept": "Accetta",
+    "go-to-calendar": "Go to Calendar",
     "reject": "Rifiuta",
     "rate": "Voto",
     "confirm": "Confermare",
