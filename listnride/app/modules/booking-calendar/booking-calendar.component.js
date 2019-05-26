@@ -253,10 +253,36 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       });
 
       bookingCalendar.scheduler.on({
-        eventclick: ({ resourceRecord }) => {
-          $log.debug('Clicked bike event:', resourceRecord.originalData);
+        eventclick: ({ resourceRecord, eventRecord }) => {
+          $log.debug('Clicked bike event:', eventRecord.originalData);
           // expand bike cluster on cluster event click
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
+        },
+        cellClick: clickEvent => {
+          if (
+            clickEvent.target.getAttribute('data-id') === 'new-messages-badge'
+          ) {
+            const bike = clickEvent.record;
+            const [request] = bike.requestsWithNewMessages;
+            const event = bookingCalendar.scheduler.eventStore.find(
+              ({ bookingId }) => bookingId === request.bookingId
+            );
+            if (
+              bike.isCluster &&
+              !bike.isExpanded(bookingCalendar.scheduler.resourceStore)
+            ) {
+              bookingCalendar.scheduler.expand(bike);
+            }
+            bookingCalendar.scheduler.setTimeSpan(
+              ...bookingCalendar
+                .getCurrentViewPreset()
+                .getTimeSpan(new Date(event.startDate))
+            );
+            bookingCalendar.scheduler.scrollEventIntoView(event, {
+              highlight: true,
+              focus: true,
+            });
+          }
         }
       });
 

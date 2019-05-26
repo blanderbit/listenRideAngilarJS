@@ -3,7 +3,9 @@ import './bike-column.css';
 function newBadgeRenderer({ record, translations }) {
   const { requestsWithNewMessages } = record.originalData;
   return requestsWithNewMessages && requestsWithNewMessages.length > 0
-    ? `<span class="booking-calendar__badge booking-calendar__badge--blue booking-calendar__badge--chevron">
+    ? `<span 
+         data-id="new-messages-badge" 
+         class="booking-calendar__badge booking-calendar__badge--blue booking-calendar__badge--chevron booking-calendar__badge--clickable">
          ${translations['shared.label_new']}
        </span>`
     : '';
