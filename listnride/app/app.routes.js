@@ -1623,6 +1623,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'yuba',
+        url: '/brands/yuba',
+        template: '<yuba></yuba>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.yuba.meta-title", "meta.brand-integration.yuba.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.yuba.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.yuba.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* CITY_PAGES */
       /* ------------------------------------ */
