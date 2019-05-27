@@ -178,7 +178,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         ) {
           locationMatch =
             resource.data.location &&
-            String(resource.data.location.city) === bookingCalendar.filters.location;
+            resource.data.location.en_city === bookingCalendar.filters.location;
         }
 
         return eventsCountMatch && locationMatch;

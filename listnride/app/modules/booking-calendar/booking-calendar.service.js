@@ -108,7 +108,7 @@ angular
                     })
                 );
                 
-                acc.locations.add(bike.location.city);
+                acc.locations.add(bike.location.en_city);
 
                 return acc;
               },
