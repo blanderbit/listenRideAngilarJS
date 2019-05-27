@@ -12,22 +12,27 @@ function newBadgeRenderer({ record, translations }) {
 function bikeMetaInfoRenderer({ record, translations }) {
   const { id, size, variantsCount, isCluster } = record.originalData;
   let content = '';
-  
+
+  const sizeDisplay =
+    size === 0
+      ? `<dt>${translations['search.unisize']}</dt>`
+      : `<dt>${translations['booking.overview.size']}</dt>
+         <dd>${size}</dd>`;
+
   if (isCluster) {
     content += `
       <dt>${translations['shared.status-labels.variants_available']}</dt>
       <dd>${variantsCount}</dd>
-    `
+    `;
   } else {
     content += `
       <dt>${translations['shared.id']}</dt>
       <dd>${id}</dd>
-      <dt>${translations['booking.overview.size']}</dt>
-      <dd>${size}</dd>
+      ${sizeDisplay}
       ${newBadgeRenderer({ record, translations })}
     `;
   }
-  
+
   return `
     <dl class="bike-meta">
       ${content}
