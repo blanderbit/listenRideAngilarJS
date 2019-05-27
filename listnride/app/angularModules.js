@@ -119,6 +119,7 @@ import './modules/brand-integration/unimoke.component.js';
 import './modules/brand-integration/bzen.component.js';
 import './modules/brand-integration/urwahn.component.js';
 import './modules/brand-integration/cowboybikes.component.js';
+import './modules/brand-integration/yuba.component.js';
 // events
 import './modules/events/event.component.js';
 import './modules/events/crossride/crossride.component.js';
