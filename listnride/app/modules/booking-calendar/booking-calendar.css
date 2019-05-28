@@ -109,8 +109,12 @@ booking-calendar {
   background-color: rgb(95,198,147);
 }
 
+.booking-calendar__badge--clickable {
+  cursor: pointer;
+}
+
 .booking-calendar .variant-row {
-  background-color: rgb(245, 247, 247);
+  background-color: rgb(245, 247, 247) !important;
 }
 
 /* Highlight axis cells START */

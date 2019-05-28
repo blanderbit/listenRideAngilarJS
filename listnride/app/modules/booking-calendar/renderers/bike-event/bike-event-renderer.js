@@ -2,7 +2,12 @@ import './bike-event.css';
 
 function statusRenderer({ eventRecord, resourceRecord, translations }) {
   const { isCluster } = resourceRecord.originalData;
-  const { isPending, isAccepted, isNotAvailable, bikesCount } = eventRecord.originalData;
+  const {
+    isPending,
+    isAccepted,
+    isNotAvailable,
+    bikesCount
+  } = eventRecord.originalData;
   if (isCluster) {
     return `
       <span class="event-status cluster">

@@ -1,16 +1,18 @@
 import './bike-column.css';
 
 function newBadgeRenderer({ record, translations }) {
-  const { isNew } = record.originalData;
-  return isNew
-    ? `<span class="booking-calendar__badge booking-calendar__badge--blue booking-calendar__badge--chevron">
+  const { requestsWithNewMessages } = record.originalData;
+  return requestsWithNewMessages && requestsWithNewMessages.length > 0
+    ? `<span 
+         data-id="new-messages-badge" 
+         class="booking-calendar__badge booking-calendar__badge--blue booking-calendar__badge--chevron booking-calendar__badge--clickable">
          ${translations['shared.label_new']}
        </span>`
     : '';
 }
 
 function bikeMetaInfoRenderer({ record, translations }) {
-  const { id, size, variantsCount, isCluster } = record.originalData;
+  const { id, size, children, isCluster } = record.originalData;
   let content = '';
 
   const sizeDisplay =
@@ -22,8 +24,9 @@ function bikeMetaInfoRenderer({ record, translations }) {
   if (isCluster) {
     content += `
       <dt>${translations['shared.status-labels.variants_available']}</dt>
-      <dd>${variantsCount}</dd>
-    `;
+      <dd>${children.length}</dd>
+      ${newBadgeRenderer({ record, translations })}
+    `
   } else {
     content += `
       <dt>${translations['shared.id']}</dt>

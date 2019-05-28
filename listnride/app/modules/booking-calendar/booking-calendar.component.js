@@ -18,6 +18,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'bookingCalendar',
   controller: function BookingCalendarController(
+    $log,
     $q,
     $translate,
     $state,
@@ -42,14 +43,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         return;
       }
 
-      const parsedGoToDate = moment(
-        $stateParams.goToDate,
-        'YYYY-MM-DDTHH:mm:ss.SSSZ',
-        true
-      );
-      const goToDate = parsedGoToDate.isValid()
-        ? parsedGoToDate.toDate()
-        : new Date();
+      const goToDate = getDateFromStateParams();
 
       $q.all([
         bookingCalendarService.getTranslationsForScheduler(),
@@ -72,11 +66,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             next: 'booking-calendar.next-week'
           },
           getTimeSpan: date => {
-            const firstDayOfWeek = DateHelper.add(
-              date,
-              -1 * date.getDay() + 1,
-              'day'
-            );
+            const day = date.getDay();
+            const diff = (day === 0 ? -6 : 1) - day;
+            const firstDayOfWeek = DateHelper.add(date, diff, 'day');
             const lastDayOfWeek = DateHelper.add(firstDayOfWeek, 6, 'day');
             return [firstDayOfWeek, lastDayOfWeek].map(dropTimezone);
           }
@@ -186,6 +178,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     };
 
     function initScheduler({ translations, rides, goToDate }) {
+      registerViewPresets();
+
       // getters needed for event popups
       const getters = {
         getCategoryLabel: category =>
@@ -193,48 +187,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         getBikeListingsHref: () => $state.href('listings'),
         getBookingHref: requestId => $state.href('requests', { requestId })
       };
-
-      PresetManager.registerPreset('week', {
-        tickWidth: 150,
-        displayDateFormat: 'MMMM DD, HH:mm',
-        shiftUnit: 'week',
-        shiftIncrement: 1,
-        timeResolution: {
-          unit: 'week',
-          increment: 1
-        },
-        headerConfig: {
-          top: {
-            unit: 'month',
-            dateFormat: 'MMMM YYYY'
-          },
-          middle: {
-            unit: 'day',
-            dateFormat: 'dddd DD'
-          }
-        }
-      });
-
-      PresetManager.registerPreset('month', {
-        tickWidth: 50,
-        displayDateFormat: 'MMMM DD, HH:mm',
-        shiftUnit: 'month',
-        shiftIncrement: 1,
-        timeResolution: {
-          unit: 'month',
-          increment: 1
-        },
-        headerConfig: {
-          top: {
-            unit: 'month',
-            dateFormat: 'MMMM YYYY'
-          },
-          middle: {
-            unit: 'day',
-            dateFormat: 'DD'
-          }
-        }
-      });
 
       const defaultPreset = 'month';
       const [startDate, endDate] = viewPresetOptions
@@ -301,9 +253,37 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       });
 
       bookingCalendar.scheduler.on({
-        eventclick: ({ resourceRecord }) => {
+        eventclick: ({ resourceRecord, eventRecord }) => {
+          $log.debug('Clicked bike event:', eventRecord.originalData);
           // expand bike cluster on cluster event click
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
+        },
+        cellClick: clickEvent => {
+          if (
+            clickEvent.target.getAttribute('data-id') === 'new-messages-badge'
+          ) {
+            const bike = clickEvent.record;
+            const [request] = bike.requestsWithNewMessages;
+            const event = bookingCalendar.scheduler.eventStore.find(
+              ({ bookingId }) => bookingId === request.bookingId
+            );
+            // expand cluster first
+            if (!bike.isExpanded(bookingCalendar.scheduler.resourceStore)) {
+              bookingCalendar.scheduler.expand(bike);
+            }
+            // go to the correct time span
+            bookingCalendar.scheduler.setTimeSpan(
+              ...bookingCalendar
+                .getCurrentViewPreset()
+                .getTimeSpan(new Date(event.startDate))
+            );
+            // when we are sure that event is on a view,
+            // scroll event into view and highlight it
+            bookingCalendar.scheduler.scrollEventIntoView(event, {
+              highlight: true,
+              focus: true
+            });
+          }
         }
       });
 
@@ -342,6 +322,59 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
     function getDatepickerElement() {
       return angular.element('#booking-calendar-datepicker');
+    }
+
+    function registerViewPresets() {
+      PresetManager.registerPreset('week', {
+        tickWidth: 150,
+        displayDateFormat: 'MMMM DD, HH:mm',
+        shiftUnit: 'week',
+        shiftIncrement: 1,
+        timeResolution: {
+          unit: 'week',
+          increment: 1
+        },
+        headerConfig: {
+          top: {
+            unit: 'month',
+            dateFormat: 'MMMM YYYY'
+          },
+          middle: {
+            unit: 'day',
+            dateFormat: 'dddd DD'
+          }
+        }
+      });
+
+      PresetManager.registerPreset('month', {
+        tickWidth: 50,
+        displayDateFormat: 'MMMM DD, HH:mm',
+        shiftUnit: 'month',
+        shiftIncrement: 1,
+        timeResolution: {
+          unit: 'month',
+          increment: 1
+        },
+        headerConfig: {
+          top: {
+            unit: 'month',
+            dateFormat: 'MMMM YYYY'
+          },
+          middle: {
+            unit: 'day',
+            dateFormat: 'DD'
+          }
+        }
+      });
+    }
+
+    function getDateFromStateParams() {
+      const goToDate = moment(
+        $stateParams.goToDate,
+        'YYYY-MM-DDTHH:mm:ss.SSSZ',
+        true
+      );
+      return goToDate.isValid() ? goToDate.toDate() : new Date(); // today
     }
   }
 });
