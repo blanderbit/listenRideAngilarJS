@@ -390,7 +390,7 @@
     "8bar-clubride": {
       "title": "Nehme teil an unserer 8bar Clubride und fahre kostenlos mit einer 8bar Rennrad!",
       "description": "Was: <b>8bar Clubride </b>| Wenn: <b>Jeden Dienstag ab dem 9. April </b>| Wo: <b>8bar Showroom </b>",
-      "text": "\"Wenn du Teil unserer Community wirst, findest du immer jemanden, mit dem du fahren kannst. Entweder bei unseren wöchentlichen Clubrides jeden Dienstagabend aus dem 8bar Showroom Berlin im Sommer oder bei unseren \"Member only\" Rides oder Veranstaltungen. Außerdem sparst du dir die Anmeldegebühren für jedes 8bar Hosted oder Sponsored Cycling Event, bekommst spezielle Rabatte auf alle 8bar Produkte und last but not least ein neues Cycling Kit jährlich.\"\n"
+      "text": "Bei dem 8bar Clubride handelt es sich um eine wöchentliche Rennrad Ausfahrt mit ca. 60-80km. \nDie Reisegeschwindigkeit beträgt 27-33km/h liegen.\n\nWenn du ein 8bar Rad ausleihst solltest du bis spätestens 17:45h am Showroom sein, sonst verfällt deine Reservierung und wir werden das Rad gegebenenfalls anderweitig verleihen."
     },
     "granfondo-bikedivision": {
       "title": "Miete ein Rennrad für die Granfondo Bike Division",
@@ -616,12 +616,24 @@
       "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
       "item1-title": "Design",
       "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
-      "item2-title": "E Track",
+      "item2-title": "E-Track",
       "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
       "item3-title": "Another Best Day",
       "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
       "find-out-more": "Learn more about Rossignol bikes",
       "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"https://www.rossignol.com/int-en/rossignol-bike/rossignol-rike-mountain-bikes.html\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
+    },
+    "yuba": {
+      "title": "Miete und teste Yuba Bikes bei listnride. Yuba - das Lastenrad mit dem großem Gepäckträger. ",
+      "description": "Yuba - das Lastenrad mit dem großem Gepäckträger. Das Besondere an einem Yuba ist zum einen der extra lange Gepäckträger, auf dem Platz für bis zu zwei Kindersitze oder drei Kinder ist. Andererseits gibt es vielseitige Stauräume an der Seite des Rahmens. Trotz einer maximalen Nutzlast von bis zu 200 kg sind die Yubas dynamisch und leicht zu lenken. Den Unterschied zu einem normalen Fahrrad merkt man kaum!",
+      "item1-title": "Kompakt",
+      "item1-description": "Alle Yuba Modelle sind nur so groß wie nötig. Dadurch sind sie wendig, leicht zu fahren und platzsparend zu parken.",
+      "item2-title": "Vielseitig",
+      "item2-description": "Aus der bunten Zubehörvielfalt kannst du dir für den Personen- sowie Lastentransport die passende Erweiterung aussuchen.",
+      "item3-title": "Spaßfaktor",
+      "item3-description": "Der Yuba Spaßfaktor ist so hoch, dass du es nach kurzer Zeit auch als Alltagsrad sowie als Freizeit- und Ausflugsrad verwenden wirst!",
+      "find-out-more": "Erfahre mehr über Yuba Bikes ",
+      "order-online": "Besuche den List and Ride Experience Center um Yuba kennenzulernen und vor deiner Kaufentscheidung ausführlich zu testen. Hier findest Du die <a href=\"https://www.yubaeurope.com/\" target=\"_blank\">gesamte Auswahl an Yuba Bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49 030 120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "urwahn": {
       "title": "#MadewithLove #Germany #SteelisReal",

@@ -122,6 +122,7 @@ import './modules/brand-integration/urwahn.component.js';
 import './modules/brand-integration/cowboybikes.component.js';
 import './modules/brand-integration/argon18.component.js';
 import './modules/brand-integration/rossignol.component.js';
+import './modules/brand-integration/yuba.component.js';
 // events
 import './modules/events/event.component.js';
 import './modules/events/crossride/crossride.component.js';
