@@ -21,7 +21,9 @@ angular.module('yubaIntegration', []).component('yuba', {
         yuba.cbSlider = [
           'app/assets/ui_images/brand-integration/yuba/lnr_yuba_hero_image_01.jpg',
           'app/assets/ui_images/brand-integration/yuba/lnr_yuba_hero_image_02.jpg',
-          'app/assets/ui_images/brand-integration/yuba/lnr_yuba_hero_image_03.jpg'
+          'app/assets/ui_images/brand-integration/yuba/lnr_yuba_hero_image_03.jpg',
+          'app/assets/ui_images/brand-integration/yuba/lnr_yuba_hero_image_04.jpg',
+          'app/assets/ui_images/brand-integration/yuba/lnr_yuba_hero_image_05.jpg'
         ];
 
         // GROUPED BIKES
