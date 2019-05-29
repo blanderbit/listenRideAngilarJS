@@ -219,7 +219,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             type: 'tree',
             text: 'Name',
             field: 'name',
-            width: 300,
+            width: 320,
             leafIconCls: null,
             expandIconCls: 'fa-chevron-down',
             collapseIconCls: 'fa-chevron-up',
