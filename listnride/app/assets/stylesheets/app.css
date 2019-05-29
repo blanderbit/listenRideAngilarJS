@@ -3922,24 +3922,6 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   .cov.cov-root {
     z-index: 4 !important;
   }
-
-  body .cov.cov-root > .cov.cov-position-container {
-    left: 20px;
-    right: auto;
-    top: auto;
-    z-index: 1;
-  }
-
-  .cov-position-container .cov.cov-chat-button {
-    left: 0;
-    right: auto;
-  }
-
-  .cov-position-container .cov.cov-chat-panel {
-    right: auto;
-    left: 0;
-    position: fixed;
-  }
 }
 
 @media (max-width: 400px) {
