@@ -48,6 +48,14 @@
   </input-stars>
 </div>
 
+<p
+  ng-if="!message.request.rideChat && message.status == message.STATUSES.REQUESTED"
+  class="lnr-center">
+  <a ui-sref="bookingCalendar({ goToDate: message.request.start_date })">
+    {{ 'message.go-to-calendar' | translate }}
+  </a>
+</p>
+
 <div ng-if="message.displayableNotification()" layout="row" layout-align="center end">
   <div
       class="lnr-message status-message"
@@ -155,10 +163,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="lnr-center" ng-if="!message.request.rideChat && message.status == message.STATUSES.REQUESTED">
-  <a ui-sref="bookingCalendar({ goToDate: message.request.start_date })">
-    {{ 'message.go-to-calendar' | translate }}
-  </a>
 </div>
