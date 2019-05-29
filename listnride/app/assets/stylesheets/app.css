@@ -30,15 +30,56 @@
  * FRAMEWORK............Something we do with default material styles
  * LNR_CLASSES..........Our custom atomic styles
  * - ALIGNMENTS.........Text alignments
+
  * - MARGINS............Set, remove margins
  * -- MARGINS::SET
  * -- MARGINS::REMOVE
+
  * - PADDINGS...........Set, remove paddings
  * -- PADDINGS::SET
  * -- PADDINGS::REMOVE
- * SVG..................Set proportions to svg
- * LNR_ERRORS...........Validation errors
- * MEDIA_STYLES.........media for all breakpoints
+
+ * - SVG ..................Set proportions to svg
+ * - PROFILE PICTURE
+ * - NAVBAR
+ * - FOOTER
+ * - DIALOG MODALS
+ * - PAGES
+ * - BRAND INTEGRATION
+ * - INVITE LANDING
+ * - HOME
+ * -- HOMEPAGE SEARCHBAR
+ * - BIKE CARD & LISTING CARD
+ * - COMMENT
+ * - BIKE DETAILS
+ * - SEARCH
+ * - GOOGLE NG-MAP INFO-WINDOW
+ * - USER
+ * - RATING
+ * - LISTINGS
+ * - CALCULATOR
+ * - REQUESTS
+ * - STATIC PAGES
+ * - EVENT PAGES
+ * - CITY PAGES
+ * - HOW TO SHOOT BIKE PHOTO
+ * - INVOICES
+ * - INVITATIONS
+ * - SIGN-UP
+ * - SEO-Landing
+ * - ANIMATIONS
+ * - EVENTS
+ * - MATERIAL MODIFIERS
+ * - DATERANGEPICKER CUSTOM STYLES
+ * - FILTER
+ * - LNR_ERRORS...........Validation errors
+ * - NEWSLETTER
+ * - FILTERS
+ * - MULTI BOOKING
+ * - HELP_AND_SERVICE
+ * - PAGINATION
+
+ * - MEDIA.........media for all breakpoints
  *
  */
 
@@ -1552,6 +1593,69 @@ home .section {
   margin-top: 80px;
 }
 
+/*-----------------------------------------------------------------------------------*/
+/* HOMEPAGE SEARCHBAR
+/*-----------------------------------------------------------------------------------*/
+
+.lnr-homepage-search {
+  width: 95%;
+  max-width: 720px;
+  transform: translateY(30px);
+  border-radius: 4px;
+}
+
+.lnr-homepage-search label,
+.lnr-homepage-search .md-errors-spacer {
+  display: none;
+}
+
+.lnr-homepage-search autocomplete {
+  margin: 0;
+}
+
+.lnr-homepage-search input {
+  width: 100%;
+  background: #fff;
+  outline: none;
+}
+
+@media (max-width: 599px) {
+
+  .lnr-homepage-search {
+    max-width: 340px;
+    padding: 15px;
+    background-color: #fff;
+  }
+
+  .lnr-homepage-search .md-button {
+    margin: 20px 0 0;
+    border-radius: 4px;
+  }
+
+  .lnr-homepage-search autocomplete input,
+  .lnr-homepage-search .md-button {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+
+  .lnr-homepage-search input {
+    height: 60px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .lnr-homepage-search .md-button {
+    margin: 0;
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* HOMEPAGE SEARCHBAR end
+/*-----------------------------------------------------------------------------------*/
+
 .highlight-section {
   margin-top: 80px;
   background-color: rgb(122, 178, 248);
@@ -2709,7 +2813,7 @@ md-switch.md-checked .md-bar {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Invoices
+/*  INVOICES
 /*-----------------------------------------------------------------------------------*/
 
 .lnr-billing-page .lnr-billing-table-head md-list-item.md-2-line {
@@ -2759,7 +2863,7 @@ md-switch.md-checked .md-bar {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Invitations
+/*  INVITATIONS
 /*-----------------------------------------------------------------------------------*/
 
 invite #inviteForm .invite-form-container {
@@ -2934,7 +3038,7 @@ only screen and (min-resolution: 2dppx) {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Material Modifiers
+/*  MATERIAL MODIFIERS
 /*-----------------------------------------------------------------------------------*/
 
 md-input-container.md-icon-right>md-icon.md-icon--btn {
@@ -2972,7 +3076,7 @@ md-icon[md-font-icon].fa--lh20 {
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  daterangepicker custom styles
+/*  DATERANGEPICKER CUSTOM STYLES
 /*-----------------------------------------------------------------------------------*/
 
 .date-picker-wrapper--ngDialog {
@@ -3374,7 +3478,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 }
 
 /*-----------------------------------------------------------------------------------*/
-/*  Filters
+/*  FILTERS
 /*-----------------------------------------------------------------------------------*/
 
 .filter-column__item {
