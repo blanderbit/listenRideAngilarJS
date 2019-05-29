@@ -9,7 +9,7 @@ angular.module('user',[]).component('user', {
       user.hours = {};
       user.weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
       user.loaded = false;
-      user.current_payment = false;
+      user.has_address = false;
       user.display_name = '';
       user.picture = '';
       user.mobileScreen = $mdMedia('xs');
@@ -76,7 +76,7 @@ angular.module('user',[]).component('user', {
           user.display_name = setName();
           user.picture = setPicture();
 
-          user.current_payment = response.data.status === 3;
+          user.has_address = response.data.has_address;
           if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
             user.rating = user.rating / 2;
           }
