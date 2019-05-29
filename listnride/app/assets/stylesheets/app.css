@@ -103,6 +103,23 @@ address {
   align-items: center;
 }
 
+/* COVIEW */
+
+.cov.cov-chat-button {
+  margin-right: 20px;
+}
+
+@media (max-width: 599px) {
+
+  .cov.cov-root {
+    z-index: 4 !important;
+  }
+
+  .cov.cov-chat-button {
+    margin-right: 0;
+  }
+}
+
 /* LOADER */
 
 .lnr-loader {
@@ -3916,11 +3933,6 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   .lnr-message--inlined {
     max-width: 75%;
-  }
-
-  /* COVIEW */
-  .cov.cov-root {
-    z-index: 4 !important;
   }
 }
 

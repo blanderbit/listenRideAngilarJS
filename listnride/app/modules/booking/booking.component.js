@@ -52,7 +52,6 @@ angular.module('booking', [])
           booking.isOpeningHoursLoaded = false;
           booking.creditCardData = {}
           booking.paymentDescription = '';
-          booking.mobileScreen = $mdMedia('xs');
 
           // METHODS
           booking.calendarHelper = calendarHelper;
@@ -65,7 +64,7 @@ angular.module('booking', [])
           // INVOCATIONS
           getBikeData();
 
-          if(booking.mobileScreen) {
+          if($mdMedia('xs')) {
             coview('hideChatButton');
             $state.params.hideCoview = true;
           }
