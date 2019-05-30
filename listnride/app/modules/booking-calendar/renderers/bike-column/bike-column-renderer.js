@@ -23,7 +23,7 @@ function bikeMetaInfoRenderer({ record, translations }) {
 
   if (isCluster) {
     content += `
-      <dt>${translations['shared.status-labels.variants_available']}</dt>
+      <dt>${translations['booking-calendar.bike-variants']}:</dt>
       <dd>${children.length}</dd>
       ${newBadgeRenderer({ record, translations })}
     `

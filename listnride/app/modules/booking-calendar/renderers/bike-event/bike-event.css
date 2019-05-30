@@ -40,12 +40,17 @@
 }
 
 .booking-calendar .b-sch-event .event-status {
-  display: flex;
-  align-items: center;
   font-size: 12px;
 } 
 
 .booking-calendar .b-sch-event .event-status .fa {
   margin-right: 3px;
   font-size: 16px;
-} 
+}
+
+.booking-calendar .b-sch-event .ellipsis {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

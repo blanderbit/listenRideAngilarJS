@@ -10,14 +10,14 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   } = eventRecord.originalData;
   if (isCluster) {
     return `
-      <span class="event-status cluster">
+      <span class="event-status ellipsis">
         ${bikesCount} ${translations['seo.bikes']}
       </span>
     `;
   }
   if (isPending) {
     return `
-      <span class="event-status pending">
+      <span class="event-status ellipsis">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
         ${translations['booking-calendar.event.request-waiting']}
       </span>
@@ -25,7 +25,7 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   }
   if (isAccepted) {
     return `
-      <span class="event-status pending">
+      <span class="event-status ellipsis">
         <i class="fa fa-check-circle-o" aria-hidden="true"></i>
         ${translations['booking-calendar.event.accepted']}
       </span>
@@ -33,7 +33,7 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   }
   if (isNotAvailable) {
     return `
-      <span class="event-status pending">
+      <span class="event-status ellipsis">
         <i class="fa fa-times-circle-o" aria-hidden="true"></i>
         ${translations['booking-calendar.event.not-available']}
       </span>
@@ -57,7 +57,7 @@ export function bikeEventRenderer({
   tplData.cls.cluster = isCluster;
 
   const html = `
-    <div class="event-name">${name}</div>
+    <div class="event-name ellipsis">${name}</div>
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
   `;
 

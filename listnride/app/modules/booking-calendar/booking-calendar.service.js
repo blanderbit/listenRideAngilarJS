@@ -28,7 +28,7 @@ angular
           'booking.overview.size',
           'search.unisize',
           'shared.label_new',
-          'shared.status-labels.variants_available',
+          'booking-calendar.bike-variants',
           'booking-calendar.no-bikes-to-display',
           // events
           'booking-calendar.event.accepted',
