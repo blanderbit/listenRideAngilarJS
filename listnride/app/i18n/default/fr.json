@@ -707,6 +707,11 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "profile-verified": "Congratulations, your profile was successfully verified!",
+    "profile-updated": "Successfully updated description",
+    "error-upload-profile-picture": "Error while uploading profile picture",
+    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
+    "phone-verified": "Successfully verified phone number.",
     "cluster-deleted": "Bike cluster successfully deleted",
     "cluster-unmerged": "Bike cluster successfully unmerged",
     "cluster-merged": "Bikes successfully merged into cluster",
@@ -739,6 +744,14 @@
   },
   "settings": {
     "settings": "Settings",
+    "accept_request_reminder": {
+      "subscribe": "Accept request reminder"
+    },
+    "booking_overview_lister": "Booking overview lister",
+    "confirm_return": "Confirm return",
+    "return_reminder": "Return reminder",
+    "request_created": "Request created (SMS)",
+    "notifications": "Notifications",
     "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
     "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
     "newsletter": "Newsletter",
@@ -1532,6 +1545,7 @@
     "next-week": "Next week",
     "filter-by-requests": "With requests only",
     "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location"
+    "any-location": "Any location",
+    "bike-variants": "Bike Variants"
   }
 }
