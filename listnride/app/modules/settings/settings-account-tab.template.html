@@ -227,6 +227,45 @@
 
       <md-divider class="lnr-p-0 lnr-mt-x2 lnr-mb-x2"></md-divider>
 
+
+      <div layout="row" layout-xs="column">
+
+        <div flex-gt-xs layout-margin>
+          <div class="md-body-2">{{ 'settings.notifications' | translate }}</div>
+        </div>
+
+        <div flex-gt-xs="70" layout-margin>
+          <div layout="row" layout-align="none center">
+            <md-switch
+              ng-model="settingsAccount.parent.isChecked"
+              ng-change="settingsAccount.parent.toggleNotifications()"
+              class="lnr-m-0"
+            >
+            </md-switch>
+            <label class="lnr-mv-x2">
+              <b ng-show="settingsAccount.parent.isChecked">{{ 'settings.notification-preferences.receive-all' | translate }}</b>
+              <b ng-show="!settingsAccount.parent.isChecked">{{ 'settings.notification-preferences.receive-minimal' | translate }}</b>
+            </label>
+          </div>
+
+          <div class="lnr-mh-x2">
+            <p class="lnr-m-0" ng-show="settingsAccount.parent.isChecked">{{ 'settings.notification-preferences.receive-all-description' | translate }}</p>
+            <p class="lnr-m-0" ng-show="!settingsAccount.parent.isChecked">{{ 'settings.notification-preferences.receive-minimal-description' | translate }}</p>
+            <!--<span class="lnr-color-primary lnr-link" ng-show="!settings.detailsShown" ng-click="settings.detailsShown = true">show details</span>-->
+          </div>
+
+          <!--<ul class="lnr-list-no-style lnr-m-0 lnr-p-0" ng-show="settings.detailsShown" layout="row" flex-gt-xs="80" layout-wrap>
+            <li ng-repeat="item in settingsAccount.parent.user.notification_preference" flex="50" flex-xs="100">
+              <md-icon class="lnr-icon-check" ng-show="settings.isChecked"></md-icon>
+              <md-icon class="lnr-icon-close" ng-show="!settings.isChecked"></md-icon>
+              <span>{{item}}</span>
+            </li>
+          </ul>-->
+        </div>
+      </div>
+
+      <md-divider class="lnr-p-0 lnr-mt-x2 lnr-mb-x2"></md-divider>
+
       <div layout="row" layout-xs="column">
         <div flex-gt-xs layout-margin>
           <div class="md-body-2">{{ 'settings.newsletter' | translate }}</div>

@@ -58,6 +58,7 @@ angular.module('settings',[])
         settings.business = {};
         settings.user.business = false;
         settings.user.has_billing = false;
+        settings.isChecked = true;
 
         // payment
         settings.showPaymentChangeForm = false;
@@ -92,6 +93,7 @@ angular.module('settings',[])
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
         settings.updateNewsletter = updateNewsletter;
+        settings.toggleNotifications = toggleNotifications;
 
         // invocations
         userApi.getUserData().then(function (response) {
@@ -577,6 +579,15 @@ angular.module('settings',[])
             notification.show(error, 'error');
           }
         );
+      }
+
+      function toggleNotifications() {
+        var preferences = settings.user.notification_preference;
+        for (var key in preferences) {
+          if(key !== 'id' && key !== 'newsletter') {
+            preferences[key] = settings.isChecked;
+          }
+        }
       }
 
       // ===================

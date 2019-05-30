@@ -495,6 +495,16 @@ md-tooltip .md-content {
 /* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-icon-check:before {
+  content: '\2714';
+  color: #5fc693;
+}
+
+.lnr-icon-close:before {
+  content: '\2718';
+  color: #dd2c00;
+}
+
 .lnr-group-close {
   top: 100%;
   position: absolute;
