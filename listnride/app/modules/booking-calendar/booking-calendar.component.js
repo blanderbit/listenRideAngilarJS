@@ -11,7 +11,7 @@ import { bikeEventRenderer } from './renderers/bike-event/bike-event-renderer';
 
 import './booking-calendar.css';
 
-const dropTimezone = date =>
+const dropTime = date =>
   new Date(`${DateHelper.format(date, 'YYYY-MM-DD')}T00:00:00Z`);
 
 angular.module('bookingCalendar', []).component('bookingCalendar', {
@@ -66,11 +66,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             next: 'booking-calendar.next-week'
           },
           getTimeSpan: date => {
-            const day = date.getDay();
-            const diff = (day === 0 ? -6 : 1) - day;
-            const firstDayOfWeek = DateHelper.add(date, diff, 'day');
-            const lastDayOfWeek = DateHelper.add(firstDayOfWeek, 6, 'day');
-            return [firstDayOfWeek, lastDayOfWeek].map(dropTimezone);
+            const start = date;
+            const end = DateHelper.add(date, 6, 'day');
+            return [start, end].map(dropTime);
           }
         }
       ],
@@ -84,10 +82,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             next: 'booking-calendar.next-month'
           },
           getTimeSpan: date => {
-            return [
-              DateHelper.getFirstDateOfMonth(date),
-              DateHelper.getLastDateOfMonth(date)
-            ].map(dropTimezone);
+            const start = date;
+            const end = DateHelper.add(date, 30, 'day');
+            return [start, end].map(dropTime);
           }
         }
       ]
@@ -328,11 +325,11 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       PresetManager.registerPreset('week', {
         tickWidth: 150,
         displayDateFormat: 'MMMM DD, HH:mm',
-        shiftUnit: 'week',
-        shiftIncrement: 1,
+        shiftUnit: 'day',
+        shiftIncrement: 7,
         timeResolution: {
-          unit: 'week',
-          increment: 1
+          unit: 'day',
+          increment: 7
         },
         headerConfig: {
           top: {
@@ -349,11 +346,11 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       PresetManager.registerPreset('month', {
         tickWidth: 50,
         displayDateFormat: 'MMMM DD, HH:mm',
-        shiftUnit: 'month',
-        shiftIncrement: 1,
+        shiftUnit: 'day',
+        shiftIncrement: 31,
         timeResolution: {
-          unit: 'month',
-          increment: 1
+          unit: 'day',
+          increment: 31
         },
         headerConfig: {
           top: {
