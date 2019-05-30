@@ -751,6 +751,12 @@
     "return_reminder": "Return reminder",
     "request_created": "Request created (SMS)",
     "notifications": "Notifications",
+    "notification-preferences": {
+      "receive-all": "Receive all notifications",
+      "receive-minimal": "Receive minimal notifications",
+      "receive-all-description": "You will receive all transaction related messages, including reminders",
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+    },
     "newsletter-subscribe": "Sí, por favor envíeme el boletín de noticias mensual",
     "newsletter-description": "Deseo suscribirme a la newsletter y formar parte de la comunidad listnride para estar al día de todas las novedades relacionadas al ciclismo, nuevos destinos para ciclistas, eventos y recibir cupones de descuento para mi próximo alquiler.",
     "newsletter": "Newsletter ",

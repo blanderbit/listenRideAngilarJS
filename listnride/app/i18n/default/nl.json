@@ -747,6 +747,12 @@
     "return_reminder": "Herinnering",
     "request_created": "Request created (SMS)",
     "notifications": "Notifications",
+    "notification-preferences": {
+      "receive-all": "Receive all notifications",
+      "receive-minimal": "Receive minimal notifications",
+      "receive-all-description": "You will receive all transaction related messages, including reminders",
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+    },
     "newsletter-subscribe": "Ja, stuur me alsjeblieft de maandelijkse nieuwsbrief",
     "newsletter-description": "Schrijf je in en ontvang onze nieuwsbrief vers in je inbox. Onze nieuwsbrief informeert je over de nieuwste merken, nuttige en nieuwe features op listnride.com, wat er in de community gebeurt, maar ook over reisbestemmingen met fietsen en fietsevenementen. Hebben we al verteld dat dit met veel liefde en toewijding wordt gemaakt? Dat is namelijk zo. Je kunt je natuurlijk op elk moment afmelden.",
     "newsletter": "Newsletter",
