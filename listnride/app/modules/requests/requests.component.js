@@ -318,11 +318,13 @@ angular.module('requests', ['infinite-scroll'])
               updateStatus(STATUSES.CONFIRMED, true);
 
               var bikeData = requests.request;
+              ga('set', 'userId', bikeData.user.id); //set unique userID (riderID)
+
               ga('ecommerce:addTransaction', {
                 'id': bikeData.id,
                 'affiliation': bikeData.lister.id,
                 'revenue': bikeData.total,
-                'tax': '0.19' // vat tax
+                'tax': '0' // vat tax
               });
               ga('ecommerce:addItem', {
                 'id': bikeData.id,
