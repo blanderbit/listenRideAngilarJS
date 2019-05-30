@@ -4,7 +4,7 @@
     "label_new": "Nieuw",
     "booking-calendar": "Boekingskalender",
     "month": "Maand",
-    "id": "ID",
+    "id": "Fiets ID",
     "event-bikes-will-be-soon": "Fietsen voor dit evenement zijn binnenkort beschikbaar",
     "for-count-hours": "voor {{hoursSlot}} uur",
     "rental-date": "Rental date",
@@ -475,6 +475,10 @@
         "meta-title": "Rent and test ride Rossignol bikes. Rossignol bikes are available to rent on listnride.",
         "meta-description": "Test ride a Rossignol bike today! Rossignol bikes are available to rent on listnride. The newest mountain bikes from Rossignol will help you hit the trail. "
       },
+      "yuba": {
+        "meta-title": "Rent and test ride Yuba bikes. Yuba bikes are available to rent on listnride.",
+        "meta-description": "Yuba Cargo Bicycles are cargo Utility bikes for carrying 1 to 3 kids by bike. A Perfect solution for carrying cargo and doing deliveries. Yuba bikes are available to rent and test ride on listnride."
+      },
       "cowboybikes": {
         "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
         "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
@@ -698,6 +702,11 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
+    "profile-verified": "Congratulations, your profile was successfully verified!",
+    "profile-updated": "Successfully updated description",
+    "error-upload-profile-picture": "Error while uploading profile picture",
+    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
+    "phone-verified": "Successfully verified phone number.",
     "cluster-deleted": "Fietskluster succesvol verwijderd",
     "cluster-unmerged": "Fietscluster is succesvol ontkoppelt",
     "cluster-merged": "Fietsen zijn succesvol samengevoegd in cluster",
@@ -730,6 +739,20 @@
   },
   "settings": {
     "settings": "Instellingen",
+    "accept_request_reminder": {
+      "subscribe": "Accept request reminder"
+    },
+    "booking_overview_lister": "Boekingsoverzicht verhuurder",
+    "confirm_return": "Bevestig teruggave",
+    "return_reminder": "Herinnering",
+    "request_created": "Request created (SMS)",
+    "notifications": "Notifications",
+    "notification-preferences": {
+      "receive-all": "Receive all notifications",
+      "receive-minimal": "Receive minimal notifications",
+      "receive-all-description": "You will receive all transaction related messages, including reminders",
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+    },
     "newsletter-subscribe": "Ja, stuur me alsjeblieft de maandelijkse nieuwsbrief",
     "newsletter-description": "Schrijf je in en ontvang onze nieuwsbrief vers in je inbox. Onze nieuwsbrief informeert je over de nieuwste merken, nuttige en nieuwe features op listnride.com, wat er in de community gebeurt, maar ook over reisbestemmingen met fietsen en fietsevenementen. Hebben we al verteld dat dit met veel liefde en toewijding wordt gemaakt? Dat is namelijk zo. Je kunt je natuurlijk op elk moment afmelden.",
     "newsletter": "Newsletter",
@@ -903,6 +926,7 @@
   },
   "message": {
     "accept": "Accepteren",
+    "go-to-calendar": "Go to Calendar",
     "reject": "afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",
@@ -1515,6 +1539,8 @@
     "previous-week": "Previous week",
     "next-week": "Next week",
     "filter-by-requests": "With requests only",
-    "no-bikes-to-display": "No bikes to display"
+    "no-bikes-to-display": "No bikes to display",
+    "any-location": "Any location",
+    "bike-variants": "Bike Variants"
   }
 }

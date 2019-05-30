@@ -4,7 +4,7 @@
     "label_new": "Neu",
     "booking-calendar": "Buchungskalender",
     "month": "Monat",
-    "id": "ID",
+    "id": "Rad Nr.",
     "event-bikes-will-be-soon": "Fahrräder für diese Veranstaltung werden in Kürze verfügbar sein",
     "for-count-hours": "für {{hoursSlot}} Stunden",
     "rental-date": "Rental date",
@@ -109,7 +109,7 @@
     "subtotal": "Zwischensumme",
     "lnr-fee": "Servicegebühren",
     "total": "Insgesamt",
-    "from": "Von",
+    "from": "Vom",
     "from2": "ab",
     "to": "Bis",
     "as": "Als",
@@ -235,7 +235,7 @@
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren ",
       "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Eschborn</b>  |  Wann: <b>In Kassel</b> 1.6. - 31.08. 2019",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
-      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-title": "E-Bikes einfach kostenlos Probefahren",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
       "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "meta-description": "esten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
@@ -244,7 +244,7 @@
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Kassel</b>  |  Wann: <b>In Kassel 1.6. - 31.08. 2019</b>",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
-      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-title": "E-Bikes einfach kostenlos Probefahren",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
       "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
@@ -253,7 +253,7 @@
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "description": "Was:  <b>Radfahren neu entdecken</b>  |  Wo: <b>In Hofheim</b>  |  Wann: <b>1.6. - 31.08. 2019</b>",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
-      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-title": "E-Bikes einfach kostenlos Probefahren",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
       "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
       "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
@@ -264,7 +264,7 @@
     },
     "8bar-clubride": {
       "meta-title": "Miete ein Rennrad für die 8bar Clubride",
-      "meta-description": "Nehme teil an unserer wöchentlichen Clubride und teste eines der neuesten 8bar Rennräder kostenlos. Einfach online buchen und im Showroom abholen",
+      "meta-description": "Nimm an unserer 8bar Clubride teil und fahre ein 8bar Rad zur Probe.\nFür einen Preis von 8,-- EUR kannst du das Rad während des Clubrides Probe fahren und bekommst noch eine gefüllte 8bar Fahrradflasche umsonst dazu",
       "calendar-title": "Testräder für die 8bar Clubride",
       "calendar-subtitle": "Buche ein kostenloses 8bar bike für unser Club Ride"
     },
@@ -479,6 +479,10 @@
       "rossignol": {
         "meta-title": "Rent and test ride Rossignol bikes. Rossignol bikes are available to rent on listnride.",
         "meta-description": "Test ride a Rossignol bike today! Rossignol bikes are available to rent on listnride. The newest mountain bikes from Rossignol will help you hit the trail. "
+      },
+      "yuba": {
+        "meta-title": "Yuba: Ein vielseitiges Utility Bike. Teste Yuba Bikes bei listnride.",
+        "meta-description": "Yuba - das Lastenrad mit dem großem Gepäckträger. Kaufe das perfekte Fahrrad für deine Familie: für bis zu 3 Kinder, schmal & wendig, vielseitig. Miete und teste Yuba Bikes bei listnride."
       },
       "cowboybikes": {
         "meta-title": "Miete und teste Cowboy Bikes noch heute! Cowboy - Das Elektrofahrrad für Stadtfahrer.",
@@ -703,6 +707,11 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
+    "profile-verified": "Congratulations, your profile was successfully verified!",
+    "profile-updated": "Successfully updated description",
+    "error-upload-profile-picture": "Error while uploading profile picture",
+    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
+    "phone-verified": "Successfully verified phone number.",
     "cluster-deleted": "Zusammengehörige Bikes erfolgreich gelöscht",
     "cluster-unmerged": "Bike-Cluster erfolgreich aufgehoben",
     "cluster-merged": "Bikes erfolgreich in Cluster zusammengeführt",
@@ -735,6 +744,20 @@
   },
   "settings": {
     "settings": "Einstellungen",
+    "accept_request_reminder": {
+      "subscribe": "Accept request reminder"
+    },
+    "booking_overview_lister": "Buchungsübersicht Vermieter",
+    "confirm_return": "Rückgabe bestätigen",
+    "return_reminder": "Return reminder",
+    "request_created": "Request created (SMS)",
+    "notifications": "Notifications",
+    "notification-preferences": {
+      "receive-all": "Receive all notifications",
+      "receive-minimal": "Receive minimal notifications",
+      "receive-all-description": "You will receive all transaction related messages, including reminders",
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+    },
     "newsletter-subscribe": "Ja, bitte sendet mir den monatlichen listnride-Newsletter",
     "newsletter-description": "Abonniere unseren Newsletter und erhalte jede Ausgabe frisch in deinen Posteingang. Unser Newsletter informiert dich über die neuesten Marken, nützliche und neue Funktionen auf listnride.de, was in der Community passiert, sowie über Reiseziele mit gelisteten Fahrrädern und natürlich jede menge Fahrrad-Events.\nHaben wir schon erwähnt, dass der Newsletter mit viel Liebe und Hingabe gefertigt wird? Wird er.\nDu kannst den Newsletter natürlich jederzeit abbestellen.",
     "newsletter": "Newsletter",
@@ -911,8 +934,9 @@
   },
   "message": {
     "accept": "Akzeptieren",
+    "go-to-calendar": "Go to Calendar",
     "reject": "Ablehnen",
-    "rate": "Bewerte",
+    "rate": "Bewertung",
     "confirm": "Bestätigen",
     "confirm_return": "Rückgabe bestätigen",
     "documents-title": "Versicherungszertifikate",
@@ -921,18 +945,18 @@
     "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} von {{user.city}} möchten dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten <br><br>Bike ID: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>. Bitte klicke auf akzeptieren um die Buchung anzunehmen und vereinbare weitere Details in dem Chat unten. Wenn die Buchung nicht möglich ist bitte ablehnen.",
+    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} möchte dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten. <br><br>Rad Nr.: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>. Bitte klicke auf Akzeptieren um die Buchung anzunehmen oder auf Ablehnen, wenn eine Vermietung nicht möglich ist. Weitere Fragen kannst Du mit dem Vermieter im Chat klären.",
     "11": "Die Buchung wurde storniert.",
-    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon-Nummer: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
+    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Leider hat {{user.first_name}} die Anfrage nicht bestätigt.",
     "10": "Ihre Buchung wurde vom System storniert"
   },
   "rideChat": {
-    "1": "Du hast das <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{lister.display_name}} für {{timespan}} angefordert. Du kannst unten mit {{lister.display_name}} chatten. Erst wenn deine Anfrage akzeptiert wird, erfolgt die Zahlung und ist das Fahrrad gebucht.",
+    "1": "Du hast das <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{lister.display_name}} für {{timespan}} angefragt. Du kannst jetzt mit {{lister.display_name}} im Chat noch offene Fragen klären. Eine zahlungspflichtige Buchung des Rads erfolgt erst nach Bestätigung deiner Anfrage durch den Vermieter. ",
     "11": "Die Buchung deines Leihrades wurde storniert.",
-    "3": "Glückwunsch, {{lister.first_name}} hat die Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Verleiher um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon-Nummer: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
+    "3": "Glückwunsch, {{lister.first_name}} hat deine Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Vermieter um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hattest du eine großartige Erfahrung mit dem Fahrrad von {{lister.first_name}}? Teile uns deine Ihre Erfahrungen, indem Du eine kurze Bewertung hinterlast. Dies hilft zukünftigen Radfahrern, besser zu verstehen, was zu erwarten ist.",
     "7": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
@@ -1526,6 +1550,8 @@
     "previous-week": "Previous week",
     "next-week": "Next week",
     "filter-by-requests": "With requests only",
-    "no-bikes-to-display": "No bikes to display"
+    "no-bikes-to-display": "No bikes to display",
+    "any-location": "Any location",
+    "bike-variants": "Bike Variants"
   }
 }

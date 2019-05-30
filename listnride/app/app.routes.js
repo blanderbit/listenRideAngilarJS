@@ -217,6 +217,7 @@
         url: '/requests/?requestId',
         reloadOnSearch: false,
         params: {
+          hideCoview: true,
           hideFooter: true,
           requestId: {
             squash: true,
@@ -227,6 +228,7 @@
         resolve: {
           data: function (ngMeta) {
             ngMeta.setTag("noindex", true);
+            coview('hideChatButton');
           }
         },
         meta: {
@@ -1612,6 +1614,25 @@
               .then(function (translations) {
                 ngMeta.setTitle(translations["meta.brand-integration.rossignol.meta-title"]);
                 ngMeta.setTag("description", translations["meta.brand-integration.rossignol.meta-description"]);
+                ngMeta.setTag("noindex", false);
+              })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
+      $stateProvider.state({
+        name: 'yuba',
+        url: '/brands/yuba',
+        template: '<yuba></yuba>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.yuba.meta-title", "meta.brand-integration.yuba.meta-description"])
+              .then(function (translations) {
+                ngMeta.setTitle(translations["meta.brand-integration.yuba.meta-title"]);
+                ngMeta.setTag("description", translations["meta.brand-integration.yuba.meta-description"]);
                 ngMeta.setTag("noindex", false);
               })
           }

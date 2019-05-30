@@ -390,7 +390,7 @@
     "8bar-clubride": {
       "title": "Join our 8bar Clubride and ride a test bike for free!",
       "description": "What: <b>8bar Club Ride</b> | When: <b>Every Tuesday, from April 9</b> | Where: <b>8bar Showroom</b>",
-      "text": "When you’re part of our community you will always find someone to ride with. During the summer, you can ride our weekly club rides every Tuesday evening from the 8bar showroom Berlin, or at our “member only” rides or events. Beside the fact that you’ll be saving on application fees to any 8bar-hosted or -sponsored cycling event, you can get a special discount on all 8bar products. And last but not least, every year you’ll get a fresh new cycling kit."
+      "text": "The 8bar Clubride is a weekly road bike ride of about 60-80km. \nThe cruising speed is about 27-33km/h.\n\nIf you rent an 8bar bike you should be at the showroom by 17:45h at the latest, otherwise your reservation expires and we will rent the bike otherwise."
     },
     "granfondo-bikedivision": {
       "title": "Rent your road bike the Granfondo Bike Division",
@@ -617,12 +617,24 @@
       "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
       "item1-title": "Design",
       "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
-      "item2-title": "E Track",
+      "item2-title": "E-Track",
       "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E-Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E-Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
       "item3-title": "Another Best Day",
       "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
       "find-out-more": "Learn more about Rossignol bikes",
-      "order-online": "Visit the List and Ride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the whole range of Rossignol bikes. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, contact@listnride.com\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailtto:contact@listnride.com\">contact@listnride.com</a>"
+      "order-online": "Visit the List and Ride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"https://www.rossignol.com/int-en/rossignol-bike/rossignol-rike-mountain-bikes.html\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailtto:contact@listnride.com\">contact@listnride.com</a>"
+    },
+    "yuba": {
+      "title": "Rent and test ride Yuba bikes. Yuba bikes are available to rent on listnride.",
+      "description": "Yuba Electric Cargo Bicycles are cargo utility bikes for carrying 1 to 3 kids by bike. Perfect solution for carrying cargo and doing deliveries. The special thing about a Yuba is on the one hand its extra long luggage carrier on which there is enough space for up to two child seats or three children. On the other hand, there are the storage areas on the side of the frame. Despite a maximum payload of up to 200 kg, the Yubas are dynamic and easy to steer. You hardly notice the difference to a normal bike!",
+      "item1-title": "Compact",
+      "item1-description": "All Yuba models are only as big as necessary. This makes them agile, easy to drive and space-saving to park.",
+      "item2-title": "All-round",
+      "item2-description": "From the wide range of accessories you can choose the right extension for the transport of people and loads.",
+      "item3-title": "Fun",
+      "item3-description": "Yuba bikes are so much fun so that after a short time you will also use it as an everyday bike as well as a leisure and excursion bike!",
+      "find-out-more": "Learn more about Yuba bikes",
+      "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Yuba bike. Here you can find the <a href=\"https://www.yubaeurope.com/\" target=\"_blank\">whole range of Yuba bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49 030 120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "urwahn": {
       "title": "MadewithLove #Germany #SteelisReal",
@@ -1214,7 +1226,7 @@
         "question-13": "How do I delete my bike listing?",
         "answer-13": "In case you no longer can or want to offer a certain bike for rent, you can delete it by going to “Listed rides” in the account menu. If you’re using our iPhone app, swipe the bike you would like to delete to the left and click “delete”. If you’re using our website, select “Delete ride.” After a few seconds, you’ll see a confirmation message that says “Bike successfully deleted.”",
         "question-14": "How do I rent out my bike through listnride?",
-        "answer-14": "Once you receive a request for your bike, open the app or go to our website and log into your account. Click on your account page in the top right corner and click on “Request to me” in the account menu. Here you will see the request that has been sent to you. Click on the request and reply to the requester by either accepting or rejecting the request. You can also chat with the requester at the same time to clarify any details. Once you accept the request, the other person needs to confirm his/her request and pay in advance. As soon as the confirmation and payment are complete, you will receive a notification via e-mail as well as a status update in your account.",
+        "answer-14": "Once you receive a request for your bike, go to our website and log into your account. Click on your account page in the top right corner and click on “Request to me” in the account menu. Here you will see the request that has been sent to you. Click on the request and reply to the requester by either accepting or rejecting the request. You can also chat with the requester at the same time to clarify any details. Once you accept the request, the other person needs to confirm his/her request and pay in advance. As soon as the confirmation and payment are complete, you will receive a notification via e-mail as well as a status update in your account.",
         "question-15": "What do I do if the rental period initially requested is not the same as the actual period?",
         "answer-15": "If the final rental period has changed while you are communicating with the requester, it’s wise to ask them for a new request with the correct date and time, so that the rental is covered by the listnride guarantee.",
         "question-16": "What do I do if the requested rental period is inconvenient?",
@@ -1327,7 +1339,7 @@
     "control": {
       "logo": "insert logo here",
       "header": "Your data in good hands",
-      "description": "Your address and the location of your bike are not publicly visible. Only after a booking is confirmed, contact details of both sides are shared."
+      "description": "Your address and the location of your bike are not publicly visible. The contact details are only shared after a booking is confirmed."
     },
     "safe": {
       "logo": "insert logo here",
