@@ -1,4 +1,5 @@
 'use strict';
+import MarkerClusterer from '@google/markerclustererplus';
 
 angular.module('brands', []).component('brands', {
   templateUrl: 'app/modules/brands/brands.template.html',

@@ -6,26 +6,34 @@ Production: [`http://listnride.com/`](http://listnride.com/)
 
 Prerequisites
 -------------
-Required software: `angular`, `npm`
+Required software: `npm`
 
 Install
 -----------------
 ```
-git clone https://github.com/listnride/listnride-frontend.git && cd listnride-frontend
-cd listnride
+git clone https://github.com/listnride/listnride-frontend.git && cd listnride-frontend/listnride
 npm install
+```
+
+Create local config
+-------------------
+```
+cp .env.example .env
 ```
 
 Launch
 ------------
 ```
+# start with default settings
 npm start
+
+# or start on another port
+npm start -- --env.PORT=8080
+
+# or start and open browser
+npm start -- --open
 ```
-Or if you don't need console output
-```
-npm start -quite
-```
-Navigate to [http://localhost:8080/#/](http://localhost:8080/#/)
+Navigate to [http://localhost:8080](http://localhost:8080)
 
 
 Branching guide

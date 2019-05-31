@@ -346,6 +346,14 @@ md-menu-content {
   max-height: 300px!important;
 }
 
+md-menu-content.header__menu {
+  /**
+   * in material library default height is 310,
+   * but we need more height in this place for showing log out button without scroll
+  */
+  max-height: 330px!important;
+}
+
 md-card md-card-title {
   padding: 8px;
 }
