@@ -756,7 +756,12 @@
       "receive-all": "Receive all notifications",
       "receive-minimal": "Receive minimal notifications",
       "receive-all-description": "You will receive all transaction related messages, including reminders",
-      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
     },
     "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
     "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
@@ -950,7 +955,7 @@
     "3": "Vous avez accepté la demande. Le vélo est maintenant réservé et vous le louez à partir de {{timespan}}! Les coordonnées sont ci-dessous, nous vous les avons également envoyées par email.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "Vous avez rejeté la demande. Veuillez donner une raison pourquoi vous ne pouvez pas louer le vélo.",
-    "9": "Malheureusement, {{user.first_name}}n'a pas confirmé la demande.",
+    "9": "Malheureusement, la demande a expiré.",
     "10": "Votre réservation a été annulée par le système"
   },
   "rideChat": {
