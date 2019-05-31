@@ -702,6 +702,11 @@
   },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
+    "profile-verified": "Congratulations, your profile was successfully verified!",
+    "profile-updated": "Successfully updated description",
+    "error-upload-profile-picture": "Error while uploading profile picture",
+    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
+    "phone-verified": "Successfully verified phone number.",
     "cluster-deleted": "Le biciclette raggruppate sono state eliminate con successo",
     "cluster-unmerged": "Raggruppamento bici rimosso con successo",
     "cluster-merged": "Bici raggruppate con successo ",
@@ -734,6 +739,25 @@
   },
   "settings": {
     "settings": "Impostazioni",
+    "accept_request_reminder": {
+      "subscribe": "Accept request reminder"
+    },
+    "booking_overview_lister": "Booking overview lister",
+    "confirm_return": "Confirm return",
+    "return_reminder": "Return reminder",
+    "request_created": "Request created (SMS)",
+    "notifications": "Notifications",
+    "notification-preferences": {
+      "receive-all": "Receive all notifications",
+      "receive-minimal": "Receive minimal notifications",
+      "receive-all-description": "You will receive all transaction related messages, including reminders",
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
+    },
     "newsletter-subscribe": "Sì, per favore inviami la newsletter mensile di listnride",
     "newsletter-description": "Iscriviti e ricevi la nostra newsletter  nella tua casella di posta. La nostra newsletter ti informa sui nuovi marchi, sulle nuove e utili funzioni su listnride.it, su ciò che accade nella community, sulle destinazioni di viaggio con biciclette presenti in piattaforma e gli eventi ciclistici.\nAbbiamo detto che è realizzata con molto amore e dedizione? Perchè lo è.\nPuoi disiscriverti in qualsiasi momento, ovviamente.",
     "newsletter": "Newsletter",
@@ -925,7 +949,7 @@
     "3": "Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
-    "9": "Purtroppo {{user.first_name}} non ha confermato la richiesta",
+    "9": "Sfortunatamente, la richiesta è scaduta.",
     "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
@@ -1527,6 +1551,7 @@
     "next-week": "Next week",
     "filter-by-requests": "With requests only",
     "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location"
+    "any-location": "Any location",
+    "bike-variants": "Bike Variants"
   }
 }

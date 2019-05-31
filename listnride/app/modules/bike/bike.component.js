@@ -32,6 +32,11 @@ angular.module('bike',[]).component('bike', {
 
         // invocations
         getBikeData();
+
+        if($mdMedia('xs')) {
+          coview('hideChatButton');
+          $state.params.hideCoview = true;
+        }
       }
 
 

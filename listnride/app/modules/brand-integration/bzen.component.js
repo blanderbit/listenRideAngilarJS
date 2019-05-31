@@ -22,6 +22,7 @@ angular.module('bzenIntegration', []).component('bzen', {
           'app/assets/ui_images/brand-integration/bzen/lnr_bzen_hero_image_01.jpg',
           'app/assets/ui_images/brand-integration/bzen/lnr_bzen_hero_image_02.jpg',
           'app/assets/ui_images/brand-integration/bzen/lnr_bzen_hero_image_03.jpg',
+          'app/assets/ui_images/brand-integration/bzen/lnr_bzen_hero_image_04.jpg'
         ];
 
         bzen.faqs = [{

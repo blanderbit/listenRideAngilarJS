@@ -167,8 +167,12 @@ function gaOptout() {
     m.parentNode.insertBefore(a, m)
   })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
   ga('create', '<%= LNR_API_KEY_GOOGLE_ANALYTICS %>', 'auto');
+  ga(function(tracker) {
+  var clientId = tracker.get('clientId');
+  });
   ga('set', 'anonymizeIp', true);
   ga('require', 'ecommerce');
+  ga('send', 'pageview');
 </script>
 
 <!--Coview implementation -->

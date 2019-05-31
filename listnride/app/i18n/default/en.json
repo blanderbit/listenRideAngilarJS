@@ -710,6 +710,11 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "profile-verified": "Congratulations, your profile was successfully verified!",
+    "profile-updated": "Successfully updated description",
+    "error-upload-profile-picture": "Error while uploading profile picture",
+    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
+    "phone-verified": "Successfully verified phone number.",
     "cluster-deleted": "Bike cluster successfully deleted",
     "cluster-unmerged": "Bike cluster successfully unmerged",
     "cluster-merged": "Bikes successfully merged into cluster",
@@ -742,6 +747,25 @@
   },
   "settings": {
     "settings": "Settings",
+    "accept_request_reminder": {
+      "subscribe": "Reminder notifications"
+    },
+    "booking_overview_lister": "Booking overview Info",
+    "confirm_return": "Confirm return messages",
+    "return_reminder": "Return reminder messages",
+    "request_created": "Booking related SMS",
+    "notifications": "Notifications",
+    "notification-preferences": {
+      "receive-all": "Receive all notifications",
+      "receive-minimal": "Receive minimal notifications",
+      "receive-all-description": "You will receive all transaction related messages, including reminders",
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
+    },
     "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
     "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
     "newsletter": "Newsletter",
@@ -934,7 +958,7 @@
     "3": "You've accepted the request and so the bike is booked. You'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}} </a> ",
     "5": "Thanks for confirming the return of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "You've rejected the booking request. Please tell the rider why you can't rent him the bike.",
-    "9": "Unfortunately {{user.first_name}} didn't confirm the request",
+    "9": "Unfortunately, the request expired.",
     "10": "Your booking was cancelled by the system"
   },
   "rideChat": {
@@ -1145,7 +1169,7 @@
     },
     "pictures": {
       "header": "Upload some pictures of your bike",
-      "hint": "Now select some nice pictures of your bike. Here is a guide on how to make your listing look even better.",
+      "hint": "Now select some nice pictures of your bike. Below is a guide on how to make your listing look even better.",
       "how-to": "Photo tips for making your listing stand out",
       "label": "Pictures",
       "select-images": "Select images",
@@ -1536,6 +1560,7 @@
     "next-week": "Next week",
     "filter-by-requests": "With requests only",
     "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location"
+    "any-location": "Any location",
+    "bike-variants": "Bike Variants"
   }
 }

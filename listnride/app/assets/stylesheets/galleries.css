@@ -552,6 +552,17 @@ cocomat .cb-slideshow li:nth-child(4) span {
 }
 
 /*---------------------------------------------------------*/
+/* YUBA
+/*---------------------------------------------------------*/
+
+yuba .cb-slideshow li span {
+  -webkit-animation-duration: 25s;
+  -moz-animation-duration: 25s;
+  -o-animation-duration: 25s;
+  animation-duration: 25s;
+}
+
+/*---------------------------------------------------------*/
 /* cb-slideshow for Brand Pages
 /* set backgound-image via inline style in template
 /*---------------------------------------------------------*/
