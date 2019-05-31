@@ -251,16 +251,16 @@
           <div class="lnr-mh-x2">
             <p class="lnr-m-0" ng-show="settingsAccount.parent.isChecked">{{ 'settings.notification-preferences.receive-all-description' | translate }}</p>
             <p class="lnr-m-0" ng-show="!settingsAccount.parent.isChecked">{{ 'settings.notification-preferences.receive-minimal-description' | translate }}</p>
-            <!--<span class="lnr-color-primary lnr-link" ng-show="!settings.detailsShown" ng-click="settings.detailsShown = true">show details</span>-->
+            <span class="lnr-color-primary lnr-link" ng-show="!settings.detailsShown" ng-click="settings.detailsShown = true">show details</span>
           </div>
 
-          <!--<ul class="lnr-list-no-style lnr-m-0 lnr-p-0" ng-show="settings.detailsShown" layout="row" flex-gt-xs="80" layout-wrap>
-            <li ng-repeat="item in settingsAccount.parent.user.notification_preference" flex="50" flex-xs="100">
-              <md-icon class="lnr-icon-check" ng-show="settings.isChecked"></md-icon>
-              <md-icon class="lnr-icon-close" ng-show="!settings.isChecked"></md-icon>
-              <span>{{item}}</span>
+          <ul class="lnr-list-no-style lnr-p-0" ng-show="settings.detailsShown" layout="row" flex-gt-xs="80" layout-wrap>
+            <li ng-repeat="(key, value) in settingsAccount.parent.selectedPreferences" flex="50" flex-xs="100" class="lnr-mt">
+              <md-icon md-font-icon="fa-check fa--lh20" class="fa text-success" ng-show="settingsAccount.parent.isChecked"></md-icon>
+              <md-icon md-font-icon="fa-times fa--lh20" class="fa text-error" ng-show="!settingsAccount.parent.isChecked"></md-icon>
+              <span>{{ 'settings.notification-preferences' + key | translate }}</span>
             </li>
-          </ul>-->
+          </ul>
         </div>
       </div>
 
