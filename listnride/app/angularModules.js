@@ -17,6 +17,7 @@ import './modules/listing-a-bike/listing-a-bike.component.js';
 import './modules/listings/listings.component.js';
 import './modules/renting-a-bike/renting-a-bike.component.js';
 import './modules/requests/requests.component.js';
+import './modules/requests/requests.service.js';
 import './modules/search/search.component.js';
 import './modules/settings/settings.component.js';
 import './modules/listings/views/list-view.component.js';
