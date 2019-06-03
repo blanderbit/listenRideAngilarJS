@@ -4,30 +4,12 @@ angular.module('requests', ['infinite-scroll'])
   .component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage',
-    '$interval',
-    '$filter',
-    '$mdMedia',
-    '$mdDialog',
-    '$window',
-    'api',
-    '$timeout',
-    '$location',
-    '$anchorScroll',
-    '$state',
-    '$stateParams',
-    '$translate',
-    '$mdToast',
-    '$analytics',
-    'date',
-    'accessControl',
-    'payoutHelper',
-    'notification',
+  controller: 
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
       $state, $stateParams, $translate, $mdToast, $analytics, date,
-      accessControl, payoutHelper, notification) {
+      accessControl, payoutHelper, notification, requestsService) {
 
       var requests = this;
       // user should be logged in
@@ -35,20 +17,6 @@ angular.module('requests', ['infinite-scroll'])
 
       // TODO: remove poller
       var poller;
-
-      var STATUSES = {
-        'REQUESTED': 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride
-        'ACCEPTED': 2, // You accepted the Request || Lister accepted your Request CONFIRM / CANCEL
-        'CONFIRMED': 3, // Ride confirmed and will rent ride CONFIRM RETURN || You confirmed and will rent a ride
-        'ONE_SIDE_RATE': 4, // Lister confirmed return || Rider leaves rate
-        'BOTH_SIDES_RATE': 5, // Lister and Rider rates each other || Rental complete
-        'RATE_RIDE': 6, // Rider rated lister || Rental complete # Will be skipped
-        'COMPLETE': 7, // Rental complete
-        'LISTER_CANCELED': 8, // Lister cancelled
-        'RIDER_CANCELED': 9, // Rider cancelled
-        'SYSTEM_CANCELED': 10, // Passed due date
-        'MANUALLY_CANCELED': 11 // Canceled manually by us because of various reasons
-      }
 
       requests.$onInit = function () {
         // variables
@@ -86,8 +54,6 @@ angular.module('requests', ['infinite-scroll'])
         requests.request.glued = false;
         requests.loadingList = true;
         requests.loadingChat = false;
-        requests.request.rideChat;
-        requests.request.chatFlow;
         requests.userId = $localStorage.userId;
         requests.currentPage = 1;
         requests.requestsLeft = false;
@@ -112,7 +78,7 @@ angular.module('requests', ['infinite-scroll'])
 
         // invocates
         getRequests();
-      }
+      };
 
       requests.$onDestroy = function () {
         $interval.cancel(poller);
@@ -140,7 +106,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.loadingList = false;
           }
         );
-      }
+      };
 
       function nextPage () {
         requests.loadingList = true;
@@ -220,7 +186,7 @@ angular.module('requests', ['infinite-scroll'])
       };
 
       function reloadRequest (requestId) {
-        api.get('/requests/' + requestId).then(
+        return api.get('/requests/' + requestId).then(
           function (success) {
             // On initial load
             if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
@@ -280,83 +246,28 @@ angular.module('requests', ['infinite-scroll'])
       }
 
       function updateStatus (statusId, paymentWarning) {
-        var data = {
-          "request": {
-            "status": statusId
-          }
-        };
-
-        api.put("/requests/" + requests.request.id, data).then(
-          function (success) {
-            reloadRequest(requests.request.id);
-          },
-          function (error) {
+        requestsService
+          .updateStatus({ request: requests.request, statusId, paymentWarning })
+          .then(() => {
+            return reloadRequest(requests.request.id);
+          })
+          .catch(() => {
             reloadRequest(requests.request.id);
             requests.loadingChat = false;
-            if (paymentWarning) {
-              $mdDialog.show(
-                $mdDialog.alert(event)
-                  .parent(angular.element(document.body))
-                  .clickOutsideToClose(true)
-                  .title('The bike couldn\'t be booked')
-                  .textContent('Unfortunately, the payment didn\'t succeed, so the bike could not be booked. The rider already got informed and we\'ll get back to you as soon as possible to finish the booking.')
-                  .ok('Okay')
-                  .targetEvent(event)
-              );
-            }
-          }
-        );
+          });
       };
 
       // This function handles request accept and all validations
       function acceptBooking () {
-        api.get('/users/' + $localStorage.userId).then(
-          function (success) {
-            if (validPayoutMethod(success.data)) {
-              // Lister has already a payout method, so simply accept the request
-              requests.loadingChat = true;
-              updateStatus(STATUSES.CONFIRMED, true);
-
-              var bikeData = requests.request;
-              ga('set', 'userId', bikeData.user.id); //set unique userID (riderID)
-
-              ga('ecommerce:addTransaction', {
-                'id': bikeData.id,
-                'affiliation': bikeData.lister.id,
-                'revenue': bikeData.total,
-                'tax': '0' // vat tax
-              });
-              ga('ecommerce:addItem', {
-                'id': bikeData.id,
-                'name': bikeData.ride.brand + ', ' + bikeData.ride.name + ', ' + bikeData.ride.size,
-                'sku': bikeData.ride.id,
-                'category': bikeData.ride.category.name,
-                'price': bikeData.total,
-                'quantity': '1'
-              });
-              ga('ecommerce:send');
-
-              $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Accept'});
-            } else {
-              // Lister has no payout method yet, so show the payout method dialog
-              showPayoutDialog(success.data);
-            }
-          },
-          function (error) {
-
-          }
-        );
+        requests.loadingChat = true;
+        requestsService.acceptBooking({ request: requests.request })
+          .then(() => {
+            return reloadRequest(requests.request.id);
+          })
+          .finally(() => {
+            requests.loadingChat = false;
+          });
       };
-
-      function validPayoutMethod(data) {
-        if (!data.payout_method) return false;
-
-        if (data.payout_method && data.payout_method.payment_type === 'credit-card') {
-          return data.payout_method.iban && data.payout_method.bic && data.payout_method.first_name && data.payout_method.last_name;
-        }
-
-        return true;
-      }
 
       // Sends a new message by directly appending it locally and posting it to the API
       function sendMessage () {
@@ -387,44 +298,7 @@ angular.module('requests', ['infinite-scroll'])
         requests.message = "";
       };
 
-
       // DIALOGS
-      // Payout Dialog
-      function showPayoutDialog(user, event) {
-        $mdDialog.show({
-          locals: {user: user},
-          controller: PayoutDialogController,
-          controllerAs: 'settings',
-          templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          fullscreen: true // Only for -xs, -sm breakpoints.
-        });
-      };
-
-      // TODO: this code is appearing twice, here and in the settings Controller (settings.component.rb)
-      function PayoutDialogController(user) {
-        var payoutDialog = this;
-
-        payoutDialog.user = user;
-        payoutDialog.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-        payoutDialog.addPayoutMethod = function () {
-
-          payoutHelper.postPayout(payoutDialog.payoutMethod.formData, payoutDialog.payoutMethod.payment_type, onSuccessPayoutUpdate);
-
-          function onSuccessPayoutUpdate(data) {
-            requests.loadingChat = true;
-            updateStatus(STATUSES.ACCEPTED, false);
-            hideDialog();
-          }
-
-        };
-      };
-
       // Chat Dialog
       function showChatDialog (event) {
         $mdDialog.show({
@@ -662,5 +536,4 @@ angular.module('requests', ['infinite-scroll'])
         selectDefaultRequest();
       };
     }
-  ]
 });
