@@ -9,10 +9,10 @@ angular.module('booking', [])
     controller: [
       '$q', '$localStorage', '$rootScope', '$scope', '$state', '$stateParams',
       '$timeout', '$analytics', '$translate', '$filter', '$mdDialog', 'authentication',
-      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeOptions', 'bikeCluster', '$mdMedia',
+      'api', 'price', 'voucher', 'calendarHelper', 'notification', 'paymentHelper', 'bikeOptions', 'bikeCluster',
        function BookingController(
         $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-        $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster, $mdMedia) {
+        $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster) {
         var booking = this;
 
         booking.$onInit = function () {
@@ -63,11 +63,6 @@ angular.module('booking', [])
 
           // INVOCATIONS
           getBikeData();
-
-          if($mdMedia('xs')) {
-            coview('hideChatButton');
-            $state.params.hideCoview = true;
-          }
 
           // After material tabs inited
           $timeout(function () {
