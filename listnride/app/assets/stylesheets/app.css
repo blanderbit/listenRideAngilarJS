@@ -3968,6 +3968,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     background-image: url(../ui_images/lnr_hero6_small.jpg);
   }
 
+  booking .booking__body {  /*hide coview by moving booking forward*/
+    z-index: 5;
+  }
+
   /* TYPOGRAPHY */
   .md-display-1 {
     font-size: 24px;
