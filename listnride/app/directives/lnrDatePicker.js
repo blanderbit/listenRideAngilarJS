@@ -196,7 +196,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       if (!(vm.bike && vm.bike.is_cluster)) return true;
 
       var isClusterBikeReserved = true;
-      _.forEach(vm.bikeCluster, function (variant) {
+      _.forEach(vm.bikeCluster.variations, function (variant) {
         isClusterBikeReserved = isClusterBikeReserved && isReservedDate(date, variant.requests)
       });
 
