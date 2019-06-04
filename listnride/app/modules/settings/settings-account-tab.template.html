@@ -240,6 +240,7 @@
               ng-model="settingsAccount.parent.isChecked"
               ng-change="settingsAccount.parent.toggleNotifications()"
               class="lnr-m-0"
+              ng-model-options='{ debounce: 500 }'
             >
             </md-switch>
             <label class="lnr-mv-x2">
