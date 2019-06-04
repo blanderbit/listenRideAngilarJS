@@ -256,7 +256,7 @@
 
           <ul class="lnr-list-no-style lnr-p-0" ng-show="settings.detailsShown" layout="row" flex-gt-xs="80" layout-wrap>
             <li ng-repeat="(key, value) in settingsAccount.parent.selectedPreferences" flex="50" flex-xs="100" class="lnr-mb" layout="row" layout-align="start center">
-              <md-icon md-font-icon="fa-check fa--lh20" ng-class="settingsAccount.parent.isChecked ? 'fa text-success lnr-m-0' : 'fa text-error lnr-m-0'"></md-icon>
+              <md-icon md-font-icon="fa--lh20 lnr-m-0" ng-class="settingsAccount.parent.isChecked ? 'fa text-success fa-check' : 'fa text-error fa-times'"></md-icon>
               <span>{{ 'settings.notification-preferences.' + key | translate }}</span>
             </li>
           </ul>
