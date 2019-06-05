@@ -3,7 +3,7 @@ import moment from 'moment';
 import './bike-event-popup.css';
 
 function badgeRenderer({ eventRecord, translations }) {
-  const { isPending, isAccepted } = eventRecord.originalData;
+  const { isPending, isAccepted } = eventRecord;
 
   let badgeModifiers = '';
   let icon = '';
@@ -27,17 +27,36 @@ function badgeRenderer({ eventRecord, translations }) {
   `;
 }
 
+function bookingConfirmationRenderer({ eventRecord, translations }) {
+  const { isPending } = eventRecord;
+  if (!isPending) {
+    return '';
+  }
+  return `
+    <section class="bike-event-popup__section">
+      <button 
+        type="button"
+        data-id="reject-booking"
+        class="md-button md-raised md-ink-ripple md-warn bike-event-popup__confirmation-button"
+        hide-on-click>
+        ${translations['message.reject']}
+      </button>
+      <button
+        type="button"
+        data-id="accept-booking"
+        class="md-button md-raised md-ink-ripple md-primary bike-event-popup__confirmation-button"
+        hide-on-click>
+        ${translations['message.accept']}
+      </button>
+    </section>
+  `;
+}
+
 function bikeDetailsRenderer({ eventRecord, translations, getters }) {
   const datesFormat = 'DD.MM.YYYY';
   const pickupFormat = 'HH:mm';
   const { name, size, category } = eventRecord.resource;
-  const {
-    startDate,
-    endDate,
-    bookingId,
-    rider,
-    contact
-  } = eventRecord.originalData;
+  const { startDate, endDate, bookingId, rider, contact } = eventRecord;
 
   return `
     <div class="bike-event-popup__name-wrap">
@@ -56,7 +75,7 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
       </div>
       
       <div>
-        <div>${size}</div>
+        <div>${size === 0 ? translations['search.unisize'] : size}</div>
         <div>${moment(startDate).format(datesFormat)} - ${moment(endDate).format(datesFormat)}</div>
         <div>${moment(startDate).format(pickupFormat)}</div>
         <div>${bookingId}</div>
@@ -75,9 +94,12 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
       </div>
     </section>
     
+    ${bookingConfirmationRenderer({ eventRecord, translations })}
+    
     <a 
       class="bike-event-popup__link" 
-      href="${getters.getBookingHref(bookingId)}">
+      href="${getters.getBookingHref(bookingId)}"
+      hide-on-click>
       ${translations['booking-calendar.event.view-booking']}
     </a>
   `;
@@ -100,7 +122,18 @@ function notAvailableEventPopupRenderer({ translations, getters }) {
 }
 
 export function bikeEventPopupRenderer({ eventRecord, translations, getters }) {
-  const { isPending, isAccepted, isNotAvailable } = eventRecord.originalData;
+  const {
+    isPending,
+    isAccepted,
+    isNotAvailable,
+    isChangingStatus,
+    isCluster
+  } = eventRecord;
+
+  if (isChangingStatus || isCluster) {
+    /* do not draw a popup */
+    return;
+  }
 
   if (isPending || isAccepted) {
     return bikeDetailsRenderer({ eventRecord, translations, getters });
@@ -112,6 +145,4 @@ export function bikeEventPopupRenderer({ eventRecord, translations, getters }) {
       getters
     });
   }
-
-  return; /* do not draw a tooltip for clusters */
 }

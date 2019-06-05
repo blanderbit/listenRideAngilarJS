@@ -1,13 +1,8 @@
 import './bike-event.css';
 
 function statusRenderer({ eventRecord, resourceRecord, translations }) {
-  const { isCluster } = resourceRecord.originalData;
-  const {
-    isPending,
-    isAccepted,
-    isNotAvailable,
-    bikesCount
-  } = eventRecord.originalData;
+  const { isCluster } = resourceRecord;
+  const { isPending, isAccepted, isNotAvailable, bikesCount } = eventRecord;
   if (isCluster) {
     return `
       <span class="event-status ellipsis">
@@ -48,9 +43,15 @@ export function bikeEventRenderer({
   tplData,
   translations
 }) {
-  const { name, isCluster } = resourceRecord.originalData;
-  const { isPending, isAccepted, isNotAvailable } = eventRecord.originalData;
+  const { name, isCluster } = resourceRecord;
+  const {
+    isPending,
+    isAccepted,
+    isNotAvailable,
+    isChangingStatus
+  } = eventRecord;
 
+  tplData.cls['changing-status'] = isChangingStatus;
   tplData.cls.pending = isPending;
   tplData.cls.accepted = isAccepted;
   tplData.cls['not-available'] = isNotAvailable;

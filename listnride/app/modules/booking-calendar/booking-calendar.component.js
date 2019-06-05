@@ -26,7 +26,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     $mdMenu,
     $filter,
     accessControl,
-    bookingCalendarService
+    api,
+    bookingCalendarService,
+    requestsService
   ) {
     'use strict';
     const bookingCalendar = this;
@@ -251,7 +253,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       bookingCalendar.scheduler.on({
         eventclick: ({ resourceRecord, eventRecord }) => {
-          $log.debug('Clicked bike event:', eventRecord.originalData);
+          $log.debug('Clicked bike event:', eventRecord);
           // expand bike cluster on cluster event click
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
         },
@@ -261,9 +263,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           ) {
             const bike = clickEvent.record;
             const [request] = bike.requestsWithNewMessages;
-            const event = bookingCalendar.scheduler.eventStore.find(
-              ({ bookingId }) => bookingId === request.bookingId
-            );
+            const event = getSchedulerEventByBookingId(request.bookingId);
             // expand cluster first
             if (!bike.isExpanded(bookingCalendar.scheduler.resourceStore)) {
               bookingCalendar.scheduler.expand(bike);
@@ -281,12 +281,35 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
               focus: true
             });
           }
+        },
+        timeaxischange: () => {
+          // on start/end date change
+          bookingCalendar.filterBikes();
         }
       });
 
-      // on start/end date change
-      bookingCalendar.scheduler.on('timeaxischange', () => {
-        bookingCalendar.filterBikes();
+      bookingCalendar.scheduler.features.eventTooltip.tooltip.on({
+        // Triggered when popup contents are updated
+        innerHtmlUpdate: ({ source }) => {
+          const rejectBtn = source.element.querySelector(
+            'button[data-id="reject-booking"]'
+          );
+          const acceptBtn = source.element.querySelector(
+            'button[data-id="accept-booking"]'
+          );
+          if (rejectBtn || acceptBtn) {
+            // assign listeners to Reject/Accept buttons
+            const bookingId = source.eventRecord.bookingId;
+            rejectBtn.onclick = () => rejectBooking(bookingId);
+            acceptBtn.onclick = () => acceptBooking(bookingId);
+          }
+          // hide popup after click on links or buttons inside
+          source.element.onclick = event => {
+            if (event.target.hasAttribute('hide-on-click')) {
+              source.hide();
+            }
+          };
+        }
       });
 
       bookingCalendar.filterBikes();
@@ -372,6 +395,45 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         true
       );
       return goToDate.isValid() ? goToDate.toDate() : new Date(); // today
+    }
+
+    function getSchedulerEventByBookingId(id) {
+      return bookingCalendar.scheduler.eventStore.find(
+        ({ bookingId }) => bookingId === id
+      );
+    }
+
+    function rejectBooking(bookingId) {
+      const event = getSchedulerEventByBookingId(bookingId);
+      event.set({ isChangingStatus: true });
+      return api
+        .get('/requests/' + bookingId)
+        .then(response => response.data)
+        .then(request => requestsService.rejectBooking({ request }))
+        .then(() => {
+          event.remove();
+        })
+        .catch(() =>
+          event.set({
+            isChangingStatus: false
+          })
+        );
+    }
+
+    function acceptBooking(bookingId) {
+      const event = getSchedulerEventByBookingId(bookingId);
+      event.set({ isChangingStatus: true });
+      return api
+        .get('/requests/' + bookingId)
+        .then(response => response.data)
+        .then(request => requestsService.acceptBooking({ request }))
+        .finally(() =>
+          event.set({
+            isAccepted: true,
+            isPending: false,
+            isChangingStatus: false
+          })
+        );
     }
   }
 });

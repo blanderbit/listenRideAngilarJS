@@ -45,6 +45,8 @@ angular
           'booking-calendar.event.booking-id',
           'booking-calendar.event.rider',
           'booking-calendar.event.contact',
+          'message.reject',
+          'message.accept',
           'booking-calendar.event.view-booking',
           ...bikeOptions.categoriesTranslationKeys()
         ]);
@@ -71,6 +73,7 @@ angular
             category: bike.category,
             imageUrl: bike.image_file,
             size: bike.size,
+            variantIndex: null,
             requestsWithNewMessages: [],
             children: []
           };
@@ -145,7 +148,6 @@ angular
             );
           }
 
-
           // accumulate bike locations
           acc.locations.add(bike.location.en_city);
 
@@ -166,11 +168,13 @@ angular
           bookingId: rawRequest.id,
           startDate: rawRequest.start_date,
           endDate: rawRequest.end_date,
+          bikesCount: null,
           isCluster: false,
           isPending: rawRequest.status === MESSAGE_STATUSES.REQUESTED,
           isAccepted: rawRequest.status !== MESSAGE_STATUSES.REQUESTED, // we show only pending and accepted requests. Canceled requests are filtered out
           isNotAvailable: false,
-          hasNewMessage: !!rawRequest.has_new_message
+          hasNewMessage: !!rawRequest.has_new_message,
+          isChangingStatus: false
         };
 
         if (rawRequest.rider) {
@@ -191,13 +195,16 @@ angular
           if (!last || request.startDate > last.endDate) {
             acc.push({
               resourceId: id,
+              bookingId: null,
               startDate: request.startDate,
               endDate: request.endDate,
               bikesCount: 1,
               isCluster: true,
               isPending: false,
               isAccepted: false,
-              isNotAvailable: false
+              isNotAvailable: false,
+              hasNewMessages: null,
+              isChangingStatus: false
             });
           } else {
             last.bikesCount += 1;
@@ -217,11 +224,15 @@ angular
         }
         acc.push({
           resourceId: id,
+          bookingId: null,
           startDate: DateHelper.format(new Date(start_date), 'YYYY-MM-DD'), // do not specify timezone Z
           duration: duration + 1,
+          bikesCount: null,
           isNotAvailable: true,
           isPending: false,
-          isAccepted: false
+          isAccepted: false,
+          hasNewMessages: null,
+          isChangingStatus: false
         });
         return acc;
       }, []);

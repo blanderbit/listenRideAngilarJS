@@ -1,7 +1,7 @@
 import './bike-column.css';
 
 function newBadgeRenderer({ record, translations }) {
-  const { requestsWithNewMessages } = record.originalData;
+  const { requestsWithNewMessages } = record;
   return requestsWithNewMessages && requestsWithNewMessages.length > 0
     ? `<span 
          data-id="new-messages-badge" 
@@ -12,7 +12,7 @@ function newBadgeRenderer({ record, translations }) {
 }
 
 function bikeMetaInfoRenderer({ record, translations }) {
-  const { id, size, children, isCluster } = record.originalData;
+  const { id, size, children, isCluster } = record;
   let content = '';
 
   const sizeDisplay =
@@ -26,7 +26,7 @@ function bikeMetaInfoRenderer({ record, translations }) {
       <dt>${translations['booking-calendar.bike-variants']}:</dt>
       <dd>${children.length}</dd>
       ${newBadgeRenderer({ record, translations })}
-    `
+    `;
   } else {
     content += `
       <dt>${translations['shared.id']}</dt>
@@ -47,7 +47,7 @@ export function bikeColumnRenderer({ cellElement, record, translations }) {
   cellElement.classList.add('bike-column');
 
   let html = '';
-  const { name, imageUrl, isVariant, variantIndex } = record.originalData;
+  const { name, imageUrl, isVariant, variantIndex } = record;
   if (isVariant) {
     html += `
       <div class="variant-index">${variantIndex}</div>

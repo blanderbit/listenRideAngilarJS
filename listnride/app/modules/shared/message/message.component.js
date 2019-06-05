@@ -141,37 +141,21 @@ angular.module('message',[]).component('message', {
         };
       };
 
-      // TODO: Unfortunately doublecoded in message.component and requests.component
-      message.updateStatus = function(statusId) {
+      message.handleRejectionSubmission = function(promise) {
         message.buttonClicked = true;
-        var data = {
-          "request_id": message.request.id,
-          "sender": $localStorage.userId,
-          "status": statusId,
-          "content": ""
-        };
-
-        message.request.messages.push(data);
-        var data = {
-          "request": {
-            "status": statusId
-          }
-        };
-
-        message.request.status = statusId;
-
-        api.put("/requests/" + message.request.id, data).then(
-          function(success) {
-            if (statusId === message.STATUSES.LISTER_CANCELED) {
-              $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Reject'});
-            }
-          },
-          function(error) {
+        promise
+          .then(({ statusId }) => {
+            message.request.messages.push({
+              request_id: message.request.id,
+              sender: $localStorage.userId,
+              status: statusId,
+              content: ""
+            });
+          })
+          .catch(() => {
             message.buttonClicked = false;
-          }
-        );
+          });
       };
-
     }
   ]
 });

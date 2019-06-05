@@ -6,6 +6,7 @@
   padding: 7px;
   overflow: hidden;
   box-shadow: none !important;
+  user-select: auto;
 }
 
 .bike-event-popup .b-content-element {
@@ -37,6 +38,10 @@
   color: rgb(95,198,147);
 }
 
+.bike-event-popup__confirmation-button {
+  margin: 0;
+}
+
 .bike-event-popup__name-wrap {
   display: flex;
   justify-content: space-between;
@@ -60,7 +65,6 @@
 .bike-event-popup__section > * + * {
   margin-left: 15px;
 }
-
 
 .bike-event-popup__section * {
   line-height: 1.5;

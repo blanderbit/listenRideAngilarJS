@@ -11,13 +11,13 @@ angular
   ) {
     const requestsService = {
       updateStatus({ request, statusId, paymentWarning }) {
-        const data = {
+        const payload = {
           request: {
             status: statusId
           }
         };
 
-        return api.put('/requests/' + request.id, data).catch(error => {
+        return api.put('/requests/' + request.id, payload).catch(error => {
           if (paymentWarning) {
             $mdDialog.show(
               $mdDialog
@@ -36,7 +36,34 @@ angular
         });
       },
 
-      rejectBooking({ request }) {},
+      rejectBooking({ request, clickEvent, options = {} }) {
+        const statusId =
+          request.user.id === $localStorage.userId
+            ? MESSAGE_STATUSES.RIDER_CANCELED
+            : MESSAGE_STATUSES.LISTER_CANCELED;
+
+        const payload = {
+          request: {
+            status: statusId
+          }
+        };
+
+        return requestsService
+          .showRejectConfirmationDialog({
+            clickEvent,
+            options
+          })
+          .then(() => api.put('/requests/' + request.id, payload))
+          .then(() => {
+            if (statusId === MESSAGE_STATUSES.LISTER_CANCELED) {
+              $analytics.eventTrack('Request Received', {
+                category: 'Rent Bike',
+                label: 'Reject'
+              });
+            }
+            return { statusId };
+          });
+      },
 
       // This function handles request accept and all validations
       acceptBooking({ request }) {
@@ -110,6 +137,30 @@ angular
         }
 
         return true;
+      },
+
+      showRejectConfirmationDialog({ clickEvent, options = {} }) {
+        const confirmationOptions = Object.assign(
+          {
+            buttonClass:
+              'message-button md-raised md-warn lnr-m-0 md-button md-ink-ripple'
+          },
+          options,
+          {
+            confirm: $mdDialog.hide,
+            cancel: $mdDialog.cancel
+          }
+        );
+        return $mdDialog.show({
+          templateUrl:
+            'app/modules/shared/confirmation/confirmation.template.html',
+          controller: function($scope) {
+            $scope.confirmation = confirmationOptions;
+          },
+          parent: angular.element(document.body),
+          clickOutsideToClose: true,
+          targetEvent: clickEvent
+        });
       },
 
       showPayoutDialog(user, event) {
