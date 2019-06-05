@@ -1561,6 +1561,8 @@
     "filter-by-requests": "With requests only",
     "no-bikes-to-display": "No bikes to display",
     "any-location": "Any location",
-    "bike-variants": "Bike Variants"
+    "bike-variants": "Bike Variants",
+    "meta-title": "Booking Calendar",
+    "meta-description": "Excellent calendar view for easier request management"
   }
 }
