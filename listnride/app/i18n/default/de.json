@@ -707,11 +707,11 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
-    "profile-verified": "Congratulations, your profile was successfully verified!",
-    "profile-updated": "Successfully updated description",
-    "error-upload-profile-picture": "Error while uploading profile picture",
-    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
-    "phone-verified": "Successfully verified phone number.",
+    "profile-verified": "Glückwunsch, Dein Profil ist nun verifiziert!",
+    "profile-updated": "Die Beschreibung wurde erfolgreich aktualisiert",
+    "error-upload-profile-picture": "Fehler beim Hochladen des Profilbildes",
+    "sms-was-sent": "Eine SMS mit Bestätigungscode wurde dir gerade geschickt.",
+    "phone-verified": "Telefonnummer erfolgreich bestätigt.",
     "cluster-deleted": "Zusammengehörige Bikes erfolgreich gelöscht",
     "cluster-unmerged": "Bike-Cluster erfolgreich aufgehoben",
     "cluster-merged": "Bikes erfolgreich in Cluster zusammengeführt",
@@ -745,7 +745,7 @@
   "settings": {
     "settings": "Einstellungen",
     "accept_request_reminder": {
-      "subscribe": "Accept request reminder"
+      "subscribe": "Erinnerungs-Benachrichtigungen"
     },
     "booking_overview_lister": "Buchungsübersicht Vermieter",
     "confirm_return": "Rückgabe bestätigen",
@@ -950,18 +950,18 @@
     "insurance-bike-assist": "Bike Assist Versicherungsschein"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} möchte dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten. <br><br>Rad Nr.: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>. Bitte klicke auf Akzeptieren um die Buchung anzunehmen oder auf Ablehnen, wenn eine Vermietung nicht möglich ist. Weitere Fragen kannst Du mit dem Vermieter im Chat klären.",
+    "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} möchte dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten. <br><br>Rad Nr.: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>Bitte klicke auf Akzeptieren um die Buchung anzunehmen oder auf Ablehnen, wenn eine Vermietung nicht möglich ist. Weitere Fragen kannst Du mit dem Mieter im Chat klären.",
     "11": "Die Buchung wurde storniert.",
-    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst nun dein Rad vom {{timespan}}! Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
+    "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst Dein Rad vom {{timespan}}! Die Kontaktdaten des Mieters sind wie folgt. Eine Buchungsbestätigung wurde dir per E-Mail gesendet.<br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
     "9": "Die Anfrage ist leider abgelaufen.",
     "10": "Ihre Buchung wurde vom System storniert"
   },
   "rideChat": {
-    "1": "Du hast das <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{lister.display_name}} für {{timespan}} angefragt. Du kannst jetzt mit {{lister.display_name}} im Chat noch offene Fragen klären. Eine zahlungspflichtige Buchung des Rads erfolgt erst nach Bestätigung deiner Anfrage durch den Vermieter. ",
+    "1": "Du hast das <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{lister.display_name}} für {{timespan}} angefragt. Du kannst jetzt im Chat mit {{lister.display_name}} noch offene Fragen klären. Eine zahlungspflichtige Buchung erfolgt erst nach Bestätigung der Anfrage durch den Vermieter. ",
     "11": "Die Buchung deines Leihrades wurde storniert.",
-    "3": "Glückwunsch, {{lister.first_name}} hat deine Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Vermieter um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch via E-Mail zugesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
+    "3": "Glückwunsch, {{lister.first_name}} hat deine Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Vermieter um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch per E-Mail gesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hattest du eine großartige Erfahrung mit dem Fahrrad von {{lister.first_name}}? Teile uns deine Ihre Erfahrungen, indem Du eine kurze Bewertung hinterlast. Dies hilft zukünftigen Radfahrern, besser zu verstehen, was zu erwarten ist.",
     "7": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",
     "8": "Leider hat der Verleiher die Anfrage abgelehnt. Frage einfach ein paar andere schöne Räder an.",
@@ -1110,7 +1110,7 @@
   },
   "list": {
     "edit-bike": "Rad bearbeiten",
-    "half-day-price": "Halbtagespreis",
+    "half-day-price": "1/2 Tag",
     "save-changes": "Speichern",
     "list-your-bike": "Rad einstellen",
     "back": "Zurück",
@@ -1536,29 +1536,29 @@
   },
   "booking-calendar": {
     "event": {
-      "accepted": "Accepted",
-      "request-waiting": "Request waiting",
-      "not-available": "Not available",
+      "accepted": "Akzeptiert",
+      "request-waiting": "Ausstehende Anfrage",
+      "not-available": "Nicht verfügbar",
       "waiting": "Waiting",
-      "not-available-header": "Bike is not available",
-      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
-      "see-settings": "See settings",
-      "date": "Date",
-      "pickup": "Pickup",
-      "booking-id": "Booking ID",
-      "rider": "Rider",
-      "contact": "Contact",
-      "view-booking": "View booking"
+      "not-available-header": "Das Fahrrad ist nicht verfügbar",
+      "not-available-text": "Das Fahrrad ist für diesen Zeitraum nicht verfügbar. Einstellungen der Verfügbarkeit sind unter Fahrradeinstellungen zu ändern.",
+      "see-settings": "Zu Einstellungen",
+      "date": "Datum",
+      "pickup": "Abholung um",
+      "booking-id": "Buchungs-Nr.",
+      "rider": "Mieter",
+      "contact": "Telefonnummer",
+      "view-booking": "Buchung ansehen"
     },
-    "previous-month": "Previous month",
-    "next-month": "Next month",
-    "previous-week": "Previous week",
-    "next-week": "Next week",
-    "filter-by-requests": "With requests only",
-    "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location",
-    "bike-variants": "Bike Variants",
-    "meta-title": "Booking Calendar",
-    "meta-description": "Excellent calendar view for easier request management"
+    "previous-month": "Vormonat",
+    "next-month": "Nächsten Monat",
+    "previous-week": "Vorige Woche",
+    "next-week": "Nächste Woche",
+    "filter-by-requests": "Nur mit Anfragen anzeigen",
+    "no-bikes-to-display": "Keine Fahrräder zum Anzeigen",
+    "any-location": "Alle Standorte",
+    "bike-variants": "Anzahl Fahrräder:",
+    "meta-title": "Buchungskalender",
+    "meta-description": "Kalenderansicht für einfache Buchungs- und Bestandsverwaltung"
   }
 }
