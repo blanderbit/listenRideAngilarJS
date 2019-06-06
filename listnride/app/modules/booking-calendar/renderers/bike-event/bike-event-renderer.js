@@ -4,9 +4,13 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   const { isCluster } = resourceRecord;
   const { isPending, isAccepted, isNotAvailable, bikesCount } = eventRecord;
   if (isCluster) {
+    const bikesLabel =
+      bikesCount === 1
+        ? translations['booking-calendar.bike']
+        : translations['booking-calendar.bikes'];
     return `
       <span class="event-status ellipsis">
-        ${bikesCount} ${translations['seo.bikes']}
+        ${bikesCount} ${bikesLabel}
       </span>
     `;
   }
