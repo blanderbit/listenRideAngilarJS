@@ -406,12 +406,23 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     function rejectBooking(bookingId) {
       const event = getSchedulerEventByBookingId(bookingId);
       event.set({ isChangingStatus: true });
+
       return api
         .get('/requests/' + bookingId)
         .then(response => response.data)
         .then(request => requestsService.rejectBooking({ request }))
         .then(() => {
           event.remove();
+          if (event.clusterEventId) {
+            const clusterEvent = bookingCalendar.scheduler.eventStore.getById(
+              event.clusterEventId
+            );
+            clusterEvent.bikesCount -= 1;
+
+            if (clusterEvent.bikesCount === 0) {
+              clusterEvent.remove();
+            }
+          }
         })
         .catch(() =>
           event.set({

@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get, uniqueId } from 'lodash';
 import { DateHelper } from '../../../js_modules/bryntum-scheduler/scheduler.module.min';
 
 angular
@@ -174,7 +174,8 @@ angular
           isAccepted: rawRequest.status !== MESSAGE_STATUSES.REQUESTED, // we show only pending and accepted requests. Canceled requests are filtered out
           isNotAvailable: false,
           hasNewMessage: !!rawRequest.has_new_message,
-          isChangingStatus: false
+          isChangingStatus: false,
+          clusterEventId: null
         };
 
         if (rawRequest.rider) {
@@ -188,12 +189,15 @@ angular
     }
 
     function parseClusterRequests({ id, requests }) {
+      let clusterEventId;
       return [...requests]
         .sort(sortRequestsByStartDate)
         .reduce((acc, request) => {
           const last = acc[acc.length - 1];
           if (!last || request.startDate > last.endDate) {
+            clusterEventId = uniqueId('cluster-event-');
             acc.push({
+              id: clusterEventId,
               resourceId: id,
               bookingId: null,
               startDate: request.startDate,
@@ -204,12 +208,15 @@ angular
               isAccepted: false,
               isNotAvailable: false,
               hasNewMessages: null,
-              isChangingStatus: false
+              isChangingStatus: false,
+              clusterEventId: null
             });
+            request.clusterEventId = clusterEventId;
           } else {
             last.bikesCount += 1;
             last.endDate =
               request.endDate > last.endDate ? request.endDate : last.endDate;
+            request.clusterEventId = clusterEventId;
           }
 
           return acc;
@@ -232,7 +239,8 @@ angular
           isPending: false,
           isAccepted: false,
           hasNewMessages: null,
-          isChangingStatus: false
+          isChangingStatus: false,
+          clusterEventId: null
         });
         return acc;
       }, []);
