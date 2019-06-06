@@ -126,34 +126,36 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           price: parseInt(originalPrices[0].price),
           start_at: originalPrices[0].start_at
         };
+
         // daily and weekly price updates
-        for (let day = secondDayIndex; day < secondDayIndex + 5; day += 1) {
+        for (let day = secondDayIndex; day < originalPrices.length - 3; day += 1) {
+          let multiple = halfDayPrice ? day : day + 1 ;
           prices[day] = {
             id: originalPrices[day].id,
-            price: Math.round((day + 1) * originalPrices[day].price),
+            price: Math.round(multiple * originalPrices[day].price),
             start_at: originalPrices[day].start_at
           };
         }
 
         // weekly price update
         prices.push({
-          id: originalPrices[secondDayIndex + 5].id,
-          price: Math.round(7 * originalPrices[secondDayIndex + 5].price),
-          start_at: originalPrices[secondDayIndex + 5].start_at
+          id: originalPrices[originalPrices.length - 3].id,
+          price: Math.round(7 * originalPrices[originalPrices.length - 3].price),
+          start_at: originalPrices[originalPrices.length - 3].start_at
         });
 
         // additional day price update
         prices.push({
-          id: originalPrices[secondDayIndex + 6].id,
-          price: Math.round(1 * originalPrices[secondDayIndex + 6].price),
-          start_at: originalPrices[secondDayIndex + 6].start_at
+          id: originalPrices[originalPrices.length - 2].id,
+          price: Math.round(1 * originalPrices[originalPrices.length - 2].price),
+          start_at: originalPrices[originalPrices.length - 2].start_at
         });
 
         // month price update
         prices.push({
-          id: originalPrices[secondDayIndex + 7].id,
-          price: Math.round(28 * originalPrices[secondDayIndex + 7].price),
-          start_at: originalPrices[secondDayIndex + 7].start_at
+          id: originalPrices[originalPrices.length - 1].id,
+          price: Math.round(28 * originalPrices[originalPrices.length - 1].price),
+          start_at: originalPrices[originalPrices.length - 1].start_at
         });
         return prices;
       },
@@ -162,21 +164,27 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       inverseTransformPrices: function (transformedPrices, isListMode) {
         var prices = [];
         var start_at_seconds = [0, 86400, 172800, 259200, 345600, 432000, 518400, 604800, 2419200];
+        const WEEK_START_AT = 518400;
+        const MORE_THAN_8 = 604800;
+        const MORE_THAT_28 = 2419200;
 
-        let halfDayPrice = _.find(transformedPrices, {'start_at': 43200});
+        let halfDayPrice = transformedPrices.length > 9;
 
         let secondDayIndex = halfDayPrice ? 2 : 1;
         if (halfDayPrice) {
+          // add half day start_at to array
+          start_at_seconds.splice(1, 0, 43200);
+
           prices[1] = {
-            id: transformedPrices[1].id,
+            ...(transformedPrices[1].id ? {id: transformedPrices[1].id} : {}),
             price: parseInt(transformedPrices[1].price),
-            start_at: 43200
+            start_at: start_at_seconds[1]
           }
         }
 
         // no change to daily price
         prices[0] = {
-          id: transformedPrices[0].id,
+          ...(transformedPrices[0].id ? {id: transformedPrices[0].id} : {}),
           price: parseInt(transformedPrices[0].price),
           start_at: transformedPrices[0].start_at || start_at_seconds[0]
         };
@@ -184,9 +192,10 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         // listing a bike
         if (isListMode) {
           // daily and weekly price updates
-          for (var day = secondDayIndex; day < secondDayIndex+6; day += 1) {
+          for (var day = secondDayIndex; day < start_at_seconds.length - 2; day += 1) {
+            let divider = halfDayPrice ? day : day+1;
             prices[day] = {
-              price: (transformedPrices[day].price / (day + 1)),
+              price: (transformedPrices[day].price / divider),
               start_at: transformedPrices[day].start_at || start_at_seconds[day]
             };
           }
@@ -194,22 +203,23 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           // additional day price update
           prices.push({
             price: (transformedPrices[secondDayIndex+6].price),
-            start_at: transformedPrices[secondDayIndex+6].start_at || start_at_seconds[7]
+            start_at: transformedPrices[secondDayIndex + 6].start_at || start_at_seconds[start_at_seconds.length - 2]
           });
 
           // month price update
           prices.push({
             price: (transformedPrices[secondDayIndex+7].price / 28),
-            start_at: transformedPrices[secondDayIndex+7].start_at || start_at_seconds[8]
+            start_at: transformedPrices[secondDayIndex + 7].start_at || start_at_seconds[start_at_seconds.length - 1]
           });
         }
         // editing a bike
         else {
           // daily and weekly price updates
-          for (var day = secondDayIndex; day < secondDayIndex+6; day += 1) {
+          for (var day = secondDayIndex; day < start_at_seconds.length - 2; day += 1) {
+            let divider = halfDayPrice ? day : day + 1;
             prices[day] = {
               id: transformedPrices[day].id,
-              price: (transformedPrices[day].price / (day + 1)),
+              price: (transformedPrices[day].price / divider),
               start_at: transformedPrices[day].start_at
             };
           }
