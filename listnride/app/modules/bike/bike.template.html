@@ -46,13 +46,13 @@
         ng-if="!bike.isOnSlotableEvent"
         class="bike__prices"
         layout="row"
-        flex-sm="50"
-        flex-gt-sm="40"
+        flex-sm="45"
+        flex-gt-sm="30"
         layout-align="space-between center"
       >
-        <div class="bike__prices-item" flex="20" layout="column" layout-align="center center">
+        <div ng-if="bike.hasTimeSlots" class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
-            <span class="md-headline">{{ bike.data.prices[0].price / 2 | number : 1 }}€</span>
+            <span class="md-headline">{{ bike.data.prices[1].price | number : 1 }}€</span>
           </div>
           <span class="md-caption">{{ 'list.half-day-price' | translate }}</span>
         </div>
@@ -62,7 +62,7 @@
           </div>
           <span class="md-caption">{{ 'bike.per-day' | translate }}</span>
         </div>
-        <div class="bike__prices-item" flex="20" layout="column" layout-align="center center">
+        <div ng-if="!bike.hasTimeSlots" class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
             <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
             <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
