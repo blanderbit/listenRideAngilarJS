@@ -220,6 +220,7 @@ angular.module('list', ['ngLocale'])
         // form submission for new ride
         function submitNewRide () {
           var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
+
           var ride = {
             "ride": Object.assign({}, list.form, {
               "user_id": $localStorage.userId,
@@ -282,6 +283,7 @@ angular.module('list', ['ngLocale'])
         // form submission for existing ride
         function submitEditedRide() {
           var prices = price.inverseTransformPrices(list.form.prices);
+
           var ride = {
             "ride": Object.assign({}, list.form, {
               "user_id": $localStorage.userId,

@@ -52,7 +52,7 @@
       >
         <div ng-if="bike.hasTimeSlots" class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
-            <span class="md-headline">{{ bike.data.prices[1].price | number : 1 }}€</span>
+            <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
           </div>
           <span class="md-caption">{{ 'list.half-day-price' | translate }}</span>
         </div>
