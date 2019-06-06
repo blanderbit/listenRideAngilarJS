@@ -702,11 +702,11 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
-    "profile-verified": "Congratulations, your profile was successfully verified!",
-    "profile-updated": "Successfully updated description",
-    "error-upload-profile-picture": "Error while uploading profile picture",
-    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
-    "phone-verified": "Successfully verified phone number.",
+    "profile-verified": "Gefeliciteerd, je profiel is nu geverifieerd!",
+    "profile-updated": "Beschrijving is bijgewerkt",
+    "error-upload-profile-picture": "Fout bij uploaden profielfoto",
+    "sms-was-sent": "Een sms met een bevestigingscode is zojuist naar je verzonden.",
+    "phone-verified": "Telefoonnummer is nu geverifieerd.",
     "cluster-deleted": "Fietskluster succesvol verwijderd",
     "cluster-unmerged": "Fietscluster is succesvol ontkoppelt",
     "cluster-merged": "Fietsen zijn succesvol samengevoegd in cluster",
@@ -740,9 +740,9 @@
   "settings": {
     "settings": "Instellingen",
     "accept_request_reminder": {
-      "subscribe": "Accept request reminder"
+      "subscribe": "Herinneringsmeldingen"
     },
-    "booking_overview_lister": "Boekingsoverzicht verhuurder",
+    "booking_overview_lister": "Boeking info ",
     "confirm_return": "Bevestig teruggave",
     "return_reminder": "Herinnering",
     "request_created": "Request created (SMS)",
@@ -1100,7 +1100,7 @@
   },
   "list": {
     "edit-bike": "Fiets bewerken",
-    "half-day-price": "1/2 dagprijs",
+    "half-day-price": "1/2 dag",
     "save-changes": "Opslaan",
     "list-your-bike": "Fiets plaatsen",
     "back": "Terug",
@@ -1525,29 +1525,29 @@
   },
   "booking-calendar": {
     "event": {
-      "accepted": "Accepted",
-      "request-waiting": "Request waiting",
-      "not-available": "Not available",
+      "accepted": "Geaccepteerd",
+      "request-waiting": "Openstaande Aanvraag",
+      "not-available": "Niet Beschikbaar",
       "waiting": "Waiting",
-      "not-available-header": "Bike is not available",
-      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
-      "see-settings": "See settings",
-      "date": "Date",
-      "pickup": "Pickup",
-      "booking-id": "Booking ID",
-      "rider": "Rider",
-      "contact": "Contact",
-      "view-booking": "View booking"
+      "not-available-header": "De fiets is niet beschikbaar",
+      "not-available-text": "De fiets is niet beschikbaar voor deze periode. Je kan de beschikbaarheid onder uw fietsinstellingen wijzigen.",
+      "see-settings": "Ga naar Instellingen",
+      "date": "Datum",
+      "pickup": "Ophalen om",
+      "booking-id": "Boekings-nr.",
+      "rider": "Huurder",
+      "contact": "Telefoonnummer",
+      "view-booking": "Boeking bekijken"
     },
-    "previous-month": "Previous month",
-    "next-month": "Next month",
-    "previous-week": "Previous week",
-    "next-week": "Next week",
-    "filter-by-requests": "With requests only",
-    "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location",
-    "bike-variants": "Bike Variants",
-    "meta-title": "Booking Calendar",
-    "meta-description": "Excellent calendar view for easier request management"
+    "previous-month": "Vorige maand",
+    "next-month": "Volgende maand",
+    "previous-week": "Vorige week",
+    "next-week": "Volgende week",
+    "filter-by-requests": "Alleen met aanvragen weergeven",
+    "no-bikes-to-display": "Geen fietsen om weer te geven",
+    "any-location": "Alle locaties",
+    "bike-variants": "Aantal fietsen:",
+    "meta-title": "Boekingkalender",
+    "meta-description": "Kalenderweergave voor eenvoudig boekingsmanagement en voorraadbeheer"
   }
 }
