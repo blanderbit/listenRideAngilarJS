@@ -1,9 +1,9 @@
 {
   "shared": {
     "learn-more": "En savoir plus",
-    "label_new": "New",
-    "booking-calendar": "Booking Calendar",
-    "month": "Month",
+    "label_new": "Nouveau",
+    "booking-calendar": "Calendrier des réservations",
+    "month": "Mois",
     "id": "ID",
     "event-bikes-will-be-soon": "Les vélos pour cet événement seront bientôt disponibles",
     "for-count-hours": "pour {{hoursSlot}}heures",
@@ -42,7 +42,7 @@
     "please-select": "Veuillez choisir",
     "errors": {
       "email-required": "Veuillez entrer votre adresse email",
-      "three-d-secure-failed": "3D secure authentication failed",
+      "three-d-secure-failed": "Échec de l'authentification sécurisée 3D",
       "payment-cancelled": "Paiement annulé",
       "payment-paypal-error": "Désolé, votre paiement PayPal a échoué",
       "unexpected-payment-type": "Type de paiement non valide",
@@ -230,6 +230,33 @@
       "description": "Quoi: <b>Berlin Triathlon</b> | Où: <b>Berlin</b> | Quand: <b>2 Juin 2019</b>",
       "meta-title": "Louez un vélo de route pour le Triathlon de Berlin 2019 | listnride",
       "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour le Triathlon de Berlin 2019. Choisissez le vélo parfait qui répond à vos besoins."
+    },
+    "radfahren-neu-entdecken-eschborn": {
+      "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "description": "Was: <b>Radfahren neu entdecken</b> |  Where: <b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
+      "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
+      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
+      "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "meta-description": "esten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
+    },
+    "radfahren-neu-entdecken-kassel": {
+      "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "description": "Was: <b>Radfahren neu entdecken</b>  |  Where: <b>In deiner Kommune</b>  |  When: <b>1.9. - 30.11. 2019</b>",
+      "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. September bis zum 30. November 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
+      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
+      "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
+    },
+    "radfahren-neu-entdecken-hofheim": {
+      "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "description": "Was: <b>Radfahren neu entdecken</b>  |  Where: <b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
+      "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.\n",
+      "calendar-title": "E-Bikes einfach um sonst probefahren.",
+      "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
+      "meta-title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
+      "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
     },
     "paris-brest-paris": {
       "meta-title": "Louez un vélo de route pour Paris-Brest-Paris 2019 | listnride",
@@ -449,9 +476,21 @@
         "meta-title": "E-Bike Test Ride Program",
         "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich."
       },
+      "rossignol": {
+        "meta-title": "Rent and test ride Rossignol bikes. Rossignol bikes are available to rent on listnride.",
+        "meta-description": "Test ride a Rossignol bike today! Rossignol bikes are available to rent on listnride. The newest mountain bikes from Rossignol will help you hit the trail. "
+      },
+      "yuba": {
+        "meta-title": "Rent and test ride Yuba bikes. Yuba bikes are available to rent on listnride.",
+        "meta-description": "Yuba Cargo Bicycles are cargo Utility bikes for carrying 1 to 3 kids by bike. A Perfect solution for carrying cargo and doing deliveries. Yuba bikes are available to rent and test ride on listnride."
+      },
       "cowboybikes": {
         "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
         "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
+      },
+      "argon18": {
+        "meta-title": "Rent and test ride Argon 18 road bikes and gravel bikes! World leader in high-end bicycle manufacturing",
+        "meta-description": "In our Berlin Experience Center you can rent and test ride Argon 18 road bikes and gravel bikes! World leader in high-end bicycle manufacturing! Simply book online and visit our showroom for pick-up."
       },
       "urwahn": {
         "meta-title": "Rent and test a Urwahn Stadtfuchs in Munich| listnride",
@@ -668,6 +707,11 @@
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "profile-verified": "Congratulations, your profile was successfully verified!",
+    "profile-updated": "Successfully updated description",
+    "error-upload-profile-picture": "Error while uploading profile picture",
+    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
+    "phone-verified": "Successfully verified phone number.",
     "cluster-deleted": "Bike cluster successfully deleted",
     "cluster-unmerged": "Bike cluster successfully unmerged",
     "cluster-merged": "Bikes successfully merged into cluster",
@@ -700,6 +744,25 @@
   },
   "settings": {
     "settings": "Settings",
+    "accept_request_reminder": {
+      "subscribe": "Accept request reminder"
+    },
+    "booking_overview_lister": "Booking overview lister",
+    "confirm_return": "Confirm return",
+    "return_reminder": "Return reminder",
+    "request_created": "Request created (SMS)",
+    "notifications": "Notifications",
+    "notification-preferences": {
+      "receive-all": "Receive all notifications",
+      "receive-minimal": "Receive minimal notifications",
+      "receive-all-description": "You will receive all transaction related messages, including reminders",
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
+    },
     "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
     "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
     "newsletter": "Newsletter",
@@ -876,6 +939,7 @@
   },
   "message": {
     "accept": "Accept",
+    "go-to-calendar": "Go to Calendar",
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
@@ -891,7 +955,7 @@
     "3": "Vous avez accepté la demande. Le vélo est maintenant réservé et vous le louez à partir de {{timespan}}! Les coordonnées sont ci-dessous, nous vous les avons également envoyées par email.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "Vous avez rejeté la demande. Veuillez donner une raison pourquoi vous ne pouvez pas louer le vélo.",
-    "9": "Malheureusement, {{user.first_name}}n'a pas confirmé la demande.",
+    "9": "Malheureusement, la demande a expiré.",
     "10": "Votre réservation a été annulée par le système"
   },
   "rideChat": {
@@ -900,7 +964,7 @@
     "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Avez-vous eu une bonne expérience avec le vélo de {{lister.first_name}}? Partagez votre expérience en laissant un court commentaire. Cela aidera les futurs cyclistes à mieux comprendre à quoi s'attendre.",
     "7": "Thanks for rating, the rental was successfully completed.",
-    "8": "Unfortunately, the lister could't accept your request. Simply request some other great bikes.",
+    "8": "Unfortunately, the lister couldn't accept your request. Simply request some other great bikes.",
     "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking.",
     "10": "La demande a été annulée."
   },
@@ -1046,7 +1110,7 @@
   },
   "list": {
     "edit-bike": "Edit Bike",
-    "half-day-price": "half day price",
+    "half-day-price": "Tarif demi-journée",
     "save-changes": "Save changes",
     "list-your-bike": "List your bike",
     "back": "Back",
@@ -1436,39 +1500,65 @@
     },
     "insurance-partner": "Insurance Partners",
     "insurance": "Insurance",
-    "company": "Company",
-    "legal": "Legal",
-    "terms-and-conditions": "Terms",
-    "privacy-statement": "Privacy",
+    "company": "Entreprise",
+    "legal": "Juridique",
+    "terms-and-conditions": "Termes",
+    "privacy-statement": "Confidentialité",
     "imprint": "Imprint",
-    "about": "About",
-    "press": "Press",
-    "jobs": "Jobs",
-    "get-the-app": "https://itunes.apple.com/de/app/list-n-ride/id992114091?l=en"
+    "about": "À propos de nous",
+    "press": "Les Médias",
+    "jobs": "Emplois"
   },
   "seo": {
-    "header": "Rent the best bikes in",
-    "header-2": "Rent the best bikes on",
-    "rent-the-best": "Rent the best",
-    "bikes": "bikes",
-    "rent-perfect-bikes-in": "Rent perfect bikes in",
-    "rent-category-bikes-in": "A large choice of rental bikes",
-    "bike-shops-in": "Bike Shops in",
-    "city": "city bikes",
-    "race": "race bikes",
-    "all-terrain": "all terrain bikes",
-    "kids": "kids bikes",
-    "electro": "electric bikes",
-    "special": "special bikes"
+    "header": "Louez un vélo à",
+    "header-2": "Louez un vélo sur",
+    "rent-the-best": "Louez un",
+    "bikes": "vélo",
+    "rent-perfect-bikes-in": "Louez des vélos à",
+    "rent-category-bikes-in": "Un grand choix de vélos de location",
+    "bike-shops-in": "Magasins de vélo à",
+    "city": "vélos de ville",
+    "race": "vélos de course",
+    "all-terrain": "Vélos tout terrain",
+    "kids": "vélos pour enfants",
+    "electro": "vélos électriques",
+    "special": "vélos spéciaux"
   },
   "availability": {
-    "availability": "Availability",
-    "modal-title": "When is your bike not available?",
-    "start-from": "Starting from",
-    "end-at": "Ending",
-    "add-another-date": "Add another date",
+    "availability": "Disponibilité",
+    "modal-title": "Quand votre vélo n'est-il pas disponible?",
+    "start-from": "A partir de",
+    "end-at": "Jusqu'a",
+    "add-another-date": "Ajouter une autre date",
     "submit-btn": "Ok",
-    "submit-btn-save": "Save",
-    "choose-range": "Choose your date range"
+    "submit-btn-save": "Sauvegarder",
+    "choose-range": "Choisissez votre période"
+  },
+  "booking-calendar": {
+    "event": {
+      "accepted": "Accepté",
+      "request-waiting": "Request waiting",
+      "not-available": "Not available",
+      "waiting": "Waiting",
+      "not-available-header": "Bike is not available",
+      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
+      "see-settings": "See settings",
+      "date": "Date",
+      "pickup": "Pickup",
+      "booking-id": "Booking ID",
+      "rider": "Rider",
+      "contact": "Contact",
+      "view-booking": "View booking"
+    },
+    "previous-month": "Previous month",
+    "next-month": "Next month",
+    "previous-week": "Previous week",
+    "next-week": "Next week",
+    "filter-by-requests": "With requests only",
+    "no-bikes-to-display": "No bikes to display",
+    "any-location": "Any location",
+    "bike-variants": "Bike Variants",
+    "meta-title": "Booking Calendar",
+    "meta-description": "Excellent calendar view for easier request management"
   }
 }

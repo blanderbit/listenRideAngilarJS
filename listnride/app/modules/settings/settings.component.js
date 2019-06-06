@@ -92,6 +92,7 @@ angular.module('settings',[])
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
         settings.updateNewsletter = updateNewsletter;
+        settings.toggleNotifications = toggleNotifications;
 
         // invocations
         userApi.getUserData().then(function (response) {
@@ -104,6 +105,11 @@ angular.module('settings',[])
 
       function setUserData(data) {
         settings.user = data;
+
+        settings.selectedPreferences = _.omit(settings.user.notification_preference, ['id', 'newsletter']);
+        settings.isChecked = _.valuesIn(settings.selectedPreferences).every(function (item) {
+          return item === true;
+        });
 
         // payment method exist
         if (settings.user.payment_method) {
@@ -567,6 +573,28 @@ angular.module('settings',[])
           'notification_preference': {
             'newsletter': settings.user.notification_preference.newsletter
           }
+        };
+
+        api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(
+          function (success) {
+            notification.show(success, null, 'toasts.update-profile-success');
+          },
+          function (error) {
+            notification.show(error, 'error');
+          }
+        );
+      }
+
+      function toggleNotifications() {
+        var preferences = settings.user.notification_preference;
+        for (var key in preferences) {
+          if(key !== 'id' && key !== 'newsletter') {
+            preferences[key] = settings.isChecked;
+          }
+        }
+
+        var data = {
+          'notification_preference': settings.user.notification_preference
         };
 
         api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(

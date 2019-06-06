@@ -33,11 +33,11 @@ angular.module('listnride', [
   'accessoriesFilter',
   'creditCardInput',
   'statusLabels',
+  'bookingCalendar',
   'paypalCheckoutButton',
   /* app_core_end */
 
   /* app_extras_start */
-  //removeIf(shop)
   'home',
   'seoGrid',
   'search',
@@ -57,6 +57,7 @@ angular.module('listnride', [
   'cardgrid',
   'privacyBar',
   'faq',
+  'bookingCalendar',
   'brands',
   /* BRANDS_PAGE */
   'ampler-integration',
@@ -80,6 +81,9 @@ angular.module('listnride', [
   'bzenIntegration',
   'urwahnIntegration',
   'cowboybikesIntegration',
+  'argon18Integration',
+  'rossignolIntegration',
+  'yubaIntegration',
   /* EVENTS_PAGE */
   'event',
   'capeArgus',
@@ -95,7 +99,6 @@ angular.module('listnride', [
   'supercrossMunich',
   'velosoph',
   'coffeespin',
-  //endRemoveIf(shop)
   /* app_extras_end */
 
   /* external_modules_start */
@@ -130,7 +133,7 @@ angular.module('listnride', [
     $compileProvider.debugInfoEnabled(false);
 
     ezfbProvider.setInitParams({
-      appId: '895499350535682',
+      appId: ENV.facebookPlatformKey,
       // Module default is `v2.6`.
       // If you want to use Facebook platform `v2.3`, you'll have to add the following parameter.
       // https://developers.facebook.com/docs/javascript/reference/FB.init
@@ -201,7 +204,7 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTag('og:image', 'http://www.listnride.com/app/assets/ui_images/opengraph/lnr_standard.jpg');
   }
 ])
-.run(['$translate', 'ngMeta', '$rootScope', '$location', 'authentication', 'api', function($translate, ngMeta, $rootScope, $location, authentication, api) {
+.run(['$translate', 'ngMeta', '$rootScope', '$location', 'authentication', 'api', '$state', function($translate, ngMeta, $rootScope, $location, authentication, api, $state) {
   // load partial translations based on the language selected
   $rootScope.$on('$translatePartialLoaderStructureChanged', function () {
     $translate.refresh();
@@ -224,6 +227,6 @@ angular.module('listnride', [
   // on route change we ask if users token is still valid
   $rootScope.$on("$locationChangeStart", function (event, next, current) {
     authentication.checkTokenExpiration();
+    $state.params.hideCoview ? coview('hideChatButton') : coview('showChatButton');
   });
-
 }]);

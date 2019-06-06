@@ -1,4 +1,4 @@
-angular.module('list').directive('showAsInteger', function ($filter) {
+angular.module('list').directive('showAsInteger', ['$filter', function ($filter) {
   return {
     terminal: true,
     restrict: 'A',
@@ -44,4 +44,4 @@ angular.module('list').directive('showAsInteger', function ($filter) {
       });
     }
   };
-});
+}]);

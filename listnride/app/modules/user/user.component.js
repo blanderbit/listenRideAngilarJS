@@ -76,7 +76,7 @@ angular.module('user',[]).component('user', {
           user.display_name = setName();
           user.picture = setPicture();
 
-          user.current_payment = response.data.status === 3;
+          user.current_payment = response.data.current_payment;
           if (user.user.rating_lister != 0 && user.user.rating_rider != 0) {
             user.rating = user.rating / 2;
           }

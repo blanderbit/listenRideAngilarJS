@@ -17,13 +17,14 @@
       <p class="md-subhead">{{ 'home.landing-section-subheader' | translate }}</p>
     </div>
 
-    <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
+    <form class="lnr-homepage-search md-whiteframe-3dp lnr-search-bar--fs18" layout="row" layout-xs="column" md-theme="default">
       <!-- search input with autocomplete -->
+      <h2 hide show-xs class="md-subhead lnr-sm-center lnr-mb-x2">Search the bike that is right for you</h2>
       <autocomplete
         autocomplete-id="home-search"
-        class="home-search"
+        class="lnr-search-control home-search"
         flex="75"
-        flex-xs="85"
+        flex-xs="100"
         layout="column"
         location="home.location"
         placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
@@ -33,17 +34,13 @@
       <!-- <input ng-model="home.location" class="home-search" style="padding: 0 10px" placeholder="{{ 'autocomplete.default-placeholder' | translate }}"> -->
       <md-button
         ng-click="home.onSearchClick()"
-        class="md-raised md-primary"
+        class="md-raised md-primary lnr-search-control"
         id="submit"
         flex="25"
-        flex-xs="15"
+        flex-xs="100"
       >
-        <span hide-xs>
-          {{ 'shared.search' | translate }}
-        </span>
-        <span hide-gt-xs show-xs>
-          <md-icon class="lnr-icn-sms md-color-white" md-svg-src="app/assets/ui_icons/search.svg"></md-icon>
-        </span>
+        <span>{{ 'shared.search' | translate }}</span>
+        <span hide-gt-xs show-xs>Bikes</span>
       </md-button>
     </form>
   </div>
