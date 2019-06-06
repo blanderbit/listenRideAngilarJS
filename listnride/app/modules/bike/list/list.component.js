@@ -10,24 +10,9 @@ angular.module('list', ['ngLocale'])
       discountFieldEditable: "<"
     },
     controllerAs: 'list',
-    controller: [
-      '$localStorage',
-      '$stateParams',
-      '$state',
-      '$analytics',
-      'Upload',
-      'bikeOptions',
-      'api',
-      'authentication',
-      'verification',
-      'accessControl',
-      'loadingDialog',
-      'price',
-      'countryCodeTranslator',
-      'notification',
-      function ListController($localStorage, $stateParams, $state, $analytics,
+    controller: function ListController($localStorage, $stateParams, $state, $analytics,
         Upload, bikeOptions, api, authentication, verification, accessControl,
-        loadingDialog, price, countryCodeTranslator, notification) {
+        loadingDialog, price, countryCodeTranslator, notification, userHelper) {
 
         if (accessControl.requireLogin()) {
           return;
@@ -54,9 +39,6 @@ angular.module('list', ['ngLocale'])
             images: [],
             coverage_total: 0,
             prices: [],
-            new_prices: {
-              half_day: 50
-            },
             location: {
               country: '',
               city: '',
@@ -67,6 +49,7 @@ angular.module('list', ['ngLocale'])
 
           list.selectedIndex = 0;
           list.removedImages = [];
+          list.secondDayIndex = 1;
           list.startImage = 1;
           list.sizeOptions = [];
           bikeOptions.sizeOptions([bikeOptions.allSizesValue]).then(function (resolve) {
@@ -144,12 +127,19 @@ angular.module('list', ['ngLocale'])
               }
 
               list.form.prices = [];
-              // for (var day = 0; day < 9; day += 1) {
-              //   list.form.prices[day] = {
-              //     price: undefined
-              //   }
-              // }
-              list.form.prices = prices.setDefaultPrices();
+              for (var day = 0; day < 9; day += 1) {
+                list.form.prices[day] = {
+                  price: undefined
+                }
+              }
+
+              list.hasTimeSlots = userHelper.hasTimeSlots(data);
+              list.secondDayIndex = list.hasTimeSlots ? 2 : 1;
+              if (list.hasTimeSlots) {
+                list.form.prices[9] = {
+                  price: undefined
+                }
+              }
 
               list.form.discounts = {
                 "daily": 10,
@@ -190,6 +180,11 @@ angular.module('list', ['ngLocale'])
                 }
 
                 data.images = images;
+                let halfDayPrice = _.find(data.prices, {
+                  'start_at': 43200
+                });
+                list.secondDayIndex = halfDayPrice ? 2 : 1;
+
                 var prices = price.transformPrices(data.prices, data.discounts);
                 data.size = parseInt(data.size);
 
@@ -200,9 +195,6 @@ angular.module('list', ['ngLocale'])
                 // form data for edit bikes
                 list.form = Object.assign(list.form, data);
                 list.form.prices = prices;
-
-                // TODO: make half day prices
-                list.form.new_prices.half_day = list.form.prices[0].price / 2;
 
                 // if custom price is enabled
                 if (list.form.custom_price && !list.businessUser) {
@@ -216,6 +208,7 @@ angular.module('list', ['ngLocale'])
                 }
 
                 setBusinessForm();
+                list.hasTimeSlots = userHelper.hasTimeSlots(data.user);
               }
             },
             function (error) {
@@ -368,10 +361,6 @@ angular.module('list', ['ngLocale'])
 
         // set the custom prices for a bike
         list.setCustomPrices = function (dailyPriceChanged) {
-          // TODO: make re-calc for half day
-          list.form.new_prices.half_day = list.form.prices[0].price / 2
-
-
           // business users get their prices proposed according to a fixed scheme
           if (list.businessUser) {
             list.form.prices = price.proposeCustomPrices(list.form);
@@ -564,7 +553,6 @@ angular.module('list', ['ngLocale'])
           list.variations.splice(index, 1);
         };
       }
-    ]
   })
   // category tab
   .component('categoriesListTab', {
