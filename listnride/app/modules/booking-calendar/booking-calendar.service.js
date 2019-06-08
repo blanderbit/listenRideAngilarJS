@@ -115,19 +115,20 @@ angular
               allVariantsRequests.push(...variantRequests);
 
               // add variant bike
-              bikeResource.children.push({
-                ...bikeResource,
-                children: [],
-                requestsWithNewMessages: parseRequestsWithMewMessages({
-                  requests: variantRequests
-                }),
-                id: bikeVariantId,
-                size: bikeVariant.size,
-                isCluster: false,
-                isVariant: true,
-                variantIndex: index + 1,
-                cls: 'variant-row'
-              });
+              bikeResource.children.push(
+                Object.assign({}, bikeResource, {
+                  children: [],
+                  requestsWithNewMessages: parseRequestsWithMewMessages({
+                    requests: variantRequests
+                  }),
+                  id: bikeVariantId,
+                  size: bikeVariant.size,
+                  isCluster: false,
+                  isVariant: true,
+                  variantIndex: index + 1,
+                  cls: 'variant-row'
+                })
+              );
             });
 
             bikeResource.requestsWithNewMessages = parseRequestsWithMewMessages(

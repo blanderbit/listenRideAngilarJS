@@ -175,19 +175,26 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           // add half day start_at to array
           start_at_seconds.splice(1, 0, 43200);
 
-          prices[1] = {
-            ...(transformedPrices[1].id ? {id: transformedPrices[1].id} : {}),
-            price: parseInt(transformedPrices[1].price),
-            start_at: start_at_seconds[1]
-          }
+          prices[1] = Object.assign(
+            {},
+            transformedPrices[1].id ? { id: transformedPrices[1].id } : {},
+            {
+              price: parseInt(transformedPrices[1].price),
+              start_at: start_at_seconds[1]
+            }
+          );
         }
 
         // no change to daily price
-        prices[0] = {
-          ...(transformedPrices[0].id ? {id: transformedPrices[0].id} : {}),
-          price: parseInt(transformedPrices[0].price),
-          start_at: transformedPrices[0].start_at || start_at_seconds[0]
-        };
+        prices[0] = Object.assign(
+          {},
+          transformedPrices[0].id ? { id: transformedPrices[0].id } : {},
+          {
+            price: parseInt(transformedPrices[0].price),
+            start_at: transformedPrices[0].start_at || start_at_seconds[0]
+          }
+        );
+
 
         // listing a bike
         if (isListMode) {
