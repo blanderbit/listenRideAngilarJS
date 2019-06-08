@@ -38,6 +38,7 @@ var lnrHelper = {
     // initialize for single and multi user mode
     if (lnrConstants.parentElement.dataset.user) {
       lnrConstants.parentElement.dataset.user = lnrHelper.trimSpaces(lnrConstants.parentElement.dataset.user);
+      lnrConstants.parentElement.dataset.lang = lnrConstants.parentElement.dataset.lang.toLowerCase();
       lnrHelper.postInitSingleUser();
     } else {
       lnrHelper.postInitMultiUser();
