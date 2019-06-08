@@ -40,7 +40,8 @@ module.exports = (webpackEnv) => {
                       chrome: "67",
                       safari: "11.1"
                     },
-                    useBuiltIns: "usage"
+                    useBuiltIns: "usage",
+                    corejs: "2.x"
                   }
                 ]
               ],

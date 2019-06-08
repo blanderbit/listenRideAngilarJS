@@ -6,10 +6,10 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   if (isCluster) {
     const bikesLabel =
       bikesCount === 1
-        ? translations['booking-calendar.bike']
-        : translations['booking-calendar.bikes'];
+        ? translations['search.bike']
+        : translations['search.bikes'];
     return `
-      <span class="event-status ellipsis">
+      <span class="event-status ellipsis bikes-count">
         ${bikesCount} ${bikesLabel}
       </span>
     `;
