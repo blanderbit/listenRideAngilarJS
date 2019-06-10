@@ -39,22 +39,28 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       onlyWithEvents: false,
       location: bookingCalendar.anyLocationKey
     };
+    bookingCalendar.isLoading = false;
 
     bookingCalendar.$onInit = () => {
       if (accessControl.requireLogin()) {
         return;
       }
+      bookingCalendar.isLoading = true;
 
       const goToDate = getDateFromStateParams();
 
       $q.all([
         bookingCalendarService.getTranslationsForScheduler(),
         bookingCalendarService.getRides()
-      ]).then(([translations, rides]) => {
-        bookingCalendar.locationOptions = Array.from(rides.locations);
-        initScheduler({ translations, rides, goToDate });
-        initDatepicker();
-      });
+      ])
+        .then(([translations, rides]) => {
+          bookingCalendar.locationOptions = Array.from(rides.locations);
+          initScheduler({ translations, rides, goToDate });
+          initDatepicker();
+        })
+        .finally(() => {
+          bookingCalendar.isLoading = false;
+        });
     };
 
     const viewPresetOptions = new Map([

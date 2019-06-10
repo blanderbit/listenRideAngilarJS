@@ -74,6 +74,12 @@
     </section>
   </menu>
 
+  <md-progress-linear
+    class="md-accent"
+    ng-if="bookingCalendar.isLoading"
+    md-mode="query"
+  >
+  </md-progress-linear>
   <md-divider class="booking-calendar-divider"></md-divider>
 
   <!-- Scheduler -->
