@@ -52,6 +52,10 @@
   font-size: 12px;
 }
 
+.booking-calendar .b-sch-event .event-status.bikes-count {
+  text-transform: lowercase;
+}
+
 .booking-calendar .b-sch-event .event-status .fa {
   margin-right: 3px;
   font-size: 16px;

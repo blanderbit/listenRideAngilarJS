@@ -34,7 +34,8 @@ angular
           'booking-calendar.event.accepted',
           'booking-calendar.event.request-waiting',
           'booking-calendar.event.not-available',
-          'seo.bikes',
+          'search.bike',
+          'search.bikes',
           // event popups
           'booking-calendar.event.waiting',
           'booking-calendar.event.not-available-header',
