@@ -444,10 +444,15 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         .get('/requests/' + bookingId)
         .then(response => response.data)
         .then(request => requestsService.acceptBooking({ request }))
-        .finally(() =>
+        .then(() =>
           event.set({
             isAccepted: true,
             isPending: false,
+            isChangingStatus: false
+          })
+        )
+        .catch(() =>
+          event.set({
             isChangingStatus: false
           })
         );
