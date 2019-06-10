@@ -25,6 +25,7 @@ import 'angulartics';
 import 'angulartics-google-analytics';
 import 'angular-socialshare';
 import 'angulartics-facebook-pixel';
+import 'intl-tel-input/build/js/utils';
 import 'intl-tel-input';
 import 'international-phone-number/releases/international-phone-number.js';
 import 'markerclustererplus/dist/markerclusterer.min.js';
