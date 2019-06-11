@@ -409,6 +409,13 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       );
     }
 
+    function removeRequestWithNewMessages({ bookingId, resource }) {
+      const requestsWithNewMessages = resource.requestsWithNewMessages.filter(
+        request => request.bookingId !== bookingId
+      );
+      resource.set({ requestsWithNewMessages });
+    }
+
     function rejectBooking(bookingId) {
       const event = getSchedulerEventByBookingId(bookingId);
       event.set({ isChangingStatus: true });
@@ -419,10 +426,23 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         .then(request => requestsService.rejectBooking({ request }))
         .then(() => {
           event.remove();
+          removeRequestWithNewMessages({
+            resource: event.resource,
+            bookingId: event.bookingId
+          });
+
           if (event.clusterEventId) {
             const clusterEvent = bookingCalendar.scheduler.eventStore.getById(
               event.clusterEventId
             );
+
+            // remove "New" badge
+            removeRequestWithNewMessages({
+              resource: clusterEvent.resource,
+              bookingId: event.bookingId
+            });
+
+            // decrement bikes count
             clusterEvent.bikesCount -= 1;
 
             if (clusterEvent.bikesCount === 0) {
