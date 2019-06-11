@@ -21,7 +21,7 @@ angular.module('event', []).component('event', {
           'toros-de-gravel': getRequestUrl('42,43', 'Mallorca', '', '2018-10-13'),
           'riderman-rothaus': getRequestUrl('20', 'Bad Dürrheim', '', ''),
           'velothon-bikerental': getRequestUrl('30', 'Berlin', 'velothon', '2018-05-13'),
-          'vatternrundan': getRequestUrl('30,31', 'Motala,Sweden', '', '2019-06-07'),
+          'vatternrundan': getRequestUrl('30,31', 'Motala,Sweden', '', '2019-06-15'),
           'epicgrancanaria': getRequestUrl('30,31,32,33', 'Gran Canaria, Provinz Las Palmas, Spanien', '', '2019-04-05'),
           'velorace-dresden': getRequestUrl('30', 'Dresden', '', '2019-08-11'),
           'lardita-arezzo': getRequestUrl('30', 'Arezzo, Tuscany', '', '2019-03-24'),
