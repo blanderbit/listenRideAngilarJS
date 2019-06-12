@@ -58,7 +58,7 @@ angular.module('receipt', []).component('receipt', {
         receipt.lnrFee = prices.serviceFee;
         receipt.premiumCoverage = prices.premiumCoverage;
         receipt.total = Math.max(prices.total - receipt.balance, 0);
-      };
+      }
 
       function setDefaultPrices() {
         receipt.durationDays = "0";

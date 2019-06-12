@@ -58,20 +58,20 @@ angular.module('categoryFilter', [])
             list.push(item);
           }
           if (typeof categoryFilter.onFilterChange === "function") categoryFilter.onFilterChange();
-        };
+        }
 
         function exists(item, list) {
           return list.indexOf(item) > -1;
-        };
+        }
 
         function isIndeterminate(categoryId) {
           var intersection = _.intersection(categoryFilter.categorySubs(categoryId), categoryFilter.currentCategories).length;
           return (intersection > 0 && intersection !== categoryFilter.categorySubs(categoryId).length);
-        };
+        }
 
         function isChecked(categoryId) {
           return categoryChosen(categoryId);
-        };
+        }
 
         function toggleAll($event, categoryId) {
           $event.stopPropagation();
@@ -86,11 +86,11 @@ angular.module('categoryFilter', [])
             if (typeof categoryFilter.onFilterChange === "function") categoryFilter.onFilterChange();
           }, 0);
 
-        };
+        }
 
         function showSubs(categoryId) {
           return categoryFilter.openSubs.includes(categoryId) && !categoryFilter.onlyParentCategories;
-        };
+        }
 
         function categoryIntersection(categoryId) {
           return _.intersection(categoryFilter.currentCategories, categoryFilter.categorySubs(categoryId)).sort()

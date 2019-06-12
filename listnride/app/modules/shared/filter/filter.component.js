@@ -64,7 +64,7 @@ angular.module('filter',[])
         function onBrandChange() {
           filter.updateState({ brand: filter.currentBrand });
           applyFilters();
-        };
+        }
 
         function onDateChange() {
           filter.updateState({
@@ -73,7 +73,7 @@ angular.module('filter',[])
           }, function() {
             filter.dateChange();
           });
-        };
+        }
 
         // function onSizeChange() {
         //   filter.updateState({ sizes: filter.currentSizes.join(',') });
@@ -83,7 +83,7 @@ angular.module('filter',[])
         function onSimpleSizeChange() {
           filter.updateState({ sizes: filter.currentSize });
           applyFilters();
-        };
+        }
 
         function clearFilters() {
           clearState(function(){
@@ -96,12 +96,12 @@ angular.module('filter',[])
             clearDate();
             applyFilters();
           });
-        };
+        }
 
         function onCategoryChange() {
           filter.updateState({ categories: filter.currentCategories.join(',') });
           applyFilters();
-        };
+        }
 
         function clearState(cb) {
           filter.updateState({
@@ -223,7 +223,7 @@ angular.module('filter',[])
         // tricky function to initialize date-picker close, when we click ng-menu
         function closeDateRange() {
           var datePickerTrigger = angular.element('.js-datepicker-opened');
-          if (!!datePickerTrigger.length) {
+          if (datePickerTrigger.length) {
             datePickerTrigger.click();
           }
         }

@@ -71,7 +71,7 @@ angular.module('leaosIntegration', []).component('leaos', {
       }
 
       function transformToKeys(str){
-        return str.replace(/\s+/g, '_').toLowerCase();;
+        return str.replace(/\s+/g, '_').toLowerCase();
       }
 
       function getBikes() {

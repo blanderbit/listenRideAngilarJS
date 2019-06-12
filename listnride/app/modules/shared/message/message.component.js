@@ -138,7 +138,7 @@ angular.module('message',[]).component('message', {
           } else {
             return message.status == message.STATUSES.CONFIRMED
           }        
-        };
+        }
       };
 
       message.handleRejectionSubmission = function(promise) {

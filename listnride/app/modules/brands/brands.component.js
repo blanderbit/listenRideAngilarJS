@@ -53,20 +53,20 @@ angular.module('brands', []).component('brands', {
             }
           );
 
-      };
+      }
 
       function isIncludeCategory(brandCategories) {
         // show all brands if no categories picked
         if (!brands.categoryIds.length) return true;
         return !!_.intersection(brands.categoryIds, brandCategories).length;
-      };
+      }
 
       function filterChange() {
         brands.checkSelectedBrands();
         $timeout(function () {
           refreshMarkerCluster(brands.map);
         }, 0);
-      };
+      }
 
       function checkSelectedBrands() {
         brands.filteredBrands = [];

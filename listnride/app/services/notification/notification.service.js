@@ -13,9 +13,9 @@ angular
 
 function notificationController($mdToast, $translate) {
  return {
-  show: function (response, type, translateKey) {
+  show: function (response, originalType, translateKey) {
     var self = this;
-    var type = type || 'success';
+    var type = originalType || 'success';
 
     if (translateKey) {
       convertToKey(translateKey)
@@ -36,7 +36,7 @@ function notificationController($mdToast, $translate) {
       }
 
       return convertToKey(responseText);
-    };
+    }
 
     function convertToKey(text) {
       $translate(text).then(function (success) {
@@ -44,7 +44,7 @@ function notificationController($mdToast, $translate) {
       }, function (error) {
         self.showToast(error)
       });
-    };
+    }
   },
   showToast: function (text) {
     $mdToast.show(

@@ -378,7 +378,7 @@ angular.module('bike').component('calendar', {
           };
           calendar.event.slots.push(slot)
         });
-      };
+      }
 
       function generateSlotableDateRanges(range) {
         var slot = {
@@ -434,7 +434,7 @@ angular.module('bike').component('calendar', {
         // calendar.event.returnSlotId = parseInt(calendar.event.pickupSlotId) + slotDuration;
         calendar.event.changeReturnSlot();
         dateChange(calendar.startDate, calendar.endDate);
-      };
+      }
 
       function changeReturnSlot() {
         var slot = calendar.event.slots[calendar.event.returnSlotId];
@@ -446,7 +446,7 @@ angular.module('bike').component('calendar', {
         }
 
         dateChange(calendar.startDate, calendar.endDate);
-      };
+      }
 
       calendar.event.reserved = function () {
         for (var i = 0; i < calendar.requests.length; i++) {
@@ -495,7 +495,7 @@ angular.module('bike').component('calendar', {
     };
 
     calendar.insuranceCountry = function () {
-      if (!!calendar.countryCode) { return _.includes(["DE", "AT"], calendar.countryCode) }
+      if (calendar.countryCode) { return _.includes(["DE", "AT"], calendar.countryCode) }
     };
 
     var showBookingDialog = function (event) {

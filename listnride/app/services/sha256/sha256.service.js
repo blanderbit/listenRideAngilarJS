@@ -1,3 +1,4 @@
+/* eslint-disable */
 /*
  *  This service adds basic SHA256 encryption.
  */
