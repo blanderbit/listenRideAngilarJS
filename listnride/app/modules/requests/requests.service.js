@@ -76,6 +76,8 @@ angular
                 // Lister has already a payout method, so simply accept the request
 
                 ga('set', 'userId', request.user.id); //set unique userID (riderID)
+                ga('send', 'pageview');
+                ga('require', 'ecommerce');
                 ga('ecommerce:addTransaction', {
                   id: request.id,
                   affiliation: request.lister.id,
