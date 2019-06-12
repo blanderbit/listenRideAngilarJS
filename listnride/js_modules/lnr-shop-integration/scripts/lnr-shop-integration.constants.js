@@ -1,6 +1,6 @@
 var lnrConstants = {
   // environments: staging, production
-  env: 'staging',
+  env: 'production',
   version: '?1.010',
   // shop solution for staging and production
   shopUrl: {
