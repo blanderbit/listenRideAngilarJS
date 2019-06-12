@@ -672,6 +672,7 @@
     },
     "overview": {
       "tab": "Riepilogo",
+      "model": "Model",
       "bike-rental": "La bici selzionata",
       "size": "Taglia",
       "location": "Località",

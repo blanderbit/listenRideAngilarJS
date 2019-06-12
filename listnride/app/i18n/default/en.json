@@ -680,6 +680,7 @@
     },
     "overview": {
       "tab": "Overview",
+      "model": "Model",
       "bike-rental": "Your bike rental",
       "size": "Size",
       "location": "Location",
