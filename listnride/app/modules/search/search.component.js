@@ -180,7 +180,7 @@ angular.module('search',[]).component('search', {
           setParamsFromResponse(response);
           return getUnavailableBikes();
         }).then(function (results) {
-          if (!!results) {
+          if (results) {
             search.unavailableIds = results.data.ids;
             setUnavailableBikes();
           }

@@ -29,7 +29,7 @@ angular.module('eroicaGaiole',[]).component('eroicaGaiole', {
         // TODO: add booked_at filter for 
         api.get('/users/6352').then(
             function(response) {
-                _.each(response.data.rides, function(value) {
+                _.each(response.data.rides, function(value){
                     if (value.brand != "FOCUS") eroicaGaiole.bikes.push(value);
                 });
             },

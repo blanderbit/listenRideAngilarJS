@@ -86,4 +86,4 @@ function lnrMdFocusTabs($window, $timeout) {
       }
     }
   }
-};
+}

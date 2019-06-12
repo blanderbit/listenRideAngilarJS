@@ -65,7 +65,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
 
     if (typeof vm.dateOnChange == 'function') vm.dateOnChange();
     $scope.$apply();
-  };
+  }
 
   function clearData() {
     vm.clearCalendar();
@@ -76,7 +76,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
 
     if (typeof vm.dateOnClear == 'function') vm.dateOnClear();
     $scope.$apply();
-  };
+  }
 
   function postLink(){
     var active = 'js-datepicker-opened';
@@ -215,18 +215,18 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
     if (vm.dateContainer) $(vm.dateContainer).css('position', 'relative');
 
     changeRange();
-  };
+  }
 
   function clearCalendar() {
     $scope.el.dateRange.clear();
-  };
+  }
 
   function onDestroy() {
     $scope.el.dateRange.destroy();
-  };
+  }
 
   function openCalendar($event) {
     $event.stopPropagation();
     $scope.el.dateRange.open();
-  };
+  }
 }

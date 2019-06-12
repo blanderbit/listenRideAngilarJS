@@ -84,11 +84,11 @@ angular.module('multiBooking', []).component('multiBooking', {
           category_ids: [],
           accessories: []
         });
-      };
+      }
 
       function removeInput(index) {
         multiBooking.form.variations.splice(index, 1);
-      };
+      }
 
       function categoryValid(){
         var valid = true;
@@ -101,7 +101,7 @@ angular.module('multiBooking', []).component('multiBooking', {
       // tricky function to initialize date-picker close, when we click ng-menu
       function closeDateRange() {
         var datePickerTrigger = angular.element('.js-datepicker-opened');
-        if (!!datePickerTrigger.length) {
+        if (datePickerTrigger.length) {
           datePickerTrigger.click();
         }
       }

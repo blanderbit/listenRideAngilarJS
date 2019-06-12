@@ -66,7 +66,7 @@ angular.module('user',[]).component('user', {
           user.showAll = false;
           user.user = response.data;
           if (!user.user.me) user.user.me = {};
-          user.user.me.id = !!$localStorage.userId ? $localStorage.userId : '';
+          user.user.me.id = $localStorage.userId ? $localStorage.userId : '';
           user.loaded = true;
           user.anyHours = !_.isEmpty(response.data.opening_hours);
           user.openingHours = user.anyHours ? response.data.opening_hours.hours : {};
@@ -111,7 +111,7 @@ angular.module('user',[]).component('user', {
 
       function showHours(hours) {
         if (!user.anyHours) return false;
-        if (!!hours.enabled) {
+        if (hours.enabled) {
           return hours.enabled
         } else {
           return true

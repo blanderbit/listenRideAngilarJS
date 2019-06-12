@@ -28,7 +28,7 @@ angular.module('jobs', [])
           jobs.showJobDetails = true;
           jobs.chosenJob = job;
           // goToTop();
-        };
+        }
 
         function hideDetails() {
           jobs.showJobDetails = false;
@@ -39,20 +39,20 @@ angular.module('jobs', [])
             {position: ''},
             { notify: false }
           );
-        };
+        }
 
         function getJobsData() {
           api.get('/jobs/').then(function (response) {
             jobs.availableJobs = response.data;
 
-            if (!!jobs.positionId) {
+            if (jobs.positionId) {
               var job = _.find(jobs.availableJobs, ['id', _.toInteger(jobs.positionId)]);
               jobs.showDetails(job);
             }
           }, function (error) {
 
           });
-        };
+        }
 
         /**
          * move the scroll to the job posts

@@ -153,7 +153,7 @@ angular.module('list', ['ngLocale'])
               notification.show(error, 'error');
             }
           );
-        };
+        }
 
         function getBikeData() {
           api.get('/rides/' + $stateParams.bikeId).then(
@@ -215,7 +215,7 @@ angular.module('list', ['ngLocale'])
               notification.show(error, 'error');
             }
           );
-        };
+        }
 
         // form submission for new ride
         function submitNewRide () {
@@ -278,7 +278,7 @@ angular.module('list', ['ngLocale'])
             }
           );
 
-        };
+        }
 
         // form submission for existing ride
         function submitEditedRide() {
@@ -348,7 +348,7 @@ angular.module('list', ['ngLocale'])
             }
           );
 
-        };
+        }
 
         // submit the form
         list.onFormSubmit = function () {
@@ -549,11 +549,11 @@ angular.module('list', ['ngLocale'])
             bicycle_number: '',
             frame_number: ''
           });
-        };
+        }
 
         function removeInput(index) {
           list.variations.splice(index, 1);
-        };
+        }
       }
   })
   // category tab

@@ -100,10 +100,7 @@ angular.module('listnride').factory('date', ['$translate',
       },
 
       diff: function(startDate, endDate) {
-        var startDate = new Date(startDate);
-        var endDate = new Date(endDate);
-
-        return Math.abs(startDate - endDate);
+        return Math.abs(new Date(startDate) - new Date(endDate));
       }
 
     };

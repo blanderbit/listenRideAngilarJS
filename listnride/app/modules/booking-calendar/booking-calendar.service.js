@@ -64,9 +64,12 @@ angular
     function parseBikes(bikes) {
       return bikes.reduce(
         (acc, bike) => {
+          // clusters don't have their own unique ids
+          const bikeId = bike.is_cluster ? `${bike.id}-cluster` : bike.id;
+          
           // bike boilerplate
           const bikeResource = {
-            id: bike.id,
+            id: bikeId,
             name: `${bike.brand} ${bike.name}`,
             location: bike.location,
             isCluster: bike.is_cluster,
@@ -106,11 +109,9 @@ angular
 
             // add bike variants
             bike.rides.forEach((bikeVariant, index) => {
-              const bikeVariantId = `${bikeResource.id}-${index}`;
-
               // add variant requests
               const variantRequests = parseRequests({
-                id: bikeVariantId,
+                id: bikeVariant.id,
                 requests: bikeVariant.requests
               });
               allVariantsRequests.push(...variantRequests);
@@ -122,7 +123,7 @@ angular
                   requestsWithNewMessages: parseRequestsWithMewMessages({
                     requests: variantRequests
                   }),
-                  id: bikeVariantId,
+                  id: bikeVariant.id,
                   size: bikeVariant.size,
                   isCluster: false,
                   isVariant: true,

@@ -106,7 +106,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.loadingList = false;
           }
         );
-      };
+      }
 
       function nextPage () {
         requests.loadingList = true;
@@ -129,7 +129,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.loadingList = false;
           }
         );
-      };
+      }
 
       /**
        * called whenever user:
@@ -144,7 +144,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.loadRequest(requests.selected, false, 0);
           }
         }, 200);
-      };
+      }
 
       // Handles initial request loading
       function loadRequest (requestId, showDialog, index) {
@@ -183,7 +183,7 @@ angular.module('requests', ['infinite-scroll'])
         } else {
           requests.showChat = true;
         }
-      };
+      }
 
       function reloadRequest (requestId) {
         return api.get('/requests/' + requestId).then(
@@ -226,7 +226,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.loadingChat = false;
           }
         );
-      };
+      }
 
       //TODO: Move to shared users service
       function setName() {
@@ -255,7 +255,7 @@ angular.module('requests', ['infinite-scroll'])
             reloadRequest(requests.request.id);
             requests.loadingChat = false;
           });
-      };
+      }
 
       // This function handles request accept and all validations
       function acceptBooking () {
@@ -267,7 +267,7 @@ angular.module('requests', ['infinite-scroll'])
           .finally(() => {
             requests.loadingChat = false;
           });
-      };
+      }
 
       // Sends a new message by directly appending it locally and posting it to the API
       function sendMessage () {
@@ -296,7 +296,7 @@ angular.module('requests', ['infinite-scroll'])
           requests.confirmBooking();
         }
         requests.message = "";
-      };
+      }
 
       // DIALOGS
       // Chat Dialog
@@ -312,7 +312,7 @@ angular.module('requests', ['infinite-scroll'])
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      };
+      }
 
       function ChatDialogController() {
         var chatDialog = this;
@@ -320,7 +320,7 @@ angular.module('requests', ['infinite-scroll'])
         chatDialog.hide = function () {
           $mdDialog.hide();
         };
-      };
+      }
 
       // Rating Dialog
       function showRatingDialog (event) {
@@ -335,7 +335,7 @@ angular.module('requests', ['infinite-scroll'])
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      };
+      }
 
       function showListerDialog (event) {
         $mdDialog.show({
@@ -412,7 +412,7 @@ angular.module('requests', ['infinite-scroll'])
             );
           }
         ratingDialog.hide = hideDialog;
-      };
+      }
 
       function hideDialog() {
         // For small screens, show Chat Dialog again
@@ -421,7 +421,7 @@ angular.module('requests', ['infinite-scroll'])
         } else {
           $mdDialog.hide();
         }
-      };
+      }
 
       /**
         * filter lister/rider requests from all requests
@@ -444,7 +444,7 @@ angular.module('requests', ['infinite-scroll'])
         }
 
         if (reset_filter === true) selectDefaultRequest();
-      };
+      }
 
       /**
        * All rentals which are currently rented out.
@@ -462,7 +462,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 3 && (endDate > currentDate));
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * It is a request sent by rider, but not yet accepted by the lister.
@@ -479,7 +479,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 1 || response.status === 2);
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * It is a request sent by rider, but not yet accepted by the lister.
@@ -498,7 +498,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 3 && (startDate > currentDate));
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * Rentals accepted and paid but are now in the past,
@@ -516,7 +516,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 3 && (endDate < currentDate));
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * These were the pending requests
@@ -534,6 +534,6 @@ angular.module('requests', ['infinite-scroll'])
           return ((response.status === 1 || response.status === 2) && (endDate < currentDate));
         });
         selectDefaultRequest();
-      };
+      }
     }
 });

@@ -67,7 +67,7 @@ angular.module('creditCardInput', []).component('creditCardInput', {
             dateInput.$setValidity('dateFormat', false);
           }
         }
-      };
+      }
 
     }
   ]

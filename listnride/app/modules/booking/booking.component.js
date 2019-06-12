@@ -176,7 +176,7 @@ angular.module('booking', [])
           params,
           { notify: false }
         );
-      };
+      }
 
       // ===============================
       // >>>> START BOOKING CALENDAR TAB
@@ -203,7 +203,7 @@ angular.module('booking', [])
                 $scope.$apply();
               });
             })
-          };
+          }
         }
         // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
       };
@@ -560,7 +560,7 @@ angular.module('booking', [])
         threeDSecureAuthenticationResult.resolve();
         return threeDSecureAuthenticationResult.promise;
 
-        ////////////
+        /* // See todo above
 
         function showAuthThreeDSecureDialog(options) {
           // threeDSecureAuthenticationResult.reject();
@@ -621,6 +621,8 @@ angular.module('booking', [])
         }
 
         return threeDSecureAuthenticationResult.promise;
+        
+       */
       }
 
       booking.book = function () {

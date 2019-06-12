@@ -33,11 +33,11 @@ angular.module('accessoriesFilter', [])
             list.push(item);
           }
           if (typeof accessoriesFilter.onFilterChange === "function") accessoriesFilter.onFilterChange();
-        };
+        }
 
         function exists(item, list) {
           return list.indexOf(item) > -1;
-        };
+        }
       }
     ]
   });

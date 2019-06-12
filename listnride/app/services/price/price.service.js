@@ -109,7 +109,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         }
 
         // from 2 to 6 days
-        for (var day = secondDayIndex; day < secondDayIndex + 5; day += 1) {
+        for (let day = secondDayIndex; day < secondDayIndex + 5; day += 1) {
           // if daily discount not 0
           if (data.discounts.daily > 1) {
             data.prices[day].price = Math.round((day + 1) * base * ((100 - parseFloat(data.discounts.daily)) / 100));
@@ -228,7 +228,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         // listing a bike
         if (isListMode) {
           // daily and weekly price updates
-          for (var day = secondDayIndex; day < start_at_seconds.length - 2; day += 1) {
+          for (let day = secondDayIndex; day < start_at_seconds.length - 2; day += 1) {
             let divider = halfDayPrice ? day : day+1;
             prices[day] = {
               price: (transformedPrices[day].price / divider),
@@ -251,7 +251,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         // editing a bike
         else {
           // daily and weekly price updates
-          for (var day = secondDayIndex; day < start_at_seconds.length - 2; day += 1) {
+          for (let day = secondDayIndex; day < start_at_seconds.length - 2; day += 1) {
             let divider = halfDayPrice ? day : day + 1;
             prices[day] = {
               id: transformedPrices[day].id,

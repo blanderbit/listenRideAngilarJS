@@ -127,7 +127,7 @@ angular.module('bike',[]).component('bike', {
 
     function isMobileCalendarView() {
       return !!($mdMedia('xs') || $mdMedia('sm'));
-    };
+    }
 
     function hasAccessories() {
       return bike.data && bike.data.accessories && _.keys(bike.data.accessories).length;
@@ -136,7 +136,7 @@ angular.module('bike',[]).component('bike', {
 
     function showAttribute(attr) {
       return !(attr == false || attr === null || attr === 'null' || typeof attr === 'undefined');
-    };
+    }
 
     function showGalleryDialog(event) {
       event.stopPropagation();
@@ -159,7 +159,7 @@ angular.module('bike',[]).component('bike', {
       }, function() {
         //
       });
-    };
+    }
 
     function showCalendarDialog(event) {
       $mdDialog.show({
@@ -174,7 +174,7 @@ angular.module('bike',[]).component('bike', {
         clickOutsideToClose: true,
         fullscreen: true // Only for -xs, -sm breakpoints.
       });
-    };
+    }
 
     function setName() {
       if (bike.data.business) {
