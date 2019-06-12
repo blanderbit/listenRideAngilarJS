@@ -225,10 +225,8 @@
         </div>
       </div>
 
-      <md-divider class="lnr-p-0 lnr-mt-x2 lnr-mb-x2"></md-divider>
-
-
-      <div layout="row" layout-xs="column">
+      <md-divider ng-if="settingsAccount.parent.user.business" class="lnr-p-0 lnr-mt-x2 lnr-mb-x2"></md-divider>
+      <div ng-if="settingsAccount.parent.user.business" layout="row" layout-xs="column">
 
         <div flex-gt-xs layout-margin>
           <div class="md-body-2">{{ 'settings.notifications' | translate }}</div>
