@@ -676,7 +676,7 @@
     },
     "overview": {
       "tab": "Resumen",
-      "model": "Model",
+      "model": "Modelo",
       "bike-rental": "Tu selección de bicicleta",
       "size": "Tamaño",
       "location": "Ubicación",
@@ -938,7 +938,7 @@
   },
   "message": {
     "accept": "Aceptar",
-    "go-to-calendar": "Go to Calendar",
+    "go-to-calendar": "Go to Booking Calendar",
     "reject": "Rechazar",
     "rate": "Tarifa",
     "confirm": "Confirmar",
