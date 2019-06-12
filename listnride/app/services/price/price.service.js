@@ -1,25 +1,49 @@
-'use strict';
-
 angular.module('listnride').factory('price', ['$translate', 'date',
   function($translate, date) {
     return {
+      PRICES: [
+        ['1d', 0],
+        ['1/2d', 43200],
+        ['2d', 86400],
+        ['3d', 172800],
+        ['4d', 259200],
+        ['5d', 345600],
+        ['6d', 432000],
+        ['7d', 518400],
+        ['8d', 604800],
+        ['28d', 2419200]
+      ],
       // Calculates the prices for the calendar and booking overview
       // Note that this is just a preview-calculation, the actual data
       // gets calculated in the backend.
-      calculatePrices: function (startDate, endDate, prices, coverageTotal, isPremiumCoverage, isShopUser) {
-        var result = {
+      calculatePrices: function ({
+        startDate = null,
+        endDate = null,
+        prices = null,
+        coverageTotal = 0,
+        isPremiumCoverage = false,
+        isShopUser = false,
+        setCustomPrices = false,
+      } = {}) {
+
+        // Service Fee is 12,5% and includes 0,19% MwSt
+        const RIDER_TAX = 0.125;
+        const VAT_TAX = 0.19;
+
+        const result = {
           subtotal: 0,
           subtotalDiscounted: 0,
           serviceFee: 0,
-          coverageTotal: coverageTotal || 0, // [0,1000,2000,3000,4000,5000]
+          coverageTotal: coverageTotal, // [0,1000,2000,3000,4000,5000]
           premiumCoverage: isPremiumCoverage ? 3 : 0, // premium Coverage price is static 3 euro
+          basicCoverage: 0,
           total: 0
         };
 
-        var RIDER_TAX = 0.125;
-        var VAT_TAX = 0.19;
+        const includeInsurance = true;
+        const includeFee = !isShopUser;
 
-        if (startDate !== undefined && endDate !== undefined) {
+        if (startDate && endDate) {
           var days = date.durationDays(startDate, endDate);
         }
         // Check if days are valid
@@ -37,16 +61,21 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           result.subtotalDiscounted = prices[8].price * days;
         }
 
-        // Calculate Coverage Fee
-        result.premiumCoverage = result.premiumCoverage * days;
+        if (includeInsurance) {
+          result.premiumCoverage = result.premiumCoverage * days;
+          result.basicCoverage = (result.coverageTotal / 1000) * days;
 
-        result.serviceFee = 0;
-        if (!isShopUser) {
-          // Service Fee is 12,5% and includes 0,19% MwSt
-          result.serviceFee += (result.subtotalDiscounted * RIDER_TAX * VAT_TAX) + (result.subtotalDiscounted * RIDER_TAX);
+          result.total += result.premiumCoverage + result.basicCoverage;
         }
-        result.serviceFee += (result.coverageTotal / 1000) * days;
-        result.total = result.subtotalDiscounted + result.serviceFee + result.premiumCoverage;
+
+        if (includeFee) {
+          result.serviceFee = (result.subtotalDiscounted * RIDER_TAX * VAT_TAX) + (result.subtotalDiscounted * RIDER_TAX);
+
+          result.total += result.serviceFee
+        }
+
+        result.total += result.subtotalDiscounted;
+
         return result;
       },
 
