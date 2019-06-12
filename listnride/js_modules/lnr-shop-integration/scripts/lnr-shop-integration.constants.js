@@ -87,6 +87,7 @@ var lnrConstants = {
       "all-sizes": "All sizes",
       "from": "from",
       "per-day": "per day",
+      "half-day": "1/2 day",
       "week": "week"
     },
     "de": {
@@ -99,6 +100,7 @@ var lnrConstants = {
       "all-sizes": "Alle Gr&ouml;&szlig;en",
       "from": "ab",
       "per-day": "per day",
+      "half-day": "1/2 day",
       "week": "week"
     },
     "nl": {
@@ -111,6 +113,7 @@ var lnrConstants = {
       "all-sizes": "Alle maten",
       "from": "van",
       "per-day": "per day",
+      "half-day": "1/2 day",
       "week": "week"
     },
     "it": {
@@ -123,6 +126,7 @@ var lnrConstants = {
       "all-sizes": "All sizes",
       "from": "from",
       "per-day": "per day",
+      "half-day": "1/2 day",
       "week": "week"
     },
     "es": {
@@ -135,6 +139,7 @@ var lnrConstants = {
       "all-sizes": "All sizes",
       "from": "from",
       "per-day": "per day",
+      "half-day": "1/2 day",
       "week": "week"
     },
   },
