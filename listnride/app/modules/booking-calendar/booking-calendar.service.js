@@ -34,7 +34,8 @@ angular
           'booking-calendar.event.accepted',
           'booking-calendar.event.request-waiting',
           'booking-calendar.event.not-available',
-          'seo.bikes',
+          'search.bike',
+          'search.bikes',
           // event popups
           'booking-calendar.event.waiting',
           'booking-calendar.event.not-available-header',
@@ -115,19 +116,20 @@ angular
               allVariantsRequests.push(...variantRequests);
 
               // add variant bike
-              bikeResource.children.push({
-                ...bikeResource,
-                children: [],
-                requestsWithNewMessages: parseRequestsWithMewMessages({
-                  requests: variantRequests
-                }),
-                id: bikeVariantId,
-                size: bikeVariant.size,
-                isCluster: false,
-                isVariant: true,
-                variantIndex: index + 1,
-                cls: 'variant-row'
-              });
+              bikeResource.children.push(
+                Object.assign({}, bikeResource, {
+                  children: [],
+                  requestsWithNewMessages: parseRequestsWithMewMessages({
+                    requests: variantRequests
+                  }),
+                  id: bikeVariantId,
+                  size: bikeVariant.size,
+                  isCluster: false,
+                  isVariant: true,
+                  variantIndex: index + 1,
+                  cls: 'variant-row'
+                })
+              );
             });
 
             bikeResource.requestsWithNewMessages = parseRequestsWithMewMessages(

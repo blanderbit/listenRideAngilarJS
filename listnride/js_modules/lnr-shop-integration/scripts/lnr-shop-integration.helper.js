@@ -604,8 +604,11 @@ var lnrHelper = {
           price = Math.ceil(ride.price_from),
           dailyPrice = Math.ceil(ride.prices.daily_price),
           weeklyPrice = Math.ceil(ride.prices.weekly_price),
+          halfDayPrice = Math.ceil(ride.prices.half_daily_price),
           imageUrl = ride.image_file,
           rideDescription = ride.description;
+
+        var hasHalfDay = !!halfDayPrice;
 
         var clusterStatusHTML = '';
 
@@ -620,6 +623,43 @@ var lnrHelper = {
             '<div class="status-labels__item">',
             '<span>' + ride.rides_count + '&nbsp;</span>',
             '<span>' + lnrConstants.translations[userLang].statuses.variants_available + '</span>',
+            '</div>'
+          ].join('');
+        }
+
+        function getPriceTableTemplate() {
+          var priceTable = '';
+
+          priceTable += hasHalfDay ? getHalfDayPriceTemplate() : '';
+          priceTable += getDailyPriceTemplate();
+          priceTable += hasHalfDay ? '' : getWeeklyPriceTemplate();
+          return priceTable;
+        }
+
+        function getDailyPriceTemplate() {
+          return [
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="md-headline lnr-price_num">' + dailyPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
+            '</div>'
+          ].join('');
+        }
+
+        function getWeeklyPriceTemplate() {
+          return [
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="lnr-clr-blue lnr-week">' + lnrConstants.translations[userLang]["week"] + '</span>',
+              '<span class="md-headline lnr-price_num">' + weeklyPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
+            '</div>'
+          ].join('');
+        }
+
+        function getHalfDayPriceTemplate() {
+          return [
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="md-headline lnr-price_num">' + halfDayPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["half-day"] + '</span>',
             '</div>'
           ].join('');
         }
@@ -665,15 +705,9 @@ var lnrHelper = {
               '<span class="md-subhead">' + brand + ', ' + rideName + '</span>',
               '<span>' + categoryDesc + ', ' + readableSize + '</span>' +
             '</md-card-title-text>',
-            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
-              '<span class="md-headline lnr-price_num">' + dailyPrice + '&euro;</span>',
-              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
-            ' </div>',
-            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
-              '<span class="lnr-clr-blue lnr-week">' + lnrConstants.translations[userLang]["week"] + '</span>',
-              '<span class="md-headline lnr-price_num">' + weeklyPrice + '&euro;</span>',
-              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
-            '</div>',
+
+            getPriceTableTemplate(),
+
           '</md-card-title>',
 
           '</md-card>',

@@ -676,6 +676,7 @@
     },
     "overview": {
       "tab": "Resumen",
+      "model": "Model",
       "bike-rental": "Tu selección de bicicleta",
       "size": "Tamaño",
       "location": "Ubicación",

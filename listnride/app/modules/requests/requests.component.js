@@ -4,7 +4,7 @@ angular.module('requests', ['infinite-scroll'])
   .component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: 
+  controller:
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
@@ -198,12 +198,12 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
               requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
-              var startDate = new Date(requests.request.start_date);
-              var endDate = new Date(requests.request.end_date);
+              var startDate = new Date(requests.request.start_date_tz);
+              var endDate = new Date(requests.request.end_date_tz);
               requests.request.returnable = (endDate.getTime() < Date.now());
               // these timespans we use in localizations only
-              requests.request.timespan_short = moment(startDate).format('DD.MM, HH:mm') + ' - ' + moment(endDate).format('DD.MM, HH:mm');
-              requests.request.timespan = moment(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment(endDate).format('DD.MM.YY, HH:mm');
+              requests.request.timespan_short = moment.utc(startDate).format('DD.MM, HH:mm') + ' - ' + moment.utc(endDate).format('DD.MM, HH:mm');
+              requests.request.timespan = moment.utc(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment.utc(endDate).format('DD.MM.YY, HH:mm');
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;

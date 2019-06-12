@@ -5,9 +5,9 @@
 /* <booking-calendar> component container */
 booking-calendar {
   display: flex;
-  flex: 1 1 auto;
+  position: absolute;
   height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
 
 .booking-calendar {
@@ -72,7 +72,7 @@ booking-calendar {
  */
 
 .booking-calendar .scheduler-container {
-  flex: 1 1 auto;
+  height: calc(100% - 85px); /* hack for Safari */
   max-width: 100%;
 }
 

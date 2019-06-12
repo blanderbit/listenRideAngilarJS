@@ -30,7 +30,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     bookingCalendarService,
     requestsService
   ) {
-    'use strict';
     const bookingCalendar = this;
 
     bookingCalendar.anyLocationKey = 'ANY_LOCATION';
@@ -39,22 +38,28 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       onlyWithEvents: false,
       location: bookingCalendar.anyLocationKey
     };
+    bookingCalendar.isLoading = false;
 
     bookingCalendar.$onInit = () => {
       if (accessControl.requireLogin()) {
         return;
       }
+      bookingCalendar.isLoading = true;
 
       const goToDate = getDateFromStateParams();
 
       $q.all([
         bookingCalendarService.getTranslationsForScheduler(),
         bookingCalendarService.getRides()
-      ]).then(([translations, rides]) => {
-        bookingCalendar.locationOptions = Array.from(rides.locations);
-        initScheduler({ translations, rides, goToDate });
-        initDatepicker();
-      });
+      ])
+        .then(([translations, rides]) => {
+          bookingCalendar.locationOptions = Array.from(rides.locations);
+          initScheduler({ translations, rides, goToDate });
+          initDatepicker();
+        })
+        .finally(() => {
+          bookingCalendar.isLoading = false;
+        });
     };
 
     const viewPresetOptions = new Map([
@@ -403,6 +408,13 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       );
     }
 
+    function removeRequestWithNewMessages({ bookingId, resource }) {
+      const requestsWithNewMessages = resource.requestsWithNewMessages.filter(
+        request => request.bookingId !== bookingId
+      );
+      resource.set({ requestsWithNewMessages });
+    }
+
     function rejectBooking(bookingId) {
       const event = getSchedulerEventByBookingId(bookingId);
       event.set({ isChangingStatus: true });
@@ -413,10 +425,23 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         .then(request => requestsService.rejectBooking({ request }))
         .then(() => {
           event.remove();
+          removeRequestWithNewMessages({
+            resource: event.resource,
+            bookingId: event.bookingId
+          });
+
           if (event.clusterEventId) {
             const clusterEvent = bookingCalendar.scheduler.eventStore.getById(
               event.clusterEventId
             );
+
+            // remove "New" badge
+            removeRequestWithNewMessages({
+              resource: clusterEvent.resource,
+              bookingId: event.bookingId
+            });
+
+            // decrement bikes count
             clusterEvent.bikesCount -= 1;
 
             if (clusterEvent.bikesCount === 0) {
@@ -438,10 +463,15 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         .get('/requests/' + bookingId)
         .then(response => response.data)
         .then(request => requestsService.acceptBooking({ request }))
-        .finally(() =>
+        .then(() =>
           event.set({
             isAccepted: true,
             isPending: false,
+            isChangingStatus: false
+          })
+        )
+        .catch(() =>
+          event.set({
             isChangingStatus: false
           })
         );

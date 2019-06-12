@@ -492,6 +492,7 @@ md-icon svg {
   display: none;
   position: absolute;
   background-color: white;
+  color: #333;
   z-index: 99; /* below the naigation bar on mobile */
   border-color: rgba(206, 212, 216, 0.9);
   border-style: solid;

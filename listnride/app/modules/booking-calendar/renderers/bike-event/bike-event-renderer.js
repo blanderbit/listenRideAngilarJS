@@ -4,9 +4,13 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   const { isCluster } = resourceRecord;
   const { isPending, isAccepted, isNotAvailable, bikesCount } = eventRecord;
   if (isCluster) {
+    const bikesLabel =
+      bikesCount === 1
+        ? translations['search.bike']
+        : translations['search.bikes'];
     return `
-      <span class="event-status ellipsis">
-        ${bikesCount} ${translations['seo.bikes']}
+      <span class="event-status ellipsis bikes-count">
+        ${bikesCount} ${bikesLabel}
       </span>
     `;
   }
@@ -56,7 +60,8 @@ export function bikeEventRenderer({
   tplData.cls.accepted = isAccepted;
   tplData.cls['not-available'] = isNotAvailable;
   tplData.cls.cluster = isCluster;
-
+  tplData.cls['is-narrow'] = Math.floor(tplData.width) <= 50;
+  
   const html = `
     <div class="event-name ellipsis">${name}</div>
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
