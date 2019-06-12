@@ -62,8 +62,8 @@
                 <div flex></div>
                 <div class="unread-indicator" ng-if="!request.message.is_read && request.message.receiver == requests.userId"></div>
               </div>
-              <p>{{request.start_date | amDateFormat:'DD.MM.YY, HH:mm'}}
-                - {{request.end_date | amDateFormat:'DD.MM.YY, HH:mm'}}</p>
+              <p>{{request.start_date_tz | amUtc | amDateFormat:'DD.MM.YY, HH:mm'}}
+                - {{request.end_date_tz | amUtc | amDateFormat:'DD.MM.YY, HH:mm'}}</p>
             </div>
           </md-list-item>
         </div>
