@@ -677,6 +677,7 @@
     },
     "overview": {
       "tab": "Zusammenfassung",
+      "model": "Model",
       "bike-rental": "Deine Radauswahl",
       "size": "Größe",
       "location": "Ort",
@@ -748,7 +749,7 @@
       "subscribe": "Erinnerungs-Benachrichtigungen"
     },
     "booking_overview_lister": "Buchungsübersicht Vermieter",
-    "confirm_return": "Rückgabe bestätigen",
+    "confirm_return": "Rückgabe Nachrichten",
     "return_reminder": "Return reminder",
     "request_created": "Request created (SMS)",
     "notifications": "Notifications",
