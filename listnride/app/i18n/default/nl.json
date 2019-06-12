@@ -672,6 +672,7 @@
     },
     "overview": {
       "tab": "Samenvatting",
+      "model": "Model",
       "bike-rental": "Je gekozen fiets",
       "size": "Grootte",
       "location": "Locatie",
@@ -742,8 +743,8 @@
     "accept_request_reminder": {
       "subscribe": "Herinneringsmeldingen"
     },
-    "booking_overview_lister": "Boeking info ",
-    "confirm_return": "Bevestig teruggave",
+    "booking_overview_lister": "Boekingsinformatie verhuurder",
+    "confirm_return": "Bevestig retourberichten",
     "return_reminder": "Herinnering",
     "request_created": "Request created (SMS)",
     "notifications": "Notifications",

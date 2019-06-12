@@ -72,7 +72,7 @@ booking-calendar {
  */
 
 .booking-calendar .scheduler-container {
-  height: 100%;
+  height: calc(100% - 85px); /* hack for Safari */
   max-width: 100%;
 }
 
