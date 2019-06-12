@@ -12,7 +12,8 @@ angular.module('receipt', []).component('receipt', {
     coverageTotal: '<?',
     countryCode: '<?',
     isPremiumCoverage: '<?',
-    isShop: '<'
+    isShop: '<',
+    setCustomPrices: '<'
   },
   controller: [
       'date',
@@ -39,7 +40,15 @@ angular.module('receipt', []).component('receipt', {
       }
 
       function setPrices() {
-        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices, receipt.coverageTotal, receipt.isPremiumCoverage, receipt.isShop);
+        var prices = price.calculatePrices({
+          startDate: receipt.startDate,
+          endDate: receipt.endDate,
+          prices: receipt.prices,
+          coverageTotal: receipt.coverageTotal,
+          isPremiumCoverage: receipt.isPremiumCoverage,
+          isShopUser: receipt.isShop,
+          setCustomPrices: receipt.setCustomPrices
+        });
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
         receipt.discount = prices.subtotal - prices.subtotalDiscounted;

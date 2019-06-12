@@ -30,7 +30,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     bookingCalendarService,
     requestsService
   ) {
-    'use strict';
     const bookingCalendar = this;
 
     bookingCalendar.anyLocationKey = 'ANY_LOCATION';

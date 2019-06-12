@@ -280,7 +280,15 @@ angular.module('booking', [])
       }
 
       function updatePrices() {
-        var prices = price.calculatePrices(booking.startDate, booking.endDate, booking.prices, booking.coverageTotal, booking.isPremium, booking.shopBooking);
+        var prices = price.calculatePrices({
+          startDate: booking.startDate,
+          endDate: booking.endDate,
+          prices: booking.prices,
+          coverageTotal: booking.coverageTotal,
+          isPremiumCoverage: booking.isPremium,
+          isShopUser: booking.shopBooking,
+          setCustomPrices: booking.bike.custom_price
+        });
         booking.subtotal = prices.subtotal;
         booking.subtotalDiscounted = prices.subtotalDiscounted;
         booking.lnrFee = prices.serviceFee;
