@@ -60,7 +60,8 @@ export function bikeEventRenderer({
   tplData.cls.accepted = isAccepted;
   tplData.cls['not-available'] = isNotAvailable;
   tplData.cls.cluster = isCluster;
-
+  tplData.cls['is-narrow'] = Math.floor(tplData.width) <= 50;
+  
   const html = `
     <div class="event-name ellipsis">${name}</div>
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
