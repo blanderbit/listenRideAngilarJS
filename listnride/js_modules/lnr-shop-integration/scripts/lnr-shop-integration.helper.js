@@ -763,6 +763,15 @@ var lnrHelper = {
     // render selectors HTML
     element.innerHTML += selectors;
 
+    // check if browser support HTML 5 date picker
+    var datepicker__el = document.querySelector('.lnr-date-picker__input');
+    if (datepicker__el.type === 'text') {
+      var datepickers = document.querySelectorAll('.lnr-date-picker');
+      datepickers.forEach(function(dtpicker) {
+        dtpicker.style.display = 'none';
+      });
+    }
+
     // set default values for selectors
     lnrHelper.setDefaultSelectorValues(userId, userLang);
 
@@ -884,26 +893,26 @@ var lnrHelper = {
     // render date selector
     var dateHTML = [
       // START DATE
-      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
-      '<div style="margin-left:8px; margin-right:8px;">',
-      '<label>Start Date</label>',
-      '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
-      'min="' + lnrHelper.getMinDate() + '"',
-      'id="' + id + '-lnr-start-date-button' + '"',
-      'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
-      '</div>',
+      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent lnr-date-picker">',
+        '<div style="margin-left:8px; margin-right:8px;">',
+        '<label>Start Date</label>',
+        '<input class="lnr-date-picker__input" style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
+        'min="' + lnrHelper.getMinDate() + '"',
+        'id="' + id + '-lnr-start-date-button' + '"',
+        'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
+        '</div>',
       '</div>',
       // END DATE
-      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
-      '<div style="margin-left:8px; margin-right:8px;">',
-      '<label>End Date</label>',
-      '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
-      'min="' + lnrHelper.getMinDate() + '"',
-      'id="' + id + '-lnr-end-date-button' + '"',
-      'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
-      '</div>',
+      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent lnr-date-picker">',
+        '<div style="margin-left:8px; margin-right:8px;">',
+        '<label>End Date</label>',
+        '<input class="lnr-date-picker__input" style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
+        'min="' + lnrHelper.getMinDate() + '"',
+        'id="' + id + '-lnr-end-date-button' + '"',
+        'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
+        'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
+        '</div>',
       '</div>'
     ].join("");
 
