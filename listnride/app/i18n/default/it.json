@@ -672,7 +672,7 @@
     },
     "overview": {
       "tab": "Riepilogo",
-      "model": "Model",
+      "model": "Modello",
       "bike-rental": "La bici selzionata",
       "size": "Taglia",
       "location": "Località",
@@ -934,7 +934,7 @@
   },
   "message": {
     "accept": "Accetta",
-    "go-to-calendar": "Go to Calendar",
+    "go-to-calendar": "Go to Booking Calendar",
     "reject": "Rifiuta",
     "rate": "Voto",
     "confirm": "Confermare",
