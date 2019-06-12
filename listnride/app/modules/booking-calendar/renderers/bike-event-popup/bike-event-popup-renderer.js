@@ -56,7 +56,17 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
   const datesFormat = 'DD.MM.YYYY';
   const pickupFormat = 'HH:mm';
   const { name, size, category } = eventRecord.resource;
-  const { startDate, endDate, bookingId, rider, contact } = eventRecord;
+  const {
+    startDate,
+    endDate,
+    rawStartDate,
+    rawEndDate,
+    bookingId,
+    rider,
+    contact
+  } = eventRecord;
+  const formattedStart = moment.utc(rawStartDate).format(datesFormat);
+  const formattedEnd = moment.utc(rawEndDate).format(datesFormat);
 
   return `
     <div class="bike-event-popup__name-wrap">
@@ -76,8 +86,8 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
       
       <div>
         <div>${size === 0 ? translations['search.unisize'] : size}</div>
-        <div>${moment(startDate).format(datesFormat)} - ${moment(endDate).format(datesFormat)}</div>
-        <div>${moment(startDate).format(pickupFormat)}</div>
+        <div>${formattedStart} - ${formattedEnd}</div>
+        <div>${moment.utc(rawStartDate).format(pickupFormat)}</div>
         <div>${bookingId}</div>
       </div>
     </section>
