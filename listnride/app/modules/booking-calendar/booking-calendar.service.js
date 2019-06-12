@@ -169,8 +169,10 @@ angular
         const request = {
           resourceId: id,
           bookingId: rawRequest.id,
-          startDate: rawRequest.start_date,
-          endDate: rawRequest.end_date,
+          startDate: rawRequest.start_date_tz.replace('Z', ''), // drop time zone
+          endDate: rawRequest.end_date_tz.replace('Z', ''), // drop time zone
+          rawStartDate: rawRequest.start_date_tz,
+          rawEndDate: rawRequest.end_date_tz,
           bikesCount: null,
           isCluster: false,
           isPending: rawRequest.status === MESSAGE_STATUSES.REQUESTED,
