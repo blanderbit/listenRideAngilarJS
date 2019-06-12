@@ -35,8 +35,8 @@
         <span class="md-body-1">
           <md-icon class="lnr-icn-sm lnr-mr"
           md-svg-src="app/assets/ui_icons/icn_verified.svg"
-          ng-class="user.user.status > 0 ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
-          <md-tooltip ng-if="user.user.status > 0" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
+          ng-class="user.user.confirmed_email ? 'md-color-primary' : 'md-color-disabled'"></md-icon>
+          <md-tooltip ng-if="user.user.confirmed_email" md-direction="left">{{ 'user.verified' | translate }}</md-tooltip>
           {{ 'forms.email-address' | translate }}
         </span>
         <span class="md-body-1">
