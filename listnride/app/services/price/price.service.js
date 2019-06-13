@@ -110,7 +110,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           if (in_slot && !extreme_time) used_part_day_slots += 1
 
           prev_time = timeslot.end_time.hour;
-        });;
+        });
 
         return used_part_day_slots < timeslots.length;
       },
