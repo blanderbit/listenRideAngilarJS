@@ -227,6 +227,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             leafIconCls: null,
             expandIconCls: 'fa-chevron-down',
             collapseIconCls: 'fa-chevron-up',
+            htmlEncode: false,
             renderer: ({ cellElement, record }) =>
               bikeColumnRenderer({ cellElement, record, translations })
           }
