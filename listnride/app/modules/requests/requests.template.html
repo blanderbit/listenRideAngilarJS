@@ -52,7 +52,7 @@
           <md-list-item
             class="requests-list-item md-2-line"
             ng-class="{'request-filter-switch-active':requests.selected === request.id}"
-            ng-click="requests.loadRequest(request.id, true, $index)"
+            ng-click="requests.loadRequest(request.id, true)"
           >
             <img ng-src="{{request.image}}" class="md-avatar" alt="{{request.ride}}" />
             <div class="md-list-item-text" layout="column">

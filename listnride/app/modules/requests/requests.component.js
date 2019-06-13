@@ -141,13 +141,13 @@ angular.module('requests', ['infinite-scroll'])
         $timeout(function () {
           if (requests.requests.length > 0) {
             requests.selected = requests.requests[0].id;
-            requests.loadRequest(requests.selected, false, 0);
+            requests.loadRequest(requests.selected, false);
           }
         }, 200);
       }
 
       // Handles initial request loading
-      function loadRequest (requestId, showDialog, index) {
+      function loadRequest (requestId, showDialog) {
         requests.selected = requestId;
         $state.go($state.current, {
           requestId: requestId
@@ -161,17 +161,6 @@ angular.module('requests', ['infinite-scroll'])
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
-        var last_message = requests.requests[index] ? requests.requests[index].message : null;
-        if (!!last_message && !last_message.is_read && last_message.receiver === parseInt($localStorage.userId)) {
-          api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
-            function (success) {
-              last_message.is_read = true;
-              if ($localStorage.unreadMessages > 0) {
-                $localStorage.unreadMessages -= 1;
-              }
-            }
-          );
-        }
         poller = $interval(function () {
           reloadRequest(requestId);
         }, 10000);
@@ -220,6 +209,18 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rating = Math.round(requests.request.rating);
 
               requests.loadingChat = false;
+
+              var last_unread_message = _.last(_.filter(requests.request.messages, function(m){ return m.receiver == $localStorage.userId && m.is_read == false }));
+              if (last_unread_message) {
+                api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
+                  function (success) {
+                    last_unread_message.is_read = true;
+                    if ($localStorage.unreadMessages > 0) {
+                      $localStorage.unreadMessages -= 1;
+                    }
+                  }
+                );
+              }
             }
           },
           function () {
@@ -407,7 +408,7 @@ angular.module('requests', ['infinite-scroll'])
               }
             ).then (
               function () {
-                loadRequest(requests.request.id, true, 0);
+                loadRequest(requests.request.id, true);
               }
             );
           }
