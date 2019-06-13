@@ -799,14 +799,14 @@ angular.module('bike').component('calendar', {
 
           // if request for one day we should check how much timeslots requested there
           if (moment(start, "DD-MM-YYYY").isSame(moment(end, "DD-MM-YYYY"))) {
-            requestsCount++;
+            requestsCount += calendarHelper.countTimeslots(requests[i].start_date_tz, requests[i].end_date_tz, calendar.timeslots);
           } else {
             return true;
           }
         }
       }
 
-      isAllDayBooked = requestsCount == 2;
+      isAllDayBooked = requestsCount >= 2;
 
       return isAllDayBooked;
     }

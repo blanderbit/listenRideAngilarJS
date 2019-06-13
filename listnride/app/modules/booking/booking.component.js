@@ -52,6 +52,7 @@ angular.module('booking', [])
         booking.paymentDescription = '';
         booking.insuranceEnabled = false;
         booking.hasTimeSlots = false;
+        booking.timeslots = [];
 
         // METHODS
         booking.calendarHelper = calendarHelper;

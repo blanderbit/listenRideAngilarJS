@@ -18,7 +18,8 @@ angular
         clearCalendarData: '=?',
         dateContainer: '<?',
         dateScrollContainer: '<?',
-        hasTimeSlots: '<?'
+        hasTimeSlots: '<?',
+        timeslots: '<?'
       },
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
@@ -204,14 +205,14 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
         if (start.getTime() <= date.getTime() &&
           date.getTime() <= end.getTime()) {
           if (moment(start, "DD-MM-YYYY").isSame(moment(end, "DD-MM-YYYY"))) {
-            requestsCount++;
+            requestsCount += calendarHelper.countTimeslots(requests[i].start_date_tz, requests[i].end_date_tz, vm.timeslots);
           } else {
             return true;
           }
         }
       }
 
-      isAllDayBooked = requestsCount == 2;
+      isAllDayBooked = requestsCount >= 2;
 
       return isAllDayBooked;
     }
