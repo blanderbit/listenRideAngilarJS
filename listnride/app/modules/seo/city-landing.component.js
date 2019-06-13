@@ -65,11 +65,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
             $state.go('404');
           }
         );
-      };
+      }
 
       function onSearchClick() {
         $state.go('search', {location: cityLanding.location});
-      };
+      }
     }
   ]
 });

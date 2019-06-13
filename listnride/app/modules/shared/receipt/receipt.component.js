@@ -12,7 +12,10 @@ angular.module('receipt', []).component('receipt', {
     coverageTotal: '<?',
     countryCode: '<?',
     isPremiumCoverage: '<?',
-    isShop: '<'
+    isShop: '<',
+    setCustomPrices: '<',
+    insuranceAllowed: '<',
+    timeslots: '<'
   },
   controller: [
       'date',
@@ -20,6 +23,7 @@ angular.module('receipt', []).component('receipt', {
     function ReceiptController(date, price) {
       var receipt = this;
       receipt.balance = 0;
+      receipt.isHalfDayBook = false;
 
       this.$onChanges = function (changes) {
         if (changes.user && changes.user.currentValue.balance != undefined) {
@@ -39,9 +43,26 @@ angular.module('receipt', []).component('receipt', {
       }
 
       function setPrices() {
-        var prices = price.calculatePrices(receipt.startDate, receipt.endDate, receipt.prices, receipt.coverageTotal, receipt.isPremiumCoverage, receipt.isShop);
+        var prices = price.calculatePrices({
+          startDate: receipt.startDate,
+          endDate: receipt.endDate,
+          prices: receipt.prices,
+          coverageTotal: receipt.coverageTotal,
+          isPremiumCoverage: receipt.isPremiumCoverage,
+          isShopUser: receipt.isShop,
+          setCustomPrices: receipt.setCustomPrices,
+          insuranceEnabled: receipt.insuranceAllowed(),
+          timeslots: receipt.timeslots
+        });
+
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
+
+        if (receipt.startDate && receipt.durationDays <= 1 && receipt.timeslots.length) {
+          receipt.isHalfDayBook = price.checkHalfDayEnabled(receipt.startDate, receipt.endDate, receipt.timeslots);
+          receipt.halfDayPrice = price.getPriceFor('1/2 day', receipt.prices);
+        }
+
         receipt.discount = prices.subtotal - prices.subtotalDiscounted;
         receipt.discountRelative = receipt.discount / receipt.durationDays;
         receipt.subtotal = prices.subtotal;
@@ -49,7 +70,7 @@ angular.module('receipt', []).component('receipt', {
         receipt.lnrFee = prices.serviceFee;
         receipt.premiumCoverage = prices.premiumCoverage;
         receipt.total = Math.max(prices.total - receipt.balance, 0);
-      };
+      }
 
       function setDefaultPrices() {
         receipt.durationDays = "0";

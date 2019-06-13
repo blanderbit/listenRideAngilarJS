@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Leer más",
-    "label_new": "¿Nuevo",
+    "label_new": "Nuevo",
     "booking-calendar": "Booking Calendar",
     "month": "Month",
     "id": "ID de bicicleta",
@@ -676,6 +676,7 @@
     },
     "overview": {
       "tab": "Resumen",
+      "model": "Modelo",
       "bike-rental": "Tu selección de bicicleta",
       "size": "Tamaño",
       "location": "Ubicación",
@@ -706,11 +707,11 @@
   },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
-    "profile-verified": "Congratulations, your profile was successfully verified!",
-    "profile-updated": "Successfully updated description",
-    "error-upload-profile-picture": "Error while uploading profile picture",
-    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
-    "phone-verified": "Successfully verified phone number.",
+    "profile-verified": "¡Felicidades, tu perfil es verificado!",
+    "profile-updated": "Tu descripción está actualizada.",
+    "error-upload-profile-picture": "Hubo un error al subir tu foto de perfil.",
+    "sms-was-sent": "Te hemos enviado un SMS con el código de confirmación.",
+    "phone-verified": "Tu número de teléfono es verificado.",
     "cluster-deleted": "Bicicletas borradas con éxito",
     "cluster-unmerged": "Grupo de bicicletas desagrupado",
     "cluster-merged": "Las bicicletas se agruparon con éxito",
@@ -755,7 +756,12 @@
       "receive-all": "Receive all notifications",
       "receive-minimal": "Receive minimal notifications",
       "receive-all-description": "You will receive all transaction related messages, including reminders",
-      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
     },
     "newsletter-subscribe": "Sí, por favor envíeme el boletín de noticias mensual",
     "newsletter-description": "Deseo suscribirme a la newsletter y formar parte de la comunidad listnride para estar al día de todas las novedades relacionadas al ciclismo, nuevos destinos para ciclistas, eventos y recibir cupones de descuento para mi próximo alquiler.",
@@ -932,7 +938,7 @@
   },
   "message": {
     "accept": "Aceptar",
-    "go-to-calendar": "Go to Calendar",
+    "go-to-calendar": "Calendario de reservas",
     "reject": "Rechazar",
     "rate": "Tarifa",
     "confirm": "Confirmar",
@@ -948,7 +954,7 @@
     "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br>\nNombre: {{user.first_name}}{{user.last_name}}\n<br>\nTeléfono: {{user.pretty_phone_number}}\n<br>Dirección: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}},{{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Gracias por confirmar la recuperación de tu bicicleta y calificar {{user.first_name}}. El alquiler fue un éxito y el dinero se transferirá a la cuenta bancaria que proporcionó durante los siguientes 7 días hábiles. <br><br>En caso de alguna duda o sugerencia, estaremos encantados de recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "Rechazó la solicitud. Dígale al ciclista por qué no puede alquilarle la bici.",
-    "9": "Lamentablemente, {{user.first_name}}no confirmó la solicitud",
+    "9": "Lamentablemente, la solicitud expiró.",
     "10": "Su reserva fue cancelada por el sistema"
   },
   "rideChat": {
@@ -1083,6 +1089,7 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
+    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
     "status-closed": "closed",
     "status-in-past": "in past",
     "booked": "booked",
@@ -1103,7 +1110,7 @@
   },
   "list": {
     "edit-bike": "Editar bici",
-    "half-day-price": "half day price",
+    "half-day-price": "Media jornada",
     "save-changes": "Guardar ",
     "list-your-bike": "Registra tu bici",
     "back": "Anterior",
@@ -1528,27 +1535,29 @@
   },
   "booking-calendar": {
     "event": {
-      "accepted": "Accepted",
-      "request-waiting": "Request waiting",
-      "not-available": "Not available",
-      "waiting": "Waiting",
-      "not-available-header": "Bike is not available",
-      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
-      "see-settings": "See settings",
-      "date": "Date",
-      "pickup": "Pickup",
-      "booking-id": "Booking ID",
+      "accepted": "Aceptado",
+      "request-waiting": "Solicitud pendiente",
+      "not-available": "No está disponible",
+      "waiting": "Pendiente",
+      "not-available-header": "La bicicleta no está disponible",
+      "not-available-text": "La bicicleta para este período de tiempo no está disponible. Puedes cambiar la disponibilidad en la configuración de tu bicicleta.",
+      "see-settings": "Ir a la configuración",
+      "date": "Fecha",
+      "pickup": "Inicio del alquiler",
+      "booking-id": "Nr. De reserva",
       "rider": "Rider",
-      "contact": "Contact",
-      "view-booking": "View booking"
+      "contact": "Número de teléfono",
+      "view-booking": "Ver la reservación"
     },
-    "previous-month": "Previous month",
-    "next-month": "Next month",
+    "previous-month": "Mes anterior",
+    "next-month": "Próximo mes",
     "previous-week": "Previous week",
-    "next-week": "Next week",
-    "filter-by-requests": "With requests only",
-    "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location",
-    "bike-variants": "Bike Variants"
+    "next-week": "Próxima semana",
+    "filter-by-requests": "Mostrar solo las solicitudes",
+    "no-bikes-to-display": "No hay bicicletas para mostrar",
+    "any-location": "Todas las localizaciones",
+    "bike-variants": "Número de bicicletas",
+    "meta-title": "Booking Calendar",
+    "meta-description": "Excellent calendar view for easier request management"
   }
 }

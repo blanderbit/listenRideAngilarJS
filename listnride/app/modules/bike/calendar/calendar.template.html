@@ -97,13 +97,27 @@
 </div>
 <!-- END EVENT CALENDAR -->
 
-<!-- TIME RANGES for Slotable events -->
+<div
+  ng-if="calendar.startDate && calendar.durationDays <= 1 && calendar.hasTimeSlots"
+  layout="column"
+  layout-padding>
+  <md-divider class="lnr-p-0 lnr-mh"></md-divider>
+  <p class="lnr-mb-0" translate="calendar.ability-to-pick-half-day"></p>
+  <div class="lnr-mb-0 lnr-pt-0" ng-repeat="timeslot in calendar.timeslots">
+    {{timeslot.start_time.hour}}:00 - {{timeslot.end_time.hour}}:00
+  </div>
+  <md-divider class="lnr-p-0 lnr-mh"></md-divider>
+</div>
+
+
+<!-- TIME RANGES -->
 <div
   ng-if="!calendar.isOnSlotableEvent && calendar.startDate && !calendar.isRangedDateEvent"
   id="timeRange"
   layout="row"
   layout-align="start center"
   layout-padding>
+
   <md-input-container flex>
     <label>{{ 'shared.from' | translate }} {{ calendar.startDate | date }}</label>
     <md-select
@@ -113,7 +127,7 @@
       placeholder="{{ 'shared.from' | translate }}"
     >
       <md-option
-        ng-disabled="!calendar.calendarHelper.isTimeAvailable($index, calendar.bikeOwner.opening_hours, calendar.startDate)"
+        ng-disabled="!calendar.calendarHelper.isTimeAvailable($index, calendar.bikeOwner.opening_hours, calendar.startDate) || !calendar.isTimeslotAvailable($index+6)"
         ng-repeat="i in [].constructor(17) track by $index"
         value="{{$index + 6}}"
       >
@@ -131,7 +145,7 @@
       placeholder="{{ 'shared.to' | translate }}"
     >
       <md-option
-        ng-disabled="!calendar.calendarHelper.isTimeAvailable($index, calendar.bikeOwner.opening_hours, calendar.endDate)"
+        ng-disabled="!calendar.calendarHelper.isTimeAvailable($index, calendar.bikeOwner.opening_hours, calendar.endDate) || !calendar.isTimeslotAvailable($index+6)"
         ng-repeat="i in [].constructor(17) track by $index"
         value="{{$index + 6}}"
       >
@@ -203,9 +217,14 @@
 
       <div layout="row" layout-align="space-between center">
         <div layout="row" layout-align="start center">
-          <span ng-if="calendar.durationDays">{{calendar.durationDays}} {{ 'shared.days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}</span>
+          <span ng-if="calendar.durationDays >= 1 && !calendar.isHalfDayBook">
+            {{calendar.durationDays}} {{ 'shared.days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}
+          </span>
+          <span ng-if="calendar.durationDays >= 1 && calendar.isHalfDayBook">
+            {{ 'list.half-day-price' | translate }}
+          </span>
           <span ng-if="!calendar.durationDays">0 {{ 'shared.days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}</span>
-          <div>
+          <div ng-if="!(calendar.durationDays >= 1 && calendar.isHalfDayBook)">
             <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
             <md-tooltip md-direction="right"><span translate="calendar.info-subtotal"></span></md-tooltip>
           </div>
@@ -226,14 +245,14 @@
 
       <div layout="row" layout-align="space-between center">
         <div layout="row">
-          <div layout="row" style="width:170px;" ng-if="!calendar.insuranceCountry()">
+          <div layout="row" style="width:170px;" ng-if="!calendar.hasInsurance()">
             {{ 'shared.lnr-fee' | translate }}
             <div>
               <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
               <md-tooltip md-direction="right"><span translate="calendar.info-service-fee"></span></md-tooltip>
             </div>
           </div>
-          <div layout="row" style="width:170px;" ng-if="calendar.insuranceCountry()">
+          <div layout="row" style="width:170px;" ng-if="calendar.hasInsurance()">
             {{ 'shared.basic-fee' | translate }}
             <div>
               <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
@@ -265,7 +284,7 @@
     <span ng-if="!calendar.isFormInvalid()">{{ 'calendar.request-bike' | translate }}</span>
     <span ng-if="calendar.isFormInvalid()">{{ 'calendar.select-timespan' | translate }}</span>
   </md-button>
-  <div layout-padding layout="row" ng-if="calendar.insuranceCountry()">
+  <div layout-padding layout="row" ng-if="calendar.hasInsurance()">
     <md-icon md-svg-src="app/assets/ui_icons/icn_insurance.svg" class="lnr-icn-md lnr-m-0"></md-icon>
     <div layout="column">
       <span class="md-body-1">{{ 'calendar.basic-insurance-included' | translate }}</span>

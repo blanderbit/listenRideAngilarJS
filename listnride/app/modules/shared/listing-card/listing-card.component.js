@@ -53,7 +53,7 @@ angular.module('listingCard',[]).component('listingCard', {
             listingCard.disableActivate = false;
           }
         );
-      };
+      }
 
       // deactivate a bike
       // implementation is different from parent component
@@ -69,7 +69,7 @@ angular.module('listingCard',[]).component('listingCard', {
             notification.show(error, 'error');
           }
         );
-      };
+      }
     }
   ]
 });

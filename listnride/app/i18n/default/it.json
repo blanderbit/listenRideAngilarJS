@@ -672,6 +672,7 @@
     },
     "overview": {
       "tab": "Riepilogo",
+      "model": "Modello",
       "bike-rental": "La bici selzionata",
       "size": "Taglia",
       "location": "Località",
@@ -751,7 +752,12 @@
       "receive-all": "Receive all notifications",
       "receive-minimal": "Receive minimal notifications",
       "receive-all-description": "You will receive all transaction related messages, including reminders",
-      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
     },
     "newsletter-subscribe": "Sì, per favore inviami la newsletter mensile di listnride",
     "newsletter-description": "Iscriviti e ricevi la nostra newsletter  nella tua casella di posta. La nostra newsletter ti informa sui nuovi marchi, sulle nuove e utili funzioni su listnride.it, su ciò che accade nella community, sulle destinazioni di viaggio con biciclette presenti in piattaforma e gli eventi ciclistici.\nAbbiamo detto che è realizzata con molto amore e dedizione? Perchè lo è.\nPuoi disiscriverti in qualsiasi momento, ovviamente.",
@@ -928,7 +934,7 @@
   },
   "message": {
     "accept": "Accetta",
-    "go-to-calendar": "Go to Calendar",
+    "go-to-calendar": "Calendario delle prenotazioni",
     "reject": "Rifiuta",
     "rate": "Voto",
     "confirm": "Confermare",
@@ -944,7 +950,7 @@
     "3": "Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
-    "9": "Purtroppo {{user.first_name}} non ha confermato la richiesta",
+    "9": "Sfortunatamente, la richiesta è scaduta.",
     "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
@@ -1079,6 +1085,7 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
+    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
     "status-closed": "chiuso",
     "status-in-past": "nel passato",
     "booked": "booked",
@@ -1099,7 +1106,7 @@
   },
   "list": {
     "edit-bike": "Modifica la bicicletta",
-    "half-day-price": "Prezzo mezza giornata",
+    "half-day-price": "Mezza giornata",
     "save-changes": "Salva modifiche",
     "list-your-bike": "Registra la tua bicicletta",
     "back": "Indietro",
@@ -1547,6 +1554,8 @@
     "filter-by-requests": "With requests only",
     "no-bikes-to-display": "No bikes to display",
     "any-location": "Any location",
-    "bike-variants": "Bike Variants"
+    "bike-variants": "Bike Variants",
+    "meta-title": "Booking Calendar",
+    "meta-description": "Excellent calendar view for easier request management"
   }
 }

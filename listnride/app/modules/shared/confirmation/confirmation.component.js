@@ -1,47 +1,37 @@
 'use strict';
 
 angular.module('confirmation', []).component('confirmation', {
-
   bindings: {
     buttonClass: '<',
     buttonDisable: '<',
     buttonText: '<',
-    confirmText: '<',
-    onSuccess: '&',
-    onFailure: '&'
+    request: '<',
+    onSubmit: '&'
   },
 
-  template:
-  '<md-button ' +
-  '   class="{{confirmation.buttonClass}}" ' +
-  '   ng-disabled="{{confirmation.buttonDisable}}" disabled="{{confirmation.buttonDisable}}"' +
-  '   ng-click="confirmation.openDialog($event)">' +
-  '   {{ confirmation.buttonText | translate }}' +
-  '</md-button>',
+  template: `
+    <md-button 
+      class="{{confirmation.buttonClass}}" 
+      ng-disabled="confirmation.buttonDisable"
+      ng-click="confirmation.openDialog($event)">
+      {{ confirmation.buttonText | translate }}
+    </md-button>
+  `,
 
   controllerAs: 'confirmation',
 
-  controller: [
-    '$mdDialog',
-    function ConfirmationController($mdDialog) {
-      var confirmation = this;
+  controller: function ConfirmationController(requestsService) {
+    const confirmation = this;
 
-      confirmation.confirm = $mdDialog.hide;
-      confirmation.cancel = $mdDialog.cancel;
-
-      confirmation.openDialog = function (ev) {
-        $mdDialog.show({
-          templateUrl: 'app/modules/shared/confirmation/confirmation.template.html',
-          controller: ['$scope', function ($scope) {$scope.confirmation = confirmation;}],
-          parent: angular.element(document.body),
-          clickOutsideToClose: true,
-          targetEvent: ev
-        })
-        .then(function () {
-          confirmation.buttonDisable = true;
-          confirmation.onSuccess();
-        });
-      }
-    }]
+    confirmation.openDialog = function(clickEvent) {
+      const promise = requestsService.rejectBooking({
+        request: confirmation.request,
+        clickEvent,
+        options: {
+          buttonClass: confirmation.buttonClass
+        }
+      });
+      confirmation.onSubmit({ promise });
+    };
+  }
 });
-

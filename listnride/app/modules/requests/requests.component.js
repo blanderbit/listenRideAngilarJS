@@ -4,30 +4,12 @@ angular.module('requests', ['infinite-scroll'])
   .component('requests', {
   templateUrl: 'app/modules/requests/requests.template.html',
   controllerAs: 'requests',
-  controller: ['$localStorage',
-    '$interval',
-    '$filter',
-    '$mdMedia',
-    '$mdDialog',
-    '$window',
-    'api',
-    '$timeout',
-    '$location',
-    '$anchorScroll',
-    '$state',
-    '$stateParams',
-    '$translate',
-    '$mdToast',
-    '$analytics',
-    'date',
-    'accessControl',
-    'payoutHelper',
-    'notification',
+  controller:
     function RequestsController($localStorage, $interval, $filter,
       $mdMedia, $mdDialog, $window, api,
       $timeout, $location, $anchorScroll,
       $state, $stateParams, $translate, $mdToast, $analytics, date,
-      accessControl, payoutHelper, notification) {
+      accessControl, payoutHelper, notification, requestsService) {
 
       var requests = this;
       // user should be logged in
@@ -35,20 +17,6 @@ angular.module('requests', ['infinite-scroll'])
 
       // TODO: remove poller
       var poller;
-
-      var STATUSES = {
-        'REQUESTED': 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride
-        'ACCEPTED': 2, // You accepted the Request || Lister accepted your Request CONFIRM / CANCEL
-        'CONFIRMED': 3, // Ride confirmed and will rent ride CONFIRM RETURN || You confirmed and will rent a ride
-        'ONE_SIDE_RATE': 4, // Lister confirmed return || Rider leaves rate
-        'BOTH_SIDES_RATE': 5, // Lister and Rider rates each other || Rental complete
-        'RATE_RIDE': 6, // Rider rated lister || Rental complete # Will be skipped
-        'COMPLETE': 7, // Rental complete
-        'LISTER_CANCELED': 8, // Lister cancelled
-        'RIDER_CANCELED': 9, // Rider cancelled
-        'SYSTEM_CANCELED': 10, // Passed due date
-        'MANUALLY_CANCELED': 11 // Canceled manually by us because of various reasons
-      }
 
       requests.$onInit = function () {
         // variables
@@ -86,8 +54,6 @@ angular.module('requests', ['infinite-scroll'])
         requests.request.glued = false;
         requests.loadingList = true;
         requests.loadingChat = false;
-        requests.request.rideChat;
-        requests.request.chatFlow;
         requests.userId = $localStorage.userId;
         requests.currentPage = 1;
         requests.requestsLeft = false;
@@ -112,7 +78,7 @@ angular.module('requests', ['infinite-scroll'])
 
         // invocates
         getRequests();
-      }
+      };
 
       requests.$onDestroy = function () {
         $interval.cancel(poller);
@@ -163,7 +129,7 @@ angular.module('requests', ['infinite-scroll'])
             requests.loadingList = false;
           }
         );
-      };
+      }
 
       /**
        * called whenever user:
@@ -175,13 +141,13 @@ angular.module('requests', ['infinite-scroll'])
         $timeout(function () {
           if (requests.requests.length > 0) {
             requests.selected = requests.requests[0].id;
-            requests.loadRequest(requests.selected, false, 0);
+            requests.loadRequest(requests.selected, false);
           }
         }, 200);
-      };
+      }
 
       // Handles initial request loading
-      function loadRequest (requestId, showDialog, index) {
+      function loadRequest (requestId, showDialog) {
         requests.selected = requestId;
         $state.go($state.current, {
           requestId: requestId
@@ -195,17 +161,6 @@ angular.module('requests', ['infinite-scroll'])
         requests.request = {};
         // Load the new request and activate the poller
         reloadRequest(requestId);
-        var last_message = requests.requests[index] ? requests.requests[index].message : null;
-        if (!!last_message && !last_message.is_read && last_message.receiver === parseInt($localStorage.userId)) {
-          api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
-            function (success) {
-              last_message.is_read = true;
-              if ($localStorage.unreadMessages > 0) {
-                $localStorage.unreadMessages -= 1;
-              }
-            }
-          );
-        }
         poller = $interval(function () {
           reloadRequest(requestId);
         }, 10000);
@@ -217,10 +172,10 @@ angular.module('requests', ['infinite-scroll'])
         } else {
           requests.showChat = true;
         }
-      };
+      }
 
       function reloadRequest (requestId) {
-        api.get('/requests/' + requestId).then(
+        return api.get('/requests/' + requestId).then(
           function (success) {
             // On initial load
             if (requests.request.messages == null || requests.request.messages.length != success.data.messages.length) {
@@ -232,12 +187,12 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rideChat ? requests.request.chatFlow = "rideChat" : requests.request.chatFlow = "listChat";
               requests.request.past = (new Date(requests.request.end_date).getTime() < Date.now());
               requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
-              var startDate = new Date(requests.request.start_date);
-              var endDate = new Date(requests.request.end_date);
+              var startDate = new Date(requests.request.start_date_tz);
+              var endDate = new Date(requests.request.end_date_tz);
               requests.request.returnable = (endDate.getTime() < Date.now());
               // these timespans we use in localizations only
-              requests.request.timespan_short = moment(startDate).format('DD.MM, HH:mm') + ' - ' + moment(endDate).format('DD.MM, HH:mm');
-              requests.request.timespan = moment(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment(endDate).format('DD.MM.YY, HH:mm');
+              requests.request.timespan_short = moment.utc(startDate).format('DD.MM, HH:mm') + ' - ' + moment.utc(endDate).format('DD.MM, HH:mm');
+              requests.request.timespan = moment.utc(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment.utc(endDate).format('DD.MM.YY, HH:mm');
 
               if (requests.request.rideChat) {
                 requests.request.rating = requests.request.lister.rating_lister + requests.request.lister.rating_rider;
@@ -254,13 +209,25 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.rating = Math.round(requests.request.rating);
 
               requests.loadingChat = false;
+
+              var last_unread_message = _.last(_.filter(requests.request.messages, function(m){ return m.receiver == $localStorage.userId && m.is_read == false }));
+              if (last_unread_message) {
+                api.post('/requests/' + requestId + '/messages/mark_as_read', { "user_id": $localStorage.userId }).then(
+                  function (success) {
+                    last_unread_message.is_read = true;
+                    if ($localStorage.unreadMessages > 0) {
+                      $localStorage.unreadMessages -= 1;
+                    }
+                  }
+                );
+              }
             }
           },
           function () {
             requests.loadingChat = false;
           }
         );
-      };
+      }
 
       //TODO: Move to shared users service
       function setName() {
@@ -280,82 +247,27 @@ angular.module('requests', ['infinite-scroll'])
       }
 
       function updateStatus (statusId, paymentWarning) {
-        var data = {
-          "request": {
-            "status": statusId
-          }
-        };
-
-        api.put("/requests/" + requests.request.id, data).then(
-          function (success) {
-            reloadRequest(requests.request.id);
-          },
-          function (error) {
+        requestsService
+          .updateStatus({ request: requests.request, statusId, paymentWarning })
+          .then(() => {
+            return reloadRequest(requests.request.id);
+          })
+          .catch(() => {
             reloadRequest(requests.request.id);
             requests.loadingChat = false;
-            if (paymentWarning) {
-              $mdDialog.show(
-                $mdDialog.alert(event)
-                  .parent(angular.element(document.body))
-                  .clickOutsideToClose(true)
-                  .title('The bike couldn\'t be booked')
-                  .textContent('Unfortunately, the payment didn\'t succeed, so the bike could not be booked. The rider already got informed and we\'ll get back to you as soon as possible to finish the booking.')
-                  .ok('Okay')
-                  .targetEvent(event)
-              );
-            }
-          }
-        );
-      };
+          });
+      }
 
       // This function handles request accept and all validations
       function acceptBooking () {
-        api.get('/users/' + $localStorage.userId).then(
-          function (success) {
-            if (validPayoutMethod(success.data)) {
-              // Lister has already a payout method, so simply accept the request
-              requests.loadingChat = true;
-              updateStatus(STATUSES.CONFIRMED, true);
-
-              var bikeData = requests.request;
-              ga('set', 'userId', bikeData.user.id); //set unique userID (riderID)
-
-              ga('ecommerce:addTransaction', {
-                'id': bikeData.id,
-                'affiliation': bikeData.lister.id,
-                'revenue': bikeData.total,
-                'tax': '0' // vat tax
-              });
-              ga('ecommerce:addItem', {
-                'id': bikeData.id,
-                'name': bikeData.ride.brand + ', ' + bikeData.ride.name + ', ' + bikeData.ride.size,
-                'sku': bikeData.ride.id,
-                'category': bikeData.ride.category.name,
-                'price': bikeData.total,
-                'quantity': '1'
-              });
-              ga('ecommerce:send');
-
-              $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Accept'});
-            } else {
-              // Lister has no payout method yet, so show the payout method dialog
-              showPayoutDialog(success.data);
-            }
-          },
-          function (error) {
-
-          }
-        );
-      };
-
-      function validPayoutMethod(data) {
-        if (!data.payout_method) return false;
-
-        if (data.payout_method && data.payout_method.payment_type === 'credit-card') {
-          return data.payout_method.iban && data.payout_method.bic && data.payout_method.first_name && data.payout_method.last_name;
-        }
-
-        return true;
+        requests.loadingChat = true;
+        requestsService.acceptBooking({ request: requests.request })
+          .then(() => {
+            return reloadRequest(requests.request.id);
+          })
+          .finally(() => {
+            requests.loadingChat = false;
+          });
       }
 
       // Sends a new message by directly appending it locally and posting it to the API
@@ -385,46 +297,9 @@ angular.module('requests', ['infinite-scroll'])
           requests.confirmBooking();
         }
         requests.message = "";
-      };
-
+      }
 
       // DIALOGS
-      // Payout Dialog
-      function showPayoutDialog(user, event) {
-        $mdDialog.show({
-          locals: {user: user},
-          controller: PayoutDialogController,
-          controllerAs: 'settings',
-          templateUrl: 'app/modules/requests/dialogs/payoutDialog.template.html',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: false,
-          fullscreen: true // Only for -xs, -sm breakpoints.
-        });
-      };
-
-      // TODO: this code is appearing twice, here and in the settings Controller (settings.component.rb)
-      function PayoutDialogController(user) {
-        var payoutDialog = this;
-
-        payoutDialog.user = user;
-        payoutDialog.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-        payoutDialog.addPayoutMethod = function () {
-
-          payoutHelper.postPayout(payoutDialog.payoutMethod.formData, payoutDialog.payoutMethod.payment_type, onSuccessPayoutUpdate);
-
-          function onSuccessPayoutUpdate(data) {
-            requests.loadingChat = true;
-            updateStatus(STATUSES.ACCEPTED, false);
-            hideDialog();
-          }
-
-        };
-      };
-
       // Chat Dialog
       function showChatDialog (event) {
         $mdDialog.show({
@@ -438,7 +313,7 @@ angular.module('requests', ['infinite-scroll'])
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      };
+      }
 
       function ChatDialogController() {
         var chatDialog = this;
@@ -446,7 +321,7 @@ angular.module('requests', ['infinite-scroll'])
         chatDialog.hide = function () {
           $mdDialog.hide();
         };
-      };
+      }
 
       // Rating Dialog
       function showRatingDialog (event) {
@@ -461,7 +336,7 @@ angular.module('requests', ['infinite-scroll'])
           clickOutsideToClose: false,
           fullscreen: true // Only for -xs, -sm breakpoints.
         });
-      };
+      }
 
       function showListerDialog (event) {
         $mdDialog.show({
@@ -533,12 +408,12 @@ angular.module('requests', ['infinite-scroll'])
               }
             ).then (
               function () {
-                loadRequest(requests.request.id, true, 0);
+                loadRequest(requests.request.id, true);
               }
             );
           }
         ratingDialog.hide = hideDialog;
-      };
+      }
 
       function hideDialog() {
         // For small screens, show Chat Dialog again
@@ -547,7 +422,7 @@ angular.module('requests', ['infinite-scroll'])
         } else {
           $mdDialog.hide();
         }
-      };
+      }
 
       /**
         * filter lister/rider requests from all requests
@@ -570,7 +445,7 @@ angular.module('requests', ['infinite-scroll'])
         }
 
         if (reset_filter === true) selectDefaultRequest();
-      };
+      }
 
       /**
        * All rentals which are currently rented out.
@@ -588,7 +463,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 3 && (endDate > currentDate));
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * It is a request sent by rider, but not yet accepted by the lister.
@@ -605,7 +480,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 1 || response.status === 2);
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * It is a request sent by rider, but not yet accepted by the lister.
@@ -624,7 +499,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 3 && (startDate > currentDate));
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * Rentals accepted and paid but are now in the past,
@@ -642,7 +517,7 @@ angular.module('requests', ['infinite-scroll'])
           return (response.status === 3 && (endDate < currentDate));
         });
         selectDefaultRequest();
-      };
+      }
 
       /**
        * These were the pending requests
@@ -660,7 +535,6 @@ angular.module('requests', ['infinite-scroll'])
           return ((response.status === 1 || response.status === 2) && (endDate < currentDate));
         });
         selectDefaultRequest();
-      };
+      }
     }
-  ]
 });

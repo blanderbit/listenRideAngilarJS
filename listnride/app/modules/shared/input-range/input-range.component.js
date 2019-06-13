@@ -27,5 +27,5 @@ function inputRangeController($scope) {
   
   function postLink() {
     vm.isSingle = $scope.isSingle;
-  };
+  }
 }

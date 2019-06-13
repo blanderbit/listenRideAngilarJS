@@ -70,7 +70,7 @@ angular.module('veloheldIntegration', []).component('veloheld', {
       }
 
       function transformToKeys(str){
-        return str.replace(/\s+/g, '_').toLowerCase();;
+        return str.replace(/\s+/g, '_').toLowerCase();
       }
 
       function getBikes() {

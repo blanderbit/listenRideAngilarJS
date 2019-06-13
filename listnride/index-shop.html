@@ -1,3 +1,4 @@
+<!-- TODO:  REMOVE THIS FILE AFTER full relocation to webpack -->
 <!DOCTYPE html>
 <html lang="en" ng-app="listnride">
   <head>
@@ -27,6 +28,7 @@
     <!-- build:css app/assets/stylesheet/style.min.css -->
     <link rel="stylesheet" href="js_modules/angular-material-minimal/angular-material.min.css" />
     <link rel="stylesheet" href="js_modules/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="js_modules/scheduler-1.2.5-trial/scheduler.light.css" />
     <link rel="stylesheet" href="app/assets/stylesheets/app.css" />
     <link rel="stylesheet" href="app/assets/stylesheets/galleries.css" />
     <link rel="stylesheet" href="app/services/verification/verification.css" />
@@ -40,6 +42,7 @@
     <link rel="stylesheet" href="node_modules/intl-tel-input/build/css/intlTelInput.css">
     <!-- endbuild -->
     <!-- CDN LIBRARIES -->
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAmpmoaBw_AXiw02-iPPYcX3j9kj0MvM0g"></script>
     <script src="https://js.braintreegateway.com/web/3.44.1/js/client.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.44.1/js/three-d-secure.min.js"></script>
     <script src="https://js.braintreegateway.com/web/3.44.1/js/paypal-checkout.js"></script>
@@ -121,6 +124,8 @@
     <script src="app/modules/shared/filter/accessories-filter.component.js"></script>
     <script src="app/modules/shared/credit-card-input/credit-card-input.component.js"></script>
     <script src="app/modules/shared/status-labels/status-labels.component.js"></script>
+    <script src="app/modules/faq/faq.component.js"></script>
+    <script src="app/modules/booking-calendar/booking-calendar.component.js"></script>
     <!-- services -->
     <script src="app/services/base64/base64.service.js"></script>
     <script src="app/services/authentication/authentication.service.js"></script>

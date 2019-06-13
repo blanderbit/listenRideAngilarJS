@@ -346,6 +346,14 @@ md-menu-content {
   max-height: 300px!important;
 }
 
+md-menu-content.header__menu {
+  /**
+   * in material library default height is 310,
+   * but we need more height in this place for showing log out button without scroll
+  */
+  max-height: 330px!important;
+}
+
 md-card md-card-title {
   padding: 8px;
 }
@@ -494,6 +502,11 @@ md-tooltip .md-content {
 /*-----------------------------------------------------------------------------------*/
 /* LNR_CLASSES
 /*-----------------------------------------------------------------------------------*/
+
+.lnr-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
 .lnr-group-close {
   top: 100%;
@@ -2049,10 +2062,6 @@ home #featuredTiles a {
 .lnr-listing-list-item.lnr-checked-card,
 .lnr-listing-list-item.lnr-checked-card:hover {
   background-color: #f1f1f1;
-}
-
-.lnr-listing-list-item.lnr-unavailable {
-  pointer-events: none;
 }
 
 .lnr-listing-list-item.lnr-unavailable:hover {
@@ -3953,6 +3962,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
   home #landingSection #homeHeroShot {
     background-image: url(../ui_images/lnr_hero6_small.jpg);
+  }
+
+  booking .booking__body {  /*hide coview by moving booking forward*/
+    z-index: 5;
   }
 
   /* TYPOGRAPHY */

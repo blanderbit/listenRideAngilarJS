@@ -45,22 +45,31 @@
       <div
         ng-if="!bike.isOnSlotableEvent"
         class="bike__prices"
-        flex-sm="45" flex-gt-sm="30" layout="row" layout-align="space-between center"
+        layout="row"
+        flex-sm="45"
+        flex-gt-sm="30"
+        layout-align="space-between center"
       >
-        <div class="bike__prices-item" flex="30" layout="column" layout-align="center center">
+        <div ng-if="bike.hasTimeSlots" class="bike__prices-item" flex="20" layout="column" layout-align="center center">
+          <div layout="row" layout-align="center center">
+            <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
+          </div>
+          <span class="md-caption">{{ 'list.half-day-price' | translate }}</span>
+        </div>
+        <div class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
             <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
           </div>
           <span class="md-caption">{{ 'bike.per-day' | translate }}</span>
         </div>
-        <div class="bike__prices-item" flex="30" layout="column" layout-align="center center">
+        <div ng-if="!bike.hasTimeSlots" class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
             <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
             <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
           </div>
           <span class="md-caption">{{ 'bike.from-2-days' | translate }}</span>
         </div>
-        <div flex="30" layout="column" layout-align="center center" class="lnr-dark-green-text bike__prices-item">
+        <div flex="20" layout="column" layout-align="center center" class="lnr-dark-green-text bike__prices-item">
           <div layout="row" layout-align="center center">
             <span class="md-headline">{{ bike.data.prices[6].price | number : 0 }}€</span>
             <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>

@@ -672,6 +672,7 @@
     },
     "overview": {
       "tab": "Samenvatting",
+      "model": "Model",
       "bike-rental": "Je gekozen fiets",
       "size": "Grootte",
       "location": "Locatie",
@@ -702,11 +703,11 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
-    "profile-verified": "Congratulations, your profile was successfully verified!",
-    "profile-updated": "Successfully updated description",
-    "error-upload-profile-picture": "Error while uploading profile picture",
-    "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
-    "phone-verified": "Successfully verified phone number.",
+    "profile-verified": "Gefeliciteerd, je profiel is nu geverifieerd!",
+    "profile-updated": "Beschrijving is bijgewerkt",
+    "error-upload-profile-picture": "Fout bij uploaden profielfoto",
+    "sms-was-sent": "Een sms met een bevestigingscode is zojuist naar je verzonden.",
+    "phone-verified": "Telefoonnummer is nu geverifieerd.",
     "cluster-deleted": "Fietskluster succesvol verwijderd",
     "cluster-unmerged": "Fietscluster is succesvol ontkoppelt",
     "cluster-merged": "Fietsen zijn succesvol samengevoegd in cluster",
@@ -740,10 +741,10 @@
   "settings": {
     "settings": "Instellingen",
     "accept_request_reminder": {
-      "subscribe": "Accept request reminder"
+      "subscribe": "Herinneringsmeldingen"
     },
-    "booking_overview_lister": "Boekingsoverzicht verhuurder",
-    "confirm_return": "Bevestig teruggave",
+    "booking_overview_lister": "Boekingsinformatie verhuurder",
+    "confirm_return": "Bevestig retourberichten",
     "return_reminder": "Herinnering",
     "request_created": "Request created (SMS)",
     "notifications": "Notifications",
@@ -751,7 +752,12 @@
       "receive-all": "Receive all notifications",
       "receive-minimal": "Receive minimal notifications",
       "receive-all-description": "You will receive all transaction related messages, including reminders",
-      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
     },
     "newsletter-subscribe": "Ja, stuur me alsjeblieft de maandelijkse nieuwsbrief",
     "newsletter-description": "Schrijf je in en ontvang onze nieuwsbrief vers in je inbox. Onze nieuwsbrief informeert je over de nieuwste merken, nuttige en nieuwe features op listnride.com, wat er in de community gebeurt, maar ook over reisbestemmingen met fietsen en fietsevenementen. Hebben we al verteld dat dit met veel liefde en toewijding wordt gemaakt? Dat is namelijk zo. Je kunt je natuurlijk op elk moment afmelden.",
@@ -926,7 +932,7 @@
   },
   "message": {
     "accept": "Accepteren",
-    "go-to-calendar": "Go to Calendar",
+    "go-to-calendar": "Naar de boekingskalender",
     "reject": "afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",
@@ -942,7 +948,7 @@
     "3": "Je hebt de boeking bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Bedankt voor het bevestigen van de teruggave van de fiets als ook jouw recensie van {{user.first_name}}. De transactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
-    "9": "helaas heeft {{user.first_name}} de boekingsaanvraag niet bevestigd.",
+    "9": "Helaas is het verzoek verlopen.",
     "10": "Je boeking is geannuleerd door systeem."
   },
   "rideChat": {
@@ -1076,6 +1082,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
+    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
     "status-closed": "Gesloten",
     "status-in-past": "in het verleden",
     "booked": "geboekt",
@@ -1095,7 +1102,7 @@
   },
   "list": {
     "edit-bike": "Fiets bewerken",
-    "half-day-price": "1/2 dagprijs",
+    "half-day-price": "1/2 dag",
     "save-changes": "Opslaan",
     "list-your-bike": "Fiets plaatsen",
     "back": "Terug",
@@ -1520,27 +1527,29 @@
   },
   "booking-calendar": {
     "event": {
-      "accepted": "Accepted",
-      "request-waiting": "Request waiting",
-      "not-available": "Not available",
+      "accepted": "Geaccepteerd",
+      "request-waiting": "Openstaande Aanvraag",
+      "not-available": "Niet Beschikbaar",
       "waiting": "Waiting",
-      "not-available-header": "Bike is not available",
-      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
-      "see-settings": "See settings",
-      "date": "Date",
-      "pickup": "Pickup",
-      "booking-id": "Booking ID",
-      "rider": "Rider",
-      "contact": "Contact",
-      "view-booking": "View booking"
+      "not-available-header": "De fiets is niet beschikbaar",
+      "not-available-text": "De fiets is niet beschikbaar voor deze periode. Je kan de beschikbaarheid onder uw fietsinstellingen wijzigen.",
+      "see-settings": "Ga naar Instellingen",
+      "date": "Datum",
+      "pickup": "Ophalen om",
+      "booking-id": "Boekings-nr.",
+      "rider": "Huurder",
+      "contact": "Telefoonnummer",
+      "view-booking": "Boeking bekijken"
     },
-    "previous-month": "Previous month",
-    "next-month": "Next month",
-    "previous-week": "Previous week",
-    "next-week": "Next week",
-    "filter-by-requests": "With requests only",
-    "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location",
-    "bike-variants": "Bike Variants"
+    "previous-month": "Vorige maand",
+    "next-month": "Volgende maand",
+    "previous-week": "Vorige week",
+    "next-week": "Volgende week",
+    "filter-by-requests": "Alleen met aanvragen weergeven",
+    "no-bikes-to-display": "Geen fietsen om weer te geven",
+    "any-location": "Alle locaties",
+    "bike-variants": "Aantal fietsen",
+    "meta-title": "Boekingkalender",
+    "meta-description": "Kalenderweergave voor eenvoudig boekingsmanagement en voorraadbeheer"
   }
 }

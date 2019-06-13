@@ -15,10 +15,18 @@
   <div ng-if="!receipt.freeBike"class="lnr-p-0" layout-padding>
     <div layout="row" layout-align="space-between center">
       <div layout="row" layout-align="start center">
-        <span ng-if="calendar.durationDays">{{ receipt.durationDays }} {{ 'shared.days' | translate }} x {{ receipt.prices[0].price | currency:"€":0 }}</span>
-        <span ng-if="!calendar.durationDays">{{ receipt.durationDays }} {{ 'shared.days' | translate }} x {{ receipt.prices[0].price | currency:"€":0 }}</span>
-        <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
-        <md-tooltip md-direction="right"><span translate="calendar.info-subtotal"></span></md-tooltip>
+        <span ng-if="receipt.durationDays >= 1 && !receipt.isHalfDayBook">
+          {{receipt.durationDays}} {{ 'shared.days' | translate }} x {{ receipt.prices[0].price | currency:"€":0 }}
+        </span>
+        <span ng-if="receipt.durationDays >= 1 && receipt.isHalfDayBook">
+          {{ 'list.half-day-price' | translate }}
+        </span>
+        <span ng-if="!receipt.durationDays">0 {{ 'shared.days' | translate }} x
+          {{ receipt.prices[0].price | currency:"€":0 }}</span>
+        <div ng-if="!(receipt.durationDays >= 1 && receipt.isHalfDayBook)">
+          <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
+          <md-tooltip md-direction="right"><span translate="calendar.info-subtotal"></span></md-tooltip>
+        </div>
       </div>
       <span>{{ receipt.subtotal | currency:"€":2 }}</span>
     </div>
@@ -33,16 +41,16 @@
     </div>
 
     <div
-      ng-if="!receipt.isShop || receipt.isShop && receipt.insuranceCountry()"
+      ng-if="!receipt.isShop || receipt.isShop && receipt.insuranceAllowed()"
       layout="row"
       layout-align="space-between center">
       <div layout="row" layout-align="start center">
         <div
           layout="row"
           style="width:170px;">
-          <span ng-if="!receipt.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</span>
-          <span ng-if="!receipt.isShop && receipt.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</span>
-          <span ng-if="receipt.isShop && receipt.insuranceCountry()">{{ 'shared.basic-insurance-fee' | translate }}</span>
+          <span ng-if="!receipt.insuranceAllowed()">{{ 'shared.lnr-fee' | translate }}</span>
+          <span ng-if="!receipt.isShop && receipt.insuranceAllowed()">{{ 'shared.basic-fee' | translate }}</span>
+          <span ng-if="receipt.isShop && receipt.insuranceAllowed()">{{ 'shared.basic-insurance-fee' | translate }}</span>
           <div ng-if="!receipt.isShop">
             <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
             <md-tooltip md-direction="right">

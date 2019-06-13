@@ -16,26 +16,14 @@ angular.module('message',[]).component('message', {
     messageTime: '<',
     time: '<'
   },
-  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api', 'ENV',
-    function MessageController($translate, $localStorage, $mdDialog, $analytics, api, ENV) {
+  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api', 'ENV', 'MESSAGE_STATUSES',
+    function MessageController($translate, $localStorage, $mdDialog, $analytics, api, ENV, MESSAGE_STATUSES) {
       var message = this;
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
       var hasInsurance = !!message.request.insurance;
 
-      message.STATUSES = {
-        'REQUESTED': 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride
-        'ACCEPTED': 2, // You accepted the Request || Lister accepted your Request CONFIRM / CANCEL
-        'CONFIRMED': 3, // Ride confirmed and will rent ride CONFIRM RETURN || You confirmed and will rent a ride
-        'ONE_SIDE_RATE': 4, // Lister confirmed return || Rider leaves rate
-        'BOTH_SIDES_RATE': 5, // Lister and Rider rates each other || Rental complete
-        'RATE_RIDE': 6, // Rider rated lister || Rental complete # Will be skipped
-        'COMPLETE': 7, // Rental complete
-        'LISTER_CANCELED': 8, // Lister cancelled
-        'RIDER_CANCELED': 9, // Rider cancelled
-        'SYSTEM_CANCELED': 10, // Passed due date
-        'MANUALLY_CANCELED': 11 // Canceled manually by us because of various reasons
-      }
+      message.STATUSES = MESSAGE_STATUSES;
 
       // Dont display messages with following statuses to Rider;
       var riderNotDisplayableMessages = [message.STATUSES.ACCEPTED, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
@@ -150,40 +138,24 @@ angular.module('message',[]).component('message', {
           } else {
             return message.status == message.STATUSES.CONFIRMED
           }        
-        };
+        }
       };
 
-      // TODO: Unfortunately doublecoded in message.component and requests.component
-      message.updateStatus = function(statusId) {
+      message.handleRejectionSubmission = function(promise) {
         message.buttonClicked = true;
-        var data = {
-          "request_id": message.request.id,
-          "sender": $localStorage.userId,
-          "status": statusId,
-          "content": ""
-        };
-
-        message.request.messages.push(data);
-        var data = {
-          "request": {
-            "status": statusId
-          }
-        };
-
-        message.request.status = statusId;
-
-        api.put("/requests/" + message.request.id, data).then(
-          function(success) {
-            if (statusId === message.STATUSES.LISTER_CANCELED) {
-              $analytics.eventTrack('Request Received', {  category: 'Rent Bike', label: 'Reject'});
-            }
-          },
-          function(error) {
+        promise
+          .then(({ statusId }) => {
+            message.request.messages.push({
+              request_id: message.request.id,
+              sender: $localStorage.userId,
+              status: statusId,
+              content: ""
+            });
+          })
+          .catch(() => {
             message.buttonClicked = false;
-          }
-        );
+          });
       };
-
     }
   ]
 });

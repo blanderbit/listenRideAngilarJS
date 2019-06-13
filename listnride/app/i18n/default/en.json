@@ -680,6 +680,7 @@
     },
     "overview": {
       "tab": "Overview",
+      "model": "Model",
       "bike-rental": "Your bike rental",
       "size": "Size",
       "location": "Location",
@@ -711,10 +712,10 @@
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
     "profile-verified": "Congratulations, your profile was successfully verified!",
-    "profile-updated": "Successfully updated description",
-    "error-upload-profile-picture": "Error while uploading profile picture",
+    "profile-updated": "Your description is updated.",
+    "error-upload-profile-picture": "There was an error in uploading your profile picture",
     "sms-was-sent": "An SMS with a confirmation code was sent to you just now.",
-    "phone-verified": "Successfully verified phone number.",
+    "phone-verified": "Your phone number was successfully verified.",
     "cluster-deleted": "Bike cluster successfully deleted",
     "cluster-unmerged": "Bike cluster successfully unmerged",
     "cluster-merged": "Bikes successfully merged into cluster",
@@ -750,7 +751,7 @@
     "accept_request_reminder": {
       "subscribe": "Reminder notifications"
     },
-    "booking_overview_lister": "Booking overview Info",
+    "booking_overview_lister": "Booking information",
     "confirm_return": "Confirm return messages",
     "return_reminder": "Return reminder messages",
     "request_created": "Booking related SMS",
@@ -759,7 +760,12 @@
       "receive-all": "Receive all notifications",
       "receive-minimal": "Receive minimal notifications",
       "receive-all-description": "You will receive all transaction related messages, including reminders",
-      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages"
+      "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
+      "accept_request_reminder": "Accept request reminder",
+      "confirm_return": "Confirm return messages",
+      "request_created": "Booking related SMS",
+      "booking_overview_lister": "Booking overview Info",
+      "return_reminder": "Return reminder messages"
     },
     "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
     "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
@@ -937,7 +943,7 @@
   },
   "message": {
     "accept": "Accept",
-    "go-to-calendar": "Go to Calendar",
+    "go-to-calendar": "Go to Booking Calendar",
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
@@ -953,7 +959,7 @@
     "3": "You've accepted the request and so the bike is booked. You'll rent it out from {{timespan}}! Contact Details are as follows, we've also sent them to you via email.\n<br>\nName: {{user.first_name}} {{user.last_name}}\n<br>\nPhone: {{user.pretty_phone_number}}\n<br>Address: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}} </a> ",
     "5": "Thanks for confirming the return of your bike and rating {{user.first_name}}. The rental was successful and the money will get transferred to the bank account you provided during the next 7 working days.<br><br>In case of any further questions or feedback, we’d love to receive them under <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "You've rejected the booking request. Please tell the rider why you can't rent him the bike.",
-    "9": "Unfortunately {{user.first_name}} didn't confirm the request",
+    "9": "Unfortunately, the request expired.",
     "10": "Your booking was cancelled by the system"
   },
   "rideChat": {
@@ -1088,6 +1094,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
+    "ability-to-pick-half-day": "You can pick this bike for half day. <br>\nIf you will pick the bike in following time range: ",
     "status-closed": "closed",
     "status-in-past": "in the past",
     "booked": "booked",
@@ -1108,7 +1115,7 @@
   },
   "list": {
     "edit-bike": "Edit Bike",
-    "half-day-price": "1/2-day price",
+    "half-day-price": "1/2 day",
     "save-changes": "Save changes",
     "list-your-bike": "List your bike",
     "back": "Back",
@@ -1536,26 +1543,28 @@
   "booking-calendar": {
     "event": {
       "accepted": "Accepted",
-      "request-waiting": "Request waiting",
+      "request-waiting": "Pending request",
       "not-available": "Not available",
-      "waiting": "Waiting",
-      "not-available-header": "Bike is not available",
-      "not-available-text": "You made the bike for this period of time unavailable. You can change the availability in your bike settings.",
-      "see-settings": "See settings",
+      "waiting": "Pending",
+      "not-available-header": "The bike is not available",
+      "not-available-text": "The bike is unavailable for this period. You can change the availability in your bike settings.",
+      "see-settings": "Go to settings",
       "date": "Date",
-      "pickup": "Pickup",
-      "booking-id": "Booking ID",
+      "pickup": "Pickup at",
+      "booking-id": "Booking Nr.",
       "rider": "Rider",
-      "contact": "Contact",
+      "contact": "Phone number",
       "view-booking": "View booking"
     },
     "previous-month": "Previous month",
     "next-month": "Next month",
     "previous-week": "Previous week",
     "next-week": "Next week",
-    "filter-by-requests": "With requests only",
+    "filter-by-requests": "Display with requests only",
     "no-bikes-to-display": "No bikes to display",
-    "any-location": "Any location",
-    "bike-variants": "Bike Variants"
+    "any-location": "All locations",
+    "bike-variants": "Nr. of Bikes",
+    "meta-title": "Booking Calendar",
+    "meta-description": "Calendar view for easy booking- and inventory management"
   }
 }

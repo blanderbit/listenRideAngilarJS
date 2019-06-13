@@ -92,6 +92,7 @@ angular.module('settings',[])
         settings.compactObject = compactObject;
         settings.showResponseMessage = showResponseMessage;
         settings.updateNewsletter = updateNewsletter;
+        settings.toggleNotifications = toggleNotifications;
 
         // invocations
         userApi.getUserData().then(function (response) {
@@ -105,6 +106,11 @@ angular.module('settings',[])
       function setUserData(data) {
         settings.user = data;
 
+        settings.selectedPreferences = _.omit(settings.user.notification_preference, ['id', 'newsletter']);
+        settings.isChecked = _.valuesIn(settings.selectedPreferences).every(function (item) {
+          return item === true;
+        });
+
         // payment method exist
         if (settings.user.payment_method) {
           settings.paymentDescription = paymentHelper.getPaymentShortDescription(settings.user.payment_method);
@@ -112,10 +118,10 @@ angular.module('settings',[])
 
         settings.openingHoursEnabled = settings.user.opening_hours ? settings.user.opening_hours.enabled : false;
 
-        if (!!settings.user.locations) {
+        if (settings.user.locations) {
           settings.user.has_billing = !!settings.user.locations.billing
         }
-        if (!!settings.user.phone_number) {
+        if (settings.user.phone_number) {
           updatePrivatePhoneNumber(settings.user.phone_number)
         }
         if (!_.isEmpty(settings.user.business)) {
@@ -245,7 +251,7 @@ angular.module('settings',[])
         } else {
           cleanBillingInputs()
         }
-      };
+      }
 
       function removeBilling(id) {
         api.delete("/users/" + settings.user.id + "/locations/" + id).then(
@@ -297,7 +303,7 @@ angular.module('settings',[])
           settings.user.locations.primary.city = desiredComponents.locality;
           settings.user.locations.primary.country = desiredComponents.country;
         }
-      };
+      }
 
       function prepareData() {
         var primary = settings.user.locations.primary;
@@ -373,7 +379,7 @@ angular.module('settings',[])
             notification.show(error, 'error');
           }
         );
-      };
+      }
 
       // TODO: replace to service
       function showResponseMessage(message, path) {
@@ -396,7 +402,7 @@ angular.module('settings',[])
           }
         });
         return clone;
-      };
+      }
 
       function changePhoneNumber (event) {
         $mdDialog.show({
@@ -416,7 +422,7 @@ angular.module('settings',[])
           // update model with private number
           updatePrivatePhoneNumber(success.phone_number);
         });
-      };
+      }
 
       function changePassword (event) {
         $mdDialog.show({
@@ -486,7 +492,7 @@ angular.module('settings',[])
         function onErrorPayoutUpdate() {
           settings.payoutMethod.loading = false;
         }
-      };
+      }
 
       function getShortIban() {
         return '**** ' + settings.user.payout_method.iban.slice(-6);
@@ -523,7 +529,7 @@ angular.module('settings',[])
             notification.show(error, 'error');
           }
         );
-      };
+      }
 
       function deleteAccount(event) {
         var confirm = $mdDialog.confirm()
@@ -560,13 +566,35 @@ angular.module('settings',[])
             settings.user.balance = response.data.balance;
           });
         }, null);
-      };
+      }
 
       function updateNewsletter() {
         var data = {
           'notification_preference': {
             'newsletter': settings.user.notification_preference.newsletter
           }
+        };
+
+        api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(
+          function (success) {
+            notification.show(success, null, 'toasts.update-profile-success');
+          },
+          function (error) {
+            notification.show(error, 'error');
+          }
+        );
+      }
+
+      function toggleNotifications() {
+        var preferences = settings.user.notification_preference;
+        for (var key in preferences) {
+          if(key !== 'id' && key !== 'newsletter') {
+            preferences[key] = settings.isChecked;
+          }
+        }
+
+        var data = {
+          'notification_preference': settings.user.notification_preference
         };
 
         api.put("/notification_preferences/" + settings.user.notification_preference.id, data).then(
@@ -607,10 +635,10 @@ angular.module('settings',[])
       function changeKeys(data) {
         var formatedData = {};
         _.each(data, function (value, key) {
-          var key = settings.weekDays.findIndex(function (element) {
+          var foundKey = settings.weekDays.findIndex(function (element) {
             return key === element;
           });
-          _.set(formatedData, key, formatDayData(value));
+          _.set(formatedData, foundKey, formatDayData(value));
         });
         return formatedData;
       }

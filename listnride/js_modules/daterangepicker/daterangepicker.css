@@ -6,9 +6,9 @@
 	border:0;
 	line-height:25px;
 	font-size:14px;
-	// font-weight:bold;
+	/*font-weight:bold;*/
 	cursor:pointer;
-	// color:#303030;
+	/*color:#303030;*/
 	position:relative;
 	z-index:2;
 }
@@ -16,10 +16,10 @@
 {
 	position:absolute;
 	z-index:1;
-	// font-size:14px;
+	/*font-size:14px;*/
 	line-height:20px;
-	// color:#aaa;
-	// box-shadow:3px 3px 10px rgba(0,0,0,0.5);
+	/*color:#aaa;*/
+	/*box-shadow:3px 3px 10px rgba(0,0,0,0.5);*/
 	box-sizing: initial;
 }
 .date-picker-wrapper.inline-wrapper { position: relative; box-shadow: none; display:inline-block;}
@@ -30,7 +30,7 @@
 /*// .date-picker-wrapper.no-topbar { padding-top:12px;}*/
 .date-picker-wrapper .footer
 {
-	// font-size:11px;
+	/*font-size:11px;*/
 	padding-top: 3px;
 }
 .date-picker-wrapper b
@@ -49,9 +49,9 @@
 }
 .date-picker-wrapper .month-wrapper
 {
-	// border-bottom:1px solid rgba(229,234,234,1.0);
+	/*border-bottom:1px solid rgba(229,234,234,1.0);*/
 	background-color:#fff;
-	// padding:5px;
+	/*padding:5px;*/
 	cursor:default;
 	position:relative;
 	_overflow:hidden;
@@ -67,7 +67,7 @@
 .date-picker-wrapper .month-wrapper table
 {
 	width:100%;
-	// float:left;
+	/*float:left;*/
 }
 .date-picker-wrapper .month-wrapper table.month2
 {
@@ -90,7 +90,7 @@
 	text-align:center;
 	line-height:14px;
 	margin : 0px;
-	// padding : 0px;
+	/*padding : 0px;*/
 	font-weight: 400;
 }
 .date-picker-wrapper .month-wrapper table .day
@@ -218,7 +218,7 @@
 	top: 6px;
 	padding:3px 5px;
 	margin:0;
-	// font-size:12px;
+	/*font-size:12px;*/
 	border-radius:4px;
 	cursor:pointer;
 	
@@ -290,7 +290,7 @@
 {
 	padding:5px 0;
 	line-height:1;
-	// font-size:12px;
+	/*font-size:12px;*/
 	margin-bottom:1px;
 	color:#999;
 	cursor: pointer;

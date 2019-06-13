@@ -44,6 +44,15 @@ angular.module('listnride')
       return isAvailable;
     };
 
+    var isTimeInTimeslots = function(hour, timeslots) {
+      let timeslotsRange = [];
+      _.forEach(timeslots, function(timeslot) {
+        let timeslotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour + 1);
+        timeslotsRange = [...timeslotsRange, ...timeslotRange]
+      })
+      return _.includes(timeslotsRange, hour);
+    };
+
     var isDayAvailable = function(openingHours, date) {
       if (!openingHoursAvailable(openingHours)) return false;
 
@@ -94,10 +103,33 @@ angular.module('listnride')
       return moment(startDate).hour(startTime)._d;
     }
 
+    function countTimeslots(requestStart, requestEnd, timeslots) {
+      var startTime = moment.utc(requestStart).format('HH');
+      var endTime = moment.utc(requestEnd).format('HH');
+      let dateTimeRange = _.range(startTime, +endTime + 1);
+
+      let prev_time = null;
+      let used_part_day_slots = 0;
+
+      _.forEach(timeslots, (timeslot) => {
+        let timeSlotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour+1);
+        let in_slot = !!_.intersection(timeSlotRange, dateTimeRange).length;
+        let extreme_time = (prev_time == timeslot.start_time.hour && !!_.find([startTime, endTime], prev_time));
+
+        if (in_slot && !extreme_time) used_part_day_slots += 1
+
+        prev_time = timeslot.end_time.hour;
+      });
+
+      return used_part_day_slots;
+    }
+
     return {
-      isTimeAvailable: isTimeAvailable,
-      isDayAvailable: isDayAvailable,
-      getInitHours: getInitHours,
-      checkIsOpeningHoursEnabled: checkIsOpeningHoursEnabled
+      isTimeAvailable,
+      isDayAvailable,
+      getInitHours,
+      checkIsOpeningHoursEnabled,
+      isTimeInTimeslots,
+      countTimeslots
     };
   }]);

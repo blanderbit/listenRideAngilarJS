@@ -10,24 +10,9 @@ angular.module('list', ['ngLocale'])
       discountFieldEditable: "<"
     },
     controllerAs: 'list',
-    controller: [
-      '$localStorage',
-      '$stateParams',
-      '$state',
-      '$analytics',
-      'Upload',
-      'bikeOptions',
-      'api',
-      'authentication',
-      'verification',
-      'accessControl',
-      'loadingDialog',
-      'price',
-      'countryCodeTranslator',
-      'notification',
-      function ListController($localStorage, $stateParams, $state, $analytics,
+    controller: function ListController($localStorage, $stateParams, $state, $analytics,
         Upload, bikeOptions, api, authentication, verification, accessControl,
-        loadingDialog, price, countryCodeTranslator, notification) {
+        loadingDialog, price, countryCodeTranslator, notification, userHelper) {
 
         if (accessControl.requireLogin()) {
           return;
@@ -53,6 +38,7 @@ angular.module('list', ['ngLocale'])
             accessories: {},
             images: [],
             coverage_total: 0,
+            prices: [],
             location: {
               country: '',
               city: '',
@@ -63,6 +49,7 @@ angular.module('list', ['ngLocale'])
 
           list.selectedIndex = 0;
           list.removedImages = [];
+          list.secondDayIndex = 1;
           list.startImage = 1;
           list.sizeOptions = [];
           bikeOptions.sizeOptions([bikeOptions.allSizesValue]).then(function (resolve) {
@@ -87,6 +74,7 @@ angular.module('list', ['ngLocale'])
           list.equipmentCategories = [51, 52, 53, 54];
           list.insuranceCountries = ['DE', 'AT'];
           list.variations = [];
+          list.canSetHalfDayPrice = true;
 
           // methods
           list.getUserData = getUserData;
@@ -144,6 +132,15 @@ angular.module('list', ['ngLocale'])
                   price: undefined
                 }
               }
+
+              list.hasTimeSlots = userHelper.hasTimeSlots(data);
+              list.secondDayIndex = list.hasTimeSlots ? 2 : 1;
+              if (list.hasTimeSlots) {
+                list.form.prices[9] = {
+                  price: undefined
+                }
+              }
+
               list.form.discounts = {
                 "daily": 10,
                 "weekly": 20
@@ -156,7 +153,7 @@ angular.module('list', ['ngLocale'])
               notification.show(error, 'error');
             }
           );
-        };
+        }
 
         function getBikeData() {
           api.get('/rides/' + $stateParams.bikeId).then(
@@ -183,6 +180,11 @@ angular.module('list', ['ngLocale'])
                 }
 
                 data.images = images;
+                let halfDayPrice = _.find(data.prices, {
+                  'start_at': 43200
+                });
+                list.secondDayIndex = halfDayPrice ? 2 : 1;
+
                 var prices = price.transformPrices(data.prices, data.discounts);
                 data.size = parseInt(data.size);
 
@@ -191,7 +193,7 @@ angular.module('list', ['ngLocale'])
                 data.subCategory = data.category;
 
                 // form data for edit bikes
-                list.form = data;
+                list.form = Object.assign(list.form, data);
                 list.form.prices = prices;
 
                 // if custom price is enabled
@@ -206,17 +208,19 @@ angular.module('list', ['ngLocale'])
                 }
 
                 setBusinessForm();
+                list.hasTimeSlots = userHelper.hasTimeSlots(data.user);
               }
             },
             function (error) {
               notification.show(error, 'error');
             }
           );
-        };
+        }
 
         // form submission for new ride
         function submitNewRide () {
           var prices = price.inverseTransformPrices(list.form.prices, list.isListMode);
+
           var ride = {
             "ride": Object.assign({}, list.form, {
               "user_id": $localStorage.userId,
@@ -274,11 +278,12 @@ angular.module('list', ['ngLocale'])
             }
           );
 
-        };
+        }
 
         // form submission for existing ride
         function submitEditedRide() {
           var prices = price.inverseTransformPrices(list.form.prices);
+
           var ride = {
             "ride": Object.assign({}, list.form, {
               "user_id": $localStorage.userId,
@@ -343,7 +348,7 @@ angular.module('list', ['ngLocale'])
             }
           );
 
-        };
+        }
 
         // submit the form
         list.onFormSubmit = function () {
@@ -544,13 +549,12 @@ angular.module('list', ['ngLocale'])
             bicycle_number: '',
             frame_number: ''
           });
-        };
+        }
 
         function removeInput(index) {
           list.variations.splice(index, 1);
-        };
+        }
       }
-    ]
   })
   // category tab
   .component('categoriesListTab', {

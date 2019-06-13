@@ -17,7 +17,9 @@ angular
         dateOnClear: '<?',
         clearCalendarData: '=?',
         dateContainer: '<?',
-        dateScrollContainer: '<?'
+        dateScrollContainer: '<?',
+        hasTimeSlots: '<?',
+        timeslots: '<?'
       },
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
@@ -65,7 +67,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
 
     if (typeof vm.dateOnChange == 'function') vm.dateOnChange();
     $scope.$apply();
-  };
+  }
 
   function clearData() {
     vm.clearCalendar();
@@ -76,7 +78,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
 
     if (typeof vm.dateOnClear == 'function') vm.dateOnClear();
     $scope.$apply();
-  };
+  }
 
   function postLink(){
     var active = 'js-datepicker-opened';
@@ -167,7 +169,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
 
     // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date
     function isReserved(date) {
-      return isReservedPrimary(date) && isAllClusterReserved(date);
+      return isReservedPrimary(date) && isAllClusterReserved(date) && isAllHalfDayReserved(date, vm.requests);
     }
 
     function isReservedDate(date, requests) {
@@ -187,6 +189,34 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       return false;
     }
 
+    function isAllHalfDayReserved(date, requests) {
+      if (!vm.hasTimeSlots) return true;
+      let isAllDayBooked = true;
+
+      // TODO: remove hardcode from here
+      let requestsCount = 0;
+
+      for (var i = 0; i < requests.length; ++i) {
+        var start = new Date(requests[i].start_date_tz);
+        start.setHours(0, 0, 0, 0);
+        var end = new Date(requests[i].end_date_tz);
+        end.setHours(0, 0, 0, 0);
+
+        if (start.getTime() <= date.getTime() &&
+          date.getTime() <= end.getTime()) {
+          if (moment(start, "DD-MM-YYYY").isSame(moment(end, "DD-MM-YYYY"))) {
+            requestsCount += calendarHelper.countTimeslots(requests[i].start_date_tz, requests[i].end_date_tz, vm.timeslots);
+          } else {
+            return true;
+          }
+        }
+      }
+
+      isAllDayBooked = requestsCount >= 2;
+
+      return isAllDayBooked;
+    }
+
     function isReservedPrimary(date) {
       return isReservedDate(date, vm.requests);
     }
@@ -196,7 +226,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       if (!(vm.bike && vm.bike.is_cluster)) return true;
 
       var isClusterBikeReserved = true;
-      _.forEach(vm.bikeCluster, function (variant) {
+      _.forEach(vm.bikeCluster.variations, function (variant) {
         isClusterBikeReserved = isClusterBikeReserved && isReservedDate(date, variant.requests)
       });
 
@@ -215,18 +245,18 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
     if (vm.dateContainer) $(vm.dateContainer).css('position', 'relative');
 
     changeRange();
-  };
+  }
 
   function clearCalendar() {
     $scope.el.dateRange.clear();
-  };
+  }
 
   function onDestroy() {
     $scope.el.dateRange.destroy();
-  };
+  }
 
   function openCalendar($event) {
     $event.stopPropagation();
     $scope.el.dateRange.open();
-  };
+  }
 }

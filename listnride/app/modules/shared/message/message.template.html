@@ -48,6 +48,14 @@
   </input-stars>
 </div>
 
+<p
+  ng-if="!message.request.rideChat && message.status == message.STATUSES.REQUESTED"
+  class="lnr-center">
+  <a ui-sref="bookingCalendar({ goToDate: message.request.start_date })">
+    {{ 'message.go-to-calendar' | translate }}
+  </a>
+</p>
+
 <div ng-if="message.displayableNotification()" layout="row" layout-align="center end">
   <div
       class="lnr-message status-message"
@@ -87,8 +95,8 @@
             button-class="'message-button md-raised md-warn lnr-m-0 md-button md-ink-ripple'"
             button-text="'message.reject'"
             button-disable="message.request.status != 1 || message.buttonClicked"
-            confirm-text="'Are you sure?'"
-            on-success="message.updateStatus(message.STATUSES.LISTER_CANCELED)">
+            on-submit="message.handleRejectionSubmission(promise)"
+            request="message.request">
         </confirmation>
         <md-button
           class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
@@ -118,8 +126,8 @@
             button-class="'message-button md-raised lnr-m-0 md-button md-ink-ripple md-warn'"
             button-text="'shared.cancel'"
             button-disable="message.request.status != message.STATUSES.REQUESTED"
-            confirm-text="'Are you sure?'"
-            on-success="message.updateStatus(message.STATUSES.RIDER_CANCELED)">
+            on-submit="message.handleRejectionSubmission(promise)"
+            request="message.request">
         </confirmation>
       </div>
     </div>

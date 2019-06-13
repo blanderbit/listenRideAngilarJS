@@ -89,6 +89,7 @@
           class="lnr-listing-list-item"
           ng-click="listView.isCheckModeOn ? listView.onBikeTileCheck($event, bike) : listView.view(bike.id, $event)"
           ng-repeat="bike in listView.bikes"
+          ng-disabled="!bike.available"
           ng-class="{
                 'lnr-unavailable': !bike.available,
                 'lnr-checked-card': listView.isChecked(bike.id)

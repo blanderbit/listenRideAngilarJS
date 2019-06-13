@@ -38,6 +38,7 @@ var lnrHelper = {
     // initialize for single and multi user mode
     if (lnrConstants.parentElement.dataset.user) {
       lnrConstants.parentElement.dataset.user = lnrHelper.trimSpaces(lnrConstants.parentElement.dataset.user);
+      lnrConstants.parentElement.dataset.lang = lnrConstants.parentElement.dataset.lang.toLowerCase();
       lnrHelper.postInitSingleUser();
     } else {
       lnrHelper.postInitMultiUser();
@@ -603,8 +604,11 @@ var lnrHelper = {
           price = Math.ceil(ride.price_from),
           dailyPrice = Math.ceil(ride.prices.daily_price),
           weeklyPrice = Math.ceil(ride.prices.weekly_price),
+          halfDayPrice = Math.ceil(ride.prices.half_daily_price),
           imageUrl = ride.image_file,
           rideDescription = ride.description;
+
+        var hasHalfDay = !!halfDayPrice;
 
         var clusterStatusHTML = '';
 
@@ -619,6 +623,43 @@ var lnrHelper = {
             '<div class="status-labels__item">',
             '<span>' + ride.rides_count + '&nbsp;</span>',
             '<span>' + lnrConstants.translations[userLang].statuses.variants_available + '</span>',
+            '</div>'
+          ].join('');
+        }
+
+        function getPriceTableTemplate() {
+          var priceTable = '';
+
+          priceTable += hasHalfDay ? getHalfDayPriceTemplate() : '';
+          priceTable += getDailyPriceTemplate();
+          priceTable += hasHalfDay ? '' : getWeeklyPriceTemplate();
+          return priceTable;
+        }
+
+        function getDailyPriceTemplate() {
+          return [
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="md-headline lnr-price_num">' + dailyPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
+            '</div>'
+          ].join('');
+        }
+
+        function getWeeklyPriceTemplate() {
+          return [
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="lnr-clr-blue lnr-week">' + lnrConstants.translations[userLang]["week"] + '</span>',
+              '<span class="md-headline lnr-price_num">' + weeklyPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
+            '</div>'
+          ].join('');
+        }
+
+        function getHalfDayPriceTemplate() {
+          return [
+            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
+              '<span class="md-headline lnr-price_num">' + halfDayPrice + '&euro;</span>',
+              '<span>' + lnrConstants.translations[userLang]["half-day"] + '</span>',
             '</div>'
           ].join('');
         }
@@ -664,15 +705,9 @@ var lnrHelper = {
               '<span class="md-subhead">' + brand + ', ' + rideName + '</span>',
               '<span>' + categoryDesc + ', ' + readableSize + '</span>' +
             '</md-card-title-text>',
-            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
-              '<span class="md-headline lnr-price_num">' + dailyPrice + '&euro;</span>',
-              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
-            ' </div>',
-            '<div layout="column" class="layout-align-space-around-center layout-column lnr-price">',
-              '<span class="lnr-clr-blue lnr-week">' + lnrConstants.translations[userLang]["week"] + '</span>',
-              '<span class="md-headline lnr-price_num">' + weeklyPrice + '&euro;</span>',
-              '<span>' + lnrConstants.translations[userLang]["per-day"] + '</span>',
-            '</div>',
+
+            getPriceTableTemplate(),
+
           '</md-card-title>',
 
           '</md-card>',
@@ -727,6 +762,15 @@ var lnrHelper = {
 
     // render selectors HTML
     element.innerHTML += selectors;
+
+    // check if browser support HTML 5 date picker
+    var datepicker__el = document.querySelector('.lnr-date-picker__input');
+    if (datepicker__el.type === 'text') {
+      var datepickers = document.querySelectorAll('.lnr-date-picker');
+      datepickers.forEach(function(dtpicker) {
+        dtpicker.style.display = 'none';
+      });
+    }
 
     // set default values for selectors
     lnrHelper.setDefaultSelectorValues(userId, userLang);
@@ -849,26 +893,26 @@ var lnrHelper = {
     // render date selector
     var dateHTML = [
       // START DATE
-      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
-      '<div style="margin-left:8px; margin-right:8px;">',
-      '<label>Start Date</label>',
-      '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
-      'min="' + lnrHelper.getMinDate() + '"',
-      'id="' + id + '-lnr-start-date-button' + '"',
-      'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
-      '</div>',
+      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent lnr-date-picker">',
+        '<div style="margin-left:8px; margin-right:8px;">',
+        '<label>Start Date</label>',
+        '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
+        'min="' + lnrHelper.getMinDate() + '"',
+        'id="' + id + '-lnr-start-date-button' + '"',
+        'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
+        'class="lnr-date-picker__input md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
+        '</div>',
       '</div>',
       // END DATE
-      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent">',
-      '<div style="margin-left:8px; margin-right:8px;">',
-      '<label>End Date</label>',
-      '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
-      'min="' + lnrHelper.getMinDate() + '"',
-      'id="' + id + '-lnr-end-date-button' + '"',
-      'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
-      'class="md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
-      '</div>',
+      '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent lnr-date-picker">',
+        '<div style="margin-left:8px; margin-right:8px;">',
+        '<label>End Date</label>',
+        '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
+        'min="' + lnrHelper.getMinDate() + '"',
+        'id="' + id + '-lnr-end-date-button' + '"',
+        'onchange="lnrHelper.onDateChange(' + id + ',' + '\'' + lang + '\'' + ')" ',
+        'class="lnr-date-picker__input md-accent md-raised md-button md-ink-ripple lnr-back-button lnr-dropdown-button js-lnr-filter-trigger"></input>',
+        '</div>',
       '</div>'
     ].join("");
 

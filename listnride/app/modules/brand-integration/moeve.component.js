@@ -17,7 +17,7 @@ angular.module('moeveIntegration',[]).component('moeve', {
       moeve.bikes = {
         munich: [],
         amsterdam: [],
-        frankfurt: [],
+        frankfurt: [],
         stuttgart: [],
         vienna: []
       };
