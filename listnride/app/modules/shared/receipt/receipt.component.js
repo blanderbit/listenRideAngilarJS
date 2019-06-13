@@ -14,7 +14,7 @@ angular.module('receipt', []).component('receipt', {
     isPremiumCoverage: '<?',
     isShop: '<',
     setCustomPrices: '<',
-    insuranceEnabled: '<',
+    insuranceAllowed: '<',
     timeslots: '<'
   },
   controller: [
@@ -51,7 +51,7 @@ angular.module('receipt', []).component('receipt', {
           isPremiumCoverage: receipt.isPremiumCoverage,
           isShopUser: receipt.isShop,
           setCustomPrices: receipt.setCustomPrices,
-          insuranceEnabled: receipt.insuranceEnabled,
+          insuranceEnabled: receipt.insuranceAllowed(),
           timeslots: receipt.timeslots
         });
 

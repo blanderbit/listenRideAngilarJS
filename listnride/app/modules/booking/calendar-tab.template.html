@@ -70,6 +70,7 @@
               date-on-change="calendar.parent.updateDate"
               date-container="'.booking__daterange-focus'"
               date-scroll-container="'.booking__body'"
+              has-time-slots="calendar.parent.hasTimeSlots"
             >
             </input-range>
           </md-input-container>
@@ -85,7 +86,7 @@
                 ng-model="calendar.parent.startTime"
                 placeholder="{{ 'shared.from' | translate }}">
                 <md-option
-                ng-disabled="!calendar.parent.calendarHelper.isTimeAvailable($index, calendar.parent.openingHours, calendar.parent.startDate)"
+                ng-disabled="!calendar.parent.calendarHelper.isTimeAvailable($index, calendar.parent.openingHours, calendar.parent.startDate) || !calendar.parent.isTimeslotAvailable($index+6)"
                 ng-repeat="i in [].constructor(17) track by $index"
                 value="{{$index + 6}}"
                 >
@@ -103,7 +104,7 @@
                 placeholder="{{ 'shared.to' | translate }}"
               >
                 <md-option
-                  ng-disabled="!calendar.parent.calendarHelper.isTimeAvailable($index, calendar.parent.openingHours, calendar.parent.endDate)"
+                  ng-disabled="!calendar.parent.calendarHelper.isTimeAvailable($index, calendar.parent.openingHours, calendar.parent.endDate) || !calendar.parent.isTimeslotAvailable($index+6)"
                   ng-repeat="i in [].constructor(17) track by $index"
                   value="{{$index + 6}}"
                 >

@@ -56,6 +56,7 @@ angular.module('bike').component('calendar', {
 
     //methods
     calendar.validClusterSize = validClusterSize;
+    calendar.isTimeslotAvailable = isTimeslotAvailable;
 
     calendar.$onChanges = function (changes) {
       calendar.humanReadableSize = bikeOptions.getHumanReadableSize(calendar.bikeSize);
@@ -762,7 +763,7 @@ angular.module('bike').component('calendar', {
 
     // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date
     function isReserved(date) {
-      return isReservedPrimary(date) && isAllClusterReserved(date);
+      return isReservedPrimary(date) && isAllClusterReserved(date) && isAllHalfDayReserved(date, calendar.requests);
     }
 
     function isReservedDate(date, requests) {
@@ -778,6 +779,30 @@ angular.module('bike').component('calendar', {
         }
       }
       return false;
+    }
+
+    function isAllHalfDayReserved(date, requests) {
+      if (!calendar.hasTimeSlots) return true;
+      let isAllDayBooked = true;
+
+      // TODO: remove hardcode from here
+      let requestsCount = 0;
+
+      for (var i = 0; i < requests.length; ++i) {
+        var start = new Date(requests[i].start_date_tz);
+        start.setHours(0, 0, 0, 0);
+        var end = new Date(requests[i].end_date_tz);
+        end.setHours(0, 0, 0, 0);
+
+        if (start.getTime() <= date.getTime() &&
+          date.getTime() <= end.getTime()) {
+          requestsCount++;
+        }
+      }
+
+      isAllDayBooked = requestsCount == 2;
+
+      return isAllDayBooked;
     }
 
     function isReservedPrimary(date) {
@@ -860,6 +885,11 @@ angular.module('bike').component('calendar', {
         calendar.lnrFee = 0;
         calendar.total = 0;
       }
+    }
+
+    function isTimeslotAvailable(hour) {
+      if (!calendar.hasTimeSlots) return true;
+      return calendarHelper.isTimeInTimeslots(hour, calendar.timeslots);
     }
 
     function countInvalidDays(startDate, endDate){
