@@ -1,12 +1,11 @@
 /*
 
-Bryntum Scheduler 2.1.0
+Bryntum Scheduler 2.0.0
 Copyright(c) 2019 Bryntum AB
 https://bryntum.com/contact
 https://bryntum.com/license
 
 */
-@charset "UTF-8";
 .b-theme-info:before {
   content: '{"name":"Material"}'; }
 
@@ -14,7 +13,6 @@ https://bryntum.com/license
   font-family: 'Font Awesome 5 Pro';
   font-style: normal;
   font-weight: 900;
-  font-display: auto;
   src: url(fonts/fa-solid-900.eot);
   src: url(fonts/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(fonts/fa-solid-900.woff2) format("woff2"), url(fonts/fa-solid-900.woff) format("woff"), url(fonts/fa-solid-900.ttf) format("truetype"), url(fonts/fa-solid-900.svg#fontawesome) format("svg"); }
 
@@ -53,9 +51,6 @@ readers do not read off random characters that represent icons */
 .b-fa-adn:before {
   content: "\F170"; }
 
-.b-fa-adobe:before {
-  content: "\F778"; }
-
 .b-fa-adversal:before {
   content: "\F36A"; }
 
@@ -64,9 +59,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-air-freshener:before {
   content: "\F5D0"; }
-
-.b-fa-airbnb:before {
-  content: "\F834"; }
 
 .b-fa-alarm-clock:before {
   content: "\F34E"; }
@@ -118,9 +110,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-android:before {
   content: "\F17B"; }
-
-.b-fa-angel:before {
-  content: "\F779"; }
 
 .b-fa-angellist:before {
   content: "\F209"; }
@@ -327,9 +316,6 @@ readers do not read off random characters that represent icons */
 .b-fa-arrows-v:before {
   content: "\F07D"; }
 
-.b-fa-artstation:before {
-  content: "\F77A"; }
-
 .b-fa-assistive-listening-systems:before {
   content: "\F2A2"; }
 
@@ -344,9 +330,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-atlas:before {
   content: "\F558"; }
-
-.b-fa-atlassian:before {
-  content: "\F77B"; }
 
 .b-fa-atom:before {
   content: "\F5D2"; }
@@ -381,12 +364,6 @@ readers do not read off random characters that represent icons */
 .b-fa-axe-battle:before {
   content: "\F6B3"; }
 
-.b-fa-baby:before {
-  content: "\F77C"; }
-
-.b-fa-baby-carriage:before {
-  content: "\F77D"; }
-
 .b-fa-backpack:before {
   content: "\F5D4"; }
 
@@ -395,9 +372,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-backward:before {
   content: "\F04A"; }
-
-.b-fa-bacon:before {
-  content: "\F7E5"; }
 
 .b-fa-badge:before {
   content: "\F335"; }
@@ -422,9 +396,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-balance-scale-right:before {
   content: "\F516"; }
-
-.b-fa-ball-pile:before {
-  content: "\F77E"; }
 
 .b-fa-ballot:before {
   content: "\F732"; }
@@ -495,9 +466,6 @@ readers do not read off random characters that represent icons */
 .b-fa-battery-three-quarters:before {
   content: "\F241"; }
 
-.b-fa-battle-net:before {
-  content: "\F835"; }
-
 .b-fa-bed:before {
   content: "\F236"; }
 
@@ -522,9 +490,6 @@ readers do not read off random characters that represent icons */
 .b-fa-bell-slash:before {
   content: "\F1F6"; }
 
-.b-fa-bells:before {
-  content: "\F77F"; }
-
 .b-fa-bezier-curve:before {
   content: "\F55B"; }
 
@@ -539,9 +504,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-binoculars:before {
   content: "\F1E5"; }
-
-.b-fa-biohazard:before {
-  content: "\F780"; }
 
 .b-fa-birthday-cake:before {
   content: "\F1FD"; }
@@ -572,9 +534,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-blind:before {
   content: "\F29D"; }
-
-.b-fa-blog:before {
-  content: "\F781"; }
 
 .b-fa-blogger:before {
   content: "\F37C"; }
@@ -618,9 +577,6 @@ readers do not read off random characters that represent icons */
 .b-fa-book-heart:before {
   content: "\F499"; }
 
-.b-fa-book-medical:before {
-  content: "\F7E6"; }
-
 .b-fa-book-open:before {
   content: "\F518"; }
 
@@ -630,26 +586,14 @@ readers do not read off random characters that represent icons */
 .b-fa-book-spells:before {
   content: "\F6B8"; }
 
-.b-fa-book-user:before {
-  content: "\F7E7"; }
-
 .b-fa-bookmark:before {
   content: "\F02E"; }
 
 .b-fa-books:before {
   content: "\F5DB"; }
 
-.b-fa-books-medical:before {
-  content: "\F7E8"; }
-
-.b-fa-boot:before {
-  content: "\F782"; }
-
 .b-fa-booth-curtain:before {
   content: "\F734"; }
-
-.b-fa-bootstrap:before {
-  content: "\F836"; }
 
 .b-fa-bow-arrow:before {
   content: "\F6B9"; }
@@ -699,23 +643,11 @@ readers do not read off random characters that represent icons */
 .b-fa-boxing-glove:before {
   content: "\F438"; }
 
-.b-fa-brackets:before {
-  content: "\F7E9"; }
-
-.b-fa-brackets-curly:before {
-  content: "\F7EA"; }
-
 .b-fa-braille:before {
   content: "\F2A1"; }
 
 .b-fa-brain:before {
   content: "\F5DC"; }
-
-.b-fa-bread-loaf:before {
-  content: "\F7EB"; }
-
-.b-fa-bread-slice:before {
-  content: "\F7EC"; }
 
 .b-fa-briefcase:before {
   content: "\F0B1"; }
@@ -737,9 +669,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-btc:before {
   content: "\F15A"; }
-
-.b-fa-buffer:before {
-  content: "\F837"; }
 
 .b-fa-bug:before {
   content: "\F188"; }
@@ -764,9 +693,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-buromobelexperte:before {
   content: "\F37F"; }
-
-.b-fa-burrito:before {
-  content: "\F7ED"; }
 
 .b-fa-bus:before {
   content: "\F207"; }
@@ -801,9 +727,6 @@ readers do not read off random characters that represent icons */
 .b-fa-calendar-check:before {
   content: "\F274"; }
 
-.b-fa-calendar-day:before {
-  content: "\F783"; }
-
 .b-fa-calendar-edit:before {
   content: "\F333"; }
 
@@ -822,9 +745,6 @@ readers do not read off random characters that represent icons */
 .b-fa-calendar-times:before {
   content: "\F273"; }
 
-.b-fa-calendar-week:before {
-  content: "\F784"; }
-
 .b-fa-camera:before {
   content: "\F030"; }
 
@@ -840,14 +760,8 @@ readers do not read off random characters that represent icons */
 .b-fa-campground:before {
   content: "\F6BB"; }
 
-.b-fa-canadian-maple-leaf:before {
-  content: "\F785"; }
-
 .b-fa-candle-holder:before {
   content: "\F6BC"; }
-
-.b-fa-candy-cane:before {
-  content: "\F786"; }
 
 .b-fa-candy-corn:before {
   content: "\F6BD"; }
@@ -924,17 +838,11 @@ readers do not read off random characters that represent icons */
 .b-fa-caret-up:before {
   content: "\F0D8"; }
 
-.b-fa-carrot:before {
-  content: "\F787"; }
-
 .b-fa-cart-arrow-down:before {
   content: "\F218"; }
 
 .b-fa-cart-plus:before {
   content: "\F217"; }
-
-.b-fa-cash-register:before {
-  content: "\F788"; }
 
 .b-fa-cat:before {
   content: "\F6BE"; }
@@ -975,9 +883,6 @@ readers do not read off random characters that represent icons */
 .b-fa-centercode:before {
   content: "\F380"; }
 
-.b-fa-centos:before {
-  content: "\F789"; }
-
 .b-fa-certificate:before {
   content: "\F0A3"; }
 
@@ -1008,19 +913,13 @@ readers do not read off random characters that represent icons */
 .b-fa-chart-line-down:before {
   content: "\F64D"; }
 
-.b-fa-chart-network:before {
-  content: "\F78A"; }
-
 .b-fa-chart-pie:before {
   content: "\F200"; }
 
 .b-fa-chart-pie-alt:before {
   content: "\F64E"; }
 
-.b-fa-chart-scatter:before {
-  content: "\F7EE"; }
-
-.b-fa-check:before, .b-icon-check:before, .b-checkbox .b-checkbox-label:before, .b-icon-valid:before {
+.b-fa-check:before, .b-icon-check:before, .b-checkbox label:before, .b-icon-valid:before {
   content: "\F00C"; }
 
 .b-fa-check-circle:before {
@@ -1031,15 +930,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-check-square:before, .b-icon-checked:before {
   content: "\F14A"; }
-
-.b-fa-cheese:before {
-  content: "\F7EF"; }
-
-.b-fa-cheese-swiss:before {
-  content: "\F7F0"; }
-
-.b-fa-cheeseburger:before {
-  content: "\F7F1"; }
 
 .b-fa-chess:before {
   content: "\F439"; }
@@ -1142,19 +1032,13 @@ readers do not read off random characters that represent icons */
 .b-fa-child:before {
   content: "\F1AE"; }
 
-.b-fa-chimney:before {
-  content: "\F78B"; }
-
 .b-fa-chrome:before {
   content: "\F268"; }
-
-.b-fa-chromecast:before {
-  content: "\F838"; }
 
 .b-fa-church:before {
   content: "\F51D"; }
 
-.b-fa-circle:before, .b-icon-circle:before {
+.b-fa-circle:before, .b-icon-tree-leaf:before, .b-icon-circle:before {
   content: "\F111"; }
 
 .b-fa-circle-notch:before {
@@ -1165,9 +1049,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-claw-marks:before {
   content: "\F6C2"; }
-
-.b-fa-clinic-medical:before {
-  content: "\F7F2"; }
 
 .b-fa-clipboard:before, .b-icon-clipboard:before {
   content: "\F328"; }
@@ -1183,9 +1064,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-clipboard-prescription:before {
   content: "\F5E8"; }
-
-.b-fa-clipboard-user:before {
-  content: "\F7F3"; }
 
 .b-fa-clock:before, .b-icon-clock:before {
   content: "\F017"; }
@@ -1340,9 +1218,6 @@ readers do not read off random characters that represent icons */
 .b-fa-comment-alt-lines:before {
   content: "\F4A6"; }
 
-.b-fa-comment-alt-medical:before {
-  content: "\F7F4"; }
-
 .b-fa-comment-alt-minus:before {
   content: "\F4A7"; }
 
@@ -1375,9 +1250,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-comment-lines:before {
   content: "\F4B0"; }
-
-.b-fa-comment-medical:before {
-  content: "\F7F5"; }
 
 .b-fa-comment-minus:before {
   content: "\F4B1"; }
@@ -1421,17 +1293,11 @@ readers do not read off random characters that represent icons */
 .b-fa-compress-alt:before {
   content: "\F422"; }
 
-.b-fa-compress-arrows-alt:before {
-  content: "\F78C"; }
-
 .b-fa-compress-wide:before {
   content: "\F326"; }
 
 .b-fa-concierge-bell:before {
   content: "\F562"; }
-
-.b-fa-confluence:before {
-  content: "\F78D"; }
 
 .b-fa-connectdevelop:before {
   content: "\F20E"; }
@@ -1529,9 +1395,6 @@ readers do not read off random characters that represent icons */
 .b-fa-critical-role:before {
   content: "\F6C9"; }
 
-.b-fa-croissant:before {
-  content: "\F7F6"; }
-
 .b-fa-crop:before {
   content: "\F125"; }
 
@@ -1549,12 +1412,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-crown:before {
   content: "\F521"; }
-
-.b-fa-crutch:before {
-  content: "\F7F7"; }
-
-.b-fa-crutches:before {
-  content: "\F7F8"; }
 
 .b-fa-css3:before {
   content: "\F13C"; }
@@ -1595,15 +1452,6 @@ readers do not read off random characters that represent icons */
 .b-fa-deaf:before {
   content: "\F2A4"; }
 
-.b-fa-debug:before {
-  content: "\F7F9"; }
-
-.b-fa-deer:before {
-  content: "\F78E"; }
-
-.b-fa-deer-rudolph:before {
-  content: "\F78F"; }
-
 .b-fa-delicious:before {
   content: "\F1A5"; }
 
@@ -1634,17 +1482,11 @@ readers do not read off random characters that represent icons */
 .b-fa-dharmachakra:before {
   content: "\F655"; }
 
-.b-fa-dhl:before {
-  content: "\F790"; }
-
 .b-fa-diagnoses:before {
   content: "\F470"; }
 
 .b-fa-diamond:before {
   content: "\F219"; }
-
-.b-fa-diaspora:before {
-  content: "\F791"; }
 
 .b-fa-dice:before {
   content: "\F522"; }
@@ -1705,9 +1547,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-discourse:before {
   content: "\F393"; }
-
-.b-fa-disease:before {
-  content: "\F7FA"; }
 
 .b-fa-divide:before {
   content: "\F529"; }
@@ -1787,9 +1626,6 @@ readers do not read off random characters that represent icons */
 .b-fa-draw-square:before {
   content: "\F5EF"; }
 
-.b-fa-dreidel:before {
-  content: "\F792"; }
-
 .b-fa-dribbble:before {
   content: "\F17D"; }
 
@@ -1820,12 +1656,6 @@ readers do not read off random characters that represent icons */
 .b-fa-dumbbell:before {
   content: "\F44B"; }
 
-.b-fa-dumpster:before {
-  content: "\F793"; }
-
-.b-fa-dumpster-fire:before {
-  content: "\F794"; }
-
 .b-fa-dungeon:before {
   content: "\F6D9"; }
 
@@ -1834,9 +1664,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-ear:before {
   content: "\F5F0"; }
-
-.b-fa-ear-muffs:before {
-  content: "\F795"; }
 
 .b-fa-earlybirds:before {
   content: "\F39A"; }
@@ -1855,12 +1682,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-edit:before {
   content: "\F044"; }
-
-.b-fa-egg:before {
-  content: "\F7FB"; }
-
-.b-fa-egg-fried:before {
-  content: "\F7FC"; }
 
 .b-fa-eject:before {
   content: "\F052"; }
@@ -1928,17 +1749,11 @@ readers do not read off random characters that represent icons */
 .b-fa-ethereum:before {
   content: "\F42E"; }
 
-.b-fa-ethernet:before {
-  content: "\F796"; }
-
 .b-fa-etsy:before {
   content: "\F2D7"; }
 
 .b-fa-euro-sign:before {
   content: "\F153"; }
-
-.b-fa-evernote:before {
-  content: "\F839"; }
 
 .b-fa-exchange:before {
   content: "\F0EC"; }
@@ -2030,12 +1845,6 @@ readers do not read off random characters that represent icons */
 .b-fa-feather-alt:before {
   content: "\F56B"; }
 
-.b-fa-fedex:before {
-  content: "\F797"; }
-
-.b-fa-fedora:before {
-  content: "\F798"; }
-
 .b-fa-female:before {
   content: "\F182"; }
 
@@ -2044,9 +1853,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-fighter-jet:before {
   content: "\F0FB"; }
-
-.b-fa-figma:before {
-  content: "\F799"; }
 
 .b-fa-file:before {
   content: "\F15B"; }
@@ -2150,9 +1956,6 @@ readers do not read off random characters that represent icons */
 .b-fa-file-word:before {
   content: "\F1C2"; }
 
-.b-fa-files-medical:before {
-  content: "\F7FD"; }
-
 .b-fa-fill:before {
   content: "\F575"; }
 
@@ -2175,9 +1978,6 @@ readers do not read off random characters that represent icons */
 .b-fa-fire:before {
   content: "\F06D"; }
 
-.b-fa-fire-alt:before {
-  content: "\F7E4"; }
-
 .b-fa-fire-extinguisher:before {
   content: "\F134"; }
 
@@ -2186,9 +1986,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-firefox:before {
   content: "\F269"; }
-
-.b-fa-fireplace:before {
-  content: "\F79A"; }
 
 .b-fa-first-aid:before {
   content: "\F479"; }
@@ -2204,9 +2001,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-fish:before {
   content: "\F578"; }
-
-.b-fa-fish-cooked:before {
-  content: "\F7FE"; }
 
 .b-fa-fist-raised:before {
   content: "\F6DE"; }
@@ -2241,15 +2035,6 @@ readers do not read off random characters that represent icons */
 .b-fa-flipboard:before {
   content: "\F44D"; }
 
-.b-fa-flower:before {
-  content: "\F7FF"; }
-
-.b-fa-flower-daffodil:before {
-  content: "\F800"; }
-
-.b-fa-flower-tulip:before {
-  content: "\F801"; }
-
 .b-fa-flushed:before {
   content: "\F579"; }
 
@@ -2273,9 +2058,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-folder-times:before {
   content: "\F65F"; }
-
-.b-fa-folder-tree:before {
-  content: "\F802"; }
 
 .b-fa-folders:before {
   content: "\F660"; }
@@ -2334,14 +2116,8 @@ readers do not read off random characters that represent icons */
 .b-fa-freebsd:before {
   content: "\F3A4"; }
 
-.b-fa-french-fries:before {
-  content: "\F803"; }
-
 .b-fa-frog:before {
   content: "\F52E"; }
-
-.b-fa-frosty-head:before {
-  content: "\F79B"; }
 
 .b-fa-frown:before {
   content: "\F119"; }
@@ -2403,17 +2179,8 @@ readers do not read off random characters that represent icons */
 .b-fa-gift-card:before {
   content: "\F663"; }
 
-.b-fa-gifts:before {
-  content: "\F79C"; }
-
-.b-fa-gingerbread-man:before {
-  content: "\F79D"; }
-
 .b-fa-git:before {
   content: "\F1D3"; }
-
-.b-fa-git-alt:before {
-  content: "\F841"; }
 
 .b-fa-git-square:before {
   content: "\F1D2"; }
@@ -2436,26 +2203,11 @@ readers do not read off random characters that represent icons */
 .b-fa-gitter:before {
   content: "\F426"; }
 
-.b-fa-glass:before {
-  content: "\F804"; }
-
-.b-fa-glass-champagne:before {
-  content: "\F79E"; }
-
-.b-fa-glass-cheers:before {
-  content: "\F79F"; }
-
 .b-fa-glass-martini:before {
   content: "\F000"; }
 
 .b-fa-glass-martini-alt:before {
   content: "\F57B"; }
-
-.b-fa-glass-whiskey:before {
-  content: "\F7A0"; }
-
-.b-fa-glass-whiskey-rocks:before {
-  content: "\F7A1"; }
 
 .b-fa-glasses:before {
   content: "\F530"; }
@@ -2480,12 +2232,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-globe-asia:before {
   content: "\F57E"; }
-
-.b-fa-globe-europe:before {
-  content: "\F7A2"; }
-
-.b-fa-globe-snow:before {
-  content: "\F7A3"; }
 
 .b-fa-globe-stand:before {
   content: "\F5F6"; }
@@ -2589,12 +2335,6 @@ readers do not read off random characters that represent icons */
 .b-fa-grip-horizontal:before {
   content: "\F58D"; }
 
-.b-fa-grip-lines:before {
-  content: "\F7A4"; }
-
-.b-fa-grip-lines-vertical:before {
-  content: "\F7A5"; }
-
 .b-fa-grip-vertical:before {
   content: "\F58E"; }
 
@@ -2603,9 +2343,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-grunt:before {
   content: "\F3AD"; }
-
-.b-fa-guitar:before {
-  content: "\F7A6"; }
 
 .b-fa-gulp:before {
   content: "\F3AE"; }
@@ -2630,9 +2367,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-hackerrank:before {
   content: "\F5F7"; }
-
-.b-fa-hamburger:before {
-  content: "\F805"; }
 
 .b-fa-hammer:before {
   content: "\F6E3"; }
@@ -2669,9 +2403,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-hand-lizard:before {
   content: "\F258"; }
-
-.b-fa-hand-middle-finger:before {
-  content: "\F806"; }
 
 .b-fa-hand-paper:before {
   content: "\F256"; }
@@ -2727,17 +2458,8 @@ readers do not read off random characters that represent icons */
 .b-fa-hanukiah:before {
   content: "\F6E6"; }
 
-.b-fa-hard-hat:before {
-  content: "\F807"; }
-
 .b-fa-hashtag:before {
   content: "\F292"; }
-
-.b-fa-hat-santa:before {
-  content: "\F7A7"; }
-
-.b-fa-hat-winter:before {
-  content: "\F7A8"; }
 
 .b-fa-hat-witch:before {
   content: "\F6E7"; }
@@ -2753,12 +2475,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-head-side:before {
   content: "\F6E9"; }
-
-.b-fa-head-side-brain:before {
-  content: "\F808"; }
-
-.b-fa-head-side-medical:before {
-  content: "\F809"; }
 
 .b-fa-head-vr:before {
   content: "\F6EA"; }
@@ -2777,9 +2493,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-heart:before {
   content: "\F004"; }
-
-.b-fa-heart-broken:before {
-  content: "\F7A9"; }
 
 .b-fa-heart-circle:before {
   content: "\F4C7"; }
@@ -2829,23 +2542,11 @@ readers do not read off random characters that represent icons */
 .b-fa-hockey-sticks:before {
   content: "\F454"; }
 
-.b-fa-holly-berry:before {
-  content: "\F7AA"; }
-
 .b-fa-home:before {
   content: "\F015"; }
 
-.b-fa-home-alt:before {
-  content: "\F80A"; }
-
 .b-fa-home-heart:before {
   content: "\F4C9"; }
-
-.b-fa-home-lg:before {
-  content: "\F80B"; }
-
-.b-fa-home-lg-alt:before {
-  content: "\F80C"; }
 
 .b-fa-hood-cloak:before {
   content: "\F6EF"; }
@@ -2859,9 +2560,6 @@ readers do not read off random characters that represent icons */
 .b-fa-horse:before {
   content: "\F6F0"; }
 
-.b-fa-horse-head:before {
-  content: "\F7AB"; }
-
 .b-fa-hospital:before {
   content: "\F0F8"; }
 
@@ -2871,17 +2569,8 @@ readers do not read off random characters that represent icons */
 .b-fa-hospital-symbol:before {
   content: "\F47E"; }
 
-.b-fa-hospital-user:before {
-  content: "\F80D"; }
-
-.b-fa-hospitals:before {
-  content: "\F80E"; }
-
 .b-fa-hot-tub:before {
   content: "\F593"; }
-
-.b-fa-hotdog:before {
-  content: "\F80F"; }
 
 .b-fa-hotel:before {
   content: "\F594"; }
@@ -2928,15 +2617,6 @@ readers do not read off random characters that represent icons */
 .b-fa-i-cursor:before {
   content: "\F246"; }
 
-.b-fa-ice-cream:before {
-  content: "\F810"; }
-
-.b-fa-ice-skate:before {
-  content: "\F7AC"; }
-
-.b-fa-icicles:before {
-  content: "\F7AD"; }
-
 .b-fa-id-badge:before {
   content: "\F2C1"; }
 
@@ -2945,9 +2625,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-id-card-alt:before {
   content: "\F47F"; }
-
-.b-fa-igloo:before {
-  content: "\F7AE"; }
 
 .b-fa-image:before {
   content: "\F03E"; }
@@ -2997,9 +2674,6 @@ readers do not read off random characters that represent icons */
 .b-fa-integral:before {
   content: "\F667"; }
 
-.b-fa-intercom:before {
-  content: "\F7AF"; }
-
 .b-fa-internet-explorer:before {
   content: "\F26B"; }
 
@@ -3009,20 +2683,11 @@ readers do not read off random characters that represent icons */
 .b-fa-inventory:before {
   content: "\F480"; }
 
-.b-fa-invision:before {
-  content: "\F7B0"; }
-
 .b-fa-ioxhost:before {
   content: "\F208"; }
 
-.b-fa-island-tropical:before {
-  content: "\F811"; }
-
 .b-fa-italic:before {
   content: "\F033"; }
-
-.b-fa-itch-io:before {
-  content: "\F83A"; }
 
 .b-fa-itunes:before {
   content: "\F3B4"; }
@@ -3044,9 +2709,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-jenkins:before {
   content: "\F3B6"; }
-
-.b-fa-jira:before {
-  content: "\F7B1"; }
 
 .b-fa-joget:before {
   content: "\F3B7"; }
@@ -3147,9 +2809,6 @@ readers do not read off random characters that represent icons */
 .b-fa-laptop-code:before {
   content: "\F5FC"; }
 
-.b-fa-laptop-medical:before {
-  content: "\F812"; }
-
 .b-fa-laravel:before {
   content: "\F3BD"; }
 
@@ -3236,9 +2895,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-lightbulb-slash:before {
   content: "\F673"; }
-
-.b-fa-lights-holiday:before {
-  content: "\F7B2"; }
 
 .b-fa-line:before {
   content: "\F3C0"; }
@@ -3357,9 +3013,6 @@ readers do not read off random characters that represent icons */
 .b-fa-mail-bulk:before {
   content: "\F674"; }
 
-.b-fa-mailbox:before {
-  content: "\F813"; }
-
 .b-fa-mailchimp:before {
   content: "\F59E"; }
 
@@ -3453,9 +3106,6 @@ readers do not read off random characters that represent icons */
 .b-fa-maxcdn:before {
   content: "\F136"; }
 
-.b-fa-meat:before {
-  content: "\F814"; }
-
 .b-fa-medal:before {
   content: "\F5A2"; }
 
@@ -3494,9 +3144,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-memory:before {
   content: "\F538"; }
-
-.b-fa-mendeley:before {
-  content: "\F7B3"; }
 
 .b-fa-menorah:before {
   content: "\F676"; }
@@ -3545,12 +3192,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-minus-square:before {
   content: "\F146"; }
-
-.b-fa-mistletoe:before {
-  content: "\F7B4"; }
-
-.b-fa-mitten:before {
-  content: "\F7B5"; }
 
 .b-fa-mix:before {
   content: "\F3CB"; }
@@ -3632,12 +3273,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-mouse-pointer:before {
   content: "\F245"; }
-
-.b-fa-mug-hot:before {
-  content: "\F7B6"; }
-
-.b-fa-mug-marshmallows:before {
-  content: "\F7B7"; }
 
 .b-fa-music:before {
   content: "\F001"; }
@@ -3729,9 +3364,6 @@ readers do not read off random characters that represent icons */
 .b-fa-optin-monster:before {
   content: "\F23C"; }
 
-.b-fa-ornament:before {
-  content: "\F7B8"; }
-
 .b-fa-osi:before {
   content: "\F41A"; }
 
@@ -3746,9 +3378,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-pagelines:before {
   content: "\F18C"; }
-
-.b-fa-pager:before {
-  content: "\F815"; }
 
 .b-fa-paint-brush:before {
   content: "\F1FC"; }
@@ -3867,9 +3496,6 @@ readers do not read off random characters that represent icons */
 .b-fa-people-carry:before {
   content: "\F4CE"; }
 
-.b-fa-pepper-hot:before {
-  content: "\F816"; }
-
 .b-fa-percent:before {
   content: "\F295"; }
 
@@ -3960,12 +3586,6 @@ readers do not read off random characters that represent icons */
 .b-fa-pinterest-square:before {
   content: "\F0D3"; }
 
-.b-fa-pizza:before {
-  content: "\F817"; }
-
-.b-fa-pizza-slice:before {
-  content: "\F818"; }
-
 .b-fa-place-of-worship:before {
   content: "\F67F"; }
 
@@ -4035,9 +3655,6 @@ readers do not read off random characters that represent icons */
 .b-fa-poop:before {
   content: "\F619"; }
 
-.b-fa-popcorn:before {
-  content: "\F819"; }
-
 .b-fa-portrait:before {
   content: "\F3E0"; }
 
@@ -4067,9 +3684,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-print:before {
   content: "\F02F"; }
-
-.b-fa-print-search:before {
-  content: "\F81A"; }
 
 .b-fa-print-slash:before {
   content: "\F686"; }
@@ -4140,12 +3754,6 @@ readers do not read off random characters that represent icons */
 .b-fa-racquet:before {
   content: "\F45A"; }
 
-.b-fa-radiation:before {
-  content: "\F7B9"; }
-
-.b-fa-radiation-alt:before {
-  content: "\F7BA"; }
-
 .b-fa-rainbow:before {
   content: "\F75B"; }
 
@@ -4160,9 +3768,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-random:before {
   content: "\F074"; }
-
-.b-fa-raspberry-pi:before {
-  content: "\F7BB"; }
 
 .b-fa-ravelry:before {
   content: "\F2D9"; }
@@ -4206,9 +3811,6 @@ readers do not read off random characters that represent icons */
 .b-fa-reddit-square:before {
   content: "\F1A2"; }
 
-.b-fa-redhat:before {
-  content: "\F7BC"; }
-
 .b-fa-redo:before {
   content: "\F01E"; }
 
@@ -4251,9 +3853,6 @@ readers do not read off random characters that represent icons */
 .b-fa-resolving:before {
   content: "\F3E7"; }
 
-.b-fa-restroom:before {
-  content: "\F7BD"; }
-
 .b-fa-retweet:before {
   content: "\F079"; }
 
@@ -4268,9 +3867,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-ring:before {
   content: "\F70B"; }
-
-.b-fa-rings-wedding:before {
-  content: "\F81B"; }
 
 .b-fa-road:before {
   content: "\F018"; }
@@ -4326,15 +3922,6 @@ readers do not read off random characters that represent icons */
 .b-fa-rupee-sign:before {
   content: "\F156"; }
 
-.b-fa-rv:before {
-  content: "\F7BE"; }
-
-.b-fa-sack:before {
-  content: "\F81C"; }
-
-.b-fa-sack-dollar:before {
-  content: "\F81D"; }
-
 .b-fa-sad-cry:before {
   content: "\F5B3"; }
 
@@ -4344,26 +3931,8 @@ readers do not read off random characters that represent icons */
 .b-fa-safari:before {
   content: "\F267"; }
 
-.b-fa-salad:before {
-  content: "\F81E"; }
-
-.b-fa-salesforce:before {
-  content: "\F83B"; }
-
-.b-fa-sandwich:before {
-  content: "\F81F"; }
-
 .b-fa-sass:before {
   content: "\F41E"; }
-
-.b-fa-satellite:before {
-  content: "\F7BF"; }
-
-.b-fa-satellite-dish:before {
-  content: "\F7C0"; }
-
-.b-fa-sausage:before {
-  content: "\F820"; }
 
 .b-fa-save:before {
   content: "\F0C7"; }
@@ -4385,9 +3954,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-scarecrow:before {
   content: "\F70D"; }
-
-.b-fa-scarf:before {
-  content: "\F7C1"; }
 
 .b-fa-schlix:before {
   content: "\F3EA"; }
@@ -4412,9 +3978,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-scythe:before {
   content: "\F710"; }
-
-.b-fa-sd-card:before {
-  content: "\F7C2"; }
 
 .b-fa-search:before, .b-icon-search:before {
   content: "\F002"; }
@@ -4497,9 +4060,6 @@ readers do not read off random characters that represent icons */
 .b-fa-shirtsinbulk:before {
   content: "\F214"; }
 
-.b-fa-shish-kebab:before {
-  content: "\F821"; }
-
 .b-fa-shoe-prints:before {
   content: "\F54B"; }
 
@@ -4518,9 +4078,6 @@ readers do not read off random characters that represent icons */
 .b-fa-shovel:before {
   content: "\F713"; }
 
-.b-fa-shovel-snow:before {
-  content: "\F7C3"; }
-
 .b-fa-shower:before {
   content: "\F2CC"; }
 
@@ -4532,9 +4089,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-shuttlecock:before {
   content: "\F45B"; }
-
-.b-fa-sickle:before {
-  content: "\F822"; }
 
 .b-fa-sigma:before {
   content: "\F68B"; }
@@ -4593,9 +4147,6 @@ readers do not read off random characters that represent icons */
 .b-fa-signature:before {
   content: "\F5B7"; }
 
-.b-fa-sim-card:before {
-  content: "\F7C4"; }
-
 .b-fa-simplybuilt:before {
   content: "\F215"; }
 
@@ -4608,26 +4159,8 @@ readers do not read off random characters that represent icons */
 .b-fa-sith:before {
   content: "\F512"; }
 
-.b-fa-skating:before {
-  content: "\F7C5"; }
-
 .b-fa-skeleton:before {
   content: "\F620"; }
-
-.b-fa-sketch:before {
-  content: "\F7C6"; }
-
-.b-fa-ski-jump:before {
-  content: "\F7C7"; }
-
-.b-fa-ski-lift:before {
-  content: "\F7C8"; }
-
-.b-fa-skiing:before {
-  content: "\F7C9"; }
-
-.b-fa-skiing-nordic:before {
-  content: "\F7CA"; }
 
 .b-fa-skull:before {
   content: "\F54C"; }
@@ -4649,12 +4182,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-slash:before {
   content: "\F715"; }
-
-.b-fa-sledding:before {
-  content: "\F7CB"; }
-
-.b-fa-sleigh:before {
-  content: "\F7CC"; }
 
 .b-fa-sliders-h:before {
   content: "\F1DE"; }
@@ -4695,9 +4222,6 @@ readers do not read off random characters that represent icons */
 .b-fa-smoking-ban:before {
   content: "\F54D"; }
 
-.b-fa-sms:before {
-  content: "\F7CD"; }
-
 .b-fa-snake:before {
   content: "\F716"; }
 
@@ -4713,23 +4237,8 @@ readers do not read off random characters that represent icons */
 .b-fa-snow-blowing:before {
   content: "\F761"; }
 
-.b-fa-snowboarding:before {
-  content: "\F7CE"; }
-
 .b-fa-snowflake:before {
   content: "\F2DC"; }
-
-.b-fa-snowflakes:before {
-  content: "\F7CF"; }
-
-.b-fa-snowman:before {
-  content: "\F7D0"; }
-
-.b-fa-snowmobile:before {
-  content: "\F7D1"; }
-
-.b-fa-snowplow:before {
-  content: "\F7D2"; }
 
 .b-fa-socks:before {
   content: "\F696"; }
@@ -4767,12 +4276,6 @@ readers do not read off random characters that represent icons */
 .b-fa-soundcloud:before {
   content: "\F1BE"; }
 
-.b-fa-soup:before {
-  content: "\F823"; }
-
-.b-fa-sourcetree:before {
-  content: "\F7D3"; }
-
 .b-fa-spa:before {
   content: "\F5BB"; }
 
@@ -4784,9 +4287,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-speakap:before {
   content: "\F3F3"; }
-
-.b-fa-speaker-deck:before {
-  content: "\F83C"; }
 
 .b-fa-spider:before {
   content: "\F717"; }
@@ -4836,9 +4336,6 @@ readers do not read off random characters that represent icons */
 .b-fa-stack-overflow:before {
   content: "\F16C"; }
 
-.b-fa-stackpath:before {
-  content: "\F842"; }
-
 .b-fa-staff:before {
   content: "\F71B"; }
 
@@ -4850,9 +4347,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-star-and-crescent:before {
   content: "\F699"; }
-
-.b-fa-star-christmas:before {
-  content: "\F7D4"; }
 
 .b-fa-star-exclamation:before {
   content: "\F2F3"; }
@@ -4874,9 +4368,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-staylinked:before {
   content: "\F3F5"; }
-
-.b-fa-steak:before {
-  content: "\F824"; }
 
 .b-fa-steam:before {
   content: "\F1B6"; }
@@ -4905,9 +4396,6 @@ readers do not read off random characters that represent icons */
 .b-fa-sticky-note:before {
   content: "\F249"; }
 
-.b-fa-stocking:before {
-  content: "\F7D5"; }
-
 .b-fa-stomach:before {
   content: "\F623"; }
 
@@ -4934,9 +4422,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-street-view:before {
   content: "\F21D"; }
-
-.b-fa-stretcher:before {
-  content: "\F825"; }
 
 .b-fa-strikethrough:before {
   content: "\F0CC"; }
@@ -5001,9 +4486,6 @@ readers do not read off random characters that represent icons */
 .b-fa-surprise:before {
   content: "\F5C2"; }
 
-.b-fa-suse:before {
-  content: "\F7D6"; }
-
 .b-fa-swatchbook:before {
   content: "\F5C3"; }
 
@@ -5018,9 +4500,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-swords:before {
   content: "\F71D"; }
-
-.b-fa-symfony:before {
-  content: "\F83D"; }
 
 .b-fa-synagogue:before {
   content: "\F69B"; }
@@ -5094,9 +4573,6 @@ readers do not read off random characters that represent icons */
 .b-fa-tachometer-slowest:before {
   content: "\F62D"; }
 
-.b-fa-taco:before {
-  content: "\F826"; }
-
 .b-fa-tag:before {
   content: "\F02B"; }
 
@@ -5106,17 +4582,11 @@ readers do not read off random characters that represent icons */
 .b-fa-tally:before {
   content: "\F69C"; }
 
-.b-fa-tanakh:before {
-  content: "\F827"; }
-
 .b-fa-tape:before {
   content: "\F4DB"; }
 
 .b-fa-tasks:before {
   content: "\F0AE"; }
-
-.b-fa-tasks-alt:before {
-  content: "\F828"; }
 
 .b-fa-taxi:before {
   content: "\F1BA"; }
@@ -5150,9 +4620,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-tencent-weibo:before {
   content: "\F1D5"; }
-
-.b-fa-tenge:before {
-  content: "\F7D7"; }
 
 .b-fa-tennis-ball:before {
   content: "\F45E"; }
@@ -5281,9 +4748,6 @@ readers do not read off random characters that represent icons */
 .b-fa-toggle-on:before {
   content: "\F205"; }
 
-.b-fa-toilet:before {
-  content: "\F7D8"; }
-
 .b-fa-toilet-paper:before {
   content: "\F71E"; }
 
@@ -5298,9 +4762,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-toolbox:before {
   content: "\F552"; }
-
-.b-fa-tools:before {
-  content: "\F7D9"; }
 
 .b-fa-tooth:before {
   content: "\F5C9"; }
@@ -5344,9 +4805,6 @@ readers do not read off random characters that represent icons */
 .b-fa-train:before {
   content: "\F238"; }
 
-.b-fa-tram:before {
-  content: "\F7DA"; }
-
 .b-fa-transgender:before {
   content: "\F224"; }
 
@@ -5359,12 +4817,6 @@ readers do not read off random characters that represent icons */
 .b-fa-trash-alt:before {
   content: "\F2ED"; }
 
-.b-fa-trash-restore:before {
-  content: "\F829"; }
-
-.b-fa-trash-restore-alt:before {
-  content: "\F82A"; }
-
 .b-fa-treasure-chest:before {
   content: "\F723"; }
 
@@ -5373,18 +4825,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-tree-alt:before {
   content: "\F400"; }
-
-.b-fa-tree-christmas:before {
-  content: "\F7DB"; }
-
-.b-fa-tree-decorated:before {
-  content: "\F7DC"; }
-
-.b-fa-tree-large:before {
-  content: "\F7DD"; }
-
-.b-fa-tree-palm:before {
-  content: "\F82B"; }
 
 .b-fa-trees:before {
   content: "\F724"; }
@@ -5424,9 +4864,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-truck-pickup:before {
   content: "\F63C"; }
-
-.b-fa-truck-plow:before {
-  content: "\F7DE"; }
 
 .b-fa-truck-ramp:before {
   content: "\F4E0"; }
@@ -5469,9 +4906,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-uber:before {
   content: "\F402"; }
-
-.b-fa-ubuntu:before {
-  content: "\F7DF"; }
 
 .b-fa-uikit:before {
   content: "\F403"; }
@@ -5521,9 +4955,6 @@ readers do not read off random characters that represent icons */
 .b-fa-upload:before {
   content: "\F093"; }
 
-.b-fa-ups:before {
-  content: "\F7E0"; }
-
 .b-fa-usb:before {
   content: "\F287"; }
 
@@ -5572,12 +5003,6 @@ readers do not read off random characters that represent icons */
 .b-fa-user-graduate:before {
   content: "\F501"; }
 
-.b-fa-user-hard-hat:before {
-  content: "\F82C"; }
-
-.b-fa-user-headset:before {
-  content: "\F82D"; }
-
 .b-fa-user-injured:before {
   content: "\F728"; }
 
@@ -5587,17 +5012,11 @@ readers do not read off random characters that represent icons */
 .b-fa-user-md:before {
   content: "\F0F0"; }
 
-.b-fa-user-md-chat:before {
-  content: "\F82E"; }
-
 .b-fa-user-minus:before {
   content: "\F503"; }
 
 .b-fa-user-ninja:before {
   content: "\F504"; }
-
-.b-fa-user-nurse:before {
-  content: "\F82F"; }
 
 .b-fa-user-plus:before {
   content: "\F234"; }
@@ -5631,12 +5050,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-users-crown:before {
   content: "\F6A5"; }
-
-.b-fa-users-medical:before {
-  content: "\F830"; }
-
-.b-fa-usps:before {
-  content: "\F7E1"; }
 
 .b-fa-ussunnah:before {
   content: "\F407"; }
@@ -5758,9 +5171,6 @@ readers do not read off random characters that represent icons */
 .b-fa-vuejs:before {
   content: "\F41F"; }
 
-.b-fa-walker:before {
-  content: "\F831"; }
-
 .b-fa-walking:before {
   content: "\F554"; }
 
@@ -5793,18 +5203,6 @@ readers do not read off random characters that represent icons */
 
 .b-fa-water-rise:before {
   content: "\F775"; }
-
-.b-fa-wave-square:before {
-  content: "\F83E"; }
-
-.b-fa-waze:before {
-  content: "\F83F"; }
-
-.b-fa-webcam:before {
-  content: "\F832"; }
-
-.b-fa-webcam-slash:before {
-  content: "\F833"; }
 
 .b-fa-weebly:before {
   content: "\F5CC"; }
@@ -5926,9 +5324,6 @@ readers do not read off random characters that represent icons */
 .b-fa-wpressr:before {
   content: "\F3E4"; }
 
-.b-fa-wreath:before {
-  content: "\F7E2"; }
-
 .b-fa-wrench:before {
   content: "\F0AD"; }
 
@@ -5950,17 +5345,11 @@ readers do not read off random characters that represent icons */
 .b-fa-yahoo:before {
   content: "\F19E"; }
 
-.b-fa-yammer:before {
-  content: "\F840"; }
-
 .b-fa-yandex:before {
   content: "\F413"; }
 
 .b-fa-yandex-international:before {
   content: "\F414"; }
-
-.b-fa-yarn:before {
-  content: "\F7E3"; }
 
 .b-fa-yelp:before {
   content: "\F1E9"; }
@@ -6002,8 +5391,7 @@ readers do not read off random characters that represent icons */
 
 .b-fa {
   font-family: inherit;
-  line-height: inherit;
-  -webkit-font-smoothing: inherit; }
+  line-height: inherit; }
 
 .b-fa:before {
   font-family: "Font Awesome 5 Pro"; }
@@ -6016,6 +5404,7 @@ readers do not read off random characters that represent icons */
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
+  vertical-align: -.125em;
   font-family: "Font Awesome 5 Pro";
   vertical-align: 0; }
 
@@ -6027,10 +5416,11 @@ readers do not read off random characters that represent icons */
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
+  vertical-align: -.125em;
   font-family: "Font Awesome 5 Pro";
   vertical-align: 0; }
 
-.b-content-icon, .b-checkbox .b-checkbox-label:before, .b-grid.b-column-resize.b-touch.b-column-resizing .b-grid-header.b-resizing::before, .b-moving-splitter.b-touch .b-grid-splitter::before, .b-grid-cell.b-group-title:before {
+.b-content-icon, .b-checkbox label:before, .b-grid.b-column-resize.b-touch.b-column-resizing .b-grid-header.b-resizing::before, .b-moving-splitter.b-touch .b-grid-splitter::before, .b-grid-cell.b-group-title:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -6038,6 +5428,7 @@ readers do not read off random characters that represent icons */
   font-variant: normal;
   font-weight: normal;
   line-height: 1;
+  vertical-align: -.125em;
   font-family: "Font Awesome 5 Pro";
   vertical-align: 0; }
 
@@ -6045,7 +5436,8 @@ readers do not read off random characters that represent icons */
   transform: rotate(90deg); }
 
 .b-icon-tree-leaf:before {
-  content: '\2022'; }
+  font-size: .3em;
+  padding-right: 2.5em; }
 
 .b-icon-clock-live {
   background-color: #757575;
@@ -6210,8 +5602,7 @@ readers do not read off random characters that represent icons */
     transition: opacity 0.2s;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
     top: 0;
-    left: 0;
-    overflow: visible; }
+    left: 0; }
     .b-float-root > .b-floating.b-hidden {
       opacity: 0; }
     .b-float-root > .b-floating.b-measure {
@@ -6313,98 +5704,10 @@ readers do not read off random characters that represent icons */
     height: 0;
     border-color: transparent; } }
 
-.b-widget {
-  display: inline-flex;
-  overflow: hidden;
-  line-height: initial;
-  font-weight: 400;
-  font-size: 1em;
-  box-sizing: border-box; }
-  .b-widget * {
-    box-sizing: border-box; }
-  .b-widget:before, .b-widget:after,
-  .b-widget *:before,
-  .b-widget *:after {
-    box-sizing: border-box; }
-  .b-widget.b-positioned {
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .b-widget .b-focus-trap {
-    position: absolute;
-    display: none;
-    clip: rect(0, 0, 0, 0); }
-  .b-widget.b-focus-trapped.b-contains-focus .b-focus-trap {
-    display: inherit; }
-  .b-widget.b-hidden {
-    display: none !important; }
-  .b-widget.b-hiding {
-    pointer-events: none; }
-  .b-widget .b-widget-inner {
-    width: 100%;
-    position: relative;
-    flex: 1; }
-  .b-widget .b-anchor {
-    width: 16px;
-    height: 8px;
-    position: absolute;
-    z-index: -1; }
-    .b-widget .b-anchor svg {
-      position: absolute;
-      top: 0;
-      overflow: visible; }
-    .b-widget .b-anchor.b-anchor-top {
-      left: 0;
-      bottom: calc(100% - 1px); }
-    .b-widget .b-anchor.b-anchor-bottom {
-      left: 0;
-      top: calc(100% - 1px); }
-      .b-widget .b-anchor.b-anchor-bottom svg {
-        transform: rotate(180deg); }
-    .b-widget .b-anchor.b-anchor-left {
-      top: 0;
-      width: 8px;
-      height: 16px;
-      right: calc(100% - 1px); }
-      .b-widget .b-anchor.b-anchor-left svg {
-        transform: rotate(270deg);
-        transform-origin: 8px 8px; }
-    .b-widget .b-anchor.b-anchor-right {
-      top: 0;
-      width: 8px;
-      height: 16px;
-      left: calc(100% - 1px); }
-      .b-widget .b-anchor.b-anchor-right svg {
-        transform: rotate(90deg);
-        transform-origin: 4px 4px; }
-
-.b-widget-scroller {
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  overflow-anchor: none;
-  /* without this we see weird issues in Mac Chrome <= 63 with no scrollbar, covered in Tree.t.js */ }
-  .b-widget-scroller.b-hide-scroll {
-    -ms-overflow-style: none; }
-    .b-widget-scroller.b-hide-scroll::-webkit-scrollbar {
-      display: none; }
-    .b-firefox .b-widget-scroller.b-hide-scroll {
-      overflow: hidden !important; }
-
-.b-scroller-stretcher {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1px;
-  width: 1px; }
-
-.b-widget.b-badge {
-  overflow: visible; }
-
 .b-badge:before {
   content: attr(data-badge);
   position: absolute;
   min-width: 2.223em;
-  min-height: 2.223em;
   right: -1em;
   top: -1em;
   padding: .5em;
@@ -6412,15 +5715,10 @@ readers do not read off random characters that represent icons */
   color: #fff;
   border-radius: 50%;
   font-size: .6em;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 500;
+  text-align: center;
   animation-name: b-badge-show;
   animation-duration: .3s; }
-
-.b-button.b-badge:before {
-  font-size: .7em; }
 
 @keyframes b-badge-show {
   0% {
@@ -6436,7 +5734,8 @@ button.b-button {
   border-radius: 2px;
   min-width: 3em;
   min-height: 3em;
-  border: 0 solid;
+  border: 0 solid #757575;
+  background-color: transparent;
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.5s;
@@ -6447,30 +5746,35 @@ button.b-button {
   text-transform: uppercase; }
   button.b-button.b-ie {
     height: 3em; }
-  button.b-button::-moz-focus-inner {
-    border: 0; }
-  button.b-button.b-text.b-icon-align-start i {
-    order: -100;
+  button.b-button.b-text i {
     margin-right: 0.3em; }
-  button.b-button.b-text.b-icon-align-end i {
-    order: 100;
-    margin-left: 0.3em; }
   button.b-button i {
+    transition: color 0.2s, background-color 0.2s;
     font-size: 1em; }
   button.b-button.b-badge, button.b-button.b-badge.b-text {
     overflow: visible; }
-  button.b-button:focus {
-    outline: none; }
-  body.b-using-keyboard button.b-button:focus {
+  button.b-button:hover:not([disabled]) {
     background-color: rgba(33, 150, 243, 0.096); }
+  button.b-button:focus {
+    outline: none;
+    background-color: rgba(33, 150, 243, 0.096); }
+  button.b-button.b-pressed {
+    background-color: rgba(158, 158, 158, 0.8); }
+  button.b-button.b-pressed:hover {
+    background-color: rgba(158, 158, 158, 0.7); }
+  button.b-button:active:not([disabled]) {
+    background-color: rgba(33, 150, 243, 0.16);
+    border-color: #919191; }
   button.b-button:disabled {
+    background-color: transparent;
+    border-color: #E0E0E0;
+    color: #9E9E9E;
     cursor: default; }
 
 .b-button.b-white {
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.03); }
-  body.b-using-keyboard .b-button.b-white:focus {
+  border-color: #fff; }
+  .b-button.b-white:focus {
     background-color: rgba(255, 255, 255, 0.3); }
   .b-button.b-white.b-pressed {
     color: #fff;
@@ -6478,24 +5782,20 @@ button.b-button {
   .b-button.b-white:hover:not([disabled]) {
     color: #fff;
     background-color: #fff; }
-    .b-button.b-white:hover:not([disabled]):not(.b-pressed) {
-      border-color: #fff; }
   .b-button.b-white.b-pressed:hover {
     color: #fff;
     background-color: rgba(255, 255, 255, 0.7); }
-  .b-button.b-white:active:not([disabled]) {
+  .b-button.b-white:active {
     background-color: #f2f2f2;
     border-color: #f2f2f2; }
   .b-button.b-white.b-disabled {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.3); }
+    color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.7); }
 
 .b-button.b-blue, .b-button {
   color: #2196F3;
-  border-color: rgba(33, 150, 243, 0.5);
-  background-color: rgba(33, 150, 243, 0.03); }
-  body.b-using-keyboard .b-button.b-blue:focus, body.b-using-keyboard .b-button:focus {
+  border-color: #2196F3; }
+  .b-button.b-blue:focus, .b-button:focus {
     background-color: rgba(33, 150, 243, 0.3); }
   .b-button.b-blue.b-pressed, .b-pressed.b-button {
     color: #fff;
@@ -6503,24 +5803,20 @@ button.b-button {
   .b-button.b-blue:hover:not([disabled]), .b-button:hover:not([disabled]) {
     color: #fff;
     background-color: #2196F3; }
-    .b-button.b-blue:hover:not([disabled]):not(.b-pressed), .b-button:hover:not([disabled]):not(.b-pressed) {
-      border-color: #2196F3; }
   .b-button.b-blue.b-pressed:hover, .b-pressed.b-button:hover {
     color: #fff;
     background-color: rgba(33, 150, 243, 0.7); }
-  .b-button.b-blue:active:not([disabled]), .b-button:active:not([disabled]) {
+  .b-button.b-blue:active, .b-button:active {
     background-color: #0d8aee;
     border-color: #0d8aee; }
   .b-button.b-blue.b-disabled, .b-disabled.b-button {
-    background-color: transparent;
-    color: rgba(33, 150, 243, 0.3);
-    border-color: rgba(33, 150, 243, 0.3); }
+    color: rgba(33, 150, 243, 0.7);
+    border-color: rgba(33, 150, 243, 0.7); }
 
 .b-button.b-deep-orange {
   color: #FF5722;
-  border-color: rgba(255, 87, 34, 0.5);
-  background-color: rgba(255, 87, 34, 0.03); }
-  body.b-using-keyboard .b-button.b-deep-orange:focus {
+  border-color: #FF5722; }
+  .b-button.b-deep-orange:focus {
     background-color: rgba(255, 87, 34, 0.3); }
   .b-button.b-deep-orange.b-pressed {
     color: #fff;
@@ -6528,24 +5824,20 @@ button.b-button {
   .b-button.b-deep-orange:hover:not([disabled]) {
     color: #fff;
     background-color: #FF5722; }
-    .b-button.b-deep-orange:hover:not([disabled]):not(.b-pressed) {
-      border-color: #FF5722; }
   .b-button.b-deep-orange.b-pressed:hover {
     color: #fff;
     background-color: rgba(255, 87, 34, 0.7); }
-  .b-button.b-deep-orange:active:not([disabled]) {
+  .b-button.b-deep-orange:active {
     background-color: #ff4409;
     border-color: #ff4409; }
   .b-button.b-deep-orange.b-disabled {
-    background-color: transparent;
-    color: rgba(255, 87, 34, 0.3);
-    border-color: rgba(255, 87, 34, 0.3); }
+    color: rgba(255, 87, 34, 0.7);
+    border-color: rgba(255, 87, 34, 0.7); }
 
 .b-button.b-orange {
   color: #FF9800;
-  border-color: rgba(255, 152, 0, 0.5);
-  background-color: rgba(255, 152, 0, 0.03); }
-  body.b-using-keyboard .b-button.b-orange:focus {
+  border-color: #FF9800; }
+  .b-button.b-orange:focus {
     background-color: rgba(255, 152, 0, 0.3); }
   .b-button.b-orange.b-pressed {
     color: #fff;
@@ -6553,24 +5845,20 @@ button.b-button {
   .b-button.b-orange:hover:not([disabled]) {
     color: #fff;
     background-color: #FF9800; }
-    .b-button.b-orange:hover:not([disabled]):not(.b-pressed) {
-      border-color: #FF9800; }
   .b-button.b-orange.b-pressed:hover {
     color: #fff;
     background-color: rgba(255, 152, 0, 0.7); }
-  .b-button.b-orange:active:not([disabled]) {
+  .b-button.b-orange:active {
     background-color: #e68900;
     border-color: #e68900; }
   .b-button.b-orange.b-disabled {
-    background-color: transparent;
-    color: rgba(255, 152, 0, 0.3);
-    border-color: rgba(255, 152, 0, 0.3); }
+    color: rgba(255, 152, 0, 0.7);
+    border-color: rgba(255, 152, 0, 0.7); }
 
 .b-button.b-amber {
   color: #FFC107;
-  border-color: rgba(255, 193, 7, 0.5);
-  background-color: rgba(255, 193, 7, 0.03); }
-  body.b-using-keyboard .b-button.b-amber:focus {
+  border-color: #FFC107; }
+  .b-button.b-amber:focus {
     background-color: rgba(255, 193, 7, 0.3); }
   .b-button.b-amber.b-pressed {
     color: #fff;
@@ -6578,24 +5866,20 @@ button.b-button {
   .b-button.b-amber:hover:not([disabled]) {
     color: #fff;
     background-color: #FFC107; }
-    .b-button.b-amber:hover:not([disabled]):not(.b-pressed) {
-      border-color: #FFC107; }
   .b-button.b-amber.b-pressed:hover {
     color: #fff;
     background-color: rgba(255, 193, 7, 0.7); }
-  .b-button.b-amber:active:not([disabled]) {
+  .b-button.b-amber:active {
     background-color: #edb100;
     border-color: #edb100; }
   .b-button.b-amber.b-disabled {
-    background-color: transparent;
-    color: rgba(255, 193, 7, 0.3);
-    border-color: rgba(255, 193, 7, 0.3); }
+    color: rgba(255, 193, 7, 0.7);
+    border-color: rgba(255, 193, 7, 0.7); }
 
 .b-button.b-indigo {
   color: #3F51B5;
-  border-color: rgba(63, 81, 181, 0.5);
-  background-color: rgba(63, 81, 181, 0.03); }
-  body.b-using-keyboard .b-button.b-indigo:focus {
+  border-color: #3F51B5; }
+  .b-button.b-indigo:focus {
     background-color: rgba(63, 81, 181, 0.3); }
   .b-button.b-indigo.b-pressed {
     color: #fff;
@@ -6603,24 +5887,20 @@ button.b-button {
   .b-button.b-indigo:hover:not([disabled]) {
     color: #fff;
     background-color: #3F51B5; }
-    .b-button.b-indigo:hover:not([disabled]):not(.b-pressed) {
-      border-color: #3F51B5; }
   .b-button.b-indigo.b-pressed:hover {
     color: #fff;
     background-color: rgba(63, 81, 181, 0.7); }
-  .b-button.b-indigo:active:not([disabled]) {
+  .b-button.b-indigo:active {
     background-color: #3849a2;
     border-color: #3849a2; }
   .b-button.b-indigo.b-disabled {
-    background-color: transparent;
-    color: rgba(63, 81, 181, 0.3);
-    border-color: rgba(63, 81, 181, 0.3); }
+    color: rgba(63, 81, 181, 0.7);
+    border-color: rgba(63, 81, 181, 0.7); }
 
 .b-button.b-lime {
   color: #CDDC39;
-  border-color: rgba(205, 220, 57, 0.5);
-  background-color: rgba(205, 220, 57, 0.03); }
-  body.b-using-keyboard .b-button.b-lime:focus {
+  border-color: #CDDC39; }
+  .b-button.b-lime:focus {
     background-color: rgba(205, 220, 57, 0.3); }
   .b-button.b-lime.b-pressed {
     color: #fff;
@@ -6628,24 +5908,20 @@ button.b-button {
   .b-button.b-lime:hover:not([disabled]) {
     color: #fff;
     background-color: #CDDC39; }
-    .b-button.b-lime:hover:not([disabled]):not(.b-pressed) {
-      border-color: #CDDC39; }
   .b-button.b-lime.b-pressed:hover {
     color: #fff;
     background-color: rgba(205, 220, 57, 0.7); }
-  .b-button.b-lime:active:not([disabled]) {
+  .b-button.b-lime:active {
     background-color: #c6d626;
     border-color: #c6d626; }
   .b-button.b-lime.b-disabled {
-    background-color: transparent;
-    color: rgba(205, 220, 57, 0.3);
-    border-color: rgba(205, 220, 57, 0.3); }
+    color: rgba(205, 220, 57, 0.7);
+    border-color: rgba(205, 220, 57, 0.7); }
 
 .b-button.b-teal {
   color: #009688;
-  border-color: rgba(0, 150, 136, 0.5);
-  background-color: rgba(0, 150, 136, 0.03); }
-  body.b-using-keyboard .b-button.b-teal:focus {
+  border-color: #009688; }
+  .b-button.b-teal:focus {
     background-color: rgba(0, 150, 136, 0.3); }
   .b-button.b-teal.b-pressed {
     color: #fff;
@@ -6653,24 +5929,20 @@ button.b-button {
   .b-button.b-teal:hover:not([disabled]) {
     color: #fff;
     background-color: #009688; }
-    .b-button.b-teal:hover:not([disabled]):not(.b-pressed) {
-      border-color: #009688; }
   .b-button.b-teal.b-pressed:hover {
     color: #fff;
     background-color: rgba(0, 150, 136, 0.7); }
-  .b-button.b-teal:active:not([disabled]) {
+  .b-button.b-teal:active {
     background-color: #007d71;
     border-color: #007d71; }
   .b-button.b-teal.b-disabled {
-    background-color: transparent;
-    color: rgba(0, 150, 136, 0.3);
-    border-color: rgba(0, 150, 136, 0.3); }
+    color: rgba(0, 150, 136, 0.7);
+    border-color: rgba(0, 150, 136, 0.7); }
 
 .b-button.b-green {
   color: #4CAF50;
-  border-color: rgba(76, 175, 80, 0.5);
-  background-color: rgba(76, 175, 80, 0.03); }
-  body.b-using-keyboard .b-button.b-green:focus {
+  border-color: #4CAF50; }
+  .b-button.b-green:focus {
     background-color: rgba(76, 175, 80, 0.3); }
   .b-button.b-green.b-pressed {
     color: #fff;
@@ -6678,24 +5950,20 @@ button.b-button {
   .b-button.b-green:hover:not([disabled]) {
     color: #fff;
     background-color: #4CAF50; }
-    .b-button.b-green:hover:not([disabled]):not(.b-pressed) {
-      border-color: #4CAF50; }
   .b-button.b-green.b-pressed:hover {
     color: #fff;
     background-color: rgba(76, 175, 80, 0.7); }
-  .b-button.b-green:active:not([disabled]) {
+  .b-button.b-green:active {
     background-color: #449d48;
     border-color: #449d48; }
   .b-button.b-green.b-disabled {
-    background-color: transparent;
-    color: rgba(76, 175, 80, 0.3);
-    border-color: rgba(76, 175, 80, 0.3); }
+    color: rgba(76, 175, 80, 0.7);
+    border-color: rgba(76, 175, 80, 0.7); }
 
 .b-button.b-light-green {
   color: #8BC34A;
-  border-color: rgba(139, 195, 74, 0.5);
-  background-color: rgba(139, 195, 74, 0.03); }
-  body.b-using-keyboard .b-button.b-light-green:focus {
+  border-color: #8BC34A; }
+  .b-button.b-light-green:focus {
     background-color: rgba(139, 195, 74, 0.3); }
   .b-button.b-light-green.b-pressed {
     color: #fff;
@@ -6703,24 +5971,20 @@ button.b-button {
   .b-button.b-light-green:hover:not([disabled]) {
     color: #fff;
     background-color: #8BC34A; }
-    .b-button.b-light-green:hover:not([disabled]):not(.b-pressed) {
-      border-color: #8BC34A; }
   .b-button.b-light-green.b-pressed:hover {
     color: #fff;
     background-color: rgba(139, 195, 74, 0.7); }
-  .b-button.b-light-green:active:not([disabled]) {
+  .b-button.b-light-green:active {
     background-color: #7eb73d;
     border-color: #7eb73d; }
   .b-button.b-light-green.b-disabled {
-    background-color: transparent;
-    color: rgba(139, 195, 74, 0.3);
-    border-color: rgba(139, 195, 74, 0.3); }
+    color: rgba(139, 195, 74, 0.7);
+    border-color: rgba(139, 195, 74, 0.7); }
 
 .b-button.b-purple {
   color: #9C27B0;
-  border-color: rgba(156, 39, 176, 0.5);
-  background-color: rgba(156, 39, 176, 0.03); }
-  body.b-using-keyboard .b-button.b-purple:focus {
+  border-color: #9C27B0; }
+  .b-button.b-purple:focus {
     background-color: rgba(156, 39, 176, 0.3); }
   .b-button.b-purple.b-pressed {
     color: #fff;
@@ -6728,24 +5992,20 @@ button.b-button {
   .b-button.b-purple:hover:not([disabled]) {
     color: #fff;
     background-color: #9C27B0; }
-    .b-button.b-purple:hover:not([disabled]):not(.b-pressed) {
-      border-color: #9C27B0; }
   .b-button.b-purple.b-pressed:hover {
     color: #fff;
     background-color: rgba(156, 39, 176, 0.7); }
-  .b-button.b-purple:active:not([disabled]) {
+  .b-button.b-purple:active {
     background-color: #89229b;
     border-color: #89229b; }
   .b-button.b-purple.b-disabled {
-    background-color: transparent;
-    color: rgba(156, 39, 176, 0.3);
-    border-color: rgba(156, 39, 176, 0.3); }
+    color: rgba(156, 39, 176, 0.7);
+    border-color: rgba(156, 39, 176, 0.7); }
 
 .b-button.b-yellow {
   color: #FFEB3B;
-  border-color: rgba(255, 235, 59, 0.5);
-  background-color: rgba(255, 235, 59, 0.03); }
-  body.b-using-keyboard .b-button.b-yellow:focus {
+  border-color: #FFEB3B; }
+  .b-button.b-yellow:focus {
     background-color: rgba(255, 235, 59, 0.3); }
   .b-button.b-yellow.b-pressed {
     color: #fff;
@@ -6753,24 +6013,20 @@ button.b-button {
   .b-button.b-yellow:hover:not([disabled]) {
     color: #fff;
     background-color: #FFEB3B; }
-    .b-button.b-yellow:hover:not([disabled]):not(.b-pressed) {
-      border-color: #FFEB3B; }
   .b-button.b-yellow.b-pressed:hover {
     color: #fff;
     background-color: rgba(255, 235, 59, 0.7); }
-  .b-button.b-yellow:active:not([disabled]) {
+  .b-button.b-yellow:active {
     background-color: #ffe822;
     border-color: #ffe822; }
   .b-button.b-yellow.b-disabled {
-    background-color: transparent;
-    color: rgba(255, 235, 59, 0.3);
-    border-color: rgba(255, 235, 59, 0.3); }
+    color: rgba(255, 235, 59, 0.7);
+    border-color: rgba(255, 235, 59, 0.7); }
 
 .b-button.b-red {
   color: #F44336;
-  border-color: rgba(244, 67, 54, 0.5);
-  background-color: rgba(244, 67, 54, 0.03); }
-  body.b-using-keyboard .b-button.b-red:focus {
+  border-color: #F44336; }
+  .b-button.b-red:focus {
     background-color: rgba(244, 67, 54, 0.3); }
   .b-button.b-red.b-pressed {
     color: #fff;
@@ -6778,24 +6034,20 @@ button.b-button {
   .b-button.b-red:hover:not([disabled]) {
     color: #fff;
     background-color: #F44336; }
-    .b-button.b-red:hover:not([disabled]):not(.b-pressed) {
-      border-color: #F44336; }
   .b-button.b-red.b-pressed:hover {
     color: #fff;
     background-color: rgba(244, 67, 54, 0.7); }
-  .b-button.b-red:active:not([disabled]) {
+  .b-button.b-red:active {
     background-color: #f32c1e;
     border-color: #f32c1e; }
   .b-button.b-red.b-disabled {
-    background-color: transparent;
-    color: rgba(244, 67, 54, 0.3);
-    border-color: rgba(244, 67, 54, 0.3); }
+    color: rgba(244, 67, 54, 0.7);
+    border-color: rgba(244, 67, 54, 0.7); }
 
 .b-button.b-dark-gray {
   color: #424242;
-  border-color: rgba(66, 66, 66, 0.5);
-  background-color: rgba(66, 66, 66, 0.03); }
-  body.b-using-keyboard .b-button.b-dark-gray:focus {
+  border-color: #424242; }
+  .b-button.b-dark-gray:focus {
     background-color: rgba(66, 66, 66, 0.3); }
   .b-button.b-dark-gray.b-pressed {
     color: #fff;
@@ -6803,24 +6055,20 @@ button.b-button {
   .b-button.b-dark-gray:hover:not([disabled]) {
     color: #fff;
     background-color: #424242; }
-    .b-button.b-dark-gray:hover:not([disabled]):not(.b-pressed) {
-      border-color: #424242; }
   .b-button.b-dark-gray.b-pressed:hover {
     color: #fff;
     background-color: rgba(66, 66, 66, 0.7); }
-  .b-button.b-dark-gray:active:not([disabled]) {
+  .b-button.b-dark-gray:active {
     background-color: #353535;
     border-color: #353535; }
   .b-button.b-dark-gray.b-disabled {
-    background-color: transparent;
-    color: rgba(66, 66, 66, 0.3);
-    border-color: rgba(66, 66, 66, 0.3); }
+    color: rgba(66, 66, 66, 0.7);
+    border-color: rgba(66, 66, 66, 0.7); }
 
 .b-button.b-gray {
   color: #9E9E9E;
-  border-color: rgba(158, 158, 158, 0.5);
-  background-color: rgba(158, 158, 158, 0.03); }
-  body.b-using-keyboard .b-button.b-gray:focus {
+  border-color: #9E9E9E; }
+  .b-button.b-gray:focus {
     background-color: rgba(158, 158, 158, 0.3); }
   .b-button.b-gray.b-pressed {
     color: #fff;
@@ -6828,24 +6076,20 @@ button.b-button {
   .b-button.b-gray:hover:not([disabled]) {
     color: #fff;
     background-color: #9E9E9E; }
-    .b-button.b-gray:hover:not([disabled]):not(.b-pressed) {
-      border-color: #9E9E9E; }
   .b-button.b-gray.b-pressed:hover {
     color: #fff;
     background-color: rgba(158, 158, 158, 0.7); }
-  .b-button.b-gray:active:not([disabled]) {
+  .b-button.b-gray:active {
     background-color: #919191;
     border-color: #919191; }
   .b-button.b-gray.b-disabled {
-    background-color: transparent;
-    color: rgba(158, 158, 158, 0.3);
-    border-color: rgba(158, 158, 158, 0.3); }
+    color: rgba(158, 158, 158, 0.7);
+    border-color: rgba(158, 158, 158, 0.7); }
 
 .b-button.b-light-gray {
   color: #E0E0E0;
-  border-color: rgba(224, 224, 224, 0.5);
-  background-color: rgba(224, 224, 224, 0.03); }
-  body.b-using-keyboard .b-button.b-light-gray:focus {
+  border-color: #E0E0E0; }
+  .b-button.b-light-gray:focus {
     background-color: rgba(224, 224, 224, 0.3); }
   .b-button.b-light-gray.b-pressed {
     color: #fff;
@@ -6853,61 +6097,27 @@ button.b-button {
   .b-button.b-light-gray:hover:not([disabled]) {
     color: #fff;
     background-color: #E0E0E0; }
-    .b-button.b-light-gray:hover:not([disabled]):not(.b-pressed) {
-      border-color: #E0E0E0; }
   .b-button.b-light-gray.b-pressed:hover {
     color: #fff;
     background-color: rgba(224, 224, 224, 0.7); }
-  .b-button.b-light-gray:active:not([disabled]) {
+  .b-button.b-light-gray:active {
     background-color: lightgray;
     border-color: lightgray; }
   .b-button.b-light-gray.b-disabled {
-    background-color: transparent;
-    color: rgba(224, 224, 224, 0.3);
-    border-color: rgba(224, 224, 224, 0.3); }
-
-.b-button {
-  color: #9E9E9E;
-  border-color: rgba(158, 158, 158, 0.5);
-  background-color: rgba(158, 158, 158, 0.03); }
-  body.b-using-keyboard .b-button:focus {
-    background-color: rgba(158, 158, 158, 0.3); }
-  .b-button.b-pressed {
-    color: #fff;
-    background-color: rgba(158, 158, 158, 0.8); }
-  .b-button:hover:not([disabled]) {
-    color: #fff;
-    background-color: #9E9E9E; }
-    .b-button:hover:not([disabled]):not(.b-pressed) {
-      border-color: #9E9E9E; }
-  .b-button.b-pressed:hover {
-    color: #fff;
-    background-color: rgba(158, 158, 158, 0.7); }
-  .b-button:active:not([disabled]) {
-    background-color: #919191;
-    border-color: #919191; }
-  .b-button.b-disabled {
-    background-color: transparent;
-    color: rgba(158, 158, 158, 0.3);
-    border-color: rgba(158, 158, 158, 0.3); }
+    color: rgba(224, 224, 224, 0.7);
+    border-color: rgba(224, 224, 224, 0.7); }
 
 button.b-button.b-raised.b-blue, button.b-button.b-raised, button.b-widget.b-button.b-raised {
   color: #fff;
   border: none;
   background-color: #2196F3; }
-  body.b-using-keyboard button.b-button.b-raised.b-blue:focus, body.b-using-keyboard button.b-button.b-raised:focus, body.b-using-keyboard button.b-widget.b-button.b-raised:focus {
+  button.b-button.b-raised.b-blue:focus, button.b-button.b-raised:focus {
     background-color: #4dabf5; }
-  body.b-using-keyboard button.b-button.b-raised.b-blue:focus:hover:not([disabled]), body.b-using-keyboard button.b-button.b-raised:focus:hover:not([disabled]), body.b-using-keyboard button.b-widget.b-button.b-raised:focus:hover:not([disabled]), button.b-button.b-raised.b-blue:hover:not([disabled]), button.b-button.b-raised:hover:not([disabled]) {
+  button.b-button.b-raised.b-blue:focus:hover:not([disabled]), button.b-button.b-raised:focus:hover:not([disabled]), button.b-button.b-raised.b-blue:hover:not([disabled]), button.b-button.b-raised:hover:not([disabled]) {
     background-color: #65b6f7; }
   button.b-button.b-raised.b-blue.b-pressed, button.b-pressed.b-button.b-raised, button.b-button.b-raised.b-blue.b-pressed[data-group]:hover, button.b-pressed.b-button.b-raised[data-group]:hover {
     background-color: #0966af; }
-  button.b-button.b-raised.b-blue.b-pressed:hover, button.b-pressed.b-button.b-raised:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-blue.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-pressed.b-button.b-raised:focus:hover,
-  body.b-using-keyboard button.b-pressed.b-widget.b-button.b-raised:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-blue.b-pressed:focus,
-  body.b-using-keyboard button.b-pressed.b-button.b-raised:focus,
-  body.b-using-keyboard button.b-pressed.b-widget.b-button.b-raised:focus, button.b-button.b-raised.b-blue.b-pressed:active, button.b-pressed.b-button.b-raised:active {
+  button.b-button.b-raised.b-blue.b-pressed:hover, button.b-pressed.b-button.b-raised:hover, button.b-button.b-raised.b-blue.b-pressed:focus:hover, button.b-pressed.b-button.b-raised:focus:hover, button.b-button.b-raised.b-blue.b-pressed:focus, button.b-pressed.b-button.b-raised:focus, button.b-button.b-raised.b-blue.b-pressed:active, button.b-pressed.b-button.b-raised:active {
     background-color: #0b74c7; }
   button.b-button.b-raised.b-blue:active, button.b-button.b-raised:active {
     background-color: #0d8aee;
@@ -6922,15 +6132,13 @@ button.b-button.b-raised.b-deep-orange {
   color: #fff;
   border: none;
   background-color: #FF5722; }
-  body.b-using-keyboard button.b-button.b-raised.b-deep-orange:focus {
+  button.b-button.b-raised.b-deep-orange:focus {
     background-color: #ff7a50; }
-  body.b-using-keyboard button.b-button.b-raised.b-deep-orange:focus:hover:not([disabled]), button.b-button.b-raised.b-deep-orange:hover:not([disabled]) {
+  button.b-button.b-raised.b-deep-orange:focus:hover:not([disabled]), button.b-button.b-raised.b-deep-orange:hover:not([disabled]) {
     background-color: #ff8d69; }
   button.b-button.b-raised.b-deep-orange.b-pressed, button.b-button.b-raised.b-deep-orange.b-pressed[data-group]:hover {
     background-color: #c52f00; }
-  button.b-button.b-raised.b-deep-orange.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-deep-orange.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-deep-orange.b-pressed:focus, button.b-button.b-raised.b-deep-orange.b-pressed:active {
+  button.b-button.b-raised.b-deep-orange.b-pressed:hover, button.b-button.b-raised.b-deep-orange.b-pressed:focus:hover, button.b-button.b-raised.b-deep-orange.b-pressed:focus, button.b-button.b-raised.b-deep-orange.b-pressed:active {
     background-color: #df3500; }
   button.b-button.b-raised.b-deep-orange:active {
     background-color: #ff4409;
@@ -6945,15 +6153,13 @@ button.b-button.b-raised.b-orange {
   color: #fff;
   border: none;
   background-color: #FF9800; }
-  body.b-using-keyboard button.b-button.b-raised.b-orange:focus {
+  button.b-button.b-raised.b-orange:focus {
     background-color: #ffab2e; }
-  body.b-using-keyboard button.b-button.b-raised.b-orange:focus:hover:not([disabled]), button.b-button.b-raised.b-orange:hover:not([disabled]) {
+  button.b-button.b-raised.b-orange:focus:hover:not([disabled]), button.b-button.b-raised.b-orange:hover:not([disabled]) {
     background-color: #ffb547; }
   button.b-button.b-raised.b-orange.b-pressed, button.b-button.b-raised.b-orange.b-pressed[data-group]:hover {
     background-color: #a36100; }
-  button.b-button.b-raised.b-orange.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-orange.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-orange.b-pressed:focus, button.b-button.b-raised.b-orange.b-pressed:active {
+  button.b-button.b-raised.b-orange.b-pressed:hover, button.b-button.b-raised.b-orange.b-pressed:focus:hover, button.b-button.b-raised.b-orange.b-pressed:focus, button.b-button.b-raised.b-orange.b-pressed:active {
     background-color: #bd7000; }
   button.b-button.b-raised.b-orange:active {
     background-color: #e68900;
@@ -6968,15 +6174,13 @@ button.b-button.b-raised.b-amber {
   color: #fff;
   border: none;
   background-color: #FFC107; }
-  body.b-using-keyboard button.b-button.b-raised.b-amber:focus {
+  button.b-button.b-raised.b-amber:focus {
     background-color: #ffcc35; }
-  body.b-using-keyboard button.b-button.b-raised.b-amber:focus:hover:not([disabled]), button.b-button.b-raised.b-amber:hover:not([disabled]) {
+  button.b-button.b-raised.b-amber:focus:hover:not([disabled]), button.b-button.b-raised.b-amber:hover:not([disabled]) {
     background-color: #ffd34e; }
   button.b-button.b-raised.b-amber.b-pressed, button.b-button.b-raised.b-amber.b-pressed[data-group]:hover {
     background-color: #aa8000; }
-  button.b-button.b-raised.b-amber.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-amber.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-amber.b-pressed:focus, button.b-button.b-raised.b-amber.b-pressed:active {
+  button.b-button.b-raised.b-amber.b-pressed:hover, button.b-button.b-raised.b-amber.b-pressed:focus:hover, button.b-button.b-raised.b-amber.b-pressed:focus, button.b-button.b-raised.b-amber.b-pressed:active {
     background-color: #c49300; }
   button.b-button.b-raised.b-amber:active {
     background-color: #edb100;
@@ -6991,15 +6195,13 @@ button.b-button.b-raised.b-indigo {
   color: #fff;
   border: none;
   background-color: #3F51B5; }
-  body.b-using-keyboard button.b-button.b-raised.b-indigo:focus {
+  button.b-button.b-raised.b-indigo:focus {
     background-color: #5c6cc6; }
-  body.b-using-keyboard button.b-button.b-raised.b-indigo:focus:hover:not([disabled]), button.b-button.b-raised.b-indigo:hover:not([disabled]) {
+  button.b-button.b-raised.b-indigo:focus:hover:not([disabled]), button.b-button.b-raised.b-indigo:hover:not([disabled]) {
     background-color: #6f7dcd; }
   button.b-button.b-raised.b-indigo.b-pressed, button.b-button.b-raised.b-indigo.b-pressed[data-group]:hover {
     background-color: #273371; }
-  button.b-button.b-raised.b-indigo.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-indigo.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-indigo.b-pressed:focus, button.b-button.b-raised.b-indigo.b-pressed:active {
+  button.b-button.b-raised.b-indigo.b-pressed:hover, button.b-button.b-raised.b-indigo.b-pressed:focus:hover, button.b-button.b-raised.b-indigo.b-pressed:focus, button.b-button.b-raised.b-indigo.b-pressed:active {
     background-color: #2e3b84; }
   button.b-button.b-raised.b-indigo:active {
     background-color: #3849a2;
@@ -7014,15 +6216,13 @@ button.b-button.b-raised.b-lime {
   color: #fff;
   border: none;
   background-color: #CDDC39; }
-  body.b-using-keyboard button.b-button.b-raised.b-lime:focus {
+  button.b-button.b-raised.b-lime:focus {
     background-color: #d7e360; }
-  body.b-using-keyboard button.b-button.b-raised.b-lime:focus:hover:not([disabled]), button.b-button.b-raised.b-lime:hover:not([disabled]) {
+  button.b-button.b-raised.b-lime:focus:hover:not([disabled]), button.b-button.b-raised.b-lime:hover:not([disabled]) {
     background-color: #dce776; }
   button.b-button.b-raised.b-lime.b-pressed, button.b-button.b-raised.b-lime.b-pressed[data-group]:hover {
     background-color: #919d1c; }
-  button.b-button.b-raised.b-lime.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-lime.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-lime.b-pressed:focus, button.b-button.b-raised.b-lime.b-pressed:active {
+  button.b-button.b-raised.b-lime.b-pressed:hover, button.b-button.b-raised.b-lime.b-pressed:focus:hover, button.b-button.b-raised.b-lime.b-pressed:focus, button.b-button.b-raised.b-lime.b-pressed:active {
     background-color: #a5b320; }
   button.b-button.b-raised.b-lime:active {
     background-color: #c6d626;
@@ -7037,15 +6237,13 @@ button.b-button.b-raised.b-teal {
   color: #fff;
   border: none;
   background-color: #009688; }
-  body.b-using-keyboard button.b-button.b-raised.b-teal:focus {
+  button.b-button.b-raised.b-teal:focus {
     background-color: #00c4b2; }
-  body.b-using-keyboard button.b-button.b-raised.b-teal:focus:hover:not([disabled]), button.b-button.b-raised.b-teal:hover:not([disabled]) {
+  button.b-button.b-raised.b-teal:focus:hover:not([disabled]), button.b-button.b-raised.b-teal:hover:not([disabled]) {
     background-color: #00ddc9; }
   button.b-button.b-raised.b-teal.b-pressed, button.b-button.b-raised.b-teal.b-pressed[data-group]:hover {
     background-color: #003a35; }
-  button.b-button.b-raised.b-teal.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-teal.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-teal.b-pressed:focus, button.b-button.b-raised.b-teal.b-pressed:active {
+  button.b-button.b-raised.b-teal.b-pressed:hover, button.b-button.b-raised.b-teal.b-pressed:focus:hover, button.b-button.b-raised.b-teal.b-pressed:focus, button.b-button.b-raised.b-teal.b-pressed:active {
     background-color: #00544c; }
   button.b-button.b-raised.b-teal:active {
     background-color: #007d71;
@@ -7060,15 +6258,13 @@ button.b-button.b-raised.b-green {
   color: #fff;
   border: none;
   background-color: #4CAF50; }
-  body.b-using-keyboard button.b-button.b-raised.b-green:focus {
+  button.b-button.b-raised.b-green:focus {
     background-color: #6abe6e; }
-  body.b-using-keyboard button.b-button.b-raised.b-green:focus:hover:not([disabled]), button.b-button.b-raised.b-green:hover:not([disabled]) {
+  button.b-button.b-raised.b-green:focus:hover:not([disabled]), button.b-button.b-raised.b-green:hover:not([disabled]) {
     background-color: #7cc67f; }
   button.b-button.b-raised.b-green.b-pressed, button.b-button.b-raised.b-green.b-pressed[data-group]:hover {
     background-color: #306f33; }
-  button.b-button.b-raised.b-green.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-green.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-green.b-pressed:focus, button.b-button.b-raised.b-green.b-pressed:active {
+  button.b-button.b-raised.b-green.b-pressed:hover, button.b-button.b-raised.b-green.b-pressed:focus:hover, button.b-button.b-raised.b-green.b-pressed:focus, button.b-button.b-raised.b-green.b-pressed:active {
     background-color: #38813b; }
   button.b-button.b-raised.b-green:active {
     background-color: #449d48;
@@ -7083,15 +6279,13 @@ button.b-button.b-raised.b-light-green {
   color: #fff;
   border: none;
   background-color: #8BC34A; }
-  body.b-using-keyboard button.b-button.b-raised.b-light-green:focus {
+  button.b-button.b-raised.b-light-green:focus {
     background-color: #a1ce6c; }
-  body.b-using-keyboard button.b-button.b-raised.b-light-green:focus:hover:not([disabled]), button.b-button.b-raised.b-light-green:hover:not([disabled]) {
+  button.b-button.b-raised.b-light-green:focus:hover:not([disabled]), button.b-button.b-raised.b-light-green:hover:not([disabled]) {
     background-color: #add580; }
   button.b-button.b-raised.b-light-green.b-pressed, button.b-button.b-raised.b-light-green.b-pressed[data-group]:hover {
     background-color: #5c852c; }
-  button.b-button.b-raised.b-light-green.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-light-green.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-light-green.b-pressed:focus, button.b-button.b-raised.b-light-green.b-pressed:active {
+  button.b-button.b-raised.b-light-green.b-pressed:hover, button.b-button.b-raised.b-light-green.b-pressed:focus:hover, button.b-button.b-raised.b-light-green.b-pressed:focus, button.b-button.b-raised.b-light-green.b-pressed:active {
     background-color: #699832; }
   button.b-button.b-raised.b-light-green:active {
     background-color: #7eb73d;
@@ -7106,15 +6300,13 @@ button.b-button.b-raised.b-purple {
   color: #fff;
   border: none;
   background-color: #9C27B0; }
-  body.b-using-keyboard button.b-button.b-raised.b-purple:focus {
+  button.b-button.b-raised.b-purple:focus {
     background-color: #bb33d2; }
-  body.b-using-keyboard button.b-button.b-raised.b-purple:focus:hover:not([disabled]), button.b-button.b-raised.b-purple:hover:not([disabled]) {
+  button.b-button.b-raised.b-purple:focus:hover:not([disabled]), button.b-button.b-raised.b-purple:hover:not([disabled]) {
     background-color: #c248d6; }
   button.b-button.b-raised.b-purple.b-pressed, button.b-button.b-raised.b-purple.b-pressed[data-group]:hover {
     background-color: #591665; }
-  button.b-button.b-raised.b-purple.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-purple.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-purple.b-pressed:focus, button.b-button.b-raised.b-purple.b-pressed:active {
+  button.b-button.b-raised.b-purple.b-pressed:hover, button.b-button.b-raised.b-purple.b-pressed:focus:hover, button.b-button.b-raised.b-purple.b-pressed:focus, button.b-button.b-raised.b-purple.b-pressed:active {
     background-color: #6c1b7a; }
   button.b-button.b-raised.b-purple:active {
     background-color: #89229b;
@@ -7129,15 +6321,13 @@ button.b-button.b-raised.b-yellow {
   color: #fff;
   border: none;
   background-color: #FFEB3B; }
-  body.b-using-keyboard button.b-button.b-raised.b-yellow:focus {
+  button.b-button.b-raised.b-yellow:focus {
     background-color: #fff069; }
-  body.b-using-keyboard button.b-button.b-raised.b-yellow:focus:hover:not([disabled]), button.b-button.b-raised.b-yellow:hover:not([disabled]) {
+  button.b-button.b-raised.b-yellow:focus:hover:not([disabled]), button.b-button.b-raised.b-yellow:hover:not([disabled]) {
     background-color: #fff282; }
   button.b-button.b-raised.b-yellow.b-pressed, button.b-button.b-raised.b-yellow.b-pressed[data-group]:hover {
     background-color: #dec800; }
-  button.b-button.b-raised.b-yellow.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-yellow.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-yellow.b-pressed:focus, button.b-button.b-raised.b-yellow.b-pressed:active {
+  button.b-button.b-raised.b-yellow.b-pressed:hover, button.b-button.b-raised.b-yellow.b-pressed:focus:hover, button.b-button.b-raised.b-yellow.b-pressed:focus, button.b-button.b-raised.b-yellow.b-pressed:active {
     background-color: #f8de00; }
   button.b-button.b-raised.b-yellow:active {
     background-color: #ffe822;
@@ -7152,15 +6342,13 @@ button.b-button.b-raised.b-red {
   color: #fff;
   border: none;
   background-color: #F44336; }
-  body.b-using-keyboard button.b-button.b-raised.b-red:focus {
+  button.b-button.b-raised.b-red:focus {
     background-color: #f66c62; }
-  body.b-using-keyboard button.b-button.b-raised.b-red:focus:hover:not([disabled]), button.b-button.b-raised.b-red:hover:not([disabled]) {
+  button.b-button.b-raised.b-red:focus:hover:not([disabled]), button.b-button.b-raised.b-red:hover:not([disabled]) {
     background-color: #f8827a; }
   button.b-button.b-raised.b-red.b-pressed, button.b-button.b-raised.b-red.b-pressed[data-group]:hover {
     background-color: #c4170b; }
-  button.b-button.b-raised.b-red.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-red.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-red.b-pressed:focus, button.b-button.b-raised.b-red.b-pressed:active {
+  button.b-button.b-raised.b-red.b-pressed:hover, button.b-button.b-raised.b-red.b-pressed:focus:hover, button.b-button.b-raised.b-red.b-pressed:focus, button.b-button.b-raised.b-red.b-pressed:active {
     background-color: #dc1a0c; }
   button.b-button.b-raised.b-red:active {
     background-color: #f32c1e;
@@ -7175,15 +6363,13 @@ button.b-button.b-raised.b-dark-gray {
   color: #fff;
   border: none;
   background-color: #424242; }
-  body.b-using-keyboard button.b-button.b-raised.b-dark-gray:focus {
+  button.b-button.b-raised.b-dark-gray:focus {
     background-color: #595959; }
-  body.b-using-keyboard button.b-button.b-raised.b-dark-gray:focus:hover:not([disabled]), button.b-button.b-raised.b-dark-gray:hover:not([disabled]) {
+  button.b-button.b-raised.b-dark-gray:focus:hover:not([disabled]), button.b-button.b-raised.b-dark-gray:hover:not([disabled]) {
     background-color: #666666; }
   button.b-button.b-raised.b-dark-gray.b-pressed, button.b-button.b-raised.b-dark-gray.b-pressed[data-group]:hover {
     background-color: #141414; }
-  button.b-button.b-raised.b-dark-gray.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-dark-gray.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-dark-gray.b-pressed:focus, button.b-button.b-raised.b-dark-gray.b-pressed:active {
+  button.b-button.b-raised.b-dark-gray.b-pressed:hover, button.b-button.b-raised.b-dark-gray.b-pressed:focus:hover, button.b-button.b-raised.b-dark-gray.b-pressed:focus, button.b-button.b-raised.b-dark-gray.b-pressed:active {
     background-color: #212121; }
   button.b-button.b-raised.b-dark-gray:active {
     background-color: #353535;
@@ -7198,15 +6384,13 @@ button.b-button.b-raised.b-gray {
   color: #fff;
   border: none;
   background-color: #9E9E9E; }
-  body.b-using-keyboard button.b-button.b-raised.b-gray:focus {
+  button.b-button.b-raised.b-gray:focus {
     background-color: #b5b5b5; }
-  body.b-using-keyboard button.b-button.b-raised.b-gray:focus:hover:not([disabled]), button.b-button.b-raised.b-gray:hover:not([disabled]) {
+  button.b-button.b-raised.b-gray:focus:hover:not([disabled]), button.b-button.b-raised.b-gray:hover:not([disabled]) {
     background-color: #c2c2c2; }
   button.b-button.b-raised.b-gray.b-pressed, button.b-button.b-raised.b-gray.b-pressed[data-group]:hover {
     background-color: #707070; }
-  button.b-button.b-raised.b-gray.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-gray.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-gray.b-pressed:focus, button.b-button.b-raised.b-gray.b-pressed:active {
+  button.b-button.b-raised.b-gray.b-pressed:hover, button.b-button.b-raised.b-gray.b-pressed:focus:hover, button.b-button.b-raised.b-gray.b-pressed:focus, button.b-button.b-raised.b-gray.b-pressed:active {
     background-color: #7d7d7d; }
   button.b-button.b-raised.b-gray:active {
     background-color: #919191;
@@ -7221,15 +6405,13 @@ button.b-button.b-raised.b-light-gray {
   color: #fff;
   border: none;
   background-color: #E0E0E0; }
-  body.b-using-keyboard button.b-button.b-raised.b-light-gray:focus {
+  button.b-button.b-raised.b-light-gray:focus {
     background-color: #f7f7f7; }
-  body.b-using-keyboard button.b-button.b-raised.b-light-gray:focus:hover:not([disabled]), button.b-button.b-raised.b-light-gray:hover:not([disabled]) {
+  button.b-button.b-raised.b-light-gray:focus:hover:not([disabled]), button.b-button.b-raised.b-light-gray:hover:not([disabled]) {
     background-color: white; }
   button.b-button.b-raised.b-light-gray.b-pressed, button.b-button.b-raised.b-light-gray.b-pressed[data-group]:hover {
     background-color: #b2b2b2; }
-  button.b-button.b-raised.b-light-gray.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-light-gray.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-light-gray.b-pressed:focus, button.b-button.b-raised.b-light-gray.b-pressed:active {
+  button.b-button.b-raised.b-light-gray.b-pressed:hover, button.b-button.b-raised.b-light-gray.b-pressed:focus:hover, button.b-button.b-raised.b-light-gray.b-pressed:focus, button.b-button.b-raised.b-light-gray.b-pressed:active {
     background-color: #bfbfbf; }
   button.b-button.b-raised.b-light-gray:active {
     background-color: lightgray;
@@ -7239,50 +6421,6 @@ button.b-button.b-raised.b-light-gray {
     color: #9E9E9E;
     border-color: #adadad;
     cursor: default; }
-
-button.b-button.b-raised {
-  color: #fff;
-  border: none;
-  background-color: #9E9E9E; }
-  body.b-using-keyboard button.b-button.b-raised:focus {
-    background-color: #b5b5b5; }
-  body.b-using-keyboard button.b-button.b-raised:focus:hover:not([disabled]), button.b-button.b-raised:hover:not([disabled]) {
-    background-color: #c2c2c2; }
-  button.b-button.b-raised.b-pressed, button.b-button.b-raised.b-pressed[data-group]:hover {
-    background-color: #707070; }
-  button.b-button.b-raised.b-pressed:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-pressed:focus:hover,
-  body.b-using-keyboard button.b-button.b-raised.b-pressed:focus, button.b-button.b-raised.b-pressed:active {
-    background-color: #7d7d7d; }
-  button.b-button.b-raised:active {
-    background-color: #919191;
-    border-color: #919191; }
-  button.b-button.b-raised:disabled:hover, button.b-button.b-raised:disabled {
-    background-color: #E0E0E0;
-    color: #9E9E9E;
-    border-color: #6b6b6b;
-    cursor: default; }
-
-.b-buttongroup {
-  overflow: visible; }
-  .b-buttongroup.b-content-element {
-    display: inline-flex;
-    flex-wrap: nowrap; }
-  .b-buttongroup .b-button {
-    margin: 0;
-    box-shadow: none !important; }
-    .b-buttongroup .b-button.b-pressed, .b-buttongroup .b-button:active {
-      z-index: 2; }
-    .b-buttongroup .b-button:not(:first-child) {
-      margin-left: 0; }
-  .b-buttongroup .b-button:not(:first-child):not(:last-child) {
-    border-radius: 0; }
-  .b-buttongroup .b-button:first-child:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0; }
-  .b-buttongroup .b-button:last-child:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
 
 .b-panel.b-calendarpanel.b-widget {
   display: inline-flex; }
@@ -7302,27 +6440,15 @@ button.b-button.b-raised {
     display: flex;
     flex-direction: column; }
 
-.b-container .b-checkbox .b-checkbox-label {
-  margin-left: 0; }
-
-.b-container .b-checkbox .b-checkbox-label:before {
-  margin: 0.675em;
-  margin-right: 0.4em;
-  margin-left: 0; }
-
 .b-checkbox {
   position: relative;
+  display: inline-block;
   align-items: center; }
-  .b-ie .b-checkbox, .b-checkbox.b-ie {
-    display: block; }
-  .b-checkbox .b-field-inner {
-    border: none;
-    background-color: transparent; }
-  .b-checkbox .b-checkbox-label {
+  .b-checkbox label {
     position: relative;
     font-size: inherit;
     cursor: pointer; }
-  .b-checkbox .b-checkbox-label:before {
+  .b-checkbox label:before {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -7335,7 +6461,7 @@ button.b-button.b-raised {
     transition: color 0.2s, background 0.2s;
     color: transparent;
     background: transparent;
-    border: 2px solid #9E9E9E; }
+    border: 0 solid rgba(33, 150, 243, 0.5); }
   .b-checkbox input {
     z-index: 1;
     opacity: 0;
@@ -7347,224 +6473,224 @@ button.b-button.b-raised {
     margin: 0;
     cursor: pointer;
     transition: color 0.5s, background-color 0.5s; }
-  .b-checkbox input[type=checkbox]:checked + .b-checkbox-label:before {
+  .b-checkbox input[type=checkbox]:checked + label:before {
     color: #fff;
     background: #2196F3;
     border-color: #2196F3; }
-  .b-checkbox.b-disabled .b-checkbox-label {
+  .b-checkbox.b-disabled label {
     color: #BDBDBD; }
-  .b-checkbox.b-disabled .b-checkbox-label::before {
-    border-color: #EEEEEE;
+  .b-checkbox.b-disabled label::before {
+    border-color: rgba(33, 150, 243, 0.2);
     background: transparent; }
-  .b-checkbox.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+  .b-checkbox.b-disabled input[type=checkbox]:checked + label:before {
     background: rgba(33, 150, 243, 0.2);
     border-color: rgba(33, 150, 243, 0.2); }
 
-.b-checkbox.b-blue .b-checkbox-label:before {
-  color: rgba(33, 150, 243, 0.1);
+.b-checkbox.b-blue label:before {
+  color: rgba(33, 150, 243, 0.2);
   border-color: rgba(33, 150, 243, 0.5); }
 
-.b-checkbox.b-blue input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-blue input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #2196F3;
   border-color: #2196F3; }
 
-.b-checkbox.b-blue.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-blue.b-disabled label::before {
   border-color: rgba(33, 150, 243, 0.2); }
 
-.b-checkbox.b-blue.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-blue.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(33, 150, 243, 0.2);
   border-color: rgba(33, 150, 243, 0.2); }
 
-.b-checkbox.b-deep-orange .b-checkbox-label:before {
-  color: rgba(255, 87, 34, 0.1);
+.b-checkbox.b-deep-orange label:before {
+  color: rgba(255, 87, 34, 0.2);
   border-color: rgba(255, 87, 34, 0.5); }
 
-.b-checkbox.b-deep-orange input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-deep-orange input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #FF5722;
   border-color: #FF5722; }
 
-.b-checkbox.b-deep-orange.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-deep-orange.b-disabled label::before {
   border-color: rgba(255, 87, 34, 0.2); }
 
-.b-checkbox.b-deep-orange.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-deep-orange.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(255, 87, 34, 0.2);
   border-color: rgba(255, 87, 34, 0.2); }
 
-.b-checkbox.b-orange .b-checkbox-label:before {
-  color: rgba(255, 152, 0, 0.1);
+.b-checkbox.b-orange label:before {
+  color: rgba(255, 152, 0, 0.2);
   border-color: rgba(255, 152, 0, 0.5); }
 
-.b-checkbox.b-orange input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-orange input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #FF9800;
   border-color: #FF9800; }
 
-.b-checkbox.b-orange.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-orange.b-disabled label::before {
   border-color: rgba(255, 152, 0, 0.2); }
 
-.b-checkbox.b-orange.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-orange.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(255, 152, 0, 0.2);
   border-color: rgba(255, 152, 0, 0.2); }
 
-.b-checkbox.b-indigo .b-checkbox-label:before {
-  color: rgba(63, 81, 181, 0.1);
+.b-checkbox.b-indigo label:before {
+  color: rgba(63, 81, 181, 0.2);
   border-color: rgba(63, 81, 181, 0.5); }
 
-.b-checkbox.b-indigo input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-indigo input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #3F51B5;
   border-color: #3F51B5; }
 
-.b-checkbox.b-indigo.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-indigo.b-disabled label::before {
   border-color: rgba(63, 81, 181, 0.2); }
 
-.b-checkbox.b-indigo.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-indigo.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(63, 81, 181, 0.2);
   border-color: rgba(63, 81, 181, 0.2); }
 
-.b-checkbox.b-green .b-checkbox-label:before {
-  color: rgba(76, 175, 80, 0.1);
+.b-checkbox.b-green label:before {
+  color: rgba(76, 175, 80, 0.2);
   border-color: rgba(76, 175, 80, 0.5); }
 
-.b-checkbox.b-green input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-green input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #4CAF50;
   border-color: #4CAF50; }
 
-.b-checkbox.b-green.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-green.b-disabled label::before {
   border-color: rgba(76, 175, 80, 0.2); }
 
-.b-checkbox.b-green.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-green.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(76, 175, 80, 0.2);
   border-color: rgba(76, 175, 80, 0.2); }
 
-.b-checkbox.b-purple .b-checkbox-label:before {
-  color: rgba(156, 39, 176, 0.1);
+.b-checkbox.b-purple label:before {
+  color: rgba(156, 39, 176, 0.2);
   border-color: rgba(156, 39, 176, 0.5); }
 
-.b-checkbox.b-purple input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-purple input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #9C27B0;
   border-color: #9C27B0; }
 
-.b-checkbox.b-purple.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-purple.b-disabled label::before {
   border-color: rgba(156, 39, 176, 0.2); }
 
-.b-checkbox.b-purple.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-purple.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(156, 39, 176, 0.2);
   border-color: rgba(156, 39, 176, 0.2); }
 
-.b-checkbox.b-yellow .b-checkbox-label:before {
-  color: rgba(255, 235, 59, 0.1);
+.b-checkbox.b-yellow label:before {
+  color: rgba(255, 235, 59, 0.2);
   border-color: rgba(255, 235, 59, 0.5); }
 
-.b-checkbox.b-yellow input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-yellow input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #FFEB3B;
   border-color: #FFEB3B; }
 
-.b-checkbox.b-yellow.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-yellow.b-disabled label::before {
   border-color: rgba(255, 235, 59, 0.2); }
 
-.b-checkbox.b-yellow.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-yellow.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(255, 235, 59, 0.2);
   border-color: rgba(255, 235, 59, 0.2); }
 
-.b-checkbox.b-red .b-checkbox-label:before {
-  color: rgba(244, 67, 54, 0.1);
+.b-checkbox.b-red label:before {
+  color: rgba(244, 67, 54, 0.2);
   border-color: rgba(244, 67, 54, 0.5); }
 
-.b-checkbox.b-red input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-red input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #F44336;
   border-color: #F44336; }
 
-.b-checkbox.b-red.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-red.b-disabled label::before {
   border-color: rgba(244, 67, 54, 0.2); }
 
-.b-checkbox.b-red.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-red.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(244, 67, 54, 0.2);
   border-color: rgba(244, 67, 54, 0.2); }
 
-.b-checkbox.b-amber .b-checkbox-label:before {
-  color: rgba(255, 193, 7, 0.1);
+.b-checkbox.b-amber label:before {
+  color: rgba(255, 193, 7, 0.2);
   border-color: rgba(255, 193, 7, 0.5); }
 
-.b-checkbox.b-amber input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-amber input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #FFC107;
   border-color: #FFC107; }
 
-.b-checkbox.b-amber.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-amber.b-disabled label::before {
   border-color: rgba(255, 193, 7, 0.2); }
 
-.b-checkbox.b-amber.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-amber.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(255, 193, 7, 0.2);
   border-color: rgba(255, 193, 7, 0.2); }
 
-.b-checkbox.b-lime .b-checkbox-label:before {
-  color: rgba(205, 220, 57, 0.1);
+.b-checkbox.b-lime label:before {
+  color: rgba(205, 220, 57, 0.2);
   border-color: rgba(205, 220, 57, 0.5); }
 
-.b-checkbox.b-lime input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-lime input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #CDDC39;
   border-color: #CDDC39; }
 
-.b-checkbox.b-lime.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-lime.b-disabled label::before {
   border-color: rgba(205, 220, 57, 0.2); }
 
-.b-checkbox.b-lime.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-lime.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(205, 220, 57, 0.2);
   border-color: rgba(205, 220, 57, 0.2); }
 
-.b-checkbox.b-teal .b-checkbox-label:before {
-  color: rgba(0, 150, 136, 0.1);
+.b-checkbox.b-teal label:before {
+  color: rgba(0, 150, 136, 0.2);
   border-color: rgba(0, 150, 136, 0.5); }
 
-.b-checkbox.b-teal input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-teal input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #009688;
   border-color: #009688; }
 
-.b-checkbox.b-teal.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-teal.b-disabled label::before {
   border-color: rgba(0, 150, 136, 0.2); }
 
-.b-checkbox.b-teal.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-teal.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(0, 150, 136, 0.2);
   border-color: rgba(0, 150, 136, 0.2); }
 
-.b-checkbox.b-light-green .b-checkbox-label:before {
-  color: rgba(139, 195, 74, 0.1);
+.b-checkbox.b-light-green label:before {
+  color: rgba(139, 195, 74, 0.2);
   border-color: rgba(139, 195, 74, 0.5); }
 
-.b-checkbox.b-light-green input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-light-green input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #8BC34A;
   border-color: #8BC34A; }
 
-.b-checkbox.b-light-green.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-light-green.b-disabled label::before {
   border-color: rgba(139, 195, 74, 0.2); }
 
-.b-checkbox.b-light-green.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-light-green.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(139, 195, 74, 0.2);
   border-color: rgba(139, 195, 74, 0.2); }
 
-.b-checkbox.b-purple .b-checkbox-label:before {
-  color: rgba(156, 39, 176, 0.1);
+.b-checkbox.b-purple label:before {
+  color: rgba(156, 39, 176, 0.2);
   border-color: rgba(156, 39, 176, 0.5); }
 
-.b-checkbox.b-purple input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-purple input[type=checkbox]:checked + label:before {
   color: #fff;
   background: #9C27B0;
   border-color: #9C27B0; }
 
-.b-checkbox.b-purple.b-disabled .b-checkbox-label::before {
+.b-checkbox.b-purple.b-disabled label::before {
   border-color: rgba(156, 39, 176, 0.2); }
 
-.b-checkbox.b-purple.b-disabled input[type=checkbox]:checked + .b-checkbox-label:before {
+.b-checkbox.b-purple.b-disabled input[type=checkbox]:checked + label:before {
   background: rgba(156, 39, 176, 0.2);
   border-color: rgba(156, 39, 176, 0.2); }
 
@@ -7595,9 +6721,6 @@ button.b-button.b-raised {
   padding-right: 0;
   flex: 0 1 0px; }
 
-.b-container:focus {
-  outline: none; }
-
 .b-content-element {
   position: relative;
   display: flex;
@@ -7610,10 +6733,6 @@ button.b-button.b-raised {
   background-color: #fff;
   color: #000;
   border-bottom: none; }
-  .b-datepicker .b-datepicker-header.b-dock-top .b-icon {
-    color: #000; }
-  .b-datepicker .b-datepicker-header.b-dock-top .b-tool {
-    color: #000; }
 
 .b-datepicker .b-calendar-weekdays {
   background-color: #fff;
@@ -7648,16 +6767,10 @@ button.b-button.b-raised {
       border-style: solid;
       border-color: transparent;
       border-radius: 50%;
-      transition: background-color .2s, color .2s; }
+      transition: background-color .2s, color .2s, border-color .2s; }
       .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell.b-today {
         border-color: #FF9800;
         border-width: 1px; }
-      .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell:hover {
-        background-color: rgba(33, 150, 243, 0.5);
-        border-color: rgba(33, 150, 243, 0.5); }
-        .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell:hover.b-today {
-          background-color: #FF9800;
-          border-color: #FF9800; }
       .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell.b-selected-date {
         color: #fff;
         background-color: #2196F3;
@@ -7666,6 +6779,12 @@ button.b-button.b-raised {
         border-color: #2196F3; }
       .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell.b-other-month {
         color: #aaa; }
+      .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell:hover {
+        background-color: rgba(33, 150, 243, 0.5);
+        border-color: rgba(33, 150, 243, 0.5); }
+        .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell:hover.b-today {
+          background-color: #FF9800;
+          border-color: #FF9800; }
       .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell {
         cursor: pointer; }
       .b-datepicker .b-calendarpanel-content .b-calendar-row.b-calendar-week .b-calendar-cell.b-out-of-range {
@@ -7674,12 +6793,9 @@ button.b-button.b-raised {
         color: #aaa; }
 
 .b-editor {
-  background-color: #fff;
-  border-radius: 2px; }
+  background-color: #fff; }
   .b-editor.b-positioned {
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
-  .b-editor.b-content-element > .b-widget.b-field {
-    margin: 0; }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
   .b-editor .b-field-inner {
     padding-left: 0.79em;
     padding-right: 0.79em; }
@@ -7692,28 +6808,6 @@ button.b-button.b-raised {
   100% {
     color: #424242; } }
 
-.b-has-label label {
-  margin-right: 1em;
-  color: #9E9E9E;
-  font-size: 0.8em;
-  white-space: nowrap;
-  text-overflow: ellipsis; }
-
-.b-has-label.b-open label, .b-has-label:focus-within label, .b-has-label.b-ie:focus label {
-  color: #2196F3; }
-
-.b-container .b-has-label label {
-  color: #9E9E9E; }
-
-.b-container .b-has-label.b-open label, .b-container .b-has-label:focus-within label, .b-container .b-has-label.b-ie:focus label {
-  color: #2196F3; }
-
-.b-has-label.b-invalid label {
-  color: #F44336 !important; }
-
-.b-has-label.b-disabled label {
-  color: #BDBDBD; }
-
 .b-field-updated {
   animation-name: b-field-updated;
   animation-duration: 1.5s; }
@@ -7721,12 +6815,12 @@ button.b-button.b-raised {
 .b-form-updating .b-field-updated {
   animation-name: none; }
 
-.b-content-element:not(.b-toolbar) > .b-field {
+.b-container .b-field {
   flex: 1 0 100%;
   margin-bottom: .6em; }
-  .b-content-element:not(.b-toolbar) > .b-field.b-inline .b-field-inner {
+  .b-container .b-field.b-inline .b-field-inner {
     margin-right: 0.6em; }
-  .b-content-element:not(.b-toolbar) > .b-field.b-last-row {
+  .b-container .b-field.b-last-row {
     margin-bottom: 0; }
 
 .b-field-inner {
@@ -7760,13 +6854,13 @@ button.b-button.b-raised {
     flex: 0 0 auto; }
     .b-numberfield .b-fieldtrigger.b-align-start,
     .b-textfield .b-fieldtrigger.b-align-start {
-      padding-left: 0.79em 0; }
+      padding-left: .5em; }
     .b-numberfield .b-fieldtrigger.b-align-end,
     .b-textfield .b-fieldtrigger.b-align-end {
       padding-right: .5em; }
       .b-numberfield .b-fieldtrigger.b-align-end:last-child,
       .b-textfield .b-fieldtrigger.b-align-end:last-child {
-        padding-right: 0; }
+        padding-right: 0.79em 0; }
     .b-numberfield .b-fieldtrigger:before,
     .b-textfield .b-fieldtrigger:before {
       font-size: 1.3em;
@@ -7797,6 +6891,7 @@ button.b-button.b-raised {
     flex: 1 1 0px;
     border: 0 none;
     margin: 0;
+    cursor: pointer;
     font-family: inherit;
     font-size: inherit;
     min-width: 1em; }
@@ -7811,6 +6906,13 @@ button.b-button.b-raised {
   .b-numberfield ::-webkit-input-placeholder,
   .b-textfield ::-webkit-input-placeholder {
     color: #9E9E9E; }
+  .b-numberfield label,
+  .b-textfield label {
+    margin-right: 1em;
+    color: #9E9E9E;
+    font-size: 0.8em;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
   .b-numberfield.b-empty .b-fieldtrigger.b-icon-remove,
   .b-textfield.b-empty .b-fieldtrigger.b-icon-remove {
     display: none; }
@@ -7823,6 +6925,22 @@ button.b-button.b-raised {
   .b-numberfield:not(.b-disabled):hover .b-field-inner,
   .b-textfield:not(.b-disabled):hover .b-field-inner {
     border-color: #212121; }
+  .b-numberfield.b-open label, .b-numberfield:focus-within label, .b-numberfield.b-ie:focus label,
+  .b-textfield.b-open label,
+  .b-textfield:focus-within label,
+  .b-textfield.b-ie:focus label {
+    color: #2196F3; }
+  .b-container .b-numberfield label, .b-container
+  .b-textfield label {
+    color: #9E9E9E; }
+  .b-container .b-numberfield.b-open label, .b-container .b-numberfield:focus-within label, .b-container .b-numberfield.b-ie:focus label, .b-container
+  .b-textfield.b-open label, .b-container
+  .b-textfield:focus-within label, .b-container
+  .b-textfield.b-ie:focus label {
+    color: #2196F3; }
+  .b-numberfield.b-invalid label,
+  .b-textfield.b-invalid label {
+    color: #F44336 !important; }
   .b-numberfield.b-invalid .b-field-inner,
   .b-textfield.b-invalid .b-field-inner {
     border-color: #F44336 !important; }
@@ -7833,7 +6951,9 @@ button.b-button.b-raised {
     .b-numberfield.b-disabled input,
     .b-textfield.b-disabled input {
       cursor: default; }
+    .b-numberfield.b-disabled label,
     .b-numberfield.b-disabled .b-fieldtrigger,
+    .b-textfield.b-disabled label,
     .b-textfield.b-disabled .b-fieldtrigger {
       color: #BDBDBD; }
     .b-numberfield.b-disabled .b-fieldtrigger,
@@ -7861,29 +6981,13 @@ button.b-button.b-raised {
     color: #F44336;
     font-weight: bold; }
 
-.b-displayfield {
-  color: inherit; }
-  .b-displayfield .b-field-inner {
-    border: 0;
-    background: transparent; }
-
 .b-pickerfield.b-open .b-field-inner {
   border-color: #2196F3; }
-
-.b-pickerfield input[readonly] {
-  cursor: pointer; }
 
 .b-datefield.b-open .b-fieldtrigger {
   color: #2196F3 !important; }
 
-.b-datefield .b-step-trigger {
-  display: none; }
-
-.b-datefield.b-show-steppers .b-step-trigger {
-  display: inline-block; }
-
 .b-list {
-  display: block;
   background-color: white;
   outline: none; }
   .b-list.b-floating {
@@ -8129,8 +7233,6 @@ button.b-button.b-raised {
     text-align: center; }
   .b-tool:hover {
     opacity: 0.8; }
-  .b-tool a {
-    color: #fff; }
 
 .b-dock-right .b-header-title:not(:last-child), .b-dock-left .b-header-title:not(:last-child) {
   padding: 0.2em 0; }
@@ -8230,10 +7332,7 @@ button.b-button.b-raised {
 .b-slider {
   background-color: transparent;
   flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-  .b-slider label {
-    transition: color 0.2s; }
+  align-items: center; }
   .b-slider [type='range'] {
     align-self: stretch;
     max-width: 100%;
@@ -8331,7 +7430,7 @@ button.b-button.b-raised {
     flex-direction: row;
     margin-bottom: 0; }
     .b-tabpanel-tabs.b-edge {
-      margin-bottom: -1px; }
+      margin-bottom: -1; }
   .b-tabpanel-tab {
     display: flex;
     padding: 0.6em;
@@ -8460,6 +7559,91 @@ button.b-button.b-raised {
     display: initial;
     overflow: auto; }
 
+.b-widget {
+  font-weight: 400;
+  font-size: 1em;
+  box-sizing: border-box; }
+  .b-widget:not(.b-floating):not(.b-list):not(.b-grid):not(.b-subgrid):not(.b-container):not(.b-fieldtrigger):not(.b-card-item) {
+    display: inline-flex; }
+    .b-widget:not(.b-floating):not(.b-list):not(.b-grid):not(.b-subgrid):not(.b-container):not(.b-fieldtrigger):not(.b-card-item):not(.b-badge) {
+      overflow: hidden; }
+  .b-widget * {
+    box-sizing: border-box; }
+  .b-widget:before, .b-widget:after,
+  .b-widget *:before,
+  .b-widget *:after {
+    box-sizing: border-box; }
+  .b-widget.b-positioned {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .b-widget .b-focus-trap {
+    position: absolute;
+    display: none;
+    clip: rect(0, 0, 0, 0); }
+  .b-widget.b-focus-trapped.b-contains-focus .b-focus-trap {
+    display: inherit; }
+  .b-widget.b-hidden {
+    display: none !important; }
+  .b-widget.b-hiding {
+    pointer-events: none; }
+  .b-widget .b-widget-inner {
+    width: 100%;
+    position: relative;
+    flex: 1; }
+  .b-widget .b-anchor {
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    z-index: -1; }
+    .b-widget .b-anchor svg {
+      position: absolute;
+      top: 0;
+      overflow: visible; }
+    .b-widget .b-anchor.b-anchor-top {
+      left: 0;
+      bottom: calc(100% - 1px); }
+    .b-widget .b-anchor.b-anchor-bottom {
+      left: 0;
+      top: calc(100% - 1px); }
+      .b-widget .b-anchor.b-anchor-bottom svg {
+        transform: rotate(180deg); }
+    .b-widget .b-anchor.b-anchor-left {
+      top: 0;
+      width: 8px;
+      height: 16px;
+      right: calc(100% - 1px); }
+      .b-widget .b-anchor.b-anchor-left svg {
+        transform: rotate(270deg);
+        transform-origin: 8px 8px; }
+    .b-widget .b-anchor.b-anchor-right {
+      top: 0;
+      width: 8px;
+      height: 16px;
+      left: calc(100% - 1px); }
+      .b-widget .b-anchor.b-anchor-right svg {
+        transform: rotate(90deg);
+        transform-origin: 4px 4px; }
+
+.b-widget-scroller {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-anchor: none;
+  /* without this we see weird issues in Mac Chrome <= 63 with no scrollbar, covered in Tree.t.js */ }
+  .b-widget-scroller.b-hide-scroll {
+    -ms-overflow-style: none; }
+    .b-widget-scroller.b-hide-scroll::-webkit-scrollbar {
+      display: none; }
+    .b-firefox .b-widget-scroller.b-hide-scroll {
+      overflow: hidden !important; }
+
+.b-scroller-stretcher {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 1px; }
+
 .b-textareafield textarea {
   padding: initial;
   align-self: stretch; }
@@ -8476,9 +7660,7 @@ button.b-button.b-raised {
 .b-panel .b-toolbar {
   background-color: #fff;
   color: #000;
-  padding: 0.6em 0.6em 0 0.6em; }
-  .b-panel .b-toolbar > .b-widget {
-    margin-bottom: 0.6em; }
+  padding: 0.6em; }
 
 .b-panel.b-content-element {
   flex-flow: row nowrap; }
@@ -8554,11 +7736,7 @@ button.b-button.b-raised {
     margin: 0;
     max-width: 100%; }
 
-.b-edge .b-fit-container > .b-fit-item,
-.b-ie .b-fit-container > .b-fit-item {
-  flex: 1 0 auto; }
-
-.b-check-cell .b-checkbox label.b-checkbox-label:before {
+.b-check-cell .b-checkbox label:before {
   margin-right: 0; }
 
 .b-percent-bar-outer {
@@ -8684,15 +7862,10 @@ button.b-button.b-raised {
 .b-tree-leaf-cell {
   padding-left: 10px; }
 
-.b-tree-cell.b-tree-parent-cell {
-  font-weight: 500;
-  color: #6e6e6e; }
-
 .b-tree-cell-value {
   flex: 1;
   display: flex;
-  flex-direction: row;
-  align-items: center; }
+  flex-direction: row; }
 
 .b-touch .b-tree-expander {
   width: 1.1em; }
@@ -8715,7 +7888,6 @@ button.b-button.b-raised {
   border-color: #2196F3;
   border-style: solid;
   box-shadow: none !important;
-  z-index: 1;
   /*transition: left 0.1s, top 0.1s;*/ }
   .b-cell-editor > .b-widget {
     width: 100%;
@@ -8728,8 +7900,8 @@ button.b-button.b-raised {
       padding-left: 0; }
     .b-cell-editor .b-numberfield input,
     .b-cell-editor .b-textfield input {
-      padding: 0.8em calc(0.5em - 0); }
-
+      padding: 0.8em calc(0.5em - 1px);
+    }
 .b-cell-editor-hidden {
   display: none; }
 
@@ -8959,8 +8131,7 @@ button.b-button.b-raised {
   width: 15em; }
 
 .b-filter-bar-field {
-  margin: 0 0 .5em 0;
-  width: 100%; }
+  margin: 0 0 .5em 0; }
 
 .b-group-summary .b-grid-row.b-group-footer .b-grid-cell {
   border-right-color: transparent;
@@ -8980,9 +8151,7 @@ button.b-button.b-raised {
 
 .b-quick-hit-text {
   font-weight: bold;
-  background: #FFF59D; }
-
-.b-quick-hit-text {
+  background: #FFF59D;
   padding: .3em 0; }
 
 .b-quick-hit-header {
@@ -9132,7 +8301,7 @@ button.b-button.b-raised {
   border-top: 2px solid #2196F3;
   top: -1px; }
 
-.b-grid-row.b-grid-row-drop-position-after {
+.b-grid-row-drop-position-after {
   border-bottom: 2px solid #2196F3;
   top: -1px; }
 
@@ -9146,9 +8315,6 @@ button.b-button.b-raised {
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     transform: scale(0.8);
     background: #fff; }
-
-.b-row-reordering .b-grid-body-container {
-  z-index: 4; }
 
 .b-row-reordering .b-drag-original {
   opacity: 0.3; }
@@ -9338,7 +8504,7 @@ button.b-button.b-raised {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /*
      * This implements the fillLastColumn config. It causes the last leaf header, and the last cell in
-     * each row to flex-grow to consume all available space when there are no configured flexed columns and rows are not
+     * each row to flex to consume all available space when there are no configured flexed columns and rows are not
      * wider than their container.
      */
   /*.b-grid-vertical-scroller .b-grid-row {
@@ -9360,11 +8526,10 @@ button.b-button.b-raised {
     border-right-color: transparent; }
   .b-grid.b-fill-last-column .b-grid-horizontal-scroller:not(.b-has-flex):not(.b-overflowing-horizontally) .b-grid-cell:last-child,
   .b-grid.b-fill-last-column .b-grid-footer-scroller:not(.b-has-flex):not(.b-overflowing) .b-grid-footer:last-child,
-  .b-grid.b-fill-last-column .b-grid-header-scroller:not(.b-has-flex):not(.b-overflowing) .b-last-parent,
-  .b-grid.b-fill-last-column .b-grid-header-scroller:not(.b-has-flex):not(.b-overflowing) .b-last-leaf {
-    flex-grow: 1; }
+  .b-grid.b-fill-last-column .b-grid-header-scroller:not(.b-has-flex):not(.b-overflowing) .b-grid-headers > .b-grid-header:last-child,
+  .b-grid.b-fill-last-column .b-grid-header-scroller:not(.b-has-flex):not(.b-overflowing) .b-grid-headers > .b-grid-header:last-child .b-grid-header:last-child {
+    flex: 1; }
   .b-grid .b-grid-empty:before {
-    color: #757575;
     content: attr(data-empty-text);
     position: absolute;
     top: 1em;
@@ -9615,11 +8780,11 @@ header.b-grid-header-container {
 .b-grid-vertical-overflow .b-grid-header-scroller:last-child {
   border-right: 1px solid transparent; }
 
-.b-fill-last-column .b-grid-headers .b-last-parent,
-.b-fill-last-column .b-grid-headers .b-last-leaf {
+.b-fill-last-column .b-grid-headers > .b-grid-header:last-child {
   border-right-color: transparent; }
-  .b-fill-last-column .b-grid-headers .b-last-parent > .b-grid-header-text,
-  .b-fill-last-column .b-grid-headers .b-last-leaf > .b-grid-header-text {
+  .b-fill-last-column .b-grid-headers > .b-grid-header:last-child > .b-grid-header-text {
+    border-right-color: transparent; }
+  .b-fill-last-column .b-grid-headers > .b-grid-header:last-child > .b-grid-header-children .b-grid-header:last-child {
     border-right-color: transparent; }
 
 .b-ie .b-grid-header.b-depth-1 .b-grid-header-text {
@@ -9679,13 +8844,7 @@ header.b-grid-header-container {
   .b-grid-header:not(.b-depth-0) {
     overflow: visible; }
   .b-grid-header.b-depth-0 {
-    padding: 0 0.5em 0 0.5em;
-    width: 0;
-    cursor: pointer; }
-    .b-grid-header.b-depth-0 .b-grid-header-text {
-      border-bottom: none;
-      transition: background-color 0.2s;
-      flex-direction: row; }
+    padding: 0 0.5em 0 0.5em; }
   .b-grid-header.b-grid-header-parent {
     border-right: none;
     flex-basis: auto;
@@ -9695,6 +8854,13 @@ header.b-grid-header-container {
       padding-left: 0.5em;
       padding-right: 0.5em;
       border-right: 1px solid transparent; }
+  .b-grid-header.b-depth-0 {
+    width: 0;
+    cursor: pointer; }
+    .b-grid-header.b-depth-0 .b-grid-header-text {
+      border-bottom: none;
+      transition: background-color 0.2s;
+      flex-direction: row; }
   .b-grid-header .b-grid-header-resize-handle {
     display: none; }
 
@@ -9721,247 +8887,117 @@ header.b-grid-header-container {
 .b-icon-sort-desc:before {
   content: '\F063'; }
 
-.b-button.b-white:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-white:focus {
+.b-button.b-white:hover:not([disabled]), .b-button.b-white:focus {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.096); }
 
 .b-button.b-white:active:not([disabled]) {
   background-color: rgba(255, 255, 255, 0.16); }
 
-.b-buttongroup .b-button.b-white {
-  background-color: rgba(255, 255, 255, 0.04); }
-  .b-buttongroup .b-button.b-white.b-pressed {
-    background-color: rgba(255, 255, 255, 0.7); }
-    .b-buttongroup .b-button.b-white.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-blue:hover:not([disabled]), .b-button:hover:not([disabled]), body.b-using-keyboard .b-button.b-blue:focus, body.b-using-keyboard .b-button:focus {
+.b-button.b-blue:hover:not([disabled]), .b-button:hover:not([disabled]), .b-button.b-blue:focus, .b-button:focus {
   color: #2196F3;
   background-color: rgba(33, 150, 243, 0.096); }
 
 .b-button.b-blue:active:not([disabled]), .b-button:active:not([disabled]) {
   background-color: rgba(33, 150, 243, 0.16); }
 
-.b-buttongroup .b-button.b-blue, .b-buttongroup .b-button {
-  background-color: rgba(33, 150, 243, 0.04); }
-  .b-buttongroup .b-button.b-blue.b-pressed, .b-buttongroup .b-pressed.b-button {
-    background-color: rgba(33, 150, 243, 0.7); }
-    .b-buttongroup .b-button.b-blue.b-pressed:hover, .b-buttongroup .b-pressed.b-button:hover {
-      color: #fff; }
-
-.b-button.b-deep-orange:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-deep-orange:focus {
+.b-button.b-deep-orange:hover:not([disabled]), .b-button.b-deep-orange:focus {
   color: #FF5722;
   background-color: rgba(255, 87, 34, 0.096); }
 
 .b-button.b-deep-orange:active:not([disabled]) {
   background-color: rgba(255, 87, 34, 0.16); }
 
-.b-buttongroup .b-button.b-deep-orange {
-  background-color: rgba(255, 87, 34, 0.04); }
-  .b-buttongroup .b-button.b-deep-orange.b-pressed {
-    background-color: rgba(255, 87, 34, 0.7); }
-    .b-buttongroup .b-button.b-deep-orange.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-orange:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-orange:focus {
+.b-button.b-orange:hover:not([disabled]), .b-button.b-orange:focus {
   color: #FF9800;
   background-color: rgba(255, 152, 0, 0.096); }
 
 .b-button.b-orange:active:not([disabled]) {
   background-color: rgba(255, 152, 0, 0.16); }
 
-.b-buttongroup .b-button.b-orange {
-  background-color: rgba(255, 152, 0, 0.04); }
-  .b-buttongroup .b-button.b-orange.b-pressed {
-    background-color: rgba(255, 152, 0, 0.7); }
-    .b-buttongroup .b-button.b-orange.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-amber:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-amber:focus {
+.b-button.b-amber:hover:not([disabled]), .b-button.b-amber:focus {
   color: #FFC107;
   background-color: rgba(255, 193, 7, 0.096); }
 
 .b-button.b-amber:active:not([disabled]) {
   background-color: rgba(255, 193, 7, 0.16); }
 
-.b-buttongroup .b-button.b-amber {
-  background-color: rgba(255, 193, 7, 0.04); }
-  .b-buttongroup .b-button.b-amber.b-pressed {
-    background-color: rgba(255, 193, 7, 0.7); }
-    .b-buttongroup .b-button.b-amber.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-indigo:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-indigo:focus {
+.b-button.b-indigo:hover:not([disabled]), .b-button.b-indigo:focus {
   color: #3F51B5;
   background-color: rgba(63, 81, 181, 0.096); }
 
 .b-button.b-indigo:active:not([disabled]) {
   background-color: rgba(63, 81, 181, 0.16); }
 
-.b-buttongroup .b-button.b-indigo {
-  background-color: rgba(63, 81, 181, 0.04); }
-  .b-buttongroup .b-button.b-indigo.b-pressed {
-    background-color: rgba(63, 81, 181, 0.7); }
-    .b-buttongroup .b-button.b-indigo.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-lime:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-lime:focus {
+.b-button.b-lime:hover:not([disabled]), .b-button.b-lime:focus {
   color: #CDDC39;
   background-color: rgba(205, 220, 57, 0.096); }
 
 .b-button.b-lime:active:not([disabled]) {
   background-color: rgba(205, 220, 57, 0.16); }
 
-.b-buttongroup .b-button.b-lime {
-  background-color: rgba(205, 220, 57, 0.04); }
-  .b-buttongroup .b-button.b-lime.b-pressed {
-    background-color: rgba(205, 220, 57, 0.7); }
-    .b-buttongroup .b-button.b-lime.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-teal:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-teal:focus {
+.b-button.b-teal:hover:not([disabled]), .b-button.b-teal:focus {
   color: #009688;
   background-color: rgba(0, 150, 136, 0.096); }
 
 .b-button.b-teal:active:not([disabled]) {
   background-color: rgba(0, 150, 136, 0.16); }
 
-.b-buttongroup .b-button.b-teal {
-  background-color: rgba(0, 150, 136, 0.04); }
-  .b-buttongroup .b-button.b-teal.b-pressed {
-    background-color: rgba(0, 150, 136, 0.7); }
-    .b-buttongroup .b-button.b-teal.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-green:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-green:focus {
+.b-button.b-green:hover:not([disabled]), .b-button.b-green:focus {
   color: #4CAF50;
   background-color: rgba(76, 175, 80, 0.096); }
 
 .b-button.b-green:active:not([disabled]) {
   background-color: rgba(76, 175, 80, 0.16); }
 
-.b-buttongroup .b-button.b-green {
-  background-color: rgba(76, 175, 80, 0.04); }
-  .b-buttongroup .b-button.b-green.b-pressed {
-    background-color: rgba(76, 175, 80, 0.7); }
-    .b-buttongroup .b-button.b-green.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-light-green:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-light-green:focus {
+.b-button.b-light-green:hover:not([disabled]), .b-button.b-light-green:focus {
   color: #8BC34A;
   background-color: rgba(139, 195, 74, 0.096); }
 
 .b-button.b-light-green:active:not([disabled]) {
   background-color: rgba(139, 195, 74, 0.16); }
 
-.b-buttongroup .b-button.b-light-green {
-  background-color: rgba(139, 195, 74, 0.04); }
-  .b-buttongroup .b-button.b-light-green.b-pressed {
-    background-color: rgba(139, 195, 74, 0.7); }
-    .b-buttongroup .b-button.b-light-green.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-purple:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-purple:focus {
+.b-button.b-purple:hover:not([disabled]), .b-button.b-purple:focus {
   color: #9C27B0;
   background-color: rgba(156, 39, 176, 0.096); }
 
 .b-button.b-purple:active:not([disabled]) {
   background-color: rgba(156, 39, 176, 0.16); }
 
-.b-buttongroup .b-button.b-purple {
-  background-color: rgba(156, 39, 176, 0.04); }
-  .b-buttongroup .b-button.b-purple.b-pressed {
-    background-color: rgba(156, 39, 176, 0.7); }
-    .b-buttongroup .b-button.b-purple.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-yellow:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-yellow:focus {
+.b-button.b-yellow:hover:not([disabled]), .b-button.b-yellow:focus {
   color: #FFEB3B;
   background-color: rgba(255, 235, 59, 0.096); }
 
 .b-button.b-yellow:active:not([disabled]) {
   background-color: rgba(255, 235, 59, 0.16); }
 
-.b-buttongroup .b-button.b-yellow {
-  background-color: rgba(255, 235, 59, 0.04); }
-  .b-buttongroup .b-button.b-yellow.b-pressed {
-    background-color: rgba(255, 235, 59, 0.7); }
-    .b-buttongroup .b-button.b-yellow.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-red:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-red:focus {
+.b-button.b-red:hover:not([disabled]), .b-button.b-red:focus {
   color: #F44336;
   background-color: rgba(244, 67, 54, 0.096); }
 
 .b-button.b-red:active:not([disabled]) {
   background-color: rgba(244, 67, 54, 0.16); }
 
-.b-buttongroup .b-button.b-red {
-  background-color: rgba(244, 67, 54, 0.04); }
-  .b-buttongroup .b-button.b-red.b-pressed {
-    background-color: rgba(244, 67, 54, 0.7); }
-    .b-buttongroup .b-button.b-red.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-dark-gray:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-dark-gray:focus {
+.b-button.b-dark-gray:hover:not([disabled]), .b-button.b-dark-gray:focus {
   color: #424242;
   background-color: rgba(66, 66, 66, 0.096); }
 
 .b-button.b-dark-gray:active:not([disabled]) {
   background-color: rgba(66, 66, 66, 0.16); }
 
-.b-buttongroup .b-button.b-dark-gray {
-  background-color: rgba(66, 66, 66, 0.04); }
-  .b-buttongroup .b-button.b-dark-gray.b-pressed {
-    background-color: rgba(66, 66, 66, 0.7); }
-    .b-buttongroup .b-button.b-dark-gray.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-gray:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-gray:focus {
+.b-button.b-gray:hover:not([disabled]), .b-button.b-gray:focus {
   color: #9E9E9E;
   background-color: rgba(158, 158, 158, 0.096); }
 
 .b-button.b-gray:active:not([disabled]) {
   background-color: rgba(158, 158, 158, 0.16); }
 
-.b-buttongroup .b-button.b-gray {
-  background-color: rgba(158, 158, 158, 0.04); }
-  .b-buttongroup .b-button.b-gray.b-pressed {
-    background-color: rgba(158, 158, 158, 0.7); }
-    .b-buttongroup .b-button.b-gray.b-pressed:hover {
-      color: #fff; }
-
-.b-button.b-light-gray:hover:not([disabled]),
-body.b-using-keyboard .b-button.b-light-gray:focus {
+.b-button.b-light-gray:hover:not([disabled]), .b-button.b-light-gray:focus {
   color: #E0E0E0;
   background-color: rgba(224, 224, 224, 0.096); }
 
 .b-button.b-light-gray:active:not([disabled]) {
   background-color: rgba(224, 224, 224, 0.16); }
-
-.b-buttongroup .b-button.b-light-gray {
-  background-color: rgba(224, 224, 224, 0.04); }
-  .b-buttongroup .b-button.b-light-gray.b-pressed {
-    background-color: rgba(224, 224, 224, 0.7); }
-    .b-buttongroup .b-button.b-light-gray.b-pressed:hover {
-      color: #fff; }
-
-.b-buttongroup.b-raised {
-  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
 
 button.b-button.b-raised {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -9974,13 +9010,11 @@ button.b-button.b-raised {
       box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.1); }
   button.b-button.b-raised[disabled] {
     box-shadow: none; }
-  button.b-button.b-raised:hover:not([disabled]),
-  body.b-using-keyboard button.b-button.b-raised:focus:not([disabled]) {
+  button.b-button.b-raised:hover:not([disabled]), button.b-button.b-raised:focus:not([disabled]) {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
-    button.b-button.b-raised:hover:not([disabled]) i:before,
-    body.b-using-keyboard button.b-button.b-raised:focus:not([disabled]) i:before {
+    button.b-button.b-raised:hover:not([disabled]) i:before, button.b-button.b-raised:focus:not([disabled]) i:before {
       transform: scale(1.2); }
-  body.b-using-keyboard button.b-button.b-raised.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-pressed:focus:not([disabled]) {
     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.1); }
   button.b-button.b-raised:active:not([disabled]) {
     box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12); }
@@ -9993,13 +9027,10 @@ button.b-button.b-raised.b-blue.b-pressed, button.b-pressed.b-button.b-raised {
   background-color: #0c7cd5; }
   button.b-button.b-raised.b-blue.b-pressed:hover:not([disabled]), button.b-pressed.b-button.b-raised:hover:not([disabled]) {
     background-color: #0c7cd5; }
-  body.b-using-keyboard button.b-button.b-raised.b-blue.b-pressed:focus:not([disabled]), body.b-using-keyboard button.b-pressed.b-button.b-raised:focus:not([disabled]), body.b-using-keyboard button.b-pressed.b-widget.b-button.b-raised:focus:not([disabled]) {
+  button.b-button.b-raised.b-blue.b-pressed:focus:not([disabled]), button.b-pressed.b-button.b-raised:focus:not([disabled]) {
     background-color: #0d8aee; }
 
-button.b-button.b-raised.b-blue:hover:not([disabled]), button.b-button.b-raised:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-blue:focus:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised:focus:not([disabled]),
-body.b-using-keyboard button.b-widget.b-button.b-raised:focus:not([disabled]) {
+button.b-button.b-raised.b-blue:hover:not([disabled]), button.b-button.b-raised:hover:not([disabled]), button.b-button.b-raised.b-blue:focus:not([disabled]), button.b-button.b-raised:focus:not([disabled]) {
   color: #fff;
   background-color: #39a1f4; }
 
@@ -10014,11 +9045,10 @@ button.b-button.b-raised.b-deep-orange.b-pressed {
   background-color: #ee3900; }
   button.b-button.b-raised.b-deep-orange.b-pressed:hover:not([disabled]) {
     background-color: #ee3900; }
-  body.b-using-keyboard button.b-button.b-raised.b-deep-orange.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-deep-orange.b-pressed:focus:not([disabled]) {
     background-color: #ff4409; }
 
-button.b-button.b-raised.b-deep-orange:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-deep-orange:focus:not([disabled]) {
+button.b-button.b-raised.b-deep-orange:hover:not([disabled]), button.b-button.b-raised.b-deep-orange:focus:not([disabled]) {
   color: #fff;
   background-color: #ff6a3c; }
 
@@ -10033,11 +9063,10 @@ button.b-button.b-raised.b-orange.b-pressed {
   background-color: #cc7a00; }
   button.b-button.b-raised.b-orange.b-pressed:hover:not([disabled]) {
     background-color: #cc7a00; }
-  body.b-using-keyboard button.b-button.b-raised.b-orange.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-orange.b-pressed:focus:not([disabled]) {
     background-color: #e68900; }
 
-button.b-button.b-raised.b-orange:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-orange:focus:not([disabled]) {
+button.b-button.b-raised.b-orange:hover:not([disabled]), button.b-button.b-raised.b-orange:focus:not([disabled]) {
   color: #fff;
   background-color: #ffa21a; }
 
@@ -10052,11 +9081,10 @@ button.b-button.b-raised.b-amber.b-pressed {
   background-color: #d39e00; }
   button.b-button.b-raised.b-amber.b-pressed:hover:not([disabled]) {
     background-color: #d39e00; }
-  body.b-using-keyboard button.b-button.b-raised.b-amber.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-amber.b-pressed:focus:not([disabled]) {
     background-color: #edb100; }
 
-button.b-button.b-raised.b-amber:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-amber:focus:not([disabled]) {
+button.b-button.b-raised.b-amber:hover:not([disabled]), button.b-button.b-raised.b-amber:focus:not([disabled]) {
   color: #fff;
   background-color: #ffc721; }
 
@@ -10071,11 +9099,10 @@ button.b-button.b-raised.b-indigo.b-pressed {
   background-color: #32408f; }
   button.b-button.b-raised.b-indigo.b-pressed:hover:not([disabled]) {
     background-color: #32408f; }
-  body.b-using-keyboard button.b-button.b-raised.b-indigo.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-indigo.b-pressed:focus:not([disabled]) {
     background-color: #3849a2; }
 
-button.b-button.b-raised.b-indigo:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-indigo:focus:not([disabled]) {
+button.b-button.b-raised.b-indigo:hover:not([disabled]), button.b-button.b-raised.b-indigo:focus:not([disabled]) {
   color: #fff;
   background-color: #4d5ec1; }
 
@@ -10090,11 +9117,10 @@ button.b-button.b-raised.b-lime.b-pressed {
   background-color: #b2c022; }
   button.b-button.b-raised.b-lime.b-pressed:hover:not([disabled]) {
     background-color: #b2c022; }
-  body.b-using-keyboard button.b-button.b-raised.b-lime.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-lime.b-pressed:focus:not([disabled]) {
     background-color: #c6d626; }
 
-button.b-button.b-raised.b-lime:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-lime:focus:not([disabled]) {
+button.b-button.b-raised.b-lime:hover:not([disabled]), button.b-button.b-raised.b-lime:focus:not([disabled]) {
   color: #fff;
   background-color: #d2e04f; }
 
@@ -10109,11 +9135,10 @@ button.b-button.b-raised.b-teal.b-pressed {
   background-color: #00635a; }
   button.b-button.b-raised.b-teal.b-pressed:hover:not([disabled]) {
     background-color: #00635a; }
-  body.b-using-keyboard button.b-button.b-raised.b-teal.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-teal.b-pressed:focus:not([disabled]) {
     background-color: #007d71; }
 
-button.b-button.b-raised.b-teal:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-teal:focus:not([disabled]) {
+button.b-button.b-raised.b-teal:hover:not([disabled]), button.b-button.b-raised.b-teal:focus:not([disabled]) {
   color: #fff;
   background-color: #00b09f; }
 
@@ -10128,11 +9153,10 @@ button.b-button.b-raised.b-green.b-pressed {
   background-color: #3d8b40; }
   button.b-button.b-raised.b-green.b-pressed:hover:not([disabled]) {
     background-color: #3d8b40; }
-  body.b-using-keyboard button.b-button.b-raised.b-green.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-green.b-pressed:focus:not([disabled]) {
     background-color: #449d48; }
 
-button.b-button.b-raised.b-green:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-green:focus:not([disabled]) {
+button.b-button.b-raised.b-green:hover:not([disabled]), button.b-button.b-raised.b-green:focus:not([disabled]) {
   color: #fff;
   background-color: #5cb860; }
 
@@ -10147,11 +9171,10 @@ button.b-button.b-raised.b-light-green.b-pressed {
   background-color: #71a436; }
   button.b-button.b-raised.b-light-green.b-pressed:hover:not([disabled]) {
     background-color: #71a436; }
-  body.b-using-keyboard button.b-button.b-raised.b-light-green.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-light-green.b-pressed:focus:not([disabled]) {
     background-color: #7eb73d; }
 
-button.b-button.b-raised.b-light-green:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-light-green:focus:not([disabled]) {
+button.b-button.b-raised.b-light-green:hover:not([disabled]), button.b-button.b-raised.b-light-green:focus:not([disabled]) {
   color: #fff;
   background-color: #97c95d; }
 
@@ -10166,11 +9189,10 @@ button.b-button.b-raised.b-purple.b-pressed {
   background-color: #771e86; }
   button.b-button.b-raised.b-purple.b-pressed:hover:not([disabled]) {
     background-color: #771e86; }
-  body.b-using-keyboard button.b-button.b-raised.b-purple.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-purple.b-pressed:focus:not([disabled]) {
     background-color: #89229b; }
 
-button.b-button.b-raised.b-purple:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-purple:focus:not([disabled]) {
+button.b-button.b-raised.b-purple:hover:not([disabled]), button.b-button.b-raised.b-purple:focus:not([disabled]) {
   color: #fff;
   background-color: #af2cc5; }
 
@@ -10185,11 +9207,10 @@ button.b-button.b-raised.b-yellow.b-pressed {
   background-color: #ffe608; }
   button.b-button.b-raised.b-yellow.b-pressed:hover:not([disabled]) {
     background-color: #ffe608; }
-  body.b-using-keyboard button.b-button.b-raised.b-yellow.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-yellow.b-pressed:focus:not([disabled]) {
     background-color: #ffe822; }
 
-button.b-button.b-raised.b-yellow:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-yellow:focus:not([disabled]) {
+button.b-button.b-raised.b-yellow:hover:not([disabled]), button.b-button.b-raised.b-yellow:focus:not([disabled]) {
   color: #fff;
   background-color: #ffee55; }
 
@@ -10204,11 +9225,10 @@ button.b-button.b-raised.b-red.b-pressed {
   background-color: #ea1c0d; }
   button.b-button.b-raised.b-red.b-pressed:hover:not([disabled]) {
     background-color: #ea1c0d; }
-  body.b-using-keyboard button.b-button.b-raised.b-red.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-red.b-pressed:focus:not([disabled]) {
     background-color: #f32c1e; }
 
-button.b-button.b-raised.b-red:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-red:focus:not([disabled]) {
+button.b-button.b-raised.b-red:hover:not([disabled]), button.b-button.b-raised.b-red:focus:not([disabled]) {
   color: #fff;
   background-color: #f55a4e; }
 
@@ -10223,11 +9243,10 @@ button.b-button.b-raised.b-dark-gray.b-pressed {
   background-color: #292929; }
   button.b-button.b-raised.b-dark-gray.b-pressed:hover:not([disabled]) {
     background-color: #292929; }
-  body.b-using-keyboard button.b-button.b-raised.b-dark-gray.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-dark-gray.b-pressed:focus:not([disabled]) {
     background-color: #353535; }
 
-button.b-button.b-raised.b-dark-gray:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-dark-gray:focus:not([disabled]) {
+button.b-button.b-raised.b-dark-gray:hover:not([disabled]), button.b-button.b-raised.b-dark-gray:focus:not([disabled]) {
   color: #fff;
   background-color: #4f4f4f; }
 
@@ -10242,11 +9261,10 @@ button.b-button.b-raised.b-gray.b-pressed {
   background-color: #858585; }
   button.b-button.b-raised.b-gray.b-pressed:hover:not([disabled]) {
     background-color: #858585; }
-  body.b-using-keyboard button.b-button.b-raised.b-gray.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-gray.b-pressed:focus:not([disabled]) {
     background-color: #919191; }
 
-button.b-button.b-raised.b-gray:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-gray:focus:not([disabled]) {
+button.b-button.b-raised.b-gray:hover:not([disabled]), button.b-button.b-raised.b-gray:focus:not([disabled]) {
   color: #fff;
   background-color: #ababab; }
 
@@ -10261,11 +9279,10 @@ button.b-button.b-raised.b-light-gray.b-pressed {
   background-color: #c7c7c7; }
   button.b-button.b-raised.b-light-gray.b-pressed:hover:not([disabled]) {
     background-color: #c7c7c7; }
-  body.b-using-keyboard button.b-button.b-raised.b-light-gray.b-pressed:focus:not([disabled]) {
+  button.b-button.b-raised.b-light-gray.b-pressed:focus:not([disabled]) {
     background-color: lightgray; }
 
-button.b-button.b-raised.b-light-gray:hover:not([disabled]),
-body.b-using-keyboard button.b-button.b-raised.b-light-gray:focus:not([disabled]) {
+button.b-button.b-raised.b-light-gray:hover:not([disabled]), button.b-button.b-raised.b-light-gray:focus:not([disabled]) {
   color: #fff;
   background-color: #ededed; }
 
@@ -10293,12 +9310,11 @@ button.b-button.b-raised.b-light-gray[disabled] {
     background-color: rgba(33, 150, 243, 0.2); }
   .b-checkbox:not(.b-disabled):hover::before {
     background-color: rgba(33, 150, 243, 0.1); }
-  .b-checkbox.b-bright .b-checkbox-label:before {
+  .b-checkbox.b-bright label:before {
     border-color: #fff; }
 
-.b-checkbox.b-blue .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-blue label:before {
+  color: transparent; }
 
 .b-checkbox.b-blue:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-blue:not(.b-disabled):focus-within::before {
   background-color: rgba(33, 150, 243, 0.2); }
@@ -10306,12 +9322,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-blue:not(.b-disabled):hover::before {
   background-color: rgba(33, 150, 243, 0.1); }
 
-.b-checkbox.b-blue.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-deep-orange .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-deep-orange label:before {
+  color: transparent; }
 
 .b-checkbox.b-deep-orange:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-deep-orange:not(.b-disabled):focus-within::before {
   background-color: rgba(255, 87, 34, 0.2); }
@@ -10319,12 +9331,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-deep-orange:not(.b-disabled):hover::before {
   background-color: rgba(255, 87, 34, 0.1); }
 
-.b-checkbox.b-deep-orange.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-orange .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-orange label:before {
+  color: transparent; }
 
 .b-checkbox.b-orange:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-orange:not(.b-disabled):focus-within::before {
   background-color: rgba(255, 152, 0, 0.2); }
@@ -10332,12 +9340,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-orange:not(.b-disabled):hover::before {
   background-color: rgba(255, 152, 0, 0.1); }
 
-.b-checkbox.b-orange.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-indigo .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-indigo label:before {
+  color: transparent; }
 
 .b-checkbox.b-indigo:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-indigo:not(.b-disabled):focus-within::before {
   background-color: rgba(63, 81, 181, 0.2); }
@@ -10345,12 +9349,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-indigo:not(.b-disabled):hover::before {
   background-color: rgba(63, 81, 181, 0.1); }
 
-.b-checkbox.b-indigo.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-green .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-green label:before {
+  color: transparent; }
 
 .b-checkbox.b-green:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-green:not(.b-disabled):focus-within::before {
   background-color: rgba(76, 175, 80, 0.2); }
@@ -10358,12 +9358,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-green:not(.b-disabled):hover::before {
   background-color: rgba(76, 175, 80, 0.1); }
 
-.b-checkbox.b-green.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-purple .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-purple label:before {
+  color: transparent; }
 
 .b-checkbox.b-purple:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-purple:not(.b-disabled):focus-within::before {
   background-color: rgba(156, 39, 176, 0.2); }
@@ -10371,12 +9367,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-purple:not(.b-disabled):hover::before {
   background-color: rgba(156, 39, 176, 0.1); }
 
-.b-checkbox.b-purple.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-yellow .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-yellow label:before {
+  color: transparent; }
 
 .b-checkbox.b-yellow:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-yellow:not(.b-disabled):focus-within::before {
   background-color: rgba(255, 235, 59, 0.2); }
@@ -10384,12 +9376,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-yellow:not(.b-disabled):hover::before {
   background-color: rgba(255, 235, 59, 0.1); }
 
-.b-checkbox.b-yellow.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-red .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-red label:before {
+  color: transparent; }
 
 .b-checkbox.b-red:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-red:not(.b-disabled):focus-within::before {
   background-color: rgba(244, 67, 54, 0.2); }
@@ -10397,12 +9385,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-red:not(.b-disabled):hover::before {
   background-color: rgba(244, 67, 54, 0.1); }
 
-.b-checkbox.b-red.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-amber .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-amber label:before {
+  color: transparent; }
 
 .b-checkbox.b-amber:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-amber:not(.b-disabled):focus-within::before {
   background-color: rgba(255, 193, 7, 0.2); }
@@ -10410,12 +9394,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-amber:not(.b-disabled):hover::before {
   background-color: rgba(255, 193, 7, 0.1); }
 
-.b-checkbox.b-amber.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-lime .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-lime label:before {
+  color: transparent; }
 
 .b-checkbox.b-lime:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-lime:not(.b-disabled):focus-within::before {
   background-color: rgba(205, 220, 57, 0.2); }
@@ -10423,12 +9403,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-lime:not(.b-disabled):hover::before {
   background-color: rgba(205, 220, 57, 0.1); }
 
-.b-checkbox.b-lime.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-teal .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-teal label:before {
+  color: transparent; }
 
 .b-checkbox.b-teal:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-teal:not(.b-disabled):focus-within::before {
   background-color: rgba(0, 150, 136, 0.2); }
@@ -10436,12 +9412,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-teal:not(.b-disabled):hover::before {
   background-color: rgba(0, 150, 136, 0.1); }
 
-.b-checkbox.b-teal.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-light-green .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-light-green label:before {
+  color: transparent; }
 
 .b-checkbox.b-light-green:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-light-green:not(.b-disabled):focus-within::before {
   background-color: rgba(139, 195, 74, 0.2); }
@@ -10449,21 +9421,14 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-checkbox.b-light-green:not(.b-disabled):hover::before {
   background-color: rgba(139, 195, 74, 0.1); }
 
-.b-checkbox.b-light-green.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
-
-.b-checkbox.b-purple .b-checkbox-label::before {
-  color: transparent;
-  border-color: #9E9E9E; }
+.b-checkbox.b-purple label:before {
+  color: transparent; }
 
 .b-checkbox.b-purple:not(.b-disabled):hover:focus-within::before, .b-checkbox.b-purple:not(.b-disabled):focus-within::before {
   background-color: rgba(156, 39, 176, 0.2); }
 
 .b-checkbox.b-purple:not(.b-disabled):hover::before {
   background-color: rgba(156, 39, 176, 0.1); }
-
-.b-checkbox.b-purple.b-disabled .b-checkbox-label::before {
-  border-color: #EEEEEE; }
 
 .b-columndragtoolbar .b-target-button {
   text-transform: uppercase;
@@ -10537,9 +9502,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
     .b-widget.b-numberfield.b-bright .b-field-inner::before,
     .b-widget.b-textfield.b-bright .b-field-inner::before {
       background-color: #FF9800; }
-  .b-widget.b-numberfield .b-fieldtrigger.b-align-start,
-  .b-widget.b-textfield .b-fieldtrigger.b-align-start {
-    padding-right: .5em; }
 
 .b-cell-editor .b-field input {
   padding-left: .5em;
@@ -10547,13 +9509,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
 
 .b-timefield .b-icon.b-align-start {
   margin-right: .5em; }
-
-.b-timefield:focus-within label {
-  margin-left: 0; }
-
-.b-timefield label {
-  margin-left: 1.8em;
-  margin-top: -0.2em; }
 
 .b-grid .b-grid-cell {
   border-right-color: transparent; }
@@ -10602,6 +9557,7 @@ button.b-button.b-raised.b-light-gray[disabled] {
   font-family: Roboto, sans-serif; }
 
 .b-ripple {
+  overflow: hidden;
   box-shadow: none !important;
   pointer-events: none !important;
   position: relative;
@@ -10613,15 +9569,13 @@ button.b-button.b-raised.b-light-gray[disabled] {
     overflow: visible; }
     .b-ripple .b-ripple-inner circle {
       animation: b-ripple-expand 0.225s ease-in-out, b-ripple-opacity-in 0.075s linear;
-      opacity: 0.1; }
-  .b-float-root > .b-ripple {
-    overflow: hidden; }
+      opacity: 0.2; }
 
 @keyframes b-ripple-opacity-in {
   0% {
     opacity: 0; }
   100% {
-    opacity: 0.1; } }
+    opacity: 0.2; } }
 
 @keyframes b-ripple-expand {
   0% {
@@ -10644,11 +9598,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
 
 .b-sch-foreground-canvas {
   z-index: 2; }
-  .b-row-reordering .b-sch-foreground-canvas * {
-    pointer-events: none !important; }
-
-.b-animating .b-timeline-subgrid {
-  pointer-events: none !important; }
 
 .b-scheduler > .b-editor {
   z-index: 5; }
@@ -10674,10 +9623,8 @@ button.b-button.b-raised.b-light-gray[disabled] {
   touch-action: none;
   transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s;
   contain: layout; }
-  .b-animating .b-sch-event-wrap {
+  .b-scheduler-animated .b-sch-event-wrap {
     transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s, transform 0.2s, width 0.2s, height 0.2s, font-size 0.2s; }
-  .b-toggling-node .b-sch-event-wrap {
-    transition: none; }
   .b-sch-event-wrap.b-sch-released {
     display: none;
     transition: none; }
@@ -10687,11 +9634,7 @@ button.b-button.b-raised.b-light-gray[disabled] {
     outline: none;
     z-index: 7; }
   .b-scrolling .b-sch-event-wrap {
-    transition: none !important;
-    pointer-events: none !important; }
-    .b-scrolling .b-sch-event-wrap .b-sch-event {
-      transition: none !important;
-      pointer-events: none !important; }
+    transition: none; }
 
 .b-sch-event-wrap.b-milestone-wrap {
   min-width: 1em;
@@ -10723,19 +9666,17 @@ button.b-button.b-raised.b-light-gray[disabled] {
     margin-right: 1em;
     color: #777;
     font-size: inherit; }
-  .b-labels-topbottom .b-sch-event-wrap.b-milestone-wrap .b-sch-event:not(.b-sch-event-withicon), .b-labels-topbottom
-  .b-sch-event-wrap.b-milestone-wrap .b-task-baseline {
+  .b-labels-topbottom .b-sch-event-wrap.b-milestone-wrap .b-sch-event:not(.b-sch-event-withicon) {
     font-size: 50%; }
-  .b-sch-event-wrap.b-milestone-wrap .b-sch-event:not(.b-sch-event-withicon):before,
-  .b-sch-event-wrap.b-milestone-wrap .b-task-baseline:before {
+  .b-sch-event-wrap.b-milestone-wrap .b-sch-event:not(.b-sch-event-withicon):before {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     content: ' ';
     height: 0.707107em;
     width: 0.707107em;
-    transform-origin: 50% 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
+    transform-origin: 0 0;
+    transform: rotate(45deg);
     background-image: inherit;
     background-color: inherit;
     border-style: inherit;
@@ -10835,8 +9776,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
   transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s;
   border-color: #66BB6A;
   position: relative; }
-  .b-toggling-node .b-sch-event {
-    transition: none; }
   .b-sch-event.b-sch-event-narrow {
     padding-left: 0; }
   .b-sch-event label {
@@ -10903,17 +9842,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
   100% {
     opacity: 1; } }
 
-.b-initial-zoom-in .b-first-render .b-sch-event {
-  animation-name: initial-zoom-in;
-  animation-duration: .5s;
-  animation-timing-function: ease-in; }
-
-@keyframes initial-zoom-in {
-  0% {
-    transform: scale(0.01); }
-  100% {
-    transform: scale(1); } }
-
 .b-initial-slide-from-left .b-first-render {
   left: -100%;
   animation-name: initial-slide-from-left;
@@ -10962,12 +9890,12 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-scheduler:not(.b-scheduler-resizing-event-percent):not(.b-resizing-event):not(.b-dragging-event) .b-scheduler-event-parent:not(.b-milestone-wrap):hover .b-scheduler-event {
   background-color: #bcdc97; }
 
-.b-scheduler.b-animating .b-grid-row {
+.b-scheduler.b-scheduler-animated .b-grid-row {
   transition: height 0.2s, transform 0.2s; }
 
 .b-grid-footer-container .b-sch-timeaxiscolumn {
   padding: 0;
-  /*flex    : none !important;*/ }
+  flex: none !important; }
 
 .b-sch-timeaxis-cell {
   padding: 0;
@@ -11071,8 +9999,7 @@ button.b-button.b-raised.b-light-gray[disabled] {
     .b-sch-foreground-canvas > svg polyline.b-sch-bidirectional-line {
       marker-start: url("#arrowEnd"); }
     .b-sch-foreground-canvas > svg polyline.b-sch-dependency-over {
-      stroke-width: 2;
-      stroke-dasharray: 0; }
+      stroke-width: 2; }
     .b-sch-foreground-canvas > svg polyline.b-sch-released {
       display: none; }
 
@@ -11175,10 +10102,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-sch-dependency-creation-tooltip.b-checking .b-popup-header {
   background-color: #9E9E9E; }
 
-.b-sch-dependency-creation-tooltip .b-panel-header,
-.b-sch-dependency-tooltip .b-panel-header {
-  color: #fff; }
-
 .b-sch-dependency-creation-tooltip td:first-child,
 .b-sch-dependency-tooltip td:first-child {
   padding-right: 5px;
@@ -11238,87 +10161,62 @@ button.b-button.b-raised.b-light-gray[disabled] {
   .b-predecessor-list > .b-list-item .b-predecessor-item-text {
     flex: 1; }
   .b-predecessor-list > .b-list-item .b-sch-box {
-    width: 1.2em;
-    height: .9em;
+    width: 15px;
+    height: 12px;
     border: 1px solid #ccc;
-    margin-left: .5em;
-    position: relative; }
+    margin-left: 5px;
+    position: relative;
+    top: 2px; }
     .b-predecessor-list > .b-list-item .b-sch-box:after {
       content: '';
-      width: .5em;
-      height: .5em;
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background-color: #2b2b2b;
       position: absolute;
-      border: 1px solid #ccc;
       display: none; }
   .b-predecessor-list > .b-list-item.b-selected .b-sch-box {
-    background-color: #4CAF50; }
+    background-color: #8bc34a; }
   .b-predecessor-list > .b-list-item.b-selected.b-fs .b-sch-box.b-from:after {
-    right: -.25em;
+    right: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
   .b-predecessor-list > .b-list-item.b-selected.b-fs .b-sch-box.b-to:after {
-    left: -.25em;
+    left: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
   .b-predecessor-list > .b-list-item.b-selected.b-sf .b-sch-box.b-from:after {
-    left: -.25em;
+    left: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
   .b-predecessor-list > .b-list-item.b-selected.b-sf .b-sch-box.b-to:after {
-    right: -.25em;
+    right: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
   .b-predecessor-list > .b-list-item.b-selected.b-ss .b-sch-box.b-from:after {
-    left: -.25em;
+    left: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
   .b-predecessor-list > .b-list-item.b-selected.b-ss .b-sch-box.b-to:after {
-    left: -.25em;
+    left: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
   .b-predecessor-list > .b-list-item.b-selected.b-ff .b-sch-box.b-from:after {
-    right: -.25em;
+    right: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
   .b-predecessor-list > .b-list-item.b-selected.b-ff .b-sch-box.b-to:after {
-    right: -.25em;
+    right: -2px;
     top: 50%;
     transform: translateY(-50%);
     display: block; }
-
-.b-dependencyeditor.b-popup {
-  width: 29em; }
-  .b-dependencyeditor.b-popup .b-popup-content {
-    padding: 1em 1em 0 1em; }
-    .b-dependencyeditor.b-popup .b-popup-content .b-textfield label {
-      flex: 1 0 4em; }
-  .b-dependencyeditor.b-popup .b-bottom-toolbar {
-    padding: 1em 1em 0.4em 1em; }
-    .b-dependencyeditor.b-popup .b-bottom-toolbar .b-label-filler {
-      display: none; }
-    .b-dependencyeditor.b-popup .b-bottom-toolbar > button {
-      flex: 1;
-      margin-right: .5em; }
-      .b-dependencyeditor.b-popup .b-bottom-toolbar > button:last-child {
-        margin-right: 0; }
-
-.b-dragselect-rect {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin: 0 0;
-  pointer-events: none;
-  z-index: 100;
-  border: 1px dashed #424242; }
 
 .b-scheduler.b-dragging-event {
   -moz-user-select: none;
@@ -11326,12 +10224,13 @@ button.b-button.b-raised.b-light-gray[disabled] {
   -ms-user-select: none;
   user-select: none; }
 
+.b-sch-event.b-dragging,
 .b-sch-event-wrap.b-dragging {
   z-index: 7;
   pointer-events: none;
   opacity: 0.65; }
 
-.b-sch-event-wrap.b-aborting {
+.b-sch-event.b-aborting {
   transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s, transform 0.2s; }
 
 .b-sch-tip-message {
@@ -11363,7 +10262,7 @@ button.b-button.b-raised.b-light-gray[disabled] {
     .b-eventeditor.b-popup .b-eventeditor-content.b-popup-content .b-textfield label {
       flex: 1 0 5em; }
   .b-eventeditor.b-popup .b-bottom-toolbar {
-    padding: 1em 1em 0.4em 1em; }
+    padding: 1em; }
     .b-eventeditor.b-popup .b-bottom-toolbar .b-label-filler {
       display: none; }
     .b-eventeditor.b-popup .b-bottom-toolbar > button {
@@ -11371,9 +10270,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
       margin-right: .5em; }
       .b-eventeditor.b-popup .b-bottom-toolbar > button:last-child {
         margin-right: 0; }
-
-.b-ie .b-eventfilter {
-  flex: 0 1 200px; }
 
 .b-eventresize:not(.b-readonly) .b-sch-event-wrap:not(.b-sch-style-line) .b-sch-event.b-sch-event-resizing.b-sch-event-resizable-true:before, .b-eventresize:not(.b-readonly) .b-sch-event-wrap:not(.b-sch-style-line) .b-sch-event.b-sch-event-resizing.b-sch-event-resizable-start:before, .b-eventresize:not(.b-readonly) .b-sch-event-wrap:not(.b-sch-style-line) .b-sch-event.b-sch-event-resizing.b-sch-event-resizable-true:after, .b-eventresize:not(.b-readonly) .b-sch-event-wrap:not(.b-sch-style-line) .b-sch-event.b-sch-event-resizing.b-sch-event-resizable-end:after, .b-eventresize:not(.b-readonly) .b-sch-event-wrap:not(.b-sch-style-line) .b-sch-event.b-resize-handle::before, .b-eventresize:not(.b-readonly) .b-sch-event-wrap:not(.b-sch-style-line) .b-sch-event.b-resize-handle::after {
   content: '';
@@ -11460,12 +10356,12 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-ie .b-sch-event-wrap .b-sch-label-right, .b-ie .b-gantt-task-wrap .b-sch-label-right {
   right: -5px;
   top: 50%;
-  transform: translate3d(100%, -50%, 0); }
+  transform: translate(100%, -50%); }
 
 .b-ie .b-sch-event-wrap .b-sch-label-left, .b-ie .b-gantt-task-wrap .b-sch-label-left {
   left: -5px;
   top: 50%;
-  transform: translate3d(-100%, -50%, 0); }
+  transform: translate(-100%, -50%); }
 
 .b-sch-event-wrap .b-sch-label, .b-gantt-task-wrap .b-sch-label {
   font-size: 12px;
@@ -11474,10 +10370,6 @@ button.b-button.b-raised.b-light-gray[disabled] {
   margin: .2em 0;
   color: #888;
   font-weight: 300;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   pointer-events: all; }
   .b-sch-event-wrap .b-sch-label.b-sch-label-top, .b-gantt-task-wrap .b-sch-label.b-sch-label-top {
     order: -2; }
@@ -11487,32 +10379,113 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-sch-event-wrap .b-sch-label-left, .b-gantt-task-wrap .b-sch-label-left {
   position: absolute;
   align-self: self-start;
-  transform: translate3d(calc(-100% - 2em), 0, 0);
+  transform: translateX(calc(-100% - 2em));
   margin: 0; }
 
 .b-sch-event-wrap .b-sch-label-right, .b-gantt-task-wrap .b-sch-label-right {
   position: absolute;
   align-self: flex-end;
-  transform: translate3d(calc(100% + 5px), 0, 0);
+  transform: translateX(calc(100% + 5px));
   margin: 0; }
 
-.b-show-baselines .b-sch-event-wrap.b-has-baselines .b-sch-label-left, .b-show-baselines .b-sch-event-wrap.b-has-baselines .b-sch-label-right, .b-show-baselines .b-gantt-task-wrap.b-has-baselines .b-sch-label-left, .b-show-baselines .b-gantt-task-wrap.b-has-baselines .b-sch-label-right {
-  top: 0;
-  line-height: 85%; }
-
-.b-grid-headers .b-sch-nonworkingtime {
-  background-color: rgba(240, 213, 213, 0.3);
-  z-index: 0;
+.b-float-root > .b-floating.b-interaction-tooltip {
   pointer-events: none; }
 
-.b-sch-timeaxiscolumn-levels-1 .b-sch-nonworkingtime:empty {
-  height: 100%; }
+.b-sch-timerange, .b-sch-nonworkingtime {
+  position: absolute;
+  left: 0;
+  color: #ddd;
+  z-index: 1; }
 
-.b-sch-timeaxiscolumn-levels-2 .b-sch-nonworkingtime:empty {
-  height: 50%; }
+.b-transitioning .b-sch-timerange, .b-transitioning .b-sch-nonworkingtime {
+  transition: transform 0.3s, width 0.3s; }
 
-.b-sch-timeaxiscolumn-levels-3 .b-sch-nonworkingtime:empty {
-  height: 33.33333%; }
+.b-grid-subgrid .b-sch-timerange, .b-grid-subgrid .b-sch-nonworkingtime {
+  height: 100%;
+  min-width: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .b-grid-subgrid .b-sch-timerange label, .b-grid-subgrid .b-sch-nonworkingtime label {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 12px;
+    pointer-events: none; }
+  .b-grid-subgrid .b-sch-timerange:not(.b-sch-line) label.b-vertical, .b-grid-subgrid .b-sch-nonworkingtime:not(.b-sch-line) label.b-vertical {
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr; }
+
+.b-grid-subgrid .b-sch-range {
+  background-color: rgba(240, 240, 240, 0.5);
+  pointer-events: none;
+  overflow: hidden; }
+
+.b-grid-subgrid .b-sch-line {
+  border-left: 2px dotted #fab005;
+  color: #fff; }
+  .b-grid-subgrid .b-sch-line label {
+    background-color: #fab005;
+    color: inherit;
+    padding: 0.3em;
+    white-space: nowrap;
+    margin-left: -2px; }
+
+.b-grid-headers .b-sch-timerange, .b-grid-headers .b-sch-nonworkingtime {
+  bottom: 0;
+  height: 13px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle {
+    position: absolute;
+    pointer-events: all;
+    height: 100%; }
+  .b-grid-headers .b-sch-timerange:not(.b-sch-current-time) .b-resize-handle, .b-grid-headers .b-sch-nonworkingtime:not(.b-sch-current-time) .b-resize-handle {
+    cursor: ew-resize; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle-start, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle-start {
+    left: 0; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle-end, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle-end {
+    right: 0; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle:before, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle:before {
+    position: absolute;
+    content: '';
+    bottom: 2px;
+    border-radius: 5px 5px 5px 0;
+    border: 2px solid #9E9E9E;
+    width: 11px;
+    height: 11px;
+    transform: translateX(-50%) rotate(-45deg);
+    background-color: #fff; }
+
+.b-grid-headers .b-sch-line .b-resize-handle:before {
+  border-color: #fab005;
+  left: 1px; }
+
+.b-grid-headers .b-sch-range:before {
+  font-family: "Font Awesome 5 Pro";
+  color: #ddd;
+  position: relative;
+  left: .2em;
+  font-size: .7em; }
+
+.b-grid-headers .b-sch-current-time label {
+  position: absolute;
+  bottom: 1px;
+  padding: 5px;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  background-color: #fab005;
+  color: #fff;
+  white-space: nowrap; }
+
+.b-scheduler.b-readonly .b-sch-timerange .b-resize-handle, .b-scheduler.b-readonly .b-sch-nonworkingtime .b-resize-handle {
+  pointer-events: none; }
+
+.b-sch-nonworkingtime.b-sch-range {
+  background-color: rgba(240, 213, 213, 0.3);
+  z-index: 0; }
 
 .b-pan .b-timeline-subgrid {
   cursor: move; }
@@ -11528,7 +10501,7 @@ button.b-button.b-raised.b-light-gray[disabled] {
   justify-content: center;
   align-items: flex-end;
   padding: 3px; }
-  .b-animating .b-sch-resourcetimerange {
+  .b-scheduler-animated .b-sch-resourcetimerange {
     transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s, transform 0.2s, width 0.2s, height 0.2s, font-size 0.2s; }
   .b-sch-resourcetimerange.b-sch-released {
     display: none;
@@ -11584,9 +10557,7 @@ button.b-button.b-raised.b-light-gray[disabled] {
 
 .b-grid-footer.b-sch-timeaxiscolumn {
   padding: 0;
-  flex-direction: row;
-  justify-content: start;
-  flex-grow: unset !important; }
+  flex-direction: row; }
   .b-grid-footer.b-sch-timeaxiscolumn .b-timeaxis-tick {
     display: flex;
     flex-direction: column;
@@ -11618,102 +10589,97 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-float-root > .b-floating.b-interaction-tooltip {
   pointer-events: none; }
 
-.b-sch-timerange {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.b-sch-timerange, .b-sch-nonworkingtime {
   position: absolute;
   left: 0;
-  overflow: hidden;
-  justify-content: center;
-  color: #aaa;
-  z-index: 1;
-  cursor: pointer;
-  padding: 0.3em 0.5em; }
-  .b-sch-timerange.b-over-resize-handle {
-    cursor: ew-resize; }
-  .b-sch-timerange:hover {
-    z-index: 2; }
-  .b-sch-timerange label {
-    font-size: .8em;
-    color: inherit;
-    white-space: nowrap;
-    cursor: inherit;
-    text-overflow: ellipsis;
-    overflow: hidden; }
+  color: #ddd;
+  z-index: 1; }
 
-.b-sch-current-time {
-  pointer-events: none; }
-
-.b-animating .b-sch-timerange {
+.b-transitioning .b-sch-timerange, .b-transitioning .b-sch-nonworkingtime {
   transition: transform 0.3s, width 0.3s; }
 
-.b-grid-subgrid .b-sch-timerange {
+.b-grid-subgrid .b-sch-timerange, .b-grid-subgrid .b-sch-nonworkingtime {
   height: 100%;
-  align-items: start;
   min-width: 1px;
-  color: #aaa;
-  font-size: 14px; }
-  .b-grid-subgrid .b-sch-timerange:not(.b-sch-line) label.b-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .b-grid-subgrid .b-sch-timerange label, .b-grid-subgrid .b-sch-nonworkingtime label {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 12px;
+    pointer-events: none; }
+  .b-grid-subgrid .b-sch-timerange:not(.b-sch-line) label.b-vertical, .b-grid-subgrid .b-sch-nonworkingtime:not(.b-sch-line) label.b-vertical {
     -webkit-writing-mode: vertical-lr;
     writing-mode: vertical-lr;
     -ms-writing-mode: tb-lr; }
-  .b-grid-subgrid .b-sch-timerange.b-sch-line:before {
-    display: none; }
 
 .b-grid-subgrid .b-sch-range {
   background-color: rgba(240, 240, 240, 0.5);
-  pointer-events: none; }
+  pointer-events: none;
+  overflow: hidden; }
 
 .b-grid-subgrid .b-sch-line {
   border-left: 2px dotted #fab005;
-  color: #fff;
-  padding: 0; }
+  color: #fff; }
   .b-grid-subgrid .b-sch-line label {
     background-color: #fab005;
+    color: inherit;
     padding: 0.3em;
     white-space: nowrap;
-    margin-top: 0.5em; }
+    margin-left: -2px; }
 
-.b-grid-headers .b-sch-timerange {
-  flex-direction: row;
-  justify-content: center;
+.b-grid-headers .b-sch-timerange, .b-grid-headers .b-sch-nonworkingtime {
   bottom: 0;
-  background-color: #2667c8;
-  color: #9E9E9E;
+  height: 13px;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .b-grid-headers .b-sch-timerange:before {
-    margin-right: 0.5em; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle {
+    position: absolute;
+    pointer-events: all;
+    height: 100%; }
+  .b-grid-headers .b-sch-timerange:not(.b-sch-current-time) .b-resize-handle, .b-grid-headers .b-sch-nonworkingtime:not(.b-sch-current-time) .b-resize-handle {
+    cursor: ew-resize; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle-start, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle-start {
+    left: 0; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle-end, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle-end {
+    right: 0; }
+  .b-grid-headers .b-sch-timerange .b-resize-handle:before, .b-grid-headers .b-sch-nonworkingtime .b-resize-handle:before {
+    position: absolute;
+    content: '';
+    bottom: 2px;
+    border-radius: 5px 5px 5px 0;
+    border: 2px solid #9E9E9E;
+    width: 11px;
+    height: 11px;
+    transform: translateX(-50%) rotate(-45deg);
+    background-color: #fff; }
 
-.b-grid-headers .b-sch-range:empty {
-  height: 3px;
-  padding: 0; }
+.b-grid-headers .b-sch-line .b-resize-handle:before {
+  border-color: #fab005;
+  left: 1px; }
 
-.b-grid-headers .b-sch-line {
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px; }
-  .b-grid-headers .b-sch-line.b-sch-timerange-with-headerlabel label {
-    left: -2px; }
+.b-grid-headers .b-sch-range:before {
+  font-family: "Font Awesome 5 Pro";
+  color: #ddd;
+  position: relative;
+  left: .2em;
+  font-size: .7em; }
 
-.b-sch-timeranges-with-headerelements .b-timeline-subgrid .b-sch-range:before {
-  display: none; }
+.b-grid-headers .b-sch-current-time label {
+  position: absolute;
+  bottom: 1px;
+  padding: 5px;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  background-color: #fab005;
+  color: #fff;
+  white-space: nowrap; }
 
-.b-grid-headers .b-sch-nonworkingtime {
-  background-color: rgba(240, 213, 213, 0.3);
-  z-index: 0;
+.b-scheduler.b-readonly .b-sch-timerange .b-resize-handle, .b-scheduler.b-readonly .b-sch-nonworkingtime .b-resize-handle {
   pointer-events: none; }
-
-.b-sch-timeaxiscolumn-levels-1 .b-sch-nonworkingtime:empty {
-  height: 100%; }
-
-.b-sch-timeaxiscolumn-levels-2 .b-sch-nonworkingtime:empty {
-  height: 50%; }
-
-.b-sch-timeaxiscolumn-levels-3 .b-sch-nonworkingtime:empty {
-  height: 33.33333%; }
 
 .b-sch-clockwrap {
   display: flex; }
@@ -11812,21 +10778,21 @@ button.b-button.b-raised.b-light-gray[disabled] {
 .b-grid-header-container .b-sch-timeaxiscolumn {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  box-sizing: border-box;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
   padding: 0;
-  flex-grow: unset !important;
-  background-color: #fafafa;
-  border-right: 0 none; }
+  flex: none !important;
+  background-color: #fafafa; }
   .b-grid-header-container .b-sch-timeaxiscolumn.b-depth-0:hover {
-    background-color: #fafafa !important; }
+    background-color: #fafafa; }
   .b-grid-header-container .b-sch-timeaxiscolumn .b-sch-header-timeaxis-cell:hover {
     background-color: #ededed; }
 
 .b-sch-header-row {
+  width: inherit;
   display: flex;
   flex-direction: row;
   flex: 1; }
