@@ -932,7 +932,7 @@
   },
   "message": {
     "accept": "Accepteren",
-    "go-to-calendar": "Go to Booking Calendar",
+    "go-to-calendar": "Naar de boekingskalender",
     "reject": "afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",
@@ -1082,6 +1082,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
+    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
     "status-closed": "Gesloten",
     "status-in-past": "in het verleden",
     "booked": "geboekt",
