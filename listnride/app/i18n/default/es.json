@@ -938,7 +938,7 @@
   },
   "message": {
     "accept": "Aceptar",
-    "go-to-calendar": "Go to Booking Calendar",
+    "go-to-calendar": "Calendario de reservas",
     "reject": "Rechazar",
     "rate": "Tarifa",
     "confirm": "Confirmar",
@@ -1089,6 +1089,7 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
+    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
     "status-closed": "closed",
     "status-in-past": "in past",
     "booked": "booked",
