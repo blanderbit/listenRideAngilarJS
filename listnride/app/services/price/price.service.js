@@ -180,7 +180,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         if (halfDayPrice) {
           prices[1] = {
             id: originalPrices[1].id,
-            price: parseInt(originalPrices[1].price),
+            price: originalPrices[1].price,
             start_at: originalPrices[1].start_at
           }
         }
