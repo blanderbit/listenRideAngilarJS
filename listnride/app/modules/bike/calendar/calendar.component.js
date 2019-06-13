@@ -796,7 +796,13 @@ angular.module('bike').component('calendar', {
 
         if (start.getTime() <= date.getTime() &&
           date.getTime() <= end.getTime()) {
-          requestsCount++;
+
+          // if request for one day we should check how much timeslots requested there
+          if (moment(start, "DD-MM-YYYY").isSame(moment(end, "DD-MM-YYYY"))) {
+            requestsCount++;
+          } else {
+            return true;
+          }
         }
       }
 

@@ -203,7 +203,11 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
 
         if (start.getTime() <= date.getTime() &&
           date.getTime() <= end.getTime()) {
-          requestsCount++;
+          if (moment(start, "DD-MM-YYYY").isSame(moment(end, "DD-MM-YYYY"))) {
+            requestsCount++;
+          } else {
+            return true;
+          }
         }
       }
 
