@@ -1,5 +1,4 @@
 import moment from 'moment';
-import { Certificate } from 'crypto';
 
 angular.module('bike').component('calendar', {
   templateUrl: 'app/modules/bike/calendar/calendar.template.html',
