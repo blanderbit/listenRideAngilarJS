@@ -41,16 +41,16 @@
     </div>
 
     <div
-      ng-if="!receipt.isShop || receipt.isShop && receipt.insuranceCountry()"
+      ng-if="!receipt.isShop || receipt.isShop && receipt.insuranceAllowed()"
       layout="row"
       layout-align="space-between center">
       <div layout="row" layout-align="start center">
         <div
           layout="row"
           style="width:170px;">
-          <span ng-if="!receipt.insuranceCountry()">{{ 'shared.lnr-fee' | translate }}</span>
-          <span ng-if="!receipt.isShop && receipt.insuranceCountry()">{{ 'shared.basic-fee' | translate }}</span>
-          <span ng-if="receipt.isShop && receipt.insuranceCountry()">{{ 'shared.basic-insurance-fee' | translate }}</span>
+          <span ng-if="!receipt.insuranceAllowed()">{{ 'shared.lnr-fee' | translate }}</span>
+          <span ng-if="!receipt.isShop && receipt.insuranceAllowed()">{{ 'shared.basic-fee' | translate }}</span>
+          <span ng-if="receipt.isShop && receipt.insuranceAllowed()">{{ 'shared.basic-insurance-fee' | translate }}</span>
           <div ng-if="!receipt.isShop">
             <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>
             <md-tooltip md-direction="right">

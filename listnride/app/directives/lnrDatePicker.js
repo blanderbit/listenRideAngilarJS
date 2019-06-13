@@ -17,7 +17,8 @@ angular
         dateOnClear: '<?',
         clearCalendarData: '=?',
         dateContainer: '<?',
-        dateScrollContainer: '<?'
+        dateScrollContainer: '<?',
+        hasTimeSlots: '<?'
       },
       link: function ($scope, element, attrs) {
         $scope.el = angular.element(element[0]).find('.js-datapicker');
@@ -167,7 +168,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
 
     // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date
     function isReserved(date) {
-      return isReservedPrimary(date) && isAllClusterReserved(date);
+      return isReservedPrimary(date) && isAllClusterReserved(date) && isAllHalfDayReserved(date, vm.requests);
     }
 
     function isReservedDate(date, requests) {
@@ -185,6 +186,30 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
         }
       }
       return false;
+    }
+
+    function isAllHalfDayReserved(date, requests) {
+      if (!vm.hasTimeSlots) return true;
+      let isAllDayBooked = true;
+
+      // TODO: remove hardcode from here
+      let requestsCount = 0;
+
+      for (var i = 0; i < requests.length; ++i) {
+        var start = new Date(requests[i].start_date_tz);
+        start.setHours(0, 0, 0, 0);
+        var end = new Date(requests[i].end_date_tz);
+        end.setHours(0, 0, 0, 0);
+
+        if (start.getTime() <= date.getTime() &&
+          date.getTime() <= end.getTime()) {
+          requestsCount++;
+        }
+      }
+
+      isAllDayBooked = requestsCount == 2;
+
+      return isAllDayBooked;
     }
 
     function isReservedPrimary(date) {

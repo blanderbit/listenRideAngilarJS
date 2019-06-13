@@ -60,6 +60,8 @@ angular.module('booking', [])
         booking.sendCode = sendCode;
         booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
         booking.loggedIn = loggedIn;
+        booking.isTimeslotAvailable = isTimeslotAvailable;
+
 
         // INVOCATIONS
         getBikeData();
@@ -129,6 +131,11 @@ angular.module('booking', [])
             $state.go('home');
           }
         );
+      }
+
+      function isTimeslotAvailable(hour) {
+        if (!booking.hasTimeSlots) return true;
+        return calendarHelper.isTimeInTimeslots(hour, booking.timeslots);
       }
 
       function isCreditCardPayment() {
@@ -293,7 +300,8 @@ angular.module('booking', [])
           isPremiumCoverage: booking.isPremium,
           isShopUser: booking.shopBooking,
           setCustomPrices: booking.bike.custom_price,
-          insuranceEnabled: booking.insuranceEnabled
+          insuranceEnabled: booking.insuranceEnabled,
+          timeslots: booking.timeslots
         });
         booking.subtotal = prices.subtotal;
         booking.subtotalDiscounted = prices.subtotalDiscounted;

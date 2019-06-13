@@ -44,6 +44,15 @@ angular.module('listnride')
       return isAvailable;
     };
 
+    var isTimeInTimeslots = function(hour, timeslots) {
+      let timeslotsRange = [];
+      _.forEach(timeslots, function(timeslot) {
+        let timeslotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour);
+        timeslotsRange = [...timeslotsRange, ...timeslotRange]
+      })
+      return _.includes(timeslotsRange, hour);
+    };
+
     var isDayAvailable = function(openingHours, date) {
       if (!openingHoursAvailable(openingHours)) return false;
 
@@ -95,9 +104,10 @@ angular.module('listnride')
     }
 
     return {
-      isTimeAvailable: isTimeAvailable,
-      isDayAvailable: isDayAvailable,
-      getInitHours: getInitHours,
-      checkIsOpeningHoursEnabled: checkIsOpeningHoursEnabled
+      isTimeAvailable,
+      isDayAvailable,
+      getInitHours,
+      checkIsOpeningHoursEnabled,
+      isTimeInTimeslots
     };
   }]);
