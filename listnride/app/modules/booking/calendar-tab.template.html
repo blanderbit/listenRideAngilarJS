@@ -42,6 +42,17 @@
         <md-divider></md-divider>
         <br>
         <h2 class="md-title lnr-m-0">{{ 'booking.calendar.choose-duration' | translate }}</h2>
+
+        <div
+          ng-if="calendar.parent.startDate && calendar.parent.dateRange.duration < 1 && calendar.parent.hasTimeSlots"
+          layout="column">
+          <p translate="calendar.ability-to-pick-half-day"></p>
+          <div class="lnr-mb-0 lnr-pt" ng-repeat="timeslot in calendar.parent.timeslots">
+            {{timeslot.start_time.hour}}:00 - {{timeslot.end_time.hour}}:00
+          </div>
+          <md-divider class="lnr-p-0 lnr-mh"></md-divider>
+        </div>
+
         <br>
         <div layout="row" layout-align="start center" flex layout-xs="column">
           <md-input-container flex-xs="100">

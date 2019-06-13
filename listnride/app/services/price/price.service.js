@@ -1,18 +1,28 @@
+import { isString } from "util";
+
 angular.module('listnride').factory('price', ['$translate', 'date',
   function($translate, date) {
     return {
-      PRICES: [
-        ['1d', 0],
-        ['1/2d', 43200],
-        ['2d', 86400],
-        ['3d', 172800],
-        ['4d', 259200],
-        ['5d', 345600],
-        ['6d', 432000],
-        ['7d', 518400],
-        ['8d', 604800],
-        ['28d', 2419200]
-      ],
+      PRICES: new Map([
+        ['1', {start_at: 0}],
+        ['1/2', {start_at: 43200}],
+        ['2', {start_at: 86400}],
+        ['3', {start_at: 172800}],
+        ['4', {start_at: 259200}],
+        ['5', {start_at: 345600}],
+        ['6', {start_at: 432000}],
+        ['7', {start_at: 518400}],
+        ['8', {start_at: 604800}],
+        ['28', {start_at: 2419200}]
+      ]),
+      getPriceFor: function(day, prices) {
+        day = _.isString(day) ? day: _.toString(day);
+        day = day.replace(/[^0-9\.\/]+/g, '');
+
+        return _.find(prices, {
+          'start_at': this.PRICES.get(day).start_at
+        }).price;
+      },
       // Calculates the prices for the calendar and booking overview
       // Note that this is just a preview-calculation, the actual data
       // gets calculated in the backend.
@@ -24,6 +34,8 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         isPremiumCoverage = false,
         isShopUser = false,
         setCustomPrices = false,
+        insuranceEnabled = true,
+        timeslots = []
       } = {}) {
 
         // Service Fee is 12,5% and includes 0,19% MwSt
@@ -40,25 +52,31 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           total: 0
         };
 
-        const includeInsurance = true;
+        const includeInsurance = insuranceEnabled;
         const includeFee = !isShopUser;
 
         if (startDate && endDate) {
           var days = date.durationDays(startDate, endDate);
         }
+
         // Check if days are valid
         if (days <= 0) return result;
 
         // Subtotal here is only to show the price without all Fee and discounts
-        result.subtotal = days * prices[0].price;
+        result.subtotal = days * this.getPriceFor('1 day', prices);
 
         // Calc days with daily discount
-        if (days < 8) {
-          result.subtotalDiscounted = prices[days - 1].price * days;
+        if (days <= 1 && timeslots.length) {
+          if (this.checkHalfDayEnabled(startDate, endDate, timeslots)) {
+            result.subtotal = days * this.getPriceFor('1/2 day', prices);
+          }
+          result.subtotalDiscounted = result.subtotal;
+        } else if (days < 8) {
+          result.subtotalDiscounted = this.getPriceFor(days, prices) * days;
         } else if (days <= 28) {
-          result.subtotalDiscounted = prices[6].price * 7 + (days - 7) * prices[7].price;
+          result.subtotalDiscounted = this.getPriceFor('7 days', prices) * 7 + this.getPriceFor('8 days', prices) * (days - 7);
         } else {
-          result.subtotalDiscounted = prices[8].price * days;
+          result.subtotalDiscounted = this.getPriceFor('28 days', prices) * days;
         }
 
         if (includeInsurance) {
@@ -77,6 +95,24 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         result.total += result.subtotalDiscounted;
 
         return result;
+      },
+
+      checkHalfDayEnabled: function (startDate, endDate, timeslots) {
+        let prev_time = null;
+        let used_part_day_slots = 0;
+        let dateTimeRange = _.range(startDate.getHours(), endDate.getHours());
+
+        _.forEach(timeslots, (timeslot) => {
+          let timeSlotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour);
+          let in_slot = !!_.intersection(timeSlotRange, dateTimeRange).length;
+          let extreme_time = (prev_time == timeslot.start_time.hour && !!_.find([startDate.getHours(), endDate.getHours()], prev_time));
+
+          if (in_slot && !extreme_time) used_part_day_slots += 1
+
+          prev_time = timeslot.end_time.hour;
+        });;
+
+        return used_part_day_slots < timeslots.length;
       },
 
       // proposes custom prices through daily price acc. to a scheme of us

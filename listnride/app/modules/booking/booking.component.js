@@ -9,7 +9,7 @@ angular.module('booking', [])
     controller:
      function BookingController(
       $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-      $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster) {
+      $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster, userHelper) {
 
       var booking = this;
 
@@ -50,6 +50,8 @@ angular.module('booking', [])
         booking.isOpeningHoursLoaded = false;
         booking.creditCardData = {}
         booking.paymentDescription = '';
+        booking.insuranceEnabled = false;
+        booking.hasTimeSlots = false;
 
         // METHODS
         booking.calendarHelper = calendarHelper;
@@ -82,6 +84,9 @@ angular.module('booking', [])
             booking.pickedBikeSize = $state.params.size ? $state.params.size : booking.bike.size;
             booking.humanReadableSize = bikeOptions.getHumanReadableSize(booking.pickedBikeSize);
             booking.prices = booking.bike.prices;
+            booking.insuranceEnabled = userHelper.insuranceEnabled(booking.bike.user);
+            booking.hasTimeSlots = userHelper.hasTimeSlots(booking.bike.user);
+            booking.timeslots = booking.hasTimeSlots ? userHelper.getTimeSlots(booking.bike.user) : [];
             getLister();
             updatePrices();
 
@@ -146,7 +151,7 @@ angular.module('booking', [])
       }
 
       booking.insuranceAllowed = function () {
-        return insuranceCountry() && eventBikeIncludeInsurance();
+        return booking.insuranceEnabled && insuranceCountry() && eventBikeIncludeInsurance();
       };
 
       function insuranceCountry() {
@@ -287,7 +292,8 @@ angular.module('booking', [])
           coverageTotal: booking.coverageTotal,
           isPremiumCoverage: booking.isPremium,
           isShopUser: booking.shopBooking,
-          setCustomPrices: booking.bike.custom_price
+          setCustomPrices: booking.bike.custom_price,
+          insuranceEnabled: booking.insuranceEnabled
         });
         booking.subtotal = prices.subtotal;
         booking.subtotalDiscounted = prices.subtotalDiscounted;
@@ -621,7 +627,7 @@ angular.module('booking', [])
         }
 
         return threeDSecureAuthenticationResult.promise;
-        
+
        */
       }
 
