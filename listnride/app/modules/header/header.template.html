@@ -91,7 +91,7 @@
           <md-menu-item>
             <md-button md-no-ink ui-sref="requests">{{ 'shared.requests' | translate }}</md-button>
           </md-menu-item>
-          <md-menu-item>
+          <md-menu-item ng-if="header.isUserBusiness">
             <md-button md-no-ink ui-sref="bookingCalendar">{{ 'shared.booking-calendar' | translate }}</md-button>
           </md-menu-item>
           <md-menu-item>
