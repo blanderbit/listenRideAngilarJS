@@ -40,7 +40,8 @@ angular.module('bike').component('calendar', {
     calendarHelper,
     notification,
     bikeOptions,
-    bikeCluster
+    bikeCluster,
+    userHelper
   ) {
     // variables
     var calendar = this;
@@ -48,6 +49,10 @@ angular.module('bike').component('calendar', {
     calendar.calendarHelper = calendarHelper;
     calendar.requested = false;
     calendar.defaultDateRange = '';
+    calendar.hasInsurance = false;
+    calendar.insuranceEnabled = false;
+    calendar.hasTimeSlots = false;
+    calendar.isHalfDayBook = false;
 
     //methods
     calendar.validClusterSize = validClusterSize;
@@ -57,13 +62,19 @@ angular.module('bike').component('calendar', {
       if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
         api.get('/users/' + changes.userId.currentValue).then(function (response) {
           calendar.bikeOwner = response.data;
-
+          checkUserData();
           initOverview();
           initCalendarPicker();
           checkEventBike();
         });
       }
     };
+
+    function checkUserData() {
+      calendar.insuranceEnabled = userHelper.insuranceEnabled(calendar.bike.user);
+      calendar.hasTimeSlots = userHelper.hasTimeSlots(calendar.bike.user);
+      calendar.timeslots = userHelper.getTimeSlots(calendar.bike.user);
+    }
 
     calendar.updateStateSize = function(){
       updateState({size: calendar.pickedBikeSize});
@@ -494,9 +505,15 @@ angular.module('bike').component('calendar', {
       }
     };
 
+
     calendar.insuranceCountry = function () {
       if (calendar.countryCode) { return _.includes(["DE", "AT"], calendar.countryCode) }
     };
+
+    calendar.hasInsurance = function() {
+      // calendar.insurance_disabled
+      return calendar.insuranceEnabled && calendar.insuranceCountry();
+    }
 
     var showBookingDialog = function (event) {
       $mdDialog.show({
@@ -798,12 +815,18 @@ angular.module('bike').component('calendar', {
         var invalidDays = countInvalidDays(startDate, endDate);
         calendar.duration = date.duration(startDate, endDate, invalidDays);
         calendar.durationDays = date.durationDays(startDate, endDate);
+        if (calendar.hasTimeSlots && calendar.durationDays <= 1) {
+          calendar.isHalfDayBook = price.checkHalfDayEnabled(startDate, endDate, calendar.timeslots);
+          calendar.halfDayPrice = price.getPriceFor('1/2 day', calendar.prices);
+        }
         var prices = price.calculatePrices({
           startDate: startDate,
           endDate: endDate,
           prices: calendar.prices,
           coverageTotal: calendar.coverageTotal,
-          setCustomPrices: calendar.bike.custom_price
+          setCustomPrices: calendar.bike.custom_price,
+          insuranceEnabled: calendar.insuranceEnabled,
+          timeslots: calendar.hasTimeSlots ? calendar.timeslots : []
         });
         calendar.subtotal = prices.subtotal;
         calendar.discount = prices.subtotal - prices.subtotalDiscounted;
