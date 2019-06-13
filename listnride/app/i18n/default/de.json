@@ -517,7 +517,7 @@
         "meta-description": "Teste noch heute ein Switch E-Bike! Die E-Bikes von Swytch stehen zum Testen in Berlin zur Verfügung!"
       },
       "leaos": {
-        "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Berlin und Bozen",
+        "meta-title": "Mieten und testen Sie die Leaos E-Bikes in München, Berlin und Berlin",
         "meta-descr": "Das Design E-Bike - Leaos"
       },
       "brompton": {
@@ -940,7 +940,7 @@
   },
   "message": {
     "accept": "Akzeptieren",
-    "go-to-calendar": "Go to Booking Calendar",
+    "go-to-calendar": "Zum Buchungskalender",
     "reject": "Ablehnen",
     "rate": "Bewertung",
     "confirm": "Bestätigen",
@@ -1091,6 +1091,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
+    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
     "status-closed": "geschlossen",
     "status-in-past": "in Vergangenheit",
     "booked": "gebucht",
