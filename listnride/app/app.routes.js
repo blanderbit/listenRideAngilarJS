@@ -834,14 +834,14 @@
         url: '/events/{event_name}',
         template: '<event></event>',
         resolve: {
-          data: ['$translate', 'ngMeta', function ($translate, ngMeta, $stateParams) {
+          data: function ($translate, ngMeta, $stateParams) {
             $translate(["events." + $stateParams.event_name + ".meta-title", "events." + $stateParams.event_name + ".meta-description"])
                 .then(function (translations) {
                   ngMeta.setTitle(translations["events." + $stateParams.event_name + ".meta-title"]);
                   ngMeta.setTag("description", translations["events." + $stateParams.event_name + ".meta-description"]);
                   ngMeta.setTag("noindex", false);
                 });
-          }]
+          }
         },
         meta: {
           disableUpdate: true
