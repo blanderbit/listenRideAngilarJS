@@ -455,8 +455,8 @@
     },
     "vatternrundan": {
       "title": "Rent a road bike for Vätternrundan",
-      "description": "What: <b>Vätternrundan</b> | Where: <b> Motala, Sweden </b> | When: <b> June 7th–15th 2019 </b>",
-      "text": "Do you need a road bike for \n<a href=\"http://vatternrundan.se/en/\" target=\"_blank\">Vätternrundan</a>? The world’s largest recreational bike event with start and finish in Motala, Sweden. We got you covered! Together with the listnride community we provide suitable road bikes which you can easily rent for as long as you like. Just choose one of the bikes below, request it for your required period, and pick it up when the time comes. Simple as that. \n<br><br>\nThe 300 km around lake Vättern will test riders to their limits. Participants from all over the world come together every June in what can best be described as a celebration of cycling-sports! Together with Halvvättern 150km, Tjejvättern 100km, Vätternrundan 100km and MTB-Vättern, this event attracts almost 37,000 participants annually.\n<br><br>\nYou can’t participate? Help out another Rider in need: \n <a href=\"/listing-a-bike\" target=\"_blank\">List your bike</a> and make some extra pocket money!"
+      "description": "What: <b>Vätternrundan</b> | Where: <b> Motala, Sweden </b> | When: <b> June 5th–12th 2020 </b>",
+      "text": "Logistics, logistics, logistics. Unless you’re already living on the Scandinavian peninsula, carrying your bike to Motala will be quite the logistical challenge. So why don’t you simply rent a bike?\n<br> \nTo open the opportunity of riding this beautiful event to more people than ever, we’re renting high-quality road bikes from FARA, Simplon, and other brands. <br>\n\nSave yourself time, trouble, and money by simply renting a bike. They will be ready-to-go at the starting line in Motala. All you need to bring is your set of lights, helmet, pedals, and of course: you and your eagerness!"
     },
     "toros-de-gravel": {
       "title": "Rent a gravel bike for Toros de Gravel",
@@ -1239,23 +1239,23 @@
       "rider-faq": {
         "title": "FAQ Rider",
         "question-1": "How do I rent a bike?",
-        "answer-1": "You need to sign up first before you can rent a bike. Simply click on “Sign up” and fill in the required details. Once you’ve signed up, simply log in using your e-mail address and password. After selecting the bike that suits your needs, select your desired start date, pick-up time, end date and drop-off time and then click on “Request ride.” Once your request is accepted by the lister, you need to confirm your rental request by clicking on “Confirm request” and completing the payment process. As soon as the payment is successfully complete, you’ll receive a booking confirmation message as well as an e-mail with the all relevant rental details.",
+        "answer-1": "You need to sign up first before you can rent a bike. Simply click on “Sign up” and fill in the required details. Once you’ve signed up, simply log in using your e-mail address and password. After selecting the bike that suits your needs, select your desired start date, pick-up time, end date and drop-off time and then click on “Request ride.” Once your request is accepted by the lister, the payment process will activate, and you will be charged for the rental. As soon as the payment is successfully complete, you’ll receive a booking confirmation message as well as an e-mail with the all relevant rental details.",
         "question-2": "How do I cancel a request?",
-        "answer-2": "In the request status, you can cancel the request at any time before the payment process is completed by clicking on “Cancel request” in the request window.",
+        "answer-2": "In the request panel, you can cancel the request at any time before the payment process is completed by clicking on “Cancel request”.",
         "question-3": "Can I send more than one request at the same time?",
         "answer-3": "Yes, you can request multiple bikes at the same time. This makes sense in order to get a faster response from one of the bike owners. Once one of the bike owners has accepted your request, you can confirm your request. As long as you don’t confirm, there will be no booking and therefore no payment transaction. When you do book a ride, please remember to cancel all other requests for the same rental period so the other owners are duly informed.",
         "question-4": "What do I do if the lister doesn't respond?",
         "answer-4": "Unfortunately, not every lister is able to reply right away, for example if they don’t have Internet access at the moment. We do everything we can to improve response times. If you are requesting a rental on short notice, we recommend requesting multiple rides at the same time to increase the chances of you finding a ride that suits your style and needs.",
         "question-5": "How do I pay for the bike rental?",
-        "answer-5": "You can confirm and pay for the request in the app or on our website. Payment is possible by credit card or PayPal. We are working on making new payment methods available– stay tuned.",
+        "answer-5": "Payment is possible by credit card or PayPal.",
         "question-6": "What do I do in case of a flat tire?",
         "answer-6": "A flat tire can happen while riding the bike. It’s your responsibility to return the bicycle in the condition in which it was handed over to you. Either find a bike shop and have the tire repaired, or contact the lister and agree on a fair compensation. We believe a fair compensation should be around €15.",
         "question-7": "How should I lock my bike safely to prevent theft?",
-        "answer-7": "To prevent the bike from getting stolen, we recommend checking with the lister with regard to local customs. In general, we would advise pulling the lock through the front tire as well as the frame, and attaching the bike to a fixed object (lamp post, tree, etc.) so it can’t be moved easily. If you’re keeping the bike overnight, we recommend storing the bike in a closed area or indoors.",
+        "answer-7": "To prevent the bike from getting stolen, we recommend checking with the lister with regard to local customs. In general, we would advise pulling the lock through the front wheel as well as the frame, and attaching the bike to a fixed object (lamp post, tree, etc.) so it can’t be moved easily. If you’re keeping the bike overnight, we recommend storing the bike in a closed area or indoors.",
         "question-8": "What if the bike gets stolen during the rental period?",
         "answer-8": "It’s very unfortunate if the bike gets stolen. Please notify our helpdesk right away if this happens. We’ll let you know what needs to be done. Remember: The bike is your full responsibility for the duration of the rental period, and you might have to replace the bike.",
         "question-9": "Do I have insurance coverage when I rent with listnride?",
-        "answer-9": "Listnride doesn’t provide any insurance; we only facilitate the rental transaction. All bike rentals are at the renter’s risk, meaning you will be held responsible for any theft or damage to the ride during the rental period. We recommend that renters check their traveinsurance and/or liability insurance for possible coverage.",
+        "answer-9": "Except for Germany and Austria, listnride doesn’t provide any insurance; we only facilitate the rental transaction. All bike rentals are at the renter’s risk, meaning you will be held responsible for any theft or damage to the ride during the rental period. We recommend that renters check their traveinsurance and/or liability insurance for possible coverage.",
         "question-10": "What if the bike doesn’t resemble the one I thought I booked?",
         "answer-10": "Please send us some pictures of the bike and explain how it is different from the one you originally booked, so that we can cancel the rental if your claim appears justified. Alternatively, you can rate the bike accordingly when asked to submit a rating after the rental period is over.",
         "question-11": "Do I need to bring my own lock and helmet, and can I bring my own pedals/saddle?",
@@ -1276,7 +1276,7 @@
   "press": {
     "title": "Press",
     "header": "Press section",
-    "subheader": "Information is ready to be downloaded. listnride is ready to talk.",
+    "subheader": "Information is ready to be downloaded.",
     "comm-and-pr": "Communications and PR",
     "kit": {
       "title": "Press kit",
@@ -1414,7 +1414,7 @@
     "meta-title": "Work at listnride",
     "meta-description": "Join the listnride team in Berlin or Munich to build the global bike rental platform",
     "apply": "Apply Now",
-    "see-all": "See Other Jobs",
+    "see-all": "See other jobs",
     "open": "Open Positions",
     "go-back": "Back"
   },

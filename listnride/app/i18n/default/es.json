@@ -1,14 +1,14 @@
 {
   "shared": {
-    "learn-more": "Leer más",
+    "learn-more": "En savoir plus",
     "label_new": "Nuevo",
-    "booking-calendar": "Booking Calendar",
-    "month": "Month",
+    "booking-calendar": "Calendrier des réservations",
+    "month": "Mois",
     "id": "ID de bicicleta",
     "event-bikes-will-be-soon": "Las bicis para este evento estarán pronto disponibles.",
-    "for-count-hours": "for {{hoursSlot}} hours",
-    "rental-date": "Rental date",
-    "rental-time": "Rental time",
+    "for-count-hours": "for pour {{hoursSlot}} heures",
+    "rental-date": "Date de la location",
+    "rental-time": "L'heure de la location",
     "choose-bike-size": "Por favor, elige un tamaño de bicicleta",
     "please-choose-bike-count": "Por favor, especifica el número de bicicletas",
     "status-labels": {
@@ -292,8 +292,8 @@
       "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Alquila una bici de carretera para el Vätternrundan 2019 | listnride",
-      "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para el Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
+      "meta-title": "Alquiler de una bicicleta de carretera para Vätternrundan 2020 | listnride",
+      "meta-description": "Alquile una bicicleta de carretera en línea para Vätternrundan 2020. ¡Elija la bicicleta que se ajuste a sus necesidades!"
     },
     "lardita-arezzo": {
       "meta-title": "Alquiler de una bici de carretera vintage para l'Ardita | listnride",
@@ -1558,6 +1558,7 @@
     "any-location": "Todas las localizaciones",
     "bike-variants": "Número de bicicletas",
     "meta-title": "Booking Calendar",
-    "meta-description": "Excellent calendar view for easier request management"
+    "meta-description": "Excellent calendar view for easier request management",
+    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
   }
 }
