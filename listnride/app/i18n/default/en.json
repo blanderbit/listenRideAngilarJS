@@ -295,8 +295,8 @@
       "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Rent a road bike for Vätternrundan 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for Vätternrundan 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Rent a road bike for Vätternrundan 2020 | listnride",
+      "meta-description": "Rent a road bike online for Vätternrundan 2020. Choose the bike that fits your needs!"
     },
     "lardita-arezzo": {
       "meta-title": "Rent a vintage road bike for l'Ardita | listnride",
@@ -610,17 +610,17 @@
     },
     "imprint": {
       "meta-title": "listnride | Imprint",
-      "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+      "meta-description": "Bike rental on listnride. Rent a bike that suits your style and needs."
     },
     "privacy": {
       "meta-title": "Privacy Policy of listnride",
       "meta-description": "The Privacy Policy of listnride applies to the use of the online platform.",
       "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
-      "use-opt-in-button": "I got that."
+      "use-opt-in-button": "I understood."
     }
   },
   "booking": {
-    "shopping": "Secure Shopping",
+    "shopping": "Secure Payments",
     "and-agree-privacy": "and our data protection regulations",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
@@ -727,7 +727,7 @@
     "add-payout-success": "Your payout method was successfully added.",
     "add-voucher-success": "Congratulations, the voucher was added to your account.",
     "add-voucher-error": "Unfortunately, the voucher code is not valid.",
-    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
+    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes. If you didn't receive anything, please have a look in your spam folder.",
     "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
     "successfully-sign-up": "You have successfully signed up. Welcome!",
     "successfully-logged-in": "Successfully logged in. Welcome back!",
@@ -859,7 +859,7 @@
     },
     "4": {
       "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
-      "email-verified": "Email Address successfully verified"
+      "email-verified": "Email address successfully verified"
     },
     "5": {
       "title": "What is your phone number",
@@ -1565,6 +1565,7 @@
     "any-location": "All locations",
     "bike-variants": "Nr. of Bikes",
     "meta-title": "Booking Calendar",
-    "meta-description": "Calendar view for easy booking- and inventory management"
+    "meta-description": "Calendar view for easy booking- and inventory management",
+    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
   }
 }

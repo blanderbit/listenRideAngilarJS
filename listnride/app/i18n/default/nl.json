@@ -287,8 +287,8 @@
       "meta-title": "Huur een racefiets voor Berlin Triathlon XL 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Huur een racefiets voor Vätternrundan 2019 | listnride",
-      "meta-description": "Met listnride huur je eenvoudig een racefiets online voor de Vätternrundan 2019. Kies de perfecte fiets die bij u past!"
+      "meta-title": "Huur een top racefiets voor Vätternrundan 2020 | listnride",
+      "meta-description": "Met listnride huur je eenvoudig een top racefiets voor de Vätternrundan 2020. Kies de perfecte fiets die bij je past!"
     },
     "lardita-arezzo": {
       "meta-title": "Huur een vintage racefiets voor de Eroica I listnride",
@@ -1550,6 +1550,7 @@
     "any-location": "Alle locaties",
     "bike-variants": "Aantal fietsen",
     "meta-title": "Boekingkalender",
-    "meta-description": "Kalenderweergave voor eenvoudig boekingsmanagement en voorraadbeheer"
+    "meta-description": "Kalenderweergave voor eenvoudig boekingsmanagement en voorraadbeheer",
+    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
   }
 }

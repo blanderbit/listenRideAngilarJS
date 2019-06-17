@@ -289,8 +289,8 @@
       "meta-title": "Noleggia una bici da strada per il Triathlon XL di Berlino 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Noleggia una bici da strada per Vätternrundan 2019 | listnride",
-      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per Vätternrundan 2019 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
+      "meta-title": "Noleggia una bici da strada per Vätternrundan 2020 | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per Vätternrundan 2020 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
     },
     "lardita-arezzo": {
       "meta-title": "Noleggia una bici da corsa vintage per l'Ardita | listnride",
@@ -1556,6 +1556,7 @@
     "any-location": "Any location",
     "bike-variants": "Bike Variants",
     "meta-title": "Booking Calendar",
-    "meta-description": "Excellent calendar view for easier request management"
+    "meta-description": "Excellent calendar view for easier request management",
+    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
   }
 }

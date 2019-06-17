@@ -292,8 +292,8 @@
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Miete ein Rennrad für die Vätternrundan 2019 | listnride",
-      "meta-description": "Mit listnride kannst du dir einfach online ein Rennrad für die Vätternrundan 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
+      "meta-title": "Miete dein Rennrad für die Vätternrundan 2020 | listnride",
+      "meta-description": "Mit listnride kannst du dir einfach hier ein Rennrad für die Vätternrundan 2020 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
     },
     "lardita-arezzo": {
       "meta-title": "Miete ein Vintage Rennrad für die l'Ardita",
@@ -1561,6 +1561,7 @@
     "any-location": "Alle Standorte",
     "bike-variants": "Anzahl Fahrräder",
     "meta-title": "Buchungskalender",
-    "meta-description": "Kalenderansicht für einfache Buchungs- und Bestandsverwaltung"
+    "meta-description": "Kalenderansicht für einfache Buchungs- und Bestandsverwaltung",
+    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
   }
 }
