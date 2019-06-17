@@ -1082,7 +1082,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
-    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
+    "ability-to-pick-half-day": "Je kunt deze fiets een 1/2 dag boeken. <br>\nSelecteer het tijdvak :",
     "status-closed": "Gesloten",
     "status-in-past": "in het verleden",
     "booked": "geboekt",

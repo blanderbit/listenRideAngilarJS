@@ -1091,7 +1091,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht korrekt",
-    "ability-to-pick-half-day": "You can pick this bike for half day. <br> If you will pick the bike in following time range: ",
+    "ability-to-pick-half-day": "Du kannst dieses Fahrrad für einen 1/2-Tag buchen. <br>\nBitte wähle dein Zeitfenster:",
     "status-closed": "geschlossen",
     "status-in-past": "in Vergangenheit",
     "booked": "gebucht",

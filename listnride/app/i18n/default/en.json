@@ -1094,7 +1094,7 @@
   },
   "calendar": {
     "invalid-date": "Dates are invalid",
-    "ability-to-pick-half-day": "You can pick this bike for half day. <br>\nIf you will pick the bike in following time range: ",
+    "ability-to-pick-half-day": "You can book this bike for a half-day. <br>\nPlease select your time slot: ",
     "status-closed": "closed",
     "status-in-past": "in the past",
     "booked": "booked",
