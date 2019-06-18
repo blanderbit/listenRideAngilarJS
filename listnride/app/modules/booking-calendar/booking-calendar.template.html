@@ -1,4 +1,4 @@
-<div class="booking-calendar">
+<div class="booking-calendar" ng-show="bookingCalendar.isAvailable()">
   <menu class="booking-calendar__controls">
     <section class="booking-calendar__filters">
       <!-- Filter by requests -->
@@ -84,4 +84,10 @@
 
   <!-- Scheduler -->
   <div class="scheduler-container"></div>
+</div>
+
+<div ng-show="!bookingCalendar.isAvailable()" class="not-available-message">
+  <h2 class="md-headline">
+    {{ 'booking-calendar.not-available-on-mobile' | translate }}
+  </h2>
 </div>
