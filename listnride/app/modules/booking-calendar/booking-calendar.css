@@ -76,11 +76,6 @@ booking-calendar {
   max-width: 100%;
 }
 
-/* hide current time label (leave the line only) */
-.booking-calendar .scheduler-container .b-sch-current-time > label {
-  display: none;
-}
-
 /* disable time axis hover/focus events */
 .booking-calendar .b-sch-header-timeaxis-cell:hover,
 .booking-calendar .b-sch-header-timeaxis-cell:focus,
@@ -141,6 +136,11 @@ booking-calendar {
   color: #ffffff;
 }
 /* Highlight axis cells END */
+
+/* hide current time label (leave the line only) */
+.booking-calendar .scheduler-container .b-grid-header-container .b-sch-current-time {
+  display: none;
+}
 
 /* Current time line */
 .booking-calendar .b-grid-subgrid .b-sch-line {
