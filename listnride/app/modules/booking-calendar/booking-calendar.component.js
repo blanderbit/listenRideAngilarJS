@@ -11,9 +11,6 @@ import { bikeEventRenderer } from './renderers/bike-event/bike-event-renderer';
 
 import './booking-calendar.css';
 
-const dropTime = date =>
-  new Date(`${DateHelper.format(date, 'YYYY-MM-DD')}T00:00:00Z`);
-
 angular.module('bookingCalendar', []).component('bookingCalendar', {
   templateUrl: 'app/modules/booking-calendar/booking-calendar.template.html',
   controllerAs: 'bookingCalendar',
@@ -75,10 +72,12 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             prev: 'booking-calendar.previous-week',
             next: 'booking-calendar.next-week'
           },
-          getTimeSpan: date => {
-            const start = date;
-            const end = DateHelper.add(date, 6, 'day');
-            return [start, end].map(dropTime);
+          getTimeSpan: start => {
+            const end = moment(start)
+              .add(6, 'days')
+              .endOf('day')
+              .toDate();
+            return [start, end];
           }
         }
       ],
@@ -91,10 +90,12 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             prev: 'booking-calendar.previous-month',
             next: 'booking-calendar.next-month'
           },
-          getTimeSpan: date => {
-            const start = date;
-            const end = DateHelper.add(date, 30, 'day');
-            return [start, end].map(dropTime);
+          getTimeSpan: start => {
+            const end = moment(start)
+              .add(30, 'days')
+              .endOf('day')
+              .toDate();
+            return [start, end];
           }
         }
       ]

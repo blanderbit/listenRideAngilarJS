@@ -455,8 +455,8 @@
     },
     "vatternrundan": {
       "title": "Louer un vélo de route pour le Vätternrundan",
-      "description": "Quoi: <b>Vätternrundan </b>| Où: <b>Motala, Suède </b>| Quand: <b>du 7 au 15 juin 2019 </b>",
-      "text": "Avez-vous besoin d'un vélo de route pour le\n<a href=\"http://vatternrundan.se/en/\" target=\"_blank\">Vätternrundan </a>? Le plus grand événement de vélo récréatif au monde avec des départs et des arrivées à Motala, en Suède. En collaboration avec la communauté listnride, nous fournissons des vélos de route adaptés que vous pouvez facilement louer pour aussi longtemps que vous le souhaitez. Il suffit de choisir l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le récupérer le moment venu. C'est si simple que ça.\n<br><br>\nLes 300 km autour du lac Vättern permettront aux coureurs de s’exprimer à fond. Des participants du monde entier se réunissent dans ce que l’on qualifie le mieux de célébration du sport cycliste! Avec Halvvättern 150 km, Tjejvättern 100 km, Vätternrundan 100 km et MTB-Vättern, cet événement attire chaque année près de 37 000 participants.\n<br><br>\nVous ne pouvez pas participer? Vous pouvez aider un autre coureur en\n <a href=\"/listing-a-bike\" target=\"_blank\">Inscrivant votre vélo </a>."
+      "description": "Quoi: <b>Vätternrundan </b>| Où: <b>Motala, Suède </b>| Quand: <b>du 5 au 12 juin 2020 </b>",
+      "text": "Logistique, logistique, logistique. Sauf si vous vivez déjà dans la péninsule scandinave, transporter votre vélo à Motala sera un véritable défi logistique. Alors pourquoi ne pas simplement louer un vélo?\n<br>\nPour permettre à plus de personnes que jamais de participer à ce bel événement, nous louons des vélos de route de haute qualité de FARA, Simplon et d’autres marques. <br>\n\nÉconomisez du temps, des ennuis et de l'argent en louant simplement un vélo. Ils seront prêts à partir à la ligne de départ à Motala. Tout ce que vous avez besoin d’apporter est votre ensemble de lumières, votre casque, vos pédales et bien sûr: vous et votre ardeur!"
     },
     "toros-de-gravel": {
       "title": "Louer un vélo Gravel pour Toros de Gravel",
@@ -858,7 +858,7 @@
       "feature3-title": "Electric Assist",
       "feature3-description": "Brose motor for smooth riding.\nWith fully integrated components. \nIncluding Gates carbon drive.\nSomething truly special!",
       "test-bike": "Rent and test the Leaos bikes in Munich, Bolzano and Dusseldorf",
-      "find-out-more": "Learn more about LEAOS bikes",
+      "find-out-more": "En savoir plus sur les vélos LEAOS",
       "faq-question-1": "Do I need a licence plate and insurance for my LEAOS bike?",
       "faq-answer-1": "Pursuant to EU law, the 25 km/h version does not require a license plate or insurance. There is also a 45 km/h version, which is classified as a moped and thus requires a licence plate and insurance.",
       "faq-question-2": "How much maintenance do LEAOS bikes require?",
@@ -871,10 +871,10 @@
       "faq-answer-5": "LEAOS bikes are equipped with balloon tyres. In addition, the frames have a particularly sophisticated flexibility, which creates a very pleasant ride.  In addition, front suspension fork and saddle suspension can be installed."
     },
     "ampler": {
-      "meta-title": "E-Bike Test Ride Program",
-      "meta-descr": "Test ride an e-bike today! The ebikes from Ampler are available on listnride. Rent one in Amsterdam, Berlin, Düsseldorf,  Munich or Zurich.",
+      "meta-title": "Programme de test de vélo électrique",
+      "meta-descr": "Testez un vélo électrique aujourd'hui! Les vélos électriques de Ampler sont disponibles sur listnride. Louez-en un à Amsterdam, Berlin, Düsseldorf, Munich ou Zurich.",
       "title": "Ampler. The smart electric bicycle for the urban commuter",
-      "description": "Rent and test Ampler E-Bikes in Berlin, Dusseldorf, Munich, Zurich and Amsterdam",
+      "description": "Louez et testez un vélo Ampler à Amsterdam, Berlin, Düsseldorf, Munich ou Zurich.",
       "subdescription": "Choose between Curt, the dynamic single-speed and Stout or Stellar, the comfortable city-bike",
       "item1-title": "Handmade in Estonia",
       "item1-description": "Made to order<br>Custom solutions<br>Attention to detail<br>Timeless design",
@@ -1232,62 +1232,62 @@
         "answer-16": "If the requested rental period doesn’t fit into your schedule, you could check if someone else can hand over the bike and keys on your behalf. If that’s not possible, simply reject the request. Adding a short message stating why you rejected the request would be appreciated.",
         "question-17": "How do I contact the rider once the bike rental is confirmed?",
         "answer-17": "You can contact the renter via the same in-app chat that you were using for the rental request. Simply go to the “Requests to me” tab in your account menu and click on the bike you rented out. You’ll also find all of the renter’s details, including their mobile phone number, in the rental confirmation e-mail.",
-        "question-18": "How do I get ratings for my listing?",
-        "answer-18": "After the rental is over, the rider will be asked to rate you as a lister as well as your bike. Once the rating is submitted, your bike will show a rating value. To get good ratings, we recommend describing your bike and its condition truthfully."
+        "question-18": "Comment puis-je obtenir des avis pour mes vélos?",
+        "answer-18": "Après la fin de la location, le coureur sera invité à vous évaluer. Une fois la note soumise, votre vélo affichera une valeur de note. Pour obtenir de bonnes notes, nous vous recommandons de décrire votre vélo et son état en toute honnêteté."
       },
       "rider-faq": {
         "title": "FAQ Rider",
-        "question-1": "How do I rent a bike?",
-        "answer-1": "You need to sign up first before you can rent a bike. Simply click on “Sign up” and fill in the required details. Once you’ve signed up, simply log in using your e-mail address and password. After selecting the bike that suits your needs, select your desired start date, pick-up time, end date and drop-off time and then click on “Request ride.” Once your request is accepted by the lister, you need to confirm your rental request by clicking on “Confirm request” and completing the payment process. As soon as the payment is successfully complete, you’ll receive a booking confirmation message as well as an e-mail with the all relevant rental details.",
-        "question-2": "How do I cancel a request?",
-        "answer-2": "In the request status, you can cancel the request at any time before the payment process is completed by clicking on “Cancel request” in the request window.",
-        "question-3": "Can I send more than one request at the same time?",
-        "answer-3": "Yes, you can request multiple bikes at the same time. This makes sense in order to get a faster response from one of the bike owners. Once one of the bike owners has accepted your request, you can confirm your request. As long as you don’t confirm, there will be no booking and therefore no payment transaction. When you do book a ride, please remember to cancel all other requests for the same rental period so the other owners are duly informed.",
-        "question-4": "What do I do if the lister doesn't respond?",
-        "answer-4": "Unfortunately, not every lister is able to reply right away, for example if they don’t have Internet access at the moment. We do everything we can to improve response times. If you are requesting a rental on short notice, we recommend requesting multiple rides at the same time to increase the chances of you finding a ride that suits your style and needs.",
-        "question-5": "How do I pay for the bike rental?",
-        "answer-5": "You can confirm and pay for the request in the app or on our website. Payment is possible by credit card or PayPal. We are working on making new payment methods available– stay tuned.",
-        "question-6": "What do I do in case of a flat tire?",
-        "answer-6": "A flat tire can happen while riding the bike. It’s your responsibility to return the bicycle in the condition in which it was handed over to you. Either find a bike shop and have the tire repaired, or contact the lister and agree on a fair compensation. We believe a fair compensation should be around €15.",
-        "question-7": "How should I lock my bike safely to prevent theft?",
-        "answer-7": "To prevent the bike from getting stolen, we recommend checking with the lister with regard to local customs. In general, we would advise pulling the lock through the front tire as well as the frame, and attaching the bike to a fixed object (lamp post, tree, etc.) so it can’t be moved easily. If you’re keeping the bike overnight, we recommend storing the bike in a closed area or indoors.",
-        "question-8": "What if the bike gets stolen during the rental period?",
-        "answer-8": "It’s very unfortunate if the bike gets stolen. Please notify our helpdesk right away if this happens. We’ll let you know what needs to be done. Remember: The bike is your full responsibility for the duration of the rental period, and you might have to replace the bike.",
-        "question-9": "Do I have insurance coverage when I rent with listnride?",
-        "answer-9": "Listnride doesn’t provide any insurance; we only facilitate the rental transaction. All bike rentals are at the renter’s risk, meaning you will be held responsible for any theft or damage to the ride during the rental period. We recommend that renters check their traveinsurance and/or liability insurance for possible coverage.",
-        "question-10": "What if the bike doesn’t resemble the one I thought I booked?",
-        "answer-10": "Please send us some pictures of the bike and explain how it is different from the one you originally booked, so that we can cancel the rental if your claim appears justified. Alternatively, you can rate the bike accordingly when asked to submit a rating after the rental period is over.",
-        "question-11": "Do I need to bring my own lock and helmet, and can I bring my own pedals/saddle?",
-        "answer-11": "If the lister doesn’t provide a bicycle lock, we recommend bringing your own. Remember: You are responsible for bringing the bike back and making sure it doesn’t get stolen. Listers can provide helmets if they wish, but if you prefer wearing your own or none is provided, you should bring your own helmet. In case you would like to change the pedals or saddle, please get prior approval from the lister. Remember: This is someone else’s bike, not yours."
+        "question-1": "Comment louer un vélo?",
+        "answer-1": "Vous devez d'abord vous inscrire avant de pouvoir louer un vélo. Cliquez simplement sur «Inscription» et suivez les étapes sur l'écran. Une fois inscrit, connectez-vous simplement en utilisant votre adresse e-mail et votre mot de passe. Après avoir sélectionné le vélo qui correspond à vos besoins, sélectionnez la période de la location, puis cliquez sur «Demander un vélo». Une fois votre demande acceptée, le processus de paiement será declanché, et vous serez chargé pour la location. Dès que le paiement est effectué avec succès, vous recevrez un message de confirmation de réservation ainsi qu'un courrier électronique avec tous les détails de la location.",
+        "question-2": "Comment puis-je annuler une demande?",
+        "answer-2": "Dans le panneau de demande, vous pouvez annuler la demande à tout moment avant la fin du processus de paiement en cliquant sur «Annuler la demande».",
+        "question-3": "Puis-je envoyer plus d'une demande à la fois?",
+        "answer-3": "Oui, vous pouvez demander plusieurs vélos en même temps. Cela vous permettra d’obtenir une réponse plus rapide de l’un des propriétaires de vélos. Une fois que l'un des propriétaires de vélo a accepté votre demande, vous pouvez confirmer votre demande. Tant que vous ne confirmez pas, il n'y aura pas de réservation et donc pas de transaction de paiement. Lorsque vous réservez un trajet, n'oubliez pas d'annuler toutes les autres demandes pour la même période de location afin que les autres propriétaires soient dûment informés.",
+        "question-4": "Le propriétaire ne répond pas à ma demande, que puis-je faire?",
+        "answer-4": "Malheureusement, tous les propriétaires de vélos ne sont pas en mesure de répondre immédiatement, par exemple s’ils n’ont pas accès à Internet pour le moment. Nous faisons tout ce qui est en notre pouvoir pour améliorer les temps de réponse. Si vous demandez une location à court terme, nous vous recommandons de demander plusieurs trajets en même temps pour augmenter les chances de trouver un trajet qui corresponde à votre style et à vos besoins.",
+        "question-5": "Comment puis-je payer la location de vélo?",
+        "answer-5": "Le paiement est possible par carte de crédit ou PayPal.",
+        "question-6": "Que dois-je faire en cas de crevaison?",
+        "answer-6": "Une crevaison peut se produire lorsque vous faites du vélo. C’est à vous de rendre le vélo dans l’état où il vous a été remis. Soit trouvez un magasin de vélos et faites réparer le pneu, soit contactez le lister et convenez d’une compensation équitable. Nous pensons qu'une compensation équitable devrait se situer autour de 15 €.",
+        "question-7": "Comment dois-je verrouiller mon vélo en toute sécurité pour éviter le vol?",
+        "answer-7": "Pour éviter que le vélo ne soit volé, nous vous recommandons de vérifier auprès de votre correspondant les coutumes locales. En général, il est conseillé de tirer le verrou à travers la roue avant ainsi que le cadre et de fixer le vélo à un objet fixe (lampadaire, arbre, etc.) afin qu’il ne puisse pas être déplacé facilement. Si vous gardez le vélo pendant la nuit, nous vous recommandons de le ranger dans un endroit fermé ou à l’intérieur.",
+        "question-8": "Que se passe-t-il si le vélo est volé pendant la période de location?",
+        "answer-8": "C’est très regrettable que le vélo soit volé. Veuillez informer immédiatement notre service d'assistance si cela se produit. Nous vous ferons savoir ce qui doit être fait. N'oubliez pas: le vélo est sous votre entière responsabilité pendant toute la durée de la location et vous devrez peut-être le remplacer.",
+        "question-9": "Ai-je une assurance lorsque je loue avec listnride?",
+        "answer-9": "Listnride ne fournit aucune assurance, sauf en Allemagne et en Autriche - nous facilitons seulement la transaction de location. Toutes les locations de vélo sont aux risques du locataire, ce qui signifie que vous serez tenu pour responsable de tout vol ou dommage causé au véhicule pendant la période de location. Nous recommandons aux locataires de vérifier leur assurance de responsabilité et / ou de responsabilité pour une éventuelle couverture.",
+        "question-10": "Et si le vélo ne ressemblait pas à celui que je pensais avoir réservé?",
+        "answer-10": "S'il vous plaît envoyez-nous des photos du vélo et expliquez en quoi il est différent de celui que vous avez réservé à l'origine, afin que nous puissions annuler la location si votre demande semble justifiée. Vous pouvez également évaluer le vélo en conséquence lorsque vous êtes invité à soumettre une évaluation après la fin de la période de location.",
+        "question-11": "Dois-je apporter mon cadenas et mon casque et puis-je apporter mes propres pédales / selles?",
+        "answer-11": "Si le lister ne fournit pas de cadenas, nous vous recommandons d’apporter le vôtre. N'oubliez pas: vous êtes responsable de ramener le vélo et de vous assurer qu'il ne soit pas volé. Le Lister peut fournir des casques si ils le souhaitent, mais si vous préférez porter le vôtre ou si aucun n'est fourni, vous devez apporter votre propre casque. Au cas où vous souhaiteriez changer de pédale ou de selle, veuillez obtenir l’approbation préalable du Lister. Rappelez-vous: ceci est le vélo de quelqu'un d'autre, pas le vôtre."
       }
     },
     "contact-section": {
-      "header": "No answer for your matter?",
+      "header": "Pas de réponse pour votre question?",
       "subheader": "Contactez-nous si vous avez des questions particulières ou si des problèmes surviennent pendant le processus de location sur listnride.",
-      "title": "Can’t find the answer you need in our FAQ section? Then choose one of the following:",
-      "list-1": "I would like to report a suspicious request",
-      "list-2": "I would like to report a suspicious listing",
-      "list-3": "I would like to report a problem about my rider/lister",
-      "list-4": "I have a question regarding payments",
-      "list-5": "I have a general question"
+      "title": "Vous ne trouvez pas la réponse dont vous avez besoin dans notre section FAQ? Choisissez l'une des options suivantes:",
+      "list-1": "J'aimerais signaler une demande suspecte",
+      "list-2": "Je voudrais signaler un vélo suspecte",
+      "list-3": "J'aimerais signaler un problème concernant mon Rider / Lister",
+      "list-4": "J'ai une question concernant les paiements",
+      "list-5": "J'ai une question générale"
     }
   },
   "press": {
-    "title": "Press",
-    "header": "Press section",
-    "subheader": "Information is ready to be downloaded. listnride is ready to talk.",
-    "comm-and-pr": "Communications and PR",
+    "title": "La presse",
+    "header": "Section presse",
+    "subheader": "L'information est prête à être téléchargée.",
+    "comm-and-pr": "Communications et relations publiques",
     "kit": {
-      "title": "Press kit",
+      "title": "Dossier de presse",
       "content": "Pour en savoir plus sur notre start-up et comment tout cela a commencé, accedez à notre dossier de presse, qui peut être",
-      "download": "found here",
+      "download": "trouvé ici",
       "link": "https://goo.gl/forms/JxtwvX16isstcH1U2"
     },
     "contact": {
-      "title": "Press contact",
+      "title": "Contact presse",
       "content": "Avez-vous d'autres questions à propos de listnride, ou avez-vous besoin de plus d'informations sur les systèmes de location de vélos et les concepts de mobilité? Contactez nous directement:"
     },
-    "meta-title": "listnride press",
+    "meta-title": "La presse listnride",
     "meta-description": "Nous aimons les vélos et nous aimons partager. Et nous nous ferons un plaisir de répondre à toutes vos questions."
   },
   "invest": {
@@ -1374,15 +1374,15 @@
       "step-3-content": "Or suggest a better time & date",
       "step-4-title": "Meet Rider",
       "step-4-content": "Hand-over bike, chat, give local tips",
-      "step-5-title": "Get Paid",
-      "step-5-content": "Payment is credited to your account"
+      "step-5-title": "Recevez de l'argent",
+      "step-5-content": "Le paiement est crédité sur votre compte"
     },
     "rider-section": {
-      "header": "How to rent a bike",
-      "step-1-title": "Find a bike",
-      "step-1-content": "Search by type and location",
-      "step-2-title": "Request & Reserve",
-      "step-2-content": "For a specific time and date",
+      "header": "Comment louer un vélo",
+      "step-1-title": "Trouver un vélo",
+      "step-1-content": "Recherche par type et lieu",
+      "step-2-title": "Demander et réserver",
+      "step-2-content": "Pour une heure et date spécifique",
       "step-3-title": "Pick up the bike",
       "step-3-content": "Have a chat & get insider tips",
       "step-4-title": "Off you go",
@@ -1398,22 +1398,22 @@
       "list-3": "The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
       "lister-location": "Home, sweet Home",
       "rider-location": "X marks the Spot",
-      "public-location": "Freedom is yours"
+      "public-location": "La liberté est à vous"
     }
   },
   "jobs": {
-    "title": "Jobs",
-    "header": "Work at List and Ride",
-    "subheader": "We set a new standard on how people book their bike hire and cycling experiences",
+    "title": "Emplois",
+    "header": "Travailler chez List and Ride",
+    "subheader": "Nous établissons une nouvelle norme sur la façon dont les gens réservent leur location de vélo et leurs expériences à vélo",
     "contact": {
-      "title": "Join our team",
+      "title": "Rejoignez notre équipe",
       "content": "We look for talented people who want to join an inspiring and motivated team in a start-up business that wants to set a new standard on how people book bikes and bike experiences. List and Ride is seeking people with a doer mindset who are willing to take on responsibility in a fast-paced environment.\n\nIf you are interested in joining us please search our current vacancy listings below. We would love to hear from you."
     },
-    "view": "View",
-    "meta-title": "Work at listnride",
+    "view": "Voir",
+    "meta-title": "Travailler chez listnride",
     "meta-description": "Join the listnride team in Berlin or Munich to build the global biking community",
-    "apply": "Apply Now",
-    "see-all": "See Other Jobs",
+    "apply": "Postuler Maintenant",
+    "see-all": "Voir d'autres offres d'emplois",
     "open": "Open Positions",
     "go-back": "Back"
   },
@@ -1435,24 +1435,24 @@
     },
     "join-now": "Join us now, it is free",
     "join-now-description": "Interested to learn more and get started?",
-    "contact-us": "Contact Us"
+    "contact-us": "Contactez nous"
   },
   "imprint": {
     "title": "Imprint",
     "header": "Imprint",
-    "managing-director": "Managing Director",
-    "telephone": "Telephone",
-    "germany": "Germany",
+    "managing-director": "Directeur général",
+    "telephone": "Téléphone",
+    "germany": "Allemagne",
     "commercial-register-number": "Commercial Register Number",
     "berlin-court-of-registry": "Berlin Court of Registry (Charlottenburg)",
-    "vat-id": "VAT ID",
+    "vat-id": "TVA ID",
     "meta-title": "listnride | Imprint",
     "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs.",
     "regulation": "Online dispute resolution pursuant to Article 14 (1) of the ODR Regulation (Online Dispute Resolution)",
     "online-dispute": "The EU commission provides an online dispute resolution platform (OS platform). You can find it here:"
   },
   "privacy": {
-    "title": "List and Ride Privacy Policy",
+    "title": "Politique de confidentialité List and Ride",
     "ga-opt-out": "Click here to deactivate Google Analytics tracking",
     "subtitle": "Effective Date: May 24, 2018",
     "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.\n<br>\nHere you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.\n<br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",

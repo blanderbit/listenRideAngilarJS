@@ -292,8 +292,8 @@
       "meta-title": "Louez un vélo de route pour le Triathlon XL de Berlin 2019 | listnride"
     },
     "vatternrundan": {
-      "meta-title": "Louez un vélo de route pour le Vätternrundan 2019 | listnride",
-      "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour le Vätternrundan 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
+      "meta-title": "Louer un vélo de route pour Vätternrundan 2020 | listnride",
+      "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour le Vätternrundan 2020. Choisissez le vélo qui correspond à vos besoins!"
     },
     "lardita-arezzo": {
       "meta-title": "Louez un vélo de route vintage pour l'Ardita | listnride",
@@ -509,19 +509,19 @@
         "meta-description": "Test ride a Whyte bike today! The gravel bikes and mountain bikes from Whyte are available to rent on listnride in Berlin!"
       },
       "felt": {
-        "meta-title": "Rent and test ride Felt Bicycles in Munich | listnride",
-        "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
+        "meta-title": "Louer et tester des vélos Felt à Munich | listnride",
+        "meta-description": "Testez votre vélo Felt aujourd'hui! Les vélos de route de Felt sont disponibles à la location à Munich."
       },
       "swytch": {
         "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
         "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
-        "meta-title": "Rent and test the Leaos E-Bikes in Munich, Dusseldorf and Bolzano",
-        "meta-descr": "The design e-bike - Leaos"
+        "meta-title": "Louez et testez les vélos électriques Leaos à Munich, Berlin et Bolzano",
+        "meta-descr": "Le vélo électrique design - Leaos"
       },
       "brompton": {
-        "meta-title": "Rent a Brompton bike with listnride",
+        "meta-title": "Louez un vélo Brompton avec listnride",
         "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
       },
       "veloheld": {
@@ -542,7 +542,7 @@
         "meta-descr": "VELETAGE Salon für Radkultur - Custom made racing bikes, clothing, wheelsets, bike fittings"
       },
       "bonvelo": {
-        "meta-title": "Rent and Test Bonvelo Singlespeed Bikes in Berlin & Munich",
+        "meta-title": "Louez et testez les vélos Bonvelo Singlespeed à Berlin et à Munich",
         "meta-description": "The singlespeed \"bonvelo BLIZZ\" is available to rent and test ride in Berlin in four frame sizes. Book one on listnride today!"
       },
       "motoparilla": {
@@ -571,79 +571,79 @@
       }
     },
     "about-us": {
-      "meta-title": "listnride - the company",
-      "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
+      "meta-title": "listnride - l'entreprise",
+      "meta-description": "Crée par des passionnés du vélo, pour pouvoir partager cet esprit."
     },
     "contact-and-help": {
-      "meta-title": "listnride is here for you",
-      "meta-description": "Contact us if you have special questions or need help solving a problem"
+      "meta-title": "listnride est là pour vous",
+      "meta-description": "Contactez-nous si vous avez des questions particulières ou si vous avez besoin d'aide pour résoudre un problème."
     },
     "press": {
-      "meta-title": "listnride press",
+      "meta-title": "La presse listnride",
       "meta-description": "Nous aimons la location de vélos. Et nous nous ferons un plaisir de répondre à toutes vos questions."
     },
     "invest": {
       "meta-title": "listnride fait du crowdfunding! Faites-en partie et investissez dans le développement de la première communauté de location de vélos en Europe.",
-      "meta-description": "Visit Seedrs to learn more about investing in listnride."
+      "meta-description": "Visitez Seedrs pour en savoir plus sur l’investissement dans listnride."
     },
     "terms-and-conditions": {
-      "meta-title": "listnride | Website Terms & Conditions",
+      "meta-title": "listnride | Conditions générales du site",
       "meta-description": "Les termes et conditions de listnride s'appliquent à l'utilisation de la plateforme en ligne."
     },
     "trust-and-safety": {
-      "meta-title": "Bicycle rental with insurance"
+      "meta-title": "Location de vélos avec assurance"
     },
     "how-it-works": {
       "meta-title": "La location de vélo rendue facile",
-      "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!"
+      "meta-description": "Utiliser listnride est aussi simple que se réunir pour un café. Essayez par vous-même!"
     },
     "jobs": {
-      "meta-title": "Work for listnride",
-      "meta-description": "Join the listnride team in Berlin or Munich to build the global biking community"
+      "meta-title": "Travailler pour listnride",
+      "meta-description": "Rejoignez l'équipe listnride à Berlin ou à Munich pour construire la plateforme mondiale de location de vélos"
     },
     "shop-landing": {
-      "meta-title": "listnride Shop Plugin - Get your bike rental online",
-      "meta-description": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website."
+      "meta-title": "listnride Shop Plugin - optimisez votre location de vélo en ligne",
+      "meta-description": "listnride propose désormais un plug-in gratuit pour intégrer facilement un moteur de réservation de location de vélo sur votre site web."
     },
     "imprint": {
       "meta-title": "listnride | Imprint",
-      "meta-description": "Rent your perfect bike from the listnride community. Find one that suits your style and needs."
+      "meta-description": "Location de vélo sur listnride. Louez un vélo qui correspond à votre style et à vos besoins."
     },
     "privacy": {
-      "meta-title": "Privacy Policy of listnride",
+      "meta-title": "Politique de confidentialité de listnride",
       "meta-description": "La politique de confidentialité de listnride s'applique à l'utilisation de la plateforme en ligne.",
-      "use-opt-in": "To provide you with the perfect service with listnride, we use cookies in accordance with our <a target=\"_blank\" href=\"/#/privacy\">Cookie Policy</a>.",
-      "use-opt-in-button": "I got that."
+      "use-opt-in": "Pour vous fournir le service parfait avec Listnride, nous utilisons des cookies conformément à notre <a target=\"_blank\" href=\"/#/privacy\">Règles de gestion des cookies </a>.",
+      "use-opt-in-button": "J'ai compris."
     }
   },
   "booking": {
-    "shopping": "Secure Shopping",
+    "shopping": "Payment sécurisé",
     "and-agree-privacy": "and our data protection regulations",
     "pay-secure": "Pay secure with",
     "agree-terms": "With 'Request Bike' you agree to the",
-    "agree-terms-link": "listnride Terms",
+    "agree-terms-link": "Conditions de listnride",
     "footer": {
-      "questions": "Do you have questions about booking a bike?",
-      "call-us": "Need help? Call us:\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a>\nOr\n<a href=\"mailto:contact@listnride.com\">write us</a>.",
-      "email-us": "Or write us an email",
-      "support": "listnride Support"
+      "questions": "Avez-vous des questions sur la réservation d'un vélo?",
+      "call-us": "Besoin d'aide? Appelez nous:\n<a href=\"tel:+49030120870330\">+49 (0) 30 120870330 </a>\nOu\n<a href=\"mailto:contact@listnride.com\">écrivez-nous </a>.",
+      "email-us": "Ou écrivez-nous un email",
+      "support": "Support | listnride"
     },
     "sign-in": {
-      "tab": "Sign in",
-      "new": "New at listnride?",
-      "login": "Log in to listnride",
-      "register-facebook": "Register with Facebook",
-      "login-facebook": "Log in with Facebook",
-      "already-member": "Already a member?",
-      "register": "Register",
-      "not-member": "No member yet?"
+      "tab": "Se connecter",
+      "new": "Nouveau chez listnride?",
+      "login": "Connectez-vous à listnride",
+      "register-facebook": "Enregistrez vous avec Facebook",
+      "login-facebook": "Se connecter avec Facebook",
+      "already-member": "Déjà membre?",
+      "register": "S'enregistrer",
+      "not-member": "Pas encore membre?"
     },
     "details": {
-      "tab": "Personal Details",
-      "sms-confirmation-message": "A SMS with a confirmation code was sent to you just now.",
-      "invoice-address": "Invoice Address",
-      "subtitle": "Please fill in your invoice address in order to request a bike.",
-      "verification": "Verification",
+      "tab": "Détails personnels",
+      "sms-confirmation-message": "Un SMS avec un code de confirmation vient de vous être envoyé.",
+      "invoice-address": "Adresse de facturation",
+      "subtitle": "S'il vous plaît remplir votre adresse de facture afin de demander un vélo.",
+      "verification": "Vérification",
       "send-sms": "We'll send you one time sms to your phone.",
       "check-phone": "Please check your phone.",
       "send-code": "Send Code",
@@ -702,49 +702,49 @@
       "bike-rental": "Your bike rental",
       "choose-duration": "Choose your rental duration",
       "pickup-time": "Pickup time",
-      "return-time": "Return time",
+      "return-time": "Heure de retour",
       "intro-description": "Votre réservation est traitée de manière sécurisée par listnride, la plus grande plateforme de location de vélos d'Europe."
     }
   },
   "toasts": {
-    "update-profile-success": "Your profile has been successfully updated",
+    "update-profile-success": "Votre profil a été mis à jour",
     "profile-verified": "Félicitations, votre profil a été vérifié!",
     "profile-updated": "La description est mise à jour",
     "error-upload-profile-picture": "Erreur lors du chargement de la photo de profil",
     "sms-was-sent": "Un SMS avec un code de confirmation vient de vous être envoyé.",
     "phone-verified": "Votre numéro de téléphone a été vérifié avec succès.",
-    "cluster-deleted": "Bike cluster successfully deleted",
-    "cluster-unmerged": "Bike cluster successfully unmerged",
-    "cluster-merged": "Bikes successfully merged into cluster",
-    "add-payment-success": "Payment method has been saved",
+    "cluster-deleted": "Le groupe de vélos a été supprimé",
+    "cluster-unmerged": "Le groupe de vélos a été dissocié",
+    "cluster-merged": "Les vélos ont fusionné avec succès dans le groupe",
+    "add-payment-success": "Le mode de paiement a été enregistré",
     "_add-payment-success.comment": "Payment method successfully saved on the backend.",
-    "is-invalid": "The current password is invalid.",
-    "bike-edit-successful": "Your changes have been saved",
-    "error": "An error occured. Please make sure your internet connection works and try again.",
-    "add-payout-success": "Your payout method was successfully added.",
-    "add-voucher-success": "Congratulations, the voucher was added to your account.",
-    "add-voucher-error": "Unfortunately, the voucher code is not valid.",
-    "verification-email-sent": "An email with a confirmation link was sent to your email address. This may take a few minutes, if you didn't receive anything also have a look in your spam folder.",
-    "could-not-sign-up": "Could not sign up. It seems the email address provided is already in use.",
-    "successfully-sign-up": "You have successfully signed up. Welcome!",
-    "successfully-logged-in": "Successfully logged in. Welcome back!",
-    "successfully-logged-out": "You're logged out.",
-    "could-not-log-in": "Could not log in. Please make sure you're signed up already and your credentials are valid.",
-    "reset-password-success": "We've just sent you a new password to your email address! It should arrive in the next few minutes.",
-    "opening-hours-success": "Opening hours successfully changed.",
-    "opening-hours-error": "Could not save opening hours.",
-    "uniq-phone": "Phone number already registered in our system.",
-    "pending-requests": "Looks like you have an open request for this bike. Before you can delete the bike you need to accept or reject the request.",
-    "account-deleted": "Your account has been deactivated",
-    "enter-email": "Please enter your email",
-    "duplicate-start": "Duplication process started",
-    "duplicate-finish": "Duplication process finished. Copies created successfully",
-    "bike-deleted": "Bike successfully deleted",
-    "range-success-delete": "Unvailability range successfully deleted",
-    "availability-success-saved": "Availability successfully saved"
+    "is-invalid": "Le mot de passe actuel n'est pas valide.",
+    "bike-edit-successful": "Vos changements ont été enregistrés",
+    "error": "Une erreur s'est produite. Assurez-vous que votre connexion Internet fonctionne et essayez à nouveau.",
+    "add-payout-success": "Votre méthode de paiement a été ajoutée.",
+    "add-voucher-success": "Félicitations, le bon a été ajouté à votre compte.",
+    "add-voucher-error": "Malheureusement, le code de bon n'est pas valide.",
+    "verification-email-sent": "Un email avec un lien de confirmation a été envoyé à votre adresse email. Cela peut prendre quelques minutes. Si vous n'avez rien reçu, veuillez consulter votre dossier spam.",
+    "could-not-sign-up": "Impossible de s'inscrire. Il semble que l'adresse e-mail fournie est déjà utilisée.",
+    "successfully-sign-up": "Bienvenue! Vous êtes enregistré.",
+    "successfully-logged-in": "Connexion réussie. Bienvenue!",
+    "successfully-logged-out": "Vous êtes déconnecté.",
+    "could-not-log-in": "Impossible de se connecter. Assurez-vous que vous êtes déjà inscrit et que vos identifiants sont valides.",
+    "reset-password-success": "Nous venons de vous envoyer un nouveau mot de passe à votre adresse email! Il devrait arriver dans les prochaines minutes.",
+    "opening-hours-success": "Heures d'ouverture modifiées avec succès.",
+    "opening-hours-error": "Impossible de sauvegarder les heures d'ouverture.",
+    "uniq-phone": "Le numéro de téléphone est déjà enregistré dans notre système.",
+    "pending-requests": "Il parait que vous avez une demande ouverte pour ce vélo. Avant de pouvoir supprimer le vélo, vous devez accepter ou refuser la demande.",
+    "account-deleted": "Votre compte a été désactivé",
+    "enter-email": "S'il vous plaît entrer votre e-mail",
+    "duplicate-start": "Le processus de duplication a commencé",
+    "duplicate-finish": "Le processus de duplication est terminé. Copies créées avec succès",
+    "bike-deleted": "Le vélo a été supprimé",
+    "range-success-delete": "Plage d'indisponibilité supprimée avec succès",
+    "availability-success-saved": "Disponibilité sauvegardée"
   },
   "settings": {
-    "settings": "Settings",
+    "settings": "Paramètres",
     "accept_request_reminder": {
       "subscribe": "Accept request reminder"
     },
@@ -764,14 +764,14 @@
       "booking_overview_lister": "Booking overview Info",
       "return_reminder": "Return reminder messages"
     },
-    "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
-    "newsletter-description": "Subscribe and receive our newsletter freshly to your inbox. Our newsletter informs you about newest brands, useful and new features on listnride.com, what's happening in the community, as well as travel destinations with listed bikes and cycling events.\nDid we mention it's crafted with a lot of love and dedication? Because it is.\nYou can unsubscribe at any time, of course.",
+    "newsletter-subscribe": "Oui, merci de m'envoyer le bulletin mensuel listnride",
+    "newsletter-description": "Abonnez-vous et recevez notre newsletter chaque mois. Notre newsletter vous informe sur les nouvelles marques, les fonctionnalités utiles et nouvelles de listnride, sur ce qui se passe dans la communauté, ainsi que sur les vélos et événements cyclistes répertoriés.\n\nVous pouvez vous désinscrire à tout moment, bien sûr.",
     "newsletter": "Newsletter",
     "errors": {
-      "required-company-name": "Please enter your company name.",
-      "minlength-company-name": "Company name should be longer than 2 characters",
-      "required-vat": "Please enter your VAT number.",
-      "minlength-vat": "The VAT number should be longer than 2 characters"
+      "required-company-name": "Veuillez saisir le nom de votre entreprise.",
+      "minlength-company-name": "Le nom de l'entreprise doit comporter plus de 2 caractères.",
+      "required-vat": "S'il vous plaît, entrez votre numéro de TVA.",
+      "minlength-vat": "Le numéro de TVA doit être plus long que 2 caractères"
     },
     "pick-payment-method": "Please pick a payment method",
     "change-payment-method": "Change payment method",
@@ -834,9 +834,9 @@
     "lets-start": "Let's start",
     "lets-start-description": "It only takes 3 minutes",
     "verify-profile": "Verify your Profile",
-    "resend-email": "Resend email",
-    "public": "Public",
-    "private": "Private",
+    "resend-email": "Ré-envoyer l'email",
+    "public": "Publique",
+    "private": "Privé",
     "private-tip": "This information will not be open to the public",
     "public-tip": "This information will be visible on your profile page",
     "1": {
@@ -845,18 +845,18 @@
       "text2": "Nous sommes une communauté soudée. La priorité est donc accordée à la confiance et à la sécurité de vos utilisateurs. Nous vous demandons donc de bien vouloir vérifier votre profil en quelques étapes simples. Plus vous entrez d’informations, plus vos demandes de location seront acceptées."
     },
     "2": {
-      "title": "Upload your profile picture",
-      "description": "Show other user who is the person behind your profile.",
+      "title": "Chargez votre photo de profil",
+      "description": "Montrer l'autre utilisateur qui est la personne derrière votre profil.",
       "business-description": "Having your logo shown on listnride is a great way to attract more request",
-      "business-title": "Upload your Shop Logo"
+      "business-title": "Chargez votre logo de boutique"
     },
     "3": {
       "title": "Tell something about yourself or shop",
-      "label": "Description (min. 50 Characters)"
+      "label": "Description (min. 50 caractères)"
     },
     "4": {
       "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
-      "email-verified": "Email Address successfully verified"
+      "email-verified": "Adresse e-mail vérifiée avec succès"
     },
     "5": {
       "title": "What is your phone number",
@@ -899,25 +899,25 @@
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
     "company-meta-title": "{{company}}",
-    "company-meta-description": "Rent bikes on listnride from {{company}}.",
-    "availability": "Availability",
-    "not-available": "Not available",
-    "verified": "verified"
+    "company-meta-description": "Louez des vélos sur listnride depuis {{company}}.",
+    "availability": "Disponibilité",
+    "not-available": "Indisponible",
+    "verified": "vérifié"
   },
   "requests": {
-    "booking-overview": "Booking Overview",
-    "booking-failed": "Booking failed",
-    "booking": "Booking",
-    "price": "Price",
+    "booking-overview": "Aperçu de la réservation",
+    "booking-failed": "La réservation a échoué",
+    "booking": "Réservation",
+    "price": "Prix",
     "book": "Book",
     "rating": "Rating",
-    "listChat": "Demande de {{user.first_name}}",
+    "listChat": "Demande de réservation de {{user.first_name}}",
     "rideChat": "Request to {{lister.first_name}}",
     "ratings": {
-      "title": "How did you like the overall experience?",
+      "title": "Comment avez-vous aimé l'expérience globale?",
       "description": "Trust and Safety are our paramount concern. By writing a short review, you'll help the whole community.",
-      "1": "Unacceptable",
-      "2": "Bad",
+      "1": "Inacceptable",
+      "2": "Mal",
       "3": "Acceptable",
       "4": "Good",
       "5": "Excellent",
@@ -945,15 +945,15 @@
     "rate": "Rate",
     "confirm": "Confirm",
     "confirm_return": "Confirm Return",
-    "documents-title": "Insurance Certificates",
+    "documents-title": "Certificats d'assurance",
     "documents-description": "Here you can download your insurance certificates. These documents have also been sent to you by email.",
     "insurance-bike": "Bike Insurance Certificate",
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} de {{user.city}}voudrait louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>ID Vélo: {{ride.bicycle_number}}.<br>Taille du cadre: {{ride.frame_size? ride.frame_size: 'non spécifié'}}. <br>Date: {{timespan_short}}.<br><br><br>Acceptez ou refusez la réservation, et discutez les détails supplémentaires en utilisant le chat ci-dessous.",
+    "1": "{{user.first_name}}{{user.last_name}} de {{user.city}} voudrait louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>ID Bike:. {{ride.bicycle_number}}<br> Taille de vélo: {{Ride.frame_size? ride.frame_size:. 'non spécifié'}} <br> Période: {{timespan_short}}<br><br><br>Veuillez bien accepter la réservation, et vous mettre en accord sur n'importe détail en utilisant le chat ci-dessous. Si ce n'est pas possible, veuillez rejeter la demande.",
     "11": "La réservation a été annulée.",
-    "3": "Vous avez accepté la demande. Le vélo est maintenant réservé et vous le louez à partir de {{timespan}}! Les coordonnées sont ci-dessous, nous vous les avons également envoyées par email.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
+    "3": "Vous avez accepté la demande, et le vélo est réservé. Vous le louerez à partir de {{timespan}}! Les coordonnées sont les suivantes, nous vous les avons également envoyées par courrier électronique.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "Vous avez rejeté la demande. Veuillez donner une raison pourquoi vous ne pouvez pas louer le vélo.",
     "9": "Malheureusement, la demande a expiré.",
@@ -1561,6 +1561,7 @@
     "any-location": "Toutes les localités",
     "bike-variants": "Nr. de vélos",
     "meta-title": "Booking Calendar",
-    "meta-description": "Excellent calendar view for easier request management"
+    "meta-description": "Excellent calendar view for easier request management",
+    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
   }
 }
