@@ -40,6 +40,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     };
     bookingCalendar.isLoading = false;
 
+    bookingCalendar.isAvailable = () =>
+      bookingCalendarService.shouldEnableBookingCalendar();
+
     bookingCalendar.$onInit = () => {
       if (accessControl.requireLogin()) {
         return;

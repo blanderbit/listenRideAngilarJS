@@ -6,6 +6,7 @@ angular
   .factory('bookingCalendarService', function(
     $localStorage,
     $translate,
+    $mdMedia,
     bikeOptions,
     api,
     MESSAGE_STATUSES
@@ -21,6 +22,9 @@ angular
     ];
 
     return {
+      shouldEnableBookingCalendar() {
+        return $mdMedia('min-width: 960px');
+      },
       getTranslationsForScheduler() {
         return $translate([
           // bikes column
