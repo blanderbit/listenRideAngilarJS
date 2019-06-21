@@ -98,21 +98,22 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       },
 
       checkHalfDayEnabled: function (startDate, endDate, timeslots) {
-        let prev_time = null;
-        let used_part_day_slots = 0;
-        let dateTimeRange = _.range(startDate.getHours(), endDate.getHours());
+        let dateTimeRange = _.range(startDate.getHours(), endDate.getHours() + 1);
+        let halfDay = false;
 
         _.forEach(timeslots, (timeslot) => {
-          let timeSlotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour);
-          let in_slot = !!_.intersection(timeSlotRange, dateTimeRange).length;
-          let extreme_time = (prev_time == timeslot.start_time.hour && !!_.find([startDate.getHours(), endDate.getHours()], prev_time));
+          if (!halfDay){
+            let timeSlotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour + 1);
+            let intersection  = _.intersection(timeSlotRange, dateTimeRange);
+            let extremeTime   = intersection.toString() == timeslot.end_time.hour;
 
-          if (in_slot && !extreme_time) used_part_day_slots += 1
-
-          prev_time = timeslot.end_time.hour;
+            if (intersection.length > 0 && !extremeTime) {
+              halfDay = intersection.toString() == dateTimeRange.toString();
+            }
+          }
         });
 
-        return used_part_day_slots < timeslots.length;
+        return halfDay;
       },
 
       // proposes custom prices through daily price acc. to a scheme of us
