@@ -763,7 +763,7 @@
       "receive-minimal-description": "You will receive only a notification for a new booking request, cancellations and privates messages",
       "accept_request_reminder": "Accept request reminder",
       "confirm_return": "Confirm return messages",
-      "request_created": "Booking related SMS",
+      "request_created": "Booking related reminders (SMS)",
       "booking_overview_lister": "Booking overview Info",
       "return_reminder": "Return reminder messages"
     },
