@@ -306,7 +306,7 @@ angular.module('booking', [])
         });
         booking.subtotal = prices.subtotal;
         booking.subtotalDiscounted = prices.subtotalDiscounted;
-        booking.lnrFee = prices.serviceFee;
+        booking.lnrFee = prices.serviceFee + prices.basicCoverage;
         booking.premiumCoverage = prices.premiumCoverage;
         booking.total = Math.max(prices.total - booking.user.balance, 0);
       }

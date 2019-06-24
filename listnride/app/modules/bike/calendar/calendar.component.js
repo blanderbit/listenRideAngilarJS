@@ -862,7 +862,7 @@ angular.module('bike').component('calendar', {
         calendar.subtotal = prices.subtotal;
         calendar.discount = prices.subtotal - prices.subtotalDiscounted;
         calendar.discountRelative = calendar.discount / calendar.durationDays;
-        calendar.lnrFee = prices.serviceFee;
+        calendar.lnrFee = prices.serviceFee + prices.basicCoverage;
         calendar.total = prices.total;
 
         if (calendar.cluster) {
