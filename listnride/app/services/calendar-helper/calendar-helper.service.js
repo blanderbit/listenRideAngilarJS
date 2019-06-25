@@ -1,7 +1,5 @@
-'use strict';
-
 angular.module('listnride')
-  .factory('calendarHelper', ['$translate', function ($translate) {
+  .factory('calendarHelper', function ($translate) {
 
     var getWeekDay = function(date) {
       var dayOfWeek = date.getDay() - 1;
@@ -132,4 +130,4 @@ angular.module('listnride')
       isTimeInTimeslots,
       countTimeslots
     };
-  }]);
+  });

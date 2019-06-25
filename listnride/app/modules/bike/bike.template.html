@@ -52,26 +52,26 @@
       >
         <div ng-if="bike.hasTimeSlots" class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
-            <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
+            <span class="md-headline">{{ bike.prices['1/2'] | number : 0 }}€</span>
           </div>
           <span class="md-caption">{{ 'list.half-day-price' | translate }}</span>
         </div>
         <div class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
-            <span class="md-headline">{{ bike.data.prices[0].price | number : 0 }}€</span>
+            <span class="md-headline">{{ bike.prices['1'] | number : 0 }}€</span>
           </div>
           <span class="md-caption">{{ 'bike.per-day' | translate }}</span>
         </div>
         <div ng-if="!bike.hasTimeSlots" class="bike__prices-item" flex="20" layout="column" layout-align="center center">
           <div layout="row" layout-align="center center">
-            <span class="md-headline">{{ bike.data.prices[1].price | number : 0 }}€</span>
+            <span class="md-headline">{{ bike.prices['2'] | number : 0 }}€</span>
             <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
           </div>
           <span class="md-caption">{{ 'bike.from-2-days' | translate }}</span>
         </div>
         <div flex="20" layout="column" layout-align="center center" class="lnr-dark-green-text bike__prices-item">
           <div layout="row" layout-align="center center">
-            <span class="md-headline">{{ bike.data.prices[6].price | number : 0 }}€</span>
+            <span class="md-headline">{{ bike.prices['7'] | number : 0 }}€</span>
             <span class="md-caption per-day" layout layout-align="end end">&nbsp;{{ 'shared.pd' | translate }}</span>
           </div>
           <span class="md-caption">{{ 'bike.from-week' | translate }}</span>
