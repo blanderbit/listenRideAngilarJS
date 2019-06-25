@@ -24,15 +24,15 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         }).price;
       },
       getAllPrices: function(originalPrices) {
-        let PRICES = Object.fromEntries(this.PRICES);
+        let pricesScheme = Object.fromEntries(this.PRICES);
         let transformedPrices = {};
 
-        PRICES = _.invertBy(PRICES, function (value) {
+        pricesScheme = _.invertBy(pricesScheme, function (value) {
           return value.start_at;
         });
 
         _.forEach(originalPrices, (priceObject) => {
-          transformedPrices[PRICES[priceObject.start_at]] = priceObject.price;
+          transformedPrices[pricesScheme[priceObject.start_at]] = priceObject.price;
         });
 
         return transformedPrices;
