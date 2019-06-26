@@ -23,6 +23,20 @@ angular.module('listnride').factory('price', ['$translate', 'date',
           'start_at': this.PRICES.get(day).start_at
         }).price;
       },
+      getAllPrices: function(originalPrices) {
+        let pricesScheme = Object.fromEntries(this.PRICES);
+        let transformedPrices = {};
+
+        pricesScheme = _.invertBy(pricesScheme, function (value) {
+          return value.start_at;
+        });
+
+        _.forEach(originalPrices, (priceObject) => {
+          transformedPrices[pricesScheme[priceObject.start_at]] = priceObject.price;
+        });
+
+        return transformedPrices;
+      },
       // Calculates the prices for the calendar and booking overview
       // Note that this is just a preview-calculation, the actual data
       // gets calculated in the backend.

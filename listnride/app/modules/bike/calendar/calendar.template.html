@@ -20,13 +20,13 @@
         value="{{i}}"
       >
       <!-- TODO: make date dynamic -->
-        {{i}} {{ 'shared.May' | translate }} {{calendar.eventYear}}
+        {{i}} {{ 'shared.Jul' | translate }} {{calendar.eventYear}}
       </md-option>
     </md-select>
   </md-input-container>
 
   <span ng-if="calendar.event.days.length == 1">
-    <b>{{ 'shared.rental-date' | translate }}:</b> {{calendar.event.days[0]}} {{ 'shared.May' | translate }} {{calendar.eventYear}}
+    <b>{{ 'shared.rental-date' | translate }}:</b> {{calendar.event.days[0]}} {{ 'shared.Jul' | translate }}{{calendar.eventYear}}
   </span>
 
   <!-- DATE RANGES SLOTS -->

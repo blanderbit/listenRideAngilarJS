@@ -62,11 +62,13 @@ angular.module('bike',[]).component('bike', {
           bike.owner.picture = setPicture();
           bike.mapOptions.lat = bike.data.lat_rnd;
           bike.mapOptions.lng = bike.data.lng_rnd;
+
           $translate($filter('category')(bike.data.category)).then(
             function (translation) {
               bike.category = translation;
             }
           );
+          bike.prices = price.getAllPrices(bike.data.prices);
 
           bike.hasTimeSlots = userHelper.hasTimeSlots(bike.data.user);
 
