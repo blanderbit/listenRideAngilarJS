@@ -593,6 +593,7 @@ var lnrHelper = {
 
     if (rides.length) {
       var basicInfo = lnrHelper.getBikesBasicInfo(userId);
+      lnrHelper.removeErrorInHtml();
       rides.forEach(function (ride) {
 
         // properties for grid creation
@@ -728,7 +729,7 @@ var lnrHelper = {
         }
       }
     } else {
-      var errorNoBikesText = 'No bikes available';
+      var errorNoBikesText = lnrConstants.translations[userLang]['no-bikes-found'];
       lnrHelper.renderErrorInHTML(errorNoBikesText);
     }
   },
@@ -744,6 +745,11 @@ var lnrHelper = {
     newEl.setAttribute("style", "flex:1; text-align:center; padding-top: 20px;");
     newEl.classList.add('lnr-error-message', 'lnr-margin-left');
     lnrSection.insertBefore(newEl, lnrSection.querySelector('.lnr-brand'));
+  },
+  removeErrorInHtml: function (){
+    var lnrSection = document.getElementById('listnride');
+    var errorEl = lnrSection.querySelector('.lnr-error-message');
+    if (errorEl) errorEl.parentNode.removeChild(errorEl);
   },
   /**
    * renders the location and size selectors
@@ -895,7 +901,7 @@ var lnrHelper = {
       // START DATE
       '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent lnr-date-picker">',
         '<div style="margin-left:8px; margin-right:8px;">',
-        '<label>Start Date</label>',
+        '<label>' + lnrConstants.translations[lang]['start_date'] + '</label>',
         '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
         'min="' + lnrHelper.getMinDate() + '"',
         'id="' + id + '-lnr-start-date-button' + '"',
@@ -906,7 +912,7 @@ var lnrHelper = {
       // END DATE
       '<div class="mdl-cell mdl-cell--2-col-desktop mdl-cell--2-col-tablet mdl-cell--2-col-phone lnr-dropdown-parent lnr-date-picker">',
         '<div style="margin-left:8px; margin-right:8px;">',
-        '<label>End Date</label>',
+        '<label>' + lnrConstants.translations[lang]['end_date'] + '</label>',
         '<input style="color:#333; padding: 5px;" type="date" onkeydown="return false"',
         'min="' + lnrHelper.getMinDate() + '"',
         'id="' + id + '-lnr-end-date-button' + '"',
