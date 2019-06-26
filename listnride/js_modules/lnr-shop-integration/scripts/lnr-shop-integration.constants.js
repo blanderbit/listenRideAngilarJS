@@ -61,22 +61,29 @@ var lnrConstants = {
       "en": "All locations",
       "de": "Alle Standorte",
       "nl": "Alle locaties",
+      "it": "Tutte le localit&agrave;",
+      "es": "Todas las localizaciones",
       "selected": {}
     },
     allSizes: {
       "en": "All sizes",
       "de": "Alle Gr&ouml;&szlig;en",
       "nl": "Alle maten",
+      "it": "Tutte le taglie",
+      "es": "Todos los tama&ntilde;os",
       "selected": {}
     },
     unisize: {
       "en": "Unisize",
       "de": "Unisize",
       "nl": "Unisize",
+      "it": "Unisize",
+      "es": "Talla &uacute;nica",
       "selected": {}
     }
   },
   translations: {
+    // Don't forget to convert special characters to unicode here: https://www.compart.com/en/unicode
     "en": {
       "statuses": {
         "variants_available": "Variants available"
@@ -88,59 +95,74 @@ var lnrConstants = {
       "from": "from",
       "per-day": "per day",
       "half-day": "1/2 day",
-      "week": "week"
+      "week": "week",
+      "start_date": "Start Date",
+      "end_date": "End Date",
+      "no-bikes-found": "No bikes found"
     },
     "de": {
       "statuses": {
-        "variants_available": "Varianten verf&uuml;gbar"
+        "variants_available": "Modelle Verf&uuml;gbar"
       },
       "all-brands": "Alle Marken",
-      "all-categories": "All categories",
+      "all-categories": "All Kategorien",
       "all-locations": "Alle Standorte",
       "all-sizes": "Alle Gr&ouml;&szlig;en",
       "from": "ab",
-      "per-day": "per day",
-      "half-day": "1/2 day",
-      "week": "week"
+      "per-day": "Pro Tag",
+      "half-day": "1/2 Tag",
+      "week": "Woche",
+      "start_date": "Startdatum",
+      "end_date": "Enddatum",
+      "no-bikes-found": "Keine Fahrr&auml;der gefunden"
     },
     "nl": {
       "statuses": {
         "variants_available": "Varianten beschikbaar"
       },
       "all-brands": "Alle merken",
-      "all-categories": "All categories",
+      "all-categories": "Alle categorie&euml;n",
       "all-locations": "Alle locaties",
       "all-sizes": "Alle maten",
       "from": "van",
-      "per-day": "per day",
-      "half-day": "1/2 day",
-      "week": "week"
+      "per-day": "per dag",
+      "half-day": "1/2 dag",
+      "week": "week",
+      "start_date": "Start datum",
+      "end_date": "Eind datum",
+      "no-bikes-found": "Helaas! er worden nog geen fietsen op deze locatie aangeboden."
     },
     "it": {
       "statuses": {
         "variants_available": "Varianti disponibili"
       },
       "all-brands": "Tutte le marche",
-      "all-categories": "All categories",
-      "all-locations": "All locations",
-      "all-sizes": "All sizes",
-      "from": "from",
-      "per-day": "per day",
-      "half-day": "1/2 day",
-      "week": "week"
+      "all-categories": "Tutte le categorie",
+      "all-locations": "Tutte le localit&agrave;",
+      "all-sizes": "Tutte le taglie",
+      "from": "Da",
+      "per-day": "al giorno",
+      "half-day": "Mezza giornata",
+      "week": "settimana",
+      "start_date": "Data d\'inizio",
+      "end_date": "Data di fine",
+      "no-bikes-found": "Non sono state trovate biciclette"
     },
     "es": {
       "statuses": {
         "variants_available": "Variantes disponibles"
       },
       "all-brands": "Todas las marcas",
-      "all-categories": "All categories",
-      "all-locations": "All locations",
-      "all-sizes": "All sizes",
-      "from": "from",
-      "per-day": "per day",
-      "half-day": "1/2 day",
-      "week": "week"
+      "all-categories": "Todas las categorias",
+      "all-locations": "Todas las localizaciones",
+      "all-sizes": "Todos los tama&ntilde;os",
+      "from": "desde",
+      "per-day": "por d&iacute;a",
+      "half-day": "Media jornada",
+      "week": "semana",
+      "start_date": "Fecha de inicio",
+      "end_date": "Fecha de finalizaci&oacute;n",
+      "no-bikes-found": "No se encontraron bicicletas"
     },
   },
   // map of the categories for en, de and nl languages
@@ -214,9 +236,9 @@ var lnrConstants = {
       43: "Gravel-Rad",
       // TRANSPORT
       50: "Lastenrad",
-      51: "Radanhänger",
+      51: "Radanh&auml;nger",
       52: "Kinderfahrradsitz",
-      53: "Fahrradträger Auto",
+      53: "Fahrradtr&auml;ger Auto",
       54: "Fahrrad-Transporttasche",
       55: "Event Bike",
       // KIDS
