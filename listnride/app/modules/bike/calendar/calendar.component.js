@@ -352,7 +352,7 @@ angular.module('bike').component('calendar', {
         calendar.event.returnSlotId;
         calendar.event.days = _.range(calendar.event.startDay, calendar.event.endDay + 1); // last number not included
         // every Tuesday event
-        calendar.event.days = [21, 25, 28];
+        calendar.event.days = [2, 9, 16, 23, 30];
         // if event duration is only one day we should pick it automatically
         if (calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
 
@@ -361,7 +361,7 @@ angular.module('bike').component('calendar', {
 
         var slotDuration = 3; // hours range
         calendar.eventYear = 2019;
-        var eventMonth = 4; // Months start at 0
+        var eventMonth = 6; // Months start at 0
         var eventStartTime = 18;
         var eventEndTime = 21;
 
