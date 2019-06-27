@@ -322,9 +322,9 @@
       "docs": {
         "tabname": "Tutti i documenti"
       },
-      "description-lister": "Come Noleggiatore su listnride vuoi essere sicuro che tu e la tua bicicletta siete protetti da tutti i rischi. Ecco perché ogni noleggio in Germania e Austria, tramite listnride, viene automaticamente assicurato con effetto immediato. Opzionalmente i ciclisti che richiedono la bicicletta possono prenotare il pacchetto premium per ottenere servizi e copertura aggiuntivi. Questo servizio è gratuito per te come Noleggiatore.\n<p>\nSe hai ulteriori domande, contattaci 24 ore su 24 tramite <a3>E-Mail </a3>.",
-      "description-rider": "Offriamo due pacchetti assicurativi per ogni bici noleggiata in Germania e in Austria tramite listnride: l' <b1>Assicurazione di base </b1>è incluso nel noleggio, l' <b2>assicurazione Premium </b2>è opzionale e estende la copertura assicurativa con ulteriori vantaggi. <br3>Tu e la tua bici siete sempre protetti in modo ottimale e non vi è nulla di più nel vostro modo di guidare!",
-      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike\"</a0><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike Assist\"</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
+      "description-lister": "Come Noleggiatore su listnride vuoi essere sicuro che tu e la tua bicicletta siete protetti da tutti i rischi. Ecco perché ogni noleggio in Germania e Austria, tramite listnride, viene automaticamente assicurato con effetto immediato. Opzionalmente i ciclisti che richiedono la bicicletta possono prenotare il pacchetto premium per ottenere servizi e copertura aggiuntivi. Questo servizio è gratuito per te come Noleggiatore.\n<p>\nSe hai ulteriori domande, contattaci 24 ore su 24 tramite <a>E-Mail </a>.",
+      "description-rider": "Offriamo due pacchetti assicurativi per ogni bici noleggiata in Germania e in Austria tramite listnride: l' <b>Assicurazione di base </b>è incluso nel noleggio, l' <b>assicurazione Premium </b>è opzionale e estende la copertura assicurativa con ulteriori vantaggi. <br>Tu e la tua bici siete sempre protetti in modo ottimale e non vi è nulla di più nel vostro modo di guidare!",
+      "all-docs": "<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bike_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike\"</a><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/avb_bikeassist_hepster.pdf\" target=\"_blank\">Termini e condizioni assicurazione \"Bike Assist\"</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Basis.pdf\" target=\"_blank\">Basic Insurance - Coverage description</a>\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/IPIB_Bike_ListnRide_Superior.pdf\" target=\"_blank\">Premium Insurance - Coverage description</a>"
     }
   },
   "business-community": {
@@ -843,7 +843,7 @@
       },
       "meta-title": "Miete und Teste die veloheld Räder in München und Dresden",
       "find-out-more": {
-        "description": "Order your new <a0>veloheld bike online</a0> and get your listnride rental reimbursed."
+        "description": "Order your new <a>veloheld bike online</a> and get your listnride rental reimbursed."
       }
     },
     "leaos": {
