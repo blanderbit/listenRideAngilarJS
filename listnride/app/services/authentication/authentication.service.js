@@ -310,16 +310,18 @@ angular.
                 $analytics.eventTrack('click', {category: 'Signup', label: 'Email Request Flow'});
               } else {
                 $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
-                if (signupDialog.business) {
-                  signupDialog.createBusiness();
-                } else {
-                  if (!signupDialog.requesting) {
-                    $state.go('home');
-                  }
-                  signupDialog.hide();
-                  // verification.openDialog(false, invited);
-                }
               }
+
+              if (signupDialog.business) {
+                signupDialog.createBusiness();
+              } else {
+                if (!signupDialog.requesting) {
+                  $state.go('home');
+                }
+                signupDialog.hide();
+                // verification.openDialog(false, invited);
+              }
+
             });
           }, function(error) {
             notification.show(error, 'error');
@@ -337,6 +339,7 @@ angular.
           api.post('/businesses', business).then(function(success) {
             $state.go('home');
             verification.openDialog(false, invited, false, signupDialog.showProfile);
+            $localStorage.isBusiness = true;
           }, function(error) {
             signupDialog.businessError = true;
             signupDialog.signingUp = false;
@@ -430,6 +433,10 @@ angular.
         return !!$localStorage.accessToken;
       };
 
+      let isBusiness = function() {
+        return !!$localStorage.isBusiness;
+      }
+
       var getNewTokenByRefresh = function () {
         // refresh token here
       };
@@ -478,14 +485,13 @@ angular.
         return;
       };
 
-      // Further all functions to be exposed in the service
       return {
-        showSignupDialog: showSignupDialog,
-        showLoginDialog: showLoginDialog,
-        loggedIn: loggedIn,
-        logout: logout,
-        setCredentials: setCredentials,
-        checkTokenExpiration: checkTokenExpiration,
+        showSignupDialog,
+        showLoginDialog,
+        loggedIn,
+        logout,
+        setCredentials,
+        checkTokenExpiration,
         profilePicture: function() {
           return $localStorage.profilePicture
         },
@@ -498,10 +504,11 @@ angular.
         unreadMessages: function() {
           return $localStorage.unreadMessages
         },
-        connectFb: connectFb,
-        signupGlobal: signupGlobal,
-        loginGlobal: loginGlobal,
-        forgetGlobal: forgetGlobal
+        connectFb,
+        signupGlobal,
+        loginGlobal,
+        forgetGlobal,
+        isBusiness
       };
     }
   ]);
