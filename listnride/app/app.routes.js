@@ -193,6 +193,11 @@
             value: "",
             squash: true
           }
+        },
+        resolve: {
+          data: ['ngMeta', function (ngMeta) {
+            ngMeta.setTag("noindex", true);
+          }]
         }
       });
 
