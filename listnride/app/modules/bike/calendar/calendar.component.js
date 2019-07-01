@@ -53,6 +53,7 @@ angular.module('bike').component('calendar', {
     calendar.insuranceEnabled = false;
     calendar.hasTimeSlots = false;
     calendar.isHalfDayBook = false;
+    calendar.HOURS_QUANTITY = 17;
 
     //methods
     calendar.validClusterSize = validClusterSize;
@@ -208,8 +209,7 @@ angular.module('bike').component('calendar', {
     };
 
     calendar.isFormInvalid = function() {
-
-      return !calendar.bikeId || !calendar.isDateValid();
+      return !calendar.bikeId || !calendar.isDateValid()  || !isTodayTimeValid(calendar.startDate);
     };
 
     function validClusterSize() {
@@ -218,6 +218,18 @@ angular.module('bike').component('calendar', {
         return !!calendar.cluster.rides[calendar.pickedBikeSize];
       } else {
         return false;
+      }
+    }
+
+    function isTodayTimeValid(startDate) { //check if today time is enabled
+      if (moment(calendar.startDate).isSame(moment(), 'day')) {
+        for (var i = 0; i < calendar.HOURS_QUANTITY; i++) {
+          var timeValid = calendarHelper.isTimeAvailable(i, calendar.bikeOwner.opening_hours, startDate);
+          if (timeValid) return true;
+        }
+        return false;
+      } else {
+        return true;
       }
     }
 

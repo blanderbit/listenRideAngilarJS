@@ -19,7 +19,7 @@ angular.module('listnride')
       return workingHours
     };
 
-    var isTimeAvailable = function($index, openingHours, date) {
+    var isTimeAvailable = function(timeIndex, openingHours, date) {
       if (date === undefined) return true;
 
       var isAvailable = true;
@@ -28,14 +28,14 @@ angular.module('listnride')
       if (!openingHours && !isDateToday) return isAvailable;
 
       if (isDateToday) {
-        isAvailable = $index + 6 >= moment().hour() + 1;
+        isAvailable = timeIndex + 6 >= moment().hour() + 1;
       }
 
       if (openingHours && checkIsOpeningHoursEnabled(openingHours)) {
         var weekDay = openingHours.hours[getWeekDay(date)];
         if (!_.isEmpty(weekDay)) {
           var workingHours = openHours(weekDay);
-          return workingHours.includes($index + 6) && isAvailable;
+          return workingHours.includes(timeIndex + 6) && isAvailable;
         }
       }
 
