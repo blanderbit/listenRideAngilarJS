@@ -2681,6 +2681,10 @@ button.md-primary.md-cancel-button {
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
 
+.lnr-msr #hero-shot {
+  background-position: 50% 75%;
+}
+
 .lnr-costadelsol #hero-shot {
   background-position: 50% 0;
 }
