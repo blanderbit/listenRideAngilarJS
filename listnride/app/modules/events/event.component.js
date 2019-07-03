@@ -35,6 +35,8 @@ angular.module('event', []).component('event', {
           'radfahren-neu-entdecken-eschborn': '/rides?family=37&zero=true',
           'radfahren-neu-entdecken-kassel': '/rides?family=38&zero=true',
           'radfahren-neu-entdecken-hofheim': '/rides?family=39&zero=true',
+          'msr': getRequestUrl('30', 'Neubrandenburg, Deutschland', '', '')
+
 
           // CUSTOM DESIGN AND OLD PAGES
 
