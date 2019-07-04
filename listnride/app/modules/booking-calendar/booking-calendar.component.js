@@ -447,9 +447,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             });
 
             // decrement bikes count
-            clusterEvent.bikesCount -= 1;
+            clusterEvent.requestsCount -= 1;
 
-            if (clusterEvent.bikesCount === 0) {
+            if (clusterEvent.requestsCount === 0) {
               clusterEvent.remove();
             }
           }

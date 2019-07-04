@@ -38,8 +38,8 @@ angular
           'booking-calendar.event.accepted',
           'booking-calendar.event.request-waiting',
           'booking-calendar.event.not-available',
-          'search.bike',
-          'search.bikes',
+          'shared.request',
+          'shared.requests',
           // event popups
           'booking-calendar.event.waiting',
           'booking-calendar.event.not-available-header',
@@ -202,13 +202,13 @@ angular
                 resourceId: id,
                 startDate: request.startDate,
                 endDate: request.endDate,
-                bikesCount: 1,
+                requestsCount: 1,
                 isCluster: true
               })
             );
             request.clusterEventId = clusterEventId;
           } else {
-            last.bikesCount += 1;
+            last.requestsCount += 1;
             last.endDate =
               request.endDate > last.endDate ? request.endDate : last.endDate;
             request.clusterEventId = clusterEventId;
@@ -278,7 +278,7 @@ angular
           endDate: null,
           rawStartDate: null,
           rawEndDate: null,
-          bikesCount: null,
+          requestsCount: null,
           isCluster: false,
           isPending: false,
           isAccepted: false,

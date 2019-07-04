@@ -2,15 +2,15 @@ import './bike-event.css';
 
 function statusRenderer({ eventRecord, resourceRecord, translations }) {
   const { isCluster } = resourceRecord;
-  const { isPending, isAccepted, isNotAvailable, bikesCount } = eventRecord;
+  const { isPending, isAccepted, isNotAvailable, requestsCount } = eventRecord;
   if (isCluster) {
     const bikesLabel =
-      bikesCount === 1
+      requestsCount === 1
         ? translations['shared.request']
         : translations['shared.requests'];
     return `
-      <span class="event-status ellipsis bikes-count lowercase">
-        ${bikesCount} ${bikesLabel}
+      <span class="event-status ellipsis bikes-count">
+        ${requestsCount} ${bikesLabel}
       </span>
     `;
   }
