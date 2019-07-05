@@ -66,6 +66,8 @@ angular
     };
 
     function parseBikes(bikes) {
+      bikes = bikes.filter((bike) => bike.available);
+      console.log(bikes)
       return bikes.reduce(
         (acc, bike) => {
           // clusters don't have their own unique ids
