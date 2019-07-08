@@ -223,7 +223,6 @@ angular.module('bike').component('calendar', {
     }
 
     function isTimeValid() {
-      debugger
       return !!(calendar.startTime && calendar.endTime);
     }
 
