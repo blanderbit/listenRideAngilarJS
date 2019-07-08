@@ -232,8 +232,8 @@ angular.module('booking', [])
 
       function setInitHours() {
         var openTime = calendarHelper.getInitHours(booking.openingHours, booking.startDate, booking.endDate);
-        booking.startTime = openTime.startTime;
-        booking.endTime = openTime.endTime;
+        booking.startTime = 0;
+        booking.endTime = 0;
         booking.startDate = openTime.startDate;
         booking.endDate = openTime.endDate;
       }
@@ -255,6 +255,10 @@ angular.module('booking', [])
           booking.startDate.getTime() < booking.endDate.getTime();
       }
 
+       function isTimeValid() {
+         return !!(booking.startTime && booking.endTime);
+       }
+
       // =================================
       // START BOOKING CALENDAR TAB <<<<<<
       // =================================
@@ -273,7 +277,7 @@ angular.module('booking', [])
 
       booking.nextDisabled = function() {
         switch (getTabNameByOrder(booking.selectedIndex)) {
-          case 'calendar': return !validDates() || !validClusterSize();
+          case 'calendar': return !validDates() || !isTimeValid() || !validClusterSize();
           case 'sign-in': return false;
           case 'details': return !checkValidDetails();
           case 'payment': return !checkValidPayment();
