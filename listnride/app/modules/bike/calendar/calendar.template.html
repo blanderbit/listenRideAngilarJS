@@ -128,7 +128,7 @@
     >
       <md-option
         ng-disabled="!calendar.calendarHelper.isTimeAvailable($index, calendar.bikeOwner.opening_hours, calendar.startDate) || !calendar.isTimeslotAvailable($index+6)"
-        ng-repeat="i in [].constructor(17) track by $index"
+        ng-repeat="i in [].constructor(calendar.HOURS_QUANTITY) track by $index"
         value="{{$index + 6}}"
       >
         {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.startDate) }}
@@ -146,7 +146,7 @@
     >
       <md-option
         ng-disabled="!calendar.calendarHelper.isTimeAvailable($index, calendar.bikeOwner.opening_hours, calendar.endDate) || !calendar.isTimeslotAvailable($index+6)"
-        ng-repeat="i in [].constructor(17) track by $index"
+        ng-repeat="i in [].constructor(calendar.HOURS_QUANTITY) track by $index"
         value="{{$index + 6}}"
       >
         {{ ($index + 6) + ":00" + calendar.availabilityMessage($index, calendar.endDate)}}

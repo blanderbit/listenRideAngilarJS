@@ -53,6 +53,7 @@ angular.module('bike').component('calendar', {
     calendar.insuranceEnabled = false;
     calendar.hasTimeSlots = false;
     calendar.isHalfDayBook = false;
+    calendar.HOURS_QUANTITY = 17;
 
     //methods
     calendar.validClusterSize = validClusterSize;
@@ -91,9 +92,10 @@ angular.module('bike').component('calendar', {
     }
 
     function setDateTime(startDate, endDate) {
+      calendar.startTime = 0;
+      calendar.endTime = 0;
       startDate.setHours(calendar.startTime, 0, 0, 0);
       endDate.setHours(calendar.endTime, 0, 0, 0);
-      setInitHours();
       dateChange(startDate, endDate);
     }
 
@@ -208,8 +210,7 @@ angular.module('bike').component('calendar', {
     };
 
     calendar.isFormInvalid = function() {
-
-      return !calendar.bikeId || !calendar.isDateValid();
+      return !calendar.bikeId || !calendar.isDateValid()  || !isTimeValid();
     };
 
     function validClusterSize() {
@@ -219,6 +220,10 @@ angular.module('bike').component('calendar', {
       } else {
         return false;
       }
+    }
+
+    function isTimeValid() {
+      return !!(calendar.startTime && calendar.endTime);
     }
 
     calendar.isDateValid = function() {
@@ -682,36 +687,6 @@ angular.module('bike').component('calendar', {
       return workingHours
     }
 
-    function setInitHours() {
-      if (openingHoursAvailable()) {
-        var firstDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.startDate)];
-        var lastDay = calendar.bikeOwner.opening_hours.hours[getWeekDay(calendar.endDate)];
-        firstDay = openHours(firstDay);
-        lastDay = openHours(lastDay);
-        calendar.startTime = firstDay[0];
-        calendar.endTime = lastDay[lastDay.length - 1];
-        setStartDate(calendar.startTime);
-        calendar.endDate = moment(calendar.endDate).hour(calendar.endTime)._d;
-      } else {
-        calendar.startTime = 10;
-        setStartDate(calendar.startTime);
-      }
-      // If date today
-      if (moment(calendar.startDate).isSame(moment(), 'day')) {
-        var hour_now = moment().add(1, 'hours').hour();
-        if (hour_now < 6) { hour_now = 6 }
-        if (hour_now < calendar.startTime && openingHoursAvailable()) {
-          hour_now = calendar.startTime
-        }
-        calendar.startTime = hour_now;
-        setStartDate(hour_now);
-      }
-    }
-
-    function setStartDate(startTime) {
-      calendar.startDate = moment(calendar.startDate).hour(startTime)._d;
-    }
-
     function classifyDate(date) {
       date.setHours(0, 0, 0, 0);
       var now = new Date();
@@ -828,9 +803,6 @@ angular.module('bike').component('calendar', {
     }
 
     function initOverview() {
-      calendar.startTime = 10;
-      calendar.endTime = 18;
-
       calendar.duration = date.duration(undefined, undefined, 0);
       calendar.subtotal = 0;
       calendar.lnrFee = 0;
