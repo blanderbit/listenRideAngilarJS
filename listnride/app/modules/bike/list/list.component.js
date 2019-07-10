@@ -162,6 +162,7 @@ angular.module('list', ['ngLocale'])
 
               if (response.data.current.is_cluster){
                 list.clusterData = response.data.cluster;
+                // remove primary bike from array of variants
                 list.variations = list.clusterData.variations.filter(function(variant){return variant.id !== data.id})
               }
 
@@ -316,11 +317,7 @@ angular.module('list', ['ngLocale'])
         list.onFormSubmit = function () {
           list.submitDisabled = true;
           loadingDialog.open();
-          if (list.isListMode) {
-            list.submitNewRide();
-          } else {
-            list.submitEditedRide();
-          }
+          list.isListMode ? list.submitNewRide() : list.submitEditedRide();
         };
 
         // set the custom prices for a bike
@@ -506,7 +503,8 @@ angular.module('list', ['ngLocale'])
             size: '',
             frame_size: '',
             bicycle_number: '',
-            frame_number: ''
+            frame_number: '',
+            available: true
           });
         }
 

@@ -44,7 +44,7 @@ angular.module('listingCard',[]).component('listingCard', {
       // implementation is different from parent component
       function onActivateClick() {
         listingCard.disableActivate = true;
-        api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "true"}}).then(
+        api.put(getBikeEditUrl(), {"ride": {"id": listingCard.bikeId, "available": "true"}}).then(
           function(response) {
             listingCard.disableActivate = false;
             listingCard.available = true;
@@ -59,7 +59,7 @@ angular.module('listingCard',[]).component('listingCard', {
       // implementation is different from parent component
       function deactivate() {
         listingCard.disableDeactivate = true;
-        api.put("/rides/" + listingCard.bikeId, {"ride": {"available": "false"}}).then(
+        api.put(getBikeEditUrl(), {"ride": {"id": listingCard.bikeId, "available": "false"}}).then(
           function(response) {
             listingCard.disableDeactivate = false;
             listingCard.available = false;
@@ -69,6 +69,10 @@ angular.module('listingCard',[]).component('listingCard', {
             notification.show(error, 'error');
           }
         );
+      }
+
+      function getBikeEditUrl() {
+        return listingCard.bike.is_cluster ? '/clusters/' + listingCard.bike.cluster_id + '/update_rides/' : ' /rides/ ' + listingCard.bikeId;
       }
     }
   ]
