@@ -76,10 +76,15 @@ edit .accessory-label {
 .lnr-details-step {
   position: relative;
   padding-left: 30px;
+  padding-top: 8px;
+}
+
+.lnr-details-step.available-disabled {
+  background: rgba(177, 177, 177, 0.12);
 }
 
 .lnr-details-step .lnr-badge-default {
   position: absolute;
-  left: 0;
+  left: 8px;
   top: 33px;
 }
