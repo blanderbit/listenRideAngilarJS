@@ -34,7 +34,7 @@ function bookingConfirmationRenderer({ eventRecord, translations }) {
   }
   return `
     <section class="bike-event-popup__section">
-      <button 
+      <button
         type="button"
         data-id="reject-booking"
         class="md-button md-raised md-ink-ripple md-warn bike-event-popup__confirmation-button"
@@ -75,39 +75,41 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
       </span>
       ${badgeRenderer({ eventRecord, translations })}
     </div>
-    
+
     <section class="bike-event-popup__section">
       <div>
-        <div>${translations['booking.overview.size']}</div>      
-        <div>${translations['booking-calendar.event.date']}</div>      
-        <div>${translations['booking-calendar.event.pickup']}</div>      
-        <div>${translations['booking-calendar.event.booking-id']}</div>      
+        <div>${translations['booking.overview.size']}</div>
+        <div>${translations['booking-calendar.event.date']}</div>
+        <div>${translations['booking-calendar.event.pickup']}</div>
+        <div>${translations['booking.calendar.return-time']}</div>
+        <div>${translations['booking-calendar.event.booking-id']}</div>
       </div>
-      
+
       <div>
         <div>${size === 0 ? translations['search.unisize'] : size}</div>
         <div>${formattedStart} - ${formattedEnd}</div>
         <div>${moment.utc(rawStartDate).format(pickupFormat)}</div>
+        <div>${moment.utc(rawEndDate).format(pickupFormat)}</div>
         <div>${bookingId}</div>
       </div>
     </section>
-    
+
     <section class="bike-event-popup__section">
       <div>
-        <div>${translations['booking-calendar.event.rider']}</div>      
-        <div>${translations['booking-calendar.event.contact']}</div>      
+        <div>${translations['booking-calendar.event.rider']}</div>
+        <div>${translations['booking-calendar.event.contact']}</div>
       </div>
-      
+
       <div>
-        <div>${rider}</div>      
-        <div>${contact}</div>      
+        <div>${rider}</div>
+        <div>${contact}</div>
       </div>
     </section>
-    
+
     ${bookingConfirmationRenderer({ eventRecord, translations })}
-    
-    <a 
-      class="bike-event-popup__link" 
+
+    <a
+      class="bike-event-popup__link"
       href="${getters.getBookingHref(bookingId)}"
       hide-on-click>
       ${translations['booking-calendar.event.view-booking']}
@@ -123,8 +125,8 @@ function notAvailableEventPopupRenderer({ translations, getters }) {
     <p class="bike-event-popup__description">
       ${translations['booking-calendar.event.not-available-text']}
     </p>
-    <a 
-      class="bike-event-popup__link" 
+    <a
+      class="bike-event-popup__link"
       href="${getters.getBikeListingsHref()}">
       ${translations['booking-calendar.event.see-settings']}
     </a>

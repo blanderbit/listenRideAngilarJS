@@ -47,6 +47,7 @@ angular
           'booking-calendar.event.see-settings',
           'booking-calendar.event.date',
           'booking-calendar.event.pickup',
+          'booking.calendar.return-time',
           'booking-calendar.event.booking-id',
           'booking-calendar.event.rider',
           'booking-calendar.event.contact',
