@@ -11,7 +11,7 @@ angular.module('listings').component('listView', {
     view: '<',
     duplicate: '<',
     delete: '<',
-    deactivate: '<',
+    changeBikeAvailableTo: '<',
     changeAvailability: '<',
     showLabels: '<',
     isCheckModeOn: '<',

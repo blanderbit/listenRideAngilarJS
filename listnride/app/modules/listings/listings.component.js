@@ -3,22 +3,7 @@
 angular.module('listings', []).component('listings', {
   templateUrl: 'app/modules/listings/listings.template.html',
   controllerAs: 'listings',
-  controller: [
-    '$scope',
-    '$stateParams',
-    '$mdDialog',
-    '$analytics',
-    '$timeout',
-    '$mdToast',
-    '$filter',
-    '$translate',
-    '$state',
-    '$localStorage',
-    '$mdMedia',
-    'api',
-    'accessControl',
-    'notification',
-    function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl, notification) {
+  controller: function ListingsController($scope, $stateParams, $mdDialog, $analytics, $timeout, $mdToast, $filter, $translate, $state, $localStorage, $mdMedia, api, accessControl, notification, bikeHelper) {
       if (accessControl.requireLogin()) {
         return
       }
@@ -46,6 +31,7 @@ angular.module('listings', []).component('listings', {
         listings.isPaginationInRange = isPaginationInRange;
         listings.canMerge = canMerge;
         listings.canDeactivateMulti = canDeactivateMulti;
+        listings.changeBikeAvailableTo = changeBikeAvailableTo;
 
         listings.helper = {
           // local method to be called on duplicate success
@@ -539,18 +525,18 @@ angular.module('listings', []).component('listings', {
       // deactivate a bike
       // used only in List View
       // Tile View has its own implementation
-      listings.deactivate = function (index) {
-        var id = listings.bikes[index].id;
-        listings.deactivated = true;
-        api.put("/rides/" + id, { "ride": { "available": !listings.bikes[index].available } }).then(
-          function () {
-            listings.bikes[index].available = !listings.bikes[index].available;
-          },
-          function () {
-            listings.deactivated = false;
-          }
-        );
-      };
+      function changeBikeAvailableTo(bike, changeTo) {
+        listings.changeAvailableInProgress = true;
+        bikeHelper.changeBikeAvailableTo(bike, changeTo)
+          .then(response => {
+            bike.available = changeTo;
+            listings.changeAvailableInProgress = false;
+          })
+          .catch(error => {
+            notification.show(error, 'error');
+            listings.changeAvailableInProgress = false;
+          })
+      }
 
       // fetch bikes
       function getBikes() {
@@ -656,5 +642,5 @@ angular.module('listings', []).component('listings', {
         return !!listings.checkedBikes.length;
       }
     }
-  ]
-});
+  }
+);

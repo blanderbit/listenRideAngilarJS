@@ -35,18 +35,15 @@ angular.module('listingCard',[]).component('listingCard', {
 
         //methods
         listingCard.checkBike = listingCard.onBikeTileCheck;
-        listingCard.activateBike = activateBike;
-        listingCard.deactivateBike = deactivateBike;
+        listingCard.changeBikeAvailableTo = changeBikeAvailableTo;
       }
 
-      // activate a bike
-      // implementation is different from parent component
-      function activateBike() {
+      function changeBikeAvailableTo() {
         listingCard.changeAvailableInProgress = true;
-        bikeHelper.changeBikeAvailableTo(listingCard.bike, true)
+        bikeHelper.changeBikeAvailableTo(listingCard.bike, !listingCard.bike.available)
           .then(response => {
             listingCard.changeAvailableInProgress = false;
-            listingCard.available = true;
+            listingCard.bike.available = !listingCard.bike.available;
           })
           .catch(error => {
             listingCard.changeAvailableInProgress = false;
@@ -54,20 +51,6 @@ angular.module('listingCard',[]).component('listingCard', {
           })
       }
 
-      // deactivate a bike
-      // implementation is different from parent component
-      function deactivateBike() {
-        listingCard.changeAvailableInProgress = true;
-        bikeHelper.changeBikeAvailableTo(listingCard.bike, false)
-          .then(response => {
-            listingCard.changeAvailableInProgress = false;
-            listingCard.available = false;
-          })
-          .catch(error => {
-            listingCard.changeAvailableInProgress = false;
-            notification.show(error, 'error');
-          })
-      }
     }
   }
 );
