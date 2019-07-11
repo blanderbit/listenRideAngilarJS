@@ -3,8 +3,8 @@ import './bike-column.css';
 function newBadgeRenderer({ record, translations }) {
   const { requestsWithNewMessages } = record;
   return requestsWithNewMessages && requestsWithNewMessages.length > 0
-    ? `<span 
-         data-id="new-messages-badge" 
+    ? `<span
+         data-id="new-messages-badge"
          class="booking-calendar__badge booking-calendar__badge--blue booking-calendar__badge--chevron booking-calendar__badge--clickable">
          ${translations['shared.label_new']}
        </span>`
@@ -12,14 +12,14 @@ function newBadgeRenderer({ record, translations }) {
 }
 
 function bikeMetaInfoRenderer({ record, translations }) {
-  const { id, size, children, isCluster } = record;
+  const { id, size, children, isCluster, humanizeSize } = record;
   let content = '';
 
   const sizeDisplay =
     size === 0
       ? `<dt>${translations['search.unisize']}</dt>`
       : `<dt>${translations['booking.overview.size']}</dt>
-         <dd>${size}</dd>`;
+         <dd>${humanizeSize}</dd>`;
 
   if (isCluster) {
     content += `

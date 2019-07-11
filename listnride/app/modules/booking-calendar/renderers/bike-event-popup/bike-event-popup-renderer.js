@@ -55,7 +55,7 @@ function bookingConfirmationRenderer({ eventRecord, translations }) {
 function bikeDetailsRenderer({ eventRecord, translations, getters }) {
   const datesFormat = 'DD.MM.YYYY';
   const pickupFormat = 'HH:mm';
-  const { name, size, category } = eventRecord.resource;
+  const { name, size, category, humanizeSize } = eventRecord.resource;
   const {
     startDate,
     endDate,
@@ -86,7 +86,7 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
       </div>
 
       <div>
-        <div>${size === 0 ? translations['search.unisize'] : size}</div>
+        <div>${humanizeSize}</div>
         <div>${formattedStart} - ${formattedEnd}</div>
         <div>${moment.utc(rawStartDate).format(pickupFormat)}</div>
         <div>${moment.utc(rawEndDate).format(pickupFormat)}</div>

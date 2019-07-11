@@ -82,6 +82,7 @@ angular
             category: bike.category,
             imageUrl: bike.image_file,
             size: bike.size,
+            humanizeSize: bike.frame_size ? bike.frame_size : bikeOptions.getHumanReadableSize(bike.size),
           });
 
           const bikeRequests = parseRequests({
@@ -127,6 +128,7 @@ angular
                   }),
                   id: bikeVariant.id,
                   size: bikeVariant.size,
+                  humanizeSize: bikeVariant.frame_size ? bikeVariant.frame_size : bikeOptions.getHumanReadableSize(bikeVariant.size),
                   isCluster: false,
                   isVariant: true,
                   variantIndex: index + 1,
@@ -260,6 +262,7 @@ angular
           category: null,
           imageUrl: null,
           size: null,
+          humanizeSize: null,
           variantIndex: null,
           cls: null,
           requestsWithNewMessages: [],
