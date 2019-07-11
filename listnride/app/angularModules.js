@@ -67,6 +67,7 @@ import './services/calendar-helper/calendar-helper.service.js';
 import './services/payment-helper/payment-helper.service.js';
 import './services/payout-helper/payout-helper.service.js';
 import './services/user-helper/user-helper.service.js';
+import './services/bike-helper/bike-helper.service.js';
 import './services/notification/notification.service.js';
 // core filters
 import './filters/category.filter.js';
