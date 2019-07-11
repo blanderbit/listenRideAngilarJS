@@ -51,7 +51,7 @@
 
 
         <!-- Daily and Weekly Discounts -->
-        <div layout="row" layout-align="space-between center" ng-if="!pricingTab.parent.businessUser">
+        <div layout="row" layout-align="space-between center">
           <div flex="45">
             <md-input-container class="md-block">
               <div layout layout-align="space-between center">
@@ -89,7 +89,7 @@
             </md-input-container>
           </div>
         </div>
-        <div ng-if="!pricingTab.parent.businessUser">
+        <div>
           <!-- description is not shown when custom prices are used.-->
           <span class="md-caption" ng-if="pricingTab.parent.form.discounts.weekly && pricingTab.parent.form.prices[0].price && !pricingTab.parent.show_reset_button">
             {{'list.pricing.discount-description-initial' | translate}} {{pricingTab.parent.form.discounts.weekly | number:0}}% {{'list.pricing.discount-description-mid'
@@ -98,7 +98,7 @@
           <span>&nbsp</span>
         </div>
         <!-- Switch for Custom Prices -->
-        <div ng-if="!pricingTab.parent.businessUser" layout="row" layout-align="space-between center">
+        <div layout="row" layout-align="space-between center">
           <p>{{'list.pricing.custom-prices' | translate}}</p>
           <md-switch ng-model="pricingTab.parent.form.custom_price" ng-change="pricingTab.parent.toggleDiscount()" ng-model-options='{ debounce: 1 }'>
           </md-switch>

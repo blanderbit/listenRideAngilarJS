@@ -91,7 +91,7 @@ angular.module('list', ['ngLocale'])
         }
 
         var setBusinessForm = function () {
-          if (authentication.isBusiness) {
+          if (false) {
             list.businessUser = true;
             list.form.custom_price = true;
             list.show_custom_price = true;
