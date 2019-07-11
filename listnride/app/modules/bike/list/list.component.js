@@ -168,6 +168,23 @@ angular.module('list', ['ngLocale'])
               }
 
               if (parseInt(data.user.id) === $localStorage.userId) {
+                // OLD IMAGES LOGIC
+                var images = [];
+
+                for (var i = 1; i <= 5; ++i) {
+                  if (data["image_file_" + i] !== undefined &&
+                    data["image_file_" + i].url !== null) {
+                    images.push({
+                      src: data["image_file_" + i],
+                      url: data["image_file_" + i].url,
+                      local: "false",
+                      name: "image_file_" + i
+                    });
+                  }
+                }
+
+                data.images = images;
+
                 let halfDayPrice = _.find(data.prices, {
                   'start_at': 43200
                 });
@@ -216,6 +233,11 @@ angular.module('list', ['ngLocale'])
               "is_equipment": _.includes(list.equipmentCategories, list.form.subCategory),
               "category": list.form.subCategory,
               "new_images": _.map(list.form.images, function(img){ return img.src }),
+              "image_file_1": (list.form.images[0]) ? list.form.images[0].src: undefined, // OLD IMAGES
+              "image_file_2": (list.form.images[1]) ? list.form.images[1].src: undefined, // OLD IMAGES
+              "image_file_3": (list.form.images[2]) ? list.form.images[2].src: undefined, // OLD IMAGES
+              "image_file_4": (list.form.images[3]) ? list.form.images[3].src: undefined, // OLD IMAGES
+              "image_file_5": (list.form.images[4]) ? list.form.images[4].src: undefined, // OLD IMAGES
               "variations": list.variations
             })
           };
@@ -284,8 +306,34 @@ angular.module('list', ['ngLocale'])
             ride.ride.variations = list.variations;
           }
 
-          ride['ride']['images_to_remove'] = _.map(list.removedImages, function(img){ return img.id });
-          ride['ride']['new_images'] = _.map(_.filter(list.form.images, function(img){ return img.local == 'true' }), function(img){ return img.src });
+          // NEW IMAGES LOGIC
+          // ride['ride']['images_to_remove'] = _.map(list.removedImages, function(img){ return img.id });
+          // ride['ride']['new_images'] = _.map(_.filter(list.form.images, function(img){ return img.local == 'true' }), function(img){ return img.src });
+
+          // OLD IMAGES LOGIC
+          _.forEach(list.removedImages, function (image_name) {
+                ride['ride']['remove_' + image_name] = true
+          });
+
+          // FIXME: HOTFIX, optimise long term
+          _.forEach(list.form.images, function (image) {
+            if (_.isEmpty(image.url)) {
+              AddNewImage(image)
+            }
+          });
+
+          function AddNewImage(image) {
+            _.forEach(_.range(list.startImage, 6), function (id) {
+              if (list.form['image_file_' + id].url == null || ride['ride']['remove_image_file_' + id]) {
+                ride['ride']['remove_image_file_' + id] = false;
+                ride['ride']['image_file_' + id] = image.src;
+                list.startImage = id + 1;
+                return false;
+              }
+            });
+          }
+
+          // END OF OLD IMAGES LOGIC
 
           function editBikeUrl(){
             return api.getApiUrl() + (list.form.is_cluster ? '/clusters/' + list.clusterData.id + '/update_rides' : '/rides/' + $stateParams.bikeId)
@@ -387,7 +435,8 @@ angular.module('list', ['ngLocale'])
         // add image of the bike
         list.addImage = function (files) {
           if (files && files.length) {
-            for (var i = 0; i < files.length; ++i) {
+            // for (var i = 0; i < files.length; ++i) {
+            for (var i = 0; i < files.length && list.form.images.length < 5; ++i) {
               if (files[i] !== null) {
                 list.form.images.push({
                   src: files[i],
@@ -400,9 +449,16 @@ angular.module('list', ['ngLocale'])
 
         // remove image of the bike
         list.removeImage = function (index, img) {
-          if (img.id) {
-            list.removedImages.push(img);
-          }
+          // NEW IMAGES LOGIC
+          // if (img.id) {
+          //   list.removedImages.push(img);
+          // }
+
+          // OLD IMAGES LOGIC
+          list.removedImages.push(img.name);
+
+
+
           list.form.images.splice(index, 1);
         };
 
