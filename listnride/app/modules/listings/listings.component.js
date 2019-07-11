@@ -46,7 +46,6 @@ angular.module('listings', []).component('listings', {
         listings.isPaginationInRange = isPaginationInRange;
         listings.canMerge = canMerge;
         listings.canDeactivateMulti = canDeactivateMulti;
-        listings.deactivateMulti = deactivateMulti;
 
         listings.helper = {
           // local method to be called on duplicate success
@@ -655,9 +654,6 @@ angular.module('listings', []).component('listings', {
 
       function canDeactivateMulti() {
         return !!listings.checkedBikes.length;
-      }
-      function deactivateMulti() {
-        // api.update
       }
     }
   ]

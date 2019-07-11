@@ -34,6 +34,7 @@ angular.module('list', ['ngLocale'])
             frame_size: '',
             bicycle_number: '',
             frame_number: '',
+            available: true,
             details: '',
             accessories: {},
             images: [],

@@ -26,8 +26,7 @@ angular.module('listingCard',[]).component('listingCard', {
     isSelectable: '<',
     unmerge: '<'
   },
-  controller: ['api', 'notification', 'helpers',
-    function ListingCardController(api, notification, helpers) {
+  controller: function ListingCardController(api, notification, bikeHelper) {
       var listingCard = this;
 
       listingCard.$onInit = function() {
@@ -36,44 +35,39 @@ angular.module('listingCard',[]).component('listingCard', {
 
         //methods
         listingCard.checkBike = listingCard.onBikeTileCheck;
-        listingCard.onActivateClick = onActivateClick;
-        listingCard.deactivate = deactivate;
+        listingCard.activateBike = activateBike;
+        listingCard.deactivateBike = deactivateBike;
       }
 
       // activate a bike
       // implementation is different from parent component
-      function onActivateClick() {
-        listingCard.disableActivate = true;
-        api.put(getBikeEditUrl(), {"ride": {"id": listingCard.bikeId, "available": "true"}}).then(
-          function(response) {
-            listingCard.disableActivate = false;
+      function activateBike() {
+        listingCard.changeAvailableInProgress = true;
+        bikeHelper.changeBikeAvailableTo(listingCard.bike, true)
+          .then(response => {
+            listingCard.changeAvailableInProgress = false;
             listingCard.available = true;
-          },
-          function(error) {
-            listingCard.disableActivate = false;
-          }
-        );
+          })
+          .catch(error => {
+            listingCard.changeAvailableInProgress = false;
+            notification.show(error, 'error');
+          })
       }
 
       // deactivate a bike
       // implementation is different from parent component
-      function deactivate() {
-        listingCard.disableDeactivate = true;
-        api.put(getBikeEditUrl(), {"ride": {"id": listingCard.bikeId, "available": "false"}}).then(
-          function(response) {
-            listingCard.disableDeactivate = false;
+      function deactivateBike() {
+        listingCard.changeAvailableInProgress = true;
+        bikeHelper.changeBikeAvailableTo(listingCard.bike, false)
+          .then(response => {
+            listingCard.changeAvailableInProgress = false;
             listingCard.available = false;
-          },
-          function(error) {
-            listingCard.disableDeactivate = false;
+          })
+          .catch(error => {
+            listingCard.changeAvailableInProgress = false;
             notification.show(error, 'error');
-          }
-        );
-      }
-
-      function getBikeEditUrl() {
-        return listingCard.bike.is_cluster ? '/clusters/' + listingCard.bike.cluster_id + '/update_rides/' : ' /rides/ ' + listingCard.bikeId;
+          })
       }
     }
-  ]
-});
+  }
+);
