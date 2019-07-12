@@ -9,6 +9,7 @@
         </div>
         <md-button
           class="md-raised md-primary lnr-m-0"
+          ng-disabled="picturesTab.parent.form.images.length > 4"
           ngf-multiple="true"
           ngf-select="picturesTab.parent.addImage($files)"
           ngf-resize="{width: 1600, height: 1200, quality: .9}"
@@ -23,10 +24,17 @@
           <div ng-repeat="img in picturesTab.parent.form.images track by $index" layout="row" layout-align="space-between center">
             <div ng-if="img.local == 'true'" class="img-preview lnr-mt" ngf-background="img.src" ngf-as-background="true">
             </div>
-
+            <!--
+              <div
+                class="img-preview lnr-mt"
+                ng-style="{'background-image': 'url(' + img.medium + ')'}"
+              >
+              </div>
+            -->
             <div
+              ng-if="img.local =='false'"
               class="img-preview lnr-mt"
-              ng-style="{'background-image': 'url(' + img.medium + ')'}">
+              ng-style="{'background-image': 'url(' + img.url + ')'}">
             </div>
             <md-button class="md-lined md-warn" ng-click="picturesTab.parent.removeImage($index, img)">
               {{ 'list.pictures.remove' | translate}}
