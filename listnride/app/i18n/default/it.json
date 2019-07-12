@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
+    "request": "Request",
     "label_new": "Nuovo",
     "booking-calendar": "Calendario delle prenotazioni",
     "month": "Mese",
@@ -227,6 +228,10 @@
       "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>2 Giugno 2019</b>",
       "meta-title": "Noleggia una bici da strada per il Triathlon di Berlino 2019 | listnride",
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2019. Scegli la bici perfetta per te."
+    },
+    "msr": {
+      "meta-title": "Rent a road bike for MSR 2020 | listnride",
+      "meta-description": "Rent a road bike online easy and secure with listnride for MSR 2020. Choose the perfect bike that fits your needs."
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",

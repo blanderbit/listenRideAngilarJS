@@ -342,7 +342,7 @@
                             <div flex="45">
                               <md-input-container>
                                 <label>{{ 'settings.to' | translate }}</label>
-                                <md-select ng-change="settings.getInputDate(day, false, $index)" ng-model="settings.endTime[day][$index]" placeholder="{{ 'shared.from' | translate }}">
+                                <md-select ng-change="settings.getInputDate(day, false, $index)" ng-model="settings.endTime[day][$index]" placeholder="{{ 'shared.to' | translate }}">
                                   <md-option ng-repeat="i in [].constructor(17) track by $index" value="{{$index + 6}}">
                                     {{ ($index + 6) + ":00" }}
                                   </md-option>

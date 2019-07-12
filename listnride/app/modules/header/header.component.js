@@ -15,19 +15,11 @@ angular.module('header',[]).component('header', {
     // Contains the amount of unread messages to be displayed in the header
     header.unreadMessages = $localStorage.unreadMessages;
     header.isStaging = ENV.apiEndpoint !== "https://api.listnride.com/v2";
-    header.isUserBusiness = !!$localStorage.isBusiness;
+    header.isUserBusiness = header.authentication.isBusiness;
 
     header.$onInit = function(){
       header.showSearch = $state.current.name !== 'home';
     }
-
-    $scope.$watch(function () {
-      return $localStorage.isBusiness;
-    }, function (newVal, oldVal) {
-      if (oldVal !== newVal) {
-        header.isUserBusiness = !!$localStorage.isBusiness;
-      }
-    })
 
     $transitions.onSuccess({}, function(transition) {
       if (transition.to().name === "search") {

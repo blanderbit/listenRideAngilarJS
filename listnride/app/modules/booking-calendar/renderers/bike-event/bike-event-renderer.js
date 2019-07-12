@@ -2,15 +2,15 @@ import './bike-event.css';
 
 function statusRenderer({ eventRecord, resourceRecord, translations }) {
   const { isCluster } = resourceRecord;
-  const { isPending, isAccepted, isNotAvailable, bikesCount } = eventRecord;
+  const { isPending, isAccepted, isNotAvailable, requestsCount } = eventRecord;
   if (isCluster) {
     const bikesLabel =
-      bikesCount === 1
-        ? translations['search.bike']
-        : translations['search.bikes'];
+      requestsCount === 1
+        ? translations['shared.request']
+        : translations['shared.requests'];
     return `
       <span class="event-status ellipsis bikes-count">
-        ${bikesCount} ${bikesLabel}
+        ${requestsCount} ${bikesLabel}
       </span>
     `;
   }
@@ -49,6 +49,7 @@ export function bikeEventRenderer({
 }) {
   const { name, isCluster } = resourceRecord;
   const {
+    rider,
     isPending,
     isAccepted,
     isNotAvailable,
@@ -61,9 +62,9 @@ export function bikeEventRenderer({
   tplData.cls['not-available'] = isNotAvailable;
   tplData.cls.cluster = isCluster;
   tplData.cls['is-narrow'] = Math.floor(tplData.width) <= 50;
-  
+
   const html = `
-    <div class="event-name ellipsis">${name}</div>
+    <div class="event-name ellipsis">${isCluster ? name : rider}</div>
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
   `;
 

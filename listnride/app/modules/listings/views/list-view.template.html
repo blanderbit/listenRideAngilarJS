@@ -88,7 +88,7 @@
           id="$index"
           class="lnr-listing-list-item"
           ng-click="listView.isCheckModeOn ? listView.onBikeTileCheck($event, bike) : listView.view(bike.id, $event)"
-          ng-repeat="bike in listView.bikes"
+          ng-repeat="bike in listView.bikes track by '['+bike.id+']'+'['+bike.is_cluster+']'"
           ng-disabled="!bike.available"
           ng-class="{
                 'lnr-unavailable': !bike.available,
@@ -163,8 +163,7 @@
                   <md-menu-item>
                     <md-button
                       md-no-ink
-                      ng-disabled="bike.is_cluster"
-                      ng-click="listView.deactivate($index)">
+                      ng-click="listView.changeBikeAvailableTo(bike, !bike.available)">
                       {{!bike.available ? 'listingCard.activate-bike' : 'listingCard.deactivate-bike' | translate}}
                     </md-button>
                   </md-menu-item>

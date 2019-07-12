@@ -5,8 +5,8 @@
         ng-if="bikeCard.showLabels"
         bike="bikeCard.bike">
       </status-labels>
+      <img class="md-card-image" ng-src="{{bikeCard.bike.image_file}}" alt="{{ ::bikeCard.bike.brand }} - {{ ::bikeCard.bike.name }}">
     </div>
-    <img class="md-card-image" ng-src="{{bikeCard.bike.image_file}}" alt="{{ ::bikeCard.bike.brand }} - {{ ::bikeCard.bike.name }}">
     <div class="after" ng-if="bikeCard.booked"><div>{{ 'shared.already-booked' | translate }}</div></div>
     <md-card-title layout="row">
       <div flex="20" layout-align="start center" ng-if="::bikeCard.showIcon">

@@ -200,11 +200,17 @@ angular.module('bike',[]).component('bike', {
 
     function GalleryDialogController($mdDialog, bikeData) {
       var galleryDialog = this;
+
+      // NEW LOGIC FOR IMAGES
+      // galleryDialog.images = bikeData.images;
+
+      // OLD LOGIC FOR IMAGES
       galleryDialog.image_1 = bikeData.image_file_1.url;
       galleryDialog.image_2 = bikeData.image_file_2.url;
       galleryDialog.image_3 = bikeData.image_file_3.url;
       galleryDialog.image_4 = bikeData.image_file_4.url;
       galleryDialog.image_5 = bikeData.image_file_5.url;
+
       galleryDialog.hide = function() {
         $mdDialog.hide();
       };

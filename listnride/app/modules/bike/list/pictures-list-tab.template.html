@@ -24,9 +24,15 @@
           <div ng-repeat="img in picturesTab.parent.form.images track by $index" layout="row" layout-align="space-between center">
             <div ng-if="img.local == 'true'" class="img-preview lnr-mt" ngf-background="img.src" ngf-as-background="true">
             </div>
-
+            <!--
+              <div
+                class="img-preview lnr-mt"
+                ng-style="{'background-image': 'url(' + img.medium + ')'}"
+              >
+              </div>
+            -->
             <div
-              ng-if="img.local == 'false'"
+              ng-if="img.local =='false'"
               class="img-preview lnr-mt"
               ng-style="{'background-image': 'url(' + img.url + ')'}">
             </div>

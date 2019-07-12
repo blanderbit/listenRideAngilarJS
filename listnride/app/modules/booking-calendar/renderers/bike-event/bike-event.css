@@ -72,6 +72,10 @@
   text-overflow: ellipsis;
 }
 
+.booking-calendar .lowercase {
+  text-transform: lowercase;
+}
+
 @keyframes barberpole {
   from {
     background-position: 0 0;

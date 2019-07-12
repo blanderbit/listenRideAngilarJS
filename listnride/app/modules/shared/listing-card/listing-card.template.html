@@ -1,7 +1,7 @@
 <md-card
   class="lnr-bike-card"
   ng-class="{
-    'lnr-unavailable': !listingCard.available,
+    'lnr-unavailable': !listingCard.bike.available,
     'lnr-checked-card': listingCard.isChecked,
     'lnr-check-mode': listingCard.isCheckModeOn
   }">
@@ -83,22 +83,11 @@
       md-no-ink
       flex
       class="md-icon-button"
-      ng-disabled="listingCard.deactivated || listingCard.bike.is_cluster"
-      ng-click="listingCard.deactivate()"
-      ng-if="listingCard.available">
-      <md-tooltip>{{ 'listingCard.deactivate' | translate }}</md-tooltip>
-      <md-icon md-svg-icon="app/assets/ui_icons/turn-visibility-off-button.svg"></md-icon>
-    </md-button>
-
-    <md-button
-      md-no-ink
-      flex
-      class="md-icon-button md-primary"
-      ng-disabled="listingCard.disableActivate || listingCard.bike.is_cluster"
-      ng-click="listingCard.onActivateClick()"
-      ng-if="!listingCard.available">
-      <md-tooltip>{{ 'listingCard.activate' | translate }}</md-tooltip>
-      <md-icon md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
+      ng-disabled="listingCard.changeAvailableInProgress"
+      ng-click="listingCard.changeBikeAvailableTo()">
+      <md-tooltip>{{ listingCard.bike.available ? 'listingCard.deactivate' : 'listingCard.activate' | translate }}</md-tooltip>
+      <md-icon ng-if="listingCard.bike.available" md-svg-icon="app/assets/ui_icons/turn-visibility-off-button.svg"></md-icon>
+      <md-icon ng-if="!listingCard.bike.available" md-svg-icon="app/assets/ui_icons/visibility-button.svg"></md-icon>
     </md-button>
 
     <md-button

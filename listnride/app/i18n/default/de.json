@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Mehr erfahren",
+    "request": "Request",
     "label_new": "Neu",
     "booking-calendar": "Buchungskalender",
     "month": "Monat",
@@ -230,6 +231,10 @@
       "description": "Was: <b>Berlin Triathlon</b> | Wo: <b>Berlin</b> | Wann: <b>2. Juni 2019</b>",
       "meta-title": "Miete dir ein Rennrad für den Berlin Triathlon 2019 | listnride",
       "meta-description": "Miete ein Rennrad für den Berlin Triathlon 2019 einfach online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
+    },
+    "msr": {
+      "meta-title": "Miete ein Rennrad für die Mecklenburger Seenrunde 2020 | listnride",
+      "meta-description": "Miete ein Rennrad für die Mecklenburger Seenrunde 2020 einfach, online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren ",

@@ -38,8 +38,8 @@ angular
           'booking-calendar.event.accepted',
           'booking-calendar.event.request-waiting',
           'booking-calendar.event.not-available',
-          'search.bike',
-          'search.bikes',
+          'shared.request',
+          'shared.requests',
           // event popups
           'booking-calendar.event.waiting',
           'booking-calendar.event.not-available-header',
@@ -47,6 +47,7 @@ angular
           'booking-calendar.event.see-settings',
           'booking-calendar.event.date',
           'booking-calendar.event.pickup',
+          'booking.calendar.return-time',
           'booking-calendar.event.booking-id',
           'booking-calendar.event.rider',
           'booking-calendar.event.contact',
@@ -66,6 +67,7 @@ angular
     };
 
     function parseBikes(bikes) {
+      bikes = bikes.filter((bike) => bike.available);
       return bikes.reduce(
         (acc, bike) => {
           // clusters don't have their own unique ids
@@ -80,6 +82,7 @@ angular
             category: bike.category,
             imageUrl: bike.image_file,
             size: bike.size,
+            humanizeSize: bike.frame_size ? bike.frame_size : bikeOptions.getHumanReadableSize(bike.size),
           });
 
           const bikeRequests = parseRequests({
@@ -125,6 +128,7 @@ angular
                   }),
                   id: bikeVariant.id,
                   size: bikeVariant.size,
+                  humanizeSize: bikeVariant.frame_size ? bikeVariant.frame_size : bikeOptions.getHumanReadableSize(bikeVariant.size),
                   isCluster: false,
                   isVariant: true,
                   variantIndex: index + 1,
@@ -202,13 +206,13 @@ angular
                 resourceId: id,
                 startDate: request.startDate,
                 endDate: request.endDate,
-                bikesCount: 1,
+                requestsCount: 1,
                 isCluster: true
               })
             );
             request.clusterEventId = clusterEventId;
           } else {
-            last.bikesCount += 1;
+            last.requestsCount += 1;
             last.endDate =
               request.endDate > last.endDate ? request.endDate : last.endDate;
             request.clusterEventId = clusterEventId;
@@ -258,6 +262,7 @@ angular
           category: null,
           imageUrl: null,
           size: null,
+          humanizeSize: null,
           variantIndex: null,
           cls: null,
           requestsWithNewMessages: [],
@@ -278,7 +283,7 @@ angular
           endDate: null,
           rawStartDate: null,
           rawEndDate: null,
-          bikesCount: null,
+          requestsCount: null,
           isCluster: false,
           isPending: false,
           isAccepted: false,

@@ -34,6 +34,7 @@ angular.module('list', ['ngLocale'])
             frame_size: '',
             bicycle_number: '',
             frame_number: '',
+            available: true,
             details: '',
             accessories: {},
             images: [],
@@ -90,7 +91,7 @@ angular.module('list', ['ngLocale'])
         }
 
         var setBusinessForm = function () {
-          if (authentication.isBusiness) {
+          if (false) {
             list.businessUser = true;
             list.form.custom_price = true;
             list.show_custom_price = true;
@@ -162,11 +163,14 @@ angular.module('list', ['ngLocale'])
 
               if (response.data.current.is_cluster){
                 list.clusterData = response.data.cluster;
+                // remove primary bike from array of variants
                 list.variations = list.clusterData.variations.filter(function(variant){return variant.id !== data.id})
               }
 
               if (parseInt(data.user.id) === $localStorage.userId) {
+                // OLD IMAGES LOGIC
                 var images = [];
+
                 for (var i = 1; i <= 5; ++i) {
                   if (data["image_file_" + i] !== undefined &&
                     data["image_file_" + i].url !== null) {
@@ -180,6 +184,7 @@ angular.module('list', ['ngLocale'])
                 }
 
                 data.images = images;
+
                 let halfDayPrice = _.find(data.prices, {
                   'start_at': 43200
                 });
@@ -227,11 +232,12 @@ angular.module('list', ['ngLocale'])
               "prices": prices,
               "is_equipment": _.includes(list.equipmentCategories, list.form.subCategory),
               "category": list.form.subCategory,
-              "image_file_1": (list.form.images[0]) ? list.form.images[0].src : undefined,
-              "image_file_2": (list.form.images[1]) ? list.form.images[1].src : undefined,
-              "image_file_3": (list.form.images[2]) ? list.form.images[2].src : undefined,
-              "image_file_4": (list.form.images[3]) ? list.form.images[3].src : undefined,
-              "image_file_5": (list.form.images[4]) ? list.form.images[4].src : undefined,
+              "new_images": _.map(list.form.images, function(img){ return img.src }),
+              "image_file_1": (list.form.images[0]) ? list.form.images[0].src: undefined, // OLD IMAGES
+              "image_file_2": (list.form.images[1]) ? list.form.images[1].src: undefined, // OLD IMAGES
+              "image_file_3": (list.form.images[2]) ? list.form.images[2].src: undefined, // OLD IMAGES
+              "image_file_4": (list.form.images[3]) ? list.form.images[3].src: undefined, // OLD IMAGES
+              "image_file_5": (list.form.images[4]) ? list.form.images[4].src: undefined, // OLD IMAGES
               "variations": list.variations
             })
           };
@@ -300,9 +306,13 @@ angular.module('list', ['ngLocale'])
             ride.ride.variations = list.variations;
           }
 
-          // TODO: Refactor images logic backend & frontend
+          // NEW IMAGES LOGIC
+          // ride['ride']['images_to_remove'] = _.map(list.removedImages, function(img){ return img.id });
+          // ride['ride']['new_images'] = _.map(_.filter(list.form.images, function(img){ return img.local == 'true' }), function(img){ return img.src });
+
+          // OLD IMAGES LOGIC
           _.forEach(list.removedImages, function (image_name) {
-            ride['ride']['remove_' + image_name] = true
+                ride['ride']['remove_' + image_name] = true
           });
 
           // FIXME: HOTFIX, optimise long term
@@ -322,6 +332,8 @@ angular.module('list', ['ngLocale'])
               }
             });
           }
+
+          // END OF OLD IMAGES LOGIC
 
           function editBikeUrl(){
             return api.getApiUrl() + (list.form.is_cluster ? '/clusters/' + list.clusterData.id + '/update_rides' : '/rides/' + $stateParams.bikeId)
@@ -354,11 +366,7 @@ angular.module('list', ['ngLocale'])
         list.onFormSubmit = function () {
           list.submitDisabled = true;
           loadingDialog.open();
-          if (list.isListMode) {
-            list.submitNewRide();
-          } else {
-            list.submitEditedRide();
-          }
+          list.isListMode ? list.submitNewRide() : list.submitEditedRide();
         };
 
         // set the custom prices for a bike
@@ -426,26 +434,31 @@ angular.module('list', ['ngLocale'])
 
         // add image of the bike
         list.addImage = function (files) {
-          if (files && files.length)
-            for (var i = 0; i < files.length && list.form.images.length < 5; ++i)
+          if (files && files.length) {
+            // for (var i = 0; i < files.length; ++i) {
+            for (var i = 0; i < files.length && list.form.images.length < 5; ++i) {
               if (files[i] !== null) {
-                if (list.isListMode) {
-                  list.form.images.push({
-                    src: files[i],
-                    local: "true"
-                  });
-                } else {
-                  list.form.images.push({
-                    src: files[i],
-                    local: "true"
-                  });
-                }
+                list.form.images.push({
+                  src: files[i],
+                  local: "true"
+                });
               }
+            }
+          }
         };
 
         // remove image of the bike
         list.removeImage = function (index, img) {
+          // NEW IMAGES LOGIC
+          // if (img.id) {
+          //   list.removedImages.push(img);
+          // }
+
+          // OLD IMAGES LOGIC
           list.removedImages.push(img.name);
+
+
+
           list.form.images.splice(index, 1);
         };
 
@@ -547,7 +560,8 @@ angular.module('list', ['ngLocale'])
             size: '',
             frame_size: '',
             bicycle_number: '',
-            frame_number: ''
+            frame_number: '',
+            available: true
           });
         }
 

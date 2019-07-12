@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "En savoir plus",
+    "request": "Request",
     "label_new": "Nuevo",
     "booking-calendar": "Calendrier des réservations",
     "month": "Mois",
@@ -230,6 +231,10 @@
       "description": "Que: <b>Berlin Triathlon</b> | Dónde: <b>Berlin</b> | Cuando: <b>2 Junio 2019</b>",
       "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
       "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+    },
+    "msr": {
+      "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
+      "meta-description": "Rent a road bike online easy and secure with listnride for the Mecklenburger Seenrunde 2020. Choose the perfect bike that fits your needs."
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
