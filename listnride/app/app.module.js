@@ -210,8 +210,8 @@ angular.module('listnride', [
     $translate.refresh();
   });
   $rootScope.location = $location;
+  $rootScope.lang = $translate.preferredLanguage();
   ngMeta.init();
-
   // TODO: check why we call this function here
   if (authentication.loggedIn && !_.isEmpty(authentication.userId())) {
     api.get('/users/' + authentication.userId()).then(
