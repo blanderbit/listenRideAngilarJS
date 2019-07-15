@@ -35,6 +35,7 @@ angular.module('listnride', [
   'statusLabels',
   'bookingCalendar',
   'paypalCheckoutButton',
+  'breadcrumbs',
   /* app_core_end */
 
   /* app_extras_start */
