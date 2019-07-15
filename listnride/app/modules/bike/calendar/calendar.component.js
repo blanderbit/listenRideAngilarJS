@@ -859,6 +859,7 @@ angular.module('bike').component('calendar', {
 
       } else {
         calendar.duration = date.duration(undefined, undefined, 0);
+        calendar.durationDays = 0;
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;

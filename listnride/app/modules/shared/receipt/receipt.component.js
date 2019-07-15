@@ -17,10 +17,7 @@ angular.module('receipt', []).component('receipt', {
     insuranceAllowed: '<',
     timeslots: '<'
   },
-  controller: [
-      'date',
-      'price',
-    function ReceiptController(date, price) {
+  controller: function ReceiptController(date, price) {
       var receipt = this;
       receipt.balance = 0;
       receipt.isHalfDayBook = false;
@@ -85,5 +82,4 @@ angular.module('receipt', []).component('receipt', {
         return _.includes(["DE", "AT"], receipt.countryCode);
       }
     }
-  ]
 });
