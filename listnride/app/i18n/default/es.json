@@ -717,6 +717,8 @@
     "change-successful": "Change successful",
     "change-password-success": "Great, you've successfully changed your password!",
     "password-not-match": "Passwords do not match",
+    "verification-code-error": "Error: The Verification Code seems to be invalid.",
+    "address-save-error": "The address could not be saved",
     "profile-verified": "¡Felicidades, tu perfil es verificado!",
     "profile-updated": "Tu descripción está actualizada.",
     "error-upload-profile-picture": "Hubo un error al subir tu foto de perfil.",
