@@ -111,22 +111,12 @@ angular.
           api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
               if (!verificationDialog.business) {
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent('Congratulations, your profile was successfully verified!')
-                    .hideDelay(4000)
-                    .position('top center')
-                );
+                notification.show(null, null, 'toasts.profile-verified');
                 verificationDialog.hide();
               }
             },
             function (error) {
-              $mdToast.show(
-                  $mdToast.simple()
-                    .textContent('The address could not be saved')
-                    .hideDelay(4000)
-                    .position('top center')
-              );
+              notification.show(null, null, 'toasts.address-save-error');
               verificationDialog.hide();
             }
           );
@@ -143,20 +133,10 @@ angular.
             function (success) {
               if (callback) {callback()}
               $mdDialog.hide();
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent('Congratulations, your profile was successfully verified!')
-                .hideDelay(4000)
-                .position('top center')
-              );
+              notification.show(null, null, 'toasts.profile-verified');
             },
             function (error) {
-              $mdToast.show(
-                $mdToast.simple()
-                  .textContent(error.data.errors[0].detail)
-                  .hideDelay(4000)
-                  .position('top center')
-              );
+              notification.show(error, 'error');
             }
           );
         };
@@ -164,12 +144,7 @@ angular.
         verificationDialog.resendEmail = function() {
           api.post('/send_confirmation_email').then(
             function (success) {
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent($translate.instant('toasts.verification-email-sent'))
-                .hideDelay(6000)
-                .position('top center')
-              );
+              notification.show(null, null, 'toasts.verification-email-sent');
             },
             function (error) {
 
@@ -181,12 +156,7 @@ angular.
           sendSms(verificationDialog.newUser.phone_number).then(function () {
             verificationDialog.sentConfirmationSms = true;
           }, function () {
-              $mdToast.show(
-                $mdToast.simple()
-                .textContent($translate.instant('toasts.uniq-phone'))
-                .hideDelay(4000)
-                .position('top center')
-              );
+            notification.show(null, null, 'toasts.uniq-phone');
             verificationDialog.sentConfirmationSms = false;
           });
         };
@@ -264,12 +234,7 @@ angular.
         api.put('/users/' + $localStorage.userId + '/update_phone', data).then(
           // resolve api: success
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent('An SMS with a confirmation code was sent to you just now.')
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(null, null, 'toasts.sms-was-sent');
             // resolve the promise
             deferred.resolve(success);
           },
@@ -293,24 +258,14 @@ angular.
         api.post('/confirm_phone', data).then(
           // resolve api: success
           function (success) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent('Successfully verified phone number.')
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(null, null, 'toasts.phone-verified');
             // resolve the promise
             deferred.resolve(success);
             $analytics.eventTrack('Profile Verified', {  category: 'Sign Up', label: 'Phone Number Verified'});
           },
           // reject api: error
           function (error) {
-            $mdToast.show(
-              $mdToast.simple()
-                .textContent('Error: The Verification Code seems to be invalid.')
-                .hideDelay(4000)
-                .position('top center')
-            );
+            notification.show(null, null, 'toasts.verification-code-error');
             // reject the promise
             deferred.reject(error);
           }
