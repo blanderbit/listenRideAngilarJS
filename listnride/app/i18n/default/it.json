@@ -713,6 +713,8 @@
     "change-successful": "Change successful",
     "change-password-success": "Great, you've successfully changed your password!",
     "password-not-match": "Passwords do not match",
+    "verification-code-error": "Error: The Verification Code seems to be invalid.",
+    "address-save-error": "The address could not be saved",
     "profile-verified": "Congratulations, your profile was successfully verified!",
     "profile-updated": "Successfully updated description",
     "error-upload-profile-picture": "Error while uploading profile picture",
