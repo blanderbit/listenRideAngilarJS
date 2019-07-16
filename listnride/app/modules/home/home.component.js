@@ -3,10 +3,19 @@
 angular.module('home',[]).component('home', {
   templateUrl: 'app/modules/home/home.template.html',
   controllerAs: 'home',
-  controller: [ '$state', '$stateParams', '$translate', '$localStorage', '$mdMedia',
-    '$mdDialog', '$mdToast', 'verification', 'authentication', 'api', 'loadingDialog',
-    function HomeController($state, $stateParams, $translate, $localStorage, $mdMedia,
-      $mdDialog, $mdToast, verification, authentication, api, notification) {
+  controller: function HomeController(
+    $state,
+    $stateParams,
+    $translate,
+    $localStorage,
+    $mdMedia,
+    $mdDialog,
+    $mdToast,
+    verification,
+    authentication,
+    api,
+    notification
+  ) {
 
       var home = this;
 
@@ -31,14 +40,9 @@ angular.module('home',[]).component('home', {
               if (updatePasswordDialog.new_password === updatePasswordDialog.confirm_password) {
                 updatePassword(updatePasswordDialog.new_password)
               } else {
-                $translate('password-not-match').then(
+                $translate('toasts.password-not-match').then(
                   function (translation) {
-                    $mdToast.show(
-                      $mdToast.simple()
-                        .textContent(translation)
-                        .hideDelay(4000)
-                        .position('top center')
-                    );
+                    notification.showToast(translation);
                   }
                 );
               }
@@ -195,5 +199,4 @@ angular.module('home',[]).component('home', {
       home.newsletterSubmit = function() {
       }
     }
-  ]
 });
