@@ -38,15 +38,11 @@ angular.module('home',[]).component('home', {
 
             updatePasswordDialog.update = function () {
               if (updatePasswordDialog.new_password === updatePasswordDialog.confirm_password) {
-                updatePassword(updatePasswordDialog.new_password)
+                updatePassword(updatePasswordDialog.new_password);
               } else {
-                $translate('toasts.password-not-match').then(
-                  function (translation) {
-                    notification.showToast(translation);
-                  }
-                );
+                notification.showToast($translate.instant('toasts.password-not-match'));
               }
-            }
+            };
           };
 
           var showUpdatePasswordDialog = function() {
