@@ -712,6 +712,11 @@
   },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
+    "confirm-email-success": "Great, you've successfully confirmed your email address!",
+    "confirmation-successful": "Confirmation successful",
+    "change-successful": "Change successful",
+    "change-password-success": "Great, you've successfully changed your password!",
+    "password-not-match": "Passwords do not match",
     "profile-verified": "¡Felicidades, tu perfil es verificado!",
     "profile-updated": "Tu descripción está actualizada.",
     "error-upload-profile-picture": "Hubo un error al subir tu foto de perfil.",

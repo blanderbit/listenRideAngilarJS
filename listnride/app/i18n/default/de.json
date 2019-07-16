@@ -713,6 +713,11 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
+    "confirm-email-success": "Great, you've successfully confirmed your email address!",
+    "confirmation-successful": "Confirmation successful",
+    "change-successful": "Change successful",
+    "change-password-success": "Great, you've successfully changed your password!",
+    "password-not-match": "Passwords do not match",
     "profile-verified": "Glückwunsch, Dein Profil ist nun verifiziert!",
     "profile-updated": "Die Beschreibung wurde erfolgreich aktualisiert",
     "error-upload-profile-picture": "Fehler beim Hochladen des Profilbildes",
@@ -1457,7 +1462,7 @@
     "login": "Einloggen, um den Link zu sehen",
     "info-section": {
       "header": "Erhalte 10€ Guthaben, wenn einer deiner Freunde ein Rad bei listnride leiht oder sein Rad anbietet.",
-      "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
+      "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade sie ein Teil der Bikesharing Community zu werden!",
       "invite-friends": "Freunde einladen",
       "community": "Teil der Community werden",
       "earn-credit": "Belohnung erhalten"
