@@ -111,12 +111,12 @@ angular.
           api.put('/users/' + $localStorage.userId, address).then(
             function (success) {
               if (!verificationDialog.business) {
-                notification.showToast($translate.instant('toasts.profile-verified'));
+                notification.show(null, null, 'toasts.profile-verified');
                 verificationDialog.hide();
               }
             },
             function (error) {
-              notification.showToast($translate.instant('toasts.address-save-error'));
+              notification.show(null, null, 'toasts.address-save-error');
               verificationDialog.hide();
             }
           );
@@ -133,10 +133,10 @@ angular.
             function (success) {
               if (callback) {callback()}
               $mdDialog.hide();
-              notification.showToast($translate.instant('toasts.profile-verified'));
+              notification.show(null, null, 'toasts.profile-verified');
             },
             function (error) {
-              notification.showToast(error.data.errors[0].detail);
+              notification.show(error, 'error');
             }
           );
         };
@@ -144,7 +144,7 @@ angular.
         verificationDialog.resendEmail = function() {
           api.post('/send_confirmation_email').then(
             function (success) {
-              notification.showToast($translate.instant('toasts.verification-email-sent'));
+              notification.show(null, null, 'toasts.verification-email-sent');
             },
             function (error) {
 
@@ -156,7 +156,7 @@ angular.
           sendSms(verificationDialog.newUser.phone_number).then(function () {
             verificationDialog.sentConfirmationSms = true;
           }, function () {
-            notification.showToast($translate.instant('toasts.uniq-phone'));
+            notification.show(null, null, 'toasts.uniq-phone');
             verificationDialog.sentConfirmationSms = false;
           });
         };
@@ -234,7 +234,7 @@ angular.
         api.put('/users/' + $localStorage.userId + '/update_phone', data).then(
           // resolve api: success
           function (success) {
-            notification.showToast($translate.instant('toasts.sms-was-sent'));
+            notification.show(null, null, 'toasts.sms-was-sent');
             // resolve the promise
             deferred.resolve(success);
           },
@@ -258,14 +258,14 @@ angular.
         api.post('/confirm_phone', data).then(
           // resolve api: success
           function (success) {
-            notification.showToast($translate.instant('toasts.phone-verified'));
+            notification.show(null, null, 'toasts.phone-verified');
             // resolve the promise
             deferred.resolve(success);
             $analytics.eventTrack('Profile Verified', {  category: 'Sign Up', label: 'Phone Number Verified'});
           },
           // reject api: error
           function (error) {
-            notification.showToast($translate.instant('toasts.verification-code-error'));
+            notification.show(null, null, 'toasts.verification-code-error');
             // reject the promise
             deferred.reject(error);
           }

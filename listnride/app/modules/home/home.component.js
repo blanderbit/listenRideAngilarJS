@@ -40,7 +40,7 @@ angular.module('home',[]).component('home', {
               if (updatePasswordDialog.new_password === updatePasswordDialog.confirm_password) {
                 updatePassword(updatePasswordDialog.new_password);
               } else {
-                notification.showToast($translate.instant('toasts.password-not-match'));
+                notification.show(null, null, 'toasts.password-not-match');
               }
             };
           };
