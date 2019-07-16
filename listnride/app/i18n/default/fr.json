@@ -713,6 +713,13 @@
   },
   "toasts": {
     "update-profile-success": "Votre profil a été mis à jour",
+    "confirm-email-success": "Great, you've successfully confirmed your email address!",
+    "confirmation-successful": "Confirmation successful",
+    "change-successful": "Change successful",
+    "change-password-success": "Great, you've successfully changed your password!",
+    "password-not-match": "Passwords do not match",
+    "verification-code-error": "Error: The Verification Code seems to be invalid.",
+    "address-save-error": "The address could not be saved",
     "profile-verified": "Félicitations, votre profil a été vérifié!",
     "profile-updated": "La description est mise à jour",
     "error-upload-profile-picture": "Erreur lors du chargement de la photo de profil",

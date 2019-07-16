@@ -710,12 +710,19 @@
       "bike-rental": "Your bike rental",
       "choose-duration": "Choose your rental duration",
       "pickup-time": "Pickup time",
-      "return-time": "Return time",
+      "return-time": "Return at",
       "intro-description": "Your booking gets safely processed by listnride, Europe's biggest bike rental platform."
     }
   },
   "toasts": {
     "update-profile-success": "Your profile has been successfully updated",
+    "confirm-email-success": "Great, you've successfully confirmed your email address!",
+    "confirmation-successful": "Confirmation successful",
+    "change-successful": "Change successful",
+    "change-password-success": "Great, you've successfully changed your password!",
+    "password-not-match": "Passwords do not match",
+    "verification-code-error": "Error: The Verification Code seems to be invalid.",
+    "address-save-error": "The address could not be saved",
     "profile-verified": "Congratulations, your profile was successfully verified!",
     "profile-updated": "Your description is updated.",
     "error-upload-profile-picture": "There was an error in uploading your profile picture",
@@ -1474,11 +1481,11 @@
     "invite-dialog": {
       "rider": {
         "header": "Did you enjoy the ride?",
-        "subheader": "Recommend your friends to listnride! We add € 10 for his first booking! And if your friend makes use of it, there is another €10 credit for you. A nice Win-Win!"
+        "subheader": "Recommend your friends to listnride! We add € 10 for their first booking! And if your friend makes use of it, there is another €10 credit for you. A nice Win-Win!"
       },
       "lister": {
         "header": "That was easy, right?",
-        "subheader": "Would you recommend us to your friends? We’ll add €10 for his first booking! And if your friend makes use of it, there is another 10€ credit for your next rental. A nice Win-Win!"
+        "subheader": "Would you recommend us to your friends? We’ll add €10 for their first booking! And if your friend makes use of it, there is another 10€ credit for your next rental. A nice Win-Win!"
       }
     },
     "invitations": {

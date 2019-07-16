@@ -630,7 +630,7 @@
       "questions": "¿Tienes preguntas con respecto a la reserva de una bicicleta?",
       "call-us": "Llámanos al\n<a href=\"tel:+49030120870330\">+49 (0)30 120870330</a> de\nlunes a viernes de 9-18hs o escríbenos un \n<a href=\"mailto:contact@listnride.com\">correo electrónico</a>.",
       "email-us": "O escríbenos un correo electrónico",
-      "support": "Equipo de soporte de listnride"
+      "support": "listnride Support"
     },
     "sign-in": {
       "tab": "Inicio de sesión",
@@ -712,6 +712,13 @@
   },
   "toasts": {
     "update-profile-success": "Tu perfil se ha actualizado con éxito",
+    "confirm-email-success": "Great, you've successfully confirmed your email address!",
+    "confirmation-successful": "Confirmation successful",
+    "change-successful": "Change successful",
+    "change-password-success": "Great, you've successfully changed your password!",
+    "password-not-match": "Passwords do not match",
+    "verification-code-error": "Error: The Verification Code seems to be invalid.",
+    "address-save-error": "The address could not be saved",
     "profile-verified": "¡Felicidades, tu perfil es verificado!",
     "profile-updated": "Tu descripción está actualizada.",
     "error-upload-profile-picture": "Hubo un error al subir tu foto de perfil.",
