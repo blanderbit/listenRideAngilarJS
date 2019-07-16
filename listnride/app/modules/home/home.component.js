@@ -31,11 +31,15 @@ angular.module('home',[]).component('home', {
               if (updatePasswordDialog.new_password === updatePasswordDialog.confirm_password) {
                 updatePassword(updatePasswordDialog.new_password)
               } else {
-                $mdToast.show(
-                  $mdToast.simple()
-                    .textContent('Passwords do not match')
-                    .hideDelay(4000)
-                    .position('top center')
+                $translate('password-not-match').then(
+                  function (translation) {
+                    $mdToast.show(
+                      $mdToast.simple()
+                        .textContent(translation)
+                        .hideDelay(4000)
+                        .position('top center')
+                    );
+                  }
                 );
               }
             }
@@ -65,14 +69,18 @@ angular.module('home',[]).component('home', {
 
             api.post('/change_password', password_data).then(
               function (success) {
-                $mdDialog.show(
-                  $mdDialog.alert()
-                    .parent(angular.element(document.body))
-                    .clickOutsideToClose(true)
-                    .title('Change successful')
-                    .textContent('Great, you\'ve successfully changed your password!')
-                    .ariaLabel('Change Successful')
-                    .ok('Ok')
+                $translate(['toasts.change-password-success', 'toasts.change-successful']).then(
+                  function (translations) {
+                    $mdDialog.show(
+                      $mdDialog.alert()
+                        .parent(angular.element(document.body))
+                        .clickOutsideToClose(true)
+                        .title(translations['toasts.change-successful'])
+                        .textContent(translations['toasts.change-password-success'])
+                        .ariaLabel(translations['toasts.change-successful'])
+                        .ok('Ok')
+                    );
+                  }
                 );
               },
               function (error) {
@@ -102,14 +110,18 @@ angular.module('home',[]).component('home', {
 
           api.post('/confirm_email', data).then(
             function (success) {
-              $mdDialog.show(
-                $mdDialog.alert()
-                .parent(angular.element(document.body))
-                .clickOutsideToClose(true)
-                .title('Confirmation successful')
-                .textContent('Great, you\'ve successfully confirmed your email address!')
-                .ariaLabel('Confirmation Successful')
-                .ok('Ok')
+              $translate(['toasts.confirmation-successful', 'toasts.confirm-email-success']).then(
+                function (translations) {
+                  $mdDialog.show(
+                    $mdDialog.alert()
+                      .parent(angular.element(document.body))
+                      .clickOutsideToClose(true)
+                      .title(translations['toasts.confirmation-successful'])
+                      .textContent(translations['toasts.confirm-email-success'])
+                      .ariaLabel(translations['toasts.confirmation-successful'])
+                      .ok('Ok')
+                  );
+                }
               );
             },
             function (error) {
