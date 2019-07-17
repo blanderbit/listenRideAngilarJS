@@ -2674,6 +2674,9 @@ button.md-primary.md-cancel-button {
 /*-----------------------------------------------------------------------------------*/
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
+.lnr-frankfurt-city-triathlon #hero-shot {
+  background-position: 50% 100%;
+}
 
 .lnr-msr #hero-shot {
   background-position: 30% 90%;
