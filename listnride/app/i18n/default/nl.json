@@ -231,6 +231,10 @@
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
       "meta-description": "Rent a road bike online easy and secure with listnride for the Mecklenburger Seenrunde 2020. Choose the perfect bike that fits your needs."
     },
+    "frankfurt-city-triathlon": {
+      "meta-title": "Dummy text",
+      "meta-description": "Dummy text"
+    },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
       "description": "Was: <b>Radfahren neu entdecken<b>  |  Where: <b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
@@ -708,13 +712,13 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
-    "confirm-email-success": "Great, you've successfully confirmed your email address!",
-    "confirmation-successful": "Confirmation successful",
-    "change-successful": "Change successful",
-    "change-password-success": "Great, you've successfully changed your password!",
-    "password-not-match": "Passwords do not match",
-    "verification-code-error": "Error: The Verification Code seems to be invalid.",
-    "address-save-error": "The address could not be saved",
+    "confirm-email-success": "Bedankt, je hebt je emailadres bevestigd!",
+    "confirmation-successful": "Bevestiging succesvol",
+    "change-successful": "De wijzigingen zijn opgeslagen.",
+    "change-password-success": "Bedankt, je hebt met succes je wachtwoord veranderd!",
+    "password-not-match": "Wachtwoorden komen niet overeen",
+    "verification-code-error": "Fout: de verificatiecode is ongeldig.",
+    "address-save-error": "Het adres kon niet worden opgeslagen",
     "profile-verified": "Gefeliciteerd, je profiel is nu geverifieerd!",
     "profile-updated": "Beschrijving is bijgewerkt",
     "error-upload-profile-picture": "Fout bij uploaden profielfoto",
