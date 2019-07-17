@@ -46,6 +46,8 @@ import './modules/shared/status-labels/status-labels.component.js';
 import './modules/booking-calendar/booking-calendar.service.js';
 import './modules/booking-calendar/booking-calendar.component.js';
 import './modules/shared/paypal-checkout-button/paypal-checkout-button.component.js';
+import './modules/shared/breadcrumbs/breadcrumbs.component.js';
+
 // core services
 import './services/base64/base64.service.js';
 import './services/authentication/authentication.service.js';
