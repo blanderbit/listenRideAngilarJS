@@ -17,11 +17,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
         cityLanding.breadcrumbs = [
         {
           title:'Home',
-          link: 'home'
+          route: 'home'
         },
         {
-          title:'Berlin',
-          link: `cityLanding({ city: '${$stateParams.city}'})`
+          title:`Rent bikes in ${cityLanding.city}`,
+          route: `cityLanding({ city: '${$stateParams.city}'})`
         }];
 
         bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
