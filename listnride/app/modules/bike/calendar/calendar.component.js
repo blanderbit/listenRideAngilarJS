@@ -719,14 +719,7 @@ angular.module('bike').component('calendar', {
     }
 
     function bikeNotAvailable(date) {
-      var result = false;
-      _.forEach(calendar.bikeAvailabilities, function(slot) {
-        var start_at = moment(slot.start_date).subtract(1, 'd');
-        var end_at = moment(slot.start_date).add(slot.duration, 'd');
-        if (result) return result;
-        result = result || moment(date).isBetween(start_at, end_at, null, '[]') // all inclusive
-      });
-      return result
+      return calendarHelper.bikeNotAvailable(date, calendar.bikeAvailabilities);
     }
 
     function openingHoursAvailable() {

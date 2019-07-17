@@ -155,16 +155,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
     }
 
     function bikeNotAvailable(date) {
-      date.setHours(0, 0, 0, 0);
-      var result = false;
-      _.forEach(vm.disabledDates, function (slot) {
-        if (!slot.start_at) {
-          slot.start_at = moment(new Date(slot.start_date).setHours(0, 0, 0, 0));
-        }
-        var end_at = slot.hasOwnProperty('end_at') ? slot.end_at : moment(slot.start_date).add(slot.duration, 'd');
-        result = result || moment(date).isBetween(slot.start_at, end_at, null, '[]') // all inclusive
-      });
-      return result;
+      return calendarHelper.bikeNotAvailable(date, vm.disabledDates);
     }
 
     // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date
