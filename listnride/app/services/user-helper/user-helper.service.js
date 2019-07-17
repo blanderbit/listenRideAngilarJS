@@ -4,7 +4,7 @@ angular.module('listnride')
   .factory('userHelper', function () {
 
     let hasTimeSlots = (userData) => _.has(userData, 'business.time_slots');
-    let insuranceEnabled = (userData) => _.get(userData, 'business.insurance_enabled');
+    let insuranceEnabled = (userData) => (userData.has_business || userData.business) ? _.get(userData, 'business.insurance_enabled') : true;
     let getTimeSlots = (userData) => _.get(userData, 'business.time_slots');
 
     return {
