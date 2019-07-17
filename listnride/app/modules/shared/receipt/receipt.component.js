@@ -66,6 +66,11 @@ angular.module('receipt', []).component('receipt', {
         receipt.subtotalDiscounted = prices.subtotalDiscounted;
         receipt.lnrFee = prices.serviceFee + prices.basicCoverage;
         receipt.premiumCoverage = prices.premiumCoverage;
+
+        receipt.specialPriceLowerThanBase = prices.subtotalDiscounted < prices.subtotal;
+        receipt.subtotalDiscounted = prices.subtotalDiscounted;
+        receipt.specialPriceDaily = prices.subtotalDiscounted / receipt.durationDays;
+
         receipt.total = Math.max(prices.total - receipt.balance, 0);
       }
 
