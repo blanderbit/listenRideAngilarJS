@@ -818,6 +818,7 @@ angular.module('bike').component('calendar', {
         var invalidDays = countInvalidDays(startDate, endDate);
         calendar.duration = date.duration(startDate, endDate, invalidDays);
         calendar.durationDays = date.durationDays(startDate, endDate);
+        calendar.durationDaysNew = date.durationDaysNew(startDate, endDate);
         if (calendar.hasTimeSlots && calendar.durationDays <= 1) {
           calendar.isHalfDayBook = price.checkHalfDayEnabled(startDate, endDate, calendar.timeslots);
           calendar.halfDayPrice = price.getPriceFor('1/2 day', calendar.prices);
@@ -865,6 +866,7 @@ angular.module('bike').component('calendar', {
       } else {
         calendar.duration = date.duration(undefined, undefined, 0);
         calendar.durationDays = 0;
+        calendar.durationDaysNew = 0;
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;
