@@ -27,6 +27,9 @@
   </div>
   <br><br><br>
   <div class="content section" layout-padding>
+    <div layout="row"layout-padding >
+      <breadcrumbs breadcrumbs-data="cityLanding.breadcrumbs"></breadcrumbs>
+    </div>
     <div layout="row" layout-wrap layout-padding>
       <bike-card ng-repeat="bike in cityLanding.data.bikes" seo="true" bike="bike" show-labels="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
       </bike-card>
