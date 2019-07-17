@@ -10,6 +10,11 @@ angular.module('listnride').factory('date', ['$translate',
       durationDays: function(startDate, endDate) {
         return calculateDays(startDate, endDate);
       },
+      durationDaysNew: function(startDate, endDate) {
+        let m_startDate = moment(startDate);
+        let m_endDate = moment(endDate);
+        return m_endDate.diff(m_startDate, 'days');
+      },
       durationDaysPretty: function(startDate, endDate) {
         var days = calculateDays(startDate, endDate);
         var weeks = (days / 7) | 0;

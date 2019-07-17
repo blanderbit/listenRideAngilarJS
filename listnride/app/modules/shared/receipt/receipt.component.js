@@ -17,10 +17,7 @@ angular.module('receipt', []).component('receipt', {
     insuranceAllowed: '<',
     timeslots: '<'
   },
-  controller: [
-      'date',
-      'price',
-    function ReceiptController(date, price) {
+  controller: function ReceiptController(date, price) {
       var receipt = this;
       receipt.balance = 0;
       receipt.isHalfDayBook = false;
@@ -69,6 +66,11 @@ angular.module('receipt', []).component('receipt', {
         receipt.subtotalDiscounted = prices.subtotalDiscounted;
         receipt.lnrFee = prices.serviceFee + prices.basicCoverage;
         receipt.premiumCoverage = prices.premiumCoverage;
+
+        receipt.specialPriceLowerThanBase = prices.subtotalDiscounted < prices.subtotal;
+        receipt.subtotalDiscounted = prices.subtotalDiscounted;
+        receipt.specialPriceDaily = prices.subtotalDiscounted / receipt.durationDays;
+
         receipt.total = Math.max(prices.total - receipt.balance, 0);
       }
 
@@ -85,5 +87,4 @@ angular.module('receipt', []).component('receipt', {
         return _.includes(["DE", "AT"], receipt.countryCode);
       }
     }
-  ]
 });

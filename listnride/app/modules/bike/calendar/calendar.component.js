@@ -832,8 +832,13 @@ angular.module('bike').component('calendar', {
           timeslots: calendar.hasTimeSlots ? calendar.timeslots : []
         });
         calendar.subtotal = prices.subtotal;
+        // show discount only if special price is lower than base price
+        calendar.specialPriceLowerThanBase = prices.subtotalDiscounted < prices.subtotal;
+        calendar.subtotalDiscounted = prices.subtotalDiscounted;
         calendar.discount = prices.subtotal - prices.subtotalDiscounted;
         calendar.discountRelative = calendar.discount / calendar.durationDays;
+        calendar.specialPriceDaily = prices.subtotalDiscounted / calendar.durationDays;
+
         calendar.lnrFee = prices.serviceFee + prices.basicCoverage;
         calendar.total = prices.total;
 
@@ -859,6 +864,7 @@ angular.module('bike').component('calendar', {
 
       } else {
         calendar.duration = date.duration(undefined, undefined, 0);
+        calendar.durationDays = 0;
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;
