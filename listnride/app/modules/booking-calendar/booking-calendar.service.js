@@ -224,10 +224,8 @@ angular
 
     function parseAvailabilities({ id, availabilities }) {
       return availabilities.reduce((acc, availability) => {
-        const { start_date, duration, active } = availability;
-        if (!active) {
-          return acc;
-        }
+        const { start_date, duration } = availability;
+
         acc.push(
           getEvent({
             resourceId: id,
