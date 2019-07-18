@@ -233,6 +233,7 @@ angular
             resourceId: id,
             startDate: DateHelper.format(new Date(start_date), 'YYYY-MM-DD'), // do not specify timezone Z
             duration: duration + 1,
+            durationUnit: 's',
             isNotAvailable: true
           })
         );
