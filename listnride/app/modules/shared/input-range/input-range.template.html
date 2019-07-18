@@ -3,12 +3,12 @@
     flex-xs="100"
     flex md-no-float
     class="lnr-m-0 js-datapicker"
-    ng-class="{'md-input-has-value': vm.data.start_date}">
+    ng-class="{'md-input-has-value': vm.start_at}">
 
     <input
       ng-if="!vm.isSingle"
       type="text"
-      value="{{vm.data.start_date | amDateFormat:'DD.MM.YYYY'}}"
+      value="{{vm.start_at}}"
       placeholder="{{ 'availability.start-from' | translate }}"
       readonly style="padding: 0 55px 0 20px;">
     </input>
@@ -16,7 +16,7 @@
     <input
       ng-if="vm.isSingle"
       type="text"
-      value="{{vm.data.start_date | amDateFormat:'DD.MM.YYYY' | addText:' - '}}{{vm.data.start_date | amAdd : vm.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}"
+      value="{{vm.start_at | addText:' - '}}{{ vm.end_at}}"
       placeholder="{{ 'availability.choose-range' | translate }}"
       readonly
       style="padding: 0 55px 0 20px; min-width: 235px; color: rgba(85, 85, 85, 1.0) !important;">
@@ -47,7 +47,7 @@
 
     <input
       type="text"
-      value="{{vm.data.start_date | amAdd : vm.data.duration : 'days' | amDateFormat:'DD.MM.YYYY'}}"
+      value="{{ vm.end_at }}"
       placeholder="{{ 'availability.end-at' | translate }}"
       readonly
       style="padding: 0 55px 0 20px;">
