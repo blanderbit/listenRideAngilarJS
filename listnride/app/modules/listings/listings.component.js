@@ -180,15 +180,15 @@ angular.module('listings', []).component('listings', {
           }
 
           function takeDisabledDates() {
-            var disabled = [];
+            let disabled = [];
             _.forEach(availabilityDialog.inputs, function (item) {
               if (!item.start_date) return;
-              var dateMoment = moment(new Date(item.start_date).setHours(0, 0, 0, 0));
-              if (isNaN(dateMoment)) return;
+
               disabled.push({
-                'start_at': dateMoment,
-                'end_at': dateMoment.clone().add(item.duration, 'd')
+                'start_date': item.start_date,
+                'duration': item.duration
               });
+
             });
             return disabled;
           }
