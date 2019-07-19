@@ -8,35 +8,6 @@
   </div>
   <md-dialog-content class="" layout="column">
     <div class="md-dialog-content" layout="column">
-      <!-- <form ng-cloak name="availabilityForm" novalidate>
-        <div class="availability__list">
-          <div layout="row" layout-align="center center" ng-repeat="input in bikeAvailability.inputs">
-            <span class="lnr-btn-placeholder"></span>
-            <input-range lnr-date-picker data="input" disabled-dates="bikeAvailability.disabledDates"
-              requests="bikeAvailability.requests" date-on-change="bikeAvailability.changeDate"
-              date-on-clear="bikeAvailability.changeDate">
-            </input-range>
-            <md-button
-              ng-if="bikeAvailability.inputs.length > 1 || bikeAvailability.inputs.length === 1 && input.start_date"
-              class="md-icon-button md-warn" ng-click="bikeAvailability.removeInput($index)">
-              <md-icon md-font-icon="fa-times" class="fa fa--lh20"></md-icon>
-            </md-button>
-            <span ng-if="bikeAvailability.inputs.length === 1 && !input.start_date"
-              class="lnr-btn-placeholder"></span>
-          </div>
-        </div>
-        <div layout="row" layout-align="center center" layout-margin>
-          <a class="lnr-link"
-            ng-click="bikeAvailability.addInput()">{{ 'availability.add-another-date' | translate }}</a>
-        </div>
-        <div layout="row" layout-align="center center" layout-margin>
-          <md-button type="submit" class="md-accent md-raised md-confirm-button md-primary"
-            ng-click="bikeAvailability.save(availabilityForm)">
-            <span ng-hide="!bikeAvailability.isChanged">{{ 'availability.submit-btn-save' | translate }}</span>
-            <span ng-hide="bikeAvailability.isChanged">{{ 'availability.submit-btn' | translate }}</span>
-          </md-button>
-        </div>
-      </form> -->
       <input-range
         lnr-date-picker
         lnr-single-input

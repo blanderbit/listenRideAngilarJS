@@ -530,7 +530,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       // TODO: make them with translations
       bikeAvailability.reasonOptions = [
-        'booked in store',
+        'Booked in store',
         'Service / Repair',
         'Event / other'
       ]
