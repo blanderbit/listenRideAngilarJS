@@ -256,7 +256,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                     $mdDialog.show({
                       controller: BikeAvailabilityController,
                       controllerAs: 'bikeAvailability',
-                      templateUrl: 'app/modules/booking-calendar/booking-calendar-availability-dialog.html',
+                      templateUrl: 'app/modules/booking-calendar/booking-calendar-availability-dialog.template.html',
                       parent: angular.element(document.body),
                       targetEvent: event,
                       openFrom: angular.element(document.body),
