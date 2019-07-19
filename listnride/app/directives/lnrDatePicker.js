@@ -51,11 +51,11 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
   }, false);
 
   function updateData(date1, date2) {
-    date1 = moment(date1);
+    date1 = moment.utc([date1.getFullYear(), date1.getMonth(), date1.getDate()]);
     // if user doesn't pick end date - duration will be 0
-    date2 = date2 ? moment(date2) : date1;
+    date2 = date2 ? moment.utc([date2.getFullYear(), date2.getMonth(), date2.getDate()]): date1;
 
-    var duration = date1.diff(date2, 'days');
+    var duration = date1.diff(date2, 'seconds');
     var startDate = duration > 0 ? date2 : date1;
     var newData = {
       'start_date': startDate.format('YYYY-MM-DD'),
@@ -66,7 +66,9 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
     angular.extend(vm.data, newData);
 
     if (typeof vm.dateOnChange == 'function') vm.dateOnChange();
-    $scope.$apply();
+    _.defer(function () {
+      $scope.$apply();
+    });
   }
 
   function clearData() {
@@ -145,26 +147,17 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       if (vm.data.start_date) {
         // set range to datepicker with datepicker special method
         // setDateRange({String}, {String})
-        var startDate = moment(vm.data.start_date);
-        var lastDate = startDate.clone().add(vm.data.duration, 'd');
+        var startDate = moment.utc(vm.data.start_date);
+        var lastDate = startDate.clone().add(vm.data.duration, 'seconds');
         $scope.el.dateRange
-          .setDateRange(startDate._d, lastDate._d, true);
+          .setDateRange(startDate.format(), lastDate.format(), true);
       } else {
         vm.clearCalendar();
       }
     }
 
     function bikeNotAvailable(date) {
-      date.setHours(0, 0, 0, 0);
-      var result = false;
-      _.forEach(vm.disabledDates, function (slot) {
-        if (!slot.start_at) {
-          slot.start_at = moment(new Date(slot.start_date).setHours(0, 0, 0, 0));
-        }
-        var end_at = slot.hasOwnProperty('end_at') ? slot.end_at : moment(slot.start_date).add(slot.duration, 'd');
-        result = result || moment(date).isBetween(slot.start_at, end_at, null, '[]') // all inclusive
-      });
-      return result;
+      return calendarHelper.bikeNotAvailable(date, vm.disabledDates);
     }
 
     // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date

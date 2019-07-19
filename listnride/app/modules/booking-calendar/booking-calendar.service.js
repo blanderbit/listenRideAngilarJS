@@ -224,16 +224,17 @@ angular
 
     function parseAvailabilities({ id, availabilities }) {
       return availabilities.reduce((acc, availability) => {
-        const { start_date, duration, active } = availability;
-        if (!active) {
-          return acc;
-        }
+        const { start_date, duration, reason, comment } = availability;
+
         acc.push(
           getEvent({
             resourceId: id,
             startDate: DateHelper.format(new Date(start_date), 'YYYY-MM-DD'), // do not specify timezone Z
             duration: duration + 1,
-            isNotAvailable: true
+            durationUnit: 's',
+            isNotAvailable: true,
+            reason: reason,
+            comment: comment
           })
         );
         return acc;
@@ -293,7 +294,9 @@ angular
           clusterEventId: null,
           duration: null,
           rider: null,
-          contact: null
+          contact: null,
+          reason: null,
+          comment: null
         },
         eventData
       );

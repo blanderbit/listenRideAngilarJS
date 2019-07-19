@@ -719,14 +719,7 @@ angular.module('bike').component('calendar', {
     }
 
     function bikeNotAvailable(date) {
-      var result = false;
-      _.forEach(calendar.bikeAvailabilities, function(slot) {
-        var start_at = moment(slot.start_date).subtract(1, 'd');
-        var end_at = moment(slot.start_date).add(slot.duration, 'd');
-        if (result) return result;
-        result = result || moment(date).isBetween(start_at, end_at, null, '[]') // all inclusive
-      });
-      return result
+      return calendarHelper.bikeNotAvailable(date, calendar.bikeAvailabilities);
     }
 
     function openingHoursAvailable() {
@@ -818,6 +811,7 @@ angular.module('bike').component('calendar', {
         var invalidDays = countInvalidDays(startDate, endDate);
         calendar.duration = date.duration(startDate, endDate, invalidDays);
         calendar.durationDays = date.durationDays(startDate, endDate);
+        calendar.durationDaysNew = date.durationDaysNew(startDate, endDate);
         if (calendar.hasTimeSlots && calendar.durationDays <= 1) {
           calendar.isHalfDayBook = price.checkHalfDayEnabled(startDate, endDate, calendar.timeslots);
           calendar.halfDayPrice = price.getPriceFor('1/2 day', calendar.prices);
@@ -832,8 +826,13 @@ angular.module('bike').component('calendar', {
           timeslots: calendar.hasTimeSlots ? calendar.timeslots : []
         });
         calendar.subtotal = prices.subtotal;
+        // show discount only if special price is lower than base price
+        calendar.specialPriceLowerThanBase = prices.subtotalDiscounted < prices.subtotal;
+        calendar.subtotalDiscounted = prices.subtotalDiscounted;
         calendar.discount = prices.subtotal - prices.subtotalDiscounted;
         calendar.discountRelative = calendar.discount / calendar.durationDays;
+        calendar.specialPriceDaily = prices.subtotalDiscounted / calendar.durationDays;
+
         calendar.lnrFee = prices.serviceFee + prices.basicCoverage;
         calendar.total = prices.total;
 
@@ -859,6 +858,8 @@ angular.module('bike').component('calendar', {
 
       } else {
         calendar.duration = date.duration(undefined, undefined, 0);
+        calendar.durationDays = 0;
+        calendar.durationDaysNew = 0;
         calendar.subtotal = 0;
         calendar.lnrFee = 0;
         calendar.total = 0;

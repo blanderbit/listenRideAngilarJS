@@ -122,12 +122,30 @@ angular.module('listnride')
       return used_part_day_slots;
     }
 
+    function bikeNotAvailable(date, bikeAvailabilities) {
+      let result = false;
+      _.forEach(bikeAvailabilities, function (slot) {
+        let start_at = moment.utc(slot.start_date);
+        let end_at = start_at.clone().add(slot.duration, 'seconds');
+
+        // we should remove utc from this Date object before
+        let moment_date = moment.utc([date.getFullYear(), date.getMonth(), date.getDate()]);
+
+
+        if (result) return result;
+        result = result || moment_date.isBetween(start_at, end_at, null, '[]') // all inclusive
+
+      });
+      return result
+    }
+
     return {
       isTimeAvailable,
       isDayAvailable,
       getInitHours,
       checkIsOpeningHoursEnabled,
       isTimeInTimeslots,
-      countTimeslots
+      countTimeslots,
+      bikeNotAvailable
     };
   });

@@ -14,6 +14,15 @@ angular.module('cityLanding',[]).component('cityLanding', {
         cityLanding.loading = true;
         cityLanding.categories = [];
         cityLanding.headerTranslation = 'seo.header';
+        cityLanding.breadcrumbs = [
+        {
+          title:'Home',
+          route: 'home'
+        },
+        {
+          title:`Rent bikes in ${cityLanding.city}`,
+          route: `cityLanding({ city: '${$stateParams.city}'})`
+        }];
 
         bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
           // without transport category

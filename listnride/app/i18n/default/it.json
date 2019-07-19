@@ -2,6 +2,7 @@
   "shared": {
     "learn-more": "Per saperne di più",
     "request": "Request",
+    "non-availability-type": "Tipo di indisponibilità ",
     "label_new": "Nuovo",
     "booking-calendar": "Calendario delle prenotazioni",
     "month": "Mese",
@@ -232,6 +233,10 @@
     "msr": {
       "meta-title": "Rent a road bike for MSR 2020 | listnride",
       "meta-description": "Rent a road bike online easy and secure with listnride for MSR 2020. Choose the perfect bike that fits your needs."
+    },
+    "frankfurt-city-triathlon": {
+      "meta-title": "Road bike rental for the Frankfurt City Triathlon | listnride",
+      "meta-description": "Rent a racing bike with listnride for the Frankfurt City Triathlon. Choose the perfect bike for your next race!"
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
@@ -708,6 +713,13 @@
   },
   "toasts": {
     "update-profile-success": "Il tuo profilo è stato aggiornato con successo.",
+    "confirm-email-success": "Great, you've successfully confirmed your email address!",
+    "confirmation-successful": "Confirmation successful",
+    "change-successful": "Change successful",
+    "change-password-success": "Great, you've successfully changed your password!",
+    "password-not-match": "Passwords do not match",
+    "verification-code-error": "Error: The Verification Code seems to be invalid.",
+    "address-save-error": "The address could not be saved",
     "profile-verified": "Congratulations, your profile was successfully verified!",
     "profile-updated": "Successfully updated description",
     "error-upload-profile-picture": "Error while uploading profile picture",

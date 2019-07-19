@@ -35,6 +35,7 @@ angular.module('listnride', [
   'statusLabels',
   'bookingCalendar',
   'paypalCheckoutButton',
+  'breadcrumbs',
   /* app_core_end */
 
   /* app_extras_start */
@@ -57,7 +58,6 @@ angular.module('listnride', [
   'cardgrid',
   'privacyBar',
   'faq',
-  'bookingCalendar',
   'brands',
   /* BRANDS_PAGE */
   'ampler-integration',
@@ -210,8 +210,8 @@ angular.module('listnride', [
     $translate.refresh();
   });
   $rootScope.location = $location;
+  $rootScope.lang = $translate.preferredLanguage();
   ngMeta.init();
-
   // TODO: check why we call this function here
   if (authentication.loggedIn && !_.isEmpty(authentication.userId())) {
     api.get('/users/' + authentication.userId()).then(

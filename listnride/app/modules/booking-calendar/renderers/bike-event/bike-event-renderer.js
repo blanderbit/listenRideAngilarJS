@@ -64,7 +64,8 @@ export function bikeEventRenderer({
   tplData.cls['is-narrow'] = Math.floor(tplData.width) <= 50;
 
   const html = `
-    <div class="event-name ellipsis">${isCluster ? name : rider}</div>
+    <div class="event-name ellipsis">${isCluster || !rider ? name : rider}</div>
+    ${eventRecord.reason ? eventRecord.reason : ''}
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
   `;
 

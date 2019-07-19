@@ -10,6 +10,12 @@ angular.module('listnride').factory('date', ['$translate',
       durationDays: function(startDate, endDate) {
         return calculateDays(startDate, endDate);
       },
+      durationDaysNew: function(startDate, endDate) {
+        // to count difference only by 'days' we need reset time there
+        let m_startDate = moment(startDate).startOf('day');
+        let m_endDate = moment(endDate).startOf('day');
+        return m_endDate.diff(m_startDate, 'days');
+      },
       durationDaysPretty: function(startDate, endDate) {
         var days = calculateDays(startDate, endDate);
         var weeks = (days / 7) | 0;

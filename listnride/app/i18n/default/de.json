@@ -2,6 +2,7 @@
   "shared": {
     "learn-more": "Mehr erfahren",
     "request": "Request",
+    "non-availability-type": "Art der Verfügbarkeit",
     "label_new": "Neu",
     "booking-calendar": "Buchungskalender",
     "month": "Monat",
@@ -235,6 +236,10 @@
     "msr": {
       "meta-title": "Miete ein Rennrad für die Mecklenburger Seenrunde 2020 | listnride",
       "meta-description": "Miete ein Rennrad für die Mecklenburger Seenrunde 2020 einfach, online und sicher auf listnride. Wähle das perfekte Rad für deine Bedürfnisse."
+    },
+    "frankfurt-city-triathlon": {
+      "meta-title": "Rennradverleih für den Frankfurt City Triathlon | listnride",
+      "meta-description": "Miete ein Rennrad über Listnride für den Frankfurter City Triathlon. Wähle das ideale Fahrrad für dein nächstes Rennen!"
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren ",
@@ -713,6 +718,13 @@
   },
   "toasts": {
     "update-profile-success": "Dein Profil wurde erfolgreich aktualisiert.",
+    "confirm-email-success": "Großartig, du hast erfolgreich deine E-Mail Adresse bestätigt!",
+    "confirmation-successful": "Bestätigung erfolgreich",
+    "change-successful": "Änderung erfolgreich",
+    "change-password-success": "Großartig, du hast erfolgreich dein Passwort geändert.",
+    "password-not-match": "Passwörter stimmen nicht überein",
+    "verification-code-error": "Fehler: der Verifizierungscode scheint ungültig zu sein.",
+    "address-save-error": "Die Adresse konnte nicht gespeichert werden",
     "profile-verified": "Glückwunsch, Dein Profil ist nun verifiziert!",
     "profile-updated": "Die Beschreibung wurde erfolgreich aktualisiert",
     "error-upload-profile-picture": "Fehler beim Hochladen des Profilbildes",
@@ -1457,7 +1469,7 @@
     "login": "Einloggen, um den Link zu sehen",
     "info-section": {
       "header": "Erhalte 10€ Guthaben, wenn einer deiner Freunde ein Rad bei listnride leiht oder sein Rad anbietet.",
-      "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade Sie ein Teil der Bikesharing Community zu werden!",
+      "subheader": "Du bist begeistert von listnride und findest, dass auch deine Freunde ein schönes Rad leihen sollten? Lade sie ein Teil der Bikesharing Community zu werden!",
       "invite-friends": "Freunde einladen",
       "community": "Teil der Community werden",
       "earn-credit": "Belohnung erhalten"

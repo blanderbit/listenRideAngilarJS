@@ -17,10 +17,7 @@ angular.module('receipt', []).component('receipt', {
     insuranceAllowed: '<',
     timeslots: '<'
   },
-  controller: [
-      'date',
-      'price',
-    function ReceiptController(date, price) {
+  controller: function ReceiptController(date, price) {
       var receipt = this;
       receipt.balance = 0;
       receipt.isHalfDayBook = false;
@@ -58,7 +55,7 @@ angular.module('receipt', []).component('receipt', {
         receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
 
-        if (receipt.startDate && receipt.durationDays <= 1 && receipt.timeslots.length) {
+        if (receipt.startDate) {
           receipt.isHalfDayBook = price.checkHalfDayEnabled(receipt.startDate, receipt.endDate, receipt.timeslots);
           receipt.halfDayPrice = price.getPriceFor('1/2 day', receipt.prices);
         }
@@ -69,6 +66,11 @@ angular.module('receipt', []).component('receipt', {
         receipt.subtotalDiscounted = prices.subtotalDiscounted;
         receipt.lnrFee = prices.serviceFee + prices.basicCoverage;
         receipt.premiumCoverage = prices.premiumCoverage;
+
+        receipt.specialPriceLowerThanBase = prices.subtotalDiscounted < prices.subtotal;
+        receipt.subtotalDiscounted = prices.subtotalDiscounted;
+        receipt.specialPriceDaily = prices.subtotalDiscounted / receipt.durationDays;
+
         receipt.total = Math.max(prices.total - receipt.balance, 0);
       }
 
@@ -85,5 +87,4 @@ angular.module('receipt', []).component('receipt', {
         return _.includes(["DE", "AT"], receipt.countryCode);
       }
     }
-  ]
 });

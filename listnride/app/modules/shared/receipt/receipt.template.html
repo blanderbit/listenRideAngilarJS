@@ -16,7 +16,8 @@
     <div layout="row" layout-align="space-between center">
       <div layout="row" layout-align="start center">
         <span ng-if="receipt.durationDays >= 1 && !receipt.isHalfDayBook">
-          {{receipt.durationDays}} {{ 'shared.days' | translate }} x {{ receipt.prices[0].price | currency:"€":0 }}
+          {{receipt.durationDays}} {{ 'shared.days' | translate }} x
+          {{ receipt.specialPriceLowerThanBase ? receipt.prices[0].price : receipt.specialPriceDaily  | currency:"€":0 }}
         </span>
         <span ng-if="receipt.durationDays >= 1 && receipt.isHalfDayBook">
           {{ 'list.half-day-price' | translate }}
@@ -28,10 +29,10 @@
           <md-tooltip md-direction="right"><span translate="calendar.info-subtotal"></span></md-tooltip>
         </div>
       </div>
-      <span>{{ receipt.subtotal | currency:"€":2 }}</span>
+      <span>{{ receipt.specialPriceLowerThanBase ? receipt.subtotal : receipt.subtotalDiscounted | currency:"€":2 }}</span>
     </div>
 
-    <div layout="row" layout-align="space-between center" ng-if="receipt.discount">
+    <div layout="row" layout-align="space-between center" ng-if="receipt.discount && receipt.specialPriceLowerThanBase">
       <div class="lnr-dark-green-text" layout="row" layout-align="start center">
         {{ 'shared.discount' | translate }} {{receipt.durationDays}} {{ 'shared.days' | translate }} x {{ receipt.discountRelative | currency:"€":2 }}
         <md-icon class="lnr-icn-xs md-color-black" md-svg-src="app/assets/ui_icons/icn_info.svg"></md-icon>

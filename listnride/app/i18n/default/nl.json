@@ -2,6 +2,7 @@
   "shared": {
     "learn-more": "Meer info",
     "request": "Request",
+    "non-availability-type": "Klassificering",
     "label_new": "Nieuw",
     "booking-calendar": "Boekingskalender",
     "month": "Maand",
@@ -230,6 +231,10 @@
     "msr": {
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
       "meta-description": "Rent a road bike online easy and secure with listnride for the Mecklenburger Seenrunde 2020. Choose the perfect bike that fits your needs."
+    },
+    "frankfurt-city-triathlon": {
+      "meta-title": "Road bike rental for the Frankfurt City Triathlon | listnride",
+      "meta-description": "Rent a racing bike with listnride for the Frankfurt City Triathlon. Choose the perfect bike for your next race!"
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
@@ -708,6 +713,13 @@
   },
   "toasts": {
     "update-profile-success": "Je profiel is geactualiseerd.",
+    "confirm-email-success": "Bedankt, je hebt je emailadres bevestigd!",
+    "confirmation-successful": "Bevestiging succesvol",
+    "change-successful": "De wijzigingen zijn opgeslagen.",
+    "change-password-success": "Bedankt, je hebt met succes je wachtwoord veranderd!",
+    "password-not-match": "Wachtwoorden komen niet overeen",
+    "verification-code-error": "Fout: de verificatiecode is ongeldig.",
+    "address-save-error": "Het adres kon niet worden opgeslagen",
     "profile-verified": "Gefeliciteerd, je profiel is nu geverifieerd!",
     "profile-updated": "Beschrijving is bijgewerkt",
     "error-upload-profile-picture": "Fout bij uploaden profielfoto",

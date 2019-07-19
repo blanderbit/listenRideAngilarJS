@@ -117,13 +117,15 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
   `;
 }
 
-function notAvailableEventPopupRenderer({ translations, getters }) {
+function notAvailableEventPopupRenderer({ translations, getters, eventRecord }) {
   return `
     <header class="bike-event-popup__header">
       ${translations['booking-calendar.event.not-available-header']}
     </header>
     <p class="bike-event-popup__description">
-      ${translations['booking-calendar.event.not-available-text']}
+      ${eventRecord.reason ? 'Reason: ' + eventRecord.reason : ''}
+      <br>
+      ${eventRecord.comment ? eventRecord.comment : translations['booking-calendar.event.not-available-text']}
     </p>
     <a
       class="bike-event-popup__link"
@@ -154,7 +156,8 @@ export function bikeEventPopupRenderer({ eventRecord, translations, getters }) {
   if (isNotAvailable) {
     return notAvailableEventPopupRenderer({
       translations,
-      getters
+      getters,
+      eventRecord
     });
   }
 }

@@ -98,7 +98,7 @@
 <!-- END EVENT CALENDAR -->
 
 <div
-  ng-if="calendar.startDate && calendar.durationDays <= 1 && calendar.hasTimeSlots"
+  ng-if="calendar.startDate && calendar.durationDaysNew == 0 && calendar.hasTimeSlots"
   layout="column"
   layout-padding>
   <md-divider class="lnr-p-0 lnr-mh"></md-divider>
@@ -218,7 +218,8 @@
       <div layout="row" layout-align="space-between center">
         <div layout="row" layout-align="start center">
           <span ng-if="calendar.durationDays >= 1 && !calendar.isHalfDayBook">
-            {{calendar.durationDays}} {{ 'shared.days' | translate }} x {{ calendar.prices[0].price | currency:"€":0 }}
+            {{calendar.durationDays}} {{ 'shared.days' | translate }} x
+            {{ calendar.specialPriceLowerThanBase ? calendar.prices[0].price : calendar.specialPriceDaily  | currency:"€":0 }}
           </span>
           <span ng-if="calendar.durationDays >= 1 && calendar.isHalfDayBook">
             {{ 'list.half-day-price' | translate }}
@@ -229,10 +230,10 @@
             <md-tooltip md-direction="right"><span translate="calendar.info-subtotal"></span></md-tooltip>
           </div>
         </div>
-        <div>{{ calendar.subtotal | currency:"€":2 }}</div>
+        <div>{{ calendar.specialPriceLowerThanBase ? calendar.subtotal : calendar.subtotalDiscounted | currency:"€":2 }}</div>
       </div>
 
-      <div layout="row" layout-align="space-between center" ng-if="calendar.discount">
+      <div layout="row" layout-align="space-between center" ng-if="calendar.discount && calendar.specialPriceLowerThanBase">
         <div class="lnr-dark-green-text" layout="row" layout-align="start center">
           {{ 'shared.discount' | translate }} {{calendar.durationDays}} {{ 'shared.days' | translate }} x {{ calendar.discountRelative | currency:"€":2 }}
           <div>

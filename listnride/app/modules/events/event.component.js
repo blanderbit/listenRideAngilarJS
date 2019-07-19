@@ -35,7 +35,8 @@ angular.module('event', []).component('event', {
           'radfahren-neu-entdecken-eschborn': '/rides?family=37&zero=true',
           'radfahren-neu-entdecken-kassel': '/rides?family=38&zero=true',
           'radfahren-neu-entdecken-hofheim': '/rides?family=39&zero=true',
-          'msr': getRequestUrl('30', 'Neubrandenburg, Deutschland', '', '')
+          'msr': getRequestUrl('30', 'Neubrandenburg, Deutschland', '', ''),
+          'frankfurt-city-triathlon': getRequestUrl('30', 'Frankfurt am Main', '', '2019-08-04')
 
 
           // CUSTOM DESIGN AND OLD PAGES

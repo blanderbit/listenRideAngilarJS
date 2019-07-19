@@ -201,7 +201,12 @@ angular.module('booking', [])
         if (booking.dateRange.start_date) {
           var startDate = new Date(booking.dateRange.start_date);
           booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
-          booking.endDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate() + booking.dateRange.duration, 18, 0, 0);
+
+          booking.endDate = moment.utc([startDate.getFullYear(), startDate.getMonth(), startDate.getDate()]);
+          booking.endDate = booking.endDate.add(+booking.dateRange.duration, 'seconds').hours(18);
+          booking.endDate = booking.endDate.format();
+          booking.endDate = new Date(booking.endDate);
+
           setInitHours();
           updatePrices();
           booking.isDateValid = validDates();

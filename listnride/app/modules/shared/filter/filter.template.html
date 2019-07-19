@@ -13,7 +13,7 @@
     </span>
     <span ng-if="filter.currentDate.start_date && filter.currentDate.duration > 0">
       {{ filter.initialValues.date.start_date | amDateFormat:'DD MMMM' | addText:' - '}}
-      {{ filter.initialValues.date.start_date | amAdd : filter.currentDate.duration : 'days' | amDateFormat:'DD MMMM'}}
+      {{ filter.initialValues.date.start_date | amAdd : filter.currentDate.duration : 'seconds' | amDateFormat:'DD MMMM'}}
     </span>
 
   </md-button>

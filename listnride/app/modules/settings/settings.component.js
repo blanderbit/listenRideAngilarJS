@@ -386,12 +386,7 @@ angular.module('settings',[])
         // lowercase and replace all spaces in string to dash sign and concat with path
         // Incorrect Old Password, toast -> toast.incorrect-old-password
         var translateMessage = path + '.' + message.toLowerCase().replace(/\s/g, '-');
-        $mdToast.show(
-          $mdToast.simple()
-          .textContent($translate.instant(translateMessage))
-          .hideDelay(4000)
-          .position('top center')
-        );
+        notification.show(null, null, translateMessage);
       }
 
       function compactObject (o) {

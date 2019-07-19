@@ -19,9 +19,11 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         day = _.isString(day) ? day: _.toString(day);
         day = day.replace(/[^0-9\.\/]+/g, '');
 
-        return _.find(prices, {
+        let priceData = _.find(prices, {
           'start_at': this.PRICES.get(day).start_at
-        }).price;
+        });
+
+        return priceData ? priceData.price : null;
       },
       getAllPrices: function(originalPrices) {
         let pricesScheme = Object.fromEntries(this.PRICES);
@@ -112,6 +114,8 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       },
 
       checkHalfDayEnabled: function (startDate, endDate, timeslots) {
+        if (date.durationDaysNew(startDate, endDate) > 0) return false;
+
         let dateTimeRange = _.range(startDate.getHours(), endDate.getHours() + 1);
         let halfDay = false;
 
