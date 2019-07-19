@@ -1,15 +1,11 @@
 <md-dialog>
-
-  <div show-xs>
-    <div class="md-toolbar-tools" layout-align="space-between center">
-      <span class="lnr-btn-placeholder"></span>
-      <h2 class="lnr-center">{{ 'availability.modal-title' | translate }}</h2>
-      <md-button class="md-icon-button" ng-click="bikeAvailability.close()">
-        <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
-      </md-button>
-    </div>
+  <div class="md-toolbar-tools" layout-align="space-between center">
+    <span class="lnr-btn-placeholder"></span>
+    <h2 class="lnr-center">{{ 'availability.modal-title' | translate }}</h2>
+    <md-button class="md-icon-button" ng-click="bikeAvailability.close()">
+      <md-icon md-svg-src="app/assets/ui_icons/icn_close_24.svg" aria-label="Close dialog"></md-icon>
+    </md-button>
   </div>
-
   <md-dialog-content class="" layout="column">
     <div class="md-dialog-content" layout="column">
       <!-- <form ng-cloak name="availabilityForm" novalidate>
@@ -46,17 +42,15 @@
         lnr-single-input
         data="bikeAvailability.dateRange"
         date-on-change="bikeAvailability.onDateChange"
+        class="lnr-mb-x2"
       >
       </input-range>
-
       <div
         id="timeRange"
         layout="row"
-        layout-align="start center"
-        flex="40"
-        flex-xs="100"
+        layout-xs="column"
       >
-        <md-input-container flex>
+        <md-input-container flex flex="50" flex-xs="100">
           <label>{{ 'shared.from' | translate }}</label>
           <md-select
             ng-model="bikeAvailability.date.startTime"
@@ -69,8 +63,8 @@
             </md-option>
           </md-select>
         </md-input-container>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        <md-input-container flex>
+        <div class="lnr-ph" hide-xs></div>
+        <md-input-container flex flex="50" flex-xs="100">
           <label>{{ 'shared.to' | translate }}</label>
           <md-select
             ng-model="bikeAvailability.date.endTime"
@@ -86,7 +80,7 @@
       </div>
 
       <!-- NON-AVAILABILITY REASON -->
-      <div layout="column" layout-align="center center" layout-margin>
+      <md-input-container>
         <label>{{ 'shared.non-availability-type' | translate }}</label>
         <md-select
           ng-model="bikeAvailability.optionalData.reason"
@@ -96,23 +90,22 @@
               {{ reasonOption }}
           </md-option>
         </md-select>
-      </div>
+      </md-input-container>
 
       <!-- COMMENTS -->
-      <div layout="column" layout-align="center center" layout-margin>
+      <md-input-container>
         <label>{{ 'forms.comments' | translate }}</label>
         <textarea
           md-no-resize
           name="notes"
           ng-model="bikeAvailability.optionalData.comment"
-          rows="5"
+          rows="3"
         >
         </textarea>
-      </div>
-
+      </md-input-container>
 
       <!-- SAVE BUTTON -->
-      <div layout="row" layout-align="center center" layout-margin>
+      <div layout="row" layout-align="center center">
         <md-button
           class="md-raised md-primary"
           ng-click="bikeAvailability.onSaveButtonClick()"
@@ -120,8 +113,6 @@
           <span>{{ 'availability.submit-btn-save' | translate }}</span>
         </md-button>
       </div>
-
-
     </div>
   </md-dialog-content>
 </md-dialog>
