@@ -65,6 +65,7 @@ export function bikeEventRenderer({
 
   const html = `
     <div class="event-name ellipsis">${isCluster || !rider ? name : rider}</div>
+    ${eventRecord.reason ? eventRecord.reason : ''}
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
   `;
 

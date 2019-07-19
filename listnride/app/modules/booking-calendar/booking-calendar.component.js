@@ -530,7 +530,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       // TODO: make them with translations
       bikeAvailability.reasonOptions = [
-        'booked in store',
+        'Booked in store',
         'Service / Repair',
         'Event / other'
       ]
@@ -591,6 +591,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
         createAvailability(data, bikeId).then(
           function(response) {
+            $state.reload();
             bikeAvailability.close();
           },
           function(error) {
