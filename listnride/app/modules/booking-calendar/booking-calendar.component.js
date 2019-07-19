@@ -26,7 +26,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     accessControl,
     api,
     bookingCalendarService,
-    requestsService
+    requestsService,
+    notification
   ) {
     const bookingCalendar = this;
 
@@ -263,7 +264,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                       clickOutsideToClose: true,
                       escapeToClose: true,
                       locals: {
-                        selectedDate: selectedDate
+                        selectedDate: selectedDate,
+                        resourceRecord: resourceRecord
                       }
                     });
                 }
@@ -511,21 +513,34 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         );
     }
 
-    function BikeAvailabilityController($mdDialog, selectedDate) {
+    function BikeAvailabilityController($mdDialog, selectedDate, resourceRecord) {
       let bikeAvailability = this;
 
       // variables
       bikeAvailability.date = {
         startDate: moment.utc(selectedDate).startOf('day'),
-        endDate: moment.utc(selectedDate).startOf('day').add(86360, 'seconds'), // 1 day by default
-        startTime: 6,
-        endTime: 22
+        endDate: moment.utc(selectedDate).startOf('day'),
+        startTime: 0,
+        endTime: 0,
       }
+      bikeAvailability.optionalData = {
+        reason: '',
+        comment: ''
+      }
+
+      // TODO: make them with translations
+      bikeAvailability.reasonOptions = [
+        'booked in store',
+        'Service / Repair',
+        'Event / other'
+      ]
 
       // methods
       bikeAvailability.close = closeDialog;
       bikeAvailability.onTimeChange = onTimeChange;
       bikeAvailability.onDateChange = onDateChange;
+      bikeAvailability.onSaveButtonClick = onSaveButtonClick;
+      bikeAvailability.isValid = isValid;
 
       // invocations
       bikeAvailability.dateRange = convertDatesToDuration();
@@ -558,7 +573,35 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       function onTimeChange() {
         bikeAvailability.dateRange = convertDatesToDuration();
-      };
+      }
+
+      function isValid() {
+        return !!bikeAvailability.date.startTime && !!bikeAvailability.date.endTime;
+      }
+
+      function onSaveButtonClick() {
+        let bikeId = resourceRecord.originalData.id;
+        let data = { 'availabilities': [] }
+
+        data.availabilities.push({
+          ride_id: bikeId,
+          ...bikeAvailability.dateRange,
+          ...bikeAvailability.optionalData,
+        });
+
+        createAvailability(data, bikeId).then(
+          function(response) {
+            bikeAvailability.close();
+          },
+          function(error) {
+            notification.show(error, 'error');
+          }
+        )
+      }
+
+      function createAvailability(data, bikeId) {
+        return api.post('/rides/' + bikeId + '/availabilities/', data);
+      }
 
       function closeDialog() {
         $mdDialog.hide();

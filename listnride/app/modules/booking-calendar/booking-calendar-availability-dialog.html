@@ -84,6 +84,44 @@
           </md-select>
         </md-input-container>
       </div>
+
+      <!-- NON-AVAILABILITY REASON -->
+      <div layout="column" layout-align="center center" layout-margin>
+        <label>{{ 'shared.non-availability-type' | translate }}</label>
+        <md-select
+          ng-model="bikeAvailability.optionalData.reason"
+          placeholder="{{ 'shared.non-availability-type' | translate }}">
+          <md-option
+            ng-repeat="reasonOption in bikeAvailability.reasonOptions track by $index" value="{{reasonOption}}">
+              {{ reasonOption }}
+          </md-option>
+        </md-select>
+      </div>
+
+      <!-- COMMENTS -->
+      <div layout="column" layout-align="center center" layout-margin>
+        <label>{{ 'forms.comments' | translate }}</label>
+        <textarea
+          md-no-resize
+          name="notes"
+          ng-model="bikeAvailability.optionalData.comment"
+          rows="5"
+        >
+        </textarea>
+      </div>
+
+
+      <!-- SAVE BUTTON -->
+      <div layout="row" layout-align="center center" layout-margin>
+        <md-button
+          class="md-raised md-primary"
+          ng-click="bikeAvailability.onSaveButtonClick()"
+          ng-disabled="!bikeAvailability.isValid()">
+          <span>{{ 'availability.submit-btn-save' | translate }}</span>
+        </md-button>
+      </div>
+
+
     </div>
   </md-dialog-content>
 </md-dialog>
