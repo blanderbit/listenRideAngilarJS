@@ -58,7 +58,6 @@ angular.module('listnride', [
   'cardgrid',
   'privacyBar',
   'faq',
-  'bookingCalendar',
   'brands',
   /* BRANDS_PAGE */
   'ampler-integration',
