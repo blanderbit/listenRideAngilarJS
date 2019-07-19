@@ -77,7 +77,9 @@
           </md-input-container>
           &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <div id="timeRange" ng-if="calendar.parent.startDate"
+          <div
+            id="timeRange"
+            ng-if="calendar.parent.startDate"
             layout="row" layout-align="start center" flex="40" flex-xs="100">
             <md-input-container flex>
               <label>{{ 'booking.calendar.pickup-time' | translate }}</label>
@@ -114,6 +116,7 @@
               </md-select>
             </md-input-container>
           </div>
+
         </div>
 
         <div ng-if="calendar.parent.cluster">
