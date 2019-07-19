@@ -23,7 +23,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     $mdMenu,
     $filter,
     $mdDialog,
-    $window,
     accessControl,
     api,
     bookingCalendarService,
@@ -592,7 +591,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
         createAvailability(data, bikeId).then(
           function(response) {
-            $window.location.reload();
+            $state.reload();
             bikeAvailability.close();
           },
           function(error) {
