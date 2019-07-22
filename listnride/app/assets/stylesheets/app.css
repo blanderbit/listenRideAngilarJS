@@ -4069,3 +4069,13 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
     width: 95%;
   }
 }
+
+.lnr-static-map {
+  height: 350px;
+}
+
+.lnr-static-map img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
