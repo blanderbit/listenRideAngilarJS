@@ -12,7 +12,8 @@ angular
     staticTranslation: 'static',
     btKey: config.API_KEY_BRAINTREE,
     facebookPlatformKey: config.API_KEY_FACEBOOK_PLATFORM,
-    brainTreeEnv: config.API_BRAINTREE_ENV
+    brainTreeEnv: config.API_BRAINTREE_ENV,
+    googleMapsKey: config.API_KEY_GOOGLE_MAPS
   })
   .constant('MESSAGE_STATUSES', {
     REQUESTED: 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride
