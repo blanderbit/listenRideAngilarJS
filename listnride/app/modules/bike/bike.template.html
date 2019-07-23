@@ -197,6 +197,13 @@
             <p class="md-subhead lnr-ml lnr-clickable" flex-offset="2" ui-sref="user({userId: bike.data.user.id})">{{bike.owner.display_name}}</p>
           </div>
         </div>
+        <div class="lnr-static-map lnr-mt-x2">
+          <img
+            ng-if="bike.data !== undefined"
+            ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&zoom={{bike.mapOptions.zoom}}&size=1280x400&scale=2&markers=icon:{{bike.mapOptions.icon}}|{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&key={{bike.mapOptions.key}}"
+            alt="Google Map"
+          >
+        </div>
 
         <md-divider class="lnr-p-0 lnr-mv lnr-mh-x2" ng-if="bike.data.ratings.length > 0"></md-divider>
 
@@ -242,14 +249,6 @@
         ></calendar>
       </div>
     </div>
-
-  </div>
-  <div class="lnr-static-map">
-    <img
-      ng-if="bike.data !== undefined"
-      ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&zoom={{bike.mapOptions.zoom}}&size=1280x400&scale=2&markers=icon:{{bike.mapOptions.icon}}|{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&key={{bike.mapOptions.key}}"
-      alt="Google Map"
-    >
   </div>
   <footer></footer>
 </md-content>
