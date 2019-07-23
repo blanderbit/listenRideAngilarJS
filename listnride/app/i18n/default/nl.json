@@ -950,7 +950,7 @@
   "message": {
     "accept": "Accepteren",
     "go-to-calendar": "Naar de boekingskalender",
-    "reject": "afwijzen",
+    "reject": "Afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",
     "confirm_return": "Bevestig teruggave",
@@ -1557,6 +1557,13 @@
       "rider": "Huurder",
       "contact": "Telefoonnummer",
       "view-booking": "Boeking bekijken"
+    },
+    "add-non-availability": "Add non-availability",
+    "remove-non-availability": "Remove non-availability",
+    "reasons": {
+      "booked-in-store": "Booked in store",
+      "service-repair": "Service / Repair",
+      "event-other": "Event / other"
     },
     "previous-month": "Vorige maand",
     "next-month": "Volgende maand",

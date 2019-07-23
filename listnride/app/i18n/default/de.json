@@ -1569,6 +1569,13 @@
       "contact": "Telefonnummer",
       "view-booking": "Buchung ansehen"
     },
+    "add-non-availability": "Add non-availability",
+    "remove-non-availability": "Remove non-availability",
+    "reasons": {
+      "booked-in-store": "Booked in store",
+      "service-repair": "Service / Repair",
+      "event-other": "Event / other"
+    },
     "previous-month": "Vormonat",
     "next-month": "Nächsten Monat",
     "previous-week": "Vorige Woche",

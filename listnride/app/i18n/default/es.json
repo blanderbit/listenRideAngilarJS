@@ -1566,6 +1566,13 @@
       "contact": "Número de teléfono",
       "view-booking": "Ver la reservación"
     },
+    "add-non-availability": "Add non-availability",
+    "remove-non-availability": "Remove non-availability",
+    "reasons": {
+      "booked-in-store": "Booked in store",
+      "service-repair": "Service / Repair",
+      "event-other": "Event / other"
+    },
     "previous-month": "Mes anterior",
     "next-month": "Próximo mes",
     "previous-week": "Previous week",

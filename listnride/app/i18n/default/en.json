@@ -245,8 +245,8 @@
       "meta-description": "Rent a racing bike with listnride for the Frankfurt City Triathlon. Choose the perfect bike for your next race!"
     },
     "radfahren-neu-entdecken-eschborn": {
-      "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren",
-      "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Eschborn</b>  |  Wann: <b>1.6. - 31.08. 2019</b>",
+      "title": "Rent and test great bikes in Eschborn",
+      "description": "What: <b>Radfahren neu entdecken</b>  |  Where: <b>In Eschborn</b>  |  When: <b>1.6. - 31.08. 2019</b>",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
       "calendar-title": "E-Bikes einfach kostenlos Probefahren",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
@@ -277,7 +277,7 @@
     },
     "8bar-clubride": {
       "meta-title": "Rent a road bike for the 8bar club ride",
-      "meta-description": "Join our 8bar Clubride and try out one of our 8bar bikes.\nFor only 8,-- EUR you can test ride the bike during the Clubride and receive a filled 8bar bike bottle for free.",
+      "meta-description": "Join our 8bar Clubride and try out one of our 8bar bikes.\nFor only 8€ you can test ride the bike during the Clubride and receive a 8bar bike bottle for free!",
       "calendar-title": "Test bikes for the 8bar club ride",
       "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
     },
@@ -632,7 +632,7 @@
   "booking": {
     "shopping": "Secure Payments",
     "and-agree-privacy": "and our data protection regulations",
-    "pay-secure": "Pay secure with",
+    "pay-secure": "Pay securely with",
     "agree-terms": "With 'Request Bike' you agree to the",
     "agree-terms-link": "listnride Terms",
     "footer": {
@@ -697,7 +697,7 @@
       "invoice-address": "Invoice Address",
       "premium-insurance": "Premium insurance",
       "premium-insurance-title": "Premium Insurance Protection",
-      "premium-insurance-subtitle": "Pick our premium insurance for your ride to be on the safe side",
+      "premium-insurance-subtitle": "Pick our premium insurance to be on the safe side",
       "thats-included": "On top of basic insurance, these features are additionally included",
       "premium-feature-1": "Theft protection",
       "premium-feature-2": "Replacement bike after accident or damage",
@@ -781,7 +781,7 @@
       "accept_request_reminder": "Accept request reminder",
       "confirm_return": "Confirm return messages",
       "request_created": "Booking related reminders (SMS)",
-      "booking_overview_lister": "Booking overview Info",
+      "booking_overview_lister": "Booking overview information",
       "return_reminder": "Return reminder messages"
     },
     "newsletter-subscribe": "Yes, please send me the monthly listnride newsletter",
@@ -826,7 +826,7 @@
     "add-payment-method": "Add Payment Method",
     "vouchers": "Vouchers",
     "payment-credit-card": "Your current payment method is a credit card ",
-    "payment-paypal": "Your current payment method is a paypal account with email address",
+    "payment-paypal": "Your current payment method is through a paypal account",
     "no-payment-method": "You didn't enter any payment method so far.",
     "no-payout-method": "You didn't enter any payout method so far.",
     "paypal": "Paypal",
@@ -834,13 +834,13 @@
     "enter-paypal-info": "Please enter the email address of your paypal account",
     "enter-bank-info": "Please enter the accountholder's first and last name as well as IBAN and BIC",
     "save-payout-method": "Save Payout Method",
-    "payout-paypal": "Your payout method is a paypal account with email address",
+    "payout-paypal": "Your payout method is a paypal account",
     "payout-bank": "Your payout method is a bank account ending with",
     "voucher-code": "Voucher Code",
     "current-vouchers": "Your current balance is",
     "add-voucher": "Add Voucher",
     "meta-title": "Profile Settings",
-    "meta-description": "Change your profile - und payment settings.",
+    "meta-description": "Change your profile and payment settings",
     "company-name": "Company name",
     "company-information": "Company information",
     "vat": "VAT",
@@ -851,7 +851,7 @@
     "invoice-name": "Company name"
   },
   "verification": {
-    "lets-start": "Let's start",
+    "lets-start": "Let's start!",
     "lets-start-description": "It only takes 3 minutes",
     "verify-profile": "Verify your Profile",
     "resend-email": "Resend email",
@@ -866,21 +866,21 @@
     },
     "2": {
       "title": "Upload your profile picture",
-      "description": "Show other user who is the person behind your profile.",
+      "description": "Upload a photo, to show others who you are.",
       "business-description": "Having your logo shown on listnride is a great way to attract more request",
       "business-title": "Upload your Shop Logo"
     },
     "3": {
-      "title": "Tell something about yourself or shop",
+      "title": "Tell something about yourself or your shop",
       "label": "Description (min. 50 Characters)"
     },
     "4": {
-      "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you don't find it anymore, you can resend the email. If you don't receive it instantly, please wait a few minutes and look in your spam folder.",
+      "description": "Validate your email address by clicking on the link in the confirmation email that we've sent to you after signup. If you can't find it, you can resend the email. If you still can't find it, make sure to look in your spam folder.",
       "email-verified": "Email address successfully verified"
     },
     "5": {
       "title": "What is your phone number",
-      "description": "Verify your phone number, this allows SMS notifications for your requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
+      "description": "Verify your phone number, so that you can receive SMS notifications for future requests. Simply enter your number and click 'Send Confirmation'. You'll receive a code via SMS that you can then enter below.",
       "enter-valid-phone-nr": "Enter a valid phone number",
       "send-confirmation-sms": "Send Confirmation",
       "send-confirmation-sms-mobile": "Send SMS Code",
@@ -890,7 +890,7 @@
       "sms-verification-code-mobile": "Verification Code",
       "confirm-code": "Confirm code",
       "confirm-code-mobile": "Confirm",
-      "phone-nr-verified": "Your number is successfully verified!"
+      "phone-nr-verified": "Your number was successfully verified!"
     },
     "6": {
       "title": "What is your address"
@@ -964,7 +964,7 @@
     "reject": "Reject",
     "rate": "Rate",
     "confirm": "Confirm",
-    "confirm_return": "Confirm Return",
+    "confirm_return": "Confirm return",
     "documents-title": "Insurance Certificates",
     "documents-description": "Here you can download your insurance certificates. These documents have also been sent to you by email.",
     "insurance-bike": "Bike Insurance Certificate",
@@ -1098,7 +1098,7 @@
     "all-sizes": "All sizes",
     "bikes-in": "Bikes in",
     "meta-title": "Rent the perfect bike in {{location}}.",
-    "meta-description": "listnride offers a wide variety of perfekt bikes for rent in {{location}}.",
+    "meta-description": "listnride offers a wide variety of great bikes for rent in {{location}}.",
     "number-of-bikes": "Number of bikes",
     "bike": "Bike",
     "bikes": "Bikes",
@@ -1572,6 +1572,13 @@
       "rider": "Rider",
       "contact": "Phone number",
       "view-booking": "View booking"
+    },
+    "add-non-availability": "Add non-availability",
+    "remove-non-availability": "Remove non-availability",
+    "reasons": {
+      "booked-in-store": "Booked in store",
+      "service-repair": "Service / Repair",
+      "event-other": "Event / other"
     },
     "previous-month": "Previous month",
     "next-month": "Next month",
