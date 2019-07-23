@@ -100,7 +100,7 @@ angular.module('bike').component('calendar', {
     }
 
     function setCalendarDefaultParams() {
-      calendar.pickedBikeSize = $state.params.size ? $state.params.size : calendar.bikeSize;
+      calendar.pickedBikeSize = $state.params.size ? $state.params.size : null;
       calendar.startDate = $state.params.start_date ? new Date($state.params.start_date) : null;
 
       if(calendar.startDate) {
@@ -807,6 +807,7 @@ angular.module('bike').component('calendar', {
 
     // TODO: Replace custom receipt with modular receipt component in calendar template
     function dateChange(startDate, endDate) {
+      resetSizePicker();
       if (calendar.isDateValid()) {
         var invalidDays = countInvalidDays(startDate, endDate);
         calendar.duration = date.duration(startDate, endDate, invalidDays);
@@ -864,6 +865,10 @@ angular.module('bike').component('calendar', {
         calendar.lnrFee = 0;
         calendar.total = 0;
       }
+    }
+
+    function resetSizePicker() {
+      calendar.pickedBikeSize = null;
     }
 
     function isTimeslotAvailable(hour) {

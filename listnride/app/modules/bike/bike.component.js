@@ -3,7 +3,7 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeCluster, userHelper) {
+  controller: function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeCluster, userHelper, ENV) {
     var bike = this;
 
     bike.$onInit = function() {
@@ -16,10 +16,7 @@ angular.module('bike',[]).component('bike', {
         lat: 0,
         lng: 0,
         zoom: 14,
-        radius: 500,
-        scrollwheel: false,
-        draggable: false,
-        gestureHandling: 'cooperative'
+        key: ENV.googleMapsKey
       };
       bike.hasTimeSlots = false;
 

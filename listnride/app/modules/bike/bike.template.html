@@ -244,27 +244,12 @@
     </div>
 
   </div>
-
-  <ng-map
-    ng-if="bike.data !== undefined"
-    default-style="false"
-    style="height: 350px"
-    center="[{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}]"
-    zoom="{{bike.mapOptions.zoom}}"
-    gesture-handling="cooperative"
-    map-type-control="false"
-    street-view-control="false"
-    styles="{{bike.colorScheme}}"
-  >
-    <shape name="circle" no-watcher="true"
-      stroke-color="#7AB2F8"
-      stroke-opacity="1"
-      stroke-weight="1"
-      fill-color="#7CB3FF"
-      fill-opacity="0.35"
-      center="[{{bike.data.lat_rnd}},{{bike.data.lng_rnd}}]"
-      radius="500">
-    </shape>
-  </ng-map>
+  <div class="lnr-static-map">
+    <img
+      ng-if="bike.data !== undefined"
+      ng-src="https://maps.googleapis.com/maps/api/staticmap?size=1280x400&zoom={{bike.mapOptions.zoom}}&scale=2&center={{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&key={{bike.mapOptions.key}}"
+      alt="Google Map"
+    >
+  </div>
   <footer></footer>
 </md-content>

@@ -30,7 +30,7 @@
               </div>
               <div layout="row" layout-align="space-between none">
                 <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
-                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.humanReadableSize }}</span>
+                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.humanReadableSize(overview.parent.pickedBikeSize) }}</span>
               </div>
               <div layout="row" layout-align="space-between none">
                 <span flex="45" class="md-body-2">{{ 'booking.overview.location' | translate }}</span>

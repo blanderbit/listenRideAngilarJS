@@ -62,6 +62,7 @@ angular.module('booking', [])
         booking.onSuccessPaymentValidation = onSuccessPaymentValidation;
         booking.loggedIn = loggedIn;
         booking.isTimeslotAvailable = isTimeslotAvailable;
+        booking.humanReadableSize = bikeOptions.getHumanReadableSize;
 
 
         // INVOCATIONS
@@ -84,8 +85,7 @@ angular.module('booking', [])
             booking.bike = success.data.current;
             booking.coverageTotal = booking.bike.coverage_total || 0;
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-            booking.pickedBikeSize = $state.params.size ? $state.params.size : booking.bike.size;
-            booking.humanReadableSize = bikeOptions.getHumanReadableSize(booking.pickedBikeSize);
+            booking.pickedBikeSize = setDefaultBikeSize();
             booking.prices = booking.bike.prices;
             booking.insuranceEnabled = userHelper.insuranceEnabled(booking.bike.user);
             booking.hasTimeSlots = userHelper.hasTimeSlots(booking.bike.user);
@@ -132,6 +132,14 @@ angular.module('booking', [])
             $state.go('home');
           }
         );
+      }
+
+      function setDefaultBikeSize() {
+        return $state.params.size ? $state.params.size : resetBikeSize();
+      }
+
+      function resetBikeSize() {
+        return booking.bike.is_cluster ? null : booking.bike.size;
       }
 
       function isTimeslotAvailable(hour) {
