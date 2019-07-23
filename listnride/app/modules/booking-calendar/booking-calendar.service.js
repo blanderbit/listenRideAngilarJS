@@ -56,6 +56,9 @@ angular
           'booking-calendar.event.view-booking',
           'booking-calendar.add-non-availability',
           'booking-calendar.add-remove-non-availability',
+          'booking-calendar.reasons.booked-in-store',
+          'booking-calendar.reasons.service-repair',
+          'booking-calendar.reasons.event-other',
           ...bikeOptions.categoriesTranslationKeys()
         ]);
       },

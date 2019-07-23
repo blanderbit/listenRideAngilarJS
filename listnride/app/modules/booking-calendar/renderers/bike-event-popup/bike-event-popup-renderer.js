@@ -123,7 +123,7 @@ function notAvailableEventPopupRenderer({ translations, getters, eventRecord }) 
       ${translations['booking-calendar.event.not-available-header']}
     </header>
     <p class="bike-event-popup__description">
-      ${eventRecord.reason ? 'Reason: ' + eventRecord.reason : ''}
+      ${eventRecord.reason ? 'Reason: ' + translations[eventRecord.reason] : ''}
       <br>
       ${eventRecord.comment ? eventRecord.comment : translations['booking-calendar.event.not-available-text']}
     </p>
