@@ -16,6 +16,7 @@ angular.module('bike',[]).component('bike', {
         lat: 0,
         lng: 0,
         zoom: 14,
+        icon: 'https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/icons/pin_map_bike_56x56.png',
         key: ENV.googleMapsKey
       };
       bike.hasTimeSlots = false;
