@@ -1573,6 +1573,7 @@
       "service-repair": "Service / Repair",
       "event-other": "Event / other"
     },
+    "reason": "Reason",
     "previous-month": "Mes anterior",
     "next-month": "Próximo mes",
     "previous-week": "Previous week",
