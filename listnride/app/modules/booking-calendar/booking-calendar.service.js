@@ -54,6 +54,8 @@ angular
           'message.reject',
           'message.accept',
           'booking-calendar.event.view-booking',
+          'booking-calendar.add-non-availability',
+          'booking-calendar.add-remove-non-availability',
           ...bikeOptions.categoriesTranslationKeys()
         ]);
       },

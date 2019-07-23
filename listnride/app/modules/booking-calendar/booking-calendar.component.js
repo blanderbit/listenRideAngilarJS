@@ -246,7 +246,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           scheduleContextMenu: {
             items: {
               addEvent: {
-                text: 'Add availability',
+                text: translations['booking-calendar.add-non-availability'],
                 onItem({
                     resourceRecord,
                     event
@@ -530,9 +530,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       // TODO: make them with translations
       bikeAvailability.reasonOptions = [
-        'Booked in store',
-        'Service / Repair',
-        'Event / other'
+        'booking-calendar.reasons.booked-in-store',
+        'booking-calendar.reasons.service-repair',
+        'booking-calendar.reasons.event-other'
       ]
 
       // methods
