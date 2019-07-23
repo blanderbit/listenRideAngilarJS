@@ -32,6 +32,7 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   }
   if (isNotAvailable) {
     return `
+      ${eventRecord.reason ? translations[eventRecord.reason] : ''}
       <span class="event-status ellipsis">
         <i class="fa fa-times-circle-o" aria-hidden="true"></i>
         ${translations['booking-calendar.event.not-available']}
@@ -65,7 +66,6 @@ export function bikeEventRenderer({
 
   const html = `
     <div class="event-name ellipsis">${isCluster || !rider ? name : rider}</div>
-    ${eventRecord.reason ? eventRecord.reason : ''}
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
   `;
 
