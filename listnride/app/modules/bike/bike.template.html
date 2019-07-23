@@ -247,7 +247,7 @@
   <div class="lnr-static-map">
     <img
       ng-if="bike.data !== undefined"
-      ng-src="https://maps.googleapis.com/maps/api/staticmap?size=1280x400&zoom={{bike.mapOptions.zoom}}&scale=2&center={{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&key={{bike.mapOptions.key}}"
+      ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&zoom={{bike.mapOptions.zoom}}&size=1280x400&scale=2&markers=icon:{{bike.mapOptions.icon}}|{{bike.mapOptions.lat}},{{bike.mapOptions.lng}}&key={{bike.mapOptions.key}}"
       alt="Google Map"
     >
   </div>
