@@ -21,7 +21,7 @@
       "bike-routes": "Itinéraires à vélo",
       "bike-shops": "Magasins de vélos",
       "cafes-bars": "Cafés, Bars et Restaurants",
-      "bike-routes-content": "Le <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer Feld </a>constitue le terrain de jeu idéal pour les activités de plein air. Les anciennes pistes d’aéroport sont idéales pour faire du vélo et profiter du paysage urbain et sportif qui se déroule autour de vous. À <a href=\"https://www.lollapaloozade.com/en/treptower-park\" target=\"_blank\">Treptower Park </a>, vous découvrirez un intéressant pot-pourri d’expériences. Il y a le monument soviétique qui vous rappelle l'époque où l'Allemagne était divisée en deux nations. Pour ceux qui préfèrent être au courant du temps, un petit voyage le long du <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\" target=\"_blank\">Landwehrkanal</a>peut être un excellent moyen de découvrir Berlin, en commençant par le paysage vert de Treptow, et en allant jusqu'au zones urbaines de Kreuzberg et Neukölln. Si vous aimez les balades plus longues, suivez la <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg </a>(env. 30 km) qui vous emmène dans les zones rurales de Berlin Wedding. Envie de plus de nature? Essayez une partie de la route <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\" target=\"_blank\">Berlin- Usedom</a>, qui vous emmènera dans une nature et sérénité presque intactes.",
+      "bike-routes-content": "Le <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer Feld </a>constitue le terrain de jeu idéal pour les activités de plein air. Les anciennes pistes d’aéroport sont idéales pour faire du vélo et profiter du paysage urbain et sportif qui se déroule autour de vous. À Treptower Park , vous découvrirez un intéressant pot-pourri d’expériences. Il y a le monument soviétique qui vous rappelle l'époque où l'Allemagne était divisée en deux nations. Pour ceux qui préfèrent être au courant du temps, un petit voyage le long du Landwehrkanalpeut être un excellent moyen de découvrir Berlin, en commençant par le paysage vert de Treptow, et en allant jusqu'au zones urbaines de Kreuzberg et Neukölln. Si vous aimez les balades plus longues, suivez la <a href=\"http://panke.info/pages/portal-touren.php\" target=\"_blank\">Panke Radweg </a>(env. 30 km) qui vous emmène dans les zones rurales de Berlin Wedding. Envie de plus de nature? Essayez une partie de la route <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\" target=\"_blank\">Berlin- Usedom</a>, qui vous emmènera dans une nature et sérénité presque intactes.",
       "bike-shops-content": "Berlin a beaucoup de marques locales qui ont été récemment fondées. La marque urbaine <a href=\"http://www.schindelhauerbikes.com\" target=\"_blank\">Schindelhauer </a>fabrique des vélos très élégants pour le cycliste de ville sportif. Si vous préférez un rapport simple ou fixe, vous pouvez manger votre cœur à <a href=\"https://8bar-bikes.com\" target=\"_blank\">8bar </a>et à Bike Punk. Si vous préférez un vélo de route, alors <a href=\"http://www.standert.de\" target=\"_blank\">Standert </a>peut vous offrir quelque chose de spécial. Il existe également de nombreux concept stores intéressants. <a href=\"http://www.pret-a-velo.de/en\" target=\"_blank\">Prèt-á-vélo</a> offre une grande sélection de vélos classiques et accessoires, <a href=\"http://www.wingwheels.de/?lang=en\" target=\"_blank\">Wingwheels</a> pour une grande sélection de vélos électriques. Si vous êtes passionné par les vélos pliants, <a href=\"http://boxbike.de\" target=\"_blank\">boxbike</a>offre une expérience de magasinage exceptionnelle.",
       "cafes-bars-content": "Après une longue journée, nous vous recommandons de visiter <a href=\"http://www.fiveelephant.com\" target=\"_blank\">five elephant </a>à Neukölln ou Mitte pour prendre un café ou deux, et essayer leur sélection de pâtisserie de style nord-américain. Pour le déjeuner ou le dîner, rendez-vous à <a href=\"http://www.kimchiprincess.com\" target=\"_blank\">Kimchi Princess </a>à Kreuzberg, un restaurant coréen très animé aux grillades de barbecue. Visitez <a href=\"http://kaschk.de\" target=\"_blank\">Kaschk </a>à Mitte servant une grande sélection de bières artisanales scandinaves et locales ainsi que du café fraîchement torréfié."
     },
@@ -622,15 +622,15 @@
       "faq": "Les questions fréquemment posées"
     },
     "rossignol": {
-      "title": "Rent and test ride Rossignol bikes",
-      "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
+      "title": "Location et test de vélos Rossignol",
+      "description": "La marque leader des sports d'hiver étend sa portée au-delà des produits d'hiver. Aujourd'hui, la nouvelle collection de vélos Rossignol 2019 comprend une offre de vélos de montagne et de vélos électriques pour vous permettre de profiter pleinement de votre expérience, que vous naviguiez en famille ou entre amis. #anotherbestday",
       "item1-title": "Design",
-      "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
+      "item1-description": "Grâce au soutien, à la collaboration et à l'expertise de nos amis de Felt, nous produisons maintenant une offre de produits très ciblée et crédible. Unique par sa construction, sa géométrie et ses composants.",
       "item2-title": "E-Track",
-      "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
+      "item2-description": "2019 marque le lancement inaugural des E-Bikes Rossignol en Europe avec l'E-Track Trail à suspension intégrale qui allie le plaisir de la descente à la facilité de l'assistance électrique pour les longues montées et l'E-Track 27+ conçu pour la montée ou la descente, offrant des performances et un confort exceptionnels.",
       "item3-title": "Another Best Day",
-      "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
-      "find-out-more": "Learn more about Rossignol bikes",
+      "item3-description": "En prolongeant sa promesse de \"Another Best Day\" au-delà des mois d'hiver, Rossignol s'engage à rehausser l'expérience en plein air grâce à une technologie de pointe et à l'innovation. Les vélos offrent l'expérience que les consommateurs attendent de la marque Rossignol.",
+      "find-out-more": "En savoir plus sur les vélos Rossignol",
       "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the whole range of Rossignol bikes. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, contact@listnride.com\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailtto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "yuba": {
@@ -1196,29 +1196,29 @@
       "title": "listnride: full speed ahead",
       "content": "Today, listnride is available in big cities like Amsterdam, Berlin, Munich and Vienna. And that number keeps growing. Private owners as well as specialized dealers offer their bikes for rent on our platform. This enables tourists and locals, families and businesspeople to find the ideal bike that complements their personal style and meets their needs – and perhaps even get one or two useful tips about the local area from the lister. Our idea has become a reality. Be a part of it and share your bike – or simply ride any bike you want! We look forward to welcoming you to our community."
     },
-    "meta-title": "listnride - the company",
+    "meta-title": "listnride - l'entreprise",
     "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
   },
   "contact-and-help": {
-    "title": "Help & contact",
-    "meta-title": "listnride is here for you",
-    "meta-description": "Contact us if you have special questions or need help solving a problem",
+    "title": "Besoin d'aide ?",
+    "meta-title": "listnride est là pour vous",
+    "meta-description": "Contactez-nous si vous avez des questions particulières ou si vous avez besoin d'aide pour résoudre un problème.",
     "faq-section": {
-      "header": "We are there for you!",
-      "subheader": "The most frequently questions of our Lister and Rider.",
+      "header": "Nous sommes là pour vous!",
+      "subheader": "Les questions les plus fréquemment posées par nos Listers et Riders.",
       "lister-faq": {
         "title": "FAQ Lister",
-        "question-1": "What do I need to do to rent out my bike with peace of mind?",
+        "question-1": "Que dois-je faire pour louer mon vélo en toute tranquillité?",
         "answer-1": "Once you receive a rental request, you can communicate with the requester via the convenient chat feature. You’ll already have a good idea of who the person is and why they wish to rent your bike. The listnride platform provides user verification to minimize the risk of fraud. If you would like even more peace of mind, you could ask the renter to bring an ID for further verification and/or give you a safety deposit when picking up the bike. Keep in mind that everybody wants to have a great time and enjoy the ride, and will therefore be careful with the bike you rented out to them.",
-        "question-2": "How can I be sure that the rider will return my bike?",
-        "answer-2": "We do our best to create a marketplace based on trust and respect. This is why we require our users to verify their identity before they rent someone’s bike or offer their own bike for rent. Verification is done via mobile phone number, facebook or e-mail and payment details. If you still feel unsure, you can ask the rider to give you a copy of their ID card and/or leave a certain safety deposit. In that case, please make sure to let the rider know in advance before he/she confirms and pays for the rental. Nevertheless, the rider might be running late, as they aren’t familiar with the area and might therefore not be able to find the way back that easily. Try contacting the rider by phone, text message or the in-app chat to find out the reason for the delay. If this doesn’t work out, please report the situation via our website by clicking on “Contact & Support.” We will contact the rider and resolve the issue to make sure your bike is returned to you.",
-        "question-3": "What happens if my bike gets stolen or damaged?",
-        "answer-3": "Bike theft does happen. However, the bike is less likely to get stolen if it is properly locked and/or stored indoors. Help prevent theft by providing a secure lock with your bike. In case something does go wrong, the rider will be held responsible for all costs arising from any damage and/or theft. If your bike was stolen and/or damaged during the rental period, you and the rider need to contact us through our website by clicking on “Contact us.” Once we’ve clarified the situation, we will contact you to resolve the issue. If it was stolen and the rider can’t pay the damages, the listnride guarantee will make sure everything is covered! If the bike was stolen while it wasn’t rented out through listnride, however, we cannot help solve the problem. In this case you need to resolve the issue directly with the rider.",
-        "question-4": "What happens if the rider or someone else gets injured and/or property gets damaged during the rental period?",
-        "answer-4": "Make sure that your bike is in good condition when you hand it over. This is beneficial to both parties: The rider will have a great time, and you’ll receive a positive rating after the bike has been returned. When booking a bike through listnride, the renter agrees to the applicable Terms and Conditions. These Terms and Conditions offer you protection against liability for any injury to the renter and/or damage to their or someone else’s property. As the lister, you are never responsible if the renter gets injured during a ride.",
-        "question-5": "What happens if the rider doesn’t show up as agreed to pick up my bike?",
-        "answer-5": "Sometimes the rider might have difficulty getting to the agreed location. A bit of flexibility on your part is essential. However, if things are taking too long and you’ve tried contacting the rider – either through the listnride in-app chat or directly by telephone – but he/she is not responding, please cancel the rental by sending the rider a message in the chat thread and describing the reason for the cancellation.",
-        "question-6": "How do I offer my bike for rent?",
+        "question-2": "Comment puis-je être sûr que le coureur va rendre mon vélo?",
+        "answer-2": "Nous faisons de notre mieux pour créer un marché fondé sur la confiance et le respect. C’est pourquoi nous demandons à nos utilisateurs de vérifier leur identité avant de louer le vélo de quelqu'un ou de proposer leur propre vélo à la location. La vérification est effectuée via un numéro de téléphone mobile, Facebook, ou un e-mail et les détails de paiement. Si vous n'êtes toujours pas sûr, vous pouvez demander au coureur de vous donner une copie de sa carte d'identité et / ou de laisser un dépôt de garantie. Dans ce cas, veuillez informer le coureur à l'avance avant de confirmer et de payer la location. Néanmoins, le coureur pourrait être en retard, car il se pourrai qu'il ne connaisse pas bien la région et ne peut donc pas trouver le chemin du retour aussi facilement. Essayez de contacter le coureur par téléphone, par SMS ou via le chat intégré à l'application. Si cela ne fonctionne pas, veuillez signaler la situation via notre site Web en cliquant sur «Contact & Support». Nous contacterons le coureur et résoudreons le problème afin de nous assurer que votre vélo vous est bien rendu.",
+        "question-3": "Que se passe-t-il si mon vélo est volé ou endommagé?",
+        "answer-3": "Il arrive que le vélo soit volé. Cependant, le vélo risque moins d'être volé s'il est correctement verrouillé et / ou rangé à l'intérieur. Prévenez le vol en utilisant un verrou sécurisé avec votre vélo. En cas de problème, le coureur sera tenu responsable de tous les frais découlant d'un dommage et / ou d'un vol. Si votre vélo a été volé et / ou endommagé pendant la période de location, vous et le coureur devez nous contacter via notre site Web en cliquant sur «Contactez-nous». Une fois que nous aurons clarifié la situation, nous vous contacterons pour résoudre le problème. Si elle a été volée et que le coureur ne peut pas payer les dommages, la garantie de listnride couvra tout! Cependant, si le vélo a été volé alors qu’il n’était pas loué par le biais de listnride, nous ne pouvons pas aider à résoudre le problème. Dans ce cas, vous devez résoudre le problème directement avec le coureur.",
+        "question-4": "Que se passe-t-il si le coureur ou quelqu'un d'autre se blesse et / ou que des biens sont endommagés pendant la période de location?",
+        "answer-4": "Assurez-vous que votre vélo est en bon état lorsque vous le rendez. Cela est bénéfique pour les deux parties : Le Rider s'amusera bien et vous recevrez une note positive après le retour du vélo. Lors de la réservation d'un vélo à travers listnride, le Rider accepte les conditions générales applicables. Ces termes et conditions vous offrent une protection contre toute responsabilité en cas de blessure du locataire et/ou de dommage à sa propriété ou à celle d'une autre personne. En tant que Lister, vous n'êtes jamais responsable si le locataire se blesse au cours d'un trajet.",
+        "question-5": "Que se passe-t-il si le Rider ne se présente pas comme convenu pour récupérer mon vélo?",
+        "answer-5": "Parfois, le Rider peut avoir de la difficulté à se rendre à l'endroit convenu. Un peu de flexibilité de votre part est essentielle. Toutefois, si les choses prennent trop de temps et que vous avez essayé de contacter le Rider - soit par le biais du chat listnride in-app, soit directement par téléphone - mais qu'il ne répond pas, veuillez annuler la location en envoyant un message au coureur dans le chat et en décrivant la raison de l'annulation.",
+        "question-6": "Comment puis-je faire louer mon vélo?",
         "answer-6": "You need to sign up first before you can offer your bike for rent. Simply click on “Sign up” and fill in the required details. Once you’ve signed up, simply log in using your e-mail address and password. Click on your account in the top right corner and select “List a ride.” Provide all the necessary details, including some nice clear pictures of your bike, and after setting the rental price, click on “List my ride.” It’ll take a few seconds for the information to be uploaded. Afterwards, you can find, edit and delete your bike in the account menu under “Listed rides.”",
         "question-7": "How do I set the rental price for my bike?",
         "answer-7": "You are free to decide any price for half-day/full-day/weekly rental. The minimum is €1. An attractive price will result in more rentals, as people are looking for good value for money. To determine the right price, look at similar bikes on listnride and/or compare the price with local bike shops in your area.",
@@ -1307,9 +1307,9 @@
     "subdescription": "Learn more about listnride in our <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">investor presentation</a> and why it is worth to invest.",
     "subsubdescription": "Soon, a crowdfunding campaign will start on <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, Europe's largest equity crowdfunding platform. As an early adopter, business partner or friend, we're giving you first access, before we launch to the public. Tell us your level of interest and preregister without obligation.",
     "learn-more": "Crowdfunding FAQ",
-    "known-from": "listnride in the news",
-    "investment": "Investment",
-    "submit": "Pre-register",
+    "known-from": "listnride dans la presse",
+    "investment": "Investissement",
+    "submit": "S'enregistrer",
     "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
     "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
     "faq-answer-1": "We are a young company with a well developed product, a growing community of riders and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
@@ -1329,10 +1329,10 @@
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
   },
   "terms-and-conditions": {
-    "title": "Terms and Conditions",
-    "header": "List and Ride General Terms and Conditions of Business",
-    "subheader": "Last Updated: June 8 , 2018",
-    "subtitle": "Please read these Terms carefully as they contain important information about your legal rights, remedies and obligations. By using the listnride platform, you agree to comply with these Terms.\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Here you can download</a> and read our General Terms and Conditions of Business.\n<br>\nThank you for using listnride!"
+    "title": "Termes et conditions",
+    "header": "Conditions générales List and Ride",
+    "subheader": "Dernière mise à jour: le 8 juin 2018",
+    "subtitle": "Veuillez lire attentivement les présentes conditions, car elles contiennent des informations importantes sur vos droits, recours et obligations juridiques. En utilisant la plate-forme listnride, vous acceptez de vous conformer à ces conditions.\n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2018.pdf\" target=\"_BLANK\">Ici, vous pouvez télécharger </a>et consulter nos conditions générales de vente.\n<br>\nMerci d'utiliser listnride!"
   },
   "trust-and-safety": {
     "meta-description": "La confiance est le but ultime d’une communauté. Nous soutenons l'équité et la sécurité par le biais de la vérification et de l'assurance pour chaque location.",
@@ -1397,7 +1397,7 @@
       "step-3-content": "Have a chat & get insider tips",
       "step-4-title": "Off you go",
       "step-4-content": "Enjoy your ride!",
-      "step-5-title": "Return",
+      "step-5-title": "Retour",
       "step-5-content": "To owner at agreed time & place"
     },
     "handover-section": {
@@ -1424,26 +1424,26 @@
     "meta-description": "Join the listnride team in Berlin or Munich to build the global biking community",
     "apply": "Postuler Maintenant",
     "see-all": "Voir d'autres offres d'emplois",
-    "open": "Open Positions",
-    "go-back": "Back"
+    "open": "Positions libres",
+    "go-back": "Retour"
   },
   "shop-landing": {
-    "title": "Your rental bikes directly bookable on your website",
-    "subtitle": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
-    "description": "You also realize having your own online bike rental shop is needed to engage with the online consumer? Within a few clicks you have your rental bikes listed on listnride bookable on your own website. Your clients can directly see available bikes and book them!",
+    "title": "Vos vélos de location peuvent être réservés directement sur votre site web",
+    "subtitle": "listnride propose désormais un plug-in gratuit pour intégrer facilement un moteur de réservation de location de vélo sur votre site web.",
+    "description": "En quelques clics, vous pouvez répertorier vos vélos de location répertoriés dans listnride, puis les afficher sur votre propre site Web. Vos clients peuvent directement les voir et les réserver!",
     "feature-1": {
-      "title": "Increase your rentals",
+      "title": "Augmentez vos locations",
       "description": "The online consumer wants to have a choice. Offer your clients the convenience to look at the bikes you have available for rent and the option to book them directly online. To your convenience most of the paperwork is done online as well so you can focus on your business. A clear win-win"
     },
     "feature-2": {
-      "title": "No programming skills needed",
+      "title": "Aucune compétence en programmation requise",
       "description": "The listnride plug-in requires no web development on your end. No expensive web agencies need and so saving you extra cost. The technology we provide is maintenance free and shows real-time the bikes available, so any changes made to the bikes you are offer are directly visible online"
     },
     "feature-3": {
-      "title": "Focus on your business",
+      "title": "Concentrez-vous sur votre entreprise",
       "description": "Les termes et conditions de listnride couvrent tous les détails importants d'un contrat de location. Il est indiqué ici que dès que le vélo est remis au coureur, toutes les responsabilités pèsent sur lui. Donc, plus de paperasse nécessaire. De plus, vous aurez un tableau de bord clair avec les aperçus nécessaires sur vos demandes en cours, vos locations, vos factures et vos revenus. Juste en vous connectant à votre compte."
     },
-    "join-now": "Join us now, it is free",
+    "join-now": "Rejoignez-nous, c'est gratuit",
     "join-now-description": "Interested to learn more and get started?",
     "contact-us": "Contactez nous"
   },
