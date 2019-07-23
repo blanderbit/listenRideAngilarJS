@@ -1580,6 +1580,7 @@
       "service-repair": "Service / Repair",
       "event-other": "Event / other"
     },
+    "reason": "Reason",
     "previous-month": "Previous month",
     "next-month": "Next month",
     "previous-week": "Previous week",

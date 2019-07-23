@@ -1576,6 +1576,7 @@
       "service-repair": "Service / Repair",
       "event-other": "Event / other"
     },
+    "reason": "Reason",
     "previous-month": "Mois précédent",
     "next-month": "Mois suivant",
     "previous-week": "Semaine dernière",
