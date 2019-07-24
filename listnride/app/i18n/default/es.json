@@ -1566,14 +1566,14 @@
       "contact": "Número de teléfono",
       "view-booking": "Ver la reservación"
     },
-    "add-non-availability": "Add non-availability",
-    "remove-non-availability": "Remove non-availability",
+    "add-non-availability": "Añadir evento",
+    "remove-non-availability": "Eliminar evento",
     "reasons": {
-      "booked-in-store": "Booked in store",
-      "service-repair": "Service / Repair",
-      "event-other": "Event / other"
+      "booked-in-store": "Reservado en tienda",
+      "service-repair": "Servicio / Reparación",
+      "event-other": "Evento / otro"
     },
-    "reason": "Reason",
+    "reason": "Razón",
     "previous-month": "Mes anterior",
     "next-month": "Próximo mes",
     "previous-week": "Previous week",

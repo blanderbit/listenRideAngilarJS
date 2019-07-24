@@ -1569,12 +1569,12 @@
       "contact": "Telefonnummer",
       "view-booking": "Buchung ansehen"
     },
-    "add-non-availability": "Add non-availability",
-    "remove-non-availability": "Remove non-availability",
+    "add-non-availability": "Ereignis hinzufügen",
+    "remove-non-availability": "Ereignis löschen",
     "reasons": {
-      "booked-in-store": "Booked in store",
-      "service-repair": "Service / Repair",
-      "event-other": "Event / other"
+      "booked-in-store": "vor Ort gebucht",
+      "service-repair": "Wartung / Reparatur",
+      "event-other": "Event / Sonstiges"
     },
     "reason": "Reason",
     "previous-month": "Vormonat",

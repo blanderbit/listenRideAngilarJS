@@ -1564,14 +1564,14 @@
       "contact": "Contact",
       "view-booking": "View booking"
     },
-    "add-non-availability": "Add non-availability",
-    "remove-non-availability": "Remove non-availability",
+    "add-non-availability": "Aggiungi evento",
+    "remove-non-availability": "Rimuovere evento",
     "reasons": {
-      "booked-in-store": "Booked in store",
-      "service-repair": "Service / Repair",
-      "event-other": "Event / other"
+      "booked-in-store": "Prenotata in negozio",
+      "service-repair": "Servizio / Riparazione",
+      "event-other": "Evento / altro"
     },
-    "reason": "Reason",
+    "reason": "Motivo",
     "previous-month": "Previous month",
     "next-month": "Next month",
     "previous-week": "Previous week",

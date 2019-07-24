@@ -1573,8 +1573,8 @@
       "contact": "Phone number",
       "view-booking": "View booking"
     },
-    "add-non-availability": "Add non-availability",
-    "remove-non-availability": "Remove non-availability",
+    "add-non-availability": "Add event",
+    "remove-non-availability": "Remove event",
     "reasons": {
       "booked-in-store": "Booked in store",
       "service-repair": "Service / Repair",

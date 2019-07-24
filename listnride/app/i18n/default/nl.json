@@ -1558,12 +1558,12 @@
       "contact": "Telefoonnummer",
       "view-booking": "Boeking bekijken"
     },
-    "add-non-availability": "Add non-availability",
-    "remove-non-availability": "Remove non-availability",
+    "add-non-availability": "Boeking toevoegen",
+    "remove-non-availability": "Boeking verwijderen",
     "reasons": {
-      "booked-in-store": "Booked in store",
-      "service-repair": "Service / Repair",
-      "event-other": "Event / other"
+      "booked-in-store": "In de winkel geboekt",
+      "service-repair": "Service / reparatie",
+      "event-other": "Evenement / overig"
     },
     "reason": "Reason",
     "previous-month": "Vorige maand",
