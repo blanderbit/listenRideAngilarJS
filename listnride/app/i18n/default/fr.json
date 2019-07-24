@@ -719,9 +719,9 @@
   "toasts": {
     "update-profile-success": "Votre profil a été mis à jour",
     "confirm-email-success": "Great, you've successfully confirmed your email address!",
-    "confirmation-successful": "Confirmation successful",
+    "confirmation-successful": "Confirmation réussie",
     "change-successful": "Change successful",
-    "change-password-success": "Great, you've successfully changed your password!",
+    "change-password-success": "Super, vous avez changé votre mot de passe!",
     "password-not-match": "Passwords do not match",
     "verification-code-error": "Error: The Verification Code seems to be invalid.",
     "address-save-error": "The address could not be saved",
@@ -1569,14 +1569,14 @@
       "contact": "Numéro de téléphone",
       "view-booking": "Voir la réservation"
     },
-    "add-non-availability": "Add non-availability",
-    "remove-non-availability": "Remove non-availability",
+    "add-non-availability": "Ajouter un évènement",
+    "remove-non-availability": "Supprimer événement",
     "reasons": {
-      "booked-in-store": "Booked in store",
-      "service-repair": "Service / Repair",
-      "event-other": "Event / other"
+      "booked-in-store": "Réservé en magasin",
+      "service-repair": "Service / réparation",
+      "event-other": "Événement / autre"
     },
-    "reason": "Reason",
+    "reason": "Raison",
     "previous-month": "Mois précédent",
     "next-month": "Mois suivant",
     "previous-week": "Semaine dernière",
