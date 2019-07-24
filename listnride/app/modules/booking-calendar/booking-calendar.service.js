@@ -40,6 +40,8 @@ angular
           'booking-calendar.event.not-available',
           'shared.request',
           'shared.requests',
+          'shared.event',
+          'shared.events',
           // event popups
           'booking-calendar.event.waiting',
           'booking-calendar.event.not-available-header',
@@ -104,10 +106,10 @@ angular
             // accepted/pending events
             ...bikeRequests,
             // not available events
-            ...parseAvailabilities({
+            ...(bike.is_cluster ? [] : parseAvailabilities({
               id: bikeResource.id,
               availabilities: Object.values(get(bike, 'availabilities', {}))
-            })
+            }))
           );
 
           // add bike
@@ -115,6 +117,7 @@ angular
 
           if (bikeResource.isCluster) {
             const allVariantsRequests = [];
+            const allAvailabilities = [];
 
             // add bike variants
             bike.rides.forEach((bikeVariant, index) => {
@@ -123,7 +126,20 @@ angular
                 id: bikeVariant.id,
                 requests: bikeVariant.requests
               });
-              allVariantsRequests.push(...variantRequests);
+              allVariantsRequests.push(
+                // accepted/pending events
+                ...variantRequests
+              );
+
+              allAvailabilities.push(
+                // not available events
+                ...parseAvailabilities({
+                  id: bikeVariant.id,
+                  availabilities: Object.values(get(bikeVariant, 'availabilities', {}))
+                })
+              )
+
+
 
               // add variant bike
               bikeResource.children.push(
@@ -150,13 +166,21 @@ angular
             );
 
             // add variant events
-            acc.events.push(...allVariantsRequests);
+            acc.events.push(
+              ...allVariantsRequests,
+              ...allAvailabilities
+            );
 
             // add cluster bike requests
             acc.events.push(
               ...parseClusterRequests({
                 id: bikeResource.id,
                 requests: allVariantsRequests
+              }),
+              // not available events for cluster(group)
+              ...parseClusterAvailabilities({
+                id: bikeResource.id,
+                availabilities: allAvailabilities
               })
             );
           }
@@ -224,6 +248,37 @@ angular
             request.clusterEventId = clusterEventId;
           }
 
+          return acc;
+        }, []);
+    }
+
+    function parseClusterAvailabilities({ id, availabilities }) {
+      let clusterEventId;
+      return [...availabilities]
+        .sort(sortRequestsByStartDate)
+        .reduce((acc, availability) => {
+          const last = acc[acc.length - 1];
+          availability.endDateCalculated = moment.utc(availability.startDate).clone().add(availability.duration, 'seconds').format('YYYY-MM-DD');
+          if (!last || availability.startDate > moment.utc(last.startDate).clone().add(last.duration, 'seconds').format('YYYY-MM-DD')) {
+            clusterEventId = uniqueId('cluster-availability-');
+            acc.push(
+              getEvent({
+                id: clusterEventId,
+                resourceId: id,
+                startDate: availability.startDate,
+                duration: availability.duration + 1,
+                durationUnit: 's',
+                requestsCount: 1,
+                isCluster: true,
+                isNotAvailable: true
+              })
+            );
+            availability.clusterEventId = clusterEventId;
+          } else {
+            last.requestsCount += 1;
+            last.endDate = availability.endDateCalculated > last.endDate ? availability.endDateCalculated : last.endDate;
+            availability.clusterEventId = clusterEventId;
+          }
           return acc;
         }, []);
     }

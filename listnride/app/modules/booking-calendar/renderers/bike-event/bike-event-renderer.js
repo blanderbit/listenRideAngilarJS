@@ -3,6 +3,17 @@ import './bike-event.css';
 function statusRenderer({ eventRecord, resourceRecord, translations }) {
   const { isCluster } = resourceRecord;
   const { isPending, isAccepted, isNotAvailable, requestsCount } = eventRecord;
+  if (isCluster && isNotAvailable) {
+    const bikesLabel =
+      requestsCount === 1 ?
+      translations['shared.event'] :
+      translations['shared.events'];
+    return `
+      <span class="event-status ellipsis bikes-count">
+        ${requestsCount} ${bikesLabel}
+      </span>
+    `;
+  }
   if (isCluster) {
     const bikesLabel =
       requestsCount === 1

@@ -102,7 +102,7 @@
         template: '<bike></bike>',
         reloadOnSearch: false,
         params: {
-          hideFooter: true,
+          // hideFooter: true,
           date: {
             value: "",
             squash: true

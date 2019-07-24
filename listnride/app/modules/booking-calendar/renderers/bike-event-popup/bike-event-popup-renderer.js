@@ -118,17 +118,27 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
 }
 
 function notAvailableEventPopupRenderer({ translations, getters, eventRecord }) {
+  const datesFormat = 'DD.MM.YYYY HH:mm';
+  const {
+    startDate,
+    duration,
+  } = eventRecord;
+  const formattedStart = moment.utc(startDate).format(datesFormat);
+  const formattedEnd = moment.utc(startDate).add(duration, 'seconds').format(datesFormat);
+
   return `
     <header class="bike-event-popup__header">
       ${translations['booking-calendar.event.not-available-header']}
     </header>
     <p class="bike-event-popup__description">
+      ${translations['booking-calendar.event.date']} : ${formattedStart} - ${formattedEnd}
+      <br>
       ${eventRecord.reason ? translations['booking-calendar.reason'] + ': ' + translations[eventRecord.reason] : ''}
       <br>
       ${eventRecord.comment ? eventRecord.comment : translations['booking-calendar.event.not-available-text']}
     </p>
     <a
-      class="bike-event-popup__link"
+      class="bike-event-popup__link ng-hide"
       href="${getters.getBikeListingsHref()}">
       ${translations['booking-calendar.event.see-settings']}
     </a>
