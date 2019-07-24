@@ -1206,7 +1206,7 @@
     "meta-description": "Contact us if you have special questions or need help solving a problem",
     "faq-section": {
       "header": "We are there for you!",
-      "subheader": "The most frequently questions of our Lister and Rider.",
+      "subheader": "The most frequently questions of our Listers and Riders.",
       "lister-faq": {
         "title": "FAQ Lister",
         "question-1": "What do I need to do to rent out my bike with peace of mind?",
@@ -1214,11 +1214,11 @@
         "question-2": "How can I be sure that the rider will return my bike?",
         "answer-2": "We do our best to create a marketplace based on trust and respect. This is why we require our users to verify their identity before they rent someone’s bike or offer their own bike for rent. Verification is done via mobile phone number, facebook or e-mail and payment details. If you still feel unsure, you can ask the rider to give you a copy of their ID card and/or leave a certain safety deposit. In that case, please make sure to let the rider know in advance before he/she confirms and pays for the rental. Nevertheless, the rider might be running late, as they aren’t familiar with the area and might therefore not be able to find the way back that easily. Try contacting the rider by phone, text message or the in-app chat to find out the reason for the delay. If this doesn’t work out, please report the situation via our website by clicking on “Contact & Support.” We will contact the rider and resolve the issue to make sure your bike is returned to you.",
         "question-3": "What happens if my bike gets stolen or damaged?",
-        "answer-3": "Bike theft does happen. However, the bike is less likely to get stolen if it is properly locked and/or stored indoors. Help prevent theft by providing a secure lock with your bike. In case something does go wrong, the rider will be held responsible for all costs arising from any damage and/or theft. If your bike was stolen and/or damaged during the rental period, you and the rider need to contact us through our website by clicking on “Contact us.” Once we’ve clarified the situation, we will contact you to resolve the issue. If it was stolen and the rider can’t pay the damages, the listnride guarantee will make sure everything is covered! If the bike was stolen while it wasn’t rented out through listnride, however, we cannot help solve the problem. In this case you need to resolve the issue directly with the rider.",
+        "answer-3": "Bike theft does happen. However, the bike is less likely to get stolen if it is properly locked and/or stored indoors. Help prevent theft by using a secure lock with your bike. In case something does go wrong, the rider will be held responsible for all costs arising from any damage and/or theft. If your bike was stolen and/or damaged during the rental period, you and the rider need to contact us through our website by clicking on “Contact us.” Once we’ve clarified the situation, we will contact you to resolve the issue. If it was stolen and the rider can’t pay the damages, the listnride guarantee will make sure everything is covered! If the bike was stolen while it wasn’t rented out through listnride, however, we cannot help solve the problem. In this case you need to resolve the issue directly with the rider.",
         "question-4": "What happens if the rider or someone else gets injured and/or property gets damaged during the rental period?",
         "answer-4": "Make sure that your bike is in good condition when you hand it over. This is beneficial to both parties: The rider will have a great time, and you’ll receive a positive rating after the bike has been returned. When booking a bike through listnride, the renter agrees to the applicable Terms and Conditions. These Terms and Conditions offer you protection against liability for any injury to the renter and/or damage to their or someone else’s property. As the lister, you are never responsible if the renter gets injured during a ride.",
         "question-5": "What happens if the rider doesn’t show up as agreed to pick up my bike?",
-        "answer-5": "Sometimes the rider might have difficulty getting to the agreed location. A bit of flexibility on your part is essential. However, if things are taking too long and you’ve tried contacting the rider – either through the listnride in-app chat or directly by telephone – but he/she is not responding, please cancel the rental by sending the rider a message in the chat thread and describing the reason for the cancellation.",
+        "answer-5": "Sometimes the rider might have difficulty getting to the agreed location. A bit of flexibility on your part is essential. However, if things are taking too long and you’ve tried contacting the rider – either through the listnride in-app chat or directly by telephone – but he/she is not responding, please cancel the rental by sending the rider a message in the chat and describing the reason for the cancellation.",
         "question-6": "How do I offer my bike for rent?",
         "answer-6": "You need to sign up first before you can offer your bike for rent. Simply click on “Sign up” and fill in the required details. Once you’ve signed up, simply log in using your e-mail address and password. Click on your account in the top right corner and select “List a ride.” Provide all the necessary details, including some nice clear pictures of your bike, and after setting the rental price, click on “List my ride.” It’ll take a few seconds for the information to be uploaded. Afterwards, you can find, edit and delete your bike in the account menu under “Listed rides.”",
         "question-7": "How do I set the rental price for my bike?",
@@ -1431,7 +1431,7 @@
   "shop-landing": {
     "title": "Your rental bikes directly bookable on your website",
     "subtitle": "listnride now offers a free plug-in to easily integrate a bike rental booking engine on your website.",
-    "description": "You also realize having your own online bike rental shop is needed to engage with the online consumer? Within a few clicks you have your rental bikes listed on listnride bookable on your own website. Your clients can directly see available bikes and book them!",
+    "description": "Within a few clicks you can list your rental bikes listed on listnride, and then display them on your own website. Your clients can directly see and book them!",
     "feature-1": {
       "title": "Increase your rentals",
       "description": "The online consumer wants to have a choice. Offer your clients the convenience to look at the bikes you have available for rent and the option to book them directly online. To your convenience most of the paperwork is done online as well so you can focus on your business. A clear win-win"
@@ -1444,7 +1444,7 @@
       "title": "Focus on your business",
       "description": "The listnride Terms and Conditions cover all important details of a rental agreement. Here it is outlined that the moment the bike is handed over to the rider, all liability and responsibility are with him or her. So, no more paperwork needed. Furthermore, you’ll have a clear dashboard with the necessary overviews on your open requests, rentals, invoices and revenues made. Just by logging in to your account."
     },
-    "join-now": "Join us now, it is free",
+    "join-now": "Join us, it is free",
     "join-now-description": "Interested to learn more and get started?",
     "contact-us": "Contact Us"
   },

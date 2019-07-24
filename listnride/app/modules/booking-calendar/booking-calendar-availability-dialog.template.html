@@ -57,8 +57,9 @@
           ng-model="bikeAvailability.optionalData.reason"
           placeholder="{{ 'shared.non-availability-type' | translate }}">
           <md-option
-            ng-repeat="reasonOption in bikeAvailability.reasonOptions track by $index" value="{{reasonOption}}">
-              {{ reasonOption }}
+            ng-repeat="reasonOption in bikeAvailability.reasonOptions track by $index"
+            value="{{reasonOption}}"
+            translate="{{reasonOption}}">
           </md-option>
         </md-select>
       </md-input-container>

@@ -3,6 +3,17 @@ import './bike-event.css';
 function statusRenderer({ eventRecord, resourceRecord, translations }) {
   const { isCluster } = resourceRecord;
   const { isPending, isAccepted, isNotAvailable, requestsCount } = eventRecord;
+  if (isCluster && isNotAvailable) {
+    const bikesLabel =
+      requestsCount === 1 ?
+      translations['shared.event'] :
+      translations['shared.events'];
+    return `
+      <span class="event-status ellipsis bikes-count">
+        ${requestsCount} ${bikesLabel}
+      </span>
+    `;
+  }
   if (isCluster) {
     const bikesLabel =
       requestsCount === 1
@@ -32,6 +43,7 @@ function statusRenderer({ eventRecord, resourceRecord, translations }) {
   }
   if (isNotAvailable) {
     return `
+      ${eventRecord.reason ? translations[eventRecord.reason] : ''}
       <span class="event-status ellipsis">
         <i class="fa fa-times-circle-o" aria-hidden="true"></i>
         ${translations['booking-calendar.event.not-available']}
@@ -65,7 +77,6 @@ export function bikeEventRenderer({
 
   const html = `
     <div class="event-name ellipsis">${isCluster || !rider ? name : rider}</div>
-    ${eventRecord.reason ? eventRecord.reason : ''}
     ${statusRenderer({ eventRecord, resourceRecord, translations })}
   `;
 

@@ -3,6 +3,8 @@
     "learn-more": "Meer info",
     "request": "Request",
     "non-availability-type": "Klassificering",
+    "event": "Event",
+    "events": "Events",
     "label_new": "Nieuw",
     "booking-calendar": "Boekingskalender",
     "month": "Maand",
@@ -950,7 +952,7 @@
   "message": {
     "accept": "Accepteren",
     "go-to-calendar": "Naar de boekingskalender",
-    "reject": "afwijzen",
+    "reject": "Afwijzen",
     "rate": "Beoordelen",
     "confirm": "Bevestigen",
     "confirm_return": "Bevestig teruggave",
@@ -1558,6 +1560,14 @@
       "contact": "Telefoonnummer",
       "view-booking": "Boeking bekijken"
     },
+    "add-non-availability": "Boeking toevoegen",
+    "remove-non-availability": "Boeking verwijderen",
+    "reasons": {
+      "booked-in-store": "In de winkel geboekt",
+      "service-repair": "Service / reparatie",
+      "event-other": "Evenement / overig"
+    },
+    "reason": "Reason",
     "previous-month": "Vorige maand",
     "next-month": "Volgende maand",
     "previous-week": "Vorige week",
