@@ -40,6 +40,8 @@ angular
           'booking-calendar.event.not-available',
           'shared.request',
           'shared.requests',
+          'shared.event',
+          'shared.events',
           // event popups
           'booking-calendar.event.waiting',
           'booking-calendar.event.not-available-header',
@@ -267,7 +269,8 @@ angular
                 duration: availability.duration + 1,
                 durationUnit: 's',
                 requestsCount: 1,
-                isCluster: true
+                isCluster: true,
+                isNotAvailable: true
               })
             );
             availability.clusterEventId = clusterEventId;
