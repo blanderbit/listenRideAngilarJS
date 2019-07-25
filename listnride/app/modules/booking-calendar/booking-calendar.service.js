@@ -290,8 +290,8 @@ angular
         acc.push(
           getEvent({
             resourceId: id,
-            startDate: DateHelper.format(new Date(start_date), 'YYYY-MM-DD'), // do not specify timezone Z
-            duration: duration + 1,
+            startDate: moment.utc(start_date).format('YYYY-MM-DD HH:mm'),
+            duration: duration,
             durationUnit: 's',
             isNotAvailable: true,
             reason: reason,
