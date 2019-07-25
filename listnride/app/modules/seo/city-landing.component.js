@@ -3,8 +3,8 @@
 angular.module('cityLanding',[]).component('cityLanding', {
   templateUrl: 'app/modules/seo/city-landing.template.html',
   controllerAs: 'cityLanding',
-  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', 'api', 'ENV', 'bikeOptions', 'ngMeta',
-    function cityLandingController($translate, $tpl, $stateParams, $state, api, ENV, bikeOptions, ngMeta) {
+  controller: ['$translate', '$translatePartialLoader', '$stateParams', '$state', 'api', 'ENV', 'bikeOptions', 'ngMeta', 'mapConfigs',
+    function cityLandingController($translate, $tpl, $stateParams, $state, api, ENV, bikeOptions, ngMeta, mapConfigs) {
       var cityLanding = this;
 
       cityLanding.$onInit = function() {
@@ -23,6 +23,12 @@ angular.module('cityLanding',[]).component('cityLanding', {
           title:`Rent bikes in ${cityLanding.city}`,
           route: `cityLanding({ city: '${$stateParams.city}'})`
         }];
+        cityLanding.colorScheme = mapConfigs.colorScheme();
+        cityLanding.mapOptions = {
+          lat: 40,
+          lng: -74,
+          zoom: 5
+        };
 
         bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
           // without transport category
@@ -40,6 +46,8 @@ angular.module('cityLanding',[]).component('cityLanding', {
 
         // invocations
         fetchData();
+        getInfoData();
+        slickConfig();
       };
 
       function fetchData() {
@@ -74,6 +82,56 @@ angular.module('cityLanding',[]).component('cityLanding', {
             $state.go('404');
           }
         );
+      }
+
+      function getInfoData() {
+
+        cityLanding.info = [
+          {
+            title: "Bike rental, made easy",
+            description: "Search & rent a bike in mere seconds. </br>No more cash, phone calls or emails.",
+            icon: "app/assets/ui_icons/icn_green_energy.svg"
+          },
+          {
+            title: "Variety of choice, everywhere",
+            description: "We’re proud of offering 323 rental bikes </br>in Berlin, and 852 in Germany.",
+            icon: "app/assets/ui_icons/icn_bike_nature.svg"
+          },
+          {
+            title: "It`s insured: ride free, ride hard",
+            description: "All bikes are insured for the rental period.</br> If you have any questions, our team will be with you.",
+            icon: "app/assets/ui_icons/icn_insurance_protection.svg"
+          }
+        ];
+      }
+
+      function slickConfig() {
+        cityLanding.slickConfig = {
+          enabled: true,
+          ease: 'ease-in-out',
+          speed: '500',
+          infinite: false,
+          slidesToShow: 4,
+          prevArrow: "<button class='slick-arrow_prev'><i class='fa fa-chevron-left'></i></button>",
+          nextArrow: "<button class='slick-arrow_next'><i class='fa fa-chevron-right'></i></button>"
+        };
+      }
+
+      function swiperConfig () {
+
+        cityLanding.mySwiper = new Swiper ('.swiper-container', {
+          // Optional parameters
+          //loop: true,
+          paginationClickable: true,
+          keyboardControl: true,
+
+          // If we need pagination
+          pagination: '.swiper-pagination',
+
+          // Navigation arrows
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+        });
       }
 
       function onSearchClick() {

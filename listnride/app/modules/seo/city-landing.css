@@ -1,0 +1,151 @@
+.lnr-city-landing {
+  color: #586068;
+}
+
+.lnr-city-landing section {
+  min-height: calc(100vh - 60px);
+  margin-bottom: 70px;
+}
+
+.lnr-city-landing-content {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.lnr-city-landing-bg {
+  background-color: #fafbfd;
+}
+
+.lnr-city-landing__title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.5;
+  color: #343940;
+}
+
+.lnr-city-landing__descr {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 2;
+}
+
+.lnr-city-landing-promo .lnr-city-landing__title {
+  max-width: 400px;
+  font-size: 70px;
+  line-height: 1.2;
+}
+
+.lnr-city-landing-promo .lnr-city-landing__descr {
+  max-width: 300px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.lnr-city-landing-col {
+  align-items: flex-end;
+  max-width: 585px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.lnr-search-bar_city-landing {
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 50px;
+}
+
+.lnr-search-bar_city-landing input {
+  height: 54px;
+  font-size: 16px;
+}
+
+.lnr-city-landing__button {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lnr-city-landing-content {
+  margin: 25px auto;
+}
+
+.lnr-city-landing .lnr-icn-big-rounded {
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.lnr-city-landing-info ul {
+  height: 100%;
+  max-height: 600px;
+  list-style-type: none;
+}
+
+.lnr-city-landing-info .lnr-city-landing__title {
+  font-size: 22px;
+}
+
+.lnr-city-landing-info .lnr-city-landing__descr {
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.lnr-city-landing-categories {
+  width: 100%;
+}
+
+.lnr-city-landing-categories .slick-list {
+  padding: 50px 0;
+}
+
+.lnr-city-landing-categories .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  font-size: 20px;
+  background-color: #48be84;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  line-height: 50px;
+}
+
+.lnr-city-landing-categories .slick-arrow_prev {
+  right: 100%;
+}
+
+.lnr-city-landing-categories .slick-arrow_next {
+  left: 100%;
+}
+
+.lnr-city-landing-categories .slick-disabled {
+  background-color: #e2e7eb;
+}
+
+.lnr-city-landing-categories .slick-slide {
+  padding: 15px;
+}
+
+.lnr-city-landing-categories .slick-slide a {
+  width: 210px;
+  height: 100px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 60px rgba(150, 158, 172, 0.14);
+  background: #fff;
+  color: #586068;
+}
+
+.lnr-city-landing-categories .slick-current a {
+  color: #599eff;
+}
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}

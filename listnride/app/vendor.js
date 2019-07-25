@@ -21,6 +21,7 @@ import '../js_modules/ng-meta/ngMeta.js';
 import '../js_modules/daterangepicker/jquery.daterangepicker.js';
 import 'slick-carousel';
 import 'angular-slick-carousel';
+import 'swiper';
 import 'angulartics';
 import 'angulartics-google-analytics';
 import 'angular-socialshare';
