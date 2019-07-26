@@ -140,7 +140,10 @@
 
         <div ng-if="!calendar.parent.cluster" layout="column" layout-align="space-between none">
           <span class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
-          <span class="md-body-1 lnr-lh-body-2">{{ calendar.parent.humanReadableSize }}</span>
+          <span class="md-body-1 lnr-lh-body-2">
+            {{ calendar.parent.humanReadableSize(calendar.parent.bike.size) }}
+            <span ng-if="calendar.parent.bike.frame_size"> | {{ calendar.parent.bike.frame_size }}</span>
+          </span>
         </div>
       </div>
     </div>
