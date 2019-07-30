@@ -144,7 +144,7 @@ angular.
 
       // SIGN_UP
 
-      var signupGlobal = function (user) {
+      var signupGlobal = function (user, requesting) {
         var obj = {
           email: user.email,
           firstName: user.firstName,
@@ -158,7 +158,7 @@ angular.
         // manually set all variables to null
         // $mdDialog, inviteCode, requesting, business
         // TODO: Create service for sign up
-        SignupDialogController(null, null, null, false, obj);
+        SignupDialogController(null, null, requesting, false, obj);
       };
 
       var signupFbGlobal = function (fbAccessToken, inviteCode, requestFlow, canBeLogin) {

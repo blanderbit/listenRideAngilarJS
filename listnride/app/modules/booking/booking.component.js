@@ -499,7 +499,7 @@ angular.module('booking', [])
           password: booking.user.password,
           isShop: !!booking.shopBooking
         }
-        booking.authentication.signupGlobal(user);
+        booking.authentication.signupGlobal(user, true);
       };
 
       function sendCode() {
