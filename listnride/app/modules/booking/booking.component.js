@@ -8,10 +8,29 @@ angular.module('booking', [])
     controllerAs: 'booking',
     controller:
      function BookingController(
-      $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-      $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster, userHelper) {
-
-      var booking = this;
+      $q,
+      $localStorage,
+      $rootScope,
+      $scope,
+      $state,
+      $stateParams,
+      $timeout,
+      $analytics,
+      $translate,
+      $filter,
+      authentication,
+      api,
+      price,
+      voucher,
+      calendarHelper,
+      notification,
+      paymentHelper,
+      bikeOptions,
+      bikeCluster,
+      userHelper,
+      date
+    ) {
+      const booking = this;
 
       booking.$onInit = function () {
         // VARIABLES
@@ -665,24 +684,15 @@ angular.module('booking', [])
           function(nonce) {
             booking.isThreeDSecureSuccess = true;
 
-            var startDate = booking.startDate;
-            var endDate = booking.endDate;
-
             // The local timezone-dependent dates get converted into neutral,
             // non-timezone utc dates, preserving the actually selected date values
-            var startDate_utc = new Date(
-              Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
-            );
-            var endDate_utc = new Date(
-              Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
-            );
 
             var data = {
               user_id: $localStorage.userId,
               ride_id: booking.bikeId,
               payment_method_nonce: nonce,
-              start_date: startDate_utc.toISOString(),
-              end_date: endDate_utc.toISOString(),
+              start_date: date.getDateUTC(booking.startDate).toISOString(),
+              end_date: date.getDateUTC(booking.endDate).toISOString(),
               instant: !!booking.shopBooking,
               insurance: {
                 premium: booking.isPremium
