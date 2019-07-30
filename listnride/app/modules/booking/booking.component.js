@@ -229,10 +229,10 @@ angular.module('booking', [])
           var startDate = new Date(booking.dateRange.start_date);
           booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
 
-          booking.endDate = moment.utc([startDate.getFullYear(), startDate.getMonth(), startDate.getDate()]);
-          booking.endDate = booking.endDate.add(+booking.dateRange.duration, 'seconds').hours(18);
-          booking.endDate = booking.endDate.format();
-          booking.endDate = new Date(booking.endDate);
+          booking.endDate = moment
+            .utc([startDate.getFullYear(), startDate.getMonth(), startDate.getDate()])
+            .add(+booking.dateRange.duration, 'seconds').hours(18)
+            .toDate();
 
           setInitHours();
           updatePrices();
@@ -250,7 +250,6 @@ angular.module('booking', [])
             })
           }
         }
-        // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
       };
 
        function validClusterSize() {
