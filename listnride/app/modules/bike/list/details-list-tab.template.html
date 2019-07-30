@@ -73,7 +73,7 @@
             <md-button
               hide-xs
               hide-sm
-              class="lnr-group-close md-icon-button"
+              class="lnr-group-activate md-icon-button"
               ng-click="detailsTab.parent.form.available = !detailsTab.parent.form.available"
             >
               <md-tooltip>{{ detailsTab.parent.form.available ? 'listingCard.deactivate' : 'listingCard.activate' | translate }}</md-tooltip>
@@ -133,7 +133,7 @@
             <md-button
               hide-xs
               hide-sm
-              class="lnr-group-close md-icon-button"
+              class="lnr-group-activate md-icon-button"
               ng-click="input.available = !input.available"
             >
               <md-tooltip>{{ input.available ? 'listingCard.deactivate' : 'listingCard.activate' | translate }}</md-tooltip>
@@ -162,7 +162,7 @@
             <a
               hide-gt-sm
               ng-if="detailsTab.parent.isListMode"
-              class="lnr-group-close lnr-link md-warn"
+              class="lnr-group-close lnr-group-close_next lnr-link md-warn lnr-mt"
               ng-click="detailsTab.parent.removeInput($index)">
                 {{ 'shared.remove' | translate }}
             </a>
@@ -173,7 +173,7 @@
           layout="row"
           layout-align="end none">
           <a
-            class="lnr-link lnr-mv"
+            class="lnr-link lnr-m"
             ng-if="detailsTab.parent.isListMode"
             ng-click="detailsTab.parent.addInput()">
             {{ 'list.details.variations-add' | translate}}
