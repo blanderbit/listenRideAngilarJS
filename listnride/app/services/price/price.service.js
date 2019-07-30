@@ -2,47 +2,44 @@ import { isString } from "util";
 
 angular.module('listnride').factory('price', ['$translate', 'date',
   function($translate, date) {
+    const PRICES_BY_DAYS = new Map([
+      ['1', {start_at: 0}],
+      ['1/2', {start_at: 43200}],
+      ['2', {start_at: 86400}],
+      ['3', {start_at: 172800}],
+      ['4', {start_at: 259200}],
+      ['5', {start_at: 345600}],
+      ['6', {start_at: 432000}],
+      ['7', {start_at: 518400}],
+      ['8', {start_at: 604800}],
+      ['28', {start_at: 2419200}]
+    ]);
+    // to have opportunity to get day by start_at
+    const PRICES_BY_START_AT = _.invertBy(Object.fromEntries(PRICES_BY_DAYS), value => value.start_at);
+
     return {
-      PRICES: new Map([
-        ['1', {start_at: 0}],
-        ['1/2', {start_at: 43200}],
-        ['2', {start_at: 86400}],
-        ['3', {start_at: 172800}],
-        ['4', {start_at: 259200}],
-        ['5', {start_at: 345600}],
-        ['6', {start_at: 432000}],
-        ['7', {start_at: 518400}],
-        ['8', {start_at: 604800}],
-        ['28', {start_at: 2419200}]
-      ]),
-      getPriceFor: function(day, prices) {
-        day = _.isString(day) ? day: _.toString(day);
-        day = day.replace(/[^0-9\.\/]+/g, '');
+      getPriceObjectFor(day, prices) {
+        day = _.toString(day).replace(/[^0-9\.\/]+/g, '');
+        let dayData = PRICES_BY_DAYS.get(day);
 
-        let priceData = _.find(prices, {
-          'start_at': this.PRICES.get(day).start_at
-        });
-
-        return priceData ? priceData.price : null;
+        return dayData ? _.find(prices, {
+          'start_at': dayData.start_at
+        }) : null;
       },
-      getAllPrices: function(originalPrices) {
-        let pricesScheme = Object.fromEntries(this.PRICES);
-        let transformedPrices = {};
+      getPriceFor(day, prices) {
+        let priceObject = this.getPriceObjectFor(day, prices)
 
-        pricesScheme = _.invertBy(pricesScheme, function (value) {
-          return value.start_at;
-        });
-
-        _.forEach(originalPrices, (priceObject) => {
-          transformedPrices[pricesScheme[priceObject.start_at]] = priceObject.price;
-        });
-
-        return transformedPrices;
+        return priceObject ? priceObject.price : null;
+      },
+      getAllPrices(originalPrices) {
+        let allPrices = {};
+        _.forEach(originalPrices, priceObject => allPrices[PRICES_BY_START_AT[priceObject.start_at]] = priceObject.price);
+        return allPrices;
       },
       // Calculates the prices for the calendar and booking overview
       // Note that this is just a preview-calculation, the actual data
       // gets calculated in the backend.
-      calculatePrices: function ({
+      calculatePrices({
         startDate = null,
         endDate = null,
         prices = null,
@@ -113,7 +110,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         return result;
       },
 
-      checkHalfDayEnabled: function (startDate, endDate, timeslots) {
+      checkHalfDayEnabled(startDate, endDate, timeslots) {
         if (date.durationDaysNew(startDate, endDate) > 0) return false;
 
         let dateTimeRange = _.range(startDate.getHours(), endDate.getHours() + 1);
@@ -134,10 +131,11 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         return halfDay;
       },
 
+      // DEPRECATED
       // proposes custom prices through daily price acc. to a scheme of us
       // without using custom discounts
-      proposeCustomPrices: function (data) {
-        var basePrice = data.prices[0].price * (1/1.25);
+      proposeCustomPrices(data) {
+        let basePrice = this.getPriceFor('1 day', data.prices) * (1 / 1.25);
 
         data.prices[1].price = Math.round(basePrice * 2);
         data.prices[2].price = Math.round(basePrice * 2.7);
@@ -153,36 +151,29 @@ angular.module('listnride').factory('price', ['$translate', 'date',
 
       // estimate prices for several days
       // based on daily price && daily and weekly discounts
-      setCustomPrices: function (data) {
-        var base = data.prices[0].price;
-        let halfDayPrice = data.prices.length > 9;
+      setCustomPrices(data) {
+        const base = this.getPriceFor('1 day', data.prices);
 
-        let secondDayIndex = halfDayPrice ? 2 : 1;
+        let halfDayPrice = this.getPriceObjectFor('1/2 day', data.prices);
 
-        if (halfDayPrice) {
-          data.prices[1].price = Math.round(base / 2);
+        halfDayPrice ? halfDayPrice.price = Math.round(base / 2) : '';
+
+        for (let day = 2; day <= 6; day += 1) {
+          let currentDayPrice = this.getPriceObjectFor(day, data.prices);
+          currentDayPrice.price = data.discounts.daily > 1 ? Math.round(day * base * ((100 - parseFloat(data.discounts.daily)) / 100)) : Math.round(day * base);
         }
 
-        // from 2 to 6 days
-        for (let day = secondDayIndex; day < secondDayIndex + 5; day += 1) {
-          // if daily discount not 0
-          if (data.discounts.daily > 1) {
-            data.prices[day].price = Math.round((day + 1) * base * ((100 - parseFloat(data.discounts.daily)) / 100));
-          } else {
-            data.prices[day].price = Math.round((day + 1) * base);
-          }
-        }
         // week price update
-        data.prices[secondDayIndex+5].price = Math.round(7 * base * ((100 - parseFloat(data.discounts.weekly)) / 100));
+        this.getPriceObjectFor(7, data.prices).price = Math.round(7 * base * ((100 - parseFloat(data.discounts.weekly)) / 100));
         // additional day price update
-        data.prices[secondDayIndex+6].price = Math.round(1 * base * ((100 - parseFloat(data.discounts.weekly)) / 100));
+        this.getPriceObjectFor(8, data.prices).price = Math.round(1 * base * ((100 - parseFloat(data.discounts.weekly)) / 100));
         // month price update
-        data.prices[secondDayIndex+7].price = Math.round(28 * base * ((100 - parseFloat(data.discounts.weekly)) / 100));
+        this.getPriceObjectFor(28, data.prices).price = Math.round(28 * base * ((100 - parseFloat(data.discounts.weekly)) / 100));
 
         return data.prices;
       },
 
-      setDefaultPrices: function() {
+      setDefaultPrices() {
         var prices = [];
 
         return prices;
@@ -191,7 +182,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       // server to client transformation
       // all prices are calculated based on daily price
       // daily price is user provided always as integer
-      transformPrices: function (originalPrices, discounts) {
+      transformPrices(originalPrices, discounts) {
         let prices = [];
         let halfDayPrice = _.find(originalPrices, {'start_at': 43200});
 
@@ -245,7 +236,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       },
 
       // client to server transformation
-      inverseTransformPrices: function (transformedPrices, isListMode) {
+      inverseTransformPrices(transformedPrices, isListMode) {
         var prices = [];
         var start_at_seconds = [0, 86400, 172800, 259200, 345600, 432000, 518400, 604800, 2419200];
         const WEEK_START_AT = 518400;

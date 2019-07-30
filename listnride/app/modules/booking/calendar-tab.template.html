@@ -122,9 +122,13 @@
         <div ng-if="calendar.parent.cluster">
           <div>
             <div class="md-body-2">{{ 'shared.pick-size' | translate }}</div>
-            <md-select ng-model="calendar.parent.pickedBikeSize" placeholder="{{ 'shared.pick-size' | translate}}"
+            <md-select
+              ng-model="calendar.parent.pickedBikeSize"
+              placeholder="{{ 'shared.pick-size' | translate}}"
               class="lnr-mt-0 lnr-mb-0">
-              <md-option ng-repeat="option in calendar.parent.bikeClusterSizes" value="{{option.size}}"
+              <md-option
+                ng-repeat="option in calendar.parent.bikeClusterSizes"
+                value="{{option.size}}"
                 ng-disabled="option.notAvailable || !calendar.parent.isDateValid">
                 {{ option.name }}
                 <span ng-if="option.notAvailable">({{ 'user.not-available' | translate }})</span>
@@ -133,7 +137,11 @@
           </div>
           <div layout="row" layout-align="none center">
             <span flex="35"></span>
-            <p flex="65" ng-if="!calendar.parent.isDateValid" class="text-error" translate="shared.firstly-pick-dates">
+            <p
+              flex="65"
+              ng-if="!calendar.parent.isDateValid"
+              class="text-error"
+              translate="shared.firstly-pick-dates">
             </p>
           </div>
         </div>

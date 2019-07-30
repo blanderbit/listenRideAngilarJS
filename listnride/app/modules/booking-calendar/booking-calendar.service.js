@@ -291,7 +291,7 @@ angular
           getEvent({
             resourceId: id,
             startDate: moment.utc(start_date).format('YYYY-MM-DD HH:mm'),
-            duration: duration,
+            duration: duration + 1,
             durationUnit: 's',
             isNotAvailable: true,
             reason: reason,
