@@ -325,15 +325,16 @@ angular.module('list', ['ngLocale'])
         // set the custom prices for a bike
         list.setCustomPrices = function (dailyPriceChanged) {
           // business users get their prices proposed according to a fixed scheme
-          if (list.businessUser) {
-            list.form.prices = price.proposeCustomPrices(list.form);
-          } else {
-            // discount fields are enabled and no custom price are set manually
-            if (list.discountFieldEditable) {
-              // set the prices based on the daily price
-              list.form.prices = price.setCustomPrices(list.form);
-            }
+
+          // OLD CODE FOR BUSINESS USERS:
+          // if (list.businessUser) { list.form.prices = price.proposeCustomPrices(list.form); }
+          // discount fields are enabled and no custom price are set manually
+
+          if (list.discountFieldEditable) {
+            // set the prices based on the daily price
+            list.form.prices = price.setCustomPrices(list.form);
           }
+
         };
 
         list.insuranceAllowed = function () {
