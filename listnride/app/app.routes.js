@@ -132,6 +132,10 @@
         url: '/booking?bikeId&size&startDate&endDate&shop',
         template: '<booking></booking>',
         reloadOnSearch: false,
+        params: {
+          hideFooter: false,
+          hideHeader: false
+        },
         resolve: {
           data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);
