@@ -10,7 +10,7 @@ angular.module('header',[]).component('header', {
     header.verification = verification;
     header.name = $localStorage.name;
     header.userId = $localStorage.userId;
-    header.inviteCode = $stateParams.inviteCode
+    header.inviteCode = $stateParams.inviteCode;
     header.showSearch = false;
     // Contains the amount of unread messages to be displayed in the header
     header.unreadMessages = $localStorage.unreadMessages;
@@ -19,7 +19,12 @@ angular.module('header',[]).component('header', {
 
     header.$onInit = function(){
       header.showSearch = $state.current.name !== 'home';
-    }
+    };
+
+    //get state params hideHeader value when it's available
+    setTimeout(function () {
+      header.hideHeader = $state.params.hideHeader;
+    }, 0);
 
     $transitions.onSuccess({}, function(transition) {
       if (transition.to().name === "search") {

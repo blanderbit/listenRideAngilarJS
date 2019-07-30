@@ -47,6 +47,8 @@ angular.module('booking', [])
         // get StateParams
         booking.bikeId = $stateParams.bikeId;
         booking.shopBooking = $stateParams.shop;
+        $stateParams.hideHeader = $stateParams.shop;
+        $stateParams.hideFooter = $stateParams.shop;
         // booking from SHOP PLUGIN starts without information about dates
         booking.startDate = $stateParams.startDate ? new Date($stateParams.startDate) : null;
         booking.endDate = $stateParams.endDate ? new Date($stateParams.endDate) : null;
