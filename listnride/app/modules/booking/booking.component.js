@@ -237,6 +237,7 @@ angular.module('booking', [])
           setInitHours();
           updatePrices();
           booking.isDateValid = validDates();
+          booking.pickedBikeSize = resetBikeSize();
 
           if(booking.bike.is_cluster){
             bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
@@ -277,6 +278,7 @@ angular.module('booking', [])
         booking[slotDate] = date;
 
         validDates();
+        booking.pickedBikeSize = resetBikeSize();
         updatePrices();
       };
 
