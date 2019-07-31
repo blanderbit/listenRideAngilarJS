@@ -106,11 +106,12 @@ angular.module('booking', [])
             booking.bike = success.data.current;
             booking.coverageTotal = booking.bike.coverage_total || 0;
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-            booking.pickedBikeSize = setDefaultBikeSize();
             booking.prices = booking.bike.prices;
             booking.insuranceEnabled = userHelper.insuranceEnabled(booking.bike.user);
             booking.hasTimeSlots = userHelper.hasTimeSlots(booking.bike.user);
             booking.timeslots = booking.hasTimeSlots ? userHelper.getTimeSlots(booking.bike.user) : [];
+
+            booking.bike.is_cluster ? setSizeFromState() : booking.bike.size;
             getLister();
             updatePrices();
 
@@ -134,18 +135,11 @@ angular.module('booking', [])
             // CLUSTER BIKE LOGIC
             if (booking.bike.is_cluster) {
               booking.cluster = success.data.cluster;
-              booking.bikeClusterSizes = booking.cluster.sizes;
-              bikeCluster.getSizeTranslations(booking.bikeClusterSizes);
 
-              // remove primary bike from variations array
-              booking.cluster.variations = _.filter(booking.cluster.variations, function (variant) {
-                return variant.id !== booking.bike.id;
-              });
+              booking.bikeVariations = bikeCluster
+                .groupBikeVariations(booking.cluster.variations);
 
-
-              // change some params to cluster merged params
-              booking.bike.accessories = booking.cluster.accessories;
-              booking.bike.ratings = booking.cluster.ratings;
+              mergeGeneralClusterParams();
             }
           },
           function (error) {
@@ -155,8 +149,30 @@ angular.module('booking', [])
         );
       }
 
-      function setDefaultBikeSize() {
-        return $state.params.size ? $state.params.size : resetBikeSize();
+      function updateBikeDate() {
+        api.get('/rides/' + booking.bikeId).then(
+          function (success) {
+            booking.bike = success.data.current;
+          },
+          function (error) {
+            notification.show(error, 'error');
+            $state.go('home');
+          }
+        );
+      }
+
+      function mergeGeneralClusterParams() {
+        booking.bike.accessories = booking.cluster.accessories;
+        booking.bike.ratings = booking.cluster.ratings;
+      }
+
+      function setSizeFromState() {
+        if ($state.params.size) {
+          booking.pickedBikeSize = bikeCluster.getVariationKey({
+            size: $state.params.size,
+            frame_size: $state.params.frame_size
+          });
+        }
       }
 
       function resetBikeSize() {
@@ -241,28 +257,43 @@ angular.module('booking', [])
           booking.isDateValid = validDates();
           booking.pickedBikeSize = resetBikeSize();
 
-          if(booking.bike.is_cluster){
-            bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
-              // return new rides that are available in current period
-              booking.cluster.rides = response.data.rides;
-              bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
-              // update scope one more time
-              _.defer(function () {
-                $scope.$apply();
+          if (booking.bike.is_cluster){
+            bikeCluster
+              .getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate)
+              .then(availableBikeIds => {
+                booking.availableBikeIds = availableBikeIds;
+                bikeCluster.markAvailableSizes(booking.bikeVariations, booking.availableBikeIds);
+              })
+              .finally(() => {
+                // update scope one more time
+                _.defer(() => $scope.$apply());
               });
-            })
           }
         }
       };
 
-       function validClusterSize() {
-         if (!booking.bike.is_cluster) return true;
-         if (booking.cluster && booking.cluster.rides) {
-           return !!booking.cluster.rides[booking.pickedBikeSize];
-         } else {
-           return false;
-         }
-       }
+      function validClusterSize() {
+        if (!booking.bike.is_cluster) return true;
+
+        // false - if we don't have available bike ids from backend
+        if (booking.availableBikeIds && booking.pickedBikeSize) {
+          return !booking.bikeVariations[booking.pickedBikeSize].notAvailable
+        } else {
+          return false;
+        }
+      }
+
+      booking.onSizeChange = function () {
+        let sizeStateParams = {
+          size: booking.bikeVariations[booking.pickedBikeSize].size,
+          frame_size: booking.bikeVariations[booking.pickedBikeSize].frame_size
+        }
+        updateStateSize(sizeStateParams);
+      }
+
+      function updateStateSize(sizeState) {
+        updateState(sizeState);
+      }
 
       function setInitHours() {
         var openTime = calendarHelper.getInitHours(booking.openingHours, booking.startDate, booking.endDate);
@@ -364,13 +395,30 @@ angular.module('booking', [])
       };
 
       booking.pickAvailableBikeId = function () {
-        return booking.cluster ? booking.cluster.rides[booking.pickedBikeSize][0].id : booking.bikeId;
+        return bikeCluster.pickAvailableBikeId({
+          isCluster: booking.bike.is_cluster,
+          bikeId: booking.bike.id,
+          bikeVariations: booking.bikeVariations,
+          pickedBikeVariant: booking.pickedBikeSize,
+          availableBikeIds: booking.availableBikeIds
+        });
       }
 
       booking.nextAction = function () {
         switch (getTabNameByOrder(booking.selectedIndex)) {
           case 'calendar': {
-            updateState({startDate: booking.startDate, endDate: booking.endDate, size: booking.pickedBikeSize, bikeId: booking.pickAvailableBikeId()});
+            // re-write bike id in component
+            booking.bikeId = booking.pickAvailableBikeId();
+            // update state
+            updateState({
+              bikeId: booking.bikeId,
+              startDate: booking.startDate,
+              endDate: booking.endDate,
+              ...(booking.pickedBikeSize ? bikeCluster.transformBikeVariationKey(booking.pickedBikeSize) : [])
+            });
+            // get actual bike data
+            updateBikeDate();
+            // check which tab should be active
             setFirstTab();
             break;
           }

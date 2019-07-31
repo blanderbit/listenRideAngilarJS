@@ -13,17 +13,87 @@ angular.module('listnride')
           });
         },
 
-        getAvailableClusterBikes: function (clusterId, startDate, endDate) {
-          var durationInDays = moment.duration(date.diff(startDate, endDate)).asDays().toFixed();
-
-          return api.get('/clusters/' + clusterId + '?start_date=' + moment(startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + durationInDays);
+        getVariationKey({size, frame_size}){
+          return size + (frame_size ? '|' + frame_size : '');
         },
 
-        markAvailableSizes: function (bikeClusterSizes, bikes) {
-          // add special flag to our parameter that will show it's availability
-          _.map(bikeClusterSizes, function (option) {
-            option.notAvailable = bikes ? !bikes[option.size] : true;
+        groupBikeVariations(variations) {
+          let variationOptions = {};
+
+          _.forEach(variations, (clusterVariant) => {
+            let variationGroupingKey = this.getVariationKey({
+              size: clusterVariant.size,
+              frame_size: clusterVariant.frame_size
+            });
+
+            variationOptions[variationGroupingKey] = {
+              bike_ids: [
+                ...(variationOptions[variationGroupingKey] ? variationOptions[variationGroupingKey].bike_ids : []),
+                clusterVariant.id
+              ],
+              size: clusterVariant.size,
+              frame_size: clusterVariant.frame_size,
+              label: `
+                ${bikeOptions.getHumanReadableSize(clusterVariant.size)}
+                ${clusterVariant.frame_size ? ' | ' + clusterVariant.frame_size : '' }
+              `
+            }
           });
+
+          return variationOptions;
+        },
+
+        transformBikeVariationKey(variationKey) {
+          variationKey = variationKey.split('|');
+          return {
+            size: variationKey[0],
+            frame_size: variationKey[1]
+          }
+        },
+
+        getAvailableClusterBikes(clusterId, startDate, endDate) {
+          let duration = moment
+            .duration(date.diff(startDate, endDate))
+            .as('seconds');
+
+          return api
+            .get('/clusters/' + clusterId + '?start_date=' + moment(startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + duration)
+            .then((response) => {
+              let availableRides = response.data.rides;
+
+              let bike_ids = [];
+
+              _.forEach(availableRides, (size) => {
+                bike_ids = [
+                  ...bike_ids,
+                  ...(_.map(size, 'id'))
+                ]
+              });
+              // end
+
+              return bike_ids;
+            })
+
+        },
+
+        markAvailableSizes(bikeVariations, availableBikes) {
+          _.forEach(bikeVariations, function (option) {
+            option.notAvailable = !_.intersection(option.bike_ids, availableBikes).length;
+          });
+        },
+
+        findFirstAvailableVariantId(bikeVariations, pickedBikeVariant, availableBikeIds) {
+          return _.intersection(bikeVariations[pickedBikeVariant].bike_ids, availableBikeIds)[0];
+        },
+
+        pickAvailableBikeId({
+          isCluster,
+          bikeId,
+          bikeVariations,
+          pickedBikeVariant,
+          availableBikeIds
+        }) {
+          return isCluster ? this.findFirstAvailableVariantId(bikeVariations, pickedBikeVariant, availableBikeIds) : bikeId;
         }
       };
     }]);

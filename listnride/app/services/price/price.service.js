@@ -131,6 +131,21 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         return halfDay;
       },
 
+      generateDefaultPrices(hasHalfDay) {
+        let defaultPrices = [];
+
+        PRICES_BY_DAYS.forEach((value, key) => {
+          if (key == '1/2' && !hasHalfDay) return;
+          defaultPrices.push({
+            price: undefined,
+            start_at: value.start_at
+          });
+        });
+
+        return defaultPrices;
+      },
+
+
       // DEPRECATED
       // proposes custom prices through daily price acc. to a scheme of us
       // without using custom discounts
