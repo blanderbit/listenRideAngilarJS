@@ -51,14 +51,17 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
   }, false);
 
   function updateData(date1, date2) {
-    date1 = moment.utc([date1.getFullYear(), date1.getMonth(), date1.getDate()]);
-    // if user doesn't pick end date - duration will be 0
-    date2 = date2 ? moment.utc([date2.getFullYear(), date2.getMonth(), date2.getDate()]): date1;
+    date1 = moment
+      .utc([date1.getFullYear(), date1.getMonth(), date1.getDate(), 0, 0])
 
-    var duration = date1.diff(date2, 'seconds');
-    var startDate = duration > 0 ? date2 : date1;
+    date2 = date2 ? moment.utc([date2.getFullYear(), date2.getMonth(), date2.getDate(), 0, 0]) : date1.clone();
+
+    if (date1.isSame(date2)) date2.hours(23).minutes(59);
+
+    var duration = date2.diff(date1, 'seconds');
+    var startDate = duration > 0 ? date1 : date2;
     var newData = {
-      'start_date': startDate.format('YYYY-MM-DD'),
+      'start_date': startDate.format('YYYY-MM-DD HH:mm'),
       'duration': Math.abs(duration),
       'is_changed': true
     }
