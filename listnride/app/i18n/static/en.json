@@ -1312,19 +1312,19 @@
     "investment": "Investment",
     "submit": "Pre-register",
     "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
-    "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
+    "faq-question-1": "Why does listnride start a crowdfunding campaign?",
     "faq-answer-1": "We are a young company with a well developed product, a growing community of riders and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
-    "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
+    "faq-question-2": "How can I invest in listnride?",
     "faq-answer-2": "We are working with Seedrs, the leading Crowdfunding platform from the United Kingdom to run our Crowdfunding campaign. To invest, simply create an account at <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> and follow the instructions.",
-    "faq-question-3": "ARE THERE ANY RISKS INVOLVED?",
+    "faq-question-3": "Are there any risks involved?",
     "faq-answer-3": "Investing in startups involves risks, including loss of capital, illiquidity, lack of dividends and dilution, and it should be done only as part of a diversified portfolio. If you would like to read more Seedrs has a more detailed explanation about these <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">risks here</a>.",
-    "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUNT?",
+    "faq-question-4": "What is the minimum investment amount?",
     "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around €10 (exact amount depends on exchange rates). We are happy to receive any amount!",
-    "faq-question-5": "WHAT HAS LISTNRIDE ACCOMPLISHED SO FAR?",
+    "faq-question-5": "What has listnride accomplished so far?",
     "faq-answer-5": "Since our official start in September 2016, when we launched a fully functional site: listnride has grown to be the largest bike rental platform in the German speaking market (DE, AT, CH), with over 10.000 bikes listed and 15.000 registered users. listnride has already over 450 bike shops integrated and 8 innovative bike brands up and running with test ride programs. We have built up a strong presence in Berlin, Munich, Vienna, Amsterdam and Mallorca and are expanding into other large cities like Hamburg, Zurich and Düsseldorf.",
-    "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
+    "faq-question-6": "How can I make money with my investment?",
     "faq-answer-6": "To make a profit on your investment, you will generally need to sell your shares for more than the amount you invested. In a best case scenario, the value of your shares will rise in line with the growth of business you invested in, and you will be able to see your shares when the business floats on a stock exchange or is bought by another company (i.e. an exit event). More info <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">here</a>",
-    "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
+    "faq-question-7": "What is the money raised used for?",
     "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
     "faq-question-8": "FURTHER QUESTIONS?",
     "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
@@ -1342,22 +1342,22 @@
     "header": "Pedalling without worries",
     "subheader": "We act in your best interest",
     "cover": {
-      "logo": "insert logo here",
+      "logo": "Insert logo here",
       "header": "Damages can easily be overcome",
-      "description": "Sometimes things do go wrong. If your bike is damaged during rental, our insurance partners will step in. Both, bike and Rider are on the safe side."
+      "description": "Sometimes things do go wrong. If your bike is damaged during rental, our insurance partners will step in. Both bike and Rider are on the safe side."
     },
     "control": {
-      "logo": "insert logo here",
+      "logo": "Insert logo here",
       "header": "Your data in good hands",
       "description": "Your address and the location of your bike are not publicly visible. The contact details are only shared after a booking is confirmed."
     },
     "safe": {
-      "logo": "insert logo here",
-      "header": "Present yourself - if you like",
+      "logo": "Insert logo here",
+      "header": "Present yourself",
       "description": "Link your profile to your Facebook ID and pressent yourself to the <i>listnride</i> community. Riders know from whom they rent. Listers know immediately who wants to rent."
     },
     "alone": {
-      "logo": "insert logo here",
+      "logo": "Insert logo here",
       "header": "Stars point out the way",
       "description": "After a rental both sides can rate each other for the quality and service. This way we strengthen the confidence in the community and keep the quality high.  So you can be sure can find and rent high-quality bikes everywhere."
     },
@@ -1471,6 +1471,6 @@
     "meta-description": "The Privacy Policy of listnride applies to the use of the online platform."
   },
   "seo": {
-    "cities-title": "Planning to Travel? Check out more cities:"
+    "cities-title": "Planning to Travel? Check out more cities where you can rent a bike with us:"
   }
 }
