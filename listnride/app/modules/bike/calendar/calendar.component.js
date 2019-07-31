@@ -246,7 +246,7 @@ angular.module('bike').component('calendar', {
       if (calendar.bike && !calendar.bike.is_cluster) return true;
 
       // false - if we don't have available bike ids from backend
-      if (calendar.availableBikeIds) {
+      if (calendar.availableBikeIds && calendar.pickedBikeSize) {
         return !calendar.bikeVariations[calendar.pickedBikeSize].notAvailable
       } else {
         return false;
