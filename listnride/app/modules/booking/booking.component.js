@@ -136,10 +136,18 @@ angular.module('booking', [])
             if (booking.bike.is_cluster) {
               booking.cluster = success.data.cluster;
 
+              _.forEach(booking.cluster.variations, (item) => {
+                if(!_.isEmpty(item.frame_size)) {
+                  booking.hasFrameSize = true;
+                };
+              });
+
               booking.bikeVariations = bikeCluster
                 .groupBikeVariations(booking.cluster.variations);
 
               mergeGeneralClusterParams();
+
+
             }
           },
           function (error) {
