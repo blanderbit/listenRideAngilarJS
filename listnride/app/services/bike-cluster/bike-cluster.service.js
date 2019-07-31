@@ -58,10 +58,7 @@ angular.module('listnride')
 
           return api
             .get('/clusters/' + clusterId + '?start_date=' + moment(startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + duration)
-            .then((response) => {
-              return response.data.ride_ids;
-            })
-
+            .then((response) => response.data.ride_ids);
         },
 
         markAvailableSizes(bikeVariations, availableBikes) {
