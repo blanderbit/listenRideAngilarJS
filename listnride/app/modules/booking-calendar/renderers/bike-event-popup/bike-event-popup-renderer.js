@@ -118,7 +118,7 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
 }
 
 function notAvailableEventPopupRenderer({ translations, getters, eventRecord }) {
-  const datesFormat = 'DD.MM.YYYY HH:mm';
+  const datesFormat = 'DD.MM.YYYY, HH:mm';
   const {
     startDate,
     duration,
