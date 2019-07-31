@@ -61,12 +61,6 @@ angular.module('listnride')
             .then((response) => {
               let availableRides = response.data.rides;
 
-              // TODO: just for testing
-              // dummy manipulation
-              delete availableRides['95'];
-              availableRides['155'].pop();
-              availableRides['155'].pop();
-
               let bike_ids = [];
 
               _.forEach(availableRides, (size) => {

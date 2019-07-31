@@ -127,20 +127,12 @@ angular.module('list', ['ngLocale'])
                 'country': data.country
               }
 
-              list.form.prices = [];
-              for (var day = 0; day < 9; day += 1) {
-                list.form.prices[day] = {
-                  price: undefined
-                }
-              }
-
               list.hasTimeSlots = userHelper.hasTimeSlots(data);
+
+              list.form.prices = [];
+              list.form.prices = price.generateDefaultPrices(list.hasTimeSlots);
+
               list.secondDayIndex = list.hasTimeSlots ? 2 : 1;
-              if (list.hasTimeSlots) {
-                list.form.prices[9] = {
-                  price: undefined
-                }
-              }
 
               list.form.discounts = {
                 "daily": 10,
