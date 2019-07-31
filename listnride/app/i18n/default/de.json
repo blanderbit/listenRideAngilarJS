@@ -5,6 +5,7 @@
     "non-availability-type": "Art der Verfügbarkeit",
     "event": "Event",
     "events": "Events",
+    "frame-size": "Rider height | Framesize",
     "label_new": "Neu",
     "booking-calendar": "Buchungskalender",
     "month": "Monat",
@@ -1574,9 +1575,9 @@
     "add-non-availability": "Ereignis hinzufügen",
     "remove-non-availability": "Ereignis löschen",
     "reasons": {
-      "booked-in-store": "vor Ort gebucht",
-      "service-repair": "Wartung / Reparatur",
-      "event-other": "Event / Sonstiges"
+      "booked-in-store": "Shop Buchung",
+      "service-repair": "Service",
+      "event-other": "Sonstige"
     },
     "reason": "Reason",
     "previous-month": "Vormonat",

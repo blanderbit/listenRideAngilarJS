@@ -1186,10 +1186,10 @@
   },
   "about-us": {
     "title": "À propos de nous",
-    "header": "About listnride",
+    "header": "À propos de listnride",
     "subheader": "Comment les services de location de vélos traditionnels nous ont inspiré à créer une communauté diversifiée.",
     "community": {
-      "title": "listnride: the idea that sparked a community",
+      "title": "listnride: l'idée qui a suscité une communauté",
       "content": "Ici à Listnride, nous aimons tous les vélos. Chacun de nous a son coup de cœur, et nous apprécions la merveilleuse diversité des deux-roues: du vélo urbain au vélo de montagne, du vélo de route rapide au S-pedelec ultra-rapide. C’est pourquoi nous avons commencé à nous demander: pourquoi n’est-il pas possible de choisir et d’avoir un vélo spécifique dont vous avez besoin pour un usage particulier à tout moment, que vous voyagiez ou dans votre ville d’origine? Serons-nous toujours coincés avec les vélos bas de gamme des magasins de location? C'est ainsi qu'est née l'idée de mettre en place Listnride, la plate-forme de location de vélos."
     },
     "future": {
@@ -1232,9 +1232,9 @@
         "answer-11": "If you aren’t able to offer your bike for a certain period of time, you don’t need to delete your listing. Instead, you can deactivate the bike by selecting “Listed rides” in the account menu, where you can see your bike(s). Now simply click on “Deactivate bike” for the bike you would like to deactivate.",
         "question-12": "How do I change the pictures or details of my bike?",
         "answer-12": "You can alter the pictures and/or details of your bike by clicking on “Listed rides” in the account menu. Then select “Edit ride” and make the desired changes. Confirm the changes by clicking on “Update ride.”",
-        "question-13": "How do I delete my bike listing?",
+        "question-13": "Comment puis-je supprimer mon vélo?",
         "answer-13": "In case you no longer can or want to offer a certain bike for rent, you can delete it by going to “Listed rides” in the account menu. If you’re using our iPhone app, swipe the bike you would like to delete to the left and click “delete”. If you’re using our website, select “Delete ride.” After a few seconds, you’ll see a confirmation message that says “Bike successfully deleted.”",
-        "question-14": "How do I rent out my bike through listnride?",
+        "question-14": "Comment puis-je faire louer mon vélo avec listnride?",
         "answer-14": "Once you receive a request for your bike, open the app or go to our website and log into your account. Click on your account page in the top right corner and click on “Request to me” in the account menu. Here you will see the request that has been sent to you. Click on the request and reply to the requester by either accepting or rejecting the request. You can also chat with the requester at the same time to clarify any details. Once you accept the request, the other person needs to confirm his/her request and pay in advance. As soon as the confirmation and payment are complete, you will receive a notification via e-mail as well as a status update in your account.",
         "question-15": "What do I do if the rental period initially requested is not the same as the actual period?",
         "answer-15": "If the final rental period has changed while you are communicating with the requester, it’s wise to ask them for a new request with the correct date and time, so that the rental is covered by the listnride guarantee.",
@@ -1311,22 +1311,22 @@
     "investment": "Investissement",
     "submit": "S'enregistrer",
     "form-feedback": "Thank you! You've successfully shared your level of interest with us.",
-    "faq-question-1": "WHY DOES LISTNRIDE START A CROWDFUNDING CAMPAIGN?",
+    "faq-question-1": "Pourquoi listnride lance-t-il une campagne de crowdfunding?",
     "faq-answer-1": "We are a young company with a well developed product, a growing community of riders and bicycle owners. To drive further growth, we offer the community and the public the opportunity to invest in our company alongside our current investors. With these additional resources, we will make further improvements to our product as well as continue to grow geographically and so grow the community, resulting in greater choice for riders and greater demand for listers.",
-    "faq-question-2": "HOW CAN I INVEST IN LISTNRIDE?",
+    "faq-question-2": "Comment puis-je investir dans listnride?",
     "faq-answer-2": "We are working with Seedrs, the leading Crowdfunding platform from the United Kingdom to run our Crowdfunding campaign. To invest, simply create an account at <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> and follow the instructions.",
-    "faq-question-3": "ARE THERE ANY RISKS INVOLVED?",
+    "faq-question-3": "Y a-t-il des risques?",
     "faq-answer-3": "Investing in startups involves risks, including loss of capital, illiquidity, lack of dividends and dilution, and it should be done only as part of a diversified portfolio. If you would like to read more Seedrs has a more detailed explanation about these <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">risks here</a>.",
-    "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUNT?",
-    "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around €10 (exact amount depends on exchange rates). We are happy to receive any amount!",
+    "faq-question-4": "Quel est le montant minimum d'investissement?",
+    "faq-answer-4": "Parce que nous voulons impliquer autant de personnes que possible, nous maintenons le montant minimum de l'investissement, autour de 10 € (le montant exact dépend des taux de change). Nous sommes heureux de recevoir n'importe quel montant!",
     "faq-question-5": "WHAT HAS LISTNRIDE ACCOMPLISHED SO FAR?",
     "faq-answer-5": "Depuis notre lancement officiel en septembre 2016, lorsque nous avons lancé un site entièrement fonctionnel: listnride est devenu la plus grande plate-forme de location de vélos du marché allemand (DE, AT, CH), avec plus de 10 000 vélos répertoriés et 15 000 utilisateurs enregistrés. listnride compte déjà plus de 450 magasins de vélos intégrés et 8 marques de vélos innovantes en activité avec des programmes de test de conduite. Nous avons développé une forte présence à Berlin, Munich, Vienne, Amsterdam et Majorque et nous développons dans d'autres grandes villes comme Paris, Lyon et Bordeaux.",
     "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
     "faq-answer-6": "To make a profit on your investment, you will generally need to sell your shares for more than the amount you invested. In a best case scenario, the value of your shares will rise in line with the growth of business you invested in, and you will be able to see your shares when the business floats on a stock exchange or is bought by another company (i.e. an exit event). More info <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">here</a>",
     "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
     "faq-answer-7": "We will use your invested money for two primary purposes: To finance our growth and win new users, especially in our existing markets / cities. Our community, with higher user numbers, can offer riders a wider choice, and provide higher demand to listers, making the service more appealing overall. To improve our platform steadily through new features that make the rental experience as easy and efficient as possible. Integrating an insurance product and new mobile apps are the biggest milestones set.",
-    "faq-question-8": "FURTHER QUESTIONS?",
-    "faq-answer-8": "We look forward to your interest and further questions. Just contact us at contact@listnride.com and we will get back to you as soon as possible."
+    "faq-question-8": "D'AUTRES QUESTIONS?",
+    "faq-answer-8": "Nous attendons avec impatience votre intérêt et vos questions. Joignez-nous à contact@listnride.com et nous vous contacterons dans les meilleurs délais."
   },
   "terms-and-conditions": {
     "title": "Termes et conditions",
@@ -1336,32 +1336,32 @@
   },
   "trust-and-safety": {
     "meta-description": "La confiance est le but ultime d’une communauté. Nous soutenons l'équité et la sécurité par le biais de la vérification et de l'assurance pour chaque location.",
-    "title": "Trust & Safety",
+    "title": "Confiance et sécurité",
     "description": "listnride is a community of bike lovers and bicycle enthusiasts. People like you and me. That's why we want to keep the trouble away from you, so you can focus on enjoying your ride.",
-    "header": "Pedalling without worries",
-    "subheader": "We act in your best interest",
+    "header": "Pédaler sans soucis",
+    "subheader": "Nous agissons dans votre intérêt",
     "cover": {
-      "logo": "insert logo here",
-      "header": "Damages can easily be overcome",
-      "description": "Sometimes things do go wrong. If your bike is damaged during rental, our insurance partners will step in. Both, bike and Rider are on the safe side."
+      "logo": "Insérer le logo ici",
+      "header": "Les dommages peuvent facilement être surmontés",
+      "description": "Parfois, les choses ne vont pas comme prévu. Si votre vélo devient endommagé pendant la location, nos partenaires d'assurances interviendront. Le vélo et le Rider seront protégés."
     },
     "control": {
-      "logo": "insert logo here",
-      "header": "Your data in good hands",
-      "description": "Your address and the location of your bike are not publicly visible. Only after a booking is confirmed, contact details of both sides are shared."
+      "logo": "Insérer le logo ici",
+      "header": "Vos données entre de bonnes mains",
+      "description": "Votre adresse et l'emplacement de votre vélo ne sont pas visibles publiquement. Les coordonnées ne sont partagées qu'une fois la réservation confirmée."
     },
     "safe": {
-      "logo": "insert logo here",
-      "header": "Present yourself - if you like",
+      "logo": "Insérer le logo ici",
+      "header": "Présentez-vous",
       "description": "Link your profile to your Facebook ID and pressent yourself to the <i>listnride</i> community. Riders know from whom they rent. Listers know immediately who wants to rent."
     },
     "alone": {
-      "logo": "insert logo here",
+      "logo": "Insérer le logo ici",
       "header": "Stars point out the way",
       "description": "After a rental both sides can rate each other for the quality and service. This way we strengthen the confidence in the community and keep the quality high.  So you can be sure can find and rent high-quality bikes everywhere."
     },
     "main": {
-      "header": "The listnride insurance",
+      "header": "L'assurance lisntride",
       "description": "If you rent a bicycle in Germany or Austria, a basic insurance is included in the rent. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> \nand the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nwe have two strong partners on our side to help you when needed.\n<p>\nJust choose the right insurance package for you when booking your bike and off you go."
     },
     "outro": {
@@ -1463,13 +1463,13 @@
   },
   "privacy": {
     "title": "Politique de confidentialité List and Ride",
-    "ga-opt-out": "Click here to deactivate Google Analytics tracking",
-    "subtitle": "Effective Date: May 24, 2018",
+    "ga-opt-out": "Cliquez ici pour désactiver le suivi Google Analytics.",
+    "subtitle": "Date d'entrée en vigueur: 24 mai 2018",
     "description": "List and Ride commits to strong and transparent privacy practices. Our Privacy Policy describes the user information that we gather through our services. How we use and disclose these information. The steps we take to protect such information. The choices we offer, including how to access, update, and remove personal data.\n<br>\nHere you can download and read our <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacy Policy</a>.\n<br>Please contact us if you have any questions or comments about our privacy practices or this Privacy Policy. You can reach us at <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> online.",
-    "meta-title": "Privacy Policy of listnride",
+    "meta-title": "Politique de confidentialité de listnride",
     "meta-description": "La politique de confidentialité de listnride s'applique à l'utilisation de la plateforme en ligne."
   },
   "seo": {
-    "cities-title": "Planning to Travel? Check out more cities:"
+    "cities-title": "Vous planifiez de voyager? Découvrez plus de villes où vous pouvez louer un vélo avec nous:"
   }
 }
