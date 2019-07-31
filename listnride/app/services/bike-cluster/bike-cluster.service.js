@@ -58,22 +58,7 @@ angular.module('listnride')
 
           return api
             .get('/clusters/' + clusterId + '?start_date=' + moment(startDate).format('YYYY-MM-DD HH:mm') + '&duration=' + duration)
-            .then((response) => {
-              let availableRides = response.data.rides;
-
-              let bike_ids = [];
-
-              _.forEach(availableRides, (size) => {
-                bike_ids = [
-                  ...bike_ids,
-                  ...(_.map(size, 'id'))
-                ]
-              });
-              // end
-
-              return bike_ids;
-            })
-
+            .then((response) => response.data.ride_ids);
         },
 
         markAvailableSizes(bikeVariations, availableBikes) {
