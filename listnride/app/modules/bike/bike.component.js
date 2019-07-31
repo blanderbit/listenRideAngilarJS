@@ -3,8 +3,23 @@
 angular.module('bike',[]).component('bike', {
   templateUrl: 'app/modules/bike/bike.template.html',
   controllerAs: 'bike',
-  controller: function BikeController(api, $stateParams, $localStorage, $mdDialog, $mdMedia, $translate, $filter, $state, ngMeta, price, mapConfigs, helpers, bikeCluster, userHelper, ENV) {
-    var bike = this;
+  controller: function BikeController(
+    api,
+    $stateParams,
+    $localStorage,
+    $mdDialog,
+    $mdMedia,
+    $translate,
+    $filter,
+    $state,
+    ngMeta,
+    price,
+    mapConfigs,
+    bikeCluster,
+    userHelper,
+    ENV
+  ) {
+    const bike = this;
 
     bike.$onInit = function() {
       // variables
@@ -69,23 +84,15 @@ angular.module('bike',[]).component('bike', {
           bike.prices = price.getAllPrices(bike.data.prices);
 
           bike.hasTimeSlots = userHelper.hasTimeSlots(bike.data.user);
+          bike.defaultSize = $stateParams.size || bike.data.size;
 
           // CLUSTER BIKE LOGIC
-          bike.defaultSize = $stateParams.size || bike.data.size;
           if (bike.data.is_cluster) {
             bike.cluster = response.data.cluster;
-            bike.availableSizes = bike.cluster.sizes;
+            bike.bikeVariations = bikeCluster
+              .groupBikeVariations(bike.cluster.variations);
 
-            // remove primary bike from variations array
-            bike.cluster.variations = _.filter(bike.cluster.variations, function (variant) {
-              return variant.id !== bike.data.id;
-            });
-
-            bikeCluster.getSizeTranslations(bike.availableSizes);
-
-            // change some params to cluster merged params
-            bike.data.accessories = bike.cluster.accessories;
-            bike.data.ratings = bike.cluster.ratings;
+            mergeGeneralClusterParams();
           }
 
           // EVENT BIKE LOGIC
@@ -123,6 +130,12 @@ angular.module('bike',[]).component('bike', {
           $state.go('404');
         }
       );
+    }
+
+    // some params are common for all bikes in cluster
+    function mergeGeneralClusterParams() {
+      bike.data.accessories = bike.cluster.accessories;
+      bike.data.ratings = bike.cluster.ratings;
     }
 
     function isMobileCalendarView() {
