@@ -90,7 +90,7 @@ angular
             category: bike.category,
             imageUrl: bike.image_file,
             size: bike.size,
-            humanizeSize: bike.frame_size ? bike.frame_size : bikeOptions.getHumanReadableSize(bike.size),
+            humanizeSize: bikeOptions.getHumanReadableSize(bike.size) + (bike.frame_size ? ' | ' + bike.frame_size : '')
           });
 
           const bikeRequests = parseRequests({
@@ -150,11 +150,11 @@ angular
                   }),
                   id: bikeVariant.id,
                   size: bikeVariant.size,
-                  humanizeSize: bikeVariant.frame_size ? bikeVariant.frame_size : bikeOptions.getHumanReadableSize(bikeVariant.size),
                   isCluster: false,
                   isVariant: true,
                   variantIndex: index + 1,
-                  cls: 'variant-row'
+                  cls: 'variant-row',
+                  humanizeSize: bikeOptions.getHumanReadableSize(bikeVariant.size) + (bikeVariant.frame_size ? ' | ' + bikeVariant.frame_size : '')
                 })
               );
             });
@@ -290,7 +290,7 @@ angular
         acc.push(
           getEvent({
             resourceId: id,
-            startDate: DateHelper.format(new Date(start_date), 'YYYY-MM-DD'), // do not specify timezone Z
+            startDate: moment.utc(start_date).format('YYYY-MM-DD HH:mm'),
             duration: duration + 1,
             durationUnit: 's',
             isNotAvailable: true,

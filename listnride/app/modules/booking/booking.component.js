@@ -8,10 +8,29 @@ angular.module('booking', [])
     controllerAs: 'booking',
     controller:
      function BookingController(
-      $q, $localStorage, $rootScope, $scope, $state, $stateParams, $timeout, $analytics,
-      $translate, $filter, $mdDialog, authentication, api, price, voucher, calendarHelper, notification, paymentHelper, bikeOptions, bikeCluster, userHelper) {
-
-      var booking = this;
+      $q,
+      $localStorage,
+      $rootScope,
+      $scope,
+      $state,
+      $stateParams,
+      $timeout,
+      $analytics,
+      $translate,
+      $filter,
+      authentication,
+      api,
+      price,
+      voucher,
+      calendarHelper,
+      notification,
+      paymentHelper,
+      bikeOptions,
+      bikeCluster,
+      userHelper,
+      date
+    ) {
+      const booking = this;
 
       booking.$onInit = function () {
         // VARIABLES
@@ -28,6 +47,8 @@ angular.module('booking', [])
         // get StateParams
         booking.bikeId = $stateParams.bikeId;
         booking.shopBooking = $stateParams.shop;
+        $stateParams.hideHeader = $stateParams.shop;
+        $stateParams.hideFooter = $stateParams.shop;
         // booking from SHOP PLUGIN starts without information about dates
         booking.startDate = $stateParams.startDate ? new Date($stateParams.startDate) : null;
         booking.endDate = $stateParams.endDate ? new Date($stateParams.endDate) : null;
@@ -85,11 +106,12 @@ angular.module('booking', [])
             booking.bike = success.data.current;
             booking.coverageTotal = booking.bike.coverage_total || 0;
             booking.bikeCategory = $translate.instant($filter('category')(booking.bike.category));
-            booking.pickedBikeSize = setDefaultBikeSize();
             booking.prices = booking.bike.prices;
             booking.insuranceEnabled = userHelper.insuranceEnabled(booking.bike.user);
             booking.hasTimeSlots = userHelper.hasTimeSlots(booking.bike.user);
             booking.timeslots = booking.hasTimeSlots ? userHelper.getTimeSlots(booking.bike.user) : [];
+
+            booking.bike.is_cluster ? setSizeFromState() : booking.bike.size;
             getLister();
             updatePrices();
 
@@ -113,18 +135,11 @@ angular.module('booking', [])
             // CLUSTER BIKE LOGIC
             if (booking.bike.is_cluster) {
               booking.cluster = success.data.cluster;
-              booking.bikeClusterSizes = booking.cluster.sizes;
-              bikeCluster.getSizeTranslations(booking.bikeClusterSizes);
 
-              // remove primary bike from variations array
-              booking.cluster.variations = _.filter(booking.cluster.variations, function (variant) {
-                return variant.id !== booking.bike.id;
-              });
+              booking.bikeVariations = bikeCluster
+                .groupBikeVariations(booking.cluster.variations);
 
-
-              // change some params to cluster merged params
-              booking.bike.accessories = booking.cluster.accessories;
-              booking.bike.ratings = booking.cluster.ratings;
+              mergeGeneralClusterParams();
             }
           },
           function (error) {
@@ -134,8 +149,30 @@ angular.module('booking', [])
         );
       }
 
-      function setDefaultBikeSize() {
-        return $state.params.size ? $state.params.size : resetBikeSize();
+      function updateBikeDate() {
+        api.get('/rides/' + booking.bikeId).then(
+          function (success) {
+            booking.bike = success.data.current;
+          },
+          function (error) {
+            notification.show(error, 'error');
+            $state.go('home');
+          }
+        );
+      }
+
+      function mergeGeneralClusterParams() {
+        booking.bike.accessories = booking.cluster.accessories;
+        booking.bike.ratings = booking.cluster.ratings;
+      }
+
+      function setSizeFromState() {
+        if ($state.params.size) {
+          booking.pickedBikeSize = bikeCluster.getVariationKey({
+            size: $state.params.size,
+            frame_size: $state.params.frame_size
+          });
+        }
       }
 
       function resetBikeSize() {
@@ -210,38 +247,53 @@ angular.module('booking', [])
           var startDate = new Date(booking.dateRange.start_date);
           booking.startDate = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), 10, 0, 0);
 
-          booking.endDate = moment.utc([startDate.getFullYear(), startDate.getMonth(), startDate.getDate()]);
-          booking.endDate = booking.endDate.add(+booking.dateRange.duration, 'seconds').hours(18);
-          booking.endDate = booking.endDate.format();
-          booking.endDate = new Date(booking.endDate);
+          booking.endDate = moment
+            .utc([startDate.getFullYear(), startDate.getMonth(), startDate.getDate()])
+            .add(+booking.dateRange.duration, 'seconds').hours(18)
+            .toDate();
 
           setInitHours();
           updatePrices();
           booking.isDateValid = validDates();
+          booking.pickedBikeSize = resetBikeSize();
 
-          if(booking.bike.is_cluster){
-            bikeCluster.getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate).then(function (response) {
-              // return new rides that are available in current period
-              booking.cluster.rides = response.data.rides;
-              bikeCluster.markAvailableSizes(booking.bikeClusterSizes, booking.cluster.rides);
-              // update scope one more time
-              _.defer(function () {
-                $scope.$apply();
+          if (booking.bike.is_cluster){
+            bikeCluster
+              .getAvailableClusterBikes(booking.cluster.id, booking.startDate, booking.endDate)
+              .then(availableBikeIds => {
+                booking.availableBikeIds = availableBikeIds;
+                bikeCluster.markAvailableSizes(booking.bikeVariations, booking.availableBikeIds);
+              })
+              .finally(() => {
+                // update scope one more time
+                _.defer(() => $scope.$apply());
               });
-            })
           }
         }
-        // TODO: REMOVE REDUNDANT PRICE CALCULATION CODE
       };
 
-       function validClusterSize() {
-         if (!booking.bike.is_cluster) return true;
-         if (booking.cluster && booking.cluster.rides) {
-           return !!booking.cluster.rides[booking.pickedBikeSize];
-         } else {
-           return false;
-         }
-       }
+      function validClusterSize() {
+        if (!booking.bike.is_cluster) return true;
+
+        // false - if we don't have available bike ids from backend
+        if (booking.availableBikeIds && booking.pickedBikeSize) {
+          return !booking.bikeVariations[booking.pickedBikeSize].notAvailable
+        } else {
+          return false;
+        }
+      }
+
+      booking.onSizeChange = function () {
+        let sizeStateParams = {
+          size: booking.bikeVariations[booking.pickedBikeSize].size,
+          frame_size: booking.bikeVariations[booking.pickedBikeSize].frame_size
+        }
+        updateStateSize(sizeStateParams);
+      }
+
+      function updateStateSize(sizeState) {
+        updateState(sizeState);
+      }
 
       function setInitHours() {
         var openTime = calendarHelper.getInitHours(booking.openingHours, booking.startDate, booking.endDate);
@@ -259,6 +311,7 @@ angular.module('booking', [])
         booking[slotDate] = date;
 
         validDates();
+        booking.pickedBikeSize = resetBikeSize();
         updatePrices();
       };
 
@@ -342,13 +395,30 @@ angular.module('booking', [])
       };
 
       booking.pickAvailableBikeId = function () {
-        return booking.cluster ? booking.cluster.rides[booking.pickedBikeSize][0].id : booking.bikeId;
+        return bikeCluster.pickAvailableBikeId({
+          isCluster: booking.bike.is_cluster,
+          bikeId: booking.bike.id,
+          bikeVariations: booking.bikeVariations,
+          pickedBikeVariant: booking.pickedBikeSize,
+          availableBikeIds: booking.availableBikeIds
+        });
       }
 
       booking.nextAction = function () {
         switch (getTabNameByOrder(booking.selectedIndex)) {
           case 'calendar': {
-            updateState({startDate: booking.startDate, endDate: booking.endDate, size: booking.pickedBikeSize, bikeId: booking.pickAvailableBikeId()});
+            // re-write bike id in component
+            booking.bikeId = booking.pickAvailableBikeId();
+            // update state
+            updateState({
+              bikeId: booking.bikeId,
+              startDate: booking.startDate,
+              endDate: booking.endDate,
+              ...(booking.pickedBikeSize ? bikeCluster.transformBikeVariationKey(booking.pickedBikeSize) : [])
+            });
+            // get actual bike data
+            updateBikeDate();
+            // check which tab should be active
             setFirstTab();
             break;
           }
@@ -479,7 +549,7 @@ angular.module('booking', [])
           password: booking.user.password,
           isShop: !!booking.shopBooking
         }
-        booking.authentication.signupGlobal(user);
+        booking.authentication.signupGlobal(user, true);
       };
 
       function sendCode() {
@@ -665,24 +735,15 @@ angular.module('booking', [])
           function(nonce) {
             booking.isThreeDSecureSuccess = true;
 
-            var startDate = booking.startDate;
-            var endDate = booking.endDate;
-
             // The local timezone-dependent dates get converted into neutral,
             // non-timezone utc dates, preserving the actually selected date values
-            var startDate_utc = new Date(
-              Date.UTC(startDate.getFullYear(), startDate.getMonth(), startDate.getDate(), startDate.getHours())
-            );
-            var endDate_utc = new Date(
-              Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate(), endDate.getHours())
-            );
 
             var data = {
               user_id: $localStorage.userId,
               ride_id: booking.bikeId,
               payment_method_nonce: nonce,
-              start_date: startDate_utc.toISOString(),
-              end_date: endDate_utc.toISOString(),
+              start_date: date.getDateUTC(booking.startDate).toISOString(),
+              end_date: date.getDateUTC(booking.endDate).toISOString(),
               instant: !!booking.shopBooking,
               insurance: {
                 premium: booking.isPremium

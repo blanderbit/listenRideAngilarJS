@@ -107,6 +107,12 @@ angular.module('listnride').factory('date', ['$translate',
 
       diff: function(startDate, endDate) {
         return Math.abs(new Date(startDate) - new Date(endDate));
+      },
+
+      getDateUTC(dateObject) {
+        return new Date(
+          Date.UTC(dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate(), dateObject.getHours())
+        );
       }
 
     };

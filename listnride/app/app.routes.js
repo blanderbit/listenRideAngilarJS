@@ -98,11 +98,10 @@
       // bikes/{id}
       $stateProvider.state({
         name: 'bike',
-        url: '/bikes/{bikeId:int}?size&start_date&duration',
+        url: '/bikes/{bikeId:int}?start_date&duration&size&frame_size',
         template: '<bike></bike>',
         reloadOnSearch: false,
         params: {
-          // hideFooter: true,
           date: {
             value: "",
             squash: true
@@ -112,6 +111,10 @@
             squash: true
           },
           size: {
+            value: "",
+            squash: true
+          },
+          frame_size: {
             value: "",
             squash: true
           }
@@ -129,9 +132,13 @@
       // booking
       $stateProvider.state({
         name: 'booking',
-        url: '/booking?bikeId&size&startDate&endDate&shop',
+        url: '/booking?bikeId&size&frame_size&startDate&endDate&shop',
         template: '<booking></booking>',
         reloadOnSearch: false,
+        params: {
+          hideFooter: false,
+          hideHeader: false
+        },
         resolve: {
           data: ['ngMeta', function (ngMeta) {
             ngMeta.setTag("noindex", true);

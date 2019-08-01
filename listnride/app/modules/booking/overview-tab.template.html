@@ -29,8 +29,12 @@
                 <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.endDate | date }} <i ng-if="overview.parent.bike.event">{{overview.parent.endDate | date:'HH:mm' }}</i></span>
               </div>
               <div layout="row" layout-align="space-between none">
-                <span flex="45" class="md-body-2">{{ 'booking.overview.size' | translate }}</span>
-                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.humanReadableSize(overview.parent.pickedBikeSize) }}</span>
+                <span flex="45" class="md-body-2">{{ 'list.details.size' | translate }}</span>
+                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.humanReadableSize(overview.parent.bike.size) }}</span>
+              </div>
+               <div layout="row" layout-align="space-between none" ng-if="overview.parent.bike.frame_size">
+                <span flex="45" class="md-body-2">{{ 'list.details.frame-size' | translate }}</span>
+                <span flex="55" class="md-body-1 lnr-lh-body-2">{{ overview.parent.bike.frame_size }}</span>
               </div>
               <div layout="row" layout-align="space-between none">
                 <span flex="45" class="md-body-2">{{ 'booking.overview.location' | translate }}</span>

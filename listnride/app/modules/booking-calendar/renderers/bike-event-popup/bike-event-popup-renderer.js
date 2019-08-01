@@ -118,13 +118,13 @@ function bikeDetailsRenderer({ eventRecord, translations, getters }) {
 }
 
 function notAvailableEventPopupRenderer({ translations, getters, eventRecord }) {
-  const datesFormat = 'DD.MM.YYYY HH:mm';
+  const datesFormat = 'DD.MM.YYYY, HH:mm';
   const {
     startDate,
     duration,
   } = eventRecord;
-  const formattedStart = moment.utc(startDate).format(datesFormat);
-  const formattedEnd = moment.utc(startDate).add(duration, 'seconds').format(datesFormat);
+  const formattedStart = moment(startDate).format(datesFormat);
+  const formattedEnd = moment(startDate).add(duration, 'seconds').format(datesFormat);
 
   return `
     <header class="bike-event-popup__header">

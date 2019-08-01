@@ -9,7 +9,6 @@ angular.module('bike').component('calendar', {
     bikeId: '<',
     bikeFamily: '<',
     bikeSize: '<',
-    bikeClusterSizes: '<',
     bikeAvailabilities: '<',
     userId: '<',
     priceHalfDay: '<',
@@ -19,7 +18,8 @@ angular.module('bike').component('calendar', {
     requests: '<',
     coverageTotal: '<',
     countryCode: '<',
-    cluster: '<'
+    cluster: '<',
+    bikeVariations: '<'
   },
   controller: function CalendarController(
     $scope,
@@ -27,7 +27,6 @@ angular.module('bike').component('calendar', {
     $state,
     $mdDialog,
     $translate,
-    $mdToast,
     $mdMedia,
     $window,
     $analytics,
@@ -43,8 +42,9 @@ angular.module('bike').component('calendar', {
     bikeCluster,
     userHelper
   ) {
+    const calendar = this;
+
     // variables
-    var calendar = this;
     calendar.authentication = authentication;
     calendar.calendarHelper = calendarHelper;
     calendar.requested = false;
@@ -54,8 +54,9 @@ angular.module('bike').component('calendar', {
     calendar.hasTimeSlots = false;
     calendar.isHalfDayBook = false;
     calendar.HOURS_QUANTITY = 17;
+    calendar.pickedBikeSize = null;
 
-    //methods
+    // methods
     calendar.validClusterSize = validClusterSize;
     calendar.isTimeslotAvailable = isTimeslotAvailable;
 
@@ -66,11 +67,17 @@ angular.module('bike').component('calendar', {
           calendar.bikeOwner = response.data;
           checkUserData();
           initOverview();
+          setPropertiesFromState();
           initCalendarPicker();
           checkEventBike();
         });
       }
     };
+
+    function setPropertiesFromState() {
+      setCalendarDefaultParams();
+      setSizeFromState();
+    }
 
     function checkUserData() {
       calendar.insuranceEnabled = userHelper.insuranceEnabled(calendar.bike.user);
@@ -78,8 +85,16 @@ angular.module('bike').component('calendar', {
       calendar.timeslots = userHelper.getTimeSlots(calendar.bike.user);
     }
 
-    calendar.updateStateSize = function(){
-      updateState({size: calendar.pickedBikeSize});
+    calendar.onSizeChange = function() {
+      let sizeStateParams = {
+        size: calendar.bikeVariations[calendar.pickedBikeSize].size,
+        frame_size: calendar.bikeVariations[calendar.pickedBikeSize].frame_size
+      }
+      calendar.updateStateSize(sizeStateParams);
+    }
+
+    calendar.updateStateSize = function(sizeState){
+      updateState(sizeState);
     }
 
     function updateState (params) {
@@ -100,7 +115,6 @@ angular.module('bike').component('calendar', {
     }
 
     function setCalendarDefaultParams() {
-      calendar.pickedBikeSize = $state.params.size ? $state.params.size : null;
       calendar.startDate = $state.params.start_date ? new Date($state.params.start_date) : null;
 
       if(calendar.startDate) {
@@ -110,8 +124,16 @@ angular.module('bike').component('calendar', {
       }
     }
 
+    function setSizeFromState() {
+      if ($state.params.size) {
+        calendar.pickedBikeSize = bikeCluster.getVariationKey({
+          size: $state.params.size,
+          frame_size: $state.params.frame_size
+        });
+      }
+    }
+
     function initCalendarPicker() {
-      setCalendarDefaultParams();
       var deregisterRequestsWatcher = $scope.$watch('calendar.requests', function () {
         if (calendar.requests !== undefined) {
           deregisterRequestsWatcher();
@@ -169,12 +191,18 @@ angular.module('bike').component('calendar', {
         bikeId: calendar.pickAvailableBikeId(),
         startDate: calendar.startDate,
         endDate: calendar.endDate,
-        size: calendar.pickedBikeSize
+        ...(calendar.pickedBikeSize ? bikeCluster.transformBikeVariationKey(calendar.pickedBikeSize) : [])
       });
     };
 
     calendar.pickAvailableBikeId = function () {
-      return calendar.cluster ? calendar.cluster.rides[calendar.pickedBikeSize][0].id : calendar.bikeId;
+      return bikeCluster.pickAvailableBikeId({
+        isCluster: calendar.bike.is_cluster,
+        bikeId: calendar.bike.id,
+        bikeVariations: calendar.bikeVariations,
+        pickedBikeVariant: calendar.pickedBikeSize,
+        availableBikeIds: calendar.availableBikeIds
+      });
     }
 
     calendar.onBikeRequest = function() {
@@ -214,9 +242,12 @@ angular.module('bike').component('calendar', {
     };
 
     function validClusterSize() {
+      // always true if bike is not a cluster
       if (calendar.bike && !calendar.bike.is_cluster) return true;
-      if (calendar.cluster && calendar.cluster.rides) {
-        return !!calendar.cluster.rides[calendar.pickedBikeSize];
+
+      // false - if we don't have available bike ids from backend
+      if (calendar.availableBikeIds && calendar.pickedBikeSize) {
+        return !calendar.bikeVariations[calendar.pickedBikeSize].notAvailable
       } else {
         return false;
       }
@@ -838,23 +869,25 @@ angular.module('bike').component('calendar', {
         calendar.total = prices.total;
 
         if (calendar.cluster) {
-          bikeCluster.getAvailableClusterBikes(calendar.cluster.id, startDate, endDate).then(function (response) {
-            // return new rides that are available in current period
-            calendar.cluster.rides = response.data.rides;
+          bikeCluster
+            .getAvailableClusterBikes(calendar.cluster.id, startDate, endDate)
+            .then(availableBikeIds => {
+              // TODO: remove old logic when backend will send ids
+              calendar.cluster.rides = availableBikeIds;
 
-            bikeCluster.markAvailableSizes(calendar.bikeClusterSizes, calendar.cluster.rides);
-
-            // update scope one more time
-            _.defer(function () {
-              $scope.$apply();
+              // TODO: new logic
+              calendar.availableBikeIds = availableBikeIds;
+              bikeCluster.markAvailableSizes(calendar.bikeVariations, calendar.cluster.rides);
+            })
+            .finally(() => {
+              // update scope one more time
+              _.defer(() => $scope.$apply());
             });
-          });
         }
 
         updateState({
           start_date: moment(startDate).format('YYYY-MM-DD'),
-          duration: moment(endDate).diff(moment(startDate), 'd'),
-          size: calendar.pickedBikeSize
+          duration: moment(endDate).diff(moment(startDate), 'd')
         });
 
       } else {

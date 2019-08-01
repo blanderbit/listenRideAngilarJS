@@ -5,6 +5,7 @@
     "non-availability-type": "Type d'indisponibilité",
     "event": "Event",
     "events": "Events",
+    "frame-size": "Rider height | Framesize",
     "label_new": "Nouveau",
     "booking-calendar": "Calendrier des réservations",
     "month": "Mois",
@@ -392,74 +393,74 @@
   "meta": {
     "cities": {
       "berlin": {
-        "meta-title": "Explore Berlin by bike with listnride",
-        "meta-description": "Discover Berlin by bike. With listnride, you can find a bike for rent in Berlin that matches your needs and your style."
+        "meta-title": "Explorez Berlin à vélo avec listnride",
+        "meta-description": "Location de vélos à Berlin. Avec listnride, vous pouvez louer un vélo à Berlin qui correspond à vos besoins et à votre style."
       },
       "munich": {
-        "meta-title": "Explore Munich by bike with listnride",
-        "meta-description": "Discover Munich by bike. With listnride, you can find a bike for rent in Munich that matches your needs and your style."
+        "meta-title": "Explorez Munich à vélo avec listnride!",
+        "meta-description": "Location de vélos à Munich. Avec listnride, vous pouvez louer un vélo à Munich qui correspond à vos besoins et à votre style."
       },
       "amsterdam": {
-        "meta-title": "Explore Amsterdam by bike with listnride",
-        "meta-description": "Discover Amsterdam by bike. With listnride, you can find a bike for rent in Amsterdam that matches your needs and your style."
+        "meta-title": "Explorez Amsterdam avec un vélo de location de listnride",
+        "meta-description": "Location de vélos à Amsterdam. Avec listnride, vous pouvez louer un vélo à Amsterdam qui correspond à vos besoins et à votre style."
       },
       "vienna": {
-        "meta-title": "Explore Vienna by bike with listnride",
-        "meta-description": "Discover Vienna by bike. With listnride, you can find a bike for rent in Vienna that matches your needs and your style."
+        "meta-title": "Explorez Vienne avec un vélo de location de listnride",
+        "meta-description": "Location de vélos à Vienne. Avec listnride, vous pouvez louer un vélo à Vienne qui correspond à vos besoins et à votre style."
       }
     },
     "brands": {
-      "meta-title": "Discover and experience extraordinary bikes",
-      "meta-description": "Discover and testride the best bikes. Try E-Bikes, Urban Bikes, Fixies, Single Speed Bikes, E-MTB's, Trekking Bikes, Gravel- and Cyclocross-Bikes, MTB's, Road- and Cargo-Bikes and get expert advise on the bike before you make a purchase decision."
+      "meta-title": "Testez des vélos extraordinaires",
+      "meta-description": "Découvrez et testez des vélos électriques, des vélos de route, des VTT, des vélos de ville et plus encore! Obtenez des conseils d'expert sur le vélo avant de prendre une décision d'achat."
     },
     "seo": {
-      "city-title": "Rent the perfect bike in {{location}} | listnride",
-      "city-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely rented on listnride.",
-      "category-title": "Rent the perfect {{category}} bike in {{location}} | listnride",
-      "category-description": "Choose the bike that fits your needs online, starting from {{ minPrice }}€. Enjoy {{location}} with a {{category}} securely rented on listnride."
+      "city-title": "Location de vélos à {{location}}| listnride",
+      "city-description": "Louez le vélo qui vous convient le mieux, à partir de {{ minPrice }}€. Profitez de {{location}} avec un vélo loué en toute sécurité sur listnride.",
+      "category-title": "Louez un vélo {{category}} à {{location}}| listnride",
+      "category-description": "Louez un vélo {{category}} à partir de {{ minPrice }}€. Profitez de {{location}} avec listnride."
     },
     "business-community": {
-      "meta-title": "The listnride business community",
+      "meta-title": "La communeauté business de listnride",
       "meta-description": "Join the listnride business community for bike rental"
     },
     "events": {
       "rapha-super-cross": {
-        "meta-title": "In Rapha Super Cross - Rent a bike with listnride"
+        "meta-title": "Rapha Super Cross - Louez un vélo avec listnride"
       },
       "black-friday": {
-        "meta-title": "Black Friday 2018 bike rental discount | listnride",
-        "meta-description": "Black Friday discount at listnride! Huge discount on your next bike rental, only this weekend."
+        "meta-title": "Black Friday réduction de location de vélo | listnride",
+        "meta-description": "Réductions Black Friday sur listnride! Grande remise sur votre prochaine location de vélo, uniquement ce week-end!"
       },
       "eroica-gaiole": {
-        "meta-title": "Eroica classic road bike event",
-        "meta-description": "Rent your vintage road bike for Eroica on listnride"
+        "meta-title": "Louez un vélo de route vintage pour L'Eroica",
+        "meta-description": "Louez votre vélo de route vintage pour Eroica sur listnride"
       },
       "toros-de-gravel": {
-        "meta-title": "Rent the perfect bike for Toros de Gravel",
-        "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Mallorca. "
+        "meta-title": "Louer un vélo pour Toros de Gravel",
+        "meta-description": "Sur listnride, vous trouverez une sélection de gravel bikes et de VTT que vous pourrez louer pour cet événement spécial dédié au gravier à Sineu, à Majorque."
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Rent a bike with listnride inveloveritas.at ",
-        "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
+        "meta-title": "In Velo Veritas - Louer un vélo avec listnride",
+        "meta-description": "Louez un vélo vintage en acier pour In Velo Veritas. listnride propose une sélection de vélos classiques à louer pour ce beau circuit dans la région viticole autrichienne."
       },
       "velothon-bikerental": {
-        "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
+        "meta-title": "Louer un vélo de route pour le Velothon Berlin",
         "meta-description": "Participez au Velothon Berlin 2018! Louez un vélo de route depuis la communauté listnride et amusez-vous!"
       },
       "constance-spin": {
-        "meta-title": "Rent the perfect road bike during Eurobike",
-        "meta-description": "Get out and ride your bike at Eurobike with listnride and Katusha"
+        "meta-title": "Louez un vélo de route pendant l'Eurobike",
+        "meta-description": "Venez rouler avec listnride et Katusha à Eurobike!"
       },
       "velosoph": {
         "meta-title": "Autumn ride, a local riders' favourite route through Holledau.",
         "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
-        "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Louez un vélo de route pour le Cyclassics de Hamburg sur listnride",
+        "meta-description": "Louez le vélo de route pour le Cyclassics de Hambourg facilement en ligne!"
       },
       "triathlon-hamburg": {
-        "meta-title": "Rent a road bike for the Triathlon Hamburg on listnride",
+        "meta-title": "Louez un vélo de route pour le Triathlon de Hamburg sur listnride",
         "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
       },
       "riderman-rothaus": {
@@ -656,35 +657,35 @@
       "invoice-address": "Adresse de facturation",
       "subtitle": "S'il vous plaît remplir votre adresse de facture afin de demander un vélo.",
       "verification": "Vérification",
-      "send-sms": "We'll send you one time sms to your phone.",
-      "check-phone": "Please check your phone.",
-      "send-code": "Send Code",
-      "confirm-code": "Confirmation code",
-      "enter-code": "Enter the pin that we just sent to your phone",
-      "success-code": "Great. You are set.",
-      "fail-code": "The code you entered is not correct. Try again or resend the SMS",
-      "resend": "Resend"
+      "send-sms": "Nous vous enverrons un SMS sur votre téléphone.",
+      "check-phone": "S'il vous plaît vérifier votre téléphone.",
+      "send-code": "Envoyer le code",
+      "confirm-code": "Code de confirmation",
+      "enter-code": "Entrez le code PIN que nous venons d'envoyer sur votre téléphone",
+      "success-code": "Super, vous etes prêt. ",
+      "fail-code": "Le code que vous avez entré n'est pas correct. Réessayer ou renvoyer le SMS",
+      "resend": "Renvoyer"
     },
     "payment": {
-      "tab": "Payment Method",
-      "current-method": "Current payment method",
-      "getting-saved": "Payment method saving in progress",
-      "select-method": "Select your Payment Method",
-      "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
-      "credit-card": "Credit Card",
-      "card-name": "Name on Card",
-      "invalid-name": "Please provide valid name",
-      "card-number": "Card Number",
-      "invalid-card": "Please provide a valid Card Number",
-      "invalid-card-number": "Card Number not valid",
-      "exp-month": "Exp. month",
-      "invalid-month": "Month not valid",
-      "invalid-year": "Year not valid",
-      "invalid-date": "Date not valid",
-      "exp-year": "Exp. year",
+      "tab": "Mode de paiement",
+      "current-method": "Mode de paiement actuel",
+      "getting-saved": "Nous enregistrons votre mode de paiement ...",
+      "select-method": "Sélectionnez votre mode de paiement",
+      "subtitle": "Veuillez sélectionner votre mode de paiement préféré. Nous ne vous facturerons que lorsque le Lister aura accepté votre demande.",
+      "credit-card": "Carte de crédit",
+      "card-name": "Nom sur carte",
+      "invalid-name": "Veuillez fournir un nom valide",
+      "card-number": "Numéro de la carte",
+      "invalid-card": "Veuillez fournir un numéro de carte valide",
+      "invalid-card-number": "Numéro de carte non valide",
+      "exp-month": "Exp. mois",
+      "invalid-month": "Mois non valide",
+      "invalid-year": "Année non valide",
+      "invalid-date": "Date non valide",
+      "exp-year": "Exp. année",
       "exp-date": "Exp. date",
-      "invalid-cvc": "CVC not valid",
-      "cvc": "CVC Number",
+      "invalid-cvc": "CVC non valide",
+      "cvc": "Numéro CVC",
       "pay-paypal": "Payer avec Paypal"
     },
     "overview": {
@@ -794,36 +795,36 @@
     },
     "pick-payment-method": "Veuillez choisir un mode de paiement",
     "change-payment-method": "Changer la méthode de paiement",
-    "your-payment-method": "Your payment method:",
+    "your-payment-method": "Votre mode de paiement:",
     "pay-pal-account": "PayPal",
-    "pick-payment-method-new": "Please pick a new method",
-    "change-payout-method": "Change payout method",
-    "set-payment-method": "Set payment method",
-    "set-payout-method": "Set payout method",
-    "profile": "Profile",
+    "pick-payment-method-new": "S'il vous plaît, choisissez un nouveau mode de paiement",
+    "change-payout-method": "Modifier le mode de paiement",
+    "set-payment-method": "Définir le mode de paiement",
+    "set-payout-method": "Définir la méthode de paiement",
+    "profile": "Profil",
     "invite": "Invite Friends",
     "account": "Account",
-    "contact-to-update": "To change your name or email address please contact us\nvia e-mail at: contact@listnride.com",
-    "delete-account": "Deactivate Account",
-    "delete-account-description": "Here you can deactivate your listnride account. This step can not be undone.",
-    "delete-account-sure": "Are you really sure?",
-    "delete-account-sure-description": "This step can not be undone.",
-    "delete-account-yes": "Yes, deactivate",
-    "delete-account-no": "No",
-    "availability": "Availability",
-    "availability-description": "You can set your availability times for renting out bikes.",
+    "contact-to-update": "Pour changer votre nom ou votre adresse email, veuillez nous contacter par e-mail à: contact@listnride.com",
+    "delete-account": "Désactiver le compte",
+    "delete-account-description": "Ici, vous pouvez désactiver votre compte listnride. Cette étape ne peut pas être annulée.",
+    "delete-account-sure": "Êtes-vous vraiment sûr?",
+    "delete-account-sure-description": "Cette étape ne peut pas être annulée.",
+    "delete-account-yes": "Oui, désactiver",
+    "delete-account-no": "Non",
+    "availability": "Disponibilité",
+    "availability-description": "Vous pouvez définir vos horaires de disponibilité pour la location de vélos.",
     "business": "Business",
-    "from": "From",
-    "to": "To",
+    "from": "À partir de",
+    "to": "À",
     "mark-as-closed": "Marked all days as closed",
-    "change-address-info": "Updating your address doesn't update the address of your bikes.",
-    "payment-method": "Payment Method",
-    "payout-method": "Payout Method",
-    "add-payout-method": "Add a Payout Method",
-    "payment-method-description": "Your payment method is used to pay for your rentals. It can be a credit card or paypal account.",
-    "payout-method-description": "Your payout method is where we send you your rental income. Therefore you have to add it latest when accepting a request as a lister.",
-    "add-payment-method": "Add Payment Method",
-    "vouchers": "Vouchers",
+    "change-address-info": "La modification de votre adresse de domicile ne changera pas l'adresse de vos vélos.",
+    "payment-method": "Mode de paiement",
+    "payout-method": "Mode de versement",
+    "add-payout-method": "Ajouter un mode de versement",
+    "payment-method-description": "Votre mode de paiement est utilisée pour payer vos locations. Cela peut être une carte de crédit ou un compte paypal.",
+    "payout-method-description": "Votre mode de versement est l'endroit où nous vous envoyons vos revenus pour la location. Par conséquent, vous devez l'ajouter en dernier lorsque vous acceptez une demande en tant que Lister.",
+    "add-payment-method": "Ajouter un mode de paiement",
+    "vouchers": "Bons",
     "payment-credit-card": "Votre mode de paiement actuel est une carte de crédit",
     "payment-paypal": "Votre mode de paiement actuel est via un compte paypal",
     "no-payment-method": "Vous n'avez encore entré aucun mode de paiement.",
@@ -892,29 +893,29 @@
       "phone-nr-verified": "Votre numéro a été vérifié avec succès!"
     },
     "6": {
-      "title": "What is your address"
+      "title": "Quelle est votre adresse"
     },
     "7": {
-      "title": "Company information"
+      "title": "Informations sur la compagnie"
     }
   },
   "bike": {
-    "rent-bike": "Rent Bike",
+    "rent-bike": "Louer un vélo",
     "for-free": "Testez gratuitement",
-    "two-hours": "for 2 hours",
-    "view-pictures": "View Pictures",
-    "for": "for",
-    "meta-title": "Rent the {{name}} - {{category}} by {{brand}} in {{location}}.",
+    "two-hours": "pour 2 heures",
+    "view-pictures": "Voir les images",
+    "for": "pour",
+    "meta-title": "Louez le {{name}} - {{category}} de {{brand}} à {{location}}.",
     "meta-description": "{{description}}",
-    "per-day": "1 day",
-    "from-2-days": "from 2 days",
-    "from-week": "from 1 week"
+    "per-day": "1 jour",
+    "from-2-days": "à partir de 2 jours",
+    "from-week": "à partir d'une semaine"
   },
   "user": {
-    "verified-through": "Verified through",
-    "become-this-user": "Become this user",
-    "own-bikes": "Rental Bikes",
-    "ratings": "Ratings",
+    "verified-through": "Vérifié par",
+    "become-this-user": "Devenir cet utilisateur",
+    "own-bikes": "Location de vélos",
+    "ratings": "Évaluations",
     "meta-title": "{{name}}'s profile",
     "meta-description": "Rent bikes on listnride from {{name}}.",
     "company-meta-title": "{{company}}",
@@ -981,55 +982,55 @@
   "rideChat": {
     "1": "Vous avez fait une demande pour le <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} a partir de {{timespan}}. Vous pouvez parler avec {{lister.display_name}} ci-dessous. C'est seulement quand votre demande será acceptée, que le paiement será effectué et que le vélo será réservé.",
     "11": "La réservation de votre vélo a été annulée.",
-    "3": "Congratulation, {{lister.first_name}} has accepted your request, so the bike was successfully booked. Meet the lister as agreed and pick up the bike. Contact details are as follows, we've also sent them to you via email.<br><br>Name: {{lister.first_name}} {{lister.last_name}},<br>Phone: {{lister.pretty_phone_number}},<br>Address: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
+    "3": "Félicitations, {{lister.first_name}}a accepté votre demande. Le vélo a donc été réservé. Rencontrez le Lister comme convenu et récupérez le vélo. Les coordonnées sont ci-dessous, nous les avons aussi envoyé par e-mail <br><br>Nom:. {{lister.first_name}}{{lister.last_name}}, <br>Téléphone: {{lister.pretty_phone_number}}, <br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\"> {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "Avez-vous eu une bonne expérience avec le vélo de {{lister.first_name}}? Partagez votre expérience en laissant un court commentaire. Cela aidera les futurs cyclistes à mieux comprendre à quoi s'attendre.",
-    "7": "Thanks for rating, the rental was successfully completed.",
-    "8": "Unfortunately, the lister couldn't accept your request. Simply request some other great bikes.",
-    "9": "You cancelled the request, please tell the lister why you couldn’t confirm the booking.",
+    "7": "Merci d'avoir noté, la location a été complétée avec succès.",
+    "8": "Malheureusement, le lister n'a pas pu accepter votre demande. Ne vous en faites pas, faites une demande pour un autre vélo.",
+    "9": "La demande a été annulée. S'il vous plaît, n'hésitez pas à dire au Lister pourquoi vous n'êtes pas en mesure de louer le vélo.",
     "10": "La demande a été annulée."
   },
   "forms": {
-    "first-name": "First Name",
-    "newsletter-privacy-policy": "Privacy Policy News letter",
-    "sign-up-today": "Sign up today ",
-    "already-registered": "You are already signed up",
-    "check-inbox": "Please check your inbox",
+    "first-name": "Prénom",
+    "newsletter-privacy-policy": "Politique de confidentialité",
+    "sign-up-today": "Inscrivez-vous aujourd'hui",
+    "already-registered": "Vous êtes déjà inscrit",
+    "check-inbox": "Veuillez vérifier votre boîte de réception",
     "security-text": "Security is really important for us. And this is not just a phrase that we use to make you calm. In order to keep your account secure, we would like to ask you to change your password.<br><br><b>Please click the link in the email that we just sent you.</b>",
-    "confirm-password": "Confirm password",
-    "please-change-password": "Please change your password",
-    "save-new-password": "Save new password",
-    "your-name": "Your name",
-    "your-email-address": "Your email address",
-    "your-phone-number": "Your phone number",
-    "comments": "Comments",
-    "last-name": "Last Name",
-    "email-address": "Email Address",
-    "update-password": "Update password",
-    "old-password": "Current password",
-    "new-password": "New password",
-    "password": "Password",
-    "forgot-password": "Forgot password?",
-    "or": "or",
-    "log-in": "Log In",
-    "log-out": "Log Out",
-    "sign-up": "Sign Up",
-    "sign-up-to-book": "Sign up to book the bike",
-    "sign-up-with-facebook": "Sign Up with Facebook",
-    "sign-up-divider-text": "Accept our Terms and Conditions",
-    "agree-terms-and-policy": "Agree to our Terms and Conditions and Privacy Policy",
-    "member-already": "Already signed up?",
-    "business": "Bikeshop?",
+    "confirm-password": "Confirmez le mot de passe",
+    "please-change-password": "Veuillez changer votre mot de passe",
+    "save-new-password": "Enregistrer le nouveau mot de passe",
+    "your-name": "Votre nom",
+    "your-email-address": "Votre adresse e-mail",
+    "your-phone-number": "Votre numéro de téléphone",
+    "comments": "Commentaires",
+    "last-name": "Nom",
+    "email-address": "Adresse e-mail",
+    "update-password": "Changer le mot de passe",
+    "old-password": "Mot de passe actuel",
+    "new-password": "Nouveau mot de passe",
+    "password": "Mot de passe",
+    "forgot-password": "Mot de passe oublié?",
+    "or": "ou",
+    "log-in": "Se connecter",
+    "log-out": "Se déconnecter",
+    "sign-up": "S'inscrire",
+    "sign-up-to-book": "Inscrivez-vous pour réserver le vélo",
+    "sign-up-with-facebook": "Inscrivez-vous avec Facebook",
+    "sign-up-divider-text": "Accepter nos termes et conditions",
+    "agree-terms-and-policy": "Accepter nos conditions d'utilisation et notre politique de confidentialité",
+    "member-already": "Déjà inscrit?",
+    "business": "Vous gérez un magasin de vélos ?",
     "description": "Description",
-    "description_min_100": "Description should be min. 100 characters",
-    "address": "Address",
-    "profile-picture": "Profile Picture",
-    "profile-picture-info": "Please upload only formats as jpg, jpeg, png. Maximum size is 20mb. Minimum dimension is 100px x 100px.",
-    "profile-picture-info-policy": "By uploading a picture, I agree that listnride saves the picture as described in the <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Privacy Policy</a>. I can delete it at any time.",
-    "profile-picture-pattern-error": "Your picture format is wrong",
-    "profile-picture-size-error": "Your picture size is more than the allowed maximum size",
-    "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
-    "general": "General",
-    "street": "Street",
+    "description_min_100": "La description doit contenir au minimum 100 caractères",
+    "address": "Adresse",
+    "profile-picture": "Image de profil",
+    "profile-picture-info": "Veuillez seulement télécharger des formats tels que jpg, jpeg, png. La taille maximale est de 20 Mo. La dimension minimale est 100px x 100px.",
+    "profile-picture-info-policy": "En téléchargeant une image, je conviens que listnride enregistre l'image comme décrit dans la section <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Règles de confidentialité </a>. Je peux la supprimer à tout moment.",
+    "profile-picture-pattern-error": "Votre format d'image est incorrect",
+    "profile-picture-size-error": "La taille de votre image est supérieure à la taille maximale autorisée.",
+    "profile-picture-dimension-error": "Votre dimension de l'image est inférieure au minimum",
+    "general": "Général",
+    "street": "Rue",
     "streetnumber": "Number",
     "zip": "Zip Code",
     "city": "City",
