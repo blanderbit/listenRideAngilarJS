@@ -44,11 +44,11 @@ angular.module('listnride')
         },
 
         transformBikeVariationKey(variationKey) {
-          variationKey = variationKey.split('|');
+          variationKey = _.toString(variationKey).split('|');
           return {
             size: variationKey[0],
             frame_size: variationKey[1]
-          }
+          };
         },
 
         getAvailableClusterBikes(clusterId, startDate, endDate) {
