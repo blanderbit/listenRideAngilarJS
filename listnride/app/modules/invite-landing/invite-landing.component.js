@@ -3,16 +3,24 @@
 angular.module('inviteLanding',[]).component('inviteLanding', {
   templateUrl: 'app/modules/invite-landing/invite-landing.template.html',
   controllerAs: 'inviteLanding',
-  controller: ['$stateParams', '$state', '$translate', 'authentication', 'api', 'ngMeta',
-    function InviteLandingController($stateParams, $state, $translate, authentication, api, ngMeta) {
-      var inviteLanding = this;
+  controller: function InviteLandingController(
+    $stateParams,
+    $state,
+    $translate,
+    authentication,
+    api,
+    ngMeta
+  ) {
+      const inviteLanding = this;
 
       inviteLanding.hidden = true;
       inviteLanding.authentication = authentication;
       inviteLanding.inviteCode = $stateParams.inviteCode;
 
-      $translate(["invite-landing.meta-title", "invite-landing.meta-description"])
-      .then(function (translations) {
+      $translate([
+        "invite-landing.meta-title",
+        "invite-landing.meta-description"
+      ]).then(function (translations) {
         ngMeta.setTitle(translations["invite-landing.meta-title"]);
         ngMeta.setTag("description", translations["invite-landing.meta-description"]);
         ngMeta.setTag("og:image", 'https://www.listnride.com/app/assets/ui_images/lnr_invite_landing.jpg');
@@ -22,7 +30,7 @@ angular.module('inviteLanding',[]).component('inviteLanding', {
         function (success) {
           inviteLanding.referrer = success.data;
           inviteLanding.picture = inviteLanding.referrer.profile_picture.profile_picture.url;
-          inviteLanding.subsubsubheader = $translate.instant("invite-landing.subsubsubheader", {name: success.data.first_name})
+          inviteLanding.name = success.data.first_name;
           inviteLanding.hidden = false;
         },
         function (error) {
@@ -34,5 +42,4 @@ angular.module('inviteLanding',[]).component('inviteLanding', {
         authentication.showSignupDialog(inviteCode);
       }
     }
-  ]
 });
