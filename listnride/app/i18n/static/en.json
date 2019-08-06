@@ -1354,7 +1354,7 @@
     "safe": {
       "logo": "Insert logo here",
       "header": "Present yourself",
-      "description": "Link your profile to your Facebook ID and pressent yourself to the <i>listnride</i> community. Riders know from whom they rent. Listers know immediately who wants to rent."
+      "description": "Link your profile to your Facebook ID and pressent yourself to the <i>listnride</i> community. Both Riders and Listers would like know each other before renting the bike."
     },
     "alone": {
       "logo": "Insert logo here",
@@ -1371,19 +1371,19 @@
   },
   "how-it-works": {
     "meta-title": "Bike rental made easy",
-    "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!",
+    "meta-description": "How to rent a bike with listnride",
     "title": "Bike rental without the hassle",
-    "header": "listnride helps you get into gear",
+    "header": "listnride makes renting a bike simple",
     "subheader": "Renting out a bicycle on our platform is as easy as meeting up for coffee:",
     "lister-section": {
       "header": "How to list a bike",
       "step-1-title": "List a bike",
-      "step-1-content": "Add specs, location, photo & price",
+      "step-1-content": "Add specs, location, photos & price",
       "step-2-title": "Get Requests",
       "step-2-content": "For a specific time and date",
       "step-3-title": "Accept Rental",
       "step-3-content": "Or suggest a better time & date",
-      "step-4-title": "Meet Rider",
+      "step-4-title": "Meet the Rider",
       "step-4-content": "Hand-over bike, chat, give local tips",
       "step-5-title": "Get Paid",
       "step-5-content": "Payment is credited to your account"
@@ -1403,12 +1403,12 @@
     },
     "handover-section": {
       "header": "Direct or flexible bike handover: the choice is yours",
-      "content": "We’re going to go out on a limb here and say that it’s especially the nice people who ride bikes. And they even lend them to others. That’s why we believe it’s definitely worth picking up the bike directly from the owner. The added benefit: meeting great new people and getting useful tips about the local area. But if there simply isn’t enough time, listnride offers its users three ways to hand over rental bikes:",
-      "list-1": "The renter (rider) picks up the bike from the owner’s (lister’s) home.",
-      "list-2": "The lister hands over the bike to the rider at an agreed location.",
-      "list-3": "The lister locks up the bike at a public place and sends the rider the code to the combination lock.",
-      "lister-location": "Home, sweet Home",
-      "rider-location": "X marks the Spot",
+      "content": "Handing over the bike is rather simple. When the rental request is accepted, the Rider will receive the address of the bike. If, for some reason, the given address doesn't work out, you can discuss in the chat about other places to meet:",
+      "list-1": "The Rider picks up the bike from the Lister's location.",
+      "list-2": "The Lister hands over the bike to the Rider at an agreed location.",
+      "list-3": "The Lister locks up the bike at a public place and sends the Rider the code to the combination lock.",
+      "lister-location": "Meet at Lister's location",
+      "rider-location": "Meet halfway",
       "public-location": "Freedom is yours"
     }
   },
