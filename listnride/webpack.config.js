@@ -168,7 +168,8 @@ module.exports = (webpackEnv) => {
       port: webpackEnv.PORT || 8080,
       https: true,
       historyApiFallback: true,
-      stats: 'minimal'
+      stats: 'minimal',
+      inline: false
     },
     stats: {
       children: false

@@ -1,140 +1,350 @@
- <md-content class="single-column" ng-hide="cityLanding.loading">
-  <div id="hero-shot-small" class="lnr-preload-bg" style="background-image: url('{{ cityLanding.data.header_image}}'); background-position: 50% 20%;" layout="column" layout-align="center center">
-    <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
-      <h1 class="md-display-1">
-        {{ cityLanding.headerTranslation | translate }} {{ cityLanding.translatedCity }}
-      </h1>
+ <md-content class="single-column lnr-city-landing" ng-hide="cityLanding.loading">
+
+   <section layout="row" class="lnr-city-landing-bg">
+    <div flex-gt-xs="50" flex="100" layout="row" layout-align="end none" layout-padding class="lnr-city-landing-promo">
+      <div layout="row" layout-padding layout-wrap class="lnr-city-landing-col">
+        <div flex-gt-xs="90">
+          <h1 class="lnr-city-landing__title">{{cityLanding.data.explore.title}}</h1>
+          <p class="lnr-city-landing__descr">{{cityLanding.data.explore.description}}</p>
+
+          <form class="lnr-search-bar lnr-search-bar_city-landing" md-whiteframe="3" layout="row" md-theme="default">
+            <autocomplete
+              autocomplete-id="home"
+              flex="auto"
+              layout="column"
+              location="cityLanding.location"
+              placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
+              place-changed="home.placeChanged(place)">
+            </autocomplete>
+            <md-button
+              ng-click="cityLanding.onSearchClick()"
+              class="md-raised md-primary lnr-city-landing__button"
+              id="submit"
+              flex="20"
+              flex-gt-xs="40"
+            >
+              <span hide-xs>{{ 'shared.search' | translate }}</span>
+              <md-icon
+                 class="lnr-icn-sm"
+                 md-svg-src="app/assets/ui_icons/search.svg"
+                 hide show-xs
+              ></md-icon>
+            </md-button>
+          </form>
+        </div>
+        <breadcrumbs
+          data="cityLanding.breadcrumbs"
+          class="lnr-city-landing-breadcrumbs"
+        ></breadcrumbs>
+      </div>
     </div>
-    <form class="lnr-search-bar md-whiteframe-3dp lnr-search-bar--fs18" layout="row" md-theme="default">
-      <autocomplete
-        autocomplete-id="home"
-        flex="auto"
-        layout="column"
-        location="cityLanding.location"
-        placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
-        place-changed="home.placeChanged(place)">
-      </autocomplete>
-      <md-button
-        ng-click="cityLanding.onSearchClick()"
-        class="md-raised md-primary"
-        id="submit"
-        flex="40"
-        style="min-width: 114px"
+
+    <div flex-gt-xs="50"  flex flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
+      <ng-map
+        ng-if="cityLanding.bikes !== undefined"
+        id="searchMap"
+        default-style="false"
+        center="[{{cityLanding.mapOptions.lat}},{{cityLanding.mapOptions.lng}}]"
+        zoom="{{cityLanding.mapOptions.zoom}}"
+        on-click="cityLanding.onMapClick(event)"
+        draggable="true"
+        map-type-control="false"
+        street-view-control="false"
+        styles="{{cityLanding.colorScheme}}"
       >
-        {{ 'shared.search-all' | translate }}
-      </md-button>
-    </form>
-  </div>
-  <br><br><br>
-  <div class="content section" layout-padding>
-    <div layout="row"layout-padding >
-      <breadcrumbs data="cityLanding.breadcrumbs"></breadcrumbs>
+
+        <info-window id="searchMapWindow">
+          <div ng-non-bindable="">
+            <bike-card
+              bike="cityLanding.selectedBike"
+              url-params="cityLanding.urlParams"
+            ></bike-card>
+          </div>
+        </info-window>
+      </ng-map>
     </div>
-    <div layout="row" layout-wrap layout-padding>
-      <bike-card ng-repeat="bike in cityLanding.data.bikes" seo="true" bike="bike" show-labels="true" flex="100" flex-gt-xs="50" flex-gt-sm="25">
+  </section>
+
+  <section
+    ng-if="cityLanding.data.blocks[0].bikes.length"
+    layout="column"
+    layout-align="start center"
+    layout-padding
+    class="lnr-city-landing-content"
+  >
+    <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[0].title}}</h2>
+    <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[0].description}}</p>
+    <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
+      <bike-card
+        ng-repeat="bike in cityLanding.bikes[0]"
+        seo="true" bike="bike"
+        show-labels="true"
+        flex="100"
+        flex-gt-xs="50"
+        flex-gt-sm="33">
       </bike-card>
     </div>
-    <br><br><br><br>
-    <md-divider></md-divider>
-  </div>
-
-  <div class="content section" layout-padding layout layout-xs="column" ng-if="cityLanding.data.texts">
-    <div flex="50" flex-xs="100">
-      <h2 class="md-headline">{{ 'seo.rent-perfect-bikes-in' | translate }} {{ cityLanding.translatedCity }}</h2>
-      <br>
-      <p class="md-body-1" style="margin: 7px">{{ cityLanding.data.texts.main.description }}</p>
-    </div>
-    <div flex="50" flex-xs="100">
-      <h2 class="md-headline">{{ 'seo.rent-category-bikes-in' | translate }}</h2>
-      <br>
-      <md-grid-list
-        id="featuredTilesGrid"
-        class="md-color-white lnr-m"
-        md-cols="2" md-cols-gt-xs="2" md-cols-gt-sm="3" md-gutter="16px" md-row-height="1.5:1"
-      >
-
-        <md-grid-tile
-          ng-repeat="category in cityLanding.categories track by $index"
-          class="tile"
-          style="background-image: url({{category.imgFilePath}})">
-          <a ng-if="cityLanding.data.categories[category.dataName] < 8"
-             ui-sref="search({location: cityLanding.data.city, categories: category.subcategories})"
-             target="_blank" layout-padding layout="column" layout-align="center center">
-            <h3 class="md-title">{{ category.name }}</h3>
-          </a>
-          <a ng-if="cityLanding.data.categories[category.dataName] >= 8"
-             ui-sref="categoryLanding({city: cityLanding.data.city, category: category.urlOld || category.url})"
-             layout-padding layout="column" layout-align="center center">
-            <h3 class="md-title">{{ category.name }}</h3>
-          </a>
-        </md-grid-tile>
-
-      </md-grid-list>
-    </div>
-  </div>
-
-  <div class="content section" layout="column" layout-align="center center">
-    <br><br>
-    <md-button ui-sref="search({location: cityLanding.city})" class="md-xlrg md-raised md-primary">
-    {{ 'shared.search-all-in' | translate }} {{ cityLanding.translatedCity }}
+    <md-button
+      ng-if="cityLanding.data.blocks[0].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[0]"
+      class="md-xlrg md-raised md-primary lnr-city-landing__button"
+      ng-click="cityLanding.loadAllBikes(0)"
+    >
+      {{'shared.show-all-bikes' | translate}}
     </md-button>
-  </div>
+  </section>
 
+   <section layout="row" class="lnr-city-landing-bg lnr-city-landing-info" ng-if="cityLanding.data.info_block.info.length">
+     <div flex-gt-sm="50" hide-sm style="background-image: url('{{ cityLanding.data.info_block.image}}'); background-size: cover; background-position: center;"></div>
+     <div layout="row" layout-align="center center" flex-gt-sm="50" flex="100" layout-padding>
+       <ul class="lnr-city-landing-info-blocks" layout-padding>
+        <li layout-gt-xs="row" layout="column" layout-align-gt-xs="start center" layout-align="center center" ng-repeat="item in cityLanding.data.info_block.info track by $index">
+          <md-icon md-svg-src="app/assets/ui_icons/{{item.icon}}.svg" class="lnr-icn-big-rounded md-color-primary"></md-icon>
 
-  <div class="content section" layout-padding ng-if="cityLanding.data.shops.length > 4">
-    <br><br><br><br>
-    <md-divider></md-divider>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ 'seo.bike-shops-in' | translate }} {{ cityLanding.data.city }}</h2>
-    </div>
-    <md-grid-list id="featuredTilesGrid" class="md-color-white lnr-m" md-cols="2" md-cols-gt-xs="3" md-cols-gt-sm="{{ cityLanding.data.shops.length }}" md-gutter="16px" md-row-height="1:1">
-      <md-grid-tile ng-repeat="shop in cityLanding.data.shops" class="tile" style="background-image: url({{ shop.profile_picture.profile_picture.url }});">
-        <a ui-sref="user({userId: {{ shop.id }}})" target="_blank" layout-padding layout="column" layout-align="center  center">
-        </a>
-      </md-grid-tile>
-    </md-grid-list>
-  </div>
+          <div flex="70">
+            <h3 class="lnr-city-landing__title">{{item.title}}</h3>
+            <p class="lnr-city-landing__descr" ng-bind-html="item.description"></p>
+          </div>
+        </li>
+       </ul>
+     </div>
+   </section>
 
-  <div class="content section" layout-padding ng-if="cityLanding.data.explore.content[0].image">
-    <br><br><br><br>
-    <md-divider></md-divider>
-    <div class="lnr-section-title" layout="column" layout-align="center center">
-      <h2 class="md-headline">{{ cityLanding.data.explore.title }}</h2>
-    </div>
+   <section
+     ng-if="cityLanding.data.blocks[1].bikes.length"
+     layout="column"
+     layout-align="start center"
+     layout-padding
+     class="lnr-city-landing-content"
+   >
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[1].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[1].description}}</p>
+     <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
+       <bike-card
+         ng-repeat="bike in cityLanding.bikes[1]"
+         seo="true" bike="bike"
+         show-labels="true"
+         flex="100"
+         flex-gt-xs="50"
+         flex-gt-sm="33">
+       </bike-card>
+     </div>
+     <md-button
+       ng-if="cityLanding.data.blocks[1].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[1]"
+       class="md-xlrg md-raised md-primary lnr-city-landing__button"
+       ng-click="cityLanding.loadAllBikes(1)"
+     >
+       {{'shared.show-all-bikes' | translate}}
+     </md-button>
+   </section>
 
-    <div class="md-body-1" layout="column" layout-gt-xs="row" layout-align="center" layout-padding>
-      <div layout="column" flex-gt-xs="45">
-        <h3 class="md-subhead">{{ cityLanding.data.explore.content[0].title }}</h3>
-        <p ng-bind-html="cityLanding.data.explore.content[0].description"></p>
-        <br>
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="{{ cityLanding.data.explore.content[0].image }}" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ cityLanding.data.explore.content[1].title }}</h3>
-        <p ng-bind-html="cityLanding.data.explore.content[1].description"></p>
-      </div>
-      <div layout="row" flex-gt-xs="10" layout-align="center">
-        <md-divider></md-divider>
-      </div>
-      <div layout="column" flex-gt-xs="45">
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="{{ cityLanding.data.explore.content[1].image }}" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ cityLanding.data.explore.content[2].title }}</h3>
-        <p ng-bind-html="cityLanding.data.explore.content[2].description"></p>
-        <br>
-        <md-card class="lnr-bike-card">
-          <img class="md-card-image" src="{{ cityLanding.data.explore.content[2].image }}" alt="">
-        </md-card>
-        <br>
-        <h3 class="md-subhead">{{ cityLanding.data.explore.content[3].title }}</h3>
-        <p ng-bind-html="cityLanding.data.explore.content[3].description"></p>
-      </div>
-    </div>
-  </div>
+   <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg" ng-if="cityLanding.data.brands_block.brands.length">
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.brands_block.title}}</h2>
+     <div class="lnr-city-landing-content swiper-container lnr-slider-default" id="bikes-brands">
+       <div class="swiper-wrapper">
+         <div class="swiper-slide" ng-repeat="brand in cityLanding.data.brands_block.brands">
+           <a ui-sref="search({location: cityLanding.data.city, brand: brand})"
+              target="_blank"
+              layout-padding
+              layout="column"
+              layout-align="center center"
+           >
+             <h3 class="md-title">{{ brand }}</h3>
+           </a>
+         </div>
+       </div>
+       <button class="swiper-button swiper-button-prev"><i class='fa fa-chevron-left'></i></button>
+       <button class="swiper-button swiper-button-next"><i class='fa fa-chevron-right'></i></button>
+     </div>
+   </section>
 
-  <br><br><br><br>
-  <footer></footer>
+   <section
+     ng-if="cityLanding.data.blocks[2].bikes.length"
+     layout="column"
+     layout-align="start center"
+     layout-padding
+     class="lnr-city-landing-content"
+   >
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[2].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[2].description}}</p>
+     <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
+       <bike-card
+         ng-repeat="bike in cityLanding.bikes[2]"
+         seo="true" bike="bike"
+         show-labels="true"
+         flex="100"
+         flex-gt-xs="50"
+         flex-gt-sm="33">
+       </bike-card>
+     </div>
+     <md-button
+       ng-if="cityLanding.data.blocks[2].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[2]"
+       class="md-xlrg md-raised md-primary lnr-city-landing__button"
+       ng-click="cityLanding.loadAllBikes(2)"
+     >
+       {{'shared.show-all-bikes' | translate}}
+     </md-button>
+   </section>
+
+   <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg" ng-if="cityLanding.data.testimonials_block.testimonials.length">
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.testimonials_block.title}}</h2>
+     <div class="lnr-city-landing-content">
+       <div class="swiper-container lnr-testimonials" id="testimonials-slider">
+         <div class="swiper-wrapper">
+           <div class="swiper-slide lnr-testimonials-card" ng-repeat="testimonial in cityLanding.data.testimonials_block.testimonials">
+             <div class="lnr-testimonials-card-content">
+               <a href="" class="lnr-testimonials-card__avatar">
+                 <img src="{{testimonial.picture}}" alt="">
+               </a>
+               <h3 class="lnr-testimonials-card__title">{{testimonial.fullname}}</h3>
+               <div class="lnr-testimonials-card__subtitle">{{testimonial.description}}</div>
+               <p class="lnr-testimonials-card__text">{{testimonial.text}}</p>
+             </div>
+           </div>
+         </div>
+         <div class="swiper-pagination"></div>
+       </div>
+     </div>
+   </section>
+
+   <section layout="column" ayout-align="center center" layout-padding class="lnr-city-landing-content" ng-if="cityLanding.data.categories_block.categories">
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.categories_block.title}}</h2>
+     <!--<p class="lnr-city-landing__descr lnr-m-0">Choose your rental bike from a selection of Dutch Bikes, City Bikes,</br> Fixed Gear Bikes, Cyclocross Bikes and find the right bike matching your needs. Rent a bike on listnride, the online platform with the</br> greatest choice of high quality bicycles! Book your bike rental in Berlin online. All bikes are insured.</p>-->
+
+     <md-grid-list
+       class="md-color-white lnr-m lnr-city-landing-grid-list"
+       md-cols-xs="1" md-cols-sm="2" md-cols="4" md-gutter="16px" md-row-height="2:1"  md-row-height-gt-sm="1.2:1"
+     >
+       <md-grid-tile
+         ng-repeat="category in cityLanding.categories track by $index"
+         class="tile"
+         style="background-image: url({{category.imgFilePath}})"
+         md-colspan-gt-sm="{{cityLanding.tileColspan($index)}}"
+         md-rowspan-gt-sm="{{cityLanding.tileRowspan($index)}}"
+         ng-repeat="category in cityLanding.categories track by $index">
+         <a ui-sref="search({location: cityLanding.data.city, categories: category.subcategories})"
+            target="_blank"
+            layout-padding
+            layout="column"
+            layout-align="center center"
+         >
+           <h3 class="lnr-city-landing__category-title">{{ category.name }}</h3>
+           <div class="status-labels">
+             <div class="status-labels__item lnr-enlarge">
+               <span>{{cityLanding.data.categories_block.categories[category.dataName]}}</span>
+               <span translate="shared.available"></span>
+             </div>
+           </div>
+         </a>
+       </md-grid-tile>
+     </md-grid-list>
+   </section>
+
+   <section
+     ng-if="cityLanding.data.blocks[3].bikes.length"
+     layout="column"
+     layout-align="start center"
+     layout-padding
+     class="lnr-city-landing-content lnr-city-landing-bg"
+   >
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[3].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[3].description}}</p>
+     <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
+       <bike-card
+         ng-repeat="bike in cityLanding.bikes[3]"
+         seo="true" bike="bike"
+         show-labels="true"
+         flex="100"
+         flex-gt-xs="50"
+         flex-gt-sm="33">
+       </bike-card>
+     </div>
+     <md-button
+       ng-if="cityLanding.data.blocks[3].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[3]"
+       class="md-xlrg md-raised md-primary lnr-city-landing__button"
+       ng-click="cityLanding.loadAllBikes(3)"
+     >
+       {{'shared.show-all-bikes' | translate}}
+     </md-button>
+   </section>
+
+   <section layout="column" ayout-align="center center" layout-padding class="lnr-city-landing-content" ng-if="cityLanding.data.table.info.length">
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.table.title}}</h2>
+     <!--<p class="lnr-city-landing__descr lnr-m-0">{{cityLanding.data.table.description}}</p>-->
+     <md-grid-list
+       class="lnr-m lnr-city-landing-hints"
+       md-cols="2"
+       md-cols-gt-sm="3"
+       md-row-height="1.5:1"
+       md-row-height-gt-xs="3:1"
+       md-row-height-gt-sm="2:1"
+     >
+       <md-grid-tile
+         ng-repeat="hint in cityLanding.data.table.info"
+         class="lnr-city-landing-hints-tile"
+       >
+         <div>
+           <h3 class="md-title">{{hint.value}}</h3>
+           <h3 class="md-subhead">{{hint.key}}</h3>
+         </div>
+       </md-grid-tile>
+     </md-grid-list>
+   </section>
+
+   <section
+     ng-if="cityLanding.data.blocks[4].bikes.length"
+     layout="column"
+     layout-align="start center"
+     layout-padding
+     class="lnr-city-landing-content lnr-city-landing-bg"
+   >
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[4].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[4].description}}</p>
+     <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
+       <bike-card
+         ng-repeat="bike in cityLanding.bikes[4]"
+         seo="true" bike="bike"
+         show-labels="true"
+         flex="100"
+         flex-gt-xs="50"
+         flex-gt-sm="33">
+       </bike-card>
+     </div>
+     <md-button
+       ng-if="cityLanding.data.blocks[4].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[4]"
+       class="md-xlrg md-raised md-primary lnr-city-landing__button"
+       ng-click="cityLanding.loadAllBikes(4)"
+     >
+       {{'shared.show-all-bikes' | translate}}
+     </md-button>
+   </section>
+
+   <section layout="column" layout-align="center center" layout-padding ng-if="cityLanding.data.tips_block.length">
+     <h2 class="lnr-city-landing__title lnr-center">listnride’s insider tips</h2>
+     <div class="lnr-city-landing-content" layout="row">
+       <div class="swiper-container lnr-fade-slider" flex-gt-xs="80" id="slider-fading">
+         <div class="swiper-wrapper">
+           <div class="swiper-slide" ng-repeat="content in cityLanding.data.tips_block">
+             <div layout="row" layout-xs="column">
+               <div flex-gt-xs="50" class="lnr-fade-slider-info" flex-order-xs="1">
+                 <h3 class="lnr-fade-slider__title">{{ content.title }}</h3>
+                 <p class="lnr-fade-slider__text" ng-bind-html="content.description"></p>
+               </div>
+               <div flex-gt-xs="10"></div>
+               <div flex-gt-xs="40" class="lnr-fade-slider-image">
+                 <img class="md-card-image" src="{{ content.image }}" alt=""/>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="lnr-fade-slider-indicator" flex-gt-xs="50">
+           <span>{{cityLanding.tipsSwiper.activeIndex + 1}} / </span>
+           <span class="lnr-fade-slider-indicator__qty">{{cityLanding.data.tips_block.length}}</span>
+         </div>
+         <div class="swiper-pagination lnr-fade-slider-pagination"></div>
+       </div>
+
+     </div>
+   </section>
+
+   <footer></footer>
 </md-content>

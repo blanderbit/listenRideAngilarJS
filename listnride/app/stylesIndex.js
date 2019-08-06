@@ -10,6 +10,9 @@ import './modules/bike/list/list.css';
 import 'font-awesome/css/font-awesome.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'swiper/dist/css/swiper.min.css';
 import 'ng-img-crop/compile/minified/ng-img-crop.css';
 import 'intl-tel-input/build/css/intlTelInput.css';
 import './modules/shared/breadcrumbs/breadcrumbs.css';
+
+import './modules/seo/city-landing.css';
