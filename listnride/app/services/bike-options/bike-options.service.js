@@ -244,40 +244,47 @@ angular.module('listnride')
               url: 'urban',
               name: translations["list.category.urban"],
               imgFilePath: "app/assets/ui_images/seo/city.jpg",
-              subcategories: '10,11,12'
+              subcategories: '10,11,12',
+              key: 'urban'
             }, {
               urlOld: 'electric',
               url: 'e-bike',
               name: translations["list.category.e-bike"],
               imgFilePath: "app/assets/ui_images/seo/electric.jpg",
-              subcategories: '20,21,22,23,24,25,26'
+              subcategories: '20,21,22,23,24,25,26',
+              key: 'e_bike'
             }, {
               urlOld: 'race',
               url: 'road',
               name: translations["list.category.road"],
               imgFilePath: "app/assets/ui_images/seo/race.jpg",
-              subcategories: '30,31,32,33'
+              subcategories: '30,31,32,33',
+              key: 'road'
             }, {
-              url: 'all-terrain',
+              url: 'all_terrain',
               name: translations["list.category.all-terrain"],
               imgFilePath: "app/assets/ui_images/seo/all-terrain.jpg",
-              subcategories: '40,41,42,43'
+              subcategories: '40,41,42,43',
+              key: 'urban'
             }, {
               url: 'transport',
               name: translations["list.category.transport"],
               // TODO: Add image for transport
               imgFilePath: "",
-              subcategories: '50,51,52,53,54,55'
+              subcategories: '50,51,52,53,54,55',
+              key: 'transport'
             }, {
               url: 'kids',
               name: translations["list.category.kids"],
               imgFilePath: "app/assets/ui_images/seo/kids.jpg",
-              subcategories: '60,61,62,63'
+              subcategories: '60,61,62,63',
+              key: 'kids'
             }, {
               url: 'special',
               name: translations["list.category.special"],
               imgFilePath: "app/assets/ui_images/seo/special.jpg",
-              subcategories: '70,71,72,73,74'
+              subcategories: '70,71,72,73,74',
+              key: 'special'
             }
           ];
         });

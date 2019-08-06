@@ -42,3 +42,10 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+.status-labels__item.lnr-enlarge {
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 7px 15px;
+}
