@@ -39,7 +39,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
         bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
           // without transport category
           cityLanding.categories = resolve.filter(function (item) {
-            return item.url !== 'transport';
+            return item.url;
           });
           // parse url names to data names (change '-' to '_')
           _.forEach(cityLanding.categories, function (item) {
@@ -60,7 +60,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
           swiperConfig();
         }, 6000);
       };
-
 
       function fetchData() {
         var lng = $translate.preferredLanguage();
