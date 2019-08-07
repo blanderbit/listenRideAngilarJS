@@ -28,7 +28,7 @@
 .lnr-city-landing-content {
   width: 100%;
   max-width: 1170px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .lnr-city-landing-bg {
@@ -94,7 +94,7 @@
 }
 
 .lnr-city-landing .lnr-icn-big-rounded {
-  margin: 25px;
+  margin-right: 25px;
   flex-shrink: 0;
 }
 
@@ -102,8 +102,8 @@
   list-style-type: none;
 }
 
-.lnr-city-landing-info-blocks li {
-  margin: 60px 0;
+.lnr-city-landing-info-blocks li + li {
+  margin-top: 60px;
 }
 
 .lnr-city-landing-info .lnr-city-landing__title {
@@ -124,7 +124,7 @@
 .lnr-city-landing-hints {
   width: 100%;
   max-width: 900px;
-  margin: auto;
+  margin: 20px auto;
 }
 
 .lnr-city-landing-hints-tile {
@@ -407,9 +407,14 @@
     font-size: 34px;
   }
 
-  /*.lnr-city-landing__title.lnr-center {*/
-    /*text-align: left;*/
-  /*}*/
+  .lnr-city-landing__title.lnr-center {
+    text-align: left;
+  }
+
+  .lnr-city-landing__title.lnr-center,
+  .lnr-city-landing__descr {
+    width: 100%;
+  }
 
   .lnr-city-landing__category-title {
     font-size: 24px;
@@ -498,6 +503,10 @@
 
   .lnr-fade-slider__text {
     max-height: initial;
+  }
+
+  .lnr-city-landing .lnr-icn-big-rounded {
+    margin: 0 auto 25px;
   }
 }
 

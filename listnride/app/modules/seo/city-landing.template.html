@@ -70,7 +70,6 @@
     layout="column"
     layout-align="start center"
     layout-padding
-    class="lnr-city-landing-content"
   >
     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[0].title}}</h2>
     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[0].description}}</p>
@@ -84,13 +83,13 @@
         flex-gt-sm="33">
       </bike-card>
     </div>
-    <md-button
-      ng-if="cityLanding.data.blocks[0].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[0]"
-      class="md-xlrg md-raised md-primary lnr-city-landing__button"
-      ng-click="cityLanding.loadAllBikes(0)"
+    <a
+      ui-sref="search({location: cityLanding.city})"
+      target="_blank"
+      class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
     >
       {{'shared.show-all-bikes' | translate}}
-    </md-button>
+    </a>
   </section>
 
    <section layout="row" class="lnr-city-landing-bg lnr-city-landing-info" ng-if="cityLanding.data.info_block.info.length">
@@ -99,7 +98,6 @@
        <ul class="lnr-city-landing-info-blocks" layout-padding>
         <li layout-gt-xs="row" layout="column" layout-align-gt-xs="start center" layout-align="center center" ng-repeat="item in cityLanding.data.info_block.info track by $index">
           <md-icon md-svg-src="app/assets/ui_icons/{{item.icon}}.svg" class="lnr-icn-big-rounded md-color-primary"></md-icon>
-
           <div flex="70">
             <h3 class="lnr-city-landing__title">{{item.title}}</h3>
             <p class="lnr-city-landing__descr" ng-bind-html="item.description"></p>
@@ -114,7 +112,6 @@
      layout="column"
      layout-align="start center"
      layout-padding
-     class="lnr-city-landing-content"
    >
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[1].title}}</h2>
      <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[1].description}}</p>
@@ -128,13 +125,13 @@
          flex-gt-sm="33">
        </bike-card>
      </div>
-     <md-button
-       ng-if="cityLanding.data.blocks[1].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[1]"
-       class="md-xlrg md-raised md-primary lnr-city-landing__button"
-       ng-click="cityLanding.loadAllBikes(1)"
+     <a
+       ui-sref="search({location: cityLanding.city})"
+       target="_blank"
+       class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
        {{'shared.show-all-bikes' | translate}}
-     </md-button>
+     </a>
    </section>
 
    <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg" ng-if="cityLanding.data.brands_block.brands.length">
@@ -162,7 +159,6 @@
      layout="column"
      layout-align="start center"
      layout-padding
-     class="lnr-city-landing-content"
    >
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[2].title}}</h2>
      <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[2].description}}</p>
@@ -176,13 +172,13 @@
          flex-gt-sm="33">
        </bike-card>
      </div>
-     <md-button
-       ng-if="cityLanding.data.blocks[2].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[2]"
-       class="md-xlrg md-raised md-primary lnr-city-landing__button"
-       ng-click="cityLanding.loadAllBikes(2)"
+     <a
+       ui-sref="search({location: cityLanding.city})"
+       target="_blank"
+       class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
        {{'shared.show-all-bikes' | translate}}
-     </md-button>
+     </a>
    </section>
 
    <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg" ng-if="cityLanding.data.testimonials_block.testimonials.length">
@@ -206,13 +202,18 @@
      </div>
    </section>
 
-   <section layout="column" ayout-align="center center" layout-padding class="lnr-city-landing-content" ng-if="cityLanding.data.categories_block.categories">
+   <section layout="column" ayout-align="center center" layout-padding ng-if="cityLanding.data.categories_block.categories">
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.categories_block.title}}</h2>
      <!--<p class="lnr-city-landing__descr lnr-m-0">Choose your rental bike from a selection of Dutch Bikes, City Bikes,</br> Fixed Gear Bikes, Cyclocross Bikes and find the right bike matching your needs. Rent a bike on listnride, the online platform with the</br> greatest choice of high quality bicycles! Book your bike rental in Berlin online. All bikes are insured.</p>-->
 
      <md-grid-list
-       class="md-color-white lnr-m lnr-city-landing-grid-list"
-       md-cols-xs="1" md-cols-sm="2" md-cols="4" md-gutter="16px" md-row-height="2:1"  md-row-height-gt-sm="1.2:1"
+       class="md-color-white lnr-city-landing-grid-list lnr-city-landing-content"
+       md-cols-xs="1"
+       md-cols-sm="2"
+       md-cols="4"
+       md-gutter="16px"
+       md-row-height="2:1"
+       md-row-height-gt-sm="1.2:1"
      >
        <md-grid-tile
          ng-repeat="category in cityLanding.categories track by $index"
@@ -244,7 +245,7 @@
      layout="column"
      layout-align="start center"
      layout-padding
-     class="lnr-city-landing-content lnr-city-landing-bg"
+     class="lnr-city-landing-bg"
    >
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[3].title}}</h2>
      <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[3].description}}</p>
@@ -258,16 +259,16 @@
          flex-gt-sm="33">
        </bike-card>
      </div>
-     <md-button
-       ng-if="cityLanding.data.blocks[3].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[3]"
-       class="md-xlrg md-raised md-primary lnr-city-landing__button"
-       ng-click="cityLanding.loadAllBikes(3)"
+     <a
+       ui-sref="search({location: cityLanding.city})"
+       target="_blank"
+       class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
        {{'shared.show-all-bikes' | translate}}
-     </md-button>
+     </a>
    </section>
 
-   <section layout="column" ayout-align="center center" layout-padding class="lnr-city-landing-content" ng-if="cityLanding.data.table.info.length">
+   <section layout="column" ayout-align="center center" layout-padding ng-if="cityLanding.data.table.info.length">
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.table.title}}</h2>
      <!--<p class="lnr-city-landing__descr lnr-m-0">{{cityLanding.data.table.description}}</p>-->
      <md-grid-list
@@ -295,7 +296,7 @@
      layout="column"
      layout-align="start center"
      layout-padding
-     class="lnr-city-landing-content lnr-city-landing-bg"
+     class="lnr-city-landing-bg"
    >
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[4].title}}</h2>
      <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[4].description}}</p>
@@ -309,13 +310,13 @@
          flex-gt-sm="33">
        </bike-card>
      </div>
-     <md-button
-       ng-if="cityLanding.data.blocks[4].bikes.length > cityLanding.bikesToShow && !cityLanding.showAllBikes[4]"
-       class="md-xlrg md-raised md-primary lnr-city-landing__button"
-       ng-click="cityLanding.loadAllBikes(4)"
+     <a
+       ui-sref="search({location: cityLanding.city})"
+       target="_blank"
+       class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
        {{'shared.show-all-bikes' | translate}}
-     </md-button>
+     </a>
    </section>
 
    <section layout="column" layout-align="center center" layout-padding ng-if="cityLanding.data.tips_block.length">
