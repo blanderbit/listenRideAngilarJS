@@ -32,14 +32,9 @@ module.exports = (webpackEnv) => {
             options: {
               presets: [
                 [
-                  '@babel/preset-env', 
+                  '@babel/preset-env',
                   {
-                    targets: {
-                      edge: "17",
-                      firefox: "60",
-                      chrome: "67",
-                      safari: "11.1"
-                    },
+                    targets: "> 0.5%, last 2 versions, Firefox ESR, not dead",
                     useBuiltIns: "usage",
                     corejs: "2.x"
                   }
