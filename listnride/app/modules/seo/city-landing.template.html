@@ -1,12 +1,10 @@
  <md-content class="single-column lnr-city-landing" ng-hide="cityLanding.loading">
-
    <section layout="row" class="lnr-city-landing-bg">
-    <div flex-gt-xs="50" flex="100" layout="row" layout-align="end none" layout-padding class="lnr-city-landing-promo">
-      <div layout="row" layout-padding layout-wrap class="lnr-city-landing-col">
-        <div flex-gt-xs="90">
+     <div flex-gt-xs="50" flex="100" layout-gt-xs="row" layout-align="end none" layout-padding class="lnr-city-landing-promo">
+      <div layout="column" layout-padding class="lnr-city-landing-col">
+        <div flex-gt-xs="90" flex="100" layout="column" layout-align="center none">
           <h1 class="lnr-city-landing__title">{{cityLanding.data.explore.title}}</h1>
           <p class="lnr-city-landing__descr">{{cityLanding.data.explore.description}}</p>
-
           <form class="lnr-search-bar lnr-search-bar_city-landing" md-whiteframe="3" layout="row" md-theme="default">
             <autocomplete
               autocomplete-id="home"
@@ -14,7 +12,7 @@
               layout="column"
               location="cityLanding.location"
               placeholder-id="{{ 'autocomplete.default-placeholder' | translate }}"
-              place-changed="home.placeChanged(place)">
+              place-changed="cityLanding.placeChanged(place)">
             </autocomplete>
             <md-button
               ng-click="cityLanding.onSearchClick()"
@@ -31,6 +29,42 @@
               ></md-icon>
             </md-button>
           </form>
+          <div ng-if="cityLanding.mobileScreen"
+               id="bikes-list"
+               class="swiper-container lnr-bikes-slider lnr-mt-x2"
+               hide show-xs>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" ng-repeat="bike in cityLanding.data.blocks[0].bikes">
+                <a ui-sref="bike({bikeId: bike.id})"
+                   target="_blank"
+                   layout="row"
+                   class="lnr-bikes-slider-content"
+                >
+                  <div flex="35"
+                       class="lnr-bikes-slider-image"
+                  >
+                    <img src="{{bike.image_file}}" alt="Bike image">
+                  </div>
+                  <div flex="55"
+                       layout="column"
+                       layout-align="center start"
+                       class="lnr-bikes-slider-title"
+                  >
+                    <h5 class="md-title">{{bike.brand}}</h5>
+                    <span class="md-subhead">{{bike.name}}</span>
+                  </div>
+                  <div flex="30"
+                       layout="column"
+                       layout-align="center center"
+                       class="lnr-bikes-slider-price"
+                  >
+                    <span>{{ 'shared.from2' | translate }}</span>
+                    <span class="md-headline">{{ bike.price_from | number:0}}€</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <breadcrumbs
           data="cityLanding.breadcrumbs"
@@ -39,10 +73,13 @@
       </div>
     </div>
 
-    <div flex-gt-xs="50"  flex flex-order-xs="1" layout="column" class="map-column lnr-preload-bg" hide-xs>
+    <div ng-if="!cityLanding.mobileScreen"
+         flex-gt-xs="50" flex flex-order-xs="1"
+         layout="column"
+         hide-xs>
       <ng-map
-        ng-if="cityLanding.bikes !== undefined"
         id="searchMap"
+        class="lnr-city-landing-map"
         default-style="false"
         center="[{{cityLanding.mapOptions.lat}},{{cityLanding.mapOptions.lng}}]"
         zoom="{{cityLanding.mapOptions.zoom}}"
@@ -224,12 +261,11 @@
          ng-repeat="category in cityLanding.categories track by $index">
          <a ui-sref="search({location: cityLanding.data.city, categories: category.subcategories})"
             target="_blank"
-            layout-padding
             layout="column"
             layout-align="center center"
          >
            <h3 class="lnr-city-landing__category-title">{{ category.name }}</h3>
-           <div class="status-labels">
+           <div class="status-labels lnr-mt">
              <div class="status-labels__item lnr-enlarge">
                <span>{{cityLanding.data.categories_block.categories[category.dataName]}}</span>
                <span translate="shared.available"></span>
@@ -268,7 +304,7 @@
      </a>
    </section>
 
-   <section layout="column" ayout-align="center center" layout-padding ng-if="cityLanding.data.table.info.length">
+   <section layout="column" layout-align="center center" layout-padding ng-if="cityLanding.data.table.info.length">
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.table.title}}</h2>
      <!--<p class="lnr-city-landing__descr lnr-m-0">{{cityLanding.data.table.description}}</p>-->
      <md-grid-list

@@ -1,10 +1,11 @@
 'use strict';
 import Swiper from 'swiper';
+import MarkerClusterer from '@google/markerclustererplus';
 
 angular.module('cityLanding',[]).component('cityLanding', {
   templateUrl: 'app/modules/seo/city-landing.template.html',
   controllerAs: 'cityLanding',
-  controller: function cityLandingController($scope, $translate, $translatePartialLoader, $stateParams, $state, api, ENV, bikeOptions, ngMeta, mapConfigs, $mdMedia, $timeout) {
+  controller: function cityLandingController($scope, $translate, $translatePartialLoader, $stateParams, $state, api, ENV, bikeOptions, ngMeta, NgMap, mapConfigs, $mdMedia, $timeout) {
     var cityLanding = this;
     const MOBILE_BIKE_COLUMNS = 3;
     const DESKTOP_BIKECOLUMNS = 6;
@@ -84,13 +85,113 @@ angular.module('cityLanding',[]).component('cityLanding', {
             cityLanding.data.texts = null;
           }
           // End
-
+          if(!cityLanding.mobileScreen) initializeGoogleMap();
         },
         function (error) {
           $state.go('404');
         }
       );
     }
+
+    // ============================
+    // >>>> START MAP FUNCTIONALITY
+    // ============================
+
+    function initializeGoogleMap() {
+      // without timeout map will take an old array with bikes
+      $timeout(function(){
+        NgMap.getMap({ id: "searchMap" }).then(function (map) {
+          map.fitBounds(correctBounds());
+          map.setZoom(map.getZoom());
+          initMarkerClusterer(map);
+          cityLanding.map = map;
+        });
+      }, 0);
+    }
+
+    function initMarkerClusterer(map) {
+      var markers = cityLanding.bikes[0].map(function (bike) {
+        return createMarkerForBike(bike, map);
+      });
+
+      cityLanding.mapMarkers = markers;
+
+      var mcOptions = {
+        styles: mapConfigs.clustersStyle()
+      };
+      cityLanding.clusterer = new MarkerClusterer(map, markers, mcOptions);
+      return cityLanding.clusterer;
+    }
+
+    function createMarkerForBike(bike, map) {
+      // Origins, anchor positions and coordinates of the marker increase in the X
+      // direction to the right and in the Y direction down.
+      var image = {
+        url: 'app/assets/ui_icons/map/markers/Pin Map 56x56.png',
+        // This marker is 56 pixels wide by 56 pixels high.
+        size: new google.maps.Size(56,56),
+        // The origin for this image is (0, 0).
+        origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the base of the flagpole at (56/2, 56).
+        anchor: new google.maps.Point(28, 56),
+        // The label position inside marker
+        labelOrigin: new google.maps.Point(28, 22)
+        // scaledSize: new google.maps.Size(50, 50)
+      };
+
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(bike.lat_rnd, bike.lng_rnd),
+        id: bike.id,
+        icon: image,
+        title: Math.ceil(bike.price_from) + '€',
+        label: { text: Math.ceil(bike.price_from) + '€', color: "white", fontSize: '13px', fontWeight: 'bold' }
+      });
+
+      google.maps.event.addListener(marker, 'click', function () {
+        cityLanding.selectedBike = bike;
+        map.showInfoWindow('searchMapWindow', this);
+      });
+
+      return marker;
+    }
+
+    function correctBounds() {
+      var bounds = new google.maps.LatLngBounds();
+      if (!_.isEmpty(cityLanding.locationBounds)) {
+        bounds = extendBounds(bounds, cityLanding.locationBounds.northeast.lat, cityLanding.locationBounds.northeast.lng);
+        bounds = extendBounds(bounds, cityLanding.locationBounds.southwest.lat, cityLanding.locationBounds.southwest.lng);
+        bounds = extendBounds(bounds, cityLanding.latLng.lat, cityLanding.latLng.lng);
+      }
+
+      var i = 0;
+      _.forEach(cityLanding.bikes[0], function(bike) {
+        if (bike.priority == true) return;
+        bounds = extendBounds(bounds, bike.lat_rnd, bike.lng_rnd);
+        i++;
+        if (i > 3) return false;
+      });
+
+      return bounds;
+    }
+
+    function extendBounds(bounds, lat, lng) {
+      var loc = new google.maps.LatLng(lat, lng);
+      bounds.extend(loc);
+      return bounds;
+    }
+
+    // ============================
+    // END MAP FUNCTIONALITY <<<<<<
+    // ============================
+
+    cityLanding.placeChanged = function(place) {
+      var location = place.formatted_address || place.name;
+      $state.go('search', {location: location});
+    };
+
+    cityLanding.onSearchClick = function() {
+      $state.go('search', {location: cityLanding.location});
+    };
 
     function tileColspan(index) {
       if (index === 0 || index === 4) {
@@ -111,6 +212,14 @@ angular.module('cityLanding',[]).component('cityLanding', {
     };
 
     function swiperConfig () {
+
+      cityLanding.bikesList = new Swiper ('#bikes-list', {
+        // Optional parameters
+        keyboardControl: true,
+        slidesPerView: 1,
+        spaceBetween: 20
+      });
+
       cityLanding.brandsSwiper = new Swiper ('#bikes-brands', {
         // Optional parameters
         keyboardControl: true,
