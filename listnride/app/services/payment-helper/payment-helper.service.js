@@ -87,6 +87,26 @@ function PaymentHelperController(ENV, api, authentication, notification) {
           );
         });
     },
+    postCreditCard: function(creditCardData, cb, cbError) {
+      notification.show(null, null, 'booking.payment.getting-saved');
+
+      var data = {
+        "payment_method": {
+          "payment_type": "credit-card",
+          "data": {...creditCardData.data.paymentMethod, ...{ holderName: creditCardData.cardholderName }},
+        }
+      };
+
+      api.post('/users/' + authentication.userId() + '/payment_methods', data).then(
+        function (response) {
+          if (typeof cb == 'function') cb(response.data);
+        },
+        function (error) {
+          if (typeof cbError == 'function') cbError();
+          notification.show(error, 'error');
+        }
+      );
+    },
     btPostCreditCard: function(creditCardData, cb, cbError) {
       notification.show(null, null, 'booking.payment.getting-saved');
       var self = this;

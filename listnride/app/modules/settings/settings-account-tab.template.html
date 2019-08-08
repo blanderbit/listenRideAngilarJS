@@ -74,7 +74,7 @@
               ng-model="settingsAccount.parent.paymentMethod"
               layout="row"
               class="lnr-mh lnr-mt-x2">
-              <md-radio-button value="credit-card">{{ 'shared.payment-type.credit-card' | translate }}</md-radio-button>
+              <md-radio-button value="credit-card" ng-click="settingsAccount.parent.mountPaymentMethod()">{{ 'shared.payment-type.credit-card' | translate }}</md-radio-button>
               <md-radio-button value="paypal">{{ 'settings.paypal' | translate }}</md-radio-button>
             </md-radio-group>
             <ng-form name="settingsAccount.parent.paymentForm">
@@ -87,7 +87,7 @@
                 <md-button
                   class="md-raised md-primary lnr-m-0"
                   ng-click="settingsAccount.parent.tokenizeCard()"
-                  ng-disabled="!settingsAccount.parent.paymentForm.$valid || settingsAccount.parent.paymentLoading">
+                  ng-disabled="!settingsAccount.parent.validCreditCard || settingsAccount.parent.paymentLoading">
                   <div ng-if="settingsAccount.parent.paymentLoading" class="lnr-loader">
                       <div class="lnr-loader__item1"></div>
                       <div class="lnr-loader__item2"></div>
