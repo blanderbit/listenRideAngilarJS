@@ -15,6 +15,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.city = _.capitalize($stateParams.city);
       cityLanding.bikes = {};
       cityLanding.loading = true;
+      cityLanding.mapLoading = true;
       cityLanding.categories = [];
       cityLanding.headerTranslation = 'seo.header';
       cityLanding.breadcrumbs = [
@@ -106,6 +107,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
           map.setZoom(map.getZoom());
           initMarkerClusterer(map);
           cityLanding.map = map;
+          cityLanding.mapLoading = false;
         });
       }, 0);
     }
@@ -217,6 +219,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.bikesList = new Swiper ('#bikes-list', {
         // Optional parameters
         keyboardControl: true,
+        loop: true,
         slidesPerView: 1,
         spaceBetween: 20
       });
@@ -224,6 +227,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.brandsSwiper = new Swiper ('#bikes-brands', {
         // Optional parameters
         keyboardControl: true,
+        loop: true,
         slidesPerView: 4,
         navigation: {
           nextEl: '.swiper-button-next',

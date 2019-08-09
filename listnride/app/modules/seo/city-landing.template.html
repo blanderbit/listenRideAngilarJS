@@ -1,4 +1,8 @@
- <md-content class="single-column lnr-city-landing" ng-hide="cityLanding.loading">
+<div ng-show="cityLanding.loading" flex layout="column" class="lnr-city-landing-loader" layout-align="center center">
+  <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<md-content class="single-column lnr-city-landing" ng-hide="cityLanding.loading">
    <section layout="row" class="lnr-city-landing-bg lnr-p-0">
      <div flex-gt-xs="50" flex="100" layout-gt-xs="row" layout-align="end none" layout-padding class="lnr-city-landing-promo">
       <div layout="column" layout-padding class="lnr-city-landing-col">
@@ -76,29 +80,33 @@
     <div ng-if="!cityLanding.mobileScreen"
          flex-gt-xs="50" flex flex-order-xs="1"
          layout="column"
-         hide-xs>
-      <ng-map
-        id="searchMap"
-        class="lnr-city-landing-map"
-        default-style="false"
-        center="[{{cityLanding.mapOptions.lat}},{{cityLanding.mapOptions.lng}}]"
-        zoom="{{cityLanding.mapOptions.zoom}}"
-        on-click="cityLanding.onMapClick(event)"
-        draggable="true"
-        map-type-control="false"
-        street-view-control="false"
-        styles="{{cityLanding.colorScheme}}"
-      >
-
-        <info-window id="searchMapWindow">
-          <div ng-non-bindable="">
-            <bike-card
-              bike="cityLanding.selectedBike"
-              url-params="cityLanding.urlParams"
-            ></bike-card>
-          </div>
-        </info-window>
-      </ng-map>
+         hide-xs
+         style="position: relative">
+        <div ng-class="cityLanding.mapLoading ? 'hidden' : ''" class="lnr-city-landing-map">
+          <ng-map
+            id="searchMap"
+            default-style="false"
+            center="[{{cityLanding.mapOptions.lat}},{{cityLanding.mapOptions.lng}}]"
+            zoom="{{cityLanding.mapOptions.zoom}}"
+            on-click="cityLanding.onMapClick(event)"
+            draggable="true"
+            map-type-control="false"
+            street-view-control="false"
+            styles="{{cityLanding.colorScheme}}"
+          >
+            <info-window id="searchMapWindow">
+              <div ng-non-bindable="">
+                <bike-card
+                  bike="cityLanding.selectedBike"
+                  url-params="cityLanding.urlParams"
+                ></bike-card>
+              </div>
+            </info-window>
+          </ng-map>
+        </div>
+      <div ng-show="cityLanding.mapLoading" flex layout="column" class="lnr-city-landing-loader" layout-align="center center">
+        <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+      </div>
     </div>
   </section>
 

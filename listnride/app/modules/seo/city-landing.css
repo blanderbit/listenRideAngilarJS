@@ -15,9 +15,22 @@
   color: var(--text-color);
 }
 
-.lnr-city-landing-map {
+.lnr-city-landing-loader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lnr-city-landing-map,
+.lnr-city-landing-map ng-map {
   height: 100% !important; /*overwriting inline dynamic height*/
   min-height: 300px;
+}
+
+.lnr-city-landing-map.hidden {
+  opacity: 0;
 }
 
 .lnr-city-landing section {
