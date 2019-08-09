@@ -15,7 +15,15 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       ['28', {start_at: 2419200}]
     ]);
     // to have opportunity to get day by start_at
-    const PRICES_BY_START_AT = _.invertBy(Object.fromEntries(PRICES_BY_DAYS), value => value.start_at);
+    // old code: const PRICES_BY_START_AT = _.invertBy(Object.fromEntries(PRICES_BY_DAYS), value => value.start_at);
+    const PRICES_BY_START_AT = (function(){
+      // Object.fromEntries polyfill
+      // to support: samsung browser
+      let objectFromMap = Array.from(PRICES_BY_DAYS).reduce((acc, [key, val]) => Object.assign(acc, {
+        [key]: val
+      }), {});
+      return _.invertBy(objectFromMap, value => value.start_at);
+    })();
 
     return {
       getPriceObjectFor(day, prices) {
