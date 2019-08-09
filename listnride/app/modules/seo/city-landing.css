@@ -20,14 +20,18 @@
   min-height: 300px;
 }
 
+.lnr-city-landing section {
+  min-height: 700px;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
 .lnr-city-landing section:first-child {
   min-height: calc(100vh - 60px);
 }
 
-.lnr-city-landing section:not(:first-child) {
-  min-height: 700px;
-  padding-top: 65px;
-  padding-bottom: 65px;
+.lnr-city-landing section.lnr-p-0 {
+  padding: 0;
 }
 
 .lnr-city-landing-content {
@@ -190,7 +194,7 @@
 
 .lnr-bikes-slider.swiper-container {
   overflow: visible;
-  margin: 0;
+  margin: 16px 0 0;
 }
 
 .lnr-bikes-slider-content {

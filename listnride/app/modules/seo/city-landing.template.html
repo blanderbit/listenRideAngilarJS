@@ -1,5 +1,5 @@
  <md-content class="single-column lnr-city-landing" ng-hide="cityLanding.loading">
-   <section layout="row" class="lnr-city-landing-bg">
+   <section layout="row" class="lnr-city-landing-bg lnr-p-0">
      <div flex-gt-xs="50" flex="100" layout-gt-xs="row" layout-align="end none" layout-padding class="lnr-city-landing-promo">
       <div layout="column" layout-padding class="lnr-city-landing-col">
         <div flex-gt-xs="90" flex="100" layout="column" layout-align="center none">
@@ -31,7 +31,7 @@
           </form>
           <div ng-if="cityLanding.mobileScreen"
                id="bikes-list"
-               class="swiper-container lnr-bikes-slider lnr-mt-x2"
+               class="swiper-container lnr-bikes-slider"
                hide show-xs>
             <div class="swiper-wrapper">
               <div class="swiper-slide" ng-repeat="bike in cityLanding.data.blocks[0].bikes">
@@ -129,7 +129,7 @@
     </a>
   </section>
 
-   <section layout="row" class="lnr-city-landing-bg lnr-city-landing-info" ng-if="cityLanding.data.info_block.info.length">
+   <section layout="row" class="lnr-city-landing-bg lnr-city-landing-info lnr-p-0" ng-if="cityLanding.data.info_block.info.length">
      <div flex-gt-sm="50" hide-sm style="background-image: url('{{ cityLanding.data.info_block.image}}'); background-size: cover; background-position: center;"></div>
      <div layout="row" layout-align="center center" flex-gt-sm="50" flex="100" layout-padding>
        <ul class="lnr-city-landing-info-blocks" layout-padding>

@@ -53,15 +53,10 @@ angular.module('cityLanding',[]).component('cityLanding', {
 
       // invocations
       fetchData();
-      // TODO find another way to apply document ready function
-      $timeout(function () {
-        swiperConfig();
-      }, 6000);
     };
 
     function fetchData() {
       var lng = $translate.preferredLanguage();
-      var ISLANDS = ['Usedom', 'Sylt', 'Mallorca', 'Lanzarote'];
 
       api.get('/seo_page?city=' + cityLanding.city + '&lng=' + lng).then(
         function (success) {
@@ -69,9 +64,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
           cityLanding.location = cityLanding.city;
           cityLanding.translatedCity = cityLanding.data.city_names[lng] ? cityLanding.data.city_names[lng] : cityLanding.city;
           cityLanding.loading = false;
+          cityLanding.allBikes = [];
 
           _.forEach(cityLanding.data.blocks, function(value, index) {
             cityLanding.bikes[index] = cityLanding.data.blocks[index].bikes.slice(0, cityLanding.bikesToShow);
+            cityLanding.allBikes = cityLanding.allBikes.concat(cityLanding.data.blocks[index].bikes);
           });
 
           ngMeta.setTitle($translate.instant(cityLanding.data.explore.meta_title));
@@ -86,6 +83,10 @@ angular.module('cityLanding',[]).component('cityLanding', {
           }
           // End
           if(!cityLanding.mobileScreen) initializeGoogleMap();
+
+          $timeout(function () {
+            swiperConfig();
+          });
         },
         function (error) {
           $state.go('404');
@@ -110,7 +111,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
     }
 
     function initMarkerClusterer(map) {
-      var markers = cityLanding.bikes[0].map(function (bike) {
+      var markers = cityLanding.allBikes.map(function (bike) {
         return createMarkerForBike(bike, map);
       });
 
