@@ -265,8 +265,7 @@ angular.module('listnride')
             }, {
               url: 'transport',
               name: translations["list.category.transport"],
-              // TODO: Add image for transport
-              imgFilePath: "",
+              imgFilePath: "app/assets/ui_images/seo/transport.jpg",
               subcategories: '50,51,52,53,54,55'
             }, {
               url: 'kids',
