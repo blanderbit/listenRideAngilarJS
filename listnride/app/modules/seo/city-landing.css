@@ -2,12 +2,13 @@
   --content-width: 1170px;
   --white: #fff;
   --black: #000;
-  --main-color: #48be84;
+  --main-color: #5fc693;
   --base-color: #599eff;
   --bg-color: #f7f9fc;
   --title-color: #343940;
   --text-color: #586068;
   --text-color-light: #a5aabb;
+  --disable-color: #e2e7eb;
   --base-box-shadow: 0px 4px 40px rgba(150, 158, 172, 0.1);
 }
 
@@ -183,7 +184,7 @@
   width: 60%;
   left: 50%;
   height: 1px;
-  background: #E2E7EB;
+  background: var(--disable-color);
   position: absolute;
   transform: translateX(-50%);
 }
@@ -193,7 +194,7 @@
   width: 1px;
   left: 0;
   height: 60%;
-  background: #E2E7EB;
+  background: var(--disable-color);
   position: absolute;
   transform: translateY(-50%);
   top: 50%;
@@ -306,14 +307,18 @@
   min-width: 50px;
   font-size: 20px;
   background: var(--main-color);
-  color: #fff;
+  color: var(--white);
   border: none;
   border-radius: 2px;
-  line-height: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.lnr-slider-default .swiper-button:hover {
+  background: #48be84;
 }
 
 .lnr-slider-default .swiper-button-disabled {
-  background-color: #e2e7eb;
+  background: var(--disable-color);
   opacity: 1;
 }
 
