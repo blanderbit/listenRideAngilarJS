@@ -4,7 +4,7 @@
   --black: #000;
   --main-color: #48be84;
   --base-color: #599eff;
-  --bg-color: #fafbfd;
+  --bg-color: #f7f9fc;
   --title-color: #343940;
   --text-color: #586068;
   --text-color-light: #a5aabb;
@@ -79,7 +79,7 @@
 }
 
 .lnr-city-landing-promo .lnr-city-landing__title {
-  max-width: 400px;
+  max-width: 500px;
   font-size: 70px;
   line-height: 1.2;
 }
@@ -271,11 +271,11 @@
   z-index: 2;
 }
 .lnr-slider-default:before {
-  background: linear-gradient(to right, rgb(250, 251, 253) 80%, rgba(244, 246, 248, 0) 100%);
+  background: linear-gradient(to right, rgb(247, 249, 252) 80%, rgba(247, 249, 252, 0) 100%);
   left: 0;
 }
 .lnr-slider-default:after {
-  background: linear-gradient(to left, rgb(250, 251, 253) 80%, rgba(244, 246, 248, 0) 100%);
+  background: linear-gradient(to left, rgb(247, 249, 252) 80%, rgba(247, 249, 252, 0) 100%);
   right: 0;
 }
 
