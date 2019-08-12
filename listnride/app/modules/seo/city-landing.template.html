@@ -226,7 +226,7 @@
      </a>
    </section>
 
-   <section layout-align="center center" layout-padding class="lnr-city-landing-bg" ng-if="cityLanding.data.testimonials_block.testimonials.length">
+   <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg" ng-if="cityLanding.data.testimonials_block.testimonials.length">
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.testimonials_block.title}}</h2>
      <div class="lnr-city-landing-content">
        <div class="swiper-container lnr-testimonials" id="testimonials-slider">
@@ -263,8 +263,8 @@
        >
          <md-grid-tile
            ng-repeat="category in cityLanding.categories track by $index"
-           class="tile"
-           style="background-image: url({{category.imgFilePath}})"
+           class="lnr-city-landing__category-tile"
+           style="background-image: url({{category.imgFilePathNew}})"
            md-colspan-gt-sm="{{cityLanding.tileColspan($index)}}"
            md-rowspan-gt-sm="{{cityLanding.tileRowspan($index)}}"
            ng-repeat="category in cityLanding.categories track by $index">
