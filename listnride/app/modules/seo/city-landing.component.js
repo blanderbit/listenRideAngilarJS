@@ -18,6 +18,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.mapLoading = true;
       cityLanding.categories = [];
       cityLanding.headerTranslation = 'seo.header';
+      cityLanding.defaultProfilePicture = "https://s3.eu-central-1.amazonaws.com/listnride/assets/default_profile_picture.jpg"
       cityLanding.breadcrumbs = [
       {
         title:'Home',

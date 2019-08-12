@@ -234,7 +234,7 @@
            <div class="swiper-slide lnr-testimonials-card" ng-repeat="testimonial in cityLanding.data.testimonials_block.testimonials">
              <div class="lnr-testimonials-card-content">
                <a href="" class="lnr-testimonials-card__avatar">
-                 <img src="{{testimonial.picture}}" alt="">
+                 <img ng-src="{{testimonial.picture || cityLanding.defaultProfilePicture}}" alt="">
                </a>
                <h3 class="lnr-testimonials-card__title">{{testimonial.fullname}}</h3>
                <div class="lnr-testimonials-card__subtitle">{{testimonial.description}}</div>
@@ -251,37 +251,39 @@
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.categories_block.title}}</h2>
      <!--<p class="lnr-city-landing__descr lnr-m-0">Choose your rental bike from a selection of Dutch Bikes, City Bikes,</br> Fixed Gear Bikes, Cyclocross Bikes and find the right bike matching your needs. Rent a bike on listnride, the online platform with the</br> greatest choice of high quality bicycles! Book your bike rental in Berlin online. All bikes are insured.</p>-->
 
-     <md-grid-list
-       class="md-color-white lnr-city-landing-grid-list lnr-city-landing-content"
-       md-cols-xs="1"
-       md-cols-sm="2"
-       md-cols="4"
-       md-gutter="16px"
-       md-row-height="2:1"
-       md-row-height-gt-sm="1.2:1"
-     >
-       <md-grid-tile
-         ng-repeat="category in cityLanding.categories track by $index"
-         class="tile"
-         style="background-image: url({{category.imgFilePath}})"
-         md-colspan-gt-sm="{{cityLanding.tileColspan($index)}}"
-         md-rowspan-gt-sm="{{cityLanding.tileRowspan($index)}}"
-         ng-repeat="category in cityLanding.categories track by $index">
-         <a ui-sref="search({location: cityLanding.data.city, categories: category.subcategories})"
-            target="_blank"
-            layout="column"
-            layout-align="center center"
-         >
-           <h3 class="lnr-city-landing__category-title">{{ category.name }}</h3>
-           <div class="status-labels lnr-mt">
-             <div class="status-labels__item lnr-enlarge">
-               <span>{{cityLanding.data.categories_block.categories[category.dataName]}}</span>
-               <span translate="shared.available"></span>
+     <div class="lnr-city-landing-content">
+       <md-grid-list
+         class="md-color-white"
+         md-cols-xs="1"
+         md-cols-sm="2"
+         md-cols="4"
+         md-gutter="16px"
+         md-row-height="2:1"
+         md-row-height-gt-sm="1.2:1"
+       >
+         <md-grid-tile
+           ng-repeat="category in cityLanding.categories track by $index"
+           class="lnr-city-landing__category-tile"
+           style="background-image: url({{category.imgFilePathNew}})"
+           md-colspan-gt-sm="{{cityLanding.tileColspan($index)}}"
+           md-rowspan-gt-sm="{{cityLanding.tileRowspan($index)}}"
+           ng-repeat="category in cityLanding.categories track by $index">
+           <a ui-sref="search({location: cityLanding.data.city, categories: category.subcategories})"
+              target="_blank"
+              layout="column"
+              layout-align="center center"
+           >
+             <h3 class="lnr-city-landing__category-title">{{ category.name }}</h3>
+             <div class="status-labels lnr-mt">
+               <div class="status-labels__item lnr-enlarge">
+                 <span>{{cityLanding.data.categories_block.categories[category.dataName]}}</span>
+                 <span translate="shared.available"></span>
+               </div>
              </div>
-           </div>
-         </a>
-       </md-grid-tile>
-     </md-grid-list>
+           </a>
+         </md-grid-tile>
+       </md-grid-list>
+     </div>
    </section>
 
    <section
@@ -315,24 +317,25 @@
    <section layout="column" layout-align="center center" layout-padding ng-if="cityLanding.data.table.info.length">
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.table.title}}</h2>
      <!--<p class="lnr-city-landing__descr lnr-m-0">{{cityLanding.data.table.description}}</p>-->
-     <md-grid-list
-       class="lnr-m lnr-city-landing-hints"
-       md-cols="2"
-       md-cols-gt-sm="3"
-       md-row-height="1.5:1"
-       md-row-height-gt-xs="3:1"
-       md-row-height-gt-sm="2:1"
-     >
-       <md-grid-tile
-         ng-repeat="hint in cityLanding.data.table.info"
-         class="lnr-city-landing-hints-tile"
+     <div class="lnr-m lnr-city-landing-hints">
+       <md-grid-list
+         md-cols="2"
+         md-cols-gt-sm="3"
+         md-row-height="1.5:1"
+         md-row-height-gt-xs="3:1"
+         md-row-height-gt-sm="2:1"
        >
-         <div>
-           <h3 class="md-title">{{hint.value}}</h3>
-           <h3 class="md-subhead">{{hint.key}}</h3>
-         </div>
-       </md-grid-tile>
-     </md-grid-list>
+         <md-grid-tile
+           ng-repeat="hint in cityLanding.data.table.info"
+           class="lnr-city-landing-hints-tile"
+         >
+           <div>
+             <h3 class="md-title">{{hint.value}}</h3>
+             <h3 class="md-subhead">{{hint.key}}</h3>
+           </div>
+         </md-grid-tile>
+       </md-grid-list>
+     </div>
    </section>
 
    <section
