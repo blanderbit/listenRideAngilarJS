@@ -228,7 +228,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.brandsSwiper = new Swiper ('#bikes-brands', {
         // Optional parameters
         keyboardControl: true,
-        loop: true,
         slidesPerView: 4,
         navigation: {
           nextEl: '.swiper-button-next',
