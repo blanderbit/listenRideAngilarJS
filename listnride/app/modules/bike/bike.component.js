@@ -90,7 +90,7 @@ angular.module('bike',[]).component('bike', {
           if (bike.data.is_cluster) {
             bike.cluster = response.data.cluster;
             bike.bikeVariations = bikeCluster
-              .groupBikeVariations(bike.cluster.variations);
+              .groupBikeVariations(bike.cluster.variations, bike.hasTimeSlots);
 
             mergeGeneralClusterParams();
           }
