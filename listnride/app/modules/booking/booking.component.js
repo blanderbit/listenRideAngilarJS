@@ -137,7 +137,7 @@ angular.module('booking', [])
               booking.cluster = success.data.cluster;
 
               booking.bikeVariations = bikeCluster
-                .groupBikeVariations(booking.cluster.variations);
+                .groupBikeVariations(booking.cluster.variations, booking.hasTimeSlots);
 
               mergeGeneralClusterParams();
             }
