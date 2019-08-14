@@ -297,7 +297,8 @@ angular
             durationUnit: 's',
             isNotAvailable: true,
             reason: reason,
-            comment: comment
+            comment: comment,
+            resourceEventId: availability.id
           })
         );
         return acc;
@@ -359,7 +360,8 @@ angular
           rider: null,
           contact: null,
           reason: null,
-          comment: null
+          comment: null,
+          resourceEventId: null
         },
         eventData
       );
