@@ -306,6 +306,7 @@
   height: 50px;
   min-width: 50px;
   font-size: 20px;
+  line-height: 20px;
   background: var(--main-color);
   color: var(--white);
   border: none;

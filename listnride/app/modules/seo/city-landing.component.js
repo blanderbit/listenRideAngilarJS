@@ -43,18 +43,14 @@ angular.module('cityLanding',[]).component('cityLanding', {
           return item.url;
         });
 
-        _.forEach(cityLanding.data.blocks, function(value, index) {
-          cityLanding.bikes[index] = value.bikes.slice(0, cityLanding.bikesToShow);
-          cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
-          cityLanding.categoryName = value.key.replace(/_/i, '-');
-
-          //pushed subcategories to to each bikes block of response
-          _.filter(cityLanding.categories, function(category) {
-            if(category.url === cityLanding.categoryName) {
-              value.subcategories = category.subcategories;
-            }
+        if(cityLanding.data && cityLanding.data.blocks) {
+          _.forEach(cityLanding.data.blocks, function(value, index) {
+            cityLanding.bikes[index] = value.bikes.slice(0, cityLanding.bikesToShow);
+            cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
+            pushSubcategoriesToBikesBlocks(value, cityLanding.categories);
           });
-        });
+        }
+
         // parse url names to data names (change '-' to '_')
         _.forEach(cityLanding.categories, function (item) {
           item.dataName = item.url.replace(/-/i, '_')
@@ -102,6 +98,16 @@ angular.module('cityLanding',[]).component('cityLanding', {
           $state.go('404');
         }
       );
+    }
+
+    function pushSubcategoriesToBikesBlocks(targetBikesObj, currentCategories) {
+      cityLanding.categoryName = targetBikesObj.key.replace(/_/i, '-');
+      //pushed subcategories to to each bikes block of response
+      _.filter(currentCategories, function(category) {
+        if(category.url === cityLanding.categoryName) {
+          targetBikesObj.subcategories = category.subcategories;
+        }
+      });
     }
 
     // ============================
