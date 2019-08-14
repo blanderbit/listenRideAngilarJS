@@ -41,7 +41,7 @@ angular.module('listnride')
 
             // TODO: create more scalable solution to hide rider height in size picker
             // currently we hide this only for MBP (only this user has halfDay feature)
-            if (hideRiderHeight) variationOptions[variationGroupingKey].label = clusterVariant.frame_size;
+            if (hideRiderHeight && clusterVariant.frame_size) variationOptions[variationGroupingKey].label = clusterVariant.frame_size;
           });
 
           return variationOptions;

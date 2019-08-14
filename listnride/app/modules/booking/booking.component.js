@@ -74,6 +74,7 @@ angular.module('booking', [])
         booking.insuranceEnabled = false;
         booking.hasTimeSlots = false;
         booking.timeslots = [];
+        booking.hideRiderHeight = false;
 
         // METHODS
         booking.calendarHelper = calendarHelper;
@@ -84,7 +85,6 @@ angular.module('booking', [])
         booking.loggedIn = loggedIn;
         booking.isTimeslotAvailable = isTimeslotAvailable;
         booking.humanReadableSize = bikeOptions.getHumanReadableSize;
-
 
         // INVOCATIONS
         getBikeData();
