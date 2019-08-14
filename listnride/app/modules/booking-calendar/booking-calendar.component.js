@@ -286,7 +286,9 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                   eventRecord
                 }) {
                   if (eventRecord.isNotAvailable && !resourceRecord.isCluster) {
-                    bikeHelper.removeBikeAvailability(resourceRecord.originalData.id, eventRecord.resourceEventId);
+                    bikeHelper.removeBikeAvailability(resourceRecord.originalData.id, eventRecord.resourceEventId)
+                    .then( response => $state.reload())
+                    .catch( error => notification.show(error, 'error'));
                   }
                 }
               }
@@ -624,10 +626,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             notification.show(error, 'error');
           }
         )
-      }
-
-      function createAvailability(data, bikeId) {
-        return api.post('/rides/' + bikeId + '/availabilities/', data);
       }
 
       function closeDialog() {
