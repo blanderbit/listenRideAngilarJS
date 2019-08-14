@@ -74,7 +74,6 @@ angular.module('booking', [])
         booking.insuranceEnabled = false;
         booking.hasTimeSlots = false;
         booking.timeslots = [];
-        booking.hideRiderHeight = false;
 
         // METHODS
         booking.calendarHelper = calendarHelper;
