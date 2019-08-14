@@ -3,9 +3,7 @@
 angular.module('listnride')
   .factory('bikeHelper', function (api) {
 
-    let getBikeEditUrl = (bike) => {
-      return bike.is_cluster ? '/clusters/' + bike.cluster_id + '/update_rides/' : '/rides/' + bike.id;
-    }
+    let getBikeEditUrl = bike => bike.is_cluster ? '/clusters/' + bike.cluster_id + '/update_rides/' : '/rides/' + bike.id;
 
     let changeBikeAvailableTo = (bike, changeTo) => {
       let data = {
@@ -17,8 +15,15 @@ angular.module('listnride')
       return api.put(getBikeEditUrl(bike), data);
     }
 
+    let createBikeAvailability = ({id, isCluster, data}) => {
+      let availabilityUrl = (isCluster ? '/clusters/' : '/rides/') + id + '/availabilities';
+
+      return api.post(availabilityUrl, data);
+    }
+
     return {
       changeBikeAvailableTo,
-      getBikeEditUrl
+      getBikeEditUrl,
+      createBikeAvailability
     };
   });

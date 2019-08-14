@@ -78,8 +78,7 @@ angular
       bikes = bikes.filter((bike) => bike.available);
       return bikes.reduce(
         (acc, bike) => {
-          // clusters don't have their own unique ids
-          const bikeId = bike.is_cluster ? `${bike.id}-cluster` : bike.id;
+          const bikeId = bike.is_cluster ? bike.cluster_id : bike.id;
 
           // bike boilerplate
           const bikeResource = getResource({
@@ -138,8 +137,6 @@ angular
                   availabilities: Object.values(get(bikeVariant, 'availabilities', {}))
                 })
               )
-
-
 
               // add variant bike
               bikeResource.children.push(
@@ -258,9 +255,13 @@ angular
         .sort(sortRequestsByStartDate)
         .reduce((acc, availability) => {
           const last = acc[acc.length - 1];
-          availability.endDateCalculated = moment.utc(availability.startDate).clone().add(availability.duration, 'seconds').format('YYYY-MM-DD');
-          if (!last || availability.startDate > moment.utc(last.startDate).clone().add(last.duration, 'seconds').format('YYYY-MM-DD')) {
+
+          availability.endDateCalculated = moment.utc(availability.startDate).clone().add(availability.duration, 'seconds').format('YYYY-MM-DD HH:mm');
+          if (last) last.endDateCalculated = moment.utc(last.startDate).clone().add(last.duration, 'seconds').format('YYYY-MM-DD HH:mm');
+
+          if (!last || moment.utc(availability.startDate).format('YYYY-MM-DD HH:mm') > last.endDateCalculated) {
             clusterEventId = uniqueId('cluster-availability-');
+
             acc.push(
               getEvent({
                 id: clusterEventId,
@@ -276,9 +277,10 @@ angular
             availability.clusterEventId = clusterEventId;
           } else {
             last.requestsCount += 1;
-            last.endDate = availability.endDateCalculated > last.endDate ? availability.endDateCalculated : last.endDate;
+            last.endDateCalculated = availability.endDateCalculated > last.endDateCalculated ? availability.endDateCalculated : last.endDateCalculated;
             availability.clusterEventId = clusterEventId;
           }
+
           return acc;
         }, []);
     }

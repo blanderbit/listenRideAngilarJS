@@ -27,7 +27,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     api,
     bookingCalendarService,
     requestsService,
-    notification
+    notification,
+    bikeHelper
   ) {
     const bookingCalendar = this;
 
@@ -561,7 +562,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       function onDateChange() {
         bikeAvailability.date.startDate = moment.utc(bikeAvailability.dateRange.start_date);
-        bikeAvailability.date.endDate = bikeAvailability.date.startDate.clone()
+        bikeAvailability.date.endDate = bikeAvailability.date.startDate
+          .clone()
           .add(bikeAvailability.dateRange.duration, 'seconds');
         resetTime();
       }
@@ -589,8 +591,13 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           ...bikeAvailability.optionalData,
         });
 
-        createAvailability(data, bikeId).then(
+        bikeHelper.createBikeAvailability({
+          id: bikeId,
+          isCluster: resourceRecord.isCluster,
+          data: data
+        }).then(
           function(response) {
+            // TODO: find better solution to dynamically add availability tile on Booking Calendar
             $state.reload();
             bikeAvailability.close();
           },
