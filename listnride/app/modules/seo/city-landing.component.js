@@ -17,6 +17,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.loading = true;
       cityLanding.mapLoading = true;
       cityLanding.categories = [];
+      cityLanding.group = {};
       cityLanding.headerTranslation = 'seo.header';
       cityLanding.defaultProfilePicture = "https://s3.eu-central-1.amazonaws.com/listnride/assets/default_profile_picture.jpg"
       cityLanding.breadcrumbs = [
@@ -44,9 +45,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
         });
 
         if(cityLanding.data && cityLanding.data.blocks) {
-          _.forEach(cityLanding.data.blocks, function(value, index) {
-            cityLanding.bikes[index] = value.bikes.slice(0, cityLanding.bikesToShow);
-            cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
+          _.forEach(cityLanding.data.blocks, function(value) {
             pushSubcategoriesToBikesBlocks(value, cityLanding.categories);
           });
         }
@@ -80,6 +79,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
           ngMeta.setTitle($translate.instant(cityLanding.data.explore.meta_title));
           ngMeta.setTag("description", $translate.instant(cityLanding.data.explore.meta_description));
 
+          _.forEach(cityLanding.data.blocks, function(value) {
+            cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
+            getHumanReadableBikeGroup(value);
+          });
+
           // TODO: emporary monkeypatch for backend not returning nil values
           if (cityLanding.data.explore.title.startsWith("Main explore title")) {
             cityLanding.data.explore = null;
@@ -108,6 +112,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
           targetBikesObj.subcategories = category.subcategories;
         }
       });
+    }
+
+    function getHumanReadableBikeGroup(categoryBlock) {
+      cityLanding.group[categoryBlock.key] = categoryBlock;
+      cityLanding.group[categoryBlock.key].bikes = categoryBlock.bikes.slice(0, cityLanding.bikesToShow);
     }
 
     // ============================
@@ -182,7 +191,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       }
 
       var i = 0;
-      _.forEach(cityLanding.bikes[0], function(bike) {
+      _.forEach(cityLanding.allBikes, function(bike) {
         if (bike.priority == true) return;
         bounds = extendBounds(bounds, bike.lat_rnd, bike.lng_rnd);
         i++;
