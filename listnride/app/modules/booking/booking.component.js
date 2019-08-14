@@ -85,7 +85,6 @@ angular.module('booking', [])
         booking.isTimeslotAvailable = isTimeslotAvailable;
         booking.humanReadableSize = bikeOptions.getHumanReadableSize;
 
-
         // INVOCATIONS
         getBikeData();
 
