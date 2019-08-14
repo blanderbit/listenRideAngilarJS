@@ -887,7 +887,7 @@ angular.module('bike').component('calendar', {
 
         updateState({
           start_date: moment(startDate).format('YYYY-MM-DD'),
-          duration: moment(endDate).diff(moment(startDate), 'd')
+          duration: moment(endDate).diff(moment(startDate), 'seconds')
         });
 
       } else {
