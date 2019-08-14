@@ -162,7 +162,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       };
 
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(bike.lat_rnd, bike.lng_rnd),
+        position: new google.maps.LatLng(bike.location.lat_rnd, bike.location.lng_rnd),
         id: bike.id,
         icon: image,
         title: Math.ceil(bike.price_from) + '€',
@@ -188,7 +188,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       var i = 0;
       _.forEach(cityLanding.allBikes, function(bike) {
         if (bike.priority == true) return;
-        bounds = extendBounds(bounds, bike.lat_rnd, bike.lng_rnd);
+        bounds = extendBounds(bounds, bike.location.lat_rnd, bike.location.lng_rnd);
         i++;
         if (i > 3) return false;
       });
