@@ -49,9 +49,9 @@ angular.module('cityLanding',[]).component('cityLanding', {
           cityLanding.categoryName = value.key.replace(/_/i, '-');
 
           //pushed subcategories to to each bikes block of response
-          _.filter(cityLanding.categories, function(o) {
-            if(o.url === cityLanding.categoryName) {
-              value.subcategories = o.subcategories;
+          _.filter(cityLanding.categories, function(category) {
+            if(category.url === cityLanding.categoryName) {
+              value.subcategories = category.subcategories;
             }
           });
         });
