@@ -38,24 +38,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.mobileScreen = $mdMedia('xs');
       cityLanding.bikesToShow = cityLanding.mobileScreen ? MOBILE_BIKE_COLUMNS : DESKTOP_BIKECOLUMNS;
 
-      bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
-        // without transport category
-        cityLanding.categories = resolve.filter(function (item) {
-          return item.url;
-        });
-
-        if(cityLanding.data && cityLanding.data.blocks) {
-          _.forEach(cityLanding.data.blocks, function(value) {
-            pushSubcategoriesToBikesBlocks(value, cityLanding.categories);
-          });
-        }
-
-        // parse url names to data names (change '-' to '_')
-        _.forEach(cityLanding.categories, function (item) {
-          item.dataName = item.url.replace(/-/i, '_')
-        });
-      });
-
       // methods
       cityLanding.onSearchClick = onSearchClick;
       cityLanding.tileRowspan = tileRowspan;
@@ -79,9 +61,22 @@ angular.module('cityLanding',[]).component('cityLanding', {
           ngMeta.setTitle($translate.instant(cityLanding.data.explore.meta_title));
           ngMeta.setTag("description", $translate.instant(cityLanding.data.explore.meta_description));
 
-          _.forEach(cityLanding.data.blocks, function(value) {
-            cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
-            getHumanReadableBikeGroup(value);
+          bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
+            // without transport category
+            cityLanding.categories = resolve.filter(function (item) {
+              return item.url;
+            });
+
+            _.forEach(cityLanding.data.blocks, function(value) {
+              cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
+              getHumanReadableBikeGroup(value);
+              pushSubcategoriesToBikesBlocks(value, cityLanding.categories);
+            });
+
+            // parse url names to data names (change '-' to '_')
+            _.forEach(cityLanding.categories, function (item) {
+              item.dataName = item.url.replace(/-/i, '_')
+            });
           });
 
           // TODO: emporary monkeypatch for backend not returning nil values
