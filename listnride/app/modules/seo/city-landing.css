@@ -420,6 +420,8 @@
 }
 
 .lnr-testimonials-card__text {
+  height: 200px;
+  overflow-y: auto;
   font-size: 15px;
   line-height: 2.2;
   margin: 20px 0 0;
