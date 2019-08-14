@@ -2,18 +2,37 @@
 
 angular.
   module('listnride').
-  factory('verification', ['$mdDialog', '$mdToast','$q', '$interval', '$localStorage', '$state', '$translate', '$mdMedia', '$analytics', 'api', 'Upload', 'notification',
-    function($mdDialog, $mdToast, $q, $interval, $localStorage, $state, $translate, $mdMedia, $analytics, api, Upload, notification) {
-      var VerificationDialogController = function(lister, invited, callback) {
-        var verificationDialog = this;
+  factory('verification',
+    function(
+      $mdDialog,
+      $mdToast,
+      $q,
+      $interval,
+      $localStorage,
+      $state,
+      $translate,
+      $mdMedia,
+      $analytics,
+      api,
+      Upload,
+      notification,
+      userHelper
+    ) {
+      function VerificationDialogController(lister, invited, callback) {
+        const verificationDialog = this;
+
+        // TODO: remove pollers
         var poller = $interval(function() {
           reloadUser();
         }, 5000);
 
-        verificationDialog.loaded = false;
         verificationDialog.lister = lister;
         verificationDialog.invited = invited;
         verificationDialog.callback = callback;
+
+
+        // default params
+        verificationDialog.loaded = false;
         verificationDialog.selectedIndex;
         verificationDialog.activeTab = 1;
         verificationDialog.firstName = $localStorage.firstName;
@@ -25,31 +44,34 @@ angular.
         verificationDialog.invalidFiles = {};
         verificationDialog.mobileScreen = $mdMedia('xs');
         verificationDialog.business = false;
+        verificationDialog.firstTime = $state.current.name === "home";
 
-        $state.current.name === "home" ? verificationDialog.firstTime = true : verificationDialog.firstTime = false;
+
         // Fires if scope gets destroyed and cancels poller
         verificationDialog.$onDestroy = function() {
           $interval.cancel(poller);
         };
 
-        var reloadUser = function() {
-          api.get('/users/' + $localStorage.userId).then(
-            function (success) {
-              if (verificationDialog.newUser == null) {
-                verificationDialog.newUser = success.data;
-                if (success.data.profile_picture.profile_picture.url != "https://s3.eu-central-1.amazonaws.com/listnride/assets/default_profile_picture.jpg") {
-                  verificationDialog.hasProfilePicture = true;
+        let reloadUser = () => {
+          userHelper
+            .getUser($localStorage.userId)
+            .then(
+              function (success) {
+                if (verificationDialog.newUser == null) {
+                  verificationDialog.newUser = success.data;
+                  if (success.data.profile_picture.profile_picture.url != "https://s3.eu-central-1.amazonaws.com/listnride/assets/default_profile_picture.jpg") {
+                    verificationDialog.hasProfilePicture = true;
+                  }
                 }
+                verificationDialog.user = success.data;
+                verificationDialog.business = success.data.has_business;
+                verificationDialog.loaded = true;
+              },
+              function (error) {
+                verificationDialog.loaded = true;
+                notification.show(error, 'error');
               }
-              verificationDialog.user = success.data;
-              verificationDialog.business = success.data.has_business;
-              verificationDialog.loaded = true;
-            },
-            function (error) {
-              verificationDialog.loaded = true;
-              console.log("Error fetching User Details");
-            }
-          );
+            );
         };
 
         reloadUser();
@@ -205,7 +227,7 @@ angular.
 
       };
 
-      var openDialog = function(lister, invited, event, callback) {
+      function openDialog(lister, invited, event, callback) {
         $mdDialog.show({
           controller: VerificationDialogController,
           locals: {
@@ -225,7 +247,7 @@ angular.
         });
       };
 
-      var sendSms = function (model) {
+      function sendSms(model) {
         // payload
         var data = {"phone_number": model};
         // promise
@@ -249,7 +271,7 @@ angular.
         return deferred.promise;
       };
 
-      var confirmPhone = function (code) {
+      function confirmPhone(code) {
         // payload
         var data = { "phone_confirmation_code": code };
         // promise
@@ -275,9 +297,9 @@ angular.
       };
 
       return {
-        openDialog: openDialog,
-        sendSms: sendSms,
-        confirmPhone: confirmPhone
+        openDialog,
+        sendSms,
+        confirmPhone
       };
     }
-  ]);
+  );

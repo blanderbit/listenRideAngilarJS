@@ -1,4 +1,4 @@
-<md-content class="single-column" ng-hide="inviteLanding.hidden"> 
+<md-content class="single-column" ng-hide="inviteLanding.hidden">
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/lnr_invite_landing.jpg')" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ inviteLanding.referrer.first_name }} {{ 'invite-landing.header' | translate }}</h1>
@@ -20,18 +20,34 @@
     <div class="content highlight-tile" layout="column" layout-padding layout-align="center center">
       <div layout layout-align="center center" flex>
         <div layout="row" flex-gt-sm="50" flex-gt-xs="75">
-          <div layout layout-align="center center">
-            <img class="lnr-profile-md-lrg" ng-src="{{ inviteLanding.referrer.profile_picture.profile_picture.url }}"></img>
+          <div
+            layout
+            layout-align="center center"
+            class="lnr-pr"
+          >
+            <img
+              class="lnr-profile-md-lrg"
+              ng-src="{{ inviteLanding.referrer.profile_picture.profile_picture.url }}">
+            </img>
           </div>
-          <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </div>
-          <h4 class="md-body-1" flex  layout layout-align="center center">{{ inviteLanding.subsubsubheader }}</h4>
+          <h4
+            class="md-body-1"
+            flex
+            layout
+            layout-align="center center"
+            translate="invite-landing.subsubsubheader"
+            translate-values="{name: inviteLanding.name}">
+          >
+          </h4>
         </div>
       </div>
-      <div flex layout="column" layout-align="center center">
-        <md-button ng-if="!inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg">{{ 'invite-landing.sign-up-get-voucher' | translate }}</md-button>
-        <md-button ng-if="inviteLanding.authentication.loggedIn()" ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)" class="md-raised md-primary md-xlrg" translate="{{ 'invite-landing.sign-up-get-voucher' | translate }}"></md-button>
+      <div class="lnr-mb" flex layout="column" layout-align="center center">
+        <md-button
+          ng-if="!inviteLanding.authentication.loggedIn()"
+          ng-click="inviteLanding.authentication.showSignupDialog(inviteLanding.inviteCode)"
+          class="md-raised md-primary md-xlrg">
+          {{ inviteLanding.authentication.loggedIn() ? 'invite-landing.sign-up-get-voucher' : 'invite-landing.sign-up-get-voucher' | translate }}
+        </md-button>
       </div>
     </div>
   </div>

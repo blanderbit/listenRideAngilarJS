@@ -85,7 +85,6 @@ angular.module('booking', [])
         booking.isTimeslotAvailable = isTimeslotAvailable;
         booking.humanReadableSize = bikeOptions.getHumanReadableSize;
 
-
         // INVOCATIONS
         getBikeData();
 
@@ -137,7 +136,7 @@ angular.module('booking', [])
               booking.cluster = success.data.cluster;
 
               booking.bikeVariations = bikeCluster
-                .groupBikeVariations(booking.cluster.variations);
+                .groupBikeVariations(booking.cluster.variations, booking.hasTimeSlots);
 
               mergeGeneralClusterParams();
             }

@@ -35,6 +35,13 @@ var lnrHelper = {
   postInit: function () {
     // get user id and language
     lnrConstants.parentElement = document.getElementById('listnride');
+
+    // extra feature for ebike-bayerwald.de
+    if (window.location.href.indexOf("ebike-bayerwald") > -1) {
+      var parentElementWithClass = lnrHelper.findAncestor(lnrConstants.parentElement, 'mediumScreenDisabled');
+      if (parentElementWithClass) parentElementWithClass.classList.remove('mediumScreenDisabled')
+    }
+
     // initialize for single and multi user mode
     if (lnrConstants.parentElement.dataset.user) {
       lnrConstants.parentElement.dataset.user = lnrHelper.trimSpaces(lnrConstants.parentElement.dataset.user);
@@ -1243,5 +1250,9 @@ var lnrHelper = {
     return arr.filter(function (value, index) {
       return arr.indexOf(value) === index;
     });
+  },
+  findAncestor: function (el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
   }
 };

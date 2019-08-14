@@ -54,8 +54,8 @@
         </div>
 
         <br>
-        <div>
-          <div layout="row" flex flex-gt-xs="80" layout-xs="column">
+        <div class="lnr-maxw-600">
+          <div layout="row" flex layout-xs="column">
             <md-input-container flex-xs="100">
               <label>{{ 'shared.duration' | translate }}</label>
               <input-range
@@ -120,7 +120,7 @@
 
           </div>
 
-          <div ng-if="calendar.parent.cluster" flex-gt-xs="80">
+          <div ng-if="calendar.parent.cluster">
             <div>
               <div class="md-body-2">{{ 'shared.pick-size' | translate }}</div>
               <md-select
@@ -148,8 +148,11 @@
             </div>
           </div>
 
-          <div ng-if="!calendar.parent.cluster" flex-gt-xs="80" layout="column" layout-align="space-between none">
-            <div>
+          <div
+            ng-if="!calendar.parent.cluster"
+            layout="column"
+            layout-align="space-between none">
+            <div ng-if="calendar.parent.bike.frame_size && !calendar.parent.hasTimeSlots">
               <span class="md-body-2">{{ 'list.details.size' | translate }}: </span>
               <span class="md-body-1 lnr-lh-body-2"> {{ calendar.parent.humanReadableSize(calendar.parent.bike.size) }}</span>
             </div>
