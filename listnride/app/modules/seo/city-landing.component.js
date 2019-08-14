@@ -17,6 +17,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.loading = true;
       cityLanding.mapLoading = true;
       cityLanding.categories = [];
+      cityLanding.group = {};
       cityLanding.headerTranslation = 'seo.header';
       cityLanding.defaultProfilePicture = "https://s3.eu-central-1.amazonaws.com/listnride/assets/default_profile_picture.jpg"
       cityLanding.breadcrumbs = [
@@ -36,17 +37,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
       };
       cityLanding.mobileScreen = $mdMedia('xs');
       cityLanding.bikesToShow = cityLanding.mobileScreen ? MOBILE_BIKE_COLUMNS : DESKTOP_BIKECOLUMNS;
-
-      bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
-        // without transport category
-        cityLanding.categories = resolve.filter(function (item) {
-          return item.url;
-        });
-        // parse url names to data names (change '-' to '_')
-        _.forEach(cityLanding.categories, function (item) {
-          item.dataName = item.url.replace(/-/i, '_')
-        });
-      });
 
       // methods
       cityLanding.onSearchClick = onSearchClick;
@@ -68,13 +58,26 @@ angular.module('cityLanding',[]).component('cityLanding', {
           cityLanding.loading = false;
           cityLanding.allBikes = [];
 
-          _.forEach(cityLanding.data.blocks, function(value, index) {
-            cityLanding.bikes[index] = cityLanding.data.blocks[index].bikes.slice(0, cityLanding.bikesToShow);
-            cityLanding.allBikes = cityLanding.allBikes.concat(cityLanding.data.blocks[index].bikes);
-          });
-
           ngMeta.setTitle($translate.instant(cityLanding.data.explore.meta_title));
           ngMeta.setTag("description", $translate.instant(cityLanding.data.explore.meta_description));
+
+          bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
+            // without transport category
+            cityLanding.categories = resolve.filter(function (item) {
+              return item.url;
+            });
+
+            _.forEach(cityLanding.data.blocks, function(value) {
+              cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
+              getHumanReadableBikeGroup(value);
+              pushSubcategoriesToBikesBlocks(value, cityLanding.categories);
+            });
+
+            // parse url names to data names (change '-' to '_')
+            _.forEach(cityLanding.categories, function (item) {
+              item.dataName = item.url.replace(/-/i, '_')
+            });
+          });
 
           // TODO: emporary monkeypatch for backend not returning nil values
           if (cityLanding.data.explore.title.startsWith("Main explore title")) {
@@ -94,6 +97,21 @@ angular.module('cityLanding',[]).component('cityLanding', {
           $state.go('404');
         }
       );
+    }
+
+    function pushSubcategoriesToBikesBlocks(targetBikesObj, currentCategories) {
+      cityLanding.categoryName = targetBikesObj.key.replace(/_/i, '-');
+      //pushed subcategories to to each bikes block of response
+      _.filter(currentCategories, function(category) {
+        if(category.url === cityLanding.categoryName) {
+          targetBikesObj.subcategories = category.subcategories;
+        }
+      });
+    }
+
+    function getHumanReadableBikeGroup(categoryBlock) {
+      cityLanding.group[categoryBlock.key] = categoryBlock;
+      cityLanding.group[categoryBlock.key].bikes = categoryBlock.bikes.slice(0, cityLanding.bikesToShow);
     }
 
     // ============================
@@ -144,7 +162,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       };
 
       var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(bike.lat_rnd, bike.lng_rnd),
+        position: new google.maps.LatLng(bike.location.lat_rnd, bike.location.lng_rnd),
         id: bike.id,
         icon: image,
         title: Math.ceil(bike.price_from) + '€',
@@ -168,9 +186,9 @@ angular.module('cityLanding',[]).component('cityLanding', {
       }
 
       var i = 0;
-      _.forEach(cityLanding.bikes[0], function(bike) {
+      _.forEach(cityLanding.allBikes, function(bike) {
         if (bike.priority == true) return;
-        bounds = extendBounds(bounds, bike.lat_rnd, bike.lng_rnd);
+        bounds = extendBounds(bounds, bike.location.lat_rnd, bike.location.lng_rnd);
         i++;
         if (i > 3) return false;
       });

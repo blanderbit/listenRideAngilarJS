@@ -111,17 +111,17 @@
   </section>
 
   <section
-    ng-if="cityLanding.data.blocks[0].bikes.length"
+    ng-if="cityLanding.group['highest-rated-bikes'].bikes.length"
     layout="column"
     layout-align="start center"
     layout-padding
   >
-    <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[0].title}}</h2>
-    <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[0].description}}</p>
+    <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.group['highest-rated-bikes'].title}}</h2>
+    <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.group['highest-rated-bikes'].description}}</p>
     <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
       <bike-card
-        ng-repeat="bike in cityLanding.bikes[0]"
-        seo="true" bike="bike"
+        ng-repeat="bike in cityLanding.group['highest-rated-bikes'].bikes"
+        bike="bike"
         show-labels="true"
         flex="100"
         flex-gt-xs="50"
@@ -133,7 +133,7 @@
       target="_blank"
       class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
     >
-      {{'shared.show-all-bikes' | translate}}
+      {{'shared.show-more' | translate}}
     </a>
   </section>
 
@@ -153,17 +153,17 @@
    </section>
 
    <section
-     ng-if="cityLanding.data.blocks[1].bikes.length"
+     ng-if="cityLanding.group['road'].bikes.length"
      layout="column"
      layout-align="start center"
      layout-padding
    >
-     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[1].title}}</h2>
-     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[1].description}}</p>
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.group['road'].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.group['road'].description}}</p>
      <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
        <bike-card
-         ng-repeat="bike in cityLanding.bikes[1]"
-         seo="true" bike="bike"
+         ng-repeat="bike in cityLanding.group['road'].bikes"
+         bike="bike"
          show-labels="true"
          flex="100"
          flex-gt-xs="50"
@@ -171,11 +171,11 @@
        </bike-card>
      </div>
      <a
-       ui-sref="search({location: cityLanding.city})"
+       ui-sref="search({location: cityLanding.city, categories: cityLanding.group['road'].subcategories})"
        target="_blank"
        class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
-       {{'shared.show-all-bikes' | translate}}
+       {{'shared.show-more' | translate}}
      </a>
    </section>
 
@@ -210,17 +210,17 @@
    </section>
 
    <section
-     ng-if="cityLanding.data.blocks[2].bikes.length"
+     ng-if="cityLanding.group['urban'].bikes.length"
      layout="column"
      layout-align="start center"
      layout-padding
    >
-     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[2].title}}</h2>
-     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[2].description}}</p>
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.group['urban'].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.group['urban'].description}}</p>
      <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
        <bike-card
-         ng-repeat="bike in cityLanding.bikes[2]"
-         seo="true" bike="bike"
+         ng-repeat="bike in cityLanding.group['urban'].bikes"
+         bike="bike"
          show-labels="true"
          flex="100"
          flex-gt-xs="50"
@@ -228,11 +228,11 @@
        </bike-card>
      </div>
      <a
-       ui-sref="search({location: cityLanding.city})"
+       ui-sref="search({location: cityLanding.city, categories: cityLanding.group['urban'].subcategories})"
        target="_blank"
        class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
-       {{'shared.show-all-bikes' | translate}}
+       {{'shared.show-more' | translate}}
      </a>
    </section>
 
@@ -297,18 +297,18 @@
    </section>
 
    <section
-     ng-if="cityLanding.data.blocks[3].bikes.length"
+     ng-if="cityLanding.group['e_bike'].bikes.length"
      layout="column"
      layout-align="start center"
      layout-padding
      class="lnr-city-landing-bg"
    >
-     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[3].title}}</h2>
-     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[3].description}}</p>
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.group['e_bike'].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.group['e_bike'].description}}</p>
      <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
        <bike-card
-         ng-repeat="bike in cityLanding.bikes[3]"
-         seo="true" bike="bike"
+         ng-repeat="bike in cityLanding.group['e_bike'].bikes"
+         bike="bike"
          show-labels="true"
          flex="100"
          flex-gt-xs="50"
@@ -316,11 +316,11 @@
        </bike-card>
      </div>
      <a
-       ui-sref="search({location: cityLanding.city})"
+       ui-sref="search({location: cityLanding.city, categories: cityLanding.group['e_bike'].subcategories})"
        target="_blank"
        class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
-       {{'shared.show-all-bikes' | translate}}
+       {{'shared.show-more' | translate}}
      </a>
    </section>
 
@@ -349,18 +349,18 @@
    </section>
 
    <section
-     ng-if="cityLanding.data.blocks[4].bikes.length"
+     ng-if="cityLanding.group['all_terrain'].bikes.length"
      layout="column"
      layout-align="start center"
      layout-padding
      class="lnr-city-landing-bg"
    >
-     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.blocks[4].title}}</h2>
-     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.data.blocks[4].description}}</p>
+     <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.group['all_terrain'].title}}</h2>
+     <p class="lnr-city-landing__descr lnr-m-0" >{{cityLanding.group['all_terrain'].description}}</p>
      <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
        <bike-card
-         ng-repeat="bike in cityLanding.bikes[4]"
-         seo="true" bike="bike"
+         ng-repeat="bike in cityLanding.group['all_terrain'].bikes"
+         bike="bike"
          show-labels="true"
          flex="100"
          flex-gt-xs="50"
@@ -368,11 +368,11 @@
        </bike-card>
      </div>
      <a
-       ui-sref="search({location: cityLanding.city})"
+       ui-sref="search({location: cityLanding.city, categories: cityLanding.group['all_terrain'].subcategories})"
        target="_blank"
        class="md-button md-raised md-primary md-xlrg lnr-city-landing__button"
      >
-       {{'shared.show-all-bikes' | translate}}
+       {{'shared.show-more' | translate}}
      </a>
    </section>
 

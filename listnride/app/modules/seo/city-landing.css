@@ -306,6 +306,7 @@
   height: 50px;
   min-width: 50px;
   font-size: 20px;
+  line-height: 20px;
   background: var(--main-color);
   color: var(--white);
   border: none;
@@ -419,6 +420,8 @@
 }
 
 .lnr-testimonials-card__text {
+  height: 200px;
+  overflow-y: auto;
   font-size: 15px;
   line-height: 2.2;
   margin: 20px 0 0;
@@ -525,6 +528,14 @@
   .lnr-city-landing__title.lnr-center,
   .lnr-city-landing__descr {
     width: 100%;
+  }
+
+  .lnr-bikes-slider-title .md-title,
+  .lnr-bikes-slider-title .md-subhead {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .lnr-city-landing__category-title {
