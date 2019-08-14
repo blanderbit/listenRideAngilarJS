@@ -42,6 +42,19 @@ angular.module('cityLanding',[]).component('cityLanding', {
         cityLanding.categories = resolve.filter(function (item) {
           return item.url;
         });
+
+        _.forEach(cityLanding.data.blocks, function(value, index) {
+          cityLanding.bikes[index] = value.bikes.slice(0, cityLanding.bikesToShow);
+          cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
+          cityLanding.categoryName = value.key.replace(/_/i, '-');
+
+          //pushed subcategories to to each bikes block of response
+          _.filter(cityLanding.categories, function(o) {
+            if(o.url === cityLanding.categoryName) {
+              value.subcategories = o.subcategories;
+            }
+          });
+        });
         // parse url names to data names (change '-' to '_')
         _.forEach(cityLanding.categories, function (item) {
           item.dataName = item.url.replace(/-/i, '_')
@@ -67,11 +80,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
           cityLanding.translatedCity = cityLanding.data.city_names[lng] ? cityLanding.data.city_names[lng] : cityLanding.city;
           cityLanding.loading = false;
           cityLanding.allBikes = [];
-
-          _.forEach(cityLanding.data.blocks, function(value, index) {
-            cityLanding.bikes[index] = cityLanding.data.blocks[index].bikes.slice(0, cityLanding.bikesToShow);
-            cityLanding.allBikes = cityLanding.allBikes.concat(cityLanding.data.blocks[index].bikes);
-          });
 
           ngMeta.setTitle($translate.instant(cityLanding.data.explore.meta_title));
           ngMeta.setTag("description", $translate.instant(cityLanding.data.explore.meta_description));
