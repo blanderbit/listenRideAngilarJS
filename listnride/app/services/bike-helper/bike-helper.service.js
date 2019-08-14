@@ -20,7 +20,7 @@ angular.module('listnride')
 
       return api.post(availabilityUrl, data);
     }
-    let removeBikeAvailability = ({id, availabilityId}) => {
+    let removeBikeAvailability = (id, availabilityId) => {
       return api.delete(`/rides/${id}/availabilities/${availabilityId}`)
     }
 
