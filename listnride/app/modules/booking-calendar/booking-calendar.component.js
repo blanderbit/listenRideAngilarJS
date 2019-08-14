@@ -270,6 +270,25 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                       }
                     });
                 }
+              },
+              deleteEvent: false
+            }
+          },
+          eventContextMenu: {
+            items: {
+              addEvent: false,
+              deleteEvent: {
+                // text: translations['booking-calendar.add-remove-non-availability'],
+                text: 'Remove event',
+                icon: "b-icon b-icon-trash",
+                onItem({
+                  resourceRecord,
+                  eventRecord
+                }) {
+                  if (eventRecord.isNotAvailable && !resourceRecord.isCluster) {
+                    bikeHelper.removeBikeAvailability(resourceRecord.originalData.id, eventRecord.resourceEventId);
+                  }
+                }
               }
             }
           },
