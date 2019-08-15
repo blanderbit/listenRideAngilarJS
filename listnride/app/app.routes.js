@@ -159,7 +159,7 @@
       // search
       $stateProvider.state({
         name: 'search',
-        url: '/search/{location}?start_date&duration&sizes&categories&lat&lng&ne&sw',
+        url: '/search/{location}?start_date&duration&sizes&categories&brand&lat&lng&ne&sw',
         template: '<search></search>',
         reloadOnSearch: false,
         params: {

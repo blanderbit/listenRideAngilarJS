@@ -27,7 +27,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
     api,
     bookingCalendarService,
     requestsService,
-    notification
+    notification,
+    bikeHelper
   ) {
     const bookingCalendar = this;
 
@@ -268,6 +269,27 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                         resourceRecord: resourceRecord
                       }
                     });
+                }
+              },
+              deleteEvent: false
+            }
+          },
+          eventContextMenu: {
+            items: {
+              addEvent: false,
+              deleteEvent: {
+                // text: translations['booking-calendar.add-remove-non-availability'],
+                text: 'Remove event',
+                icon: "b-icon b-icon-trash",
+                onItem({
+                  resourceRecord,
+                  eventRecord
+                }) {
+                  if (eventRecord.isNotAvailable && !resourceRecord.isCluster) {
+                    bikeHelper.removeBikeAvailability(resourceRecord.originalData.id, eventRecord.resourceEventId)
+                    .then( response => $state.reload())
+                    .catch( error => notification.show(error, 'error'));
+                  }
                 }
               }
             }
@@ -561,7 +583,8 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       function onDateChange() {
         bikeAvailability.date.startDate = moment.utc(bikeAvailability.dateRange.start_date);
-        bikeAvailability.date.endDate = bikeAvailability.date.startDate.clone()
+        bikeAvailability.date.endDate = bikeAvailability.date.startDate
+          .clone()
           .add(bikeAvailability.dateRange.duration, 'seconds');
         resetTime();
       }
@@ -589,8 +612,13 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           ...bikeAvailability.optionalData,
         });
 
-        createAvailability(data, bikeId).then(
+        bikeHelper.createBikeAvailability({
+          id: bikeId,
+          isCluster: resourceRecord.isCluster,
+          data: data
+        }).then(
           function(response) {
+            // TODO: find better solution to dynamically add availability tile on Booking Calendar
             $state.reload();
             bikeAvailability.close();
           },
@@ -598,10 +626,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             notification.show(error, 'error');
           }
         )
-      }
-
-      function createAvailability(data, bikeId) {
-        return api.post('/rides/' + bikeId + '/availabilities/', data);
       }
 
       function closeDialog() {

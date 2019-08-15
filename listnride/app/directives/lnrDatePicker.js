@@ -61,7 +61,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
     var duration = date2.diff(date1, 'seconds');
     var startDate = duration > 0 ? date1 : date2;
     var newData = {
-      'start_date': startDate.format('YYYY-MM-DD HH:mm'),
+      'start_date': startDate.format(),
       'duration': Math.abs(duration),
       'is_changed': true
     }

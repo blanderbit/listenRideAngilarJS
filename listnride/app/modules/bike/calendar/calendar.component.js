@@ -118,7 +118,7 @@ angular.module('bike').component('calendar', {
       calendar.startDate = $state.params.start_date ? new Date($state.params.start_date) : null;
 
       if(calendar.startDate) {
-        calendar.endDate = new Date(moment(calendar.startDate).add($state.params.duration, 'days'));
+        calendar.endDate = new Date(moment(calendar.startDate).add($state.params.duration, 'seconds'));
         calendar.defaultDateRange = (moment(calendar.startDate).format('YYYY-MM-DD') + ' to ' + moment(calendar.endDate).format('YYYY-MM-DD'));
         setDateTime(calendar.startDate, calendar.endDate);
       }
@@ -887,7 +887,7 @@ angular.module('bike').component('calendar', {
 
         updateState({
           start_date: moment(startDate).format('YYYY-MM-DD'),
-          duration: moment(endDate).diff(moment(startDate), 'd')
+          duration: moment(endDate).diff(moment(startDate), 'seconds')
         });
 
       } else {
