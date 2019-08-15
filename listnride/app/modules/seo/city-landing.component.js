@@ -261,6 +261,9 @@ angular.module('cityLanding',[]).component('cityLanding', {
         }
       });
 
+      if (cityLanding.mobileScreen) cityLanding.brandsSwiper.appendSlide('<div class="swiper-slide"></div>')
+
+
       cityLanding.testimonialsSwiper = new Swiper ('#testimonials-slider', {
         // Optional parameters
         slidesPerView: 3,
