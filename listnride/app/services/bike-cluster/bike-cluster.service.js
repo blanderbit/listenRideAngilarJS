@@ -71,6 +71,14 @@ angular.module('listnride')
           });
         },
 
+        checkFrameSize(bikeVariations) {
+          var hasFrameSize = false;
+          _.forEach(bikeVariations, function (option) {
+            hasFrameSize = !_.isEmpty(option.frame_size);
+          });
+          return hasFrameSize;
+        },
+
         findFirstAvailableVariantId(bikeVariations, pickedBikeVariant, availableBikeIds) {
           return _.intersection(bikeVariations[pickedBikeVariant].bike_ids, availableBikeIds)[0];
         },

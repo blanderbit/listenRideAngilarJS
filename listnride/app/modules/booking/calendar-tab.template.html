@@ -122,9 +122,8 @@
 
           <div ng-if="calendar.parent.cluster">
             <div>
-
-              <div ng-if="calendar.parent.hasFrameSize" class="md-body-2">{{ 'shared.frame-size' | translate }}</div>
-              <div ng-if="!calendar.parent.hasFrameSize" class="md-body-2">{{ 'shared.pick-size' | translate }}</div>              <md-select
+              <div class="md-body-2">{{ calendar.parent.hasFrameSize ? 'shared.frame-size' : 'shared.pick-size' | translate }}</div>
+              <md-select
                 ng-model="calendar.parent.pickedBikeSize"
                 ng-change="calendar.parent.onSizeChange()"
                 placeholder="{{ 'shared.pick-size' | translate}}"
