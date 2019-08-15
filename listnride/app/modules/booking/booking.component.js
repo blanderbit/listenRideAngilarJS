@@ -135,6 +135,8 @@ angular.module('booking', [])
             if (booking.bike.is_cluster) {
               booking.cluster = success.data.cluster;
 
+              booking.hasFrameSize = bikeCluster.checkFrameSize(booking.cluster.variations);
+
               booking.bikeVariations = bikeCluster
                 .groupBikeVariations(booking.cluster.variations, booking.hasTimeSlots);
 
