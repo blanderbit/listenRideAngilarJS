@@ -72,11 +72,8 @@ angular.module('listnride')
         },
 
         checkFrameSize(bikeVariations) {
-          var hasFrameSize = false;
-          _.forEach(bikeVariations, function (option) {
-            hasFrameSize = !_.isEmpty(option.frame_size);
-          });
-          return hasFrameSize;
+          //check if "frame_size" value of each variation object is not empty
+          return !!_.find(bikeVariations, (o) => {return o.frame_size;});
         },
 
         findFirstAvailableVariantId(bikeVariations, pickedBikeVariant, availableBikeIds) {
