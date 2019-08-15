@@ -141,10 +141,12 @@ module.exports = (webpackEnv) => {
       minimizer: [
         new TerserPlugin({
           sourceMap: true,
-          safari10: true,
-          mangle: {
-            // Pass true to work around the Safari 10 loop iterator bug "Cannot declare a let variable twice"
-            safari10: true
+          terserOptions: {
+            safari10: true,
+            mangle: {
+              // Pass true to work around the Safari 10 loop iterator bug "Cannot declare a let variable twice"
+              safari10: true
+            }
           }
         }),
         new OptimizeCssAssetsPlugin({
