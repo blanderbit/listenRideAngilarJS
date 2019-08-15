@@ -71,7 +71,7 @@ angular.module('listnride')
           });
         },
 
-        checkFrameSize(bikeVariations) {
+        hasFrameSize(bikeVariations) {
           //check if "frame_size" value of each variation object is not empty
           return !!_.find(bikeVariations, (o) => {return o.frame_size;});
         },
