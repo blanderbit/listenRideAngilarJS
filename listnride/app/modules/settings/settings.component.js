@@ -1,18 +1,14 @@
-'use strict';
-
 angular.module('settings',[])
 .component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
   controller: function SettingsController(
     $localStorage,
-    $mdToast,
     $translate,
     $state,
     api,
     accessControl,
     sha256,
-    Base64,
     Upload,
     loadingDialog,
     ngMeta,
