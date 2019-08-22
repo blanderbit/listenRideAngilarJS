@@ -93,7 +93,10 @@ function PaymentHelperController(ENV, api, authentication, notification) {
       var data = {
         "payment_method": {
           "payment_type": "credit-card",
-          "data": {...creditCardData.data.paymentMethod, ...{ holderName: creditCardData.cardholderName }},
+          "data": {
+            ...creditCardData.data.paymentMethod,
+            holderName: creditCardData.cardholderName
+          },
         }
       };
 
@@ -170,6 +173,37 @@ function PaymentHelperController(ENV, api, authentication, notification) {
 
       api.post('/users/' + authentication.userId() + '/payment_methods', data);
       return data.payment_method;
+    },
+    initAdyenCheckout(onChangeCb = null) {
+      return new AdyenCheckout({
+        locale: "en",
+        environment: ENV.adyen_env,
+        originKey: ENV.adyen_origin_key,
+        paymentMethodsResponse: {},
+        onChange: onChangeCb
+      });
+    },
+    createAdyenCardFields(adyenCheckout) {
+      return adyenCheckout.create('securedfields', {
+        'styles': {
+          error: {
+            color: 'red'
+          },
+          validated: {
+            color: 'green',
+          },
+          placeholder: {
+            color: '#d8d8d8'
+          }
+        },
+        'placeholders': {
+          encryptedCardNumber: '',
+          encryptedSecurityCode: ''
+        },
+        onError: function (err) {
+          if (err.i18n) notification.show(null, null, err.i18n);
+        },
+      });
     }
   };
 }

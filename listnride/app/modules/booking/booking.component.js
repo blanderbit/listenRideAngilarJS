@@ -25,6 +25,7 @@ angular.module('booking', [])
       calendarHelper,
       notification,
       paymentHelper,
+      bikeHelper,
       bikeOptions,
       bikeCluster,
       userHelper,
@@ -67,13 +68,13 @@ angular.module('booking', [])
         booking.isPremium = false;
         booking.bike.country_code = "";
         booking.user.balance = 0;
-        booking.insuranceCountries = ['DE', 'AT'];
         booking.isOpeningHoursLoaded = false;
         booking.creditCardData = {}
         booking.paymentDescription = '';
         booking.insuranceEnabled = false;
         booking.hasTimeSlots = false;
         booking.timeslots = [];
+        booking.validCreditCard = false;
 
         // METHODS
         booking.calendarHelper = calendarHelper;
@@ -90,10 +91,20 @@ angular.module('booking', [])
 
         // After material tabs inited
         $timeout(function () {
-          authentication.loggedIn() ? booking.reloadUser().then(function() { paymentHelper.setupBraintreeClient() }) : setFirstTab();
+          authentication.loggedIn() ? getUserAndSetPayments() : setFirstTab();
         }, 0);
 
       };
+
+      // go to next tab on user create success
+      $rootScope.$on('user_created', function () {
+        booking.reloadUser();
+      });
+
+      // go to next tab on user login success
+      $rootScope.$on('user_login', function () {
+        booking.reloadUser();
+      });
 
       function loggedIn() {
         return authentication.loggedIn();
@@ -114,7 +125,6 @@ angular.module('booking', [])
             getLister();
             updatePrices();
 
-
             // EVENT BIKE LOGIC
             booking.isOnSlotableEvent = _.indexOf([35, 36], booking.bike.family) !== -1;
 
@@ -129,7 +139,6 @@ angular.module('booking', [])
                 insurance: false
               }
             }
-
 
             // CLUSTER BIKE LOGIC
             if (booking.bike.is_cluster) {
@@ -148,6 +157,25 @@ angular.module('booking', [])
             $state.go('home');
           }
         );
+      }
+
+      // TODO: check if we still need to have braintreeClient here
+      function getUserAndSetPayments() {
+        booking.reloadUser()
+          .then(() => {
+            let checkout = paymentHelper.initAdyenCheckout((state) => {
+              $scope.$apply(function () {
+                booking.validCreditCard = state.isValid;
+                booking.creditCardData.data = state.data;
+              });
+            });
+
+            paymentHelper.setupBraintreeClient();
+
+            $timeout(() => {
+              mountPaymentMethod(checkout);
+            }, 0);
+          });
       }
 
       function updateBikeDate() {
@@ -205,12 +233,8 @@ angular.module('booking', [])
       }
 
       booking.insuranceAllowed = function () {
-        return booking.insuranceEnabled && insuranceCountry() && eventBikeIncludeInsurance();
+        return booking.insuranceEnabled && bikeHelper.isBikeCountryInsuranced(booking.bike) && eventBikeIncludeInsurance();
       };
-
-      function insuranceCountry() {
-        return _.includes(booking.insuranceCountries, booking.bike.country_code)
-      }
 
       function eventBikeIncludeInsurance() {
         return booking.bike.event ? booking.bike.event.insurance : true;
@@ -360,7 +384,7 @@ angular.module('booking', [])
       }
 
       function checkValidPayment() {
-        return booking.paymentMethod === 'current' || booking.paymentForm.$valid;
+        return booking.paymentMethod === 'current' || booking.validCreditCard;
       }
 
       function updatePrices() {
@@ -457,8 +481,13 @@ angular.module('booking', [])
         );
       };
 
+      function mountPaymentMethod(checkout) {
+        booking.paymentFormFields = paymentHelper.createAdyenCardFields(checkout);
+        booking.paymentFormFields.mount('#securedfields');
+      }
+
       booking.tokenizeCard = function() {
-        paymentHelper.btPostCreditCard(booking.creditCardData, onSuccessPaymentValidation);
+        paymentHelper.postCreditCard(booking.creditCardData, onSuccessPaymentValidation);
       };
 
       function savePaymentOption() {
@@ -472,7 +501,7 @@ angular.module('booking', [])
       function onSuccessPaymentValidation(data) {
         updatePaymentInformation(data);
         // reset form and data after success
-        booking.creditCardData = {}
+        booking.creditCardData = {};
         booking.paymentForm.$setPristine();
         booking.paymentForm.$setUntouched();
         // go to next tab
@@ -620,16 +649,6 @@ angular.module('booking', [])
         }
       }
 
-      // TODO: This needs to be refactored, rootScopes are very bad practice
-      // go to next tab on user create success
-      $rootScope.$on('user_created', function () {
-          booking.reloadUser();
-      });
-
-      // go to next tab on user login success
-      $rootScope.$on('user_login', function () {
-        booking.reloadUser();
-      });
 
       booking.fillAddress = function(place) {
         var components = place.address_components;

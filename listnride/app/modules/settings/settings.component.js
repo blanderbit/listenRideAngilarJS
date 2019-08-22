@@ -56,7 +56,8 @@ angular.module('settings',[])
         settings.user.has_billing = false;
 
         // payment
-        settings.showPaymentChangeForm = false;
+        settings.showPaymentChangeForm = showPaymentChangeForm;
+        settings.isPaymentChangeChecked = false;
         settings.paymentLoading = false;
         settings.creditCardData = {};
         settings.validCreditCard = false;
@@ -64,7 +65,6 @@ angular.module('settings',[])
         settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
         settings.onErrorPaymentUpdate = onErrorPaymentUpdate;
         settings.isPayoutExist = isPayoutExist;
-        settings.mountPaymentMethod = mountPaymentMethod;
         // payout
         settings.showPayoutChangeForm = false;
         settings.payoutMethod.loading = false;
@@ -440,40 +440,16 @@ angular.module('settings',[])
       // === ACCOUNT TAB ===
       // ===================
 
-      const checkout = new AdyenCheckout({
-        locale: "en",
-        environment: ENV.adyen_env,
-        originKey: ENV.adyen_origin_key,
-        paymentMethodsResponse: {},
-        onChange: function (state, component) {
-          $scope.$apply(function () {
-            settings.validCreditCard = state.isValid;
-            settings.creditCardData['data'] = state.data;
-          });
-        }
+      const checkout = paymentHelper.initAdyenCheckout((state) => {
+        $scope.$apply(function () {
+          settings.validCreditCard = state.isValid;
+          settings.creditCardData.data = state.data;
+        });
       });
 
       function mountPaymentMethod () {
-        const sf = checkout.create('securedfields', {
-          styles: {
-            error: {
-              color: 'red'
-            },
-            validated: {
-              color: 'green',
-            },
-            placeholder: {
-              color: '#d8d8d8'
-            }
-          },
-          placeholders: {
-            encryptedCardNumber: '',
-            encryptedSecurityCode: ''
-          },
-          onError: function(err) {
-            if (err.i18n) notification.show(null, null, err.i18n);
-          },
-        }).mount('#securedfields');
+        settings.paymentFormFields = paymentHelper.createAdyenCardFields(checkout);
+        settings.paymentFormFields.mount('#securedfields');
       }
 
       function tokenizeCard () {
@@ -481,12 +457,18 @@ angular.module('settings',[])
         paymentHelper.postCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate, settings.onErrorPaymentUpdate);
       }
 
+      function showPaymentChangeForm() {
+        settings.isPaymentChangeChecked = true;
+        mountPaymentMethod();
+      }
+
       function onSuccessPaymentUpdate(data) {
         // reset form and data after success
         settings.creditCardData = {};
         settings.paymentForm.$setPristine();
         settings.paymentForm.$setUntouched();
-        settings.showPaymentChangeForm = false;
+        settings.isPaymentChangeChecked = false;
+        settings.paymentFormFields.unmount();
         settings.paymentLoading = false;
 
         updatePaymentInformation(data);
