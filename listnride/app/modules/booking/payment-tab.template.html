@@ -64,8 +64,11 @@
               >
             </div>
           </div>
-          <paypal-checkout-button ng-if="payment.parent.loggedIn()" ng-hide="payment.parent.paymentMethod != 2"
-            on-success="payment.parent.onSuccessPaymentValidation"></paypal-checkout-button>
+          <paypal-checkout-button
+            ng-if="payment.parent.loggedIn()"
+            ng-hide="payment.parent.paymentMethod != 2"
+            on-success="payment.parent.onSuccessPaymentValidation">
+          </paypal-checkout-button>
           <!-- END PAYPAL METHOD -->
           <md-divider></md-divider>
           <!-- CURRENT PAYMENT METHOD -->

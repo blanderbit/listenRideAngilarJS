@@ -13,7 +13,9 @@ angular
     btKey: config.API_KEY_BRAINTREE,
     facebookPlatformKey: config.API_KEY_FACEBOOK_PLATFORM,
     brainTreeEnv: config.API_BRAINTREE_ENV,
-    googleMapsKey: config.API_KEY_GOOGLE_MAPS
+    googleMapsKey: config.API_KEY_GOOGLE_MAPS,
+    adyen_origin_key: config.ADYEN_ORIGIN_KEY,
+    adyen_env: config.ADYEN_ENV
   })
   .constant('MESSAGE_STATUSES', {
     REQUESTED: 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride
