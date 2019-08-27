@@ -69,10 +69,18 @@
 
       <md-button class="md-underlined" ui-sref="listingABike" md-no-ink>{{ 'shared.list-a-bike' | translate }}</md-button>
 
-      <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showSignupDialog()">
+      <md-button
+        id="header-button-sign-up"
+        ng-if="!header.authentication.loggedIn()"
+        md-no-ink
+        ng-click="header.authentication.showSignupDialog()">
         {{ 'forms.sign-up' | translate }}
       </md-button>
-      <md-button ng-if="!header.authentication.loggedIn()" md-no-ink ng-click="header.authentication.showLoginDialog()">
+      <md-button
+        id="header-button-log-in"
+        ng-if="!header.authentication.loggedIn()"
+        md-no-ink
+        ng-click="header.authentication.showLoginDialog()">
         {{ 'forms.log-in' | translate }}
       </md-button>
       <md-button ng-if="header.authentication.loggedIn()" md-no-ink ui-sref="requests"><!-- <div class="notification-bubble" ng-if="header.authentication.unreadMessages()">{{header.authentication.unreadMessages()}}</div> -->{{ 'shared.requests' | translate }}</md-button>
@@ -109,7 +117,11 @@
           </md-menu-item>
           <md-menu-divider></md-menu-divider>
           <md-menu-item>
-            <md-button md-no-ink ng-click="header.authentication.logout()">{{ 'forms.log-out' | translate }}</md-button>
+            <md-button
+              id="header-button-burger-log-out"
+              md-no-ink
+              ng-click="header.authentication.logout()">{{ 'forms.log-out' | translate }}
+            </md-button>
           </md-menu-item>
         </md-menu-content>
       </md-menu>
