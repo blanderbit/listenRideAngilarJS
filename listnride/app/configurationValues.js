@@ -6,6 +6,7 @@ export const API_KEY_BRAINTREE = process.env.LNR_API_KEY_BRAINTREE;
 export const API_BRAINTREE_ENV = process.env.LNR_API_BRAINTREE_ENV;
 export const API_KEY_FACEBOOK_PLATFORM = process.env.LNR_API_KEY_FACEBOOK_PLATFORM;
 export const API_KEY_GOOGLE_MAPS = process.env.LNR_API_KEY_GOOGLE_MAPS;
+export const API_KEY_RECAPTCHA_PUBLIC = process.env.LNR_API_RECAPTCHA_V3_PUBLIC;
 export const ADYEN_ENV = process.env.LNR_ADYEN_ENV;
 export const ADYEN_ORIGIN_KEY = process.env.LNR_ADYEN_ORIGIN_KEY;
 
