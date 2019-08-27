@@ -2,9 +2,21 @@
 
 angular.
   module('listnride').
-  factory('authentication', [
-    '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', '$q', 'ezfb', 'api', 'verification', 'sha256', 'notification',
-    function ($localStorage, $mdDialog, $rootScope, $state, $analytics, $q, ezfb, api, verification, sha256, notification) {
+  factory(
+    'authentication',
+    function (
+      $localStorage,
+      $mdDialog,
+      $rootScope,
+      $state,
+      $analytics,
+      $q,
+      ENV,
+      ezfb,
+      api,
+      verification,
+      sha256,
+      notification) {
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
@@ -299,17 +311,28 @@ angular.
 
           signupDialog.signingUp = true;
 
-          api.post('/users', user).then(function(success) {
+          grecaptcha.execute(ENV.googleRecaptchaPublicKey, {
+            action: 'homepage'
+          }).then((token) => {
+            user.recaptcha_token = token;
+            return api.post('/users', user);
+          }).then((success) => {
             setCredentials(success.data);
-            getAccessToken(user.user).then(function(successTokenData){
+            getAccessToken(user.user).then(function (successTokenData) {
               setAccessToken(successTokenData);
 
               //TODO: refactor this logic
               if (signupDialog.requestSignup) {
                 $rootScope.$broadcast('user_created');
-                $analytics.eventTrack('click', {category: 'Signup', label: 'Email Request Flow'});
+                $analytics.eventTrack('click', {
+                  category: 'Signup',
+                  label: 'Email Request Flow'
+                });
               } else {
-                $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
+                $analytics.eventTrack('click', {
+                  category: 'Signup',
+                  label: 'Email Standard Flow'
+                });
               }
 
               if (signupDialog.business) {
@@ -323,7 +346,7 @@ angular.
               }
 
             });
-          }, function(error) {
+          }).catch((error) => {
             notification.show(error, 'error');
             signupDialog.signingUp = false;
           });
@@ -511,4 +534,4 @@ angular.
         isBusiness
       };
     }
-  ]);
+  );
