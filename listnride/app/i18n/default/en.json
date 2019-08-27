@@ -589,8 +589,8 @@
       }
     },
     "about-us": {
-      "meta-title": "listnride - the company",
-      "meta-description": "Founded by bike enthusiasts for their brothers and sisters in spirit."
+      "meta-title": "listnride - about us",
+      "meta-description": "listnride - how we created the online platform for bike rental"
     },
     "contact-and-help": {
       "meta-title": "listnride is here for you",
@@ -1067,7 +1067,7 @@
       "empty-company-name": "Please enter your company name",
       "empty-company-name-xs": "Company name required",
       "min-size-company-name": "Company name should be longer than 2 characters ",
-      "min-size-company-name-xs": "Alteast 3 characters "
+      "min-size-company-name-xs": "At least 3 characters "
     }
   },
   "home": {
@@ -1096,7 +1096,7 @@
     "default-placeholder": "Where would you like to rent a bike?"
   },
   "search": {
-    "no-bikes": "There are unfortunately no bikes in this location yet. As we're growing fast, please check again soon, we'll probably have bikes registered here by then! Alternatively, try searching for another location nearby.",
+    "no-bikes": "Unfortunately, there are no bikes in this location yet. As we're growing fast, please check again soon, we may have bikes registered here by then! Alternatively, try searching for another location nearby. <br> <br>\n\nHelp others find great bikes by listing your own bicycle, or contacting your local bike shop to onboard them with us! ",
     "unisize": "Unisize",
     "book-multiple-bikes": "Bike rental for large groups",
     "bikes-found": "Bikes found:",
@@ -1152,21 +1152,21 @@
       "race": "Race",
       "all-terrain": "All Terrain",
       "kids": "Kids",
-      "electro": "Electro",
+      "electro": "E-Bikes",
       "special": "Special",
       "urban": "Urban",
       "e-bike": "E-Bike",
       "road": "Road",
-      "transport": "Transport"
+      "transport": "Cargo"
     },
     "details": {
-      "header": "What is your bike name, size & brand?",
+      "header": "What is the brand, model, and size of your bike?",
       "variations-add": "Add variants",
       "variations-header": "How many variants would you like to add?",
-      "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
+      "hint": "Enter the bike brand, model, and a description of your bike. Then select the height range that fits a rider best.",
       "label": "Details",
       "brand": "Brand",
-      "name": "Name",
+      "name": "Model",
       "description": "Description (min. 100 characters)",
       "min-length-warning": "At least 100 characters",
       "size": "Rider height",
@@ -1229,7 +1229,7 @@
       "header": "Daily Price",
       "description": "Your daily price is your base price for 1 day.",
       "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
-      "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
+      "hint-para-2": "The rental period is calculated by 24 hours.",
       "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount.",
       "label": "Pricing",
       "discount": "Discount",
@@ -1323,7 +1323,7 @@
         "cruiser": "Cruiser",
         "cargo-bike": "Cargo Bike",
         "recumbent": "Recumbent",
-        "mono-bike": "Mono Bike",
+        "mono-bike": "Uniycle",
         "trailer": "Trailer",
         "city-bike": "City Bike",
         "all-terrain-bike": "All Terrain Bike",
@@ -1347,7 +1347,7 @@
     "merge-no": "No, rather not",
     "merge": "Merge bikes",
     "unmerge": "Unmerge bikes",
-    "no-bikes": "You haven't listed any of your bikes yet.",
+    "no-bikes": "You haven't listed any bikes yet.",
     "list-a-bike": "List a Bike",
     "show-as-list": "Show as List",
     "duplicate": {
@@ -1402,12 +1402,12 @@
   },
   "list-a-bike": {
     "meta-title": "Rent out your bike!",
-    "meta-description": "Meet fun new people and make some extra pocket money.",
+    "meta-description": "Meet new people and make some extra money.",
     "title": "Rent out a bike, earn some extra cash",
-    "subtitle": "Meet great new people and earn some money on the side, for example for the next bike of your dreams.",
+    "subtitle": "Meet great new people and earn some money on the side.",
     "calculator-section": {
       "header": "Let your bike work for you",
-      "subheader": "Just a few clicks and our slide rule will show you how much you can earn by renting out a bike via listnride",
+      "subheader": "Just a few clicks and our slider will show you how much you can earn by renting out a bike via listnride",
       "market-price": "Market value of your bike",
       "days-per-month": "Days per month your bike is rented",
       "could-earn": "You could earn",
@@ -1520,6 +1520,7 @@
     "language": "Language",
     "languages": {
       "dutch": "Dutch",
+      "french": "French",
       "italian": "Italian",
       "spanish": "Spanish",
       "german": "German",

@@ -2,9 +2,21 @@
 
 angular.
   module('listnride').
-  factory('authentication', [
-    '$localStorage', '$mdDialog', '$rootScope', '$state', '$analytics', '$q', 'ezfb', 'api', 'verification', 'sha256', 'notification',
-    function ($localStorage, $mdDialog, $rootScope, $state, $analytics, $q, ezfb, api, verification, sha256, notification) {
+  factory(
+    'authentication',
+    function (
+      $localStorage,
+      $mdDialog,
+      $rootScope,
+      $state,
+      $analytics,
+      $q,
+      ENV,
+      ezfb,
+      api,
+      verification,
+      sha256,
+      notification) {
 
       // After successful login/loginFb, authorization header gets created and saved in localstorage
       var setCredentials = function (response) {
@@ -299,34 +311,49 @@ angular.
 
           signupDialog.signingUp = true;
 
-          api.post('/users', user).then(function(success) {
-            setCredentials(success.data);
-            getAccessToken(user.user).then(function(successTokenData){
-              setAccessToken(successTokenData);
+          // grecaptcha has their own promise and in this implementation they don't support catch
 
-              //TODO: refactor this logic
-              if (signupDialog.requestSignup) {
-                $rootScope.$broadcast('user_created');
-                $analytics.eventTrack('click', {category: 'Signup', label: 'Email Request Flow'});
-              } else {
-                $analytics.eventTrack('click', {category: 'Signup', label: 'Email Standard Flow'});
-              }
+          googleRecaptch()
+            .then((token) => {
+              user.recaptcha_token = token;
+              return api.post('/users', user);
+            })
+            .then((success) => {
+              setCredentials(success.data);
+              getAccessToken(user.user).then(function (successTokenData) {
+                setAccessToken(successTokenData);
 
-              if (signupDialog.business) {
-                signupDialog.createBusiness();
-              } else {
-                if (!signupDialog.requesting) {
-                  $state.go('home');
+                //TODO: refactor this logic
+                if (signupDialog.requestSignup) {
+                  $rootScope.$broadcast('user_created');
+                  $analytics.eventTrack('click', {
+                    category: 'Signup',
+                    label: 'Email Request Flow'
+                  });
+                } else {
+                  $analytics.eventTrack('click', {
+                    category: 'Signup',
+                    label: 'Email Standard Flow'
+                  });
                 }
-                signupDialog.hide();
-                // verification.openDialog(false, invited);
-              }
 
+                if (signupDialog.business) {
+                  signupDialog.createBusiness();
+                } else {
+                  if (!signupDialog.requesting) {
+                    $state.go('home');
+                  }
+                  signupDialog.hide();
+                  // verification.openDialog(false, invited);
+                }
+
+              });
+            })
+            .catch((error) => {
+              notification.show(error, 'error');
+              signupDialog.signingUp = false;
             });
-          }, function(error) {
-            notification.show(error, 'error');
-            signupDialog.signingUp = false;
-          });
+
         };
 
         signupDialog.createBusiness = function() {
@@ -354,6 +381,21 @@ angular.
           signupDialog.createUser()
         }
       };
+
+      function googleRecaptch() {
+        let deferredRecaptcha = $q.defer();
+
+        grecaptcha.execute(ENV.googleRecaptchaPublicKey, {
+          action: 'homepage'
+        }).then((token) => {
+          deferredRecaptcha.resolve(token)
+        }, (error) => {
+          deferredRecaptcha.reject(error);
+          console.error(error);
+        });
+
+        return deferredRecaptcha.promise;
+      }
 
       /////////////////
 
@@ -511,4 +553,4 @@ angular.
         isBusiness
       };
     }
-  ]);
+  );

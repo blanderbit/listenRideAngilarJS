@@ -751,7 +751,7 @@
     "opening-hours-success": "De openingstijden zijn succesvol gewijzigd.",
     "opening-hours-error": "Kan openingstijden niet opslaan.",
     "uniq-phone": "Telefoonnummer is al geregistreerd in ons systeem.",
-    "pending-requests": "Het lijkt alsof u een open verzoek voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
+    "pending-requests": "Er is een open aanvraag voor deze fiets heeft. Voordat u de fiets kunt verwijderen, moet u deze accepteren of annuleren.",
     "account-deleted": "Uw account is gedeactiveerd",
     "enter-email": "Vul alstublieft uw e-mailadres in",
     "duplicate-start": "Duplicatieproces gestart",
@@ -970,7 +970,7 @@
     "3": "Je hebt de boeking bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Bedankt voor het bevestigen van de teruggave van de fiets als ook jouw recensie van {{user.first_name}}. De transactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
-    "9": "Helaas is het verzoek verlopen.",
+    "9": "Helaas is de aanvraag verlopen.",
     "10": "Je boeking is geannuleerd door systeem."
   },
   "rideChat": {
@@ -981,7 +981,7 @@
     "7": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
     "8": "Helaas heeft de verhuurder je aanvraag afgewezen. Gelukkig zijn er genoeg andere mooie fietsen die je kan aanvragen.",
     "9": "Je hebt de aanvraag afgewezen. Stuur de verhuuder kort een berichtje, waarom je aanvraag niet geboekt hebt.",
-    "10": "Het verzoek is geannuleerd."
+    "10": "De aanvraag is geannuleerd."
   },
   "forms": {
     "first-name": "Voornaam",
@@ -1084,7 +1084,7 @@
     "default-placeholder": "Waar wil je een fiets huren?"
   },
   "search": {
-    "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je <a href=\"/listing-a-bike\">zelf een fiets een lijst laten maken </a>of zoek je naar een andere stad of specifieke locatie in de buurt.",
+    "no-bikes": "Er zijn helaas nog geen fietsen op deze locatie. Omdat we snel groeien, zal dat waarschijnlijk snel gebeuren! Als je wilt, kun je zelf een fiets een lijst laten maken of zoek je naar een andere stad of specifieke locatie in de buurt.\n<br><br>\nHelp anderen om geweldige fietsen te vinden door je eigen fiets te adverteren, of neem contact op met je lokale fietsenwinkel om ze bij ons aan boord te krijgen! ",
     "unisize": "Unisize",
     "book-multiple-bikes": "Groepsboekingen",
     "bikes-found": "Aantal fietsen:",
@@ -1505,6 +1505,7 @@
     "language": "Taal",
     "languages": {
       "dutch": "Nederlands",
+      "french": "French",
       "italian": "Italiaans",
       "spanish": "Spaans",
       "german": "Duits",

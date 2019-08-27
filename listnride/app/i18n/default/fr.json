@@ -1,11 +1,11 @@
 {
   "shared": {
     "learn-more": "En savoir plus",
-    "request": "Request",
+    "request": "Demande",
     "non-availability-type": "Type d'indisponibilité",
-    "event": "Event",
-    "events": "Events",
-    "frame-size": "Rider height | Framesize",
+    "event": "Evénement",
+    "events": "Événements",
+    "frame-size": "Hauteur du coureur | Taille du cadre",
     "show-all-bikes": "Tous les vélos",
     "available": "disponible",
     "label_new": "Nouveau",
@@ -586,8 +586,8 @@
       }
     },
     "about-us": {
-      "meta-title": "listnride - l'entreprise",
-      "meta-description": "Crée par des passionnés du vélo, pour pouvoir partager cet esprit."
+      "meta-title": "listnride - à propos de nous",
+      "meta-description": "listnride - comment nous avons créé la plateforme en ligne de location de vélo"
     },
     "contact-and-help": {
       "meta-title": "listnride est là pour vous",
@@ -818,7 +818,7 @@
     "business": "Business",
     "from": "À partir de",
     "to": "À",
-    "mark-as-closed": "Marked all days as closed",
+    "mark-as-closed": "Marquer tous les jours comme fermés",
     "change-address-info": "La modification de votre adresse de domicile ne changera pas l'adresse de vos vélos.",
     "payment-method": "Mode de paiement",
     "payout-method": "Mode de versement",
@@ -1050,7 +1050,7 @@
       "password-missing": "Veuillez fournir un mot de passe",
       "password-missing-xs": "Mot de passe requis",
       "valid-email": "Veuillez entrer votre adresse email",
-      "valid-email-xs": "mail invalide",
+      "valid-email-xs": "Email invalide",
       "empty-email": "Veuillez entrer votre adresse email",
       "empty-email-xs": "Email requis",
       "empty-last-name": "Entrez votre nom de famille",
@@ -1058,13 +1058,13 @@
       "empty-first-name": "Entrez votre prénom",
       "empty-first-name-xs": "Prénom requis",
       "max-size-last-name": "Le nom de famille ne doit pas dépasser 30 caractères",
-      "max-size-last-name-xs": "Exceeds 30 characters",
+      "max-size-last-name-xs": "Dépasse 30 caractères",
       "max-size-first-name": "First name shouldn't exceed 20 characters",
       "max-size-first-name-xs": "Exceeds 20 characters",
-      "empty-company-name": "Please enter your company name",
-      "empty-company-name-xs": "Company name required",
-      "min-size-company-name": "Company name should be longer than 2 characters ",
-      "min-size-company-name-xs": "Alteast 3 characters "
+      "empty-company-name": "Veuillez saisir le nom de votre entreprise",
+      "empty-company-name-xs": "Nom de l'entreprise requis",
+      "min-size-company-name": "Le nom de l'entreprise doit comporter plus de 2 caractères.",
+      "min-size-company-name-xs": "Au moins 3 caractères"
     }
   },
   "home": {
@@ -1093,7 +1093,7 @@
     "default-placeholder": "Où voudriez-vous louer un vélo?"
   },
   "search": {
-    "no-bikes": "Il n'y a malheureusement pas encore de vélos à cet endroit. Comme nous grandissons rapidement, veuillez vérifier à nouveau bientôt, nous aurons probablement des vélos enregistrés ici d'ici là! Sinon, essayez de chercher un autre endroit à proximité.",
+    "no-bikes": "Il n'y a malheureusement pas encore de vélos à cet endroit. Comme nous grandissons rapidement, veuillez vérifier à nouveau bientôt, nous aurons probablement des vélos enregistrés ici d'ici là! Sinon, essayez de chercher un autre endroit à proximité.\n<br><br>\nAidez les autres à trouver d'excellents vélos en inscrivant votre propre vélo ou en communiquant avec votre magasin de vélo local pour les embarquer avec nous ! ",
     "unisize": "Unisize",
     "book-multiple-bikes": "Location de vélos pour les grands groupes",
     "bikes-found": "Vélos trouvés:",
@@ -1147,60 +1147,60 @@
       "label": "Catégorie",
       "city": "Ville",
       "race": "Vélo de course",
-      "all-terrain": "All Terrain",
-      "kids": "Kids",
-      "electro": "Electro",
-      "special": "Special",
-      "urban": "Urban",
-      "e-bike": "E-Bike",
-      "road": "Road - touring ",
-      "transport": "Transport"
+      "all-terrain": "Tout terrain",
+      "kids": "Pour enfants",
+      "electro": "Électrique",
+      "special": "Spécial",
+      "urban": "Urbain",
+      "e-bike": "Vélo électrique",
+      "road": "Route",
+      "transport": "Cargo"
     },
     "details": {
-      "header": "What is your bike name, size & brand?",
-      "variations-add": "Add variants",
-      "variations-header": "How many variants would you like to add?",
-      "hint": "Enter the bike brand, name and a description of your bike. The name should include the model and describe the bike to the point. e.g. Gazelle, Tour Populair, 2013. Then select a range for the appropriate riders height.",
-      "label": "Details",
-      "brand": "Brand",
-      "name": "Name",
-      "description": "Description (min. 100 characters)",
-      "min-length-warning": "At least 100 characters",
-      "size": "Rider height",
-      "frame-size": "Frame size",
-      "bicycle-number": "Bicycle number",
-      "frame-number": "Frame number",
-      "custom-fields": "Additional fields",
-      "notes": "Notes",
-      "frame_size": "Frame size",
-      "bicycle_number": "Bicycle number",
-      "frame_number": "Frame number"
+      "header": "Quels sont la marque, le modèle et la taille de votre vélo?",
+      "variations-add": "Ajouter des variantes",
+      "variations-header": "Combien de variantes souhaitez-vous ajouter?",
+      "hint": "Entrez la marque, le modèle et la description de votre vélo. Ensuite, sélectionnez quelle hauteur convient le vélo le mieux aux coureurs.",
+      "label": "Détails",
+      "brand": "Marque",
+      "name": "Modèle",
+      "description": "Description (min. 100 caractères)",
+      "min-length-warning": "Au moins 100 caractères",
+      "size": "Hauteur du du coureur",
+      "frame-size": "Taille du cadre",
+      "bicycle-number": "Numéro de vélo",
+      "frame-number": "Numéro de cadre",
+      "custom-fields": "Champs supplémentaires",
+      "notes": "Remarques",
+      "frame_size": "Taille du cadre",
+      "bicycle_number": "Numéro de vélo",
+      "frame_number": "Numéro de cadre"
     },
     "accessories": {
-      "header": "What accessories does your bike have?",
-      "hint": "Edit accessories. Select the accessories, which you can provide with your bike.",
-      "label": "Accessories",
-      "lock": "Lock",
-      "helmet": "Helmet",
-      "lights": "Lights",
-      "basket": "Basket",
-      "trailer": "Trailer",
-      "childseat": "Child seat",
+      "header": "Quels accessoires a votre vélo?",
+      "hint": "Modifier les accessoires. Sélectionnez les accessoires que vous pouvez fournir avec votre vélo.",
+      "label": "Accessoires",
+      "lock": "Cadenas",
+      "helmet": "Casque",
+      "lights": "Feux de vélo",
+      "basket": "Panier",
+      "trailer": "Remorque",
+      "childseat": "Siège enfant",
       "gps": "GPS"
     },
     "pictures": {
-      "header": "Upload some pictures of your bike",
-      "hint": "Now select some nice pictures of your bike. Here is a guide on how to make your listing look even better.",
-      "how-to": "Photo tips for making your listing stand out",
-      "label": "Pictures",
-      "select-images": "Select images",
-      "remove": "Remove",
-      "upload-bike-header": "Upload some pictures of your bike",
-      "under-min-size": "Some of your images size is less than the allowable minimum 1500x1000:",
-      "invalid-images": "Invalid images"
+      "header": "Chargez des photos de votre vélo",
+      "hint": "Maintenant, sélectionnez quelques belles images de votre vélo. Vous trouverez ci-dessous un guide sur la manière de rendre votre annonce encore meilleure.",
+      "how-to": "Conseils photo",
+      "label": "Photos",
+      "select-images": "Sélectionnez les images",
+      "remove": "Supprimer",
+      "upload-bike-header": "Chargez des photos de votre vélo",
+      "under-min-size": "Certaines de vos images ont une taille inférieure au minimum autorisé 1500 x 1000:",
+      "invalid-images": "Images non valides"
     },
     "location": {
-      "header": "Where can the bike be picked up?",
+      "header": "Où peut-on récupérer le vélo?",
       "hint": "Où se trouve votre vélo? Ne vous inquiétez pas, l’emplacement exact de votre vélo ne sera communiqué qu'une fois la demande de location confirmée.",
       "label": "Emplacement",
       "street-number": "Rue et numéro",
@@ -1221,30 +1221,30 @@
       "no-insurance": "Désolé, votre pays n'est pas encore couvert par notre assurance.\nL'assurance s'applique uniquement aux locations en Allemagne et en Autriche."
     },
     "pricing": {
-      "info": "Your daily price is your base price for 1 day.",
-      "info-description": "Information about the rental price",
-      "header": "Daily Price",
-      "description": "Your daily price is your base price for 1 day.",
-      "hint-para-1": "The price you charge for your bike is up to you. The price should be based on the bike and equipment. To get an idea of market prices, you can view comparable listings. ",
-      "hint-para-2": "A rental period for less than 6 hours equals a half-day rental, 6 to 24 hours a day’s rental.",
-      "hint-para-3": "To encourage longer rentals, some listers set a daily or weekly discount.",
-      "label": "Pricing",
-      "discount": "Discount",
-      "discount-description-initial": "With a weekly discount of ",
-      "discount-description-mid": " you'll get ",
-      "discount-description-ending": " per week.",
-      "set_custom_price": "Price in €",
-      "custom-prices": "Individual pricing",
-      "half-daily-price": "Half-daily Price",
-      "daily-price": "Daily Price",
-      "daily-price-placeholder": "Price in €",
-      "daily-discount-placeholder": "Discount in %",
-      "daily-discount-tooltip": "Discount if the bike is rented for more than a day.",
-      "weekly-discount-placeholder": "Discount in %",
-      "weekly-discount-tooltip": "Discount if the bike is rented for a week or more.",
-      "weekly-price": "Weekly Price",
-      "daily-discount": "Daily Discount",
-      "weekly-discount": "Weekly Discount",
+      "info": "Votre prix journalier est votre prix de base pour 1 jour.",
+      "info-description": "Informations sur le prix de location",
+      "header": "Prix journalier",
+      "description": "Votre prix journalier est votre prix de base pour 1 jour.",
+      "hint-para-1": "Le prix que vous facturez pour votre vélo dépend de vous. Le prix devrait être basé sur le vélo et l'équipement. Pour avoir une idée des prix du marché, vous pouvez consulter les vélos comparables dans votre région.",
+      "hint-para-2": "La période de location est calculée par 24 heures.",
+      "hint-para-3": "Pour encourager les locations plus longues, certaines personnes fixent un rabais quotidien ou hebdomadaire.",
+      "label": "Tarification",
+      "discount": "Remise",
+      "discount-description-initial": "Avec un rabais hebdomadaire de",
+      "discount-description-mid": "vous aurez",
+      "discount-description-ending": " par semaine.",
+      "set_custom_price": "Prix en €",
+      "custom-prices": "Tarification individuelle",
+      "half-daily-price": "Prix demi-journée",
+      "daily-price": "Prix journalier",
+      "daily-price-placeholder": "Prix en €",
+      "daily-discount-placeholder": "Remise en %",
+      "daily-discount-tooltip": "Remise si le vélo est loué pour plus d'une journée.",
+      "weekly-discount-placeholder": "Remise en %",
+      "weekly-discount-tooltip": "Remise si le vélo est loué pour une semaine ou plus.",
+      "weekly-price": "Prix ​​hebdomadaire",
+      "daily-discount": "Remise journaliere",
+      "weekly-discount": "Remise hebdomadaire",
       "price_2_days": "2 jours",
       "price_3_days": "3 jours",
       "price_4_days": "4 jours",
@@ -1255,32 +1255,32 @@
       "price_8_days_long": "8 jours et plus (par jour)",
       "price_30_days": "28 jours",
       "price_30_days_long": "28 jours (1 mois)",
-      "reset-prices": "Reset",
+      "reset-prices": "Réinitialiser",
       "validations": {
         "required": {
-          "daily_price": "Daily price is required",
-          "price": "Price is required"
+          "daily_price": "Prix journalier requis",
+          "price": "Le prix est requis"
         }
       }
     },
     "subcategory": {
       "1": {
-        "dutch-bike": "Dutch Bike",
-        "touring-bike": "Touring Bike",
-        "fixie": "Fixed Gear Bike",
-        "single-speed": "Single Speed Bike",
-        "city-bike": "City Bike"
+        "dutch-bike": "Vélo hollandais",
+        "touring-bike": "Vélo Touring",
+        "fixie": "Vélo à engrenage fixe",
+        "single-speed": "Vélos Singlespeed",
+        "city-bike": "Vélo de ville"
       },
       "2": {
-        "road-bike": "Road Bike",
+        "road-bike": "Vélo de route",
         "triathlon": "Triathlon",
-        "indoor": "Indoor",
-        "e-city-bike": "E-City Bike",
-        "e-touring-bike": "E-Touring Bike",
-        "e-cargo-bike": "E-Cargo Bike",
-        "e-mountain-bike": "E-Mountain Bike",
-        "e-road-bike": "E-Road Bike",
-        "e-folding-bike": "E-Folding Bike",
+        "indoor": "Intérieur",
+        "e-city-bike": "Vélo de Ville Électrique",
+        "e-touring-bike": "Vélo E-Touring",
+        "e-cargo-bike": "Vélo E-Cargo",
+        "e-mountain-bike": "VTT Électrique",
+        "e-road-bike": "Vélo de route électrique",
+        "e-folding-bike": "Vélo pliant électrique",
         "e-scooter": "E-Scooter"
       },
       "3": {
@@ -1290,71 +1290,71 @@
         "cross-country": "Cross Country",
         "downhill": "Downhill",
         "cyclocross": "Cyclocross",
-        "road-bike": "Road Bike",
-        "triathlon-bike": "Triathlon Bike",
-        "touring-bike": "Touring Bike",
-        "fixed-gear-bike": "Fixed Gear Bike"
+        "road-bike": "Vélo de route",
+        "triathlon-bike": "Vélo de triathlon",
+        "touring-bike": "Vélo Touring",
+        "fixed-gear-bike": "Vélo à engrenage fixe"
       },
       "4": {
-        "city": "City",
-        "all-terrain": "All Terrain",
-        "road": "Road",
-        "mtb-hardtail": "MTB Hardtail",
-        "mtb-fullsuspension": "MTB Fullsuspension",
-        "cyclocross-bike": "Cyclocross Bike",
-        "gravel-bike": "Gravel Bike"
+        "city": "Ville",
+        "all-terrain": "Tout terrain",
+        "road": "Route",
+        "mtb-hardtail": "VTT Hardtail",
+        "mtb-fullsuspension": "VTT complet",
+        "cyclocross-bike": "Vélo de cyclo-cross",
+        "gravel-bike": "Vélo Gravel"
       },
       "5": {
         "pedelec": "Pedelec",
-        "event-bike": "Event Bike",
-        "e-bike": "E-Bike",
-        "cargo-bike": "Cargo Bike",
-        "bike-trailer": "Bike Trailer",
-        "bike-child-seat": "Bike Child Seat",
-        "bike-car-rack": "Bike Car Rack",
-        "bike-travel-bag": "Bike Travel Bag"
+        "event-bike": "Vélo d'événement",
+        "e-bike": "Vélo électrique",
+        "cargo-bike": "Vélo cargo",
+        "bike-trailer": "Remorque à vélo",
+        "bike-child-seat": "Siège enfant vélo",
+        "bike-car-rack": "Support vélo pour l'auto",
+        "bike-travel-bag": "Sac de voyage pour vélo"
       },
       "6": {
-        "folding-bike": "Folding Bike",
+        "folding-bike": "Vélo pliant",
         "tandem": "Tandem",
         "cruiser": "Cruiser",
-        "cargo-bike": "Cargo Bike",
-        "recumbent": "Recumbent",
-        "mono-bike": "Mono Bike",
-        "trailer": "Trailer",
-        "city-bike": "City Bike",
-        "all-terrain-bike": "All Terrain Bike",
-        "road-bike": "Road Bike",
-        "bogie-wheel": "Bogie Wheel"
+        "cargo-bike": "Vélo cargo",
+        "recumbent": "Couché",
+        "mono-bike": "Uniycle",
+        "trailer": "Remorque",
+        "city-bike": "Vélo de ville",
+        "all-terrain-bike": "Vélo Tout Terrain",
+        "road-bike": "Vélo de route",
+        "bogie-wheel": "Roue Bogie"
       },
       "7": {
-        "folding-bike": "Folding Bike",
-        "recumbent-bike": "Recumbent Bike",
-        "tandem-bike": "Tandem Bike",
+        "folding-bike": "Vélo pliant",
+        "recumbent-bike": "Vélo couché",
+        "tandem-bike": "Vélo tandem",
         "longtail-bike": "Longtail Bike",
         "scooter": "Scooter"
       }
     }
   },
   "listings": {
-    "my-bikes": "My Bikes",
+    "my-bikes": "Mes vélos",
     "merge-title": "Etes-vous sûr de vouloir regrouper les {{bikes_count}} vélos?",
     "unmerge-title": "Etes-vous sûr de vouloir dissocier les {{bikes_count}} vélos?",
     "merge-yes": "Oui",
     "merge-no": "Non, merci",
-    "merge": "Merge bikes",
-    "unmerge": "Unmerge bikes",
-    "no-bikes": "You haven't listed any of your bikes yet.",
-    "list-a-bike": "List a Bike",
-    "show-as-list": "Show as List",
+    "merge": "Grouper les vélos",
+    "unmerge": "Dégrouper les vélos",
+    "no-bikes": "Vous n'avez encore inscrit aucun vélos.",
+    "list-a-bike": "Enregistrer un vélo",
+    "show-as-list": "Afficher en tant que liste",
     "duplicate": {
-      "duplicate": "Duplicate",
-      "duplication-status": "Duplication status",
-      "how_many": "How many additional bikes?",
-      "header": "Duplicate Bike",
-      "number_bikes": "Number of bikes",
-      "maxlength": "Works for maximum 99 bikes",
-      "required": "Number of bikes is required"
+      "duplicate": "Dupliquer",
+      "duplication-status": "Etat de duplication",
+      "how_many": "Combien de vélos supplémentaires?",
+      "header": "Dupliquer",
+      "number_bikes": "Nombre de vélos",
+      "maxlength": "Fonctionne pour maximum 99 vélos",
+      "required": "Le nombre de vélos est requis"
     },
     "listView": {
       "price": "Prix (€)"
@@ -1364,51 +1364,51 @@
     "activate-bike": "Activer",
     "deactivate": "Désactiver",
     "activate": "Activer",
-    "deactivate-bike": "Deactivate",
-    "edit-bike": "Edit",
-    "delete-bike": "Delete",
-    "cancel": "Cancel",
-    "delete": "Delete",
-    "duplicate": "Duplicate",
-    "dialog-title": "Are you sure you want to delete your bike?",
-    "dialog-subtitle": "The bike will get permanently removed from the platform. Current requests are not affected by this."
+    "deactivate-bike": "Désactiver",
+    "edit-bike": "Éditer",
+    "delete-bike": "Supprimer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "duplicate": "Dupliquer",
+    "dialog-title": "Êtes-vous sûr de vouloir supprimer votre vélo?",
+    "dialog-subtitle": "Le vélo sera définitivement retiré de la plate-forme. Les demandes en cours ne sont pas affectées par cela."
   },
   "rent-a-bike": {
-    "meta-title": "Rent a bike via listnride!",
-    "meta-description": "Fantastic selection. Great value for money. Easy online service.",
-    "title": "Don’t just rent any old bike. Rent one that feels like your own.",
+    "meta-title": "Louez un vélo via listnride!",
+    "meta-description": "Sélection fantastique. Excellent rapport qualité / prix. Service en ligne facile.",
+    "title": "Ne louez pas n'importe quel vieux vélo. Louez-en un qui ressemble au vôtre.",
     "info-section": {
-      "header": "Rent a bike that is perfect for you",
-      "subheader": "One that complements your style and meets your needs. From people like you and me.",
-      "choice-title": "Super selection.",
-      "choice-content": "The range of bikes offered on listnride is as diverse as our users. Here you will find everything from high-end road bikes and trendy urban bikes to cargo bicycles and bike trailers for kids. Rent a bike that suits your style and meets your needs.",
+      "header": "Louez un vélo parfait pour vous",
+      "subheader": "Celui qui complète votre style et répond à vos besoins.",
+      "choice-title": "Super sélection.",
+      "choice-content": "La gamme de vélos proposés sur listnride est aussi variée que nos utilisateurs. Vous y trouverez tout, des vélos de route haut de gamme et des vélos urbains à la mode aux vélos cargo et aux remorques pour enfants. Louez un vélo qui correspond à votre style et à vos besoins.",
       "price-title": "Super price.",
-      "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
-      "easy-title": "Super easy.",
-      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website.",
-      "covered-content": "If you rent a bike in Germany or Austria, insurance is included in the rent. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\nand the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nwe have two strong partners at our side to help you in case of emergency."
+      "price-content": "Les vélos répertoriés sur notre plate-forme sont loués par des particuliers, des revendeurs spécialisés et des services de location. L’avantage pour vous: le vélo parfait au bon rapport qualité-prix.",
+      "easy-title": "Super facile.",
+      "easy-content": "Recherchez et réservez votre vélo de location avant de partir en voyage ou simplement en utilisant notre site web sur mobile.",
+      "covered-content": "Si vous louez un vélo en Allemagne ou en Autriche, l'assurance est comprise dans le loyer. Avec\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\net le\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Groupe Gothaer </a>\nnous avons deux partenaires solides à nos côtés pour vous aider en cas d'urgence."
     },
     "search-section": {
-      "header": "Where would you like to go?",
+      "header": "Où voulez-vous aller?",
       "subheader": "Le service de location de vélos par listnride devient disponible en des lieux de plus en plus nombreux."
     },
     "testmonials-section": {
-      "header": "What do our riders say about us?",
+      "header": "Qu'est-ce que nos coureurs disent de nous?",
       "subheader": "De plus en plus de gens découvrent les avantages de la location de vélo via listnride. Découvrez quelques-uns de leurs témoignages:"
     }
   },
   "list-a-bike": {
-    "meta-title": "Rent out your bike!",
-    "meta-description": "Meet fun new people and make some extra pocket money.",
-    "title": "Rent out a bike, earn some extra cash",
-    "subtitle": "Meet great new people and earn some money on the side, for example for the next bike of your dreams.",
+    "meta-title": "Louez votre vélo!",
+    "meta-description": "Rencontrez de nouvelles personnes et gagnez de l'argent.",
+    "title": "Louez un vélo, gagnez de l'argent",
+    "subtitle": "Rencontrez de nouvelles personnes et gagnez de l'argent.",
     "calculator-section": {
-      "header": "Let your bike work for you",
-      "subheader": "Just a few clicks and our slide rule will show you how much you can earn by renting out a bike via listnride",
-      "market-price": "Market value of your bike",
-      "days-per-month": "Days per month your bike is rented",
-      "could-earn": "You could earn",
-      "per-year": "per year"
+      "header": "Laissez votre vélo travailler pour vous",
+      "subheader": "En quelques clics, notre curseur vous montrera combien vous pouvez gagner en louant un vélo via listnride",
+      "market-price": "Valeur marchande de votre vélo",
+      "days-per-month": "Jours par mois que votre vélo est loué",
+      "could-earn": "Vous pourriez gagner",
+      "per-year": "par an"
     },
     "info-section": {
       "header": "Safety first!",
@@ -1434,28 +1434,28 @@
   },
   "invoices": {
     "request_id": "Request ID",
-    "credit-notes": "Credit notes",
-    "bike": "Bike",
-    "start_date": "Start date",
-    "end_date": "End date",
+    "credit-notes": "Notes de crédit",
+    "bike": "Vélo",
+    "start_date": "Date de début",
+    "end_date": "Date de fin",
     "lister": "Lister",
     "rider": "Rider",
     "payout": "Payout",
     "you_paid": "You paid",
-    "invoice": "Invoice",
+    "invoice": "Facture",
     "billing": "Factures",
-    "download-csv": "Download CSV",
-    "download-pdf": "Download PDF",
-    "no-rentals": "You had no rentals yet",
-    "as-lister": "As lister",
-    "as-rider": "As rider",
-    "no-rides": "You had no rides yet"
+    "download-csv": "Télécharger CSV",
+    "download-pdf": "Télécharger le fichier PDF",
+    "no-rentals": "Vous n'avez pas encore eu de locations",
+    "as-lister": "Comme Lister",
+    "as-rider": "Comme Rider",
+    "no-rides": "Vous n'avez pas encore eu de locations"
   },
   "invite-landing": {
-    "meta-title": "listnride | 10€ for you!",
+    "meta-title": "listnride | 10 € pour vous!",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
-    "header": "sent you 10€",
-    "subheader": "Bienvenue sur listnride, la plateforme de location de vélos",
+    "header": "vous a envoyé 10 €",
+    "subheader": "Bienvenue sur List and Ride, la plateforme de location de vélos",
     "subsubheader": "listnride est la plate-forme de location de vélos qui réunit des passionnés de cyclisme de toutes sortes. Les membres peuvent faire louer leurs propres vélos via notre site, ou louer un vélo qui correspond à leur style et à leurs besoins.",
     "subsubsubheader": "You've been invited by {{ name }}. Sign up now and you'll get a 10€ voucher added to your account. It can be used for your next bike rental. ",
     "sign-up-get-voucher": "Sign up to get the Voucher",
@@ -1475,28 +1475,28 @@
     "info-section": {
       "header": "Earn 10€ credit when a friend accepts your invite and rents a bike or lists one of their own.",
       "subheader": "Êtes-vous enthousiaste à propos de listnride et souhaitez-vous passer le mot? Invitez ensuite vos amis à faire partie de la communauté listnride.",
-      "invite-friends": "Invite friends",
-      "community": "Help grow the community",
-      "earn-credit": "Earn listnride credit"
+      "invite-friends": "Inviter des amis",
+      "community": "Aidez à développer la communauté",
+      "earn-credit": "Gagnez du crédit listnride"
     },
     "invite-form": {
-      "header": "Share your personal link",
-      "subheader": "Send this link to your friends and they can activate the voucher. You'll get rewarded with a 10€ credit as soon they list or rent a bike.",
-      "copy": "Copy",
-      "copied": "Copied!"
+      "header": "Partagez votre lien personnel",
+      "subheader": "Envoyez ce lien à vos amis et ils pourront activer le voucher. Vous serez récompensé par un crédit de 10 € dès qu'ils répertorient ou louent un vélo.",
+      "copy": "Copier",
+      "copied": "Copié!"
     },
     "invite-dialog": {
       "rider": {
-        "header": "Did you enjoy the ride?",
-        "subheader": "Recommend your friends to listnride! We add € 10 for his first booking! And if your friend makes use of it, there is another €10 credit for you. A nice Win-Win!"
+        "header": "Avez-vous apprécié la sortie?",
+        "subheader": "Recommandez listnride à vos amis! Nous vous donnerons 10 € pour leur première réservation! Et si votre ami.e l'utilise, vous recevrez un crédit de 10 €!"
       },
       "lister": {
-        "header": "That was easy, right?",
-        "subheader": "Would you recommend us to your friends? We’ll add €10 for his first booking! And if your friend makes use of it, there is another 10€ credit for your next rental. A nice Win-Win!"
+        "header": "C'était facile, non?",
+        "subheader": "Souhaitez-vous nous recommander à vos amis? Nous ajouterons 10 € pour leur première réservation! Et si votre ami.e l'utilise, un crédit supplémentaire de 10 € vous sera attribué pour votre prochaine location!"
       }
     },
     "invitations": {
-      "header": "Your friends have earned you {{ credit }}€",
+      "header": "Vos amis vous ont rapporté {{ credit }}€",
       "status": {
         "1": "Signed up but has not listed or rented a bike",
         "2": "Signed up and rented a bike",
@@ -1504,26 +1504,27 @@
       }
     },
     "share": {
-      "email-subject": "{{full_name}} has invited you to join listnride!",
+      "email-subject": "{{full_name}} vous a invité à rejoindre listnride!",
       "email-body": "{{first_name}}vous a donné 10 € pour votre première location! Rejoignez listnride, la plate-forme de location de vélos à la croissance la plus rapide, et accédez à d'innombrables vélos pour tous les besoins! Inscrivez-vous et recevez immédiatement un crédit de 10 €. {{voucher_url}}Souhaitez-vous remercier {{first_name}}? Louez un vélo ou enregistrez un de vos vélos et {{first_name}}recevra également un crédit de 10 €! Profitez-en!"
     }
   },
   "error-404": {
-    "title": "404 Page not found",
-    "details": "The page you are looking for does not exist!",
-    "home-link": "Back to the homepage"
+    "title": "404 Page non trouvée",
+    "details": "La page que vous recherchez n'existe pas!",
+    "home-link": "Retour à la page d'accueil"
   },
   "footer": {
-    "language": "Language",
+    "language": "Langue",
     "languages": {
-      "dutch": "Dutch",
-      "italian": "Italian",
-      "spanish": "Spanish",
-      "german": "German",
-      "english": "English"
+      "dutch": "Néerlandais",
+      "french": "French",
+      "italian": "Italien",
+      "spanish": "Espagnol",
+      "german": "Allemand",
+      "english": "Anglais"
     },
-    "insurance-partner": "Insurance Partners",
-    "insurance": "Insurance",
+    "insurance-partner": "Partenaires d'assurance",
+    "insurance": "Assurance",
     "company": "Entreprise",
     "legal": "Juridique",
     "terms-and-conditions": "Termes",
@@ -1590,8 +1591,8 @@
     "no-bikes-to-display": "Aucun vélo à afficher",
     "any-location": "Toutes les localités",
     "bike-variants": "Nr. de vélos",
-    "meta-title": "Booking Calendar",
-    "meta-description": "Excellent calendar view for easier request management",
-    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
+    "meta-title": "Calendrier des réservations",
+    "meta-description": "Affichage du calendrier pour faciliter la gestion des réservations et des stocks",
+    "not-available-on-mobile": "Désolé, le calendrier de réservation n'est pas disponible sur mobile"
   }
 }
