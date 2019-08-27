@@ -9,7 +9,7 @@ var middleware = {
  * file and dirertory for index and index-shop template files
  */
 var staticServe = {
-  "dir": "/listnride/dist", 
+  "dir": "/listnride/dist",
   "prod": { "file": "index.html", "dir": "/listnride/dist" },
   "shop": { "file": "index-shop.html", "dir": "/listnride/dist" }
 };
@@ -29,9 +29,6 @@ var determineHostname = function (subdomains, hostname) {
   var domainEnding = retrieveTld(hostname);
   for (var i = 0; i < subdomains.length; i++) {
     switch (subdomains[i]) {
-      case "en":
-        domainEnding = ".com";
-        break;
       case "de":
         domainEnding = ".de";
         break;
@@ -43,6 +40,13 @@ var determineHostname = function (subdomains, hostname) {
         break;
       case "es":
         domainEnding = ".es";
+        break;
+      case "fr":
+        domainEnding = ".fr";
+        break;
+      case "en":
+      default:
+        domainEnding = ".com";
         break;
     }
     if (subdomains[i] === "staging") {
@@ -63,6 +67,7 @@ var shouldRedirect = function (host) {
          host.includes("listnride.de")  ||
          host.includes("listnride.nl")  ||
          host.includes("listnride.it")  ||
+         host.includes("listnride.fr")  ||
          host.includes("listnride.es");
 };
 /*
@@ -107,23 +112,23 @@ var logger = function (req) {
   console.log("full url: ", req.protocol + '://' + req.get('host') + req.originalUrl);
 };
 /*
- * 
+ *
  */
 var isShopEnvironment = function (req) {
   // get the full url
   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-  
+
   // excluded folders (local folders)
   var foldersToExclude = ["app/assets/", ".png", ".jpg", ".min.js", ".json"];
   var includesAssets = fullUrl.includes(foldersToExclude[0]) || fullUrl.includes(foldersToExclude[1]) || fullUrl.includes(foldersToExclude[2]);
   var includesJs = fullUrl.includes(foldersToExclude[3]) || fullUrl.includes(foldersToExclude[4]);
-  
+
   // if url contains any of the local static files
   if (includesAssets || includesJs) { return undefined; }
-  
+
   // if url contains shop param
   else if (req.query.shop >= 0 && fullUrl.includes("/booking")) { return true; }
-  
+
   // by default
   return false;
 };
@@ -142,7 +147,7 @@ middleware.app.use(function (req, res, next) {
 });
 
 /*
- * redirect to new brandpage urls 
+ * redirect to new brandpage urls
  * (from /rent-ampler-bikes to /brands/ampler)
  */
 middleware.app.use('/rent-\*-bikes', function (req, res, next) {
@@ -156,8 +161,8 @@ middleware.app.use('/rent-\*-bikes', function (req, res, next) {
 middleware.app.use('/*', function (req, res, next) {
   // is shop flag
   var isShopEnv = isShopEnvironment(req);
-  
-  // serve build based on environment 
+
+  // serve build based on environment
   if (isShopEnv === true) {
     staticServe.options.index = staticServe.shop.file;
   } else if (isShopEnv === false) {
@@ -172,7 +177,7 @@ middleware.app.use('/*', function (req, res, next) {
  * http://expressjs.com/en/4x/api.html#express.static
  */
 middleware.app.use(middleware.express.static(__dirname.concat(staticServe.dir), staticServe.options));
-/* 
+/*
   intercept each request
   log the request props
 */
