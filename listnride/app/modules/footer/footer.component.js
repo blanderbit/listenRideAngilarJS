@@ -49,7 +49,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         // staging or production
         else {
           url.splice(-1).join('.');
-          if (language == 'nl' || language == 'de' || language == 'it' || language == 'es') {
+          if (language == 'nl' || language == 'de' || language == 'it' || language == 'es' || language == 'fr') {
             url = url.join('.');
             root = [url, language].join('.');
             window.location = 'https://' + root + route;
@@ -81,6 +81,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           case 'nl': return 'footer.languages.dutch';
           case 'it': return 'footer.languages.italian';
           case 'es': return 'footer.languages.spanish';
+          case 'fr': return 'footer.languages.french';
           case 'en':
           default: return 'footer.languages.english';
         }
