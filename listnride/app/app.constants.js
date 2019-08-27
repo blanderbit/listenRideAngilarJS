@@ -15,7 +15,8 @@ angular
     brainTreeEnv: config.API_BRAINTREE_ENV,
     googleMapsKey: config.API_KEY_GOOGLE_MAPS,
     adyen_origin_key: config.ADYEN_ORIGIN_KEY,
-    adyen_env: config.ADYEN_ENV
+    adyen_env: config.ADYEN_ENV,
+    googleRecaptchaPublicKey: config.API_KEY_RECAPTCHA_PUBLIC
   })
   .constant('MESSAGE_STATUSES', {
     REQUESTED: 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride

@@ -124,11 +124,23 @@ angular.module('listnride', [
   'angulartics.facebook.pixel',
   '720kb.socialshare',
   'angularMoment',
-  'credit-cards'
+  'credit-cards',
   /* external_modules_end */
 ])
 .config(['$translateProvider', '$localStorageProvider', '$translatePartialLoaderProvider', 'ezfbProvider', '$mdAriaProvider', '$locationProvider', '$compileProvider', 'ngMetaProvider', 'ENV', 'socialshareConfProvider',
-  function($translateProvider, $localStorageProvider, $translatePartialLoaderProvider, ezfbProvider, $mdAriaProvider, $locationProvider, $compileProvider, ngMetaProvider, ENV, socialshareConfProvider) {
+  function (
+    $translateProvider,
+    $localStorageProvider,
+    $translatePartialLoaderProvider,
+    ezfbProvider,
+    $mdAriaProvider,
+    $locationProvider,
+    $compileProvider,
+    ngMetaProvider,
+    ENV,
+    socialshareConfProvider
+  ) {
+
     $mdAriaProvider.disableWarnings();
     $compileProvider.debugInfoEnabled(false);
 
@@ -204,7 +216,15 @@ angular.module('listnride', [
     ngMetaProvider.setDefaultTag('og:image', 'http://www.listnride.com/app/assets/ui_images/opengraph/lnr_standard.jpg');
   }
 ])
-.run(['$translate', 'ngMeta', '$rootScope', '$location', 'authentication', 'api', '$state', function($translate, ngMeta, $rootScope, $location, authentication, api, $state) {
+.run(function(
+  $translate,
+  ngMeta,
+  $rootScope,
+  $location,
+  authentication,
+  api,
+  $state
+) {
   // load partial translations based on the language selected
   $rootScope.$on('$translatePartialLoaderStructureChanged', function () {
     $translate.refresh();
@@ -212,6 +232,7 @@ angular.module('listnride', [
   $rootScope.location = $location;
   $rootScope.lang = $translate.preferredLanguage();
   ngMeta.init();
+
   // TODO: check why we call this function here
   if (authentication.loggedIn && !_.isEmpty(authentication.userId())) {
     api.get('/users/' + authentication.userId()).then(
@@ -229,4 +250,4 @@ angular.module('listnride', [
     authentication.checkTokenExpiration();
     $state.params.hideCoview ? coview('hideChatButton') : coview('showChatButton');
   });
-}]);
+});
