@@ -585,8 +585,8 @@
       }
     },
     "about-us": {
-      "meta-title": "listnride: la empresa",
-      "meta-description": "Fundado por entusiastas de la bici para sus hermanos y hermanas en espíritu."
+      "meta-title": "listnride - acerca de nosotros",
+      "meta-description": "listnride: cómo creamos la plataforma en línea para el alquiler de bicicletas"
     },
     "contact-and-help": {
       "meta-title": "listnride está aquí para ayudarte",
@@ -1091,7 +1091,7 @@
     "default-placeholder": "¿Dónde te gustaría alquilar una bici?"
   },
   "search": {
-    "no-bikes": "No hay bicis en esta ubicación",
+    "no-bikes": "Desafortunadamente, todavía no hay bicicletas en esta ubicación. Como estamos creciendo rápidamente, por favor verifique nuevamente pronto, ¡podemos tener bicicletas registradas aquí para entonces! Alternativamente, intente buscar otra ubicación cercana. <br><br>\n\n¡Ayude a otros a encontrar excelentes bicicletas enumerando su propia bicicleta o contactando a su tienda local de bicicletas para que las aborde con nosotros!",
     "unisize": "Talla única",
     "book-multiple-bikes": "Alquileres grupales",
     "bikes-found": "Bicicletas encontradas:",
