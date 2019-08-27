@@ -1093,7 +1093,7 @@
     "default-placeholder": "Wo willst du ein Rad ausleihen?"
   },
   "search": {
-    "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch <a href=\"/listing-a-bike\">dein eigenes Rad einstellen</a> oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.",
+    "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch dein eigenes Rad einstellen oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.\n<br><br>\nHilf anderen, tolle Fahrräder zu finden, indem du dein eigenes Fahrrad auflisten oder sich an dein örtlichen Fahrradladen wenden, um sie mit uns an Bord zu nehmen! ",
     "unisize": "Unisize",
     "book-multiple-bikes": "Gruppenbuchungen",
     "bikes-found": "Gefundene Räder:",
@@ -1517,6 +1517,7 @@
     "language": "Sprache",
     "languages": {
       "dutch": "Niederländisch",
+      "french": "French",
       "italian": "Italienisch",
       "spanish": "Spanisch",
       "german": "Deutsch",
