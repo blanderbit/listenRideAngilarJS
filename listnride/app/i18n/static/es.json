@@ -1185,17 +1185,17 @@
   "about-us": {
     "title": "Sobre nosotros",
     "header": "Sobre listnride",
-    "subheader": "Cómo nos inspiraron los servicios convencionales de alquiler de bicis a crear una comunidad diversa para compartir bicis.",
+    "subheader": "Te ayudamos a encontrar la bicicleta de alquiler perfecta para cada ocasión, en cualquier momento y en cualquier lugar. Con listnride, se pueden alquilar miles de bicicletas: bicicletas de carretera, bicicletas de montaña, bicicletas eléctricas: lo tenemos todo. Alquile una bicicleta con nosotros en toda Europa.",
     "community": {
-      "title": "listnride: la idea que inspiró a una comunidad",
-      "content": "En listnride, a todos nos encantan las bicis. Cada uno de nosotros tiene su favorita, de la que cuida con esmero, y disfrutamos de la maravillosa diversidad de vehículos de dos ruedas: de bicis urbanas a bicis de montaña, de bicis de carretera rápidas a  S-pedelecs súper rápidas, desde ponis excéntricos hasta mulas de carga fiables. Por eso comenzamos a preguntarnos: ¿por qué no es posible elegir y tener una bici específica que puedas necesitar para un propósito determinado en cualquier momento, independientemente de que estés de viaje o en tu ciudad natal? ¿Estaremos condenados a las bicis modestas de la tiendas de alquiler locales? Y así nació la idea de establecer la comunidad para compartir bicis de listnride."
+      "title": "Cómo todo empezó",
+      "content": "Aquí en listnride, somos un equipo de ciclistas verdaderamente apasionados: amamos todas las oportunidades que surgen al explorar nuevos lugares, conocer nuevos amigos y, al mismo tiempo, contribuir a nuestra salud y al medio ambiente. <br><br>\nSin embargo, nos preguntamos: ¿por qué no siempre podemos tener la bicicleta de alquiler adecuada cuando y donde la necesitemos? ¿Siempre tiene que ser una de las estaciones de uso compartido de bicicletas? La idea de listnride nació."
     },
     "future": {
-      "title": "listnride: a toda velocidad ",
-      "content": "Hoy, listnride está disponible en grandes ciudades como Ámsterdam, Berlín, Múnich y Viena. Y el número sigue creciendo. En nuestra plataforma hay dueños particulares y también distribuidores especializados que ofrecen sus bicis en alquiler, lo que hace posible que tanto turistas como habitantes locales, familias y empresarios encuentren la bici ideal que complemente su estilo personal y cumpla con sus necesidades, y tal vez incluso puedan obtener algún consejo útil sobre la zona por parte del anunciante. Nuestra idea se ha convertido en realidad. ¡Sé parte de esto y comparte tu bici, o simplemente monta la bici que quieras! Esperamos darte la bienvenida en nuestra comunidad."
+      "title": "listnride hoy",
+      "content": "listnride está en continuo crecimiento. Actualmente, nuestras bicicletas están disponibles no solo en las principales ciudades como Ámsterdam, Berlín o Viena, sino también en destinos populares de vacaciones como Canarias y Toscana. La cantidad y variedad de bicicletas es amplia, lo que facilita el alquiler de cualquier tipo de bicicleta que desee: ya sea una bicicleta eléctrica, bicicleta de carretera o bicicleta de ciudad. Estamos orgullosos de nuestros socios que han enumerado sus bicicletas, ya sean minoristas profesionales, propietarios de flotas de bicicletas o individuos. Finalmente, puede descubrir en lugares seleccionados de toda Europa marcas innovadoras que se han asociado con nosotros para ofrecer servicios exclusivos de prueba de manejo."
     },
-    "meta-title": "listnride: la empresa",
-    "meta-description": "Fundado por entusiastas de la bici para sus hermanos y hermanas en espíritu."
+    "meta-title": "listnride - acerca de nosotros",
+    "meta-description": "listnride: cómo creamos la plataforma en línea para el alquiler de bicicletas"
   },
   "contact-and-help": {
     "title": "Soporte",

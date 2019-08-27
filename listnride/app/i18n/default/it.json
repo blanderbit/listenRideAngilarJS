@@ -1087,7 +1087,7 @@
     "default-placeholder": "Dove vorresti noleggiare una bicicletta ?"
   },
   "search": {
-    "no-bikes": "Non ci sono biciclette in questa località",
+    "no-bikes": "Purtroppo, non ci sono ancora le biciclette in questo luogo. Dato che stiamo crescendo velocemente, controlla di nuovo presto, potremmo avere le biciclette registrate qui per allora! In alternativa, prova a cercare un'altra località nelle vicinanze. <br> <br>Aiuta gli altri a trovare grandi biciclette elencando la tua bicicletta, o contattando il tuo negozio di biciclette locale per salire a bordo con noi! ",
     "unisize": "Unisize",
     "book-multiple-bikes": "Prenotazioni di gruppo",
     "bikes-found": "Bici trovate:",
@@ -1511,6 +1511,7 @@
     "language": "Lingua",
     "languages": {
       "dutch": "Olandese",
+      "french": "French",
       "italian": "Italiano",
       "spanish": "Spagnolo",
       "german": "Tedesco",
