@@ -45,7 +45,6 @@ var determineHostname = function (subdomains, hostname) {
         domainEnding = ".fr";
         break;
       case "en":
-      default:
         domainEnding = ".com";
         break;
     }
