@@ -24,7 +24,7 @@ angular
         name: '8bar-clubride',
         type: 'selected dates',
         dates: ['10.05.2019', '15.05.2019'], // generateTuesdays(10) <- generate 10 Tuesdays
-        predefined_dates: [1, 3, 10, 17, 24] // each Tuesday. TODO: make generator
+        predefined_dates: [3, 10, 17, 24] // each Tuesday. TODO: make generator
       },
       37: {
         name: 'radfahren-neu-entdecken-eschborn',
