@@ -87,8 +87,8 @@
     "showroom": {
       "header": "Unsere Standorte",
       "sub-header": "Erlebe eine Premium-Auswahl an Fahrradmarken in Berlin und München.",
-      "berlin-description": "Im Herzen von Berlin-Mitte, gegenüber dem Hackeschen Markt, werden im \n        <a href=\"/users/7351\" target=\"_blank\">Berliner Experience Center</a>\n        Marken präsentiert und Testräder von \n        <a href=\"/users/3917\" target=\"_blank\">Votec</a> (Gravel), \n        <a href=\"/users/7351\" target=\"_blank\">bonvelo</a> (Singlespeed) und\n        <a href=\"/bikes/10280\" target=\"_blank\">Vello</a> (E-Falträder) \n        sowie Performance Wear von\n        <a href=\"http://www.biehler-cycling.com\" target=\"_blank\">Biehler</a>\n        angeboten. Also komm vorbei, genieße einen frisch gebrühten Espresso, fahre mit dem Fahrrad zu einer Probefahrt oder triff Gleichgesinnte auf einer unserer regelmäßigen\n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Touren</a> \n        oder Veranstaltungen. Wir freuen uns darauf, dich kennenzulernen! Hier findest du eine Übersicht über alle verfügbaren \n         <a href=\"/users/7351\" target=\"_blank\">Testräder und Marken</a> \n        in Berlin.",
-      "munich-description": "Zentral gelegen in Nymphenburg, präsentieren wir im \n        <a href=\"/users/6511\" target=\"_blank\">Münchner Experience Center Fahrräder</a> \n        von \n        <a href=\"/brands/veloheld\" target=\"_blank\">Veloheld</a> (Stahlrahmen), \n        <a href=\"/brands/bonvelo\" target=\"_blank\">bonvelo</a> (Single-Speed), \n        und \n        <a href=\"/brands/rethink\" target=\"_blank\">rethink</a>  (E-Bike). \n        Neben diesen Marken bieten wir dir die neuesten Felt Rennräder und urbanen E-Bikes von \n        <a href=\"/brands/ampler\" target=\"_blank\">Ampler</a>, \n        <a href=\"/brands/vanmoof\" target=\"_blank\">Van Moof</a>, \n        <a href=\"/brands/leaos\" target=\"_blank\">Leaos</a> \n        und \n        <a href=\"/brands/vello\" target=\"_blank\">Vello</a>. \n        Komm vorbei, genieß einen Kaffee an unserer Bar, mache eine Probefahrt und triff Gleichgesinnte auf einer unserer zahlreichen \n        <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Ausfahrten</a> oder Veranstaltungen.\n        Wir freuen uns auf dich! Hier findest du die Übersicht aller verfügbaren \n        <a href=\"/users/6511\" target=\"_blank\">Testräder und Marken</a> \n        in München.",
+      "berlin-description": "Im Herzen von Berlin Mitte, gegenüber dem Hackeschen Markt, bietet unser<a href=\"users/7351\" target=\"_blank\">Belin Experience Center</a> Testfahrten mit Rädern von Marken wie Argon18, Bonvelo, Brompton, BZEN und Cowboy. Wir organisieren regelmäßig <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Veranstaltungen</a> wie den freitäglichen Coffee Spin. Klicke <a href=\"brands\" target=\"_blank\">hier</a> um mehr über verfügbare Testräder und Marken in Berlin zu erfahren.",
+      "munich-description": "Zentral in der Münchner Maxvorstadt gelegen, bietet unser<a href=\"users/6511\" target=\"_blank\">Münchner Experience Center</a> Fahrräder von Marken wie 8bar, Bonvelo, Rossignol, Urwahn und Yuba. Wir haben außerdem die neuesten Felt Rennräder im Angebot und urbane E-Bikes von BZEN, Cowboy und Vello. Klick <a href=\"brands\" target=\"_blank\">hier</a> um mehr über unsere Testräder und Marken in München zu erfahren.",
       "berlin-address": "<b>Unsere Adresse </b>\n<br>\nOranienburger Straße 1-3\n<br>\n10178 Berlin\n<br>\nDeutschland",
       "munich-address": "<b>Unsere Adresse </b>\n<br>\nNymphenburger Str. 86\n<br>\n80335 München\n<br>\nDeutschland"
     },
@@ -1187,17 +1187,17 @@
   "about-us": {
     "title": "Über uns",
     "header": "Über listnride",
-    "subheader": "Das perfekte Fahrrad immer und überall - wie unser Traum Realität wurde und mit deiner Hilfe immer besser wird",
+    "subheader": "Wir helfen dir das perfekte Mietrad für jede Gelegenheit zu finden, immer und überall. Auf listnride stehen tausende Räder zum Verleih: Rennräder, Mountainbikes, E-Bikes - wir haben sie alle. Miete dir mit uns ein passendes Rad in ganz Europa.",
     "community": {
       "title": "Wie alles begann",
-      "content": "Wir von listnride sind durch und durch Fahrrad-Fans. Jeder von uns liebt sein persönliches Schätzchen und die inspirierende Vielfalt – vom urbanen Commuter Bike bis zum Mountainbike, vom schnellen Rennrad bis zum noch schnelleren S-Pedelec, vom exzentrischen Pony bis zum Lastenesel. Wir lieben einfach die Möglichkeiten, die Radfahren uns eröffnet: so viele unglaubliche Orte die nur darauf warten entdeckt zu werden. Außerdem sind wir so nicht nur absolut umweltfreundlich unterwegs, sondern tun auch noch unserer Gesundheit etwas Gutes.\nAllerdings haben wir uns gefragt: warum kann man eigentlich nicht immer und überall genau das Fahrrad haben, das man gerade braucht – in der eigenen Stadt oder auf Reisen? Muss es denn immer der Tiefeinsteiger aus dem Fahrradverleih sein? Die Idee zu listnride war geboren."
+      "content": "Hier bei listnride sind wir ein Team von leidenschaftlichen Radliebhabern: wir genießen all die Möglichkeiten die sich uns durch Fahrräder öffnen wie das Entdecken unbekannter Orte und neue Freunde zu finden. Gleichzeitig unterstützen wir so unserer Gesundheit und die Umwelt. <br>\nAllerdings haben wir uns selbst gefragt: warum können wir nicht immer genau das richtige Fahrrad zu jeder Zeit an jedem Ort zur Verfügung haben? Muss es denn immer der abgenutzte Tiefeinsteiger von den Bikesharing Stationen sein? Die Idee zu listnride war geboren. "
     },
     "future": {
-      "title": "listnride in voller Fahrt",
-      "content": "Heute ist listnride in Metropolen wie Amsterdam, Berlin, München und Wien am Start. Und es werden immer mehr. Privatmenschen und professionelle Händler bieten bei uns ihre Fahrräder zum Verleih an. Touristen und Mitbürger, Familien und Geschäftsreisende mieten genau das richtige Rad für ihren Stil und Zweck – und nehmen gleich noch den ein oder anderen nützlichen Tipp von ihrem Vermieter mit. Unsere Idee ist Wirklichkeit geworden. Sei ein Teil davon und teile dein Fahrrad – oder bike doch einfach, was du willst! Wir freuen uns, Dich in unserer Community begrüßen zu dürfen."
+      "title": "listnride heute",
+      "content": "Listnride ist stetig am wachsen. Aktuell sind unsere Fahrräder nicht nur in Metropolen wie Amsterdam, Berlin und Wien verfügbar, sondern auch in beliebten Urlaubsregionen wie den Kanaren und der Toskana. Die Anzahl und Vielfalt unserer Fahrräder ist riesig. Das macht es einfach jede Art von Rad zu mieten die du gerade willst: egal ob es ein E-Bike, Lastenrad oder Stadtrad ist.\n<br>\nWir sind stolz auf unsere starken Partner die bei uns ihre Räder gelistet haben - seien es gewerbliche Händler, Fahrradflottenbesitzer oder Privatpersonen. Mit uns kannst du außerdem in ausgewählten Orten angesagte Marken entdecken, welche sich mit uns zusammengeschlossen haben um einen exklusiven Testfahrten Service anzubieten. "
     },
-    "meta-title": "listnride - das Unternehmen",
-    "meta-description": "Gegründet von Fahrrad-Begeisterten für ihre Brüder und Schwestern im Geiste."
+    "meta-title": "listnride - über uns",
+    "meta-description": "listnride - wie wir die Plattform für online Fahrradverleih aufgebaut haben"
   },
   "contact-and-help": {
     "title": "Hilfe",
@@ -1331,7 +1331,7 @@
   "terms-and-conditions": {
     "title": "Nutzungsbedingungen",
     "header": "List and Ride Allgemeine Geschäftsbedingungen",
-    "subheader": "Letzte Aktualisierung: 8. Juni 2018",
+    "subheader": "Letzte Aktualisierung: 9. September 2019",
     "subtitle": "Bitte lies die Allgemeinen Geschäftsbedingungen sorgfältig durch, da sie wichtige Informationen zu deinen vertraglichen Rechten und Pflichten enthalten. Durch die Nutzung der listnride-Plattform stimmst du diesen Bedingungen zu.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/de/listnride_terms_2018.pdf\" target=\"_BLANK\">Hier kannst du die Allgemeinen Geschäftsbedingungen</a> zur Einsicht herunter laden.<br><br>Vielen Dank, dass du listnride nutzt!"
   },
   "trust-and-safety": {

@@ -9,24 +9,25 @@
 <!-- EVENT CALENDAR FIXED SLOT -->
 <div ng-if="calendar.isOnSlotableEvent" layout="column" layout-margin>
 
-  <p class="md-headline lnr-center" translate="events.{{calendar.eventName}}.calendar-title"></p>
-  <p class="md-body-1 lnr-center" translate="events.{{calendar.eventName}}.calendar-subtitle"></p>
+  <p class="md-headline lnr-center" translate="events.{{calendar.event.name}}.calendar-title"></p>
+  <p class="md-body-1 lnr-center" translate="events.{{calendar.event.name}}.calendar-subtitle"></p>
 
   <md-input-container class="md-block" ng-if="calendar.event.days.length > 1">
     <label>{{ 'veletage.event.select-day' | translate }}</label>
     <md-select ng-model="calendar.day">
       <md-option
-        ng-repeat="i in calendar.event.days"
-        value="{{i}}"
+        ng-repeat="day in calendar.event.days"
+        ng-disabled="day.isFullReserved"
+        value="{{day}}"
       >
       <!-- TODO: make date dynamic -->
-        {{i}} {{ 'shared.Jul' | translate }} {{calendar.eventYear}}
+        {{day}} {{ 'shared.' + calendar.event.extras.eventMonthName | translate }} {{ calendar.event.extras.eventYear }}
       </md-option>
     </md-select>
   </md-input-container>
 
   <span ng-if="calendar.event.days.length == 1">
-    <b>{{ 'shared.rental-date' | translate }}:</b> {{calendar.event.days[0]}} {{ 'shared.Jul' | translate }}{{calendar.eventYear}}
+    <b>{{ 'shared.rental-date' | translate }}:</b> {{calendar.event.days[0]}} {{ calendar.event.extras.eventMonthName | translate }} {{ calendar.event.extras.eventYear }}
   </span>
 
   <!-- DATE RANGES SLOTS -->
@@ -49,7 +50,7 @@
     <label>{{ 'veletage.event.select-slot' | translate }}</label>
     <md-select
       ng-model="calendar.event.pickupSlotId"
-      ng-change="calendar.event.changePickupSlot()">
+      ng-change="calendar.bikeEventSlotPicked(calendar.event.pickupSlotId)">
 
       <md-option ng-if="!calendar.day">
         {{ 'veletage.event.day-error' | translate }}
@@ -77,7 +78,7 @@
     <label>{{ 'veletage.event.select-return' | translate }}</label>
     <md-select
       ng-model="calendar.event.returnSlotId"
-      ng-change="calendar.event.changeReturnSlot()">
+      ng-change="calendar.event.changeReturnSlot(calendar.event.returnSlotId)">
 
       <md-option ng-if="!calendar.day">
         {{ 'veletage.event.time-error' | translate }}

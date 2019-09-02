@@ -246,6 +246,10 @@
       "meta-title": "Rennradverleih für den Frankfurt City Triathlon | listnride",
       "meta-description": "Miete ein Rennrad über Listnride für den Frankfurter City Triathlon. Wähle das ideale Fahrrad für dein nächstes Rennen!"
     },
+    "cwd": {
+      "calendar-title": "Testbikes for Cyclingworld",
+      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren ",
       "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Eschborn</b>  |  Wann: <b>In Kassel</b> 1.6. - 31.08. 2019",
@@ -586,8 +590,8 @@
       }
     },
     "about-us": {
-      "meta-title": "listnride - das Unternehmen",
-      "meta-description": "Gegründet von Fahrrad-Begeisterten für ihre Brüder und Schwestern im Geiste."
+      "meta-title": "listnride - über uns",
+      "meta-description": "listnride - wie wir die Plattform für online Fahrradverleih aufgebaut haben"
     },
     "contact-and-help": {
       "meta-title": "listnride ist für dich da",
@@ -1517,7 +1521,7 @@
     "language": "Sprache",
     "languages": {
       "dutch": "Niederländisch",
-      "french": "French",
+      "french": "Französisch",
       "italian": "Italienisch",
       "spanish": "Spanisch",
       "german": "Deutsch",
