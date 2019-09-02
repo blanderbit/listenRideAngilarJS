@@ -6,7 +6,10 @@ angular.module('listnride').factory('date', ['$translate',
         var hours = Math.abs(endDate - startDate) / (1000*60*60);
         return Math.max(1, Math.ceil(hours / 24));
     };
+    const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+
     return {
+      getMonthLangKey: (monthIndex) => monthNames[monthIndex],
       durationDays: function(startDate, endDate) {
         return calculateDays(startDate, endDate);
       },
