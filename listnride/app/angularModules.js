@@ -8,7 +8,6 @@ import './modules/invite/invite.component.js';
 import './modules/referral-link/referral-link.component.js';
 import './modules/invite-landing/invite-landing.component.js';
 import './modules/bike/bike.component.js';
-import './modules/bike/bike.service.js';
 import './modules/bike/calendar/calendar.component.js';
 import './modules/booking/booking.component.js';
 import './modules/home/home.component.js';
@@ -70,6 +69,7 @@ import './services/payment-helper/payment-helper.service.js';
 import './services/payout-helper/payout-helper.service.js';
 import './services/user-helper/user-helper.service.js';
 import './services/bike-helper/bike-helper.service.js';
+import './services/bike-event-helper/bike-event-helper.service.js';
 import './services/notification/notification.service.js';
 // import './services/bikes-map/bikes-map.service.js';
 // core filters
