@@ -16,6 +16,10 @@ angular
     }
 
     const EVENTS = {
+      35: {
+        name: 'cwd',
+        predefined_dates: [1, 3, 10, 17, 24] // each Tuesday. TODO: make generator,
+      },
       36: {
         name: '8bar-clubride',
         type: 'selected dates',
@@ -227,7 +231,7 @@ angular
     }
 
     function generateSlotHourableDateRanges(range) {
-      return slot = {
+      return {
         selectboxText: moment(range.startDate).format('DD-MM-YYYY') + ' - ' + moment(range.endDate).format('DD-MM-YYYY'),
         startDate: new Date(moment(range.startDate)),
         endDate: new Date(moment(range.endDate)),
