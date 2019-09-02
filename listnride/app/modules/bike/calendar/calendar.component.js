@@ -273,10 +273,10 @@ angular.module('bike').component('calendar', {
 
       calendar.event = bikeEventHelper.getEventData(calendar.bikeFamily, calendar.requests);
       // if event duration is only one day we should pick it automatically
-      if (calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
+      if (calendar.event.days && calendar.event.days.length == 1) calendar.day = calendar.event.days[0];
 
       // if there is only one time slot available we should pick the first one
-      if (calendar.event.slots.length == 1) {
+      if (calendar.event && calendar.event.slots.length == 1) {
         calendar.event.pickupSlotId = 0;
         calendar.bikeEventSlotPicked(calendar.event.pickupSlotId);
       }
