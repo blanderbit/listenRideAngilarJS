@@ -249,6 +249,10 @@
       "meta-title": "Road bike rental for the Frankfurt City Triathlon | listnride",
       "meta-description": "Rent a racing bike with listnride for the Frankfurt City Triathlon. Choose the perfect bike for your next race!"
     },
+    "cwd": {
+      "calendar-title": "Testbikes for Cyclingworld",
+      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Rent and test great bikes in Eschborn",
       "description": "What: <b>Radfahren neu entdecken</b>  |  Where: <b>In Eschborn</b>  |  When: <b>1.6. - 31.08. 2019</b>",
@@ -1074,7 +1078,7 @@
     "landing-section-header": "The perfect bike. Simply rent it.",
     "see-all-brands-and-bikes": "See all brands and bikes",
     "insurance": {
-      "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
+      "description": "No matter if it's a cheap city bike or high-end triathlon bike: Every listnride bike rental in Germany or Austria is insured!",
       "header": "Insurance for your rental on listnride",
       "logo-description": "In cooperation with hepster and insured by"
     },
@@ -1082,7 +1086,7 @@
     "featured-bikes-header": "Bike Rental: Our Community’s Favorites",
     "featured-bikes-subheader": "Whether it’s road bikes, mountain bikes, cargo bikes, city bikes or e-bikes, you can rent them all. These are the current favorite rental bikes of the community.",
     "featured-tiles-header": "Test & Ride",
-    "featured-tiles-subheader": "We are partnering with innovative bike brands, which offer their latest models for testing.  The bikes can be tested or rented exclusively at various locations. Perfect for a well-considered buying decision. ",
+    "featured-tiles-subheader": "We are partnering with innovative bike brands, which offer their latest models for testing.  The bikes can be test driven or rented exclusively at various locations. Perfect for a well-considered buying decision. ",
     "featured-cities-header": "With listnride you are never without a perfect bike ",
     "featured-cities-subheader": "listnride’s bike rental service is becoming available in more cities and holiday regions around Europe. Here are some tips for you: ",
     "list-a-bike-header": "Do you own a nice bike, but it's gathering dust?",
