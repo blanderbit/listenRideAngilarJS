@@ -116,8 +116,8 @@
     "subtotal": "sous-total",
     "lnr-fee": "Frais de service",
     "total": "Total",
-    "from": "À partir de",
-    "from2": "à partir de",
+    "from": "De",
+    "from2": "prix min.",
     "to": "À",
     "as": "Comme",
     "all": "Tous",
@@ -127,15 +127,15 @@
     "search-all": "Chercher tous les vélos",
     "search-all-in": "Chercher tous les vélos à",
     "search-bikes": "Chercher vos vélos",
-    "from-place": "à partir de",
+    "from-place": "de",
     "contact": "Aide",
     "show-more": "montrer plus",
     "show-less": "montrer moins",
     "phone-number": "Numéro de téléphone",
     "wait": "Chargement, cela peut prendre un moment ...",
-    "lister": "Prêteur",
-    "rider": "Cicliste",
-    "reviews": "Avis",
+    "lister": "Lister",
+    "rider": "Rider",
+    "reviews": "d'avis",
     "for": "pour",
     "per-day": "par jour",
     "pd": "p.d.",
@@ -245,6 +245,10 @@
     "frankfurt-city-triathlon": {
       "meta-title": "Location de vélo de route pour le Frankfurt City Triathlon | listnride",
       "meta-description": "Louez un vélo de course avec listnride pour le triathlon de Francfort. Choisissez le vélo parfait pour votre prochaine course!"
+    },
+    "cwd": {
+      "calendar-title": "Testbikes for Cyclingworld",
+      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Louez et testez d'excellents vélos à Eschborn",
@@ -627,7 +631,7 @@
     "privacy": {
       "meta-title": "Politique de confidentialité de listnride",
       "meta-description": "La politique de confidentialité de listnride s'applique à l'utilisation de la plateforme en ligne.",
-      "use-opt-in": "Pour vous fournir le service parfait avec Listnride, nous utilisons des cookies conformément à notre <a target=\"_blank\" href=\"/#/privacy\">Règles de gestion des cookies </a>.",
+      "use-opt-in": "Pour vous fournir un meilleur service, nous utilisons des cookies conformément à nos <a target=\"_blank\" href=\"/#/privacy\">règles de gestion des cookies </a>.",
       "use-opt-in-button": "J'ai compris."
     }
   },
@@ -816,7 +820,7 @@
     "availability": "Disponibilité",
     "availability-description": "Vous pouvez définir vos horaires de disponibilité pour la location de vélos.",
     "business": "Business",
-    "from": "À partir de",
+    "from": "De",
     "to": "À",
     "mark-as-closed": "Marquer tous les jours comme fermés",
     "change-address-info": "La modification de votre adresse de domicile ne changera pas l'adresse de vos vélos.",
@@ -1068,20 +1072,20 @@
     }
   },
   "home": {
-    "landing-section-header": "Les meilleurs vélos. Louez-les.",
-    "see-all-brands-and-bikes": "Voir toutes les marques et vélos",
+    "landing-section-header": "Les meilleurs vélos. Facile à louer. ",
+    "see-all-brands-and-bikes": "Voir toutes les marques",
     "insurance": {
-      "description": "No matter if minimalistic fixie or high-end triathlon bike: Every listnride rental in Germany or Austria is insured! Simple. Unbureaucratically. Anytime.",
+      "description": "Peu importe si c'est un vélo de ville bon marché ou un vélo de triathlon haut de gamme : Chaque location de vélo avec listnride en Allemagne ou en Autriche est assurée !",
       "header": "Assurance pour votre location par listnride",
       "logo-description": "En coopération avec hepster et assuré par"
     },
-    "landing-section-subheader": "Rejoignez listnride et trouvez le vélo qui vous convient mieux.",
+    "landing-section-subheader": "Rejoignez listnride et louez le vélo qui vous convient le mieux.",
     "featured-bikes-header": "Location de vélos: les favoris de notre communauté",
-    "featured-bikes-subheader": "Qu'il s'agisse de vélos de route, de VTT, de cargo, de ville ou électriques, vous pouvez les louer. Ce sont les vélos de location préférés actuels de la communauté.",
-    "featured-tiles-header": "Test & Ride",
-    "featured-tiles-subheader": "We are partnering with innovative bike brands, which offer their latest models for testing.  The bikes can be tested or rented exclusively at various locations. Perfect for a well-considered buying decision. ",
+    "featured-bikes-subheader": "Qu'il s'agisse de vélos de route, VTT, electriques, ou de ville, on a de tout ! Voici les vélos de location préférés de la communauté:",
+    "featured-tiles-header": "Vélos Test Drive",
+    "featured-tiles-subheader": "Nous travaillons en partenariat avec des marques de vélos innovantes, qui proposent leurs derniers modèles à l’essai. Les vélos peuvent être testés ou loués exclusivement à différents endroits. Parfait pour une décision d'achat réfléchie.",
     "featured-cities-header": "Avec listnride, vous n'êtes jamais sans un vélo parfait",
-    "featured-cities-subheader": "listnride’s bike rental service is becoming available in more cities and holiday regions around Europe. Here are some tips for you: ",
+    "featured-cities-subheader": "Le service de location de vélos de listnride devient disponible en des lieux de plus en plus nombreux. Voici les meilleures villes :",
     "list-a-bike-header": "Possédez-vous un beau vélo, mais il prend la poussière?",
     "list-a-bike-subheader": "Louez votre vélo, rencontrez de nouvelles personnes et gagnez de l'argent.",
     "newsletter-header": "Abonnez-vous à notre newsletter et restez au courant",
@@ -1517,7 +1521,7 @@
     "language": "Langue",
     "languages": {
       "dutch": "Néerlandais",
-      "french": "French",
+      "french": "Français",
       "italian": "Italien",
       "spanish": "Espagnol",
       "german": "Allemand",

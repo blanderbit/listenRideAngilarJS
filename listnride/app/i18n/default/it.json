@@ -243,6 +243,10 @@
       "meta-title": "Road bike rental for the Frankfurt City Triathlon | listnride",
       "meta-description": "Rent a racing bike with listnride for the Frankfurt City Triathlon. Choose the perfect bike for your next race!"
     },
+    "cwd": {
+      "calendar-title": "Testbikes for Cyclingworld",
+      "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
       "description": "Was: <b>Radfahren neu entdecken</b> |  Where: <b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
@@ -582,8 +586,8 @@
       }
     },
     "about-us": {
-      "meta-title": "listnride - l'azienda",
-      "meta-description": "Fondata da appassionati di biciclette per gli amanti delle due ruote"
+      "meta-title": "listnride: chi siamo",
+      "meta-description": "listnride - come abbiamo creato la piattaforma online per il noleggio di biciclette"
     },
     "contact-and-help": {
       "meta-title": "listnride è qui per te",
@@ -1511,7 +1515,7 @@
     "language": "Lingua",
     "languages": {
       "dutch": "Olandese",
-      "french": "French",
+      "french": "Francese",
       "italian": "Italiano",
       "spanish": "Spagnolo",
       "german": "Tedesco",
