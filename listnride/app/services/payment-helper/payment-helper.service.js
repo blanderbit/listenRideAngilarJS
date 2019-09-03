@@ -176,9 +176,9 @@ function PaymentHelperController(ENV, api, authentication, notification) {
     },
     initAdyenCheckout(onChangeCb = null) {
       return new AdyenCheckout({
-        locale: "en",
+        locale: authentication.retrieveLocale(),
         environment: ENV.adyen_env,
-        originKey: ENV.adyen_origin_key,
+        originKey: ENV['adyen_origin_key_' + authentication.retrieveLocale()],
         paymentMethodsResponse: {},
         onChange: onChangeCb
       });

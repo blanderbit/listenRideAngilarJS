@@ -550,7 +550,8 @@ angular.
         signupGlobal,
         loginGlobal,
         forgetGlobal,
-        isBusiness
+        isBusiness,
+        retrieveLocale
       };
     }
   );
