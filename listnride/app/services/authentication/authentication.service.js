@@ -66,7 +66,7 @@ angular.
         // Set default language to english
         var language = "en";
         // Define all available languages
-        var availableLanguages = ["de", "en", "nl", "it", "es"];
+        var availableLanguages = ["de", "en", "nl", "it", "es", "fr"];
         var url = window.location.host.split('.');
         // Language based on tld
         var urlLanguage = url[url.length-1];
