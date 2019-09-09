@@ -2,15 +2,16 @@
 
 angular.
   module('listnride').
-  factory('api', ['$http', '$localStorage', 'ENV',
-    function($http, $localStorage, ENV) {
-      var apiUrl = ENV.apiEndpoint;
-      var webappUrl = ENV.webappUrl;
-      console.log("default translation: ", ENV.defaultTranslation);
-      console.log("static translation: ", ENV.staticTranslation);
+  factory('api', function(
+    $http,
+    $localStorage,
+    ENV
+    ) {
+      const apiUrl = ENV.apiEndpoint;
+      const webappUrl = ENV.webappUrl;
+
       return {
-        get: function(url, type) {
-          if (typeof type === 'undefined') { type = 'json'; }
+        get: function(url, type = 'json') {
           return $http({
             method: 'GET',
             url: apiUrl + url,
@@ -58,7 +59,16 @@ angular.
         },
         getWebappUrl: function() {
           return webappUrl;
+        },
+        custom: function(options) {
+          return $http({
+            ...options,
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + $localStorage.accessToken
+            }
+          });
         }
       }
     }
-  ]);
+  );
