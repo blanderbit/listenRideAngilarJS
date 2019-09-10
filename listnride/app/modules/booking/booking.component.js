@@ -15,6 +15,7 @@ angular.module('booking', [])
       $state,
       $stateParams,
       $timeout,
+      $mdDialog,
       $analytics,
       $translate,
       $filter,
@@ -22,6 +23,7 @@ angular.module('booking', [])
       api,
       price,
       voucher,
+      applicationHelper,
       calendarHelper,
       notification,
       paymentHelper,
@@ -36,8 +38,9 @@ angular.module('booking', [])
       booking.$onInit = function () {
         // VARIABLES
         booking.showConfirmButton = true;
-        booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
-        booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+        booking.emailPattern = applicationHelper.emailPattern;
+        booking.phonePattern = applicationHelper.phonePattern;
+
         booking.tabOrder = {
           'calendar': 0,
           'sign-in': 1,
@@ -676,119 +679,88 @@ angular.module('booking', [])
       };
 
 
-      function authenticateThreeDSecure() {
+      function authenticateThreeDSecure(requestData) {
         var threeDSecureAuthenticationResult = $q.defer();
-        // TODO: temporary solution until September fixes (on bank side)
-        threeDSecureAuthenticationResult.resolve();
-        return threeDSecureAuthenticationResult.promise;
 
-        /* // See todo above
-
-        function showAuthThreeDSecureDialog(options) {
-          // threeDSecureAuthenticationResult.reject();
-          $mdDialog.show({
-            template: '<md-dialog aria-label="List dialog">' +
-              '  <md-dialog-content>' +
-              '<div id="three-d-secure"></div>' +
-              '</md-dialog-content>' +
-              '</md-dialog>',
-            parent: angular.element(document.body),
-            targetEvent: event,
-            openFrom: angular.element(document.body),
-            closeTo: angular.element(document.body),
-            clickOutsideToClose: true,
-            fullscreen: true,
-            escapeToClose: false,
-            onComplete: function () {
-              document.getElementById('three-d-secure').appendChild(options.iframe);
-            },
-            onRemoving: function () {
-              // TODO: find a more clear way to don't show an error message when 3DSecure success
-              if (!booking.isThreeDSecureSuccess) {
-                threeDSecureAuthenticationResult.reject();
-              }
-              booking.bookDisabled = false;
-            }
-          });
-        }
-
-        if (isCreditCardPayment()) {
-          var my3DSContainer = document.createElement('div');
-          booking.bookDisabled = true;
-
-          paymentHelper.authenticateThreeDSecure(
-            booking.total.toFixed(2),
-            booking.user,
-            function(err, iframe) {
-              showAuthThreeDSecureDialog({'err':err, 'iframe':iframe});
-            },
-            function() {
-              $mdDialog.cancel();
-              booking.bookDisabled = false;
-            }
-          ).then(
-            function(response) {
-              booking.bookDisabled = false;
-
-              if (response.liabilityShiftPossible) {
-                response.liabilityShifted ? threeDSecureAuthenticationResult.resolve(response.nonce) : threeDSecureAuthenticationResult.reject();
-              } else {
-                threeDSecureAuthenticationResult.resolve();
-              }
-            }
-          );
-        }
-        else {
-          threeDSecureAuthenticationResult.resolve();
+        if (isCreditCardPayment() && requestData.redirect_params) {
+          showThreeDSecureAuthentication(requestData);
+        } else {
+          threeDSecureAuthenticationResult.resolve(requestData);
         }
 
         return threeDSecureAuthenticationResult.promise;
+      }
 
-       */
+      function showThreeDSecureAuthentication(requestData) {
+        $mdDialog.show({
+          template: '<md-dialog aria-label="List dialog">' +
+            '  <md-dialog-content>' +
+            '<div id="three-d-secure" style="height:300px"></div>' +
+            '</md-dialog-content>' +
+            '</md-dialog>',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true,
+          escapeToClose: false,
+          onComplete: function () {
+            let {md, paRequest, issuerUrl} = requestData.redirect_params;
+            const successPageRedirect = `${api.getApiUrl()}/requests/${requestData.id}/authorise3d?site=${document.location.origin}`;
+
+            let iframeContent = `
+                  <form method="POST" action="${issuerUrl}" id="3dform">
+                      <input type="hidden" name="PaReq" value="${paRequest}" />
+                      <input type="hidden" name="MD" value="${md}" />
+                      <input type="hidden" name="TermUrl" value="${successPageRedirect}" />
+                      <noscript>
+                          <br>
+                          <br>
+                          <div style="text-align: center">
+                              <h1>Processing your 3D Secure Transaction</h1>
+                              <p>Please click continue to continue the processing of your 3D Secure transaction.</p>
+                              <input type="submit" class="button" value="continue"/>
+                          </div>
+                      </noscript>
+                  </form>`;
+
+          document.getElementById('three-d-secure').innerHTML = iframeContent;
+          document.getElementById('3dform').submit();
+          }
+        });
       }
 
       booking.book = function () {
         $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
         booking.inProcess = true;
 
-        authenticateThreeDSecure().then(
-          function(nonce) {
-            booking.isThreeDSecureSuccess = true;
-
-            // The local timezone-dependent dates get converted into neutral,
-            // non-timezone utc dates, preserving the actually selected date values
-
-            var data = {
-              user_id: $localStorage.userId,
-              ride_id: booking.bikeId,
-              payment_method_nonce: nonce,
-              start_date: date.getDateUTC(booking.startDate).toISOString(),
-              end_date: date.getDateUTC(booking.endDate).toISOString(),
-              instant: !!booking.shopBooking,
-              insurance: {
-                premium: booking.isPremium
-              }
-            };
-
-            api.post('/requests', data).then(
-              function(success) {
-                $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
-                if (!booking.shopBooking) {
-                  $state.go('requests', {requestId: success.data.id});
-                }
-                booking.booked = true;
-              },
-              function(error) {
-                booking.inProcess = false;
-                booking.isThreeDSecureSuccess = false;
-                notification.show(error, 'error');
-              }
-            );
-          },
-          function() {
-            notification.show(null, null, 'shared.errors.three-d-secure-failed');
+        var data = {
+          user_id: $localStorage.userId,
+          ride_id: booking.bikeId,
+          start_date: date.getDateUTC(booking.startDate).toISOString(),
+          end_date: date.getDateUTC(booking.endDate).toISOString(),
+          instant: !!booking.shopBooking,
+          insurance: {
+            premium: booking.isPremium
           }
-        );
+        };
+
+        api
+          .post('/requests', data)
+          .then((response) => {
+            $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+            return authenticateThreeDSecure(response.data);
+          })
+          .then((response) => {
+            booking.booked = true;
+            if (!booking.shopBooking) {$state.go('requests', {requestId: response.id});}
+          })
+          .catch((error) => {
+            booking.inProcess = false;
+            notification.show(error, 'error');
+          });
+
       };
     }
   })
