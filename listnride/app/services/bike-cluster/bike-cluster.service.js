@@ -71,6 +71,11 @@ angular.module('listnride')
           });
         },
 
+        hasFrameSize(bikeVariations) {
+          //check if "frame_size" value of each variation object is not empty
+          return !!_.find(bikeVariations, (o) => {return o.frame_size;});
+        },
+
         findFirstAvailableVariantId(bikeVariations, pickedBikeVariant, availableBikeIds) {
           return _.intersection(bikeVariations[pickedBikeVariant].bike_ids, availableBikeIds)[0];
         },

@@ -57,20 +57,22 @@ import './services/verification/verification.service.js';
 import './services/bike-options/bike-options.service.js';
 import './services/bike-cluster/bike-cluster.service.js';
 import './services/map-configs/map-configs.service.js';
-import './services/helpers/helpers.service.js';
 import './services/access-control/access-control.service.js';
 import './services/loading-dialog/loading-dialog.service.js';
 import './services/user-api/user-api.service.js';
 import './services/price/price.service.js';
 import './services/voucher/voucher.service.js';
 import './services/country-code-translator/country-code-translator.service.js';
+import './services/notification/notification.service.js';
+
+// helpers
+import './services/application-helper/application-helper.service.js';
 import './services/calendar-helper/calendar-helper.service.js';
 import './services/payment-helper/payment-helper.service.js';
 import './services/payout-helper/payout-helper.service.js';
 import './services/user-helper/user-helper.service.js';
 import './services/bike-helper/bike-helper.service.js';
 import './services/bike-event-helper/bike-event-helper.service.js';
-import './services/notification/notification.service.js';
 // import './services/bikes-map/bikes-map.service.js';
 // core filters
 import './filters/category.filter.js';

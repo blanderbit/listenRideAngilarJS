@@ -204,6 +204,9 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "request": {
+    "payment-failed": "Oops, your payment failed. Please double check the data you have entered as well as the settings of your payment method with your payment provider."
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes for Cyclingworld",
@@ -373,7 +376,7 @@
     "how-to": {
       "step-1-title": "1. Search & find",
       "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day, any time. ",
-      "step-2-title": "1. Define & request",
+      "step-2-title": "2. Define & request",
       "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
       "step-3-title": "3. Accept offer & book online",
       "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. "
@@ -737,6 +740,8 @@
     "password-not-match": "Passwords do not match",
     "verification-code-error": "Error: the verification code is invalid.",
     "address-save-error": "The address could not be saved",
+    "request-create-rider": "The bike was requested. You will be charged when lister accepts your request.",
+    "request-created": "Request Created",
     "profile-verified": "Congratulations, your profile was successfully verified!",
     "profile-updated": "Your description was updated.",
     "error-upload-profile-picture": "There was an error in uploading your profile picture",
@@ -969,6 +974,7 @@
   },
   "message": {
     "accept": "Accept",
+    "retry-payment": "Try again your payment now",
     "go-to-calendar": "Go to Booking Calendar",
     "reject": "Reject",
     "rate": "Rate",

@@ -15,6 +15,7 @@ angular.module('booking', [])
       $state,
       $stateParams,
       $timeout,
+      $mdDialog,
       $analytics,
       $translate,
       $filter,
@@ -22,9 +23,11 @@ angular.module('booking', [])
       api,
       price,
       voucher,
+      applicationHelper,
       calendarHelper,
       notification,
       paymentHelper,
+      bikeHelper,
       bikeOptions,
       bikeCluster,
       userHelper,
@@ -35,8 +38,9 @@ angular.module('booking', [])
       booking.$onInit = function () {
         // VARIABLES
         booking.showConfirmButton = true;
-        booking.emailPattern = /(?!^[.+&'_-]*@.*$)(^[_\w\d+&'-]+(\.[_\w\d+&'-]*)*@[\w\d-]+(\.[\w\d-]+)*\.(([\d]{1,3})|([\w]{2,}))$)/i;
-        booking.phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+        booking.emailPattern = applicationHelper.emailPattern;
+        booking.phonePattern = applicationHelper.phonePattern;
+
         booking.tabOrder = {
           'calendar': 0,
           'sign-in': 1,
@@ -67,13 +71,13 @@ angular.module('booking', [])
         booking.isPremium = false;
         booking.bike.country_code = "";
         booking.user.balance = 0;
-        booking.insuranceCountries = ['DE', 'AT'];
         booking.isOpeningHoursLoaded = false;
         booking.creditCardData = {}
         booking.paymentDescription = '';
         booking.insuranceEnabled = false;
         booking.hasTimeSlots = false;
         booking.timeslots = [];
+        booking.validCreditCard = false;
 
         // METHODS
         booking.calendarHelper = calendarHelper;
@@ -90,10 +94,24 @@ angular.module('booking', [])
 
         // After material tabs inited
         $timeout(function () {
-          authentication.loggedIn() ? booking.reloadUser().then(function() { paymentHelper.setupBraintreeClient() }) : setFirstTab();
+          authentication.loggedIn() ? getUserAndSetPayments() : setFirstTab();
         }, 0);
 
       };
+
+      // go to next tab on user create success
+      $rootScope.$on('user_created', function () {
+        $timeout(function () {
+          getUserAndSetPayments();
+        }, 0);
+      });
+
+      // go to next tab on user login success
+      $rootScope.$on('user_login', function () {
+        $timeout(function () {
+          getUserAndSetPayments();
+        }, 0);
+      });
 
       function loggedIn() {
         return authentication.loggedIn();
@@ -114,7 +132,6 @@ angular.module('booking', [])
             getLister();
             updatePrices();
 
-
             // EVENT BIKE LOGIC
             booking.isOnSlotableEvent = _.indexOf([35, 36], booking.bike.family) !== -1;
 
@@ -130,10 +147,11 @@ angular.module('booking', [])
               }
             }
 
-
             // CLUSTER BIKE LOGIC
             if (booking.bike.is_cluster) {
               booking.cluster = success.data.cluster;
+
+              booking.hasFrameSize = bikeCluster.hasFrameSize(booking.cluster.variations);
 
               booking.bikeVariations = bikeCluster
                 .groupBikeVariations(booking.cluster.variations, booking.hasTimeSlots);
@@ -146,6 +164,25 @@ angular.module('booking', [])
             $state.go('home');
           }
         );
+      }
+
+      // TODO: check if we still need to have braintreeClient here
+      function getUserAndSetPayments() {
+        booking.reloadUser()
+          .then(() => {
+            let checkout = paymentHelper.initAdyenCheckout((state) => {
+              $scope.$apply(function () {
+                booking.validCreditCard = state.isValid;
+                booking.creditCardData.data = state.data;
+              });
+            });
+
+            paymentHelper.setupBraintreeClient();
+
+            $timeout(() => {
+              mountPaymentMethod(checkout);
+            }, 0);
+          });
       }
 
       function updateBikeDate() {
@@ -203,12 +240,8 @@ angular.module('booking', [])
       }
 
       booking.insuranceAllowed = function () {
-        return booking.insuranceEnabled && insuranceCountry() && eventBikeIncludeInsurance();
+        return booking.insuranceEnabled && bikeHelper.isBikeCountryInsuranced(booking.bike) && eventBikeIncludeInsurance();
       };
-
-      function insuranceCountry() {
-        return _.includes(booking.insuranceCountries, booking.bike.country_code)
-      }
 
       function eventBikeIncludeInsurance() {
         return booking.bike.event ? booking.bike.event.insurance : true;
@@ -358,7 +391,7 @@ angular.module('booking', [])
       }
 
       function checkValidPayment() {
-        return booking.paymentMethod === 'current' || booking.paymentForm.$valid;
+        return booking.paymentMethod === 'current' || booking.validCreditCard;
       }
 
       function updatePrices() {
@@ -455,8 +488,14 @@ angular.module('booking', [])
         );
       };
 
+      function mountPaymentMethod(checkout) {
+        if (booking.paymentFormFields) return;
+        booking.paymentFormFields = paymentHelper.createAdyenCardFields(checkout);
+        booking.paymentFormFields.mount('#securedfields');
+      }
+
       booking.tokenizeCard = function() {
-        paymentHelper.btPostCreditCard(booking.creditCardData, onSuccessPaymentValidation);
+        paymentHelper.postCreditCard(booking.creditCardData, onSuccessPaymentValidation);
       };
 
       function savePaymentOption() {
@@ -470,7 +509,7 @@ angular.module('booking', [])
       function onSuccessPaymentValidation(data) {
         updatePaymentInformation(data);
         // reset form and data after success
-        booking.creditCardData = {}
+        booking.creditCardData = {};
         booking.paymentForm.$setPristine();
         booking.paymentForm.$setUntouched();
         // go to next tab
@@ -496,8 +535,10 @@ angular.module('booking', [])
             // Autocomplete phone number if it's confirmed already
             if (booking.user.has_phone_number) {
               booking.phoneConfirmed = 'success';
-              booking.verificationForm.phone_number = '+' + success.data.phone_number;
+              // TODO: we need to investigate and remove one of this phone_numbers, because it's a duplicate
               booking.phone_number = '+' + success.data.phone_number;
+              // TODO: find why verificationForm equals undefined (after user sign in / sign up)
+              if (booking.verificationForm) booking.verificationForm.phone_number = booking.phone_number;
             }
 
             if (booking.user.payment_method) {
@@ -618,16 +659,6 @@ angular.module('booking', [])
         }
       }
 
-      // TODO: This needs to be refactored, rootScopes are very bad practice
-      // go to next tab on user create success
-      $rootScope.$on('user_created', function () {
-          booking.reloadUser();
-      });
-
-      // go to next tab on user login success
-      $rootScope.$on('user_login', function () {
-        booking.reloadUser();
-      });
 
       booking.fillAddress = function(place) {
         var components = place.address_components;
@@ -655,119 +686,88 @@ angular.module('booking', [])
       };
 
 
-      function authenticateThreeDSecure() {
+      function authenticateThreeDSecure(requestData) {
         var threeDSecureAuthenticationResult = $q.defer();
-        // TODO: temporary solution until September fixes (on bank side)
-        threeDSecureAuthenticationResult.resolve();
-        return threeDSecureAuthenticationResult.promise;
 
-        /* // See todo above
-
-        function showAuthThreeDSecureDialog(options) {
-          // threeDSecureAuthenticationResult.reject();
-          $mdDialog.show({
-            template: '<md-dialog aria-label="List dialog">' +
-              '  <md-dialog-content>' +
-              '<div id="three-d-secure"></div>' +
-              '</md-dialog-content>' +
-              '</md-dialog>',
-            parent: angular.element(document.body),
-            targetEvent: event,
-            openFrom: angular.element(document.body),
-            closeTo: angular.element(document.body),
-            clickOutsideToClose: true,
-            fullscreen: true,
-            escapeToClose: false,
-            onComplete: function () {
-              document.getElementById('three-d-secure').appendChild(options.iframe);
-            },
-            onRemoving: function () {
-              // TODO: find a more clear way to don't show an error message when 3DSecure success
-              if (!booking.isThreeDSecureSuccess) {
-                threeDSecureAuthenticationResult.reject();
-              }
-              booking.bookDisabled = false;
-            }
-          });
-        }
-
-        if (isCreditCardPayment()) {
-          var my3DSContainer = document.createElement('div');
-          booking.bookDisabled = true;
-
-          paymentHelper.authenticateThreeDSecure(
-            booking.total.toFixed(2),
-            booking.user,
-            function(err, iframe) {
-              showAuthThreeDSecureDialog({'err':err, 'iframe':iframe});
-            },
-            function() {
-              $mdDialog.cancel();
-              booking.bookDisabled = false;
-            }
-          ).then(
-            function(response) {
-              booking.bookDisabled = false;
-
-              if (response.liabilityShiftPossible) {
-                response.liabilityShifted ? threeDSecureAuthenticationResult.resolve(response.nonce) : threeDSecureAuthenticationResult.reject();
-              } else {
-                threeDSecureAuthenticationResult.resolve();
-              }
-            }
-          );
-        }
-        else {
-          threeDSecureAuthenticationResult.resolve();
+        if (isCreditCardPayment() && requestData.redirect_params) {
+          showThreeDSecureAuthentication(requestData);
+        } else {
+          threeDSecureAuthenticationResult.resolve(requestData);
         }
 
         return threeDSecureAuthenticationResult.promise;
+      }
 
-       */
+      function showThreeDSecureAuthentication(requestData) {
+        $mdDialog.show({
+          template: '<md-dialog aria-label="List dialog">' +
+            '  <md-dialog-content>' +
+            '<div id="three-d-secure" style="height:300px"></div>' +
+            '</md-dialog-content>' +
+            '</md-dialog>',
+          parent: angular.element(document.body),
+          targetEvent: event,
+          openFrom: angular.element(document.body),
+          closeTo: angular.element(document.body),
+          clickOutsideToClose: true,
+          fullscreen: true,
+          escapeToClose: false,
+          onComplete: function () {
+            let {md, paRequest, issuerUrl} = requestData.redirect_params;
+            const successPageRedirect = `${api.getApiUrl()}/requests/${requestData.id}/authorise3d?site=${document.location.origin}`;
+
+            let iframeContent = `
+                  <form method="POST" action="${issuerUrl}" id="3dform">
+                      <input type="hidden" name="PaReq" value="${paRequest}" />
+                      <input type="hidden" name="MD" value="${md}" />
+                      <input type="hidden" name="TermUrl" value="${successPageRedirect}" />
+                      <noscript>
+                          <br>
+                          <br>
+                          <div style="text-align: center">
+                              <h1>Processing your 3D Secure Transaction</h1>
+                              <p>Please click continue to continue the processing of your 3D Secure transaction.</p>
+                              <input type="submit" class="button" value="continue"/>
+                          </div>
+                      </noscript>
+                  </form>`;
+
+          document.getElementById('three-d-secure').innerHTML = iframeContent;
+          document.getElementById('3dform').submit();
+          }
+        });
       }
 
       booking.book = function () {
         $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
         booking.inProcess = true;
 
-        authenticateThreeDSecure().then(
-          function(nonce) {
-            booking.isThreeDSecureSuccess = true;
-
-            // The local timezone-dependent dates get converted into neutral,
-            // non-timezone utc dates, preserving the actually selected date values
-
-            var data = {
-              user_id: $localStorage.userId,
-              ride_id: booking.bikeId,
-              payment_method_nonce: nonce,
-              start_date: date.getDateUTC(booking.startDate).toISOString(),
-              end_date: date.getDateUTC(booking.endDate).toISOString(),
-              instant: !!booking.shopBooking,
-              insurance: {
-                premium: booking.isPremium
-              }
-            };
-
-            api.post('/requests', data).then(
-              function(success) {
-                $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
-                if (!booking.shopBooking) {
-                  $state.go('requests', {requestId: success.data.id});
-                }
-                booking.booked = true;
-              },
-              function(error) {
-                booking.inProcess = false;
-                booking.isThreeDSecureSuccess = false;
-                notification.show(error, 'error');
-              }
-            );
-          },
-          function() {
-            notification.show(null, null, 'shared.errors.three-d-secure-failed');
+        var data = {
+          user_id: $localStorage.userId,
+          ride_id: booking.bikeId,
+          start_date: date.getDateUTC(booking.startDate).toISOString(),
+          end_date: date.getDateUTC(booking.endDate).toISOString(),
+          instant: !!booking.shopBooking,
+          insurance: {
+            premium: booking.isPremium
           }
-        );
+        };
+
+        api
+          .post('/requests', data)
+          .then((response) => {
+            $analytics.eventTrack('Book', {  category: 'Request Bike', label: 'Request'});
+            return authenticateThreeDSecure(response.data);
+          })
+          .then((response) => {
+            booking.booked = true;
+            if (!booking.shopBooking) {$state.go('requests', {requestId: response.id});}
+          })
+          .catch((error) => {
+            booking.inProcess = false;
+            notification.show(error, 'error');
+          });
+
       };
     }
   })

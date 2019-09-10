@@ -199,6 +199,9 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "request": {
+    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes voor de Cyclingworld",
@@ -729,6 +732,8 @@
     "password-not-match": "Wachtwoorden komen niet overeen",
     "verification-code-error": "Fout: de verificatiecode is ongeldig.",
     "address-save-error": "Het adres kon niet worden opgeslagen",
+    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
+    "request-created": "Request Created",
     "profile-verified": "Gefeliciteerd, je profiel is nu geverifieerd!",
     "profile-updated": "Beschrijving is bijgewerkt",
     "error-upload-profile-picture": "Fout bij uploaden profielfoto",
@@ -958,6 +963,7 @@
   },
   "message": {
     "accept": "Accepteren",
+    "retry-payment": "Retry payment",
     "go-to-calendar": "Naar de boekingskalender",
     "reject": "Afwijzen",
     "rate": "Beoordelen",

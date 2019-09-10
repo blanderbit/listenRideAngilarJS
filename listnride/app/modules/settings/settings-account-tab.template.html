@@ -65,12 +65,16 @@
           <div layout="column" class="lnr-mh-x2">
             <div
               class="lnr-color-primary lnr-link lnr-off-selection"
-              ng-click="settingsAccount.parent.showPaymentChangeForm = !settingsAccount.parent.showPaymentChangeForm">
-                <span ng-if="settingsAccount.parent.user.payment_method">{{ 'settings.change-payment-method' | translate }}</span>
-                <span ng-if="!settingsAccount.parent.user.payment_method">{{ 'settings.set-payment-method' | translate }}</span>
+              ng-click="settingsAccount.parent.showPaymentChangeForm()"
+              ng-hide="settingsAccount.parent.isPaymentChangeChecked">
+                <span>
+                  {{ settingsAccount.parent.user.payment_method
+                    ? 'settings.change-payment-method'
+                    : 'settings.set-payment-method' | translate }}
+                </span>
             </div>
             <md-radio-group
-              ng-if="settingsAccount.parent.showPaymentChangeForm"
+              ng-if="settingsAccount.parent.isPaymentChangeChecked"
               ng-model="settingsAccount.parent.paymentMethod"
               layout="row"
               class="lnr-mh lnr-mt-x2">
@@ -78,16 +82,16 @@
               <md-radio-button value="paypal">{{ 'settings.paypal' | translate }}</md-radio-button>
             </md-radio-group>
             <ng-form name="settingsAccount.parent.paymentForm">
-              <div ng-show="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'paypal'">
+              <div ng-show="settingsAccount.parent.isPaymentChangeChecked && settingsAccount.parent.paymentMethod == 'paypal'">
                 <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
                 <paypal-checkout-button on-success="settingsAccount.parent.onSuccessPaymentUpdate"></paypal-checkout-button>
               </div>
-              <div ng-show="settingsAccount.parent.showPaymentChangeForm && settingsAccount.parent.paymentMethod == 'credit-card'">
+              <div ng-show="settingsAccount.parent.isPaymentChangeChecked && settingsAccount.parent.paymentMethod == 'credit-card'">
                 <credit-card-input data="settingsAccount.parent.creditCardData"></credit-card-input>
                 <md-button
                   class="md-raised md-primary lnr-m-0"
                   ng-click="settingsAccount.parent.tokenizeCard()"
-                  ng-disabled="!settingsAccount.parent.paymentForm.$valid || settingsAccount.parent.paymentLoading">
+                  ng-disabled="!settingsAccount.parent.validCreditCard || settingsAccount.parent.paymentLoading">
                   <div ng-if="settingsAccount.parent.paymentLoading" class="lnr-loader">
                       <div class="lnr-loader__item1"></div>
                       <div class="lnr-loader__item2"></div>

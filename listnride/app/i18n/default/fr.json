@@ -204,6 +204,9 @@
       "subheader": "Rencontrez des gens qui partagent les mêmes passions et gagnez de l'argent de poche"
     }
   },
+  "request": {
+    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Vélos à tester à Cyclingworld",
@@ -370,7 +373,7 @@
     "how-to": {
       "step-1-title": "1. Rechercher et trouver",
       "step-1-content": "Gagnez un temps précieux pour profiter au maximum de votre trajet à destination. Facile et transparent, tous les jours, à tout moment.",
-      "step-2-title": "1. Définir et demander",
+      "step-2-title": "2. Définir et demander",
       "step-2-content": "Dites-nous quels vélos vous souhaitez louer et nous ferons le reste. Il suffit de nous fournir les détails et nous vous contacterons!",
       "step-3-title": "3. Accepter l'offre et réserver en ligne",
       "step-3-content": "Nous vous enverrons un devis et un lien vous permettant de réserver en ligne ou de nous fournir une confirmation écrite de votre réservation."
@@ -734,6 +737,8 @@
     "password-not-match": "Les mots de passe ne correspondent pas",
     "verification-code-error": "Erreur: le code de vérification n'est pas valide.",
     "address-save-error": "L'adresse n'a pas pu être sauvegardée",
+    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
+    "request-created": "Request Created",
     "profile-verified": "Félicitations, votre profil a été vérifié!",
     "profile-updated": "Votre description a été mise à jour.",
     "error-upload-profile-picture": "Erreur lors du chargement de la photo de profil",
@@ -966,6 +971,7 @@
   },
   "message": {
     "accept": "Accepter",
+    "retry-payment": "Retry payment",
     "go-to-calendar": "Calendrier des réservations",
     "reject": "Rejeter",
     "rate": "Evaluer",

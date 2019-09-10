@@ -1,32 +1,28 @@
-'use strict';
-
 angular.module('settings',[])
 .component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',
-  controller: [
-    '$localStorage',
-    '$mdToast',
-    '$translate',
-    '$state',
-    'api',
-    'accessControl',
-    'sha256',
-    'Base64',
-    'Upload',
-    'loadingDialog',
-    'ngMeta',
-    'userApi',
-    '$timeout',
-    '$mdDialog',
-    'authentication',
-    'voucher',
-    'notification',
-    'paymentHelper',
-    'payoutHelper',
-    function SettingsController($localStorage, $mdToast, $translate, $state, api, accessControl, sha256, Base64,
-      Upload, loadingDialog, ngMeta, userApi, $timeout, $mdDialog, authentication, voucher, notification, paymentHelper, payoutHelper) {
-
+  controller: function SettingsController(
+    $localStorage,
+    $translate,
+    $state,
+    api,
+    accessControl,
+    sha256,
+    Upload,
+    loadingDialog,
+    ngMeta,
+    userApi,
+    $timeout,
+    $mdDialog,
+    authentication,
+    voucher,
+    notification,
+    paymentHelper,
+    payoutHelper,
+    ENV,
+    $scope
+  ) {
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
 
@@ -60,9 +56,11 @@ angular.module('settings',[])
         settings.user.has_billing = false;
 
         // payment
-        settings.showPaymentChangeForm = false;
+        settings.showPaymentChangeForm = showPaymentChangeForm;
+        settings.isPaymentChangeChecked = false;
         settings.paymentLoading = false;
         settings.creditCardData = {};
+        settings.validCreditCard = false;
         settings.tokenizeCard = tokenizeCard;
         settings.onSuccessPaymentUpdate = onSuccessPaymentUpdate;
         settings.onErrorPaymentUpdate = onErrorPaymentUpdate;
@@ -442,9 +440,26 @@ angular.module('settings',[])
       // === ACCOUNT TAB ===
       // ===================
 
+      const checkout = paymentHelper.initAdyenCheckout((state) => {
+        $scope.$apply(function () {
+          settings.validCreditCard = state.isValid;
+          settings.creditCardData.data = state.data;
+        });
+      });
+
+      function mountPaymentMethod () {
+        settings.paymentFormFields = paymentHelper.createAdyenCardFields(checkout);
+        settings.paymentFormFields.mount('#securedfields');
+      }
+
       function tokenizeCard () {
         settings.paymentLoading = true;
-        paymentHelper.btPostCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate, settings.onErrorPaymentUpdate);
+        paymentHelper.postCreditCard(settings.creditCardData, settings.onSuccessPaymentUpdate, settings.onErrorPaymentUpdate);
+      }
+
+      function showPaymentChangeForm() {
+        settings.isPaymentChangeChecked = true;
+        mountPaymentMethod();
       }
 
       function onSuccessPaymentUpdate(data) {
@@ -452,7 +467,8 @@ angular.module('settings',[])
         settings.creditCardData = {};
         settings.paymentForm.$setPristine();
         settings.paymentForm.$setUntouched();
-        settings.showPaymentChangeForm = false;
+        settings.isPaymentChangeChecked = false;
+        settings.paymentFormFields.unmount();
         settings.paymentLoading = false;
 
         updatePaymentInformation(data);
@@ -856,7 +872,6 @@ angular.module('settings',[])
       }
 
     }
-  ]
 })
 .component('settingsAccountTab', {
   templateUrl: 'app/modules/settings/settings-account-tab.template.html',

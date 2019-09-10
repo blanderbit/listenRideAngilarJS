@@ -20,6 +20,22 @@ angular.module('home',[]).component('home', {
       var home = this;
 
       switch ($state.current.name) {
+        case 'authorise3d':
+          // $stateParams.requestId
+          $translate(['toasts.request-create-rider', 'toasts.request-created']).then(
+            function (translations) {
+              $mdDialog.show(
+                $mdDialog.alert()
+                .parent(angular.element(document.body))
+                .clickOutsideToClose(true)
+                .title(translations['toasts.request-created'])
+                .textContent(translations['toasts.request-create-rider'])
+                .ariaLabel(translations['toasts.request-created'])
+                .ok('Ok')
+              );
+            }
+          );
+          break;
         case 'verify':
           if (authentication.loggedIn()) {
             verification.openDialog(false, false, window.event);
