@@ -729,6 +729,8 @@
     "password-not-match": "Wachtwoorden komen niet overeen",
     "verification-code-error": "Fout: de verificatiecode is ongeldig.",
     "address-save-error": "Het adres kon niet worden opgeslagen",
+    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
+    "request-created": "Request Created",
     "profile-verified": "Gefeliciteerd, je profiel is nu geverifieerd!",
     "profile-updated": "Beschrijving is bijgewerkt",
     "error-upload-profile-picture": "Fout bij uploaden profielfoto",
