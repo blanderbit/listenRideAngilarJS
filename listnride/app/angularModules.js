@@ -73,7 +73,6 @@ import './services/payout-helper/payout-helper.service.js';
 import './services/user-helper/user-helper.service.js';
 import './services/bike-helper/bike-helper.service.js';
 import './services/bike-event-helper/bike-event-helper.service.js';
-
 // import './services/bikes-map/bikes-map.service.js';
 // core filters
 import './filters/category.filter.js';
