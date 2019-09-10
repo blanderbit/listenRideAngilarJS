@@ -101,12 +101,16 @@ angular.module('booking', [])
 
       // go to next tab on user create success
       $rootScope.$on('user_created', function () {
-        booking.reloadUser();
+        $timeout(function () {
+          getUserAndSetPayments();
+        }, 0);
       });
 
       // go to next tab on user login success
       $rootScope.$on('user_login', function () {
-        booking.reloadUser();
+        $timeout(function () {
+          getUserAndSetPayments();
+        }, 0);
       });
 
       function loggedIn() {
@@ -485,6 +489,7 @@ angular.module('booking', [])
       };
 
       function mountPaymentMethod(checkout) {
+        if (booking.paymentFormFields) return;
         booking.paymentFormFields = paymentHelper.createAdyenCardFields(checkout);
         booking.paymentFormFields.mount('#securedfields');
       }
@@ -530,8 +535,10 @@ angular.module('booking', [])
             // Autocomplete phone number if it's confirmed already
             if (booking.user.has_phone_number) {
               booking.phoneConfirmed = 'success';
-              booking.verificationForm.phone_number = '+' + success.data.phone_number;
+              // TODO: we need to investigate and remove one of this phone_numbers, because it's a duplicate
               booking.phone_number = '+' + success.data.phone_number;
+              // TODO: find why verificationForm equals undefined (after user sign in / sign up)
+              if (booking.verificationForm) booking.verificationForm.phone_number = booking.phone_number;
             }
 
             if (booking.user.payment_method) {
