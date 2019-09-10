@@ -204,6 +204,9 @@
       "subheader": "Rencontrez des gens qui partagent les mêmes passions et gagnez de l'argent de poche"
     }
   },
+  "request": {
+    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Vélos à tester à Cyclingworld",
@@ -968,6 +971,7 @@
   },
   "message": {
     "accept": "Accepter",
+    "retry-payment": "Retry payment",
     "go-to-calendar": "Calendrier des réservations",
     "reject": "Rejeter",
     "rate": "Evaluer",

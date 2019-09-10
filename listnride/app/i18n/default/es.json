@@ -204,6 +204,9 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "request": {
+    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Cyclingworld event bike",
@@ -965,6 +968,7 @@
   },
   "message": {
     "accept": "Aceptar",
+    "retry-payment": "Retry payment",
     "go-to-calendar": "Calendario de reservas",
     "reject": "Rechazar",
     "rate": "Tarifa",

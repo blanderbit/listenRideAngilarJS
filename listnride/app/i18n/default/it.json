@@ -201,6 +201,9 @@
       "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
     }
   },
+  "request": {
+    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Prova bici per il Cyclingworld ",
@@ -962,6 +965,7 @@
   },
   "message": {
     "accept": "Accetta",
+    "retry-payment": "Retry payment",
     "go-to-calendar": "Calendario delle prenotazioni",
     "reject": "Rifiuta",
     "rate": "Voto",
