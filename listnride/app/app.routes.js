@@ -88,6 +88,13 @@
         template: '<home></home>'
       });
 
+      // home/change_password
+      $stateProvider.state({
+        name: 'authorise3d',
+        url: '/authorise3d/{requestId:int}',
+        template: '<home></home>'
+      });
+
       // home/business-signup
       $stateProvider.state({
         name: 'businessSignup',
