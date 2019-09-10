@@ -199,6 +199,9 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "request": {
+    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes voor de Cyclingworld",
@@ -960,6 +963,7 @@
   },
   "message": {
     "accept": "Accepteren",
+    "retry-payment": "Retry payment",
     "go-to-calendar": "Naar de boekingskalender",
     "reject": "Afwijzen",
     "rate": "Beoordelen",
