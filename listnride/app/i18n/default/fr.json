@@ -734,6 +734,8 @@
     "password-not-match": "Les mots de passe ne correspondent pas",
     "verification-code-error": "Erreur: le code de vérification n'est pas valide.",
     "address-save-error": "L'adresse n'a pas pu être sauvegardée",
+    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
+    "request-created": "Request Created",
     "profile-verified": "Félicitations, votre profil a été vérifié!",
     "profile-updated": "Votre description a été mise à jour.",
     "error-upload-profile-picture": "Erreur lors du chargement de la photo de profil",
