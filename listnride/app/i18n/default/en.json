@@ -205,7 +205,7 @@
     }
   },
   "request": {
-    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+    "payment-failed": "Oops, your payment failed. Please double check the data you have entered as well as the settings of your payment method with your payment provider."
   },
   "cyclingworld": {
     "event": {
@@ -974,7 +974,7 @@
   },
   "message": {
     "accept": "Accept",
-    "retry-payment": "Retry payment",
+    "retry-payment": "Try again your payment now",
     "go-to-calendar": "Go to Booking Calendar",
     "reject": "Reject",
     "rate": "Rate",
