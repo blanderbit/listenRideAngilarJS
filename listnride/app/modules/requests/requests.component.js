@@ -124,49 +124,62 @@ angular.module('requests', ['infinite-scroll'])
 
       function retryPayment () {
         requests.retryButtonClicked = true;
-        let requestData = requests.request;
+        let currentRequest = requests.request;
 
-        $mdDialog.show({
-          template: '<md-dialog aria-label="List dialog">' +
-            '  <md-dialog-content>' +
-            '<div id="three-d-secure" style="height:300px"></div>' +
-            '</md-dialog-content>' +
-            '</md-dialog>',
-          parent: angular.element(document.body),
-          targetEvent: event,
-          openFrom: angular.element(document.body),
-          closeTo: angular.element(document.body),
-          clickOutsideToClose: true,
-          fullscreen: true,
-          escapeToClose: false,
-          onComplete: function () {
-            let {
-              md,
-              paRequest,
-              issuerUrl
-            } = requestData.redirect_params;
-            const successPageRedirect = `${api.getApiUrl()}/requests/${requestData.id}/authorise3d?site=${document.location.origin}`;
+        api
+          .put(`/requests/${currentRequest.id}/retry_payment`, {})
+          .then((response) => {
+            let requestData = response.data;
+            if (requestData.redirect_params) {
+              $mdDialog.show({
+                template: '<md-dialog aria-label="List dialog">' +
+                  '  <md-dialog-content>' +
+                  '<div id="three-d-secure" style="height:300px"></div>' +
+                  '</md-dialog-content>' +
+                  '</md-dialog>',
+                parent: angular.element(document.body),
+                targetEvent: event,
+                openFrom: angular.element(document.body),
+                closeTo: angular.element(document.body),
+                clickOutsideToClose: true,
+                fullscreen: true,
+                escapeToClose: false,
+                onComplete: function () {
+                  let {
+                    md,
+                    paRequest,
+                    issuerUrl
+                  } = requestData.redirect_params;
+                  const successPageRedirect = `${api.getApiUrl()}/requests/${requestData.id}/authorise3d?site=${document.location.origin}`;
 
-            let iframeContent = `
-                  <form method="POST" action="${issuerUrl}" id="3dform">
-                      <input type="hidden" name="PaReq" value="${paRequest}" />
-                      <input type="hidden" name="MD" value="${md}" />
-                      <input type="hidden" name="TermUrl" value="${successPageRedirect}" />
-                      <noscript>
-                          <br>
-                          <br>
-                          <div style="text-align: center">
-                              <h1>Processing your 3D Secure Transaction</h1>
-                              <p>Please click continue to continue the processing of your 3D Secure transaction.</p>
-                              <input type="submit" class="button" value="continue"/>
-                          </div>
-                      </noscript>
-                  </form>`;
+                  let iframeContent = `
+                    <form method="POST" action="${issuerUrl}" id="3dform">
+                        <input type="hidden" name="PaReq" value="${paRequest}" />
+                        <input type="hidden" name="MD" value="${md}" />
+                        <input type="hidden" name="TermUrl" value="${successPageRedirect}" />
+                        <noscript>
+                            <br>
+                            <br>
+                            <div style="text-align: center">
+                                <h1>Processing your 3D Secure Transaction</h1>
+                                <p>Please click continue to continue the processing of your 3D Secure transaction.</p>
+                                <input type="submit" class="button" value="continue"/>
+                            </div>
+                        </noscript>
+                    </form>`;
 
-            document.getElementById('three-d-secure').innerHTML = iframeContent;
-            document.getElementById('3dform').submit();
-          }
-        });
+                  document.getElementById('three-d-secure').innerHTML = iframeContent;
+                  document.getElementById('3dform').submit();
+                }
+              });
+            } else {
+              reloadRequest(currentRequest.id);
+            }
+          })
+          .catch((error) => {
+            requests.retryButtonClicked = false;
+            notification.show(error, 'error');
+          })
       }
 
       function isPaymentFailed(paymentStatus) {
