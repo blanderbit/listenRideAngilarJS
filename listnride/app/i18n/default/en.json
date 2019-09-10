@@ -737,7 +737,7 @@
     "password-not-match": "Passwords do not match",
     "verification-code-error": "Error: the verification code is invalid.",
     "address-save-error": "The address could not be saved",
-    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
+    "request-create-rider": "The bike was requested. You will be charged when lister accepts your request.",
     "request-created": "Request Created",
     "profile-verified": "Congratulations, your profile was successfully verified!",
     "profile-updated": "Your description was updated.",
