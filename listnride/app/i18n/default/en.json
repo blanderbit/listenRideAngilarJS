@@ -240,9 +240,9 @@
   },
   "events": {
     "berlin-triathlon": {
-      "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>June 2nd 2019</b>",
-      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
-      "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+      "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>6-7 June 2020</b>",
+      "meta-title": "Rent a road bike for the Berlin Triathlon 2020 | listnride",
+      "meta-description": "Rent a road bike with listnride for the Berlin Triathlon 2020. Choose a high-quality racing bike that fits you best!"
     },
     "msr": {
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
@@ -313,8 +313,8 @@
       "meta-description": "With listnride you can securely rent a road bike online for Velorace Dresden 2019. Choose the perfect bike that fits your needs!"
     },
     "berlin-triathlon-xl": {
-      "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need.",
-      "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
+      "meta-description": "Rent a road bike with listnride for the Berlin Triathlon 2020. Choose a high-quality racing bike that fits you best!",
+      "meta-title": "Rent a road bike for the Berlin Triathlon XL 2019 | listnride"
     },
     "vatternrundan": {
       "meta-title": "Rent a road bike for Vätternrundan 2020 | listnride",
@@ -740,8 +740,8 @@
     "password-not-match": "Passwords do not match",
     "verification-code-error": "Error: the verification code is invalid.",
     "address-save-error": "The address could not be saved",
-    "request-create-rider": "The bike was requested. You will be charged when lister accepts your request.",
-    "request-created": "Request Created",
+    "request-create-rider": "You successfully requested the bike.  Only when your request gets accepted, payment will take place!",
+    "request-created": "Booking request was sent!",
     "profile-verified": "Congratulations, your profile was successfully verified!",
     "profile-updated": "Your description was updated.",
     "error-upload-profile-picture": "There was an error in uploading your profile picture",
