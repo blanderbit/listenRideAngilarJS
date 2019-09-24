@@ -1,7 +1,7 @@
 angular
   .module('listnride')
   .factory('bikeEventHelper', function (
-    date,
+    dateHelper,
     $translate,
   ) {
     const slotableEventFamilyIds = [35, 36, 37, 38, 39];
@@ -119,7 +119,7 @@ angular
         eventEndTime: 21,
         eventMonth: 8, // Months start at 0
         eventYear: 2019,
-        eventMonthName: date.getMonthLangKey(8)
+        eventMonthName: dateHelper.getMonthLangKey(8)
       }
     }
 

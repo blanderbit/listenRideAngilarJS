@@ -29,6 +29,11 @@
   ) !important;
 }
 
+.b-sch-style-plain.b-sch-color-green .b-sch-event:not(.b-milestone) {
+  border: 2px solid #fff!important;
+}
+
+
 .booking-calendar .b-sch-event.pending.changing-status {
   opacity: 0.75;
   animation: barberpole 3s linear infinite;

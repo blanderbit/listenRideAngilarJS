@@ -160,7 +160,11 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
     }
 
     function bikeNotAvailable(date) {
-      return calendarHelper.bikeNotAvailable(date, vm.disabledDates);
+      return calendarHelper.bikeNotAvailable({
+        date,
+        bikeAvailabilities: vm.disabledDates,
+        timeslots: vm.timeslots,
+      });
     }
 
     // The data for cluster bike will be reserved only if all bikes in cluster reserved on this date

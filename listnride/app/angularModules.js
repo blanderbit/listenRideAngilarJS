@@ -52,7 +52,6 @@ import './services/base64/base64.service.js';
 import './services/authentication/authentication.service.js';
 import './services/sha256/sha256.service.js';
 import './services/api/api.service.js';
-import './services/date/date.service.js';
 import './services/verification/verification.service.js';
 import './services/bike-options/bike-options.service.js';
 import './services/bike-cluster/bike-cluster.service.js';
@@ -66,6 +65,7 @@ import './services/country-code-translator/country-code-translator.service.js';
 import './services/notification/notification.service.js';
 
 // helpers
+import './services/date-helper/date-helper.service.js';
 import './services/application-helper/application-helper.service.js';
 import './services/calendar-helper/calendar-helper.service.js';
 import './services/payment-helper/payment-helper.service.js';
