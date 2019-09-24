@@ -31,7 +31,7 @@ angular.module('booking', [])
       bikeOptions,
       bikeCluster,
       userHelper,
-      date
+      dateHelper
     ) {
       const booking = this;
 
@@ -745,8 +745,8 @@ angular.module('booking', [])
         var data = {
           user_id: $localStorage.userId,
           ride_id: booking.bikeId,
-          start_date: date.getDateUTC(booking.startDate).toISOString(),
-          end_date: date.getDateUTC(booking.endDate).toISOString(),
+          start_date: dateHelper.getDateUTC(booking.startDate).toISOString(),
+          end_date: dateHelper.getDateUTC(booking.endDate).toISOString(),
           instant: !!booking.shopBooking,
           insurance: {
             premium: booking.isPremium
