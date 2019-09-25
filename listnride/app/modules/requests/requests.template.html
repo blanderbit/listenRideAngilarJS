@@ -77,32 +77,20 @@
   <div flex-order="2" layout="column" hide-xs flex="75" flex-sm="60">
     <md-progress-linear class="md-accent" ng-if="requests.loadingChat" md-mode="query"></md-progress-linear>
     <div flex="90" scroll-glue="requests.request.glued" class="chat lnr-maxh-100">
-      <message
-        ng-repeat="message in requests.request.messages"
+      <message ng-repeat="message in requests.request.messages"
         content="message.content"
         sender="message.sender"
         status="message.status"
         request="requests.request"
+        payment-failed="requests.isPaymentFailed(requests.request.payment_status)"
+        retry-clicked="requests.retryButtonClicked"
         message-time="message.created_at_readable"
         time="message.created_at"
         confirm-booking="requests.confirmBooking()"
         accept-booking="requests.acceptBooking()"
+        retry-payment="requests.retryPayment"
         show-rating-dialog="requests.showRatingDialog()">
       </message>
-
-      <!-- RETRY FLOW -->
-      <div
-        ng-if="requests.request.status == requests.STATUSES.REQUESTED && requests.isPaymentFailed(requests.request.payment_status)"
-        layout="column"
-        layout-align="center center">
-        <p>{{ 'request.payment-failed' | translate }}</p>
-        <md-button class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
-          ng-disabled="requests.retryButtonClicked"
-          ng-click="requests.retryPayment()">
-          {{ 'message.retry-payment' | translate }}
-        </md-button>
-      </div>
-
     </div>
     <form
       ng-if="requests.request.messages"

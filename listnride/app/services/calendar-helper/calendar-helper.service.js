@@ -1,7 +1,11 @@
-angular.module('listnride')
-  .factory('calendarHelper', function ($translate) {
-
-    var getWeekDay = function(date) {
+angular
+  .module('listnride')
+  .factory('calendarHelper', function (
+    $translate,
+    dateHelper,
+    userHelper
+  ) {
+    let getWeekDay = function(date) {
       var dayOfWeek = date.getDay() - 1;
       if (dayOfWeek == - 1) {
         dayOfWeek = 6;
@@ -9,7 +13,7 @@ angular.module('listnride')
       return dayOfWeek;
     };
 
-    var openHours = function(weekDay) {
+    let openHours = function(weekDay) {
       var workingHours = [];
       $.each( weekDay, function( key, value ) {
         var from = value.start_at / 3600;
@@ -19,7 +23,7 @@ angular.module('listnride')
       return workingHours
     };
 
-    var isTimeAvailable = function(timeIndex, openingHours, date) {
+    let isTimeAvailable = function(timeIndex, openingHours, date) {
       if (date === undefined) return true;
 
       var isAvailable = true;
@@ -42,7 +46,7 @@ angular.module('listnride')
       return isAvailable;
     };
 
-    var isTimeInTimeslots = function(hour, timeslots) {
+    let isTimeInTimeslots = function(hour, timeslots) {
       let timeslotsRange = [];
       _.forEach(timeslots, function(timeslot) {
         let timeslotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour + 1);
@@ -51,7 +55,7 @@ angular.module('listnride')
       return _.includes(timeslotsRange, hour);
     };
 
-    var isDayAvailable = function(openingHours, date) {
+    let isDayAvailable = function(openingHours, date) {
       if (!openingHoursAvailable(openingHours)) return false;
 
       return _.isEmpty(openingHours.hours[getWeekDay(date)]);
@@ -122,30 +126,126 @@ angular.module('listnride')
       return used_part_day_slots;
     }
 
-    function bikeNotAvailable(date, bikeAvailabilities) {
-      let result = false;
-      _.forEach(bikeAvailabilities, function (slot) {
-        let start_at = moment.utc(slot.start_date);
-        let end_at = start_at.clone().add(slot.duration, 'seconds');
+    function isBikeNotAvailable({
+      date,
+      bike = {},
+      cluster,
+      timeslots
+    }) {
+      if (_.isEmpty(bike.availabilities)) return false;
+      return bikeNotAvailable({
+        date,
+        bikeAvailabilities: bike.availabilities,
+        timeslots
+      }) &&
+      isClusterNotAvailable({date, bike, cluster, timeslots });
+    }
 
-        // we should remove utc from this Date object before
-        let moment_date = moment.utc([date.getFullYear(), date.getMonth(), date.getDate()]);
+    function isClusterNotAvailable({date, bike, cluster, timeslots}) {
+      let isNotAvailable = true;
 
+      if (!bike.is_cluster) return isNotAvailable;
 
-        if (result) return result;
-        result = result || moment_date.isBetween(start_at, end_at, null, '[]') // all inclusive
-
+      _.forEach(cluster.variations, function (variant) {
+        isNotAvailable = isNotAvailable && bikeNotAvailable({date, bikeAvailabilities: variant.availabilities, timeslots})
       });
-      return result
+
+      return isNotAvailable;
+    }
+
+    // checks if we have unavailability set for this day
+    // works with full days
+    function bikeNotAvailable({
+      date,
+      bikeAvailabilities = [],
+      timeslots = []
+    }) {
+      let dayNotAvailable = false;
+      let m_date = dateHelper.m_getDateUTC(date);
+
+      let notAvailableDates = getNotAvailableDates(bikeAvailabilities);
+      dayNotAvailable = _.indexOf(notAvailableDates, m_date.format('YYYY-MM-DD')) !== -1;
+
+      // if bike has timeslots we need to check if a full day is unavailable
+      if (dayNotAvailable && timeslots.length) {
+        let dateTimeslotAvailable = [];
+
+        _.forEach(bikeAvailabilities, function (slot) {
+          let m_startDate = moment.utc(slot.start_date);
+          let m_endDate = m_startDate.clone().add(slot.duration, 'seconds');
+          let differenceInDays = dateHelper.durationDaysNew(m_startDate, m_endDate);
+
+          if (m_date.isBetween(m_startDate, m_endDate, 'day', '[]')) {
+            // if difference in days more than 1 day we set all days as unavailable
+            // or if both timeslots are not available
+            if (differenceInDays > 0 || isAllTimeslotsClosed(dateTimeslotAvailable, timeslots)) {
+              return dateTimeslotAvailable = [false, false];
+            }
+
+            // if it's in one day range, we should check if all timeslots are closed
+            let dayTimeRange = _.range(Number(m_startDate.format('HH')), Number(m_endDate.format('HH')) + 1);
+            let {isHalfDay, timeslotIndex} = dateHelper.isOnlyOneSlotPicked({
+              timeslots,
+              dayTimeRange
+            });
+            // if it's not a half day we should close both timeslots
+            if (!isHalfDay) {
+              dateTimeslotAvailable = [false, false];
+            } else {
+              dateTimeslotAvailable[timeslotIndex] = false;
+            }
+          }
+        });
+
+        dayNotAvailable = dateTimeslotAvailable.length ? isAllTimeslotsClosed(dateTimeslotAvailable, timeslots) : dayNotAvailable
+      }
+
+      return dayNotAvailable;
+    }
+
+    function isAllTimeslotsClosed(dateTimeslotAvailable, timeslots) {
+      return dateTimeslotAvailable.length == timeslots.length &&
+        dateTimeslotAvailable[0] === false && dateTimeslotAvailable[1] === false;
+    }
+
+    // TODO: we should do this only one time
+    // when we take requests/availabilities from backend
+    // and then use this for optimization
+    function getNotAvailableDates(bikeAvailabilities) {
+      return _.flattenDeep(bikeAvailabilities.map((bikeAvailability) => {
+        return transformToDatesArray({
+          startDate: bikeAvailability.start_date,
+          duration: bikeAvailability.duration
+        });
+      }));
+    }
+
+    /**
+     * transforms startDate and duration into array of dates
+     * @param {startDate} start date in utc timezone
+     * @param {duration} duration in seconds
+     * @returns {Array} array of string dates in follow format: YYYY-MM-DD
+     */
+    function transformToDatesArray({startDate, duration}) {
+      let m_startDate = moment.utc(startDate);
+      let m_endDate = m_startDate.clone().add(duration, 's');
+      let differenceInDays = dateHelper.durationDaysNew(m_startDate, m_endDate);
+      let dates = [];
+
+      for (let i = 0; i <= differenceInDays; i++) {
+        dates.push(m_startDate.clone().add(i, 'day').format('YYYY-MM-DD'));
+      }
+
+      return dates;
     }
 
     return {
+      isBikeNotAvailable,
       isTimeAvailable,
       isDayAvailable,
       getInitHours,
       checkIsOpeningHoursEnabled,
       isTimeInTimeslots,
       countTimeslots,
-      bikeNotAvailable
     };
   });

@@ -1,7 +1,11 @@
 import { isString } from "util";
 
-angular.module('listnride').factory('price', ['$translate', 'date',
-  function($translate, date) {
+angular
+  .module('listnride')
+  .factory('price', function(
+    $translate,
+    dateHelper
+  ) {
     const PRICES_BY_DAYS = new Map([
       ['1', {start_at: 0}],
       ['1/2', {start_at: 43200}],
@@ -77,7 +81,7 @@ angular.module('listnride').factory('price', ['$translate', 'date',
         const includeFee = !isShopUser;
 
         if (startDate && endDate) {
-          var days = date.durationDays(startDate, endDate);
+          var days = dateHelper.durationDays(startDate, endDate);
         }
 
         // Check if days are valid
@@ -119,24 +123,15 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       },
 
       checkHalfDayEnabled(startDate, endDate, timeslots) {
-        if (date.durationDaysNew(startDate, endDate) > 0) return false;
+        if (dateHelper.durationDaysNew(startDate, endDate) > 0) return false;
 
-        let dateTimeRange = _.range(startDate.getHours(), endDate.getHours() + 1);
-        let halfDay = false;
-
-        _.forEach(timeslots, (timeslot) => {
-          if (!halfDay){
-            let timeSlotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour + 1);
-            let intersection  = _.intersection(timeSlotRange, dateTimeRange);
-            let extremeTime   = intersection.toString() == timeslot.end_time.hour;
-
-            if (intersection.length > 0 && !extremeTime) {
-              halfDay = intersection.toString() == dateTimeRange.toString();
-            }
-          }
+        const dayTimeRange = _.range(startDate.getHours(), endDate.getHours() + 1);
+        const { isHalfDay } = dateHelper.isOnlyOneSlotPicked({
+          timeslots,
+          dayTimeRange
         });
 
-        return halfDay;
+        return isHalfDay;
       },
 
       generateDefaultPrices(hasHalfDay) {
@@ -347,4 +342,4 @@ angular.module('listnride').factory('price', ['$translate', 'date',
       }
     };
   }
-]);
+);

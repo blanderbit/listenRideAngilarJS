@@ -17,8 +17,11 @@ angular.module('receipt', []).component('receipt', {
     insuranceAllowed: '<',
     timeslots: '<'
   },
-  controller: function ReceiptController(date, price) {
-      var receipt = this;
+  controller: function ReceiptController(
+    dateHelper,
+    price
+  ) {
+      const receipt = this;
       receipt.balance = 0;
       receipt.isHalfDayBook = false;
 
@@ -52,8 +55,8 @@ angular.module('receipt', []).component('receipt', {
           timeslots: receipt.timeslots
         });
 
-        receipt.duration = date.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
-        receipt.durationDays = date.durationDays(receipt.startDate, receipt.endDate);
+        receipt.duration = dateHelper.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
+        receipt.durationDays = dateHelper.durationDays(receipt.startDate, receipt.endDate);
 
         if (receipt.startDate) {
           receipt.isHalfDayBook = price.checkHalfDayEnabled(receipt.startDate, receipt.endDate, receipt.timeslots);

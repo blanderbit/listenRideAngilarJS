@@ -205,7 +205,7 @@
     }
   },
   "request": {
-    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+    "payment-failed": "Uh-oh. Desafortunadamente, tu pago falló. Por favor, comprueba los datos que has introducido, así como la configuración de pago de tu proveedor de pagos!"
   },
   "cyclingworld": {
     "event": {
@@ -237,9 +237,9 @@
   },
   "events": {
     "berlin-triathlon": {
-      "description": "Que: <b>Berlin Triathlon</b> | Dónde: <b>Berlin</b> | Cuando: <b>2 Junio 2019</b>",
-      "meta-title": "Rent a road bike for Berlin Triathlon 2019 | listnride",
-      "meta-description": "Rent a road bike securely online with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need."
+      "description": "Que: <b>Berlin Triathlon</b> | Dónde: <b>Berlin</b> | Cuando: <b>6-7 Junio 2020</b>",
+      "meta-title": "Alquila una bicicleta de carretera para el Triatlón de Berlin 2020 | lisntride ",
+      "meta-description": "Alquila una bicicleta de carretera para el Triatlón de Berlin 2020. ¡Elije una bicicleta de carreteras de alta calidad que te quede mejor!"
     },
     "msr": {
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
@@ -310,7 +310,7 @@
       "meta-description": "Con listnride, puedes alquilar bicicleta de carretera de manera fácil y segura para Vätternrundan 2019. ¡Elije la bicicleta que más se adapte a tus necesidades!"
     },
     "berlin-triathlon-xl": {
-      "meta-description": "Rent a road bike online easy and secure with listnride for Berlin Triathlon 2019. Choose the perfect bike that fits your need.",
+      "meta-description": "Alquila una bicicleta de carretera para el Triatlón de Berlin 2020. ¡Elije una bicicleta de carreteras de alta calidad que te quede mejor!",
       "meta-title": "Rent a road bike for Berlin Triathlon XL 2019 | listnride"
     },
     "vatternrundan": {
@@ -981,16 +981,16 @@
   },
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} de {{user.city}} le gustaría alquilar su <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>Número de la Bicicleta: {{ride.bicycle_number}}.<br>Bicicleta: {{ride.name}}.<br>Fecha: {{timespan_short}}. <br>Tamaño del marco: {{ride.frame_size? ride.frame_size: 'no especificado'}}. <br><br>Por favor, acepta o rechaza la solicitud, y discute más detalles utilizando el chat.",
-    "11": "Su reservación fue cancelada.",
+    "11": "La reservación fue cancelada.",
     "3": "Has aceptado la solicitud. La bici ahora está reservada y la alquilarás desde {{timespan}}. Los datos de contacto son los siguientes, también te los hemos enviado por correo electrónico <br>\nNombre: {{user.first_name}}{{user.last_name}}\n<br>\nTeléfono: {{user.pretty_phone_number}}\n<br>Dirección: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}},{{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Gracias por confirmar la recuperación de tu bicicleta y calificar {{user.first_name}}. El alquiler fue un éxito y el dinero se transferirá a la cuenta bancaria que proporcionó durante los siguientes 7 días hábiles. <br><br>En caso de alguna duda o sugerencia, estaremos encantados de recibirlos en <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "Rechazó la solicitud. Dígale al ciclista por qué no puede alquilarle la bici.",
-    "9": "Lamentablemente, la solicitud expiró.",
-    "10": "Su reserva fue cancelada por el sistema"
+    "9": "Lamentablemente, el Rider canceló la solicitud.",
+    "10": "La reservación fue cancelada por el sistema"
   },
   "rideChat": {
     "1": "Has solicitado la <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} a partir de {{timespan}} Puedes hablar con {{lister.display_name}} aquí abajo. Solo cuando su solicitud es aceptada, el pago se realiza y la bicicleta se reserva.",
-    "11": "La reserva de su bicicleta fue cancelada.",
+    "11": "La reservación fue cancelada.",
     "3": "Enhorabuena, {{lister.first_name}}ha aceptado tu solicitud, por lo que la bici se ha reservado correctamente. Queda con el anunciante como se acordó y recoge la bici. Los datos de contacto son los siguientes, también los hemos enviado a tu correo electrónico <br><br>Nombre:. {{lister.first_name}}{{lister.last_name}}, <br>Teléfono: {{lister.pretty_phone_number}}, <br>Dirección: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "¿Tuviste una gran experiencia con la bicicleta que alquilaste de {{lister.first_name}}? Comparte tu experiencia dejando una breve reseña. Esto ayudará a los futuros corredores a comprender mejor qué esperar.",
     "7": "Gracias por la valoración, el alquiler se realizó con éxito.",

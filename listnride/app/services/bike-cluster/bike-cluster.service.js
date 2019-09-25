@@ -1,7 +1,12 @@
 'use strict';
 
-angular.module('listnride')
-    .factory('bikeCluster', ['api', 'date', 'bikeOptions', function (api, date, bikeOptions) {
+angular
+  .module('listnride')
+  .factory('bikeCluster', function (
+    api,
+    dateHelper,
+    bikeOptions
+  ) {
       return {
         getSizeTranslations: function (sizes) {
           bikeOptions.sizeOptions([bikeOptions.allSizesValue]).then(function (resolve) {
@@ -57,7 +62,7 @@ angular.module('listnride')
 
         getAvailableClusterBikes(clusterId, startDate, endDate) {
           let duration = moment
-            .duration(date.diff(startDate, endDate))
+            .duration(dateHelper.diff(startDate, endDate))
             .as('seconds');
 
           return api
@@ -90,4 +95,5 @@ angular.module('listnride')
           return isCluster ? this.findFirstAvailableVariantId(bikeVariations, pickedBikeVariant, availableBikeIds) : bikeId;
         }
       };
-    }]);
+    }
+  );

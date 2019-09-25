@@ -30,7 +30,7 @@ angular.module('bike').component('calendar', {
     $mdMedia,
     $window,
     $analytics,
-    date,
+    dateHelper,
     price,
     api,
     authentication,
@@ -510,15 +510,20 @@ angular.module('bike').component('calendar', {
       }
 
       // check if availabilities exist and concat with previous results
-      if (!_.isEmpty(calendar.bikeAvailabilities)) {
-        isDateClose = isDateClose || bikeNotAvailable(date);
+      if (!_.isEmpty(calendar.bike.availabilities)) {
+        isDateClose = isDateClose || isNotAvailable(date)
       }
 
       return isDateClose;
     }
 
-    function bikeNotAvailable(date) {
-      return calendarHelper.bikeNotAvailable(date, calendar.bikeAvailabilities);
+    function isNotAvailable(date) {
+      return calendarHelper.isBikeNotAvailable({
+        date,
+        bike: calendar.bike,
+        cluster: calendar.bikeCluster,
+        timeslots: calendar.timeslots
+      });
     }
 
     function openingHoursAvailable() {
@@ -595,7 +600,7 @@ angular.module('bike').component('calendar', {
     }
 
     function initOverview() {
-      calendar.duration = date.duration(undefined, undefined, 0);
+      calendar.duration = dateHelper.duration(undefined, undefined, 0);
       calendar.subtotal = 0;
       calendar.lnrFee = 0;
       calendar.total = 0;
@@ -609,9 +614,9 @@ angular.module('bike').component('calendar', {
       resetSizePicker();
       if (calendar.isDateValid()) {
         var invalidDays = countInvalidDays(startDate, endDate);
-        calendar.duration = date.duration(startDate, endDate, invalidDays);
-        calendar.durationDays = date.durationDays(startDate, endDate);
-        calendar.durationDaysNew = date.durationDaysNew(startDate, endDate);
+        calendar.duration = dateHelper.duration(startDate, endDate, invalidDays);
+        calendar.durationDays = dateHelper.durationDays(startDate, endDate);
+        calendar.durationDaysNew = dateHelper.durationDaysNew(startDate, endDate);
         if (calendar.hasTimeSlots && calendar.durationDays <= 1) {
           calendar.isHalfDayBook = price.checkHalfDayEnabled(startDate, endDate, calendar.timeslots);
           calendar.halfDayPrice = price.getPriceFor('1/2 day', calendar.prices);
@@ -659,7 +664,7 @@ angular.module('bike').component('calendar', {
         });
 
       } else {
-        calendar.duration = date.duration(undefined, undefined, 0);
+        calendar.duration = dateHelper.duration(undefined, undefined, 0);
         calendar.durationDays = 0;
         calendar.durationDaysNew = 0;
         calendar.subtotal = 0;

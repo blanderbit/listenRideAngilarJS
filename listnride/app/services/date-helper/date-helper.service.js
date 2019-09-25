@@ -1,12 +1,13 @@
-'use strict';
-
-angular.module('listnride').factory('date', ['$translate',
-  function($translate) {
-    var calculateDays = function(startDate, endDate) {
+angular
+  .module('listnride')
+  .factory('dateHelper', function(
+    $translate
+  ) {
+    let calculateDays = function(startDate, endDate) {
         var hours = Math.abs(endDate - startDate) / (1000*60*60);
         return Math.max(1, Math.ceil(hours / 24));
     };
-    const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+    const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
     return {
       getMonthLangKey: (monthIndex) => monthNames[monthIndex],
@@ -15,8 +16,12 @@ angular.module('listnride').factory('date', ['$translate',
       },
       durationDaysNew: function(startDate, endDate) {
         // to count difference only by 'days' we need reset time there
-        let m_startDate = moment(startDate).startOf('day');
-        let m_endDate = moment(endDate).startOf('day');
+        let m_startDate = moment.isMoment(startDate) ? startDate : this.m_getDateUTC(startDate);
+        let m_endDate = moment.isMoment(endDate) ? endDate : this.m_getDateUTC(endDate);
+
+        m_startDate = moment(m_startDate).startOf('day');
+        m_endDate = moment(m_endDate).startOf('day');
+
         return m_endDate.diff(m_startDate, 'days');
       },
       durationDaysPretty: function(startDate, endDate) {
@@ -66,59 +71,47 @@ angular.module('listnride').factory('date', ['$translate',
           return displayDuration;
         }
       },
-
-      subtotal: function(startDate, endDate, priceHalfDay, priceDay, priceWeek, minHoursDay, invalidDays) {
-        minHoursDay = minHoursDay || 6;
-
-        if (startDate === undefined || endDate === undefined) {
-          return 0;
-        } else {
-          var diff = Math.abs(startDate - endDate);
-
-          var seconds = (diff / 1000) | 0;
-          diff -= seconds * 1000;
-          var minutes = (seconds / 60) | 0;
-          seconds -= minutes * 60;
-          var hours = (minutes / 60) | 0;
-          minutes -= hours * 60;
-          var days = (hours / 24) | 0;
-          hours -= days * 24;
-          days = days - invalidDays;
-          var weeks = (days / 7) | 0;
-          days -= weeks * 7;
-
-          var value = priceWeek * weeks;
-          value += priceDay * days;
-
-          if (weeks == 0 && days == 0) {
-            value += (hours <= minHoursDay)? priceHalfDay * 1 : priceDay * 1;
-          } else {
-            if (0 < hours && hours < minHoursDay) {
-                value += (priceHalfDay * 1);
-            } else if (hours >= minHoursDay) {
-                value += (priceDay * 1);
-            }
-          }
-
-          if (weeks == 0 && value > priceWeek) {
-            value = priceWeek * 1;
-          }
-
-          return value;
-        }
-      },
-
       diff: function(startDate, endDate) {
         return Math.abs(new Date(startDate) - new Date(endDate));
       },
-
       getDateUTC(dateObject) {
         return new Date(
           Date.UTC(dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate(), dateObject.getHours())
         );
+      },
+      m_getDateUTC(dateObject) {
+        return moment.utc([dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate(), dateObject.getHours()]);
+      },
+      isOnlyOneSlotPicked({
+        timeslots,
+        dayTimeRange
+      }) {
+        let isHalfDay = false;
+        let timeslotIndex = null;
+
+        // dayTimeRange can't contain hours that are not in timeslots
+        // so we should exclude not valid numbers that can appear
+        let timeslotsRange = _.flatMapDeep(_.map(timeslots, (timeslot) => _.range(timeslot.start_time.hour, timeslot.end_time.hour + 1)));
+        dayTimeRange = _.intersection(timeslotsRange, dayTimeRange);
+
+        // check if only one timeslot is picked
+        _.forEach(timeslots, (timeslot, index) => {
+          if (!isHalfDay) {
+            let timeSlotRange = _.range(timeslot.start_time.hour, timeslot.end_time.hour + 1);
+            let intersection = _.intersection(timeSlotRange, dayTimeRange);
+            let extremeTime = intersection.toString() == timeslot.end_time.hour;
+
+            if (intersection.length > 0 && !extremeTime) {
+              isHalfDay = intersection.toString() == dayTimeRange.toString();
+              if (isHalfDay) timeslotIndex = index;
+            }
+          }
+        });
+
+        return {isHalfDay, timeslotIndex}
       }
 
     };
 
   }
-]);
+);

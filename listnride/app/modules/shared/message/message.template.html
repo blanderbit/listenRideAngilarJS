@@ -56,7 +56,7 @@
   </a>
 </p>
 
-<div ng-if="message.displayableNotification()" layout="row" layout-align="center end">
+<div ng-if="message.displayableNotification() && !message.paymentFailed" layout="row" layout-align="center end">
   <div
       class="lnr-message status-message"
       flex="40"
@@ -120,7 +120,7 @@
       </div>
     </div>
 
-    <div ng-if="message.request.rideChat && message.status == message.STATUSES.REQUESTED">
+    <div ng-if="message.request.rideChat && message.status == message.STATUSES.REQUESTED && !message.paymentFailed">
       <div layout-gt-xs="row" layout="column" layout-align="space-around center" layout-align-gt-xs="center center">
         <confirmation
             button-class="'message-button md-raised lnr-m-0 md-button md-ink-ripple md-warn'"
@@ -163,4 +163,16 @@
       </div>
     </div>
   </div>
+</div>
+
+<!-- RETRY FLOW -->
+<div
+  ng-if="message.request.rideChat && message.status == message.STATUSES.REQUESTED && message.paymentFailed"
+  layout="column" layout-align="center center">
+  <p>{{ 'request.payment-failed' | translate }}</p>
+  <md-button
+    class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
+    ng-disabled="message.retryClicked" ng-click="message.retryPayment()">
+    {{ 'message.retry-payment' | translate }}
+  </md-button>
 </div>
