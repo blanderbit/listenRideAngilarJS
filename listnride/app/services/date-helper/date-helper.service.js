@@ -16,8 +16,8 @@ angular
       },
       durationDaysNew: function(startDate, endDate) {
         // to count difference only by 'days' we need reset time there
-        let m_startDate = moment.isMoment(startDate) ? startDate : m_getDateUTC(startDate);
-        let m_endDate = moment.isMoment(endDate) ? endDate : m_getDateUTC(endDate);
+        let m_startDate = moment.isMoment(startDate) ? startDate : this.m_getDateUTC(startDate);
+        let m_endDate = moment.isMoment(endDate) ? endDate : this.m_getDateUTC(endDate);
 
         m_startDate = moment(m_startDate).startOf('day');
         m_endDate = moment(m_endDate).startOf('day');
