@@ -131,7 +131,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
         return [false, "date-past", ""];
       } else if (isReserved(date)) {
         return [false, "date-reserved", ""];
-      } else if (bikeNotAvailable(date) || calendarHelper.isDayAvailable(vm.openingHours, date)) {
+      } else if (isNotAvailable(date) || calendarHelper.isDayAvailable(vm.openingHours, date)) {
         return [false, "date-closed", ""];
       } else {
         return [true, "date-available", ""];
@@ -159,11 +159,12 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
       }
     }
 
-    function bikeNotAvailable(date) {
-      return calendarHelper.bikeNotAvailable({
+    function isNotAvailable(date) {
+      return calendarHelper.isBikeNotAvailable({
         date,
-        bikeAvailabilities: vm.disabledDates,
-        timeslots: vm.timeslots,
+        bike: vm.bike,
+        cluster: vm.bikeCluster,
+        timeslots: vm.timeslots
       });
     }
 
