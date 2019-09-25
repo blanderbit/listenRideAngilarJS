@@ -510,18 +510,19 @@ angular.module('bike').component('calendar', {
       }
 
       // check if availabilities exist and concat with previous results
-      if (!_.isEmpty(calendar.bikeAvailabilities)) {
-        isDateClose = isDateClose || bikeNotAvailable(date);
+      if (!_.isEmpty(calendar.bike.availabilities)) {
+        isDateClose = isDateClose || isNotAvailable(date)
       }
 
       return isDateClose;
     }
 
-    function bikeNotAvailable(date) {
-      return calendarHelper.bikeNotAvailable({
+    function isNotAvailable(date) {
+      return calendarHelper.isBikeNotAvailable({
         date,
-        bikeAvailabilities: calendar.bikeAvailabilities,
-        timeslots: calendar.timeslots,
+        bike: calendar.bike,
+        cluster: calendar.bikeCluster,
+        timeslots: calendar.timeslots
       });
     }
 

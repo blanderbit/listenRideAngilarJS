@@ -126,6 +126,32 @@ angular
       return used_part_day_slots;
     }
 
+    function isBikeNotAvailable({
+      date,
+      bike,
+      cluster,
+      timeslots
+    }) {
+      return bikeNotAvailable({
+        date,
+        bikeAvailabilities: bike.availabilities,
+        timeslots
+      }) &&
+      isClusterNotAvailable({date, bike, cluster, timeslots });
+    }
+
+    function isClusterNotAvailable({date, bike, cluster, timeslots}) {
+      let isNotAvailable = true;
+
+      if (!bike.is_cluster) return isNotAvailable;
+
+      _.forEach(cluster.variations, function (variant) {
+        isNotAvailable = isNotAvailable && bikeNotAvailable({date, bikeAvailabilities: variant.availabilities, timeslots})
+      });
+
+      return isNotAvailable;
+    }
+
     // checks if we have unavailability set for this day
     // works with full days
     function bikeNotAvailable({
@@ -213,12 +239,12 @@ angular
     }
 
     return {
+      isBikeNotAvailable,
       isTimeAvailable,
       isDayAvailable,
       getInitHours,
       checkIsOpeningHoursEnabled,
       isTimeInTimeslots,
       countTimeslots,
-      bikeNotAvailable
     };
   });
