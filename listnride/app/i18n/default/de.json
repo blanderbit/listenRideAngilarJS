@@ -205,7 +205,7 @@
     }
   },
   "request": {
-    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+    "payment-failed": "Oops.. Leider ist deine Zahlung fehlgeschlagen. Bitte prüfe die von dir eingegebenen Daten sowie die Zahlungseinstellungen des Zahlungsdienstleisters nochmals!"
   },
   "cyclingworld": {
     "event": {
@@ -988,12 +988,12 @@
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst Dein Rad vom {{timespan}}! Die Kontaktdaten des Mieters sind wie folgt. Eine Buchungsbestätigung wurde dir per E-Mail gesendet.<br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich und das Geld wird innerhalb von 7 Werktagen auf das von dir angegebene Konto überwiesen. <br><br>Bei weiteren Fragen oder Anregungen schreibe uns gerne eine Nachricht unter hello@listnride.com",
     "8": "Du hast die Anfrage abgelehnt. Bitte schreibe dem Mieter warum du ihm das Rad nicht vermieten konntest.",
-    "9": "Die Anfrage ist leider abgelaufen.",
+    "9": "Leider hat der Mieter die Anfrage abgebrochen.",
     "10": "Die Buchung wurde vom System storniert"
   },
   "rideChat": {
     "1": "Du hast das <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> von {{lister.display_name}} für {{timespan}} angefragt. Du kannst jetzt im Chat mit {{lister.display_name}} noch offene Fragen klären. Eine zahlungspflichtige Buchung erfolgt erst nach Bestätigung der Anfrage durch den Vermieter. ",
-    "11": "Die Buchung deines Leihrades wurde storniert.",
+    "11": "Die Buchung wurde storniert.",
     "3": "Glückwunsch, {{lister.first_name}} hat deine Anfrage angenommen, damit ist das Rad erfolgreich gebucht. Triff dich zum vereinbarten Zeitpunkt mit dem Vermieter um das Rad abzuholen. Die Kontaktdaten sind wie folgt, alle Details wurden dir auch per E-Mail gesendet.<br><br>Name: {{lister.first_name}} {{lister.last_name}}<br>Telefon: {{lister.pretty_phone_number}}<br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hattest du eine großartige Erfahrung mit dem Fahrrad von {{lister.first_name}}? Teile uns deine deine Erfahrungen, indem du eine kurze Bewertung hinterlast. Dies hilft zukünftigen Radfahrern, besser zu verstehen, was zu erwarten ist.",
     "7": "Vielen Dank für die Bewertung. Die Vermietung war erfolgreich.",

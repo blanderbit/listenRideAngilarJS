@@ -205,7 +205,7 @@
     }
   },
   "request": {
-    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+    "payment-failed": "Uh-oh. Malheureusement, votre paiement a échoué. Veuillez vérifier les données que vous avez saisies, ainsi que les paramètres de paiement de votre fournisseur de paiement !"
   },
   "cyclingworld": {
     "event": {
@@ -466,7 +466,7 @@
       },
       "cyclassics-hamburg": {
         "meta-title": "Louez un vélo de route pour le Cyclassics de Hamburg sur listnride",
-        "meta-description": "Louez le vélo de route pour le Cyclassics de Hambourg facilement en ligne!"
+        "meta-description": "Louez un vélo de route pour le Cyclassics de Hambourg facilement en ligne!"
       },
       "triathlon-hamburg": {
         "meta-title": "Louez un vélo de route pour le Triathlon de Hamburg sur listnride",
@@ -988,12 +988,12 @@
     "3": "Vous avez accepté la demande, et le vélo est réservé. Vous le louerez à partir de {{timespan}}! Les coordonnées sont les suivantes, nous vous les avons également envoyées par courrier électronique.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
     "8": "Vous avez rejeté la demande. Veuillez donner une raison pourquoi vous ne pouvez pas louer le vélo.",
-    "9": "Malheureusement, la demande a expiré.",
+    "9": "Malheureusement, le Rider a annulé la demande.",
     "10": "Votre réservation a été annulée par le système"
   },
   "rideChat": {
     "1": "Vous avez fait une demande pour le <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} a partir de {{timespan}}. Vous pouvez parler avec {{lister.display_name}} ci-dessous. C'est seulement quand votre demande será acceptée, que le paiement será effectué et que le vélo será réservé.",
-    "11": "La réservation de votre vélo a été annulée.",
+    "11": "La réservation a été annulée.",
     "3": "Félicitations, {{lister.first_name}}a accepté votre demande. Le vélo a donc été réservé. Rencontrez le Lister comme convenu et récupérez le vélo. Les coordonnées sont ci-dessous, nous les avons aussi envoyé par e-mail <br><br>Nom:. {{lister.first_name}}{{lister.last_name}}, <br>Téléphone: {{lister.pretty_phone_number}}, <br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\"> {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "Avez-vous eu une bonne expérience avec le vélo de {{lister.first_name}}? Partagez votre expérience en laissant un court commentaire. Cela aidera les futurs cyclistes à mieux comprendre à quoi s'attendre.",
     "7": "Merci d'avoir noté, la location a été complétée avec succès.",
@@ -1028,7 +1028,7 @@
     "sign-up": "S'inscrire",
     "sign-up-to-book": "Inscrivez-vous pour réserver le vélo",
     "sign-up-with-facebook": "Inscrivez-vous avec Facebook",
-    "sign-up-divider-text": "Accepter nos termes et conditions",
+    "sign-up-divider-text": "Acceptez nos termes et conditions",
     "agree-terms-and-policy": "Accepter nos conditions d'utilisation et notre politique de confidentialité",
     "member-already": "Déjà inscrit?",
     "business": "Vous gérez un magasin de vélos ?",
@@ -1103,7 +1103,7 @@
     "default-placeholder": "Où voudriez-vous louer un vélo?"
   },
   "search": {
-    "no-bikes": "Il n'y a malheureusement pas encore de vélos à cet endroit. Comme nous grandissons rapidement, veuillez vérifier à nouveau bientôt, nous aurons probablement des vélos enregistrés ici d'ici là! Sinon, essayez de chercher un autre endroit à proximité.\n<br><br>\nAidez les autres à trouver d'excellents vélos en inscrivant votre propre vélo ou en communiquant avec votre magasin de vélo local pour les embarquer avec nous ! ",
+    "no-bikes": "Il n'y a malheureusement pas encore de vélos à cet endroit. Comme nous grandissons rapidement, veuillez vérifier à nouveau dans quelque temps, nous aurons probablement des vélos enregistrés d'ici là! Sinon, essayez de chercher un autre endroit à proximité.\n<br><br>\nAidez les autres à trouver d'excellents vélos en inscrivant votre propre vélo ou en communiquant avec votre magasin de vélo pour les embarquer avec nous ! ",
     "unisize": "Unisize",
     "book-multiple-bikes": "Location de vélos pour les grands groupes",
     "bikes-found": "Vélos trouvés:",
@@ -1117,7 +1117,7 @@
     "pick-body-size": "Taille",
     "timespan": "Durée",
     "category": "Type de vélo",
-    "clear-filters": "Effacer les filtres",
+    "clear-filters": "Supprimer les filtres",
     "all-brands": "Toutes les marques",
     "all-bikes": "Tous les vélos"
   },
@@ -1176,7 +1176,7 @@
       "name": "Modèle",
       "description": "Description (min. 100 caractères)",
       "min-length-warning": "Au moins 100 caractères",
-      "size": "Hauteur du du coureur",
+      "size": "Hauteur du coureur",
       "frame-size": "Taille du cadre",
       "bicycle-number": "Numéro de vélo",
       "frame-number": "Numéro de cadre",
