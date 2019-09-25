@@ -202,7 +202,7 @@
     }
   },
   "request": {
-    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+    "payment-failed": "Uh Oh. Sfortunatamente, il tuo pagamento non è riuscito. Per favore ricontrolla i dati che hai inserito, così come le impostazioni di pagamento del tuo fornitore di servizi di pagamento!"
   },
   "cyclingworld": {
     "event": {
@@ -234,9 +234,9 @@
   },
   "events": {
     "berlin-triathlon": {
-      "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>2 Giugno 2019</b>",
-      "meta-title": "Noleggia una bici da strada per il Triathlon di Berlino 2019 | listnride",
-      "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2019. Scegli la bici perfetta per te."
+      "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>6-7 Giugno 2020</b>",
+      "meta-title": "Noleggia una bici da strada per il Triathlon di Berlino 2020 | listnride",
+      "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2020. Scegli la bici perfetta per te!"
     },
     "msr": {
       "meta-title": "Rent a road bike for MSR 2020 | listnride",
@@ -307,7 +307,7 @@
       "meta-description": "With listnride you can securely rent a road bike online for Velorace Dresden 2019. Choose the perfect bike that fits your needs!"
     },
     "berlin-triathlon-xl": {
-      "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon XL di Berlino 2019. Scegli la bici perfetta per te.",
+      "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2020. Scegli la bici perfetta per te!",
       "meta-title": "Noleggia una bici da strada per il Triathlon XL di Berlino 2019 | listnride"
     },
     "vatternrundan": {
@@ -982,12 +982,12 @@
     "3": "Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
     "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
-    "9": "Sfortunatamente, la richiesta è scaduta.",
+    "9": "Sfortunatamente, il Rider ha annullato la richiesta.",
     "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
     "1": "Hai richiesto il <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> da {{lister.display_name}} dal {{timespan}}. Puoi chattare con {{lister.display_name}}di seguito. Il pagamento viene effettuato solo quando la tua richiesta è accettata e la bicicletta è prenotata.",
-    "11": "La prenotazione della tua bicicletta a noleggio è stata annullata.",
+    "11": "La prenotazione è stata annullata.",
     "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
     "7": "Grazie per la valutazione, il noleggio è stato completato con successo.",

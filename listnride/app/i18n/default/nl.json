@@ -200,7 +200,7 @@
     }
   },
   "request": {
-    "payment-failed": "Oops, your payment has been failed. It can happen if you don't have enough money on your card or if you entered wrong password in verification modal"
+    "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!"
   },
   "cyclingworld": {
     "event": {
@@ -232,9 +232,9 @@
   },
   "events": {
     "berlin-triathlon": {
-      "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>2 June 2019</b>",
-      "meta-title": "Huur een racefiets voor Berlin Triathlon 2019 | listnride",
-      "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past."
+      "description": "Wat: <b>Berlin Triathlon</b> | Waar: <b>Berlin</b> | Wanneer: <b>6-7 Juni 2020</b>",
+      "meta-title": "Huur een racefiets voor de Berlin Triathlon 2020 | listnride",
+      "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor de Berlin Triathlon 2020. Kies de perfecte fiets die bij je past!"
     },
     "msr": {
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
@@ -305,7 +305,7 @@
       "meta-description": "With listnride you can securely rent a road bike online for Velorace Dresden 2019. Choose the perfect bike that fits your needs!"
     },
     "berlin-triathlon-xl": {
-      "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor Berlin Triathlon 2019. Kies de perfecte fiets die bij je past.",
+      "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor de Berlin Triathlon 2020. Kies de perfecte fiets die bij je past!",
       "meta-title": "Huur een racefiets voor Berlin Triathlon XL 2019 | listnride"
     },
     "vatternrundan": {
@@ -980,12 +980,12 @@
     "3": "Je hebt de boeking bevestigd. Je fiets is nu verhuurd voor de periode {{timespan}}! De contactgegevens zijn als volgt, alle gegevens worden je ook per e-mail toegestuurd.\n<br>\nNaam: {{user.first_name}} {{user.last_name}} \n<br>Nummer: {{user.pretty_phone_number}} \n<br>Adres: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
     "5": "Bedankt voor het bevestigen van de teruggave van de fiets als ook jouw recensie van {{user.first_name}}. De transactie is nu afgerond en het geld wordt binnen 7 werkdagen op de door jou aangegeven rekening uitbetaald. <br><br>Bij vragen en of opmerkingen stuur ons gerust een e-mail aan <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>",
     "8": "Je hebt de aanvraag afgewezen. Schrijf de aanvrager kort een berichtje waarom het niet lukt.",
-    "9": "Helaas is de aanvraag verlopen.",
+    "9": "Helaas heeft de huurder zijn aanvraag geannuleerd.",
     "10": "Je boeking is geannuleerd door systeem."
   },
   "rideChat": {
     "1": "Je hebt de <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\"> {{ride.name}} </a>van {{lister.display_name}} voor {{timespan}} aangevraagd. Je kan met {{lister.display_name}} via de chat onderaan contact opnemen. Zodra hij je aanvraag accepteert, wordt betaald en is de fiets geboekt.",
-    "11": "De boeking van je huurfiets is geannuleerd.",
+    "11": "De boeking is geannuleerd.",
     "3": "Gefeliciteerd, {{lister.first_name}} heeft je aanvraag geaccepteerd, je boeking is hiermee bevestigd. De contactgegevens zijn de volgende, alle details worden je ook per email toegestuurd.<br><br>Naam: {{lister.first_name}} {{lister.last_name}}<br>Nummer: {{lister.pretty_phone_number}}<br>Adres: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Heb je een geweldige ervaring gehad op de fiets van {{lister.first_name}}. Deel ons je ervaring middels een korte recensie. Dit zal toekomstige fietsers helpen beter te begrijpen wat ze kunnen verwachten.",
     "7": "Bedankt voor je recensie. De verhuur is succesvol verlopen.",
