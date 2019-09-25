@@ -14,10 +14,19 @@ angular.module('message',[]).component('message', {
     showRatingDialog: '&',
     request: '<',
     messageTime: '<',
-    time: '<'
+    time: '<',
+    paymentFailed: '<',
+    retryPayment: '<',
+    retryClicked: '<'
   },
-  controller: [ '$translate', '$localStorage', '$mdDialog', '$analytics', 'api', 'ENV', 'MESSAGE_STATUSES',
-    function MessageController($translate, $localStorage, $mdDialog, $analytics, api, ENV, MESSAGE_STATUSES) {
+  controller: function MessageController(
+    $translate,
+    $localStorage,
+    $mdDialog,
+    api,
+    ENV,
+    MESSAGE_STATUSES
+  ) {
       var message = this;
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
@@ -137,7 +146,7 @@ angular.module('message',[]).component('message', {
             return message.status == message.STATUSES.BOTH_SIDES_RATE
           } else {
             return message.status == message.STATUSES.CONFIRMED
-          }        
+          }
         }
       };
 
@@ -157,5 +166,4 @@ angular.module('message',[]).component('message', {
           });
       };
     }
-  ]
 });

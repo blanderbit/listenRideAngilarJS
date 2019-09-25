@@ -160,6 +160,7 @@ function lnrDatePickerController($scope, $translate, calendarHelper) {
     }
 
     function isNotAvailable(date) {
+      if (vm.bike && _.isEmpty(vm.bike.availabilities)) return false;
       return calendarHelper.isBikeNotAvailable({
         date,
         bike: vm.bike,
