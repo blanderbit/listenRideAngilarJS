@@ -128,10 +128,11 @@ angular
 
     function isBikeNotAvailable({
       date,
-      bike,
+      bike = {},
       cluster,
       timeslots
     }) {
+      if (_.isEmpty(bike.availabilities)) return false;
       return bikeNotAvailable({
         date,
         bikeAvailabilities: bike.availabilities,
