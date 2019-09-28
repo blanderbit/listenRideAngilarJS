@@ -62,7 +62,6 @@ angular.module('booking', [])
         booking.bike = {};
         booking.phoneConfirmed = 'progress';
         booking.selectedIndex = 0;
-        booking.hidden = false;
         booking.tabsDisabled = false;
         booking.voucherCode = "";
         booking.expiryDate = "";
@@ -78,6 +77,7 @@ angular.module('booking', [])
         booking.hasTimeSlots = false;
         booking.timeslots = [];
         booking.validCreditCard = false;
+        booking.showLogin = true;
 
         // METHODS
         booking.calendarHelper = calendarHelper;
@@ -548,9 +548,6 @@ angular.module('booking', [])
             setFirstTab();
 
             updatePrices();
-            $timeout(function () {
-              booking.hidden = false;
-            }, 120);
           },
           function (error) {
             notification.show(error, 'error');
