@@ -11,8 +11,9 @@
       <div class="lnr-list-form"
            flex="100"
            layout="column">
-        <h2 class="md-title" ng-show="showLogin">{{ 'booking.sign-in.login' | translate }}</h2>
-        <h2 class="md-title" ng-hide="showLogin">{{ 'booking.sign-in.new' | translate }}</h2>
+        <h2 class="md-title">
+          {{ signup.parent.showLogin ? 'booking.sign-in.login' : 'booking.sign-in.new' | translate }}
+        </h2>
         <br>
         <!--signup form-->
         <form
@@ -20,7 +21,7 @@
           name="signupForm"
           novalidate
           ng-submit="signup.parent.emailSignup()"
-          ng-hide="showLogin"
+          ng-show="!signup.parent.showLogin"
         >
           <div class="md-dialog-content">
             <div layout="column">
@@ -38,7 +39,7 @@
                   </md-button>
                 </div>
                 <div layout flex="50" flex-xs="100" layout-align="center center" class="booking__already-member" hide-xs>
-                  <a class="lnr-link" ng-click="showLogin = true">{{ 'booking.sign-in.already-member' | translate }}</a>
+                  <a class="lnr-link" ng-click="signup.parent.showLogin = true">{{ 'booking.sign-in.already-member' | translate }}</a>
                 </div>
               </div>
               <div class="lnr-middle-divider">
@@ -147,7 +148,7 @@
                 {{ 'booking.sign-in.register' | translate }}
               </md-button>
               <div layout layout-padding layout-align="center center" hide-gt-xs>
-                <a class="lnr-link" ng-click="showLogin = true">{{ 'booking.sign-in.already-member' | translate }}</a>
+                <a class="lnr-link" ng-click="signup.parent.showLogin = true">{{ 'booking.sign-in.already-member' | translate }}</a>
               </div>
             </div>
           </div>
@@ -155,14 +156,23 @@
 
         <!--login form-->
 
-        <form ng-cloak name="signup.parent.loginForm" novalidate ng-hide="!showLogin" ng-submit="signup.parent.authentication.loginGlobal(signup.parent.loginForm)">
+        <form
+          ng-cloak
+          name="signup.parent.loginForm"
+          novalidate
+          ng-show="signup.parent.showLogin"
+          ng-submit="signup.parent.authentication.loginGlobal(signup.parent.loginForm)">
           <div class="md-dialog-content" layout="column">
             <div layout="row" layout-xs="column">
               <md-button ng-click="signup.parent.authentication.connectFb(false, true)" class="md-primary md-lined lnr-btn-fb" style="margin: 0; padding: 0;" flex="50" flex-xs="100">
                  {{ 'booking.sign-in.login-facebook' | translate }}
               </md-button>
               <div layout flex="50" flex-xs="100" layout-align="center center" class="booking__already-member" hide-xs>
-                <a class="lnr-link" ng-click="showLogin = false">{{ 'booking.sign-in.not-member' | translate }}</a>
+                <a
+                  class="lnr-link"
+                  ng-click="signup.parent.showLogin = false">
+                  {{ 'booking.sign-in.not-member' | translate }}
+                </a>
               </div>
             </div>
             <div class="lnr-middle-divider">
@@ -206,7 +216,11 @@
                 {{ 'forms.log-in' | translate }}
               </md-button>
               <div layout layout-padding layout-align="center center" hide-gt-xs>
-                <a class="lnr-link" ng-click="showLogin = false">{{ 'booking.sign-in.not-member' | translate }}</a>
+                <a
+                  class="lnr-link"
+                  ng-click="signup.parent.showLogin = false">
+                  {{ 'booking.sign-in.not-member' | translate }}
+                </a>
               </div>
             </div>
           </div>
