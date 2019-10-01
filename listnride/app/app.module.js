@@ -36,6 +36,8 @@ angular.module('listnride', [
   'bookingCalendar',
   'paypalCheckoutButton',
   'breadcrumbs',
+  'bikeCardsList',
+
   /* app_core_end */
 
   /* app_extras_start */
