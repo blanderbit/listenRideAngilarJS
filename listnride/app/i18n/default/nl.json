@@ -732,8 +732,15 @@
     "password-not-match": "Wachtwoorden komen niet overeen",
     "verification-code-error": "Fout: de verificatiecode is ongeldig.",
     "address-save-error": "Het adres kon niet worden opgeslagen",
-    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
-    "request-created": "Request Created",
+    "request-create-rider": "Maak je geen zorgen, er worden nog geen kosten in rekening gebracht: de betaling vindt alleen plaats als en wanneer je aanvraag wordt geaccepteerd!",
+    "request-created": "Het boekingsverzoek is succesvol verzonden!",
+    "request-failed": "Oeps, er is iets mis.",
+    "request-failed-rider": "Er is iets misgegaan met de betaling. Controleer of je je betalingsgegevens correct hebt ingevoerd en probeer het opnieuw!",
+    "btns": {
+      "go-to-request": "Open de aanvraag",
+      "go-to-settings": "Instellingen",
+      "retry": "Opnieuw proberen"
+    },
     "profile-verified": "Gefeliciteerd, je profiel is nu geverifieerd!",
     "profile-updated": "Beschrijving is bijgewerkt",
     "error-upload-profile-picture": "Fout bij uploaden profielfoto",

@@ -736,7 +736,15 @@
     "password-not-match": "Las contraseñas no coinciden",
     "verification-code-error": "Error: el código de verificación no es válido.",
     "address-save-error": "La dirección no se pudo guardar",
-    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
+    "request-create-rider": "No se preocupe, todavía no hemos cobrado: ¡el pago solo se realiza si se acepta su solicitud!",
+    "request-created": "La solicitud de reserva fue enviada con éxito!",
+    "request-failed": "Vaya, algo anda mal.",
+    "request-failed-rider": "Algo salió mal con el pago. Verifique que ingresó los detalles de su pago correctamente e intente nuevamente.",
+    "btns": {
+      "go-to-request": "Abrir la solicitud",
+      "go-to-settings": "Configuración",
+      "retry": "Reintentar"
+    },
     "profile-verified": "¡Felicidades, tu perfil es verificado!",
     "profile-updated": "Tu descripción fue actualizada.",
     "error-upload-profile-picture": "Hubo un error al subir tu foto de perfil.",

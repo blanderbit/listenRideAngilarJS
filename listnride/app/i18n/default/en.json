@@ -740,8 +740,15 @@
     "password-not-match": "Passwords do not match",
     "verification-code-error": "Error: the verification code is invalid.",
     "address-save-error": "The address could not be saved",
-    "request-create-rider": "You successfully requested the bike.  Only when your request gets accepted, payment will take place!",
-    "request-created": "Booking request was sent!",
+    "request-create-rider": "Don't worry, we haven't charged yet: the payment only takes place if and when your request gets accepted!",
+    "request-created": "The booking request was successfully sent! ",
+    "request-failed": "Oops, something's wrong.",
+    "request-failed-rider": "Something went wrong with the payment. Please check that you entered your payment details correctly, and try again!",
+    "btns": {
+      "go-to-request": "Open the request",
+      "go-to-settings": "Settings",
+      "retry": "Retry"
+    },
     "profile-verified": "Congratulations, your profile was successfully verified!",
     "profile-updated": "Your description was updated.",
     "error-upload-profile-picture": "There was an error in uploading your profile picture",
@@ -1406,7 +1413,7 @@
       "subheader": "listnride’s bike rental service is becoming available in more and more locations."
     },
     "testmonials-section": {
-      "header": "What do our riders say about us?",
+      "header": "What do our Riders say about us?",
       "subheader": "More and more people are discovering the benefits of bike rental via listnride. Check out some of their testimonials:"
     }
   },
@@ -1438,10 +1445,10 @@
     "list-section": {
       "header": "Ready to list your bike?",
       "subheader": "Meet great new people and earn some money on the side.",
-      "sign-up": "Sign up to list your bike!"
+      "sign-up": "Sign up to rent our your bike!"
     },
     "testmonials-section": {
-      "header": "Renting out bikes: What do our listers say about us?",
+      "header": "Renting out bikes: what do our listers say about us?",
       "subheader": "Many people have already become a part of our listnride community. Read about their personal experiences:"
     }
   },

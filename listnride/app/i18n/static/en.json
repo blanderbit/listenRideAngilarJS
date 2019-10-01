@@ -22,7 +22,7 @@
       "bike-shops": "Bike Shops",
       "cafes-bars": "Cafés, Bars & Eatery",
       "bike-routes-content": "The <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer Feld</a> offers the perfect playground for outdoor activities. The former airport runways are great for biking some laps and enjoying the scenery of urban sports and games taking place around you. At <a href=\"https://www.lollapaloozade.com/en/treptower-park\">Treptower Park</a> you’ll find an interesting potpourri of experiences. There is the Soviet monument which reminds you of the times when Germany was split into two nations. For those who prefer to have their fingers on the pulse of the time, a little trip along the <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\">Landwehrkanal</a> can be a great way of discovering Berlin, starting in the green scenery of Treptow and going all the way into urban Kreuzberg and Neukölln. If you like longer rides check the <a href=\"http://panke.info/pages/portal-touren.php\">Panke Radweg</a> (~30km) which takes you through the rural areas of Berlin Wedding. More nature? Try a part of the <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\">Berlin to Usedom route</a>, taking you through almost untouched nature and serene settings.",
-      "bike-shops-content": "Berlin has many local brands that were recently founded. The urban brand <a href=\"//www.schindelhauerbikes.com/\" target=\"_blank\">Schindelhauer</a> makes very stylish bikes for the sporty city biker. If you prefer a single-speed or fixed gear then you can eat your heart out at <a href=\"8bar-bikes.com/\" target=\"_blank\">8bar</a> and Bike Punk. If you prefer a road bike then <a href=\"www.standert.de/\" target=\"_blank\">Standert</a> can definitely offer you something special. There are also many interesting concept stores. <a href=\"www.pret-a-velo.de/en/\" target=\"_blank\">Prèt-á-vélo</a> offer a broad selection of classic bicycles and accessories, <a href=\"www.wingwheels.de/?lang=en/\" target=\"_blank\">Wingwheels</a> for the broadest selection of e-bikes. If you have a passion for folding bikes and everything around it, <a href=\"boxbike.de/\" target=\"_blank\">boxbike</a> offers a great shop experience.",
+      "bike-shops-content": "Berlin has many local brands that were recently founded. The urban brand <a href=\"//www.schindelhauerbikes.com/\" target=\"_blank\">Schindelhauer</a> makes very stylish bikes for the sporty city biker. If you prefer a single-speed or fixed gear then you can rent one of the fantastic <a href=\"8bar-bikes.com/\" target=\"_blank\">8bar</a> bikes! If you prefer a road bike then <a href=\"www.standert.de/\" target=\"_blank\">Standert</a> can definitely offer you something special. There are also many interesting concept stores. <a href=\"www.pret-a-velo.de/en/\" target=\"_blank\">Prèt-á-vélo</a> offers a broad selection of classic bicycles and accessories, <a href=\"www.wingwheels.de/?lang=en/\" target=\"_blank\">Wingwheels</a> for the broadest selection of e-bikes. If you have a passion for folding bikes and everything around it, <a href=\"boxbike.de/\" target=\"_blank\">boxbike</a> offers a great shop experience.",
       "cafes-bars-content": "After a day out we recommend you to visit <a href=\"//www.fiveelephant.com/\" target=\"_blank\">five elephant</a> in Neukölln or Mitte to grab a coffee or two and try their selection of north American style pastry. For lunch or dinner head for <a href=\"//www.kimchiprincess.com/\" target=\"_blank\">Kimchi Princess</a> in Kreuzberg, a buzzing Korean restaurant with sizzling BBQ grills. Visit <a href=\"//kaschk.de/\" target=\"_blank\">Kaschk</a> in Mitte serving a great selection of Scandinavian and local craft beer as well as freshly roasted coffee."
     },
     "munich": {
@@ -618,7 +618,7 @@
   },
   "brand-integration": {
     "shared": {
-      "choose-location": "Choose a test location",
+      "choose-location": "Choose a test-ride location",
       "no-bikes-found": "Oops... there are unfortunately no bikes listed yet in this location.",
       "faq": "The frequently asked questions"
     },
@@ -703,12 +703,12 @@
       "item1-description": "No buttons, no gears. </br>\nIntuitive motor assistance adapts</br> \nautomatically to power the speed you need. \n",
       "description": "Designed to feel the road. And beat the commute.</br>\nGet around your city on an award-winning bike.\n",
       "item1-title": "The road is yours",
-      "item2-title": "Safety comes fierce",
-      "item2-description": "On the prowl at dusk, or awake at dawn.</br> \nIntensifying lights and hydraulic brakes ever there as you slow.</br>\nAnd then, you’re off",
+      "item2-title": "Safety comes first",
+      "item2-description": "On the prowl at dusk, or awake at dawn.</br> \nIntensifying lights and hydraulic brakes ever there as you slow.</br>\nAnd then, you’re off!",
       "item3-title": "Track every trace",
       "item3-description": "Built-in GPS tracking ensures your bike is always in range. </br>\nStay connected when it’s locked nearby, no move without you.</br>",
-      "find-out-more": "Rent and test ride Cowboy bikes today! Meet Cowboy. The electric bike for urban riders.",
-      "order-online": "Cowboy is the first connected bike that gives people the freedom to take the streets. Designed to be beautiful and agile in both mechanics and technology, one ride and you’ll want this bike to be yours too.Through a passion for design and technology working in harmony to unlock a new path for people and systems, we are creating a new experience for people to move freely around cities.</br>\n<a href=\"https://cowboy.com/\" target=\"_blank\">Learn more on Cowboy.com</a>",
+      "find-out-more": "Rent and test ride Cowboy bikes today! Meet Cowboy: the electric bike for urban riders.",
+      "order-online": "Cowboy is the first connected bike that gives people the freedom to take the streets. Designed to be beautiful and agile in both mechanics and technology, it will take you little time to fall in love with it. Through a passion for design and technology working in harmony to unlock a new path for people and systems, we are creating a new experience for people to move freely around cities.</br>\n<a href=\"https://cowboy.com/\" target=\"_blank\">Learn more on Cowboy.com</a>",
       "faq-question-1": "Do you sell different frame sizes?",
       "faq-answer-1": "Currently we sell a universal model that fits people between 170cm and 195cm. The saddle can be easily adjusted with an allen key (detailed instructions can be found in the manual). If you are unsure about the height that suits you, rent a test ride and we'll help you with the fine tuning.",
       "faq-question-2": "What is the maximum speed of the bike?",
