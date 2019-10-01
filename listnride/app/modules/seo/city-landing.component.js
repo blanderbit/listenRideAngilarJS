@@ -1,14 +1,28 @@
-'use strict';
 import Swiper from 'swiper';
 import MarkerClusterer from '@google/markerclustererplus';
 
 angular.module('cityLanding',[]).component('cityLanding', {
   templateUrl: 'app/modules/seo/city-landing.template.html',
   controllerAs: 'cityLanding',
-  controller: function cityLandingController($scope, $translate, $translatePartialLoader, $stateParams, $state, api, ENV, bikeOptions, ngMeta, NgMap, mapConfigs, $mdMedia, $timeout) {
+  controller: function cityLandingController(
+    $scope,
+    $translate,
+    $translatePartialLoader,
+    $stateParams,
+    $state,
+    api,
+    ENV,
+    bikeOptions,
+    ngMeta,
+    NgMap,
+    mapConfigs,
+    $mdMedia,
+    applicationHelper,
+    $timeout
+  ) {
     var cityLanding = this;
     const MOBILE_BIKE_COLUMNS = 3;
-    const DESKTOP_BIKECOLUMNS = 6;
+    const DESKTOP_BIKECOLUMNS = 8;
 
     cityLanding.$onInit = function() {
       $translatePartialLoader.addPart(ENV.staticTranslation);
@@ -19,7 +33,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.categories = [];
       cityLanding.group = {};
       cityLanding.headerTranslation = 'seo.header';
-      cityLanding.defaultProfilePicture = "https://s3.eu-central-1.amazonaws.com/listnride/assets/default_profile_picture.jpg"
+      cityLanding.defaultProfilePicture = applicationHelper.defaultProfilePicture;
       cityLanding.breadcrumbs = [
       {
         title:'Home',
@@ -48,13 +62,13 @@ angular.module('cityLanding',[]).component('cityLanding', {
     };
 
     function fetchData() {
-      var lng = $translate.preferredLanguage();
+      var lang = $translate.preferredLanguage();
 
-      api.get('/seo_page?city=' + cityLanding.city + '&lng=' + lng).then(
+      api.get('/seo_page?city=' + cityLanding.city + '&lang=' + lang).then(
         function (success) {
           cityLanding.data = success.data;
           cityLanding.location = cityLanding.city;
-          cityLanding.translatedCity = cityLanding.data.city_names[lng] ? cityLanding.data.city_names[lng] : cityLanding.city;
+          cityLanding.translatedCity = cityLanding.data.city_names[lang] ? cityLanding.data.city_names[lang] : cityLanding.city;
           cityLanding.loading = false;
           cityLanding.allBikes = [];
 
@@ -222,21 +236,16 @@ angular.module('cityLanding',[]).component('cityLanding', {
         return 2;
       } else {
         return 1;
-      };
-    };
+      }
+    }
 
     function tileRowspan(index) {
-      if (index === 1 || index === 2) {
-        return 2;
-      } else {
-        return 1;
-      };
-    };
+      return (index === 1 || index === 2) ? 2 : 1;
+    }
 
     function swiperConfig () {
 
       cityLanding.bikesList = new Swiper ('#bikes-list', {
-        // Optional parameters
         keyboardControl: true,
         loop: true,
         slidesPerView: 1,
@@ -244,7 +253,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
       });
 
       cityLanding.brandsSwiper = new Swiper ('#bikes-brands', {
-        // Optional parameters
         keyboardControl: true,
         slidesPerView: 4,
         navigation: {
@@ -261,10 +269,9 @@ angular.module('cityLanding',[]).component('cityLanding', {
         }
       });
 
-      if (cityLanding.mobileScreen) cityLanding.brandsSwiper.appendSlide('<div class="swiper-slide"></div>')
+      if (cityLanding.mobileScreen) cityLanding.brandsSwiper.appendSlide('<div class="swiper-slide"></div>');
 
       cityLanding.testimonialsSwiper = new Swiper ('#testimonials-slider', {
-        // Optional parameters
         slidesPerView: 3,
         spaceBetween: -50,
         keyboardControl: true,
@@ -284,7 +291,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
       });
 
       cityLanding.tipsSwiper = new Swiper ('#slider-fading', {
-        // Optional parameters
         keyboardControl: true,
         centeredSlides: true,
         spaceBetween: 30,

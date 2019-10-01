@@ -27,6 +27,7 @@ import './modules/meta-tags/meta-tags.component.js';
 import './modules/seo-landing/seo-landing.component.js';
 import './modules/shared/autocomplete/autocomplete.component.js';
 import './modules/shared/bike-card/bike-card.component.js';
+import './modules/seo/shared/bike-cards-list.component.js';
 import './modules/shared/listing-card/listing-card.component.js';
 import './modules/shared/message/message.component.js';
 import './modules/shared/rating/rating.component.js';

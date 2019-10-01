@@ -69,12 +69,8 @@
   color: var(--title-color);
 }
 
-/*.lnr-city-landing__title.lnr-center {*/
-  /*max-width: 500px;*/
-/*}*/
-
 .lnr-city-landing__descr {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   line-height: 2;
 }
@@ -83,6 +79,7 @@
   max-width: 500px;
   font-size: 70px;
   line-height: 1.2;
+  text-transform: capitalize;
 }
 
 .lnr-city-landing-promo .lnr-city-landing__descr {
@@ -518,11 +515,21 @@
   }
 
   .lnr-city-landing__title {
-    font-size: 30px;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .lnr-city-landing-info .lnr-city-landing__title {
+    font-size: 20px;
+  }
+
+  .lnr-city-landing__descr {
+     font-size: 16px;
+    text-align: center;
   }
 
   .lnr-city-landing__title.lnr-center {
-    text-align: left;
+    text-align: center;
   }
 
   .lnr-city-landing__title.lnr-center,
@@ -632,4 +639,12 @@
   }
 }
 
+/*TODO we can move it to file typography.scss (when we create it)*/
 
+.text-align-center {
+  text-align: center;
+}
+
+.min-height-400 {
+  min-height: 400px !important;
+}
