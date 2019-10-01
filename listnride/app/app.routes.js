@@ -1759,18 +1759,6 @@
       });
 
       $stateProvider.state({
-        name: 'berlinTriathlonXl',
-        url: '/berlin-triathlon-xl',
-        controller: ['$scope', '$state',
-          function ($scope, $state) {
-            $state.go('event', {
-              'event_name': 'berlin-triathlon-xl'
-            })
-          }
-        ]
-      });
-
-      $stateProvider.state({
         name: 'cyclassicsHamburg',
         url: '/cyclassics-hamburg',
         controller: ['$scope', '$state',
