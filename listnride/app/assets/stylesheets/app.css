@@ -595,6 +595,10 @@ md-tooltip .md-content {
   color: #7ab2f8;
 }
 
+.lnr-color-red {
+  color: #f24d41;
+}
+
 .lnr-color-white {
   color: #ffffff;
 }
@@ -1457,6 +1461,10 @@ footer .lnr-link {
 
 .lnr-tel-int .intl-tel-input .country-list {
   max-height: 100px!important;
+}
+
+.lnr-authorise3d {
+  max-width: 400px;
 }
 
 /*-----------------------------------------------------------------------------------*/

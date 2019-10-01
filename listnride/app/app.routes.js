@@ -91,7 +91,7 @@
       // home/change_password
       $stateProvider.state({
         name: 'authorise3d',
-        url: '/authorise3d/{requestId:int}',
+        url: '/authorise3d/{requestId:int}?succeed',
         template: '<home></home>'
       });
 
