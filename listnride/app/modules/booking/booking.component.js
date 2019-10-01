@@ -127,7 +127,6 @@ angular.module('booking', [])
             booking.insuranceEnabled = userHelper.insuranceEnabled(booking.bike.user);
             booking.hasTimeSlots = userHelper.hasTimeSlots(booking.bike.user);
             booking.timeslots = booking.hasTimeSlots ? userHelper.getTimeSlots(booking.bike.user) : [];
-
             booking.bike.is_cluster ? setSizeFromState() : booking.bike.size;
             getLister();
             updatePrices();
@@ -739,7 +738,7 @@ angular.module('booking', [])
         $analytics.eventTrack('click', {category: 'Request Bike', label: 'Request Now'});
         booking.inProcess = true;
 
-        var data = {
+        let data = {
           user_id: $localStorage.userId,
           ride_id: booking.bikeId,
           start_date: dateHelper.getDateUTC(booking.startDate).toISOString(),
@@ -749,6 +748,11 @@ angular.module('booking', [])
             premium: booking.isPremium
           }
         };
+
+        // get Google Analytics client id
+        ga(function (tracker) {
+          data.tracking_id = tracker.get('clientId');
+        });
 
         api
           .post('/requests', data)
