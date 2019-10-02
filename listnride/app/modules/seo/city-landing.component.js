@@ -44,11 +44,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
         route: `cityLanding({ city: '${$stateParams.city}'})`
       }];
       cityLanding.colorScheme = mapConfigs.colorScheme();
-      cityLanding.mapOptions = {
-        lat: 40,
-        lng: -74,
-        zoom: 5
-      };
+      cityLanding.mapOptions = mapConfigs.mapOptions;
       cityLanding.mobileScreen = $mdMedia('xs');
       cityLanding.bikesToShow = cityLanding.mobileScreen ? MOBILE_BIKE_COLUMNS : DESKTOP_BIKECOLUMNS;
 
@@ -76,7 +72,6 @@ angular.module('cityLanding',[]).component('cityLanding', {
           ngMeta.setTag("description", $translate.instant(cityLanding.data.explore.meta_description));
 
           bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
-            // without transport category
             cityLanding.categories = resolve.filter(function (item) {
               return item.url;
             });
