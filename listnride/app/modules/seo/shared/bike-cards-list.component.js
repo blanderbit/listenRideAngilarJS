@@ -8,5 +8,5 @@ angular.module('bikeCardsList', []).component('bikeCardsList', {
     city: '<',
     subcategories: '<'
   },
-  controller: function bikeCardsListController() {}
+  controller: function BikeCardsListController() {}
 });

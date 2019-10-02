@@ -22,8 +22,11 @@ angular.module('categoryLanding', []).component('categoryLanding', {
     $timeout
   ) {
       const categoryLanding = this;
+      categoryLanding.mobileScreen = $mdMedia('xs');
+
       const MOBILE_BIKE_TILES = 3;
       const DESKTOP_BIKE_TILES = 8;
+      const BIKES_AMOUNT = categoryLanding.mobileScreen ? MOBILE_BIKE_TILES : DESKTOP_BIKE_TILES;
 
       categoryLanding.$onInit = function () {
         $translatePartialLoader.addPart(ENV.staticTranslation);
@@ -34,10 +37,8 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         if (!categoryId) $state.go('404');
         categoryLanding.category = $filter('category')(categoryId);
         categoryLanding.bikes = {};
-        categoryLanding.group = {};
         categoryLanding.loading = true;
         categoryLanding.mapLoading = true;
-        categoryLanding.subcategoriesNumbers = '';
         categoryLanding.categories = [];
         categoryLanding.allBikes = [];
         categoryLanding.headerTranslation = 'seo.header';
@@ -56,14 +57,11 @@ angular.module('categoryLanding', []).component('categoryLanding', {
           }];
         categoryLanding.colorScheme = mapConfigs.colorScheme();
         categoryLanding.mapOptions = mapConfigs.mapOptions;
-        categoryLanding.mobileScreen = $mdMedia('xs');
-        const BIKES_AMOUNT = categoryLanding.mobileScreen ? MOBILE_BIKE_TILES : DESKTOP_BIKE_TILES;
 
         // methods
         categoryLanding.onSearchClick = onSearchClick;
         categoryLanding.tileRowspan = tileRowspan;
         categoryLanding.tileColspan = tileColspan;
-        categoryLanding.getAllSubcategories = getAllSubcategories;
 
         // invocations
         fetchData(categoryId);
@@ -87,20 +85,14 @@ angular.module('categoryLanding', []).component('categoryLanding', {
             bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
               categoryLanding.categories = resolve;
 
-              _.forEach(categoryLanding.data.blocks, function(block) {
+              _.forEach(categoryLanding.data.blocks, function(block, index) {
                 // save all bikes in one array for map
                 categoryLanding.allBikes = categoryLanding.allBikes.concat(block.bikes);
-
-                categoryLanding.group[block.key] = block;
-                categoryLanding.group[block.key].bikes = block.bikes.slice(0, categoryLanding.bikesToShow);
-
-                pushSubcategoriesToBikesBlocks(block, categoryLanding.categories);
+                // cut bikes amount based on screen width
+                let firstBikeCatId = categoryLanding.data.blocks[index].bikes[0].category;
+                categoryLanding.data.blocks[index].bikes = block.bikes.slice(0, BIKES_AMOUNT);
+                categoryLanding.data.blocks[index].subcategories = getSubcategoriesToBikesBlocks(firstBikeCatId, categoryLanding.categories);
               });
-
-              _.forEach(categoryLanding.categories, function (item) {
-                item.dataName = item.url.replace(/-/i, '_')
-              });
-
             });
 
             if(!categoryLanding.mobileScreen) initializeGoogleMap();
@@ -115,25 +107,12 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         );
       }
 
-       function pushSubcategoriesToBikesBlocks(targetBikesObj, currentCategories) {
-        categoryLanding.categoryName = targetBikesObj.key.replace(/_/i, '-');
-        //pushed subcategories to to each bikes block of response
-        _.filter(currentCategories, function(category) {
-          if(category.url === categoryLanding.categoryName ) {
-            targetBikesObj.subcategories = category.subcategories;
-          }
-        });
-      }
+       function getSubcategoriesToBikesBlocks(catId, allBikeCategories) {
+        catId = _.toString(catId);
 
-      function getAllSubcategories(subcategoriesId) {
-        subcategoriesId = subcategoriesId.toString();
-        let allSeoCategory = categoryLanding.categories;
-
-        if (!allSeoCategory) return;
-        let categoryCurrentObj = _.find(allSeoCategory, (categoryObject) => {
-          return categoryObject.subcategories.split(',').indexOf(subcategoriesId) !== -1;
-        });
-        return categoryCurrentObj.subcategories;
+        return _.find(allBikeCategories, (category) => {
+          return category.subcategories.split(',').indexOf(catId) !== -1;
+        }).subcategories;
       }
 
     // ============================
