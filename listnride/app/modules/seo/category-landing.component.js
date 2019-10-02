@@ -21,24 +21,23 @@ angular.module('categoryLanding', []).component('categoryLanding', {
     $mdMedia,
     $timeout
   ) {
-      var categoryLanding = this;
-      const MOBILE_BIKE_COLUMNS = 3;
-      const DESKTOP_BIKECOLUMNS = 8;
+      const categoryLanding = this;
+      const MOBILE_BIKE_TILES = 3;
+      const DESKTOP_BIKE_TILES = 8;
 
       categoryLanding.$onInit = function () {
         $translatePartialLoader.addPart(ENV.staticTranslation);
-
         // capitalize city name in URL
         categoryLanding.city = _.capitalize($stateParams.city);
-
         // take category number from category (only english) name in URL
-        var categoryId = $filter('categorySeo')($stateParams.category);
+        let categoryId = $filter('categorySeo')($stateParams.category);
         if (!categoryId) $state.go('404');
         categoryLanding.category = $filter('category')(categoryId);
         categoryLanding.bikes = {};
         categoryLanding.group = {};
         categoryLanding.loading = true;
         categoryLanding.mapLoading = true;
+        categoryLanding.subcategoriesNumbers = '';
         categoryLanding.categories = [];
         categoryLanding.allBikes = [];
         categoryLanding.headerTranslation = 'seo.header';
@@ -58,23 +57,13 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         categoryLanding.colorScheme = mapConfigs.colorScheme();
         categoryLanding.mapOptions = mapConfigs.mapOptions;
         categoryLanding.mobileScreen = $mdMedia('xs');
-        categoryLanding.bikesToShow = categoryLanding.mobileScreen ? MOBILE_BIKE_COLUMNS : DESKTOP_BIKECOLUMNS;
-
-        bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
-          // without transport category
-          categoryLanding.categories = resolve.filter(function (item) {
-            return item.url !== 'transport';
-          });
-          // parse url names to data names (change '-' to '_')
-          _.forEach(categoryLanding.categories, function (item) {
-            item.dataName = item.url.replace(/-/i, '_')
-          });
-        });
+        const BIKES_AMOUNT = categoryLanding.mobileScreen ? MOBILE_BIKE_TILES : DESKTOP_BIKE_TILES;
 
         // methods
         categoryLanding.onSearchClick = onSearchClick;
         categoryLanding.tileRowspan = tileRowspan;
         categoryLanding.tileColspan = tileColspan;
+        categoryLanding.getAllSubcategories = getAllSubcategories;
 
         // invocations
         fetchData(categoryId);
@@ -96,24 +85,24 @@ angular.module('categoryLanding', []).component('categoryLanding', {
             ngMeta.setTag("description", $translate.instant(categoryLanding.data.explore.meta_description));
 
             bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
-              // without transport category
-              categoryLanding.data.categories_block.categories = resolve.filter(function (item) {
-                return item.url;
+              categoryLanding.categories = resolve;
+
+              _.forEach(categoryLanding.data.blocks, function(block) {
+                // save all bikes in one array for map
+                categoryLanding.allBikes = categoryLanding.allBikes.concat(block.bikes);
+
+                categoryLanding.group[block.key] = block;
+                categoryLanding.group[block.key].bikes = block.bikes.slice(0, categoryLanding.bikesToShow);
+
+                pushSubcategoriesToBikesBlocks(block, categoryLanding.categories);
               });
 
-              _.forEach(categoryLanding.data.blocks, function(value) {
-                categoryLanding.allBikes = categoryLanding.allBikes.concat(value.bikes);
-                getHumanReadableBikeGroup(value);
-                pushSubcategoriesToBikesBlocks(value, categoryLanding.categories);
-              });
-
-              // parse url names to data names (change '-' to '_')
-              _.forEach(categoryLanding.data.categories_block.categories, function (item) {
+              _.forEach(categoryLanding.categories, function (item) {
                 item.dataName = item.url.replace(/-/i, '_')
               });
+
             });
 
-            // End
             if(!categoryLanding.mobileScreen) initializeGoogleMap();
 
             $timeout(function () {
@@ -126,7 +115,7 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         );
       }
 
-      function pushSubcategoriesToBikesBlocks(targetBikesObj, currentCategories) {
+       function pushSubcategoriesToBikesBlocks(targetBikesObj, currentCategories) {
         categoryLanding.categoryName = targetBikesObj.key.replace(/_/i, '-');
         //pushed subcategories to to each bikes block of response
         _.filter(currentCategories, function(category) {
@@ -136,12 +125,18 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         });
       }
 
-      function getHumanReadableBikeGroup(index) {
-        categoryLanding.data.blocks[index] = index;
-        categoryLanding.data.blocks[index].bikes = index.bikes.slice(0, categoryLanding.bikesToShow);
+      function getAllSubcategories(subcategoriesId) {
+        subcategoriesId = subcategoriesId.toString();
+        let allSeoCategory = categoryLanding.categories;
+
+        if (!allSeoCategory) return;
+        let categoryCurrentObj = _.find(allSeoCategory, (categoryObject) => {
+          return categoryObject.subcategories.split(',').indexOf(subcategoriesId) !== -1;
+        });
+        return categoryCurrentObj.subcategories;
       }
 
-      // ============================
+    // ============================
       // >>>> START MAP FUNCTIONALITY
       // ============================
 

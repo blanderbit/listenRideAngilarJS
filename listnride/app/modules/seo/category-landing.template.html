@@ -145,10 +145,11 @@
            layout-padding>
     <bike-cards-list title="categoryLanding.data.blocks[0].title"
                      subtitle="categoryLanding.data.blocks[0].description"
-                     bikes="categoryLanding.data.blocks[0].bikes">
+                     bikes="categoryLanding.data.blocks[0].bikes"
+                     city="categoryLanding.city"
+                     subcategories="categoryLanding.getAllSubcategories(categoryLanding.data.blocks[0].bikes[0].category)">
     </bike-cards-list>
   </section>
-
   <section layout="row"
            class="lnr-city-landing-bg lnr-city-landing-info lnr-p-0"
            ng-if="categoryLanding.data.info_block.info.length">
@@ -190,7 +191,9 @@
   >
     <bike-cards-list title="categoryLanding.data.blocks[1].title"
                      subtitle="categoryLanding.data.blocks[1].description"
-                     bikes="categoryLanding.data.blocks[1].bikes">
+                     bikes="categoryLanding.data.blocks[1].bikes"
+                     city="categoryLanding.city"
+                     subcategories="categoryLanding.getAllSubcategories(categoryLanding.data.blocks[1].bikes[0].category)">
     </bike-cards-list>
   </section>
 
@@ -238,7 +241,9 @@
            layout-padding>
     <bike-cards-list title="categoryLanding.data.blocks[2].title"
                      subtitle="categoryLanding.data.blocks[2].description"
-                     bikes="categoryLanding.data.blocks[2].bikes">
+                     bikes="categoryLanding.data.blocks[2].bikes"
+                     city="categoryLanding.city"
+                     subcategories="categoryLanding.getAllSubcategories(categoryLanding.data.blocks[2].bikes[0].category)">
     </bike-cards-list>
   </section>
 
@@ -283,7 +288,9 @@
            layout-padding>
     <bike-cards-list title="categoryLanding.data.blocks[3].title"
                      subtitle="categoryLanding.data.blocks[3].description"
-                     bikes="categoryLanding.data.blocks[3].bikes">
+                     bikes="categoryLanding.data.blocks[3].bikes"
+                     city="categoryLanding.city"
+                     subcategories="categoryLanding.getAllSubcategories(categoryLanding.data.blocks[3].bikes[0].category)">
     </bike-cards-list>
   </section>
 
@@ -310,8 +317,7 @@
                 class="lnr-city-landing__category-tile"
                 style="background-image: url({{category.imgFilePathNew}})"
                 md-colspan-gt-sm="{{categoryLanding.tileColspan($index)}}"
-                md-rowspan-gt-sm="{{categoryLanding.tileRowspan($index)}}"
-                ng-repeat="category in categoryLanding.categories track by $index">
+                md-rowspan-gt-sm="{{categoryLanding.tileRowspan($index)}}">
           <a ui-sref="{location: categoryLanding.data.city, category: category.url}"
              target="_blank"
              layout="column"
@@ -323,7 +329,7 @@
             <div class="status-labels lnr-mt">
               <div class="status-labels__item lnr-enlarge">
                 <span>
-                  {{ categoryLanding.data.categories_block.categories[category.dataName] }}
+                  {{categoryLanding.data.categories_block.categories[category.dataName]}}
                 </span>
                 <span translate="shared.available"></span>
               </div>
@@ -340,7 +346,9 @@
            layout-padding>
     <bike-cards-list title="categoryLanding.data.blocks[4].title"
                      subtitle="categoryLanding.data.blocks[4].description"
-                     bikes="categoryLanding.data.blocks[4].bikes">
+                     bikes="categoryLanding.data.blocks[4].bikes"
+                     city="categoryLanding.city"
+                     subcategories="categoryLanding.getAllSubcategories(categoryLanding.data.blocks[4].bikes[0].category)">
     </bike-cards-list>
   </section>
 

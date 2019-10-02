@@ -110,7 +110,9 @@
            layout-padding>
     <bike-cards-list title="cityLanding.group['highest-rated-bikes'].title"
                      subtitle="cityLanding.group['highest-rated-bikes'].description"
-                     bikes="cityLanding.group['highest-rated-bikes'].bikes">
+                     bikes="cityLanding.group['highest-rated-bikes'].bikes"
+                     city="cityLanding.city"
+                     subcategories="cityLanding.group['highest-rated-bikes'].subcategories">
     </bike-cards-list>
   </section>
 
@@ -134,28 +136,13 @@
      layout="column"
      layout-align="start center"
      layout-padding>
-     <h2 class="lnr-city-landing__title lnr-center lnr-p-0">
-       {{cityLanding.group['road'].title}}
-     </h2>
-     <p class="lnr-city-landing__descr lnr-m-0 lnr-p-0">
-       {{cityLanding.group['road'].description}}
-     </p>
-     <div layout="row" layout-wrap layout-padding class="lnr-city-landing-content">
-       <bike-card
-         ng-repeat="bike in cityLanding.group['road'].bikes"
-         bike="bike"
-         show-labels="true"
-         flex="100"
-         flex-gt-xs="25"
-         flex-gt-sm="25">
-       </bike-card>
-     </div>
-     <a
-       ui-sref="search({location: cityLanding.city, categories: cityLanding.group['road'].subcategories})"
-       target="_blank"
-       class="md-button md-raised md-primary md-xlrg lnr-city-landing__button">
-       {{'shared.show-more' | translate}}
-     </a>
+     <bike-cards-list
+             title="cityLanding.group['road'].title"
+             subtitle="cityLanding.group['road'].description"
+             bikes="cityLanding.group['road'].bikes"
+             city="cityLanding.city"
+             subcategories="cityLanding.group['road'].subcategories">
+     </bike-cards-list>
    </section>
 
    <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg min-height-400"
@@ -195,7 +182,9 @@
             layout-padding>
      <bike-cards-list title="cityLanding.group['urban'].title"
                       subtitle="cityLanding.group['urban'].description"
-                      bikes="cityLanding.group['urban'].bikes">
+                      bikes="cityLanding.group['urban'].bikes"
+                      city="cityLanding.city"
+                      subcategories="cityLanding.group['urban'].subcategories">
      </bike-cards-list>
    </section>
 
@@ -237,8 +226,7 @@
            class="lnr-city-landing__category-tile"
            style="background-image: url({{category.imgFilePathNew}})"
            md-colspan-gt-sm="{{cityLanding.tileColspan($index)}}"
-           md-rowspan-gt-sm="{{cityLanding.tileRowspan($index)}}"
-           ng-repeat="category in cityLanding.categories track by $index">
+           md-rowspan-gt-sm="{{cityLanding.tileRowspan($index)}}">
            <a ui-sref="categoryLanding({city: cityLanding.data.city, category: category.url})"
               target="_blank"
               layout="column"
@@ -270,7 +258,9 @@
    >
      <bike-cards-list title="cityLanding.group['e_bike'].title"
                       subtitle="cityLanding.group['e_bike'].description"
-                      bikes="cityLanding.group['e_bike'].bikes">
+                      bikes="cityLanding.group['e_bike'].bikes"
+                      city="cityLanding.city"
+                      subcategories="cityLanding.group['e_bike'].subcategories">
      </bike-cards-list>
    </section>
 
@@ -310,7 +300,9 @@
    >
      <bike-cards-list title="cityLanding.group['all_terrain'].title"
                       subtitle="cityLanding.group['all_terrain'].description"
-                      bikes="cityLanding.group['all_terrain'].bikes">
+                      bikes="cityLanding.group['all_terrain'].bikes"
+                      city="cityLanding.city"
+                      subcategories="cityLanding.group['all_terrain'].subcategories">
      </bike-cards-list>
    </section>
 
