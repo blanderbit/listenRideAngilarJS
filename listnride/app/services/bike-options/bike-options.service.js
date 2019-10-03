@@ -240,7 +240,7 @@ angular.module('listnride')
         return $translate(this.categoriesTranslationKeys()).then(function (translations) {
           return [
             {
-              id: 10,
+              id: 1,
               urlOld: 'city',
               url: 'urban',
               name: translations["list.category.urban"],
@@ -248,7 +248,7 @@ angular.module('listnride')
               imgFilePathNew: "app/assets/ui_images/seo_new/city.jpg",
               subcategories: '10,11,12'
             }, {
-              id: 20,
+              id: 2,
               urlOld: 'electric',
               url: 'e-bike',
               name: translations["list.category.e-bike"],
@@ -256,7 +256,7 @@ angular.module('listnride')
               imgFilePathNew: "app/assets/ui_images/seo_new/electric.jpg",
               subcategories: '20,21,22,23,24,25,26'
             }, {
-              id: 30,
+              id: 3,
               urlOld: 'race',
               url: 'road',
               name: translations["list.category.road"],
@@ -264,28 +264,28 @@ angular.module('listnride')
               imgFilePathNew: "app/assets/ui_images/seo_new/race.jpg",
               subcategories: '30,31,32,33'
             }, {
-              id: 40,
+              id: 4,
               url: 'all-terrain',
               name: translations["list.category.all-terrain"],
               imgFilePath: "app/assets/ui_images/seo/all-terrain.jpg",
               imgFilePathNew: "app/assets/ui_images/seo_new/all-terrain.jpg",
               subcategories: '40,41,42,43'
             }, {
-              id: 50,
+              id: 5,
               url: 'transport',
               name: translations["list.category.transport"],
               imgFilePath: "app/assets/ui_images/seo/transport.jpg",
               imgFilePathNew: "app/assets/ui_images/seo_new/transport.jpg",
               subcategories: '50,51,52,53,54,55'
             }, {
-              id: 60,
+              id: 6,
               url: 'kids',
               name: translations["list.category.kids"],
               imgFilePath: "app/assets/ui_images/seo/kids.jpg",
               imgFilePathNew: "app/assets/ui_images/seo_new/kids.jpg",
               subcategories: '60,61,62,63'
             }, {
-              id: 70,
+              id: 7,
               url: 'special',
               name: translations["list.category.special"],
               imgFilePath: "app/assets/ui_images/seo/special.jpg",

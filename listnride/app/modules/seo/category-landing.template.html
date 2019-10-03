@@ -318,13 +318,15 @@
         <md-grid-tile
                 ng-repeat="category in categoryLanding.categories track by $index"
                 class="lnr-city-landing__category-tile"
+                ng-class="{'lnr-city-landing__category-tile__disabled' : categoryLanding.data.categories_block.categories[category.formattedName] == 0}"
                 style="background-image: url({{category.imgFilePathNew}})"
                 md-colspan-gt-sm="{{categoryLanding.tileColspan($index)}}"
                 md-rowspan-gt-sm="{{categoryLanding.tileRowspan($index)}}">
-          <a ui-sref="{location: categoryLanding.data.city, category: category.url}"
-             target="_blank"
-             layout="column"
-             layout-align="center center"
+          <a
+            ui-sref="{location: categoryLanding.data.city, category: category.url}"
+            target="_blank"
+            layout="column"
+            layout-align="center center"
           >
             <h3 class="lnr-city-landing__category-title">
               {{ category.name }}
@@ -332,7 +334,7 @@
             <div class="status-labels lnr-mt">
               <div class="status-labels__item lnr-enlarge">
                 <span>
-                  {{categoryLanding.data.categories_block.categories[category.dataName]}}
+                  {{categoryLanding.data.categories_block.categories[category.formattedName]}}
                 </span>
                 <span translate="shared.available"></span>
               </div>

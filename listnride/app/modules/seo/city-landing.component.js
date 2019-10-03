@@ -103,7 +103,9 @@ angular.module('cityLanding',[]).component('cityLanding', {
           });
         },
         function (error) {
-          $state.go('404');
+          $state.go('search', {
+            location: cityLanding.city
+          });
         }
       );
     }
