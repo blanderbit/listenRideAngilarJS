@@ -70,8 +70,13 @@ angular.module('categoryLanding', []).component('categoryLanding', {
       function fetchData(categoryId) {
         let lang = $translate.preferredLanguage();
 
-        api.get('/seo_page?city=' + categoryLanding.city + '&cat=' + categoryId + '&lang=' + $translate.preferredLanguage()).then(
-          function (success) {
+        bikeOptions
+          .allCategoriesOptionsSeo()
+          .then((categoriesOptions) => {
+            categoryLanding.categories = categoriesOptions;
+            return api.get('/seo_page?city=' + categoryLanding.city + '&cat=' + categoryId + '&lang=' + $translate.preferredLanguage());
+          })
+          .then((success) => {
             categoryLanding.data = success.data;
             categoryLanding.location = categoryLanding.city;
             categoryLanding.loading = false;
@@ -82,17 +87,18 @@ angular.module('categoryLanding', []).component('categoryLanding', {
             ngMeta.setTitle($translate.instant(categoryLanding.data.explore.meta_title));
             ngMeta.setTag("description", $translate.instant(categoryLanding.data.explore.meta_description));
 
-            bikeOptions.allCategoriesOptionsSeo().then(function (resolve) {
-              categoryLanding.categories = resolve;
+            _.forEach(categoryLanding.data.blocks, function (block, index) {
+              // save all bikes in one array for map
+              categoryLanding.allBikes = categoryLanding.allBikes.concat(block.bikes);
+              // cut bikes amount based on screen width
+              let firstBikeCatId = categoryLanding.data.blocks[index].bikes[0].category;
+              categoryLanding.data.blocks[index].bikes = block.bikes.slice(0, BIKES_AMOUNT);
+              categoryLanding.data.blocks[index].subcategories = getSubcategoriesToBikesBlocks(firstBikeCatId, categoryLanding.categories);
+            });
 
-              _.forEach(categoryLanding.data.blocks, function(block, index) {
-                // save all bikes in one array for map
-                categoryLanding.allBikes = categoryLanding.allBikes.concat(block.bikes);
-                // cut bikes amount based on screen width
-                let firstBikeCatId = categoryLanding.data.blocks[index].bikes[0].category;
-                categoryLanding.data.blocks[index].bikes = block.bikes.slice(0, BIKES_AMOUNT);
-                categoryLanding.data.blocks[index].subcategories = getSubcategoriesToBikesBlocks(firstBikeCatId, categoryLanding.categories);
-              });
+            // parse url names to data names (change '-' to '_')
+            _.forEach(categoryLanding.categories, function (category) {
+              category.formattedName = category.url.replace(/-/i, '_')
             });
 
             if(!categoryLanding.mobileScreen) initializeGoogleMap();
@@ -100,11 +106,13 @@ angular.module('categoryLanding', []).component('categoryLanding', {
             $timeout(function () {
               swiperConfig();
             });
-            },
-          function (error) {
-            $state.go('404');
-          }
-        );
+          })
+          .catch((error) => {
+            $state.go('search', {
+              location: categoryLanding.city,
+              categories: categoryLanding.categories ? getSubcategoriesToBikesBlocks(categoryId + '0', categoryLanding.categories) : []
+            });
+          })
       }
 
        function getSubcategoriesToBikesBlocks(catId, allBikeCategories) {
