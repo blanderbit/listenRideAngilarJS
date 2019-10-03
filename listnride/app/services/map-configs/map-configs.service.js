@@ -231,7 +231,6 @@ angular.module('listnride')
           }
         ];
       },
-
       clustersStyle: function () {
         return [
           {
@@ -270,6 +269,11 @@ angular.module('listnride')
             textSize: '17'
           }
         ]
+      },
+      mapOptions:  {
+        lat: 40,
+        lng: -74,
+        zoom: 5
       }
     };
   }]);

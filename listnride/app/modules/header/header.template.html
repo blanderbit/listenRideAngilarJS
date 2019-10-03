@@ -83,8 +83,9 @@
         ng-click="header.authentication.showLoginDialog()">
         {{ 'forms.log-in' | translate }}
       </md-button>
-      <md-button ng-if="header.authentication.loggedIn()" md-no-ink ui-sref="requests"><!-- <div class="notification-bubble" ng-if="header.authentication.unreadMessages()">{{header.authentication.unreadMessages()}}</div> -->{{ 'shared.requests' | translate }}</md-button>
-
+      <md-button ng-if="header.authentication.loggedIn()" md-no-ink ui-sref="requests">
+        <!-- <div class="notification-bubble" ng-if="header.authentication.unreadMessages()">{{header.authentication.unreadMessages()}}</div> -->
+        {{ 'shared.requests' | translate }}</md-button>
       <md-menu md-position-mode="target bottom" ng-if="header.authentication.loggedIn()">
         <md-button ng-click="$mdOpenMenu($event)" class="md-img">
           <img class="lnr-profile-sm" ng-src="{{header.authentication.profilePicture()}}"></img>

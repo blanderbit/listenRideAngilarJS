@@ -66,9 +66,9 @@
     },
     "basic-fee": "Frais de service, y compris l'assurance de base",
     "how-it-works": "Comment ça fonctionne",
-    "list-a-bike": "Enregistrer un vélo",
+    "list-a-bike": "Prêter un vélo",
     "renting-a-bike": "Louer un vélo",
-    "listing-a-bike": "Enregistrement d'un vélo",
+    "listing-a-bike": "Prêter un vélo",
     "trust-and-safety": "Confiance et sécurité",
     "journal": "Blog",
     "later": "Plus tard",
@@ -174,7 +174,7 @@
     "privacy-policy": "Politique de confidentialité",
     "booking-accept-tac": "En réservant, j'accepte les",
     "already-booked": "Déjà réservé",
-    "for-shops": "Pour les magasins de vélos",
+    "for-shops": "Coin business",
     "contact-us": "Veuillez entrer en contact avec nous par",
     "required": "Ceci est requis",
     "update": "Mettre à jour",
@@ -737,8 +737,15 @@
     "password-not-match": "Les mots de passe ne correspondent pas",
     "verification-code-error": "Erreur: le code de vérification n'est pas valide.",
     "address-save-error": "L'adresse n'a pas pu être sauvegardée",
-    "request-create-rider": "You have successfully request a bike. Only when your request is accepted, payment is done and the bike is booked.",
-    "request-created": "Request Created",
+    "request-create-rider": "Ne vous inquiétez pas, vous n'êtes pas encore facturé: le paiement n'aura lieu que si et quand votre demande est acceptée!",
+    "request-created": "La demande de réservation a été envoyée avec succès!",
+    "request-failed": "Oups, quelque chose ne va pas.",
+    "request-failed-rider": "Le paiement a échoué. Veuillez vérifier que vous avez correctement saisi vos données de paiement et réessayez !",
+    "btns": {
+      "go-to-request": "Voir la demande",
+      "go-to-settings": "Paramètres",
+      "retry": "Essayer de nouveau"
+    },
     "profile-verified": "Félicitations, votre profil a été vérifié!",
     "profile-updated": "Votre description a été mise à jour.",
     "error-upload-profile-picture": "Erreur lors du chargement de la photo de profil",
@@ -983,7 +990,7 @@
     "insurance-bike-assist": "Bike Assist Insurance Certificate"
   },
   "listChat": {
-    "1": "{{user.first_name}}{{user.last_name}} de {{user.city}} voudrait louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>ID Bike:. {{ride.bicycle_number}}<br> Taille de vélo: {{Ride.frame_size? ride.frame_size:. 'non spécifié'}} <br> Période: {{timespan_short}}<br><br><br>Veuillez bien accepter la réservation, et vous mettre en accord sur n'importe détail en utilisant le chat ci-dessous. Si ce n'est pas possible, veuillez rejeter la demande.",
+    "1": "{{user.first_name}}{{user.last_name}} de {{user.city}} voudrait louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>ID Bike:. {{ride.bicycle_number}}<br> Taille de vélo:  {{ride.frame_size? ride.frame_size:'non spécifié'}} <br> Période: {{timespan_short}}<br><br><br>Veuillez bien accepter la réservation, et vous mettre en accord sur n'importe détail en utilisant le chat ci-dessous. Si ce n'est pas possible, veuillez rejeter la demande.",
     "11": "La réservation a été annulée.",
     "3": "Vous avez accepté la demande, et le vélo est réservé. Vous le louerez à partir de {{timespan}}! Les coordonnées sont les suivantes, nous vous les avons également envoyées par courrier électronique.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
@@ -1355,7 +1362,7 @@
     "merge": "Grouper les vélos",
     "unmerge": "Dégrouper les vélos",
     "no-bikes": "Vous n'avez encore inscrit aucun vélos.",
-    "list-a-bike": "Enregistrer un vélo",
+    "list-a-bike": "Prêter un vélo",
     "show-as-list": "Afficher en tant que liste",
     "duplicate": {
       "duplicate": "Dupliquer",
@@ -1403,7 +1410,7 @@
       "subheader": "Le service de location de vélos par listnride devient disponible en des lieux de plus en plus nombreux."
     },
     "testmonials-section": {
-      "header": "Qu'est-ce que nos coureurs disent de nous?",
+      "header": "Qu'est-ce que disent nos Riders?",
       "subheader": "De plus en plus de gens découvrent les avantages de la location de vélo via listnride. Découvrez quelques-uns de leurs témoignages:"
     }
   },
@@ -1422,24 +1429,24 @@
     },
     "info-section": {
       "header": "Safety first!",
-      "subheader": "listnride has your back.",
-      "precautions-title": "We take the necessary precautions.",
+      "subheader": "listnride est là pour vous.",
+      "precautions-title": "Nous prenons les précautions nécessaires.",
       "precautions-content": "Vous voulez faire louer votre vélo - mais pas à n'importe qui. C’est pourquoi nous vérifions pour vous l’identité de tous nos utilisateurs. Et nos évaluations des utilisateurs vous aident à savoir s’ils sont bon joueurs sur la scène de locations de vélos.",
-      "control-title": "You stay in control.",
-      "control-content": "You decide the daily or weekly rate for your bike(s). It’s completely up to you whether you want to accept a rental request or simply reject it because you can’t or don’t want to lend someone your bike at the moment.",
-      "covered-title": "You're covered.",
-      "covered-content": "In case of damage and/or theft, our insurance will help you. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n and the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a>\n we have two strong partners at our side.",
-      "help-title": "We’re there to help.",
-      "help-content": "If you and a renter (rider) encounter a problem and can’t find a solution, we’re there for you – to support you or even resolve the entire issue."
+      "control-title": "Vous restez en contrôle.",
+      "control-content": "Vous décidez du tarif journalier ou hebdomadaire pour vos vélos. C’est à vous de décider si vous souhaitez accepter ou rejeter une demande de location!",
+      "covered-title": "Vous êtes couvert.",
+      "covered-content": "En cas de dommage et / ou de vol pendant une location  en Allemagne et Autriche, notre assurance vous aidera. Avec\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\n et le\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Groupe Gothaer </a>\n nous avons deux partenaires forts à nos côtés.",
+      "help-title": "Nous sommes là pour vous aider.",
+      "help-content": "Si vous et le Rider rencontrez un problème et ne trouvez pas de solution, nous sommes là pour vous - pour vous aider ou même pour résoudre le problème dans son ensemble."
     },
     "list-section": {
-      "header": "Ready to list your bike?",
-      "subheader": "Meet great new people and earn some money on the side.",
-      "sign-up": "Sign up to list your bike!"
+      "header": "Prêt à prêter votre vélo?",
+      "subheader": "Rencontrez de nouvelles personnes et gagnez de l'argent.",
+      "sign-up": "Inscrivez-vous pour prêter votre vélo!"
     },
     "testmonials-section": {
-      "header": "Renting out bikes: What do our listers say about us?",
-      "subheader": "De nombreuses personnes font déjà partie de notre communauté listnride. Lisez ici à propos de leurs expériences personnelles:"
+      "header": "Prêter son vélo: que disent nos Listers?",
+      "subheader": "De nombreuses personnes font déjà partie de notre communauté listnride. Lisez à propos de leurs expériences:"
     }
   },
   "invoices": {
@@ -1541,7 +1548,7 @@
     "privacy-statement": "Confidentialité",
     "imprint": "Imprint",
     "about": "À propos de nous",
-    "press": "Les Médias",
+    "press": "Les médias",
     "jobs": "Emplois"
   },
   "seo": {

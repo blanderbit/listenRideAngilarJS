@@ -21,20 +21,38 @@ angular.module('home',[]).component('home', {
 
       switch ($state.current.name) {
         case 'authorise3d':
-          // $stateParams.requestId
-          $translate(['toasts.request-create-rider', 'toasts.request-created']).then(
-            function (translations) {
-              $mdDialog.show(
-                $mdDialog.alert()
-                .parent(angular.element(document.body))
-                .clickOutsideToClose(true)
-                .title(translations['toasts.request-created'])
-                .textContent(translations['toasts.request-create-rider'])
-                .ariaLabel(translations['toasts.request-created'])
-                .ok('Ok')
-              );
-            }
-          );
+          var authorise3dDialogController = function () {
+            var authorise3dDialog = this;
+            authorise3dDialog.succeed = $stateParams.succeed == 'true';
+            authorise3dDialog.titleColor = authorise3dDialog.succeed ? '' : 'lnr-color-red'
+            authorise3dDialog.request_link = '/requests/?requestId=' + $stateParams.requestId;
+
+            authorise3dDialog.hide = function () {
+              $mdDialog.hide();
+            };
+          };
+
+          $mdDialog.show({
+            controller: authorise3dDialogController,
+            controllerAs: 'authorise3dDialog',
+            template:
+            '<md-dialog class="lnr-authorise3d">' +
+            '  <md-dialog-content class="md-dialog-content lnr-mh-x2">' +
+            '   <h2 class="md-title lnr-mv-x2" ng-class="authorise3dDialog.titleColor">' +
+            '     {{ authorise3dDialog.succeed ? "toasts.request-created" : "toasts.request-failed" | translate }}' +
+            '   </h2>' +
+            '   <p class="lnr-mv-x2">' +
+            '     {{ authorise3dDialog.succeed ? "toasts.request-create-rider" : "toasts.request-failed-rider" | translate }}' +
+            '   </p>' +
+            '   <a href="{{ authorise3dDialog.request_link }}" ng-click="authorise3dDialog.hide()" class="lnr-mv-x2 md-button md-raised md-primary">' +
+            '     {{ "toasts.btns.go-to-request" | translate }}' +
+            '   </a>' +
+            '  </md-dialog-content>' +
+            '</md-dialog>',
+            parent: angular.element(document.body),
+            clickOutsideToClose: true
+          });
+
           break;
         case 'verify':
           if (authentication.loggedIn()) {
