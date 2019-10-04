@@ -207,6 +207,14 @@
   "request": {
     "payment-failed": "Uh-oh. Malheureusement, votre paiement a échoué. Veuillez vérifier les données que vous avez saisies, ainsi que les paramètres de paiement de votre fournisseur de paiement !"
   },
+  "about-us": {
+    "community": {
+      "content-paragraph": "Cependant, nous nous sommes posé la question suivante: pourquoi ne pouvons-nous pas toujours avoir le bon vélo de location où et quand nous en avons besoin? Doit-on toujours louer des vélos bien usés et maltraités des stations de vélopartage? L'idée de listnride était née."
+    },
+    "future": {
+      "content-paragraph": "Nous sommes fiers de nos partenaires qui ont répertorié leurs vélos, qu’il s’agisse de détaillants professionnels, de propriétaires de parcs de vélos ou de particuliers. Enfin, vous pouvez découvrir sur des sites sélectionnés à travers l’Europe des marques novatrices qui se sont associées à nous pour offrir des services de test rides exclusifs."
+    }
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Vélos à tester à Cyclingworld",

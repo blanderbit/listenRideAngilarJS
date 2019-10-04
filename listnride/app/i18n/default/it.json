@@ -204,6 +204,14 @@
   "request": {
     "payment-failed": "Uh Oh. Sfortunatamente, il tuo pagamento non è riuscito. Per favore ricontrolla i dati che hai inserito, così come le impostazioni di pagamento del tuo fornitore di servizi di pagamento!"
   },
+  "about-us": {
+    "community": {
+      "content-paragraph": "Tuttavia, ci siamo chiesti: perché non possiamo sempre noleggiare la bici giusta quando e dove ne abbiamo bisogno? Dovrebbe essere sempre una di quelle biciclette a noleggio usate e trascurate dalle stazioni di bike sharing? E' nata l'idea della listnride."
+    },
+    "future": {
+      "content-paragraph": "Siamo orgogliosi dei nostri partner che ci offrono le loro biciclette, siano essi rivenditori professionali, proprietari di parchi o privati. Infine, in alcune località europee, è possibile conoscere marchi innovativi che, insieme a noi, offrono test ride esclusivi."
+    }
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Prova bici per il Cyclingworld ",

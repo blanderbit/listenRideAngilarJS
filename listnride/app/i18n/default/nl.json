@@ -202,6 +202,14 @@
   "request": {
     "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!"
   },
+  "about-us": {
+    "community": {
+      "content-paragraph": "We hadden ons echter afgevraagd: waarom kunnen we niet altijd de juiste fiets huren waar en wanneer we die nodig hebben? Moet het altijd één van die gebruikte en verwaarloosde huurfietsen zijn van bike-sharing stations? Het idee van listnride was geboren."
+    },
+    "future": {
+      "content-paragraph": "Wij zijn trots op onze partners die hun fietsen bij ons aanbieden - of het nu gaat om professionele retailers, eigenaren van een fietsenpark of particulieren. Tenslotte kan je op bepaalde locaties in Europa kennismaken met innovatieve merken die samen met ons exclusieve testritten aanbieden."
+    }
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes voor de Cyclingworld",

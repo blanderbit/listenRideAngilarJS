@@ -207,6 +207,14 @@
   "request": {
     "payment-failed": "Uh-oh. Unfortunately, your payment failed. Please double check the data you have entered, as well as the payment settings of your payment provider!"
   },
+  "about-us": {
+    "community": {
+      "content-paragraph": "However, we asked ourselves: why can't we always have just the right rental bike whenever and wherever we need it? Does it always have to be one of the used-and-abused from bike-sharing stations? The idea of listnride was born."
+    },
+    "future": {
+      "content-paragraph": "We are proud of our partners who have listed their bikes - be they professional retailers, bike fleet owners, or individuals. Finally, you can discover at selected locations throughout Europe ground-breaking brands that have partnered up with us to offer exclusive test ride services."
+    }
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes for Cyclingworld",

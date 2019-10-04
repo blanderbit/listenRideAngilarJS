@@ -207,6 +207,14 @@
   "request": {
     "payment-failed": "Uh-oh. Desafortunadamente, tu pago falló. Por favor, comprueba los datos que has introducido, así como la configuración de pago de tu proveedor de pagos!"
   },
+  "about-us": {
+    "community": {
+      "content-paragraph": "Sin embargo, nos preguntamos: ¿por qué no siempre podemos tener la bicicleta de alquiler adecuada cuando y donde la necesitemos? ¿Siempre tiene que ser una de las estaciones de uso compartido de bicicletas? La idea de listnride nació."
+    },
+    "future": {
+      "content-paragraph": "Estamos orgullosos de nuestros socios que han enumerado sus bicicletas, ya sean minoristas profesionales, propietarios de flotas de bicicletas o individuos. Finalmente, puede descubrir en lugares seleccionados de toda Europa marcas innovadoras que se han asociado con nosotros para ofrecer servicios exclusivos de prueba de manejo."
+    }
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Cyclingworld event bike",

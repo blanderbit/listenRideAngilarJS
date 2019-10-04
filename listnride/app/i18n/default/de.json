@@ -207,6 +207,14 @@
   "request": {
     "payment-failed": "Oops.. Leider ist deine Zahlung fehlgeschlagen. Bitte prüfe die von dir eingegebenen Daten sowie die Zahlungseinstellungen des Zahlungsdienstleisters nochmals!"
   },
+  "about-us": {
+    "community": {
+      "content-paragraph": "Wir haben uns jedoch gefragt: Warum haben wir nicht immer das richtige Leihrad, wann und wo immer wir es brauchen? Muss es immer eine der von Bikesharing-Stationen ausgenutzten und missbrauchten sein? Die Idee von listnride war geboren."
+    },
+    "future": {
+      "content-paragraph": "Wir sind stolz auf unsere starken Partner die bei uns ihre Räder gelistet haben - seien es gewerbliche Händler, Fahrradflottenbesitzer oder Privatpersonen. Mit uns kannst du außerdem in ausgewählten Orten angesagte Marken entdecken, welche sich mit uns zusammengeschlossen haben um einen exklusiven Testfahrten Service anzubieten."
+    }
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes für die Cyclingworld",
