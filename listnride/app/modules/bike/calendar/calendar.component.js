@@ -62,6 +62,9 @@ angular.module('bike').component('calendar', {
     calendar.isTimeslotAvailable = isTimeslotAvailable;
     calendar.bikeEventSlotPicked = bikeEventSlotPicked;
 
+    // initialization
+    setRider();
+
     calendar.$onChanges = function (changes) {
       calendar.humanReadableSize = bikeOptions.getHumanReadableSize(calendar.bikeSize);
       if (changes.userId.currentValue && (changes.userId.currentValue !== changes.userId.previousValue)) {
@@ -75,6 +78,21 @@ angular.module('bike').component('calendar', {
         });
       }
     };
+
+    function setRider() {
+      if (!$localStorage.userId) {
+        return false;
+      }
+
+      api.get('/users/' + $localStorage.userId).then(
+        function (success) {
+          calendar.rider = success.data;
+        },
+        function (error) {
+          notification.show(error, 'error');
+        }
+      );
+    }
 
     function setPropertiesFromState() {
       setCalendarDefaultParams();
@@ -639,7 +657,8 @@ angular.module('bike').component('calendar', {
         calendar.specialPriceDaily = prices.subtotalDiscounted / calendar.durationDays;
 
         calendar.lnrFee = prices.serviceFee + prices.basicCoverage;
-        calendar.total = prices.total;
+        calendar.balance = calendar.rider ? Math.min(prices.total, calendar.rider.balance) : 0;
+        calendar.total = prices.total - calendar.balance;
 
         if (calendar.cluster) {
           bikeCluster
