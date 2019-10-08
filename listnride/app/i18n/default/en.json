@@ -215,6 +215,17 @@
       "content-paragraph": "We are proud of our partners who have listed their bikes - be they professional retailers, bike fleet owners, or individuals. Finally, you can discover at selected locations throughout Europe ground-breaking brands that have partnered up with us to offer exclusive test ride services."
     }
   },
+  "testimonials": {
+    "jetske-amsterdam": "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺",
+    "john-potsdam": "I have a few bikes standing around and think it's great to rent them out and offer visitors to my city a cool bike. We have always had great tenants so far!",
+    "cornelia-basel": "We visited Berlin and wanted to try out a nice e-bike this time. We found Ampler e-bikes on listnride and rented two of them. It turned out perfectly and at a good price!",
+    "rider-1": "Visited Vienna and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!",
+    "rider-2": "I was visiting a friend in Berlin and didn't want to bring my own bike with me. Instead I rented a nice bike - very close to her. It worked out perfectly and at a good price.",
+    "rider-3": "In Munich we came across listnride and found two elegant city bikes for an appropriate price. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!",
+    "rider-4": "I work regularly in Berlin. Since I discovered listnride, I often rent a nice bike. The selection of bikes is great and it is easy and safe.",
+    "lister-1": "Recently discovered listnride, uploaded 3 road bikes and now regularly rent them out. The great thing about it is meeting nice people, with whom I also go for a ride sometimes.",
+    "lister-2": "I'm a big listnride fan. When I go to races, I hire myself an excellent bike. At home I offer my bikes to my Airbnb guests. Super easy and good money."
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes for Cyclingworld",

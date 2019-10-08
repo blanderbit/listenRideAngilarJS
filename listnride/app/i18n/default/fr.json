@@ -215,6 +215,17 @@
       "content-paragraph": "Nous sommes fiers de nos partenaires qui ont répertorié leurs vélos, qu’il s’agisse de détaillants professionnels, de propriétaires de parcs de vélos ou de particuliers. Enfin, vous pouvez découvrir sur des sites sélectionnés à travers l’Europe des marques novatrices qui se sont associées à nous pour offrir des services de test rides exclusifs."
     }
   },
+  "testimonials": {
+    "jetske-amsterdam": "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺",
+    "john-potsdam": "Ich habe einige Räder rumstehen und finde es toll diese zu vermieten und Besuchern meiner Stadt ein cooles Rad anzubieten. Immer sehr tolle Mieter gehabt!",
+    "cornelia-basel": "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-Bike testfahren. Auf listnride haben wir E-Bikes der Marke Ampler gefunden und zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!",
+    "rider-1": "Visited Berlin and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!",
+    "rider-2": "Ich war zu Besuch bei einer Freundin in Berlin und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis.",
+    "rider-3": "In Munich we came across listnride and found two elegant city bikes for an appropriate price. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!",
+    "rider-4": "Ich bin regelmäßig in Berlin tätig. Seitdem ich listnride entdeckt habe, leihe ich mir öfter ein schönes Rad. Die Auswahl ist super und es ist einfach und sicher.",
+    "lister-1": "Neulich listnride entdeckt, 3 Rennräder hochgeladen und vermiete mittlerweile regelmäßig. Das Tolle an der Sache ist, coole Leute zu treffen, mit den ich auch mal eine Runde drehe.",
+    "lister-2": "Ich bin großer listnride Fan. Wenn ich zu Rennen fahre, leihe ich mir ein optimales Rad. Zu Hause verleihe ich meine Fahrräder u.a. an meine Airbnb-Gäste. Super einfach und gutes Geld."
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Vélos à tester à Cyclingworld",

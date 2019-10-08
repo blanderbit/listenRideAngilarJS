@@ -210,6 +210,17 @@
       "content-paragraph": "Wij zijn trots op onze partners die hun fietsen bij ons aanbieden - of het nu gaat om professionele retailers, eigenaren van een fietsenpark of particulieren. Tenslotte kan je op bepaalde locaties in Europa kennismaken met innovatieve merken die samen met ons exclusieve testritten aanbieden."
     }
   },
+  "testimonials": {
+    "jetske-amsterdam": "Op listnride verhuur ik mijn fietsen om gezinnen een simpele oplossing te bieden om mijn woonplaats te leren kennen. Naast het ontmoeten van aardige mensen verdien ik wat extra zakgeld ☺",
+    "john-potsdam": "Ik heb een aantal fietsen rond staan en ik vind het leuk om ze te verhuren en bezoekers van mijn eigen stad een coole fiets aan te bieden. Tot dusver hebben we altijd geweldige huurders gehad!",
+    "cornelia-basel": "We waren in Berlijn en wilden dit keer een mooie e-bike proberen. We vonden Ampler e-bikes op listnride en huurden er twee. Het bleek perfect te werken en ook voor een goede prijs!",
+    "rider-1": "Een bezoek aan Wenen en we wilden actief de stad en het omliggende natuurgebied ontdekken. We vonden 2 geweldige huurfietsen op listnride, we hadden een geweldige tijd. simpelweg een geweldige ontdekking!\n",
+    "rider-2": "Ik was op bezoek bij een vriendin in Berlijn en wilde mijn eigen fiets niet meenemen. In plaats daarvan heb ik een mooie fiets gehuurd - vlakbij haar vandaan. Het heeft perfect gefunctioneerd en ook nog eens voor een goede prijs.",
+    "rider-3": "In München hebben we listnride ontdekt en vonden we twee elegante stadsfietsen voor een passende prijs. De eigenaar was een vriendelijke man die ons uitnodigde voor een kopje koffie. Hij gaf een aantal leuke tips, echt superleuk!",
+    "rider-4": "Ik werk regelmatig in Berlijn. Sinds ik listnride heb ontdekt, huur ik vaak een mooie fiets. De keuze is goed en het is eenvoudig en veilig.",
+    "lister-1": "Onlangs ontdekte listnride, plaatste 3 racefietsen online en verhuur ze nu regelmatig. Het mooie is dat ik leuke mensen ontmoet, met wie ik ook soms een ritje maak.",
+    "lister-2": "Ik ben een grote lijstnride fan. Als ik naar wielerkoersen ga, huur ik de optimale fiets. Thuis verhuur ik mijn fietsen aan mijn Airbnb gasten. Super gemakkelijk en gemakkelijk verdiend."
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes voor de Cyclingworld",
@@ -740,10 +751,10 @@
     "password-not-match": "Wachtwoorden komen niet overeen",
     "verification-code-error": "Fout: de verificatiecode is ongeldig.",
     "address-save-error": "Het adres kon niet worden opgeslagen",
-    "request-create-rider": "Maak je geen zorgen, er worden nog geen kosten in rekening gebracht: de betaling vindt alleen plaats als en wanneer je aanvraag wordt geaccepteerd!",
-    "request-created": "Het boekingsverzoek is succesvol verzonden!",
-    "request-failed": "Oeps, er is iets mis.",
-    "request-failed-rider": "Er is iets misgegaan met de betaling. Controleer of je je betalingsgegevens correct hebt ingevoerd en probeer het opnieuw!",
+    "request-create-rider": "Maak je geen zorgen, er wordt niks in rekening gebracht: de betaling vindt alleen plaats indien je aanvraag wordt geaccepteerd!",
+    "request-created": "De boekingsaanvraag is succesvol verzonden!",
+    "request-failed": "Oeps, er is iets mis gegaan.",
+    "request-failed-rider": "Er is iets misgegaan met de betaling. Controleer of de betaalgegevens correct zijn ingevoerd en probeer het opnieuw!",
     "btns": {
       "go-to-request": "Open de aanvraag",
       "go-to-settings": "Instellingen",
