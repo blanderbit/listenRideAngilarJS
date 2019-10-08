@@ -265,6 +265,13 @@
         <div>{{ calendar.lnrFee | currency:"€":2 }}</div>
       </div>
 
+      <div layout="row" layout-align="space-between center" ng-if="calendar.balance > 0">
+        <div layout="row" layout-align="start center">
+          {{ 'shared.voucher' | translate }}
+        </div>
+        <div>- {{ calendar.balance | currency:"€":2 }}</div>
+      </div>
+
       <div layout="row" layout-align="space-between center">
         <div>{{ 'shared.total' | translate }}</div>
         <div>{{ calendar.total | currency:"€":2 }}</div>
