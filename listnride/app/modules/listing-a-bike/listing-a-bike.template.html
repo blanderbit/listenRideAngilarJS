@@ -2,6 +2,22 @@
   <div id="hero-shot" class="lnr-preload-bg" style="background-image: url('app/assets/ui_images/static/lnr_list_a_bike.jpg')" layout="row" layout-align="center center">
     <div class="lnr-page-title md-color-white" flex layout="column" layout-align="center center">
       <h1 class="md-display-1">{{ 'list-a-bike.title' | translate }}</h1>
+      <div class="lnr-mh-x2">
+        <md-button
+          ng-if="listingABike.authentication.loggedIn()"
+          ui-sref="list"
+          class="md-raised md-primary md-lrg"
+        >
+          {{ 'list.list-your-bike' | translate }}
+        </md-button>
+        <md-button
+          ng-if="!listingABike.authentication.loggedIn()"
+          ng-click="listingABike.authentication.showSignupDialog()"
+          class="md-raised md-primary md-lrg"
+        >
+          {{ 'list-a-bike.list-section.sign-up' | translate }}
+        </md-button>
+      </div>
     </div>
   </div>
 
