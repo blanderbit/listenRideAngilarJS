@@ -38,6 +38,30 @@
     },
     "LNR_API_KEY_COVIEW": {
       "required": true
+    },
+    "LNR_API_RECAPTCHA_V3_PUBLIC": {
+      "required": true
+    },
+    "LNR_ADYEN_ENV": {
+      "required": true
+    },
+    "LNR_ADYEN_ORIGIN_KEY": {
+      "required": true
+    },
+    "LNR_ADYEN_ORIGIN_KEY_DE": {
+      "required": true
+    },
+    "LNR_ADYEN_ORIGIN_KEY_NL": {
+      "required": true
+    },
+    "LNR_ADYEN_ORIGIN_KEY_ES": {
+      "required": true
+    },
+    "LNR_ADYEN_ORIGIN_KEY_IT": {
+      "required": true
+    },
+    "LNR_ADYEN_ORIGIN_KEY_FR": {
+      "required": true
     }
   }
 }
