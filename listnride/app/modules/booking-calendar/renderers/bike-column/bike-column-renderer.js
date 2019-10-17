@@ -12,14 +12,12 @@ function newBadgeRenderer({ record, translations }) {
 }
 
 function bikeMetaInfoRenderer({ record, translations }) {
-  const { id, size, children, isCluster, humanizeSize } = record;
+  const { id, size, children, isCluster, sizeLabel } = record;
   let content = '';
 
   const sizeDisplay =
-    size === 0
-      ? `<dt>${translations['search.unisize']}</dt>`
-      : `<dt>${translations['booking.overview.size']}</dt>
-         <dd>${humanizeSize}</dd>`;
+          ((size !== 0) ? `<dt>${translations['booking.overview.size']}</dt>` : '') +
+          `<dd>${sizeLabel}</dd>`;
 
   if (isCluster) {
     content += `

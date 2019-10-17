@@ -89,7 +89,7 @@ angular
             category: bike.category,
             imageUrl: bike.image_file,
             size: bike.size,
-            humanizeSize: bikeOptions.getHumanReadableSize(bike.size) + (bike.frame_size ? ' | ' + bike.frame_size : '')
+            sizeLabel: bikeOptions.getSizeLabel(bike.size, bike.frame_size,)
           });
 
           const bikeRequests = parseRequests({
@@ -151,7 +151,7 @@ angular
                   isVariant: true,
                   variantIndex: index + 1,
                   cls: 'variant-row',
-                  humanizeSize: bikeOptions.getHumanReadableSize(bikeVariant.size) + (bikeVariant.frame_size ? ' | ' + bikeVariant.frame_size : '')
+                  sizeLabel: bikeOptions.getSizeLabel(bike.size, bike.frame_size,)
                 })
               );
             });
@@ -327,7 +327,7 @@ angular
           category: null,
           imageUrl: null,
           size: null,
-          humanizeSize: null,
+          sizeLabel: null,
           variantIndex: null,
           cls: null,
           requestsWithNewMessages: [],
