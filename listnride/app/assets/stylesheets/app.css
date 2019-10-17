@@ -1889,6 +1889,7 @@ md-grid-list md-grid-tile.tile-lake-garda {
 
 #featuredTilesGrid {
   text-align: center;
+  margin-bottom: 70px;
 }
 
 #featuredTilesGrid .tile {
@@ -1923,6 +1924,10 @@ md-grid-list md-grid-tile.tile-lake-garda {
   .lnr-search-bar autocomplete input,
   .lnr-search-bar .md-button {
     font-size: 12px;
+  }
+
+  #featuredTilesGrid {
+    padding-bottom: calc(((66.6667% - 0px) * 12) + 30px)!important;
   }
 }
 
