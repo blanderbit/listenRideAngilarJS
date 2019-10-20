@@ -249,46 +249,69 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
               addEvent: {
                 text: translations['booking-calendar.add-non-availability'],
                 onItem({
-                    resourceRecord,
-                    event
-                  }) {
-                    // function from API to take DATE for mouse event position
-                    let selectedDate = bookingCalendar.scheduler.getDateFromDomEvent(event);
-                    $mdDialog.show({
-                      controller: BikeAvailabilityController,
-                      controllerAs: 'bikeAvailability',
-                      templateUrl: 'app/modules/booking-calendar/booking-calendar-availability-dialog.template.html',
-                      parent: angular.element(document.body),
-                      targetEvent: event,
-                      openFrom: angular.element(document.body),
-                      closeTo: angular.element(document.body),
-                      clickOutsideToClose: true,
-                      escapeToClose: true,
-                      locals: {
-                        selectedDate: selectedDate,
-                        resourceRecord: resourceRecord
-                      }
-                    });
+                  resourceRecord,
+                  event
+                }) {
+                  // function from API to take DATE for mouse event position
+                  let selectedDate = bookingCalendar.scheduler.getDateFromDomEvent(event);
+                  $mdDialog.show({
+                    controller: BikeAvailabilityController,
+                    controllerAs: 'bikeAvailability',
+                    templateUrl: 'app/modules/booking-calendar/booking-calendar-availability-dialog.template.html',
+                    parent: angular.element(document.body),
+                    targetEvent: event,
+                    openFrom: angular.element(document.body),
+                    closeTo: angular.element(document.body),
+                    clickOutsideToClose: true,
+                    escapeToClose: true,
+                    locals: {
+                      selectedDate: selectedDate,
+                      resourceRecord: resourceRecord
+                    }
+                  });
                 }
               },
               deleteEvent: false
             }
           },
           eventContextMenu: {
-            items: {
-              addEvent: false,
-              deleteEvent: {
-                // text: translations['booking-calendar.add-remove-non-availability'],
-                text: 'Remove event',
-                icon: "b-icon b-icon-trash",
-                onItem({
-                  resourceRecord,
-                  eventRecord
-                }) {
-                  if (eventRecord.isNotAvailable && !resourceRecord.isCluster) {
-                    bikeHelper.removeBikeAvailability(resourceRecord.originalData.id, eventRecord.resourceEventId)
-                    .then( response => $state.reload())
-                    .catch( error => notification.show(error, 'error'));
+            processItems({date, resourceRecord, items}) {
+              if (resourceRecord.isCluster) return false;
+              items = {
+                addEvent: false,
+                deleteEvent: {
+                  text: translations['booking-calendar.remove-non-availability'],
+                  icon: "b-icon b-icon-trash",
+                  onItem({
+                    resourceRecord,
+                    eventRecord
+                  }) {
+                    if (eventRecord.isNotAvailable && !resourceRecord.isCluster) {
+                      bookingCalendar.isLoading = true;
+
+                      bikeHelper
+                        .removeBikeAvailability(resourceRecord.originalData.id, eventRecord.resourceEventId)
+                        .then(response => {
+                          bookingCalendar.isLoading = false;
+                          bookingCalendar.scheduler.eventStore.remove(eventRecord);
+
+                          if (eventRecord.clusterEventId) {
+                            const clusterEvent = bookingCalendar.scheduler.eventStore.getById(
+                              eventRecord.clusterEventId
+                            );
+
+                            clusterEvent.requestsCount -= 1;
+
+                            if (clusterEvent.requestsCount === 0) {
+                              clusterEvent.remove();
+                            }
+                          }
+                        })
+                        .catch(error => {
+                          bookingCalendar.isLoading = false;
+                          notification.show(error, 'error');
+                        })
+                    }
                   }
                 }
               }
@@ -317,6 +340,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
       bookingCalendar.scheduler.on({
         eventclick: ({ resourceRecord, eventRecord }) => {
           $log.debug('Clicked bike event:', eventRecord);
+          $log.debug('Clicked bike resourse:', resourceRecord);
           // expand bike cluster on cluster event click
           bookingCalendar.scheduler.toggleCollapse(resourceRecord);
         },
@@ -550,7 +574,6 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
         comment: ''
       }
 
-      // TODO: make them with translations
       bikeAvailability.reasonOptions = [
         'booking-calendar.reasons.booked-in-store',
         'booking-calendar.reasons.service-repair',
@@ -604,22 +627,25 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
 
       function onSaveButtonClick() {
         let bikeId = resourceRecord.originalData.id;
-        let data = { 'availabilities': [] }
-
-        data.availabilities.push({
+        const newBikeAvailability = {
           ride_id: bikeId,
           ...bikeAvailability.dateRange,
           ...bikeAvailability.optionalData,
-        });
+        };
 
         bikeHelper.createBikeAvailability({
           id: bikeId,
           isCluster: resourceRecord.isCluster,
-          data: data
+          data: [newBikeAvailability]
         }).then(
           function(response) {
-            // TODO: find better solution to dynamically add availability tile on Booking Calendar
-            $state.reload();
+            _.forEach(response.data, function(availability){
+              bookingCalendar.scheduler.eventStore.add(bookingCalendarService.createAvailabilityEvent({
+                id: availability.ride_id,
+                availability: availability
+              }));
+            });
+
             bikeAvailability.close();
           },
           function(error) {

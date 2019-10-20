@@ -57,7 +57,7 @@ angular
           'message.accept',
           'booking-calendar.event.view-booking',
           'booking-calendar.add-non-availability',
-          'booking-calendar.add-remove-non-availability',
+          'booking-calendar.remove-non-availability',
           'booking-calendar.reasons.booked-in-store',
           'booking-calendar.reasons.service-repair',
           'booking-calendar.reasons.event-other',
@@ -71,7 +71,9 @@ angular
           .get(`/users/${$localStorage.userId}/rides?detailed=true`)
           .then(({ data }) => data.bikes)
           .then(bikes => parseBikes(bikes));
-      }
+      },
+
+      createAvailabilityEvent
     };
 
     function parseBikes(bikes) {
@@ -287,22 +289,24 @@ angular
 
     function parseAvailabilities({ id, availabilities }) {
       return availabilities.reduce((acc, availability) => {
-        const { start_date, duration, reason, comment } = availability;
-
-        acc.push(
-          getEvent({
-            resourceId: id,
-            startDate: moment.utc(start_date).format('YYYY-MM-DD HH:mm'),
-            duration: duration + 1,
-            durationUnit: 's',
-            isNotAvailable: true,
-            reason: reason,
-            comment: comment,
-            resourceEventId: availability.id
-          })
-        );
+        acc.push(createAvailabilityEvent({id, availability}));
         return acc;
       }, []);
+    }
+
+    function createAvailabilityEvent({id, availability}) {
+      const { start_date, duration, reason, comment } = availability;
+
+      return getEvent({
+        resourceId: id,
+        startDate: moment.utc(start_date).format('YYYY-MM-DD HH:mm'),
+        duration: duration + 1,
+        durationUnit: 's',
+        isNotAvailable: true,
+        reason: reason,
+        comment: comment,
+        resourceEventId: availability.id
+      })
     }
 
     function parseRequestsWithMewMessages({ requests }) {
