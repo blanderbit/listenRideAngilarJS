@@ -12,12 +12,13 @@ function newBadgeRenderer({ record, translations }) {
 }
 
 function bikeMetaInfoRenderer({ record, translations }) {
-  const { id, size, children, isCluster, sizeLabel } = record;
+  const { id, children, isCluster, sizeLabel, bikeNumber } = record;
   let content = '';
 
-  const sizeDisplay =
-          ((size !== 0) ? `<dt>${translations['booking.overview.size']}</dt>` : '') +
-          `<dd>${sizeLabel}</dd>`;
+  const sizeDisplay = `
+    <dt>${translations['booking.overview.size']}:</dt>
+    <dd>${sizeLabel}</dd>
+  `;
 
   if (isCluster) {
     content += `
@@ -27,8 +28,8 @@ function bikeMetaInfoRenderer({ record, translations }) {
     `;
   } else {
     content += `
-      <dt>${translations['shared.id']}</dt>
-      <dd>${id}</dd>
+      <dt>${translations['shared.id']}:</dt>
+      <dd>${bikeNumber ? bikeNumber : id}</dd>
       ${sizeDisplay}
       ${newBadgeRenderer({ record, translations })}
     `;

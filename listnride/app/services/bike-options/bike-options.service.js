@@ -99,10 +99,11 @@ angular.module('listnride')
         bikeSize = parseInt(bikeSize);
         return bikeSize === 0 ? $translate.instant("search.unisize") : bikeSize + " - " + (bikeSize + 10) + " cm";
       },
+      // function to show bike size for bike owner
+      // show rider_height (bikeSize) only in case if bike doesn't have frameSize
       getSizeLabel: function (...sizes) {
         let [bikeSize, frameSize] = sizes;
-        bikeSize = this.getHumanReadableSize(bikeSize);
-        return ((bikeSize !== 0 ? bikeSize : '') + (frameSize ? ' | ' + frameSize : ''));
+        return frameSize ? frameSize : this.getHumanReadableSize(bikeSize);
       },
       // All categories and subcategories keys
       categoriesTranslationKeys: function () {

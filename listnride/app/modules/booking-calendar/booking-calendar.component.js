@@ -369,6 +369,12 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
             });
           }
         },
+        cellContextMenu: ({}) => {
+          // TODO: add context menu for left cell (only works with single bike or bike variant)
+          // 1. View Bike (goes to bike page)
+          // 2. Edit Bike (goes to bike edit page)
+          // forum link: https://www.bryntum.com/forum/viewtopic.php?f=44&t=12481
+        },
         timeaxischange: () => {
           // on start/end date change
           bookingCalendar.filterBikes();

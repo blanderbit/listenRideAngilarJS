@@ -80,18 +80,17 @@ angular
       bikes = bikes.filter((bike) => bike.available);
       return bikes.reduce(
         (acc, bike) => {
-          const bikeId = bike.is_cluster ? bike.cluster_id : bike.id;
-
           // bike boilerplate
           const bikeResource = getResource({
-            id: bikeId,
+            id: bike.is_cluster ? bike.cluster_id : bike.id,
+            bikeNumber: bike.bicycle_number,
             name: `${bike.brand} ${bike.name}`,
             location: bike.location,
             isCluster: bike.is_cluster,
             category: bike.category,
             imageUrl: bike.image_file,
             size: bike.size,
-            sizeLabel: bikeOptions.getSizeLabel(bike.size, bike.frame_size,)
+            sizeLabel: bikeOptions.getSizeLabel(bike.size, bike.frame_size)
           });
 
           const bikeRequests = parseRequests({
@@ -153,7 +152,7 @@ angular
                   isVariant: true,
                   variantIndex: index + 1,
                   cls: 'variant-row',
-                  sizeLabel: bikeOptions.getSizeLabel(bike.size, bike.frame_size,)
+                  sizeLabel: bikeOptions.getSizeLabel(bikeVariant.size, bikeVariant.frame_size)
                 })
               );
             });
@@ -324,6 +323,7 @@ angular
       return Object.assign(
         {
           id: null,
+          bikeNumber: null,
           name: null,
           location: null,
           isCluster: false,
