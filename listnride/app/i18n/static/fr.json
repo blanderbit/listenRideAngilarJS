@@ -15,7 +15,7 @@
       "subtitle": "Explorez Berlin à vélo",
       "description": "Trouvez des endroits intéressants hors des sentiers battus",
       "search-title": "Jetez un coup d'oeil à la sélection de vélos de location à Berlin",
-      "search-subtitle": "Louez un vélo qui correspond à votre style et à vos besoins",
+      "search-subtitle": "Location de vélo qui correspond à votre style et à vos besoins",
       "about": "À propos de Berlin",
       "about-content": "Au cours des dix dernières années, le cyclisme s’est considérablement développé à Berlin, apportant une nouvelle dimension à la culture vélo de Berlin. Le fait que la ville et la campagne entourant Berlin aient tant à offrir, ainsi que la géographie adaptée aux cyclistes (les hivers sont plus chauds) peuvent être deux raisons pour cet accomplissement.",
       "bike-routes": "Itinéraires à vélo",
@@ -32,7 +32,7 @@
       "subtitle": "Explorez Munich à vélo",
       "description": "Trouvez des endroits intéressants hors des sentiers battus",
       "search-title": "Jetez un coup d'oeil à la sélection de vélos de location à Munich",
-      "search-subtitle": "Louez un vélo qui correspond à votre style et à vos besoins",
+      "search-subtitle": "Location de vélo qui correspond à votre style et à vos besoins",
       "about": "À propos de Munich",
       "about-content": "Faire du vélo à Munich est une expérience unique. La ville offre une infrastructure spécialement adaptée aux vélos et une variété de belles périphéries à proximité. Un coup d’œil sur le paysage urbain de Munich révèle l’énorme popularité du cyclisme parmi tous les styles. Vous pouvez passer du temps dans les rues et seulement quelques coups de pédale plus tard, la campagne commence à se dérouler. Avec des centaines de kilomètres de pistes cyclables délimitées et des pistes cyclables réservées à la ville et à ses environs, c'est un terrain idéal pour les cyclistes.",
       "bike-routes": "Itinéraires à vélo",
@@ -49,7 +49,7 @@
       "subtitle": "Explorez Amsterdam à vélo",
       "description": "Trouvez des endroits intéressants hors des sentiers battus",
       "search-title": "Jetez un coup d'oeil à la sélection de vélos de location à Amsterdam",
-      "search-subtitle": "Louez un vélo qui correspond à votre style et à vos besoins",
+      "search-subtitle": "Location de vélo qui correspond à votre style et à vos besoins",
       "about": "À propos d'Amsterdam",
       "about-content": "La capitale européenne du vélo a beaucoup à offrir aux amateurs de vélo. Avec une infrastructure très centrée sur le vélo, c'est un réel plaisir de se déplacer en ville. Comme vous le remarquerez, les habitants feront pratiquement n'importe quoi sur leur vélo, ce qui créera par ailleurs des embouteillages. Les habitants font du vélo toute l'année, quelles que soient les conditions météorologiques. La culture du vélo à Amsterdam est un mélange dynamique de vélos classiques «hollandais», de vélos cargo «Bakfiets» et de vélos de route sportifs.",
       "bike-routes": "Itinéraires à vélo",
@@ -66,7 +66,7 @@
       "subtitle": "Explorez Vienne à vélo",
       "description": "Trouvez des endroits intéressants hors des sentiers battus",
       "search-title": "Jetez un coup d'oeil à la sélection de vélos de location à Vienne",
-      "search-subtitle": "Louez un vélo qui correspond à votre style et à vos besoins",
+      "search-subtitle": "Location un vélo qui correspond à votre style et à vos besoins",
       "about": "A propos de Vienne",
       "about-content": "Vienne. La ville impériale sur le Danube, qui se transforme lentement en une métropole axée sur le vélo. Surtout pendant ses propres festivals tels que <a href=\"http://www.bikefestival.at\" target=\"_blank\">Argus Bike </a>, Radkult, et en 2016, le <a href=\"http://www.wienerfahrradschau.at\" target=\"_blank\">Wiener Fahrradschau </a>, un spin-off de Berlin Fahrradschau a eu lieu pour la première fois. À côté de ces événements, il n’y a aucun moyen de rater la scène cycliste locale, car elle a grandi aussi vite que la ville elle-même et a repris possession des rues.",
       "bike-routes": "Itinéraires à vélo",
@@ -386,7 +386,7 @@
       "text": "<div style=\"text-align: justify;\">Le <a href=\"http://www.frankfurt-city-triathlon.de\" target=\"_blank\">Franfurt City Triathlon</a> célèbre cette année sa 10ème édition! Nagez, roulez et courez à travers la ville moderne, que ce soit la distance courte ou olympique! <br><br>\n\nNous organisons un service de location de vélos pour la course afin que vous n’ayez pas à apporter le vôtre. Vous pouvez donc participer à cet événement en louant des vélos de route de qualité supérieure fabriqués par le fabricant autrichien Simplon! <br><br>\n\nÉconomisez du temps, des problèmes et de l'argent en louant simplement un vélo: ils seront prêts à partir à la ligne de départ. Tout ce que vous devez apporter est votre casque et vos pédales!</div>"
     },
     "paris-brest-paris": {
-      "title": "Louez un vélo de route pour Paris-Brest-Paris 2019",
+      "title": "Location de vélo de route pour Paris-Brest-Paris 2019",
       "description": "Quoi: <b>Paris-Brest-Paris</b> | Quand: <b>18-22 août 2019</b> | Où: <b>Bergerie National, Rambouillet, France</b>",
       "text": "Paris-Brest-Paris est une course cycliste sans soutien externe, 1 200 km en longueur, de Paris à Brest et de retour. Il a eu lieu pour la première fois en 1891, et a lieu tous les 4 ans. Selon la plupart des registres, il s’agit de l’événement cycliste le plus ancien encore existant aujourd’hui. C’est un point culminant des courses de ce genre - aussi connu sous le nom de “brevets.”  </br></br>\n \nL’histoire, le prestige, et le défi du PBP attire des cyclistes du monde entier. Le fait qu'il n'ait lieu que tous les quatre ans ne fait que renforcer son statut. Cette année, plus de 6 000 coureurs auront la chance de prendre part à cette course historique de longue distance.</br></br>\n\nLes vélos de route à louer seront ajustés pour vous (bike-fitting) et peuvent être récupérés directement dans le parc du château de Rambouillet, dans le quartier de l'Expo. L'équipe sur place feront une partie de la piste, et sont des cyclistes PBP expérimentés.<br><br> Photos de James Robertson"
     },
@@ -403,10 +403,10 @@
       "text": "The 8bar Clubride is a weekly road bike ride of about 60-80km. The cruising speed is about 27-33km/h.\n\nIf you rent an 8bar bike you should be at the showroom by 17:45h at the latest, otherwise your reservation expires and we will rent the bike otherwise."
     },
     "granfondo-bikedivision": {
-      "title": "Louez un vélo de route pour la Granfondo Bike Division",
+      "title": "Location de vélo de route pour la Granfondo Bike Division",
       "description": " Où: <b>Peschiera del Garda </b>| Quoi: <b>Granfondo Bike Division </b>| Quand: <b>22.09.2019 </b>",
       "text": "La Granfondo Peschiera del Garda a connu un excellent départ en 2015, et est maintenant nommée comme l'une des plus remarquables et des plus agréables cyclosportives italiennes. Venez rouler avec plus de 1000 participants dans un lieu pittoresque au bord du lac de Garde, avec des paysages montagneux à couper le souffle. Vous aurez droit à un personnel expérimenté et spécialisé, un parcours palpitant, et une zone d’expo.\n\nVenez découvrir cette magnifique randonnée lors de la 5ème édition de la <a href=\"http://www.gfbikedivisionpeschiera.com/en/\" target=\"_blank\">Granfondo Bike Division Peschiera del Garda</a>, qui aura lieux le dimanche du 22 septembre 2019.</br>\n\nCette fois ci, la route sera encore plus difficile, grâce à l’inclusion du redoutable MURO DEL GARDA : une montée raide de 400 m, que seuls les plus entraînés pourront la conquérir. Cet événement a été spécialement conçu pour ceux qui veulent combiner le cyclisme au tourisme durable, tout en testant ses limites!",
-      "meta-title": "Louez un vélo de route pour la Granfondo Bike Division",
+      "meta-title": "Location de vélo de route pour la Granfondo Bike Division",
       "meta-description": "La Granfondo Peschiera del Garda a connu un excellent départ en 2015, et est maintenant nommée comme l'une des plus remarquables et des plus agréables cyclosportives italiennes. Venez rouler avec plus de 1000 participants dans un lieu pittoresque au bord du lac de Garde, avec des paysages montagneux à couper le souffle. Vous aurez droit à un personnel expérimenté et spécialisé, un parcours palpitant, et une zone d’expo.\n\nVenez découvrir cette magnifique randonnée lors de la 5ème édition de la<a href=\"http://www.gfbikedivisionpeschiera.com\">Granfondo Bike Division Peschiera del Garda</a>, qui aura lieux le dimanche du 22 septembre 2019. Cette fois ci, la route sera encore plus difficile, grâce à l’inclusion du redoutable MURO DEL GARDA : une montée raide de 400 m, que seuls les plus entraînés pourront la conquérir. Cet événement a été spécialement conçu pour ceux qui veulent combiner le cyclisme au tourisme durable, tout en testant ses limites!"
     },
     "cyclingworld": {
@@ -430,27 +430,27 @@
       "subtitle": "Obtenez 30 € pour votre prochaine location. <br>Seulement aujourd'hui."
     },
     "epicgrancanaria": {
-      "title": "Louez un vélo de route pour l'Epic Gran Canaria | listnride",
+      "title": "Location de vélo de route pour l'Epic Gran Canaria | listnride",
       "description": "Quoi: <b>Epic Gran Canaria </b>| Quand: <b>5 - 6 - 7 avril 2019 </b>| Où: <b>Grande Canarie </b>",
       "text": "L’Epic Gran Canaria a pour objectif de fournir aux cyclistes amateurs une expérience professionnelle à vélo. Vous pouvez profiter d'un niveau inégalé de confort et de services premium en vous mesurant sur chacune des montées chronométrées pendant trois jours et en étapes classées. Louez votre vélo de route dès maintenant."
     },
     "lardita-arezzo": {
-      "title": "Louez un vélo de route vintage pour L’Ardita",
+      "title": "Location vélo de route vintage pour L’Ardita",
       "description": "Quoi: <b>L’Ardita cyclostorique de l’Alpe di Poti </b>| Quand: <b>24.3.2019 </b>| Où: <b>Arezzo, Toscane </b>",
       "text": "Le cœur du festival est \"L'Ardita\" le cyclostoric de l'Alpe di Poti pour vélo de route vintage.\nLe dimanche 24 mars 2019, l'Alpe di Poti, étape du Giro d'Italia 2016 mais aussi de nombreuses courses importantes dans les années 70 et 80, sera à nouveau confrontée. L'Ardita, a la particularité d’évoquer le cyclisme du passé, vous avez besoin d’un vélo vintage pour <a href=\"https://www.lardita.com/eng\" target=\"_blank\">L’Ardita? </a> En collaboration avec la communauté listnride, nous fournissons des vélos de route vintage appropriés que vous pouvez facilement louer pour l'événement. Il suffit de choisir l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le récupérer le moment venu. C'est si simple que ça."
     },
     "granfondo-via-del-sale": {
-      "title": "Louez un vélo de route pour le Granfondo Via del Sale",
+      "title": "Location vélo de route pour le Granfondo Via del Sale",
       "description": "Quoi: <b>23e Granfondo Via del Sale </b>| Quand: <b>5.5.2019 </b>| Où: <b>Fantini Club-Cervia (RA), Émilie-Romagne </b>",
       "text": "À sa 23e édition, la Via del Sale est l’un des plus célèbres Granfondos d’Italie, avec 6 000 participants et plus de 28 000 visiteurs.\nOutre ces chiffres record, plus de 100 entreprises choisissent chaque année de participer à la plus grande exposition en plein air d'Italie.\n3 itinéraires différents: Itinéraire long: 174 km. Moyen: 118 km, Court: 77 km.\nLa plus célèbre montée? Certainement Montevecchio, le légendaire \"Cima Pantani\". Un endroit qui nous tient à cœur devient le principal symbole de notre Granfondo. Un souvenir unique de l'inoubliable Pirate, venu ici pour s'entraîner pour ses grandes victoires.\n Avez-vous besoin d'un vélo pour le\n<a target=\"_blank\" href=\"http://granfondoviadelsale.com/\">Granfondo Via del Sale? </a>Avec la communauté de listnride, nous vous fournissons des vélos de route, que vous pouvez facilement louer pour l'événement. Il suffit de choisir l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le prendre au moment opportun.\nPhoto: Sportograf"
     },
     "giro-sardegna": {
-      "title": "Louez un vélo de route pour le Giro Sardegna 2019 | listnride",
+      "title": "Location vélo de route pour le Giro Sardegna 2019 | listnride",
       "description": "Quoi: <b>Giro Sardegna </b>| Quand: <b>21.4 - 26.4.2019 </b>| Où: <b>Cagliari, Sardaigne </b>",
       "text": "Le Giro Sardegna est une course en six étapes, adaptée à tous!\n\nChaque jour, un défi différent, sur l’une des plus belles îles de la mer Méditerranée.\n\nChaque étape commence à des heures convenables, tous les départs et les arrivées se font à proximité de l’hôtel, les routes sont lisses, et la nature est intacte: tous ces éléments ont construit un événement sans égal dans le monde!\n\nOubliez la logistique de voler avec votre vélo - louez simplement un vélo pour le <a target=\"_blank\" href=\"https://www.girosardegna.com/\">Giro Sardegna </a>!\n\nSur listnride, vous pouvez louer un vélo de route pour l'événement. Il vous suffit de cliquer sur l'un des vélos ci-dessous et de le demander pour la période souhaitée. Vous êtes maintenant prêt à courir!"
     },
     "velorace-dresden": {
-      "title": "Louez un vélo de route pour la Velorace de Dresden 2019 | listnride",
+      "title": "Location vélo de route pour la Velorace de Dresden 2019 | listnride",
       "description": "Quoi: <b>Velorace Dresden 2019 </b>| Où: <b>Dresde, Allemagne </b>| Quand: <b>le 11 août 2019 </b>",
       "text": "Louez un vélo de route pour\n<a href=\"//sachsentour.org/\" target=\"_blank\">Velorace Dresden </a>! Roulez avec nous à Dresden, même si vous n’avez pas de vélo - vous pouvez louer un vélo depuis la communauté de listnride, aussi longtemps que vous le souhaitez. Il suffit de choisir l’un des vélos ci-dessous, de le demander pour la période souhaitée et vous serez prêt à partir!\n\nSaviez-vous que vous pouvez également louer votre propre vélo?\n <a href=\"/listing-a-bike\" target=\"_blank\">Inscrivez votre vélo </a>\net gagnez de l'argent de poche!"
     },
@@ -459,7 +459,7 @@
       "text": "Louez un vélo de route pour le <a href=\"http://www.berlin-triathlon.de/\" target=\"_blank\">Triathlon de Berlin 2020 </a>! Vous pouvez louer un vélo sur listnride, où vous pouvez trouver des vélos de route appropriés que vous pouvez facilement louer aussi longtemps que vous le souhaitez. Il suffit de choisir l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le récupérer le moment venu. Aussi simple que cela.\n<br><br>\nSaviez-vous que vous pouvez également louer votre propre vélo? <a href=\"/listing-a-bike\" target=\"_blank\">Inscrivez votre vélo </a>et laissez votre vélo gagner de l'argent pour vous!"
     },
     "berlin-triathlon-xl": {
-      "title": "Louez un vélo de route pour le Triathlon XL de Berlin 2019",
+      "title": "Location vélo de route pour le Triathlon XL de Berlin 2019",
       "description": "Quoi: <b>Berlin Triathlon</b> | Où: <b>Berlin</b> | Quand: <b>23 Juin 2019</b>",
       "text": "Louez un vélo de route pour le <a href=\"//berlintriathlon-xl.de/\" target=\"_blank\">Triathlon de Berlin 2019 XL </a>! Sur listnride, vous pouvez trouver des vélos de course que vous pouvez facilement louer pour aussi longtemps que vous le souhaitez. Il vous suffit de cliquer sur l'un des vélos ci-dessous, de le demander pour la période souhaitée et vous serez prêt à partir! <br><br>\nSaviez-vous que vous pouvez louer votre propre vélo? <a href=\"/listing-a-bike\" target=\"_blank\">Inscrivez votre vélo </a>et laissez votre vélo gagner de l'argent pour vous!"
     },
@@ -482,13 +482,13 @@
       "meta-title": "In Velo Veritas - Louer un vélo avec listnride",
       "description": "Quoi: <b>In Velo Veritas </b>| Quand: <b>le 16 juin 2019 </b>| Où: <b>Poysdorf, Autriche </b>",
       "meta-description": "Louez le vélo vintage en acier idéal pour In Velo Veritas. listnride propose une sélection de vélos classiques à louer pour ce beau circuit dans la région viticole autrichienne.",
-      "title": "Louez un vélo de route classique pour In Velo Veritas",
+      "title": "Location vélo de route classique pour In Velo Veritas",
       "text": "Le légendaire <a target=\"_blank\" href=\"//inveloveritas.at\">In Velo Veritas </a>a lieu cette année pour la 7e fois le 16 juin 2019 à Poysdorf. Pour ceux qui veulent participer mais ont besoin d'un vélo conforme aux directives, nous avons rassemblé des vélos adaptés à nos membres de la communauté.  Il suffit Juste de le louer! Nous vous proposons les différents vélos ci-dessous. Si vous avez un vélo vintage mais ne pouvez pas participer, vous pouvez aider l'organisation en louant votre vélo sur notre plateforme! Devenez membre de notre communauté grandissante!"
     },
     "velothon-bikerental": {
-      "meta-title": "Louez un vélo de route idéal pour le Velothon Berlin",
+      "meta-title": "Location vélo de route pour le Velothon Berlin",
       "meta-description": "Participez au Velothon Berlin 2017! Louez un vélo de route depuis la communauté listnride!",
-      "title": "Louez un vélo de route idéal pour le Velothon Berlin",
+      "title": "Location vélo pour le Velothon Berlin",
       "text": "Sur listnride, vous pouvez louer un vélo de route à long terme. Il suffit de cliquer sur l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le récupérer le moment venu. Aussi simple que cela.\n<br>\nSaviez-vous que vous pouvez louer votre propre vélo? <a href=\"/#/listing-a-bike\">Inscrivez votre moto </a>et laissez votre vélo générer de l'argent pour vous!",
       "coffeespin": {
         "meta-title": "listnride au Velothon de Berlin",
@@ -499,7 +499,7 @@
       }
     },
     "constance-spin": {
-      "meta-title": "Louez un vélo de route idéal pour l'Eurobike",
+      "meta-title": "Location vélo de route idéal pour l'Eurobike",
       "meta-description": "Sortez et faites du vélo chez Eurobike avec listnride et Katusha",
       "title": "La Listnride Constance Spin",
       "text-1": "Rejoignez-nous mercredi 30 août pour vous détendre après une journée bien remplie à la foire. <br><br>Cette randonnée est une excellente occasion de partir à la découverte de la campagne autour de Lake Constance. Nous avons un guide local avec nous. <br><br>Nous nous arrêterons pour prendre un verre, manger et socialiser à la fin de la balade dans un lieu choisi, puis nous vous guiderons vers Eurobike. <br><br>Nous proposons des prêts de vélo gratuits, fournis par Pure Cycles. Veuillez sélectionner et réserver votre vélo. Vous devrez apporter vos propres chaussures et pédales.",
@@ -518,15 +518,15 @@
       "home-page-2": "Sortie d'Automne "
     },
     "cyclassics-hamburg": {
-      "meta-title": "Louez un vélo de route pour le Cyclassics Hamburg sur listnride",
-      "meta-description": "Louez un vélo de route pour les cyclassics à Hambourg facilement en ligne et choisissez des marques telles que Specialized, Ridley, Cervelo et Bianchi",
-      "title": "Louez un vélo de route pour le Cyclassics Hamburg sur listnride",
+      "meta-title": "Location vélo de route pour le Cyclassics Hamburg sur listnride",
+      "meta-description": "Location vélo de route pour les cyclassics à Hambourg facilement en ligne et choisissez des marques telles que Specialized, Ridley, Cervelo et Bianchi",
+      "title": "Location vélo de route pour le Cyclassics Hamburg sur listnride",
       "text": "Louez un vélo de route pour les cyclassics à Hambourg! Sur listnride, vous pouvez louer un vélo de route aussi longtemps que vous le souhaitez. Il suffit de cliquer sur l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le récupérer le moment venu. Aussi simple que cela. <br><br>Saviez-vous que vous pouvez louer votre propre vélo? Inscrivez votre vélo et gagnez de l'argent de poche supplémentaire!",
       "description": "Où: <b>Hambourg </b>| Quoi: <b>Course de vélos: 60 km, 100 km ou 160 km </b>| Quand: <b>25.08.2019 </b>"
     },
     "triathlon-hamburg": {
-      "meta-title": "Louez un vélo de route pour le Triathlon Hamburg sur listnride",
-      "meta-description": "Louez un vélo de route idéal pour le Triathlon Hamburg facilement en ligne et choisissez des marques telles que Specialized, Ridley, Cervelo et Bianchi",
+      "meta-title": "Location vélo de route pour le Triathlon Hamburg sur listnride",
+      "meta-description": "Louez un vélo de route pour le Triathlon Hamburg facilement en ligne et choisissez des marques telles que Specialized, Ridley, Cervelo et Bianchi",
       "title": "Louez un vélo de route pour le Triathlon de Hamburg sur listnride",
       "text": "Louez un vélo de route pour le Triahlon à Hambourg! Sur listnride, vous pouvez louer des vélos de route aussi longtemps que vous le souhaitez. Il suffit de cliquer sur l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le récupérer le moment venu. Aussi simple que cela. <br><br>Saviez-vous que vous pouvez louer votre propre vélo? Inscrivez votre vélo et laissez votre vélo générer de l'argent pour vous!",
       "description": "Où: <b>Hamburg</b>  |  Qupi: <b>Triathlon - Sprint & Olympic Distance</b>  |  Quand: <b>6 / 7 juillet 2019</b>"

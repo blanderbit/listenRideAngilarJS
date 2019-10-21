@@ -216,15 +216,15 @@
     }
   },
   "testimonials": {
-    "jetske-amsterdam": "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺",
-    "john-potsdam": "Ich habe einige Räder rumstehen und finde es toll diese zu vermieten und Besuchern meiner Stadt ein cooles Rad anzubieten. Immer sehr tolle Mieter gehabt!",
-    "cornelia-basel": "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-Bike testfahren. Auf listnride haben wir E-Bikes der Marke Ampler gefunden und zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!",
-    "rider-1": "Visited Berlin and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!",
-    "rider-2": "Ich war zu Besuch bei einer Freundin in Berlin und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis.",
-    "rider-3": "In Munich we came across listnride and found two elegant city bikes for an appropriate price. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!",
-    "rider-4": "Ich bin regelmäßig in Berlin tätig. Seitdem ich listnride entdeckt habe, leihe ich mir öfter ein schönes Rad. Die Auswahl ist super und es ist einfach und sicher.",
-    "lister-1": "Neulich listnride entdeckt, 3 Rennräder hochgeladen und vermiete mittlerweile regelmäßig. Das Tolle an der Sache ist, coole Leute zu treffen, mit den ich auch mal eine Runde drehe.",
-    "lister-2": "Ich bin großer listnride Fan. Wenn ich zu Rennen fahre, leihe ich mir ein optimales Rad. Zu Hause verleihe ich meine Fahrräder u.a. an meine Airbnb-Gäste. Super einfach und gutes Geld."
+    "jetske-amsterdam": "Avec listnride, je loue mes vélos, offrant aux familles une solution simple pour découvrir ma ville natale. En plus de rencontrer des gens sympas, je gagne de l'argent de poche!",
+    "john-potsdam": "J'ai quelques vélos qui traînent et je pense que c'est bien de les offrir aux visiteurs de ma ville. Nous avons toujours eu d'excellents locataires jusqu'à présent!",
+    "cornelia-basel": "Nous sommes allés à Berlin et voulions essayer un bon vélo électrique cette fois-ci. Nous avons trouvé des vélos électriques Ampler sur listnride et en avons loué deux. Il s'est avéré parfaitement et à un bon prix!",
+    "rider-1": "Nous avons visité Vienne et voulait découvrir activement la ville et la campagne. Nous avons trouvé 2 super vélos de location sur listnride, nous avons passé un super séjour, une belle découverte!",
+    "rider-2": "Je rendais visite à un amie à Berlin et je ne voulais pas emmener mon propre vélo avec moi. Au lieu de cela, j'ai loué un joli vélo avec listnrdie - très proche d'elle. Cela a fonctionné parfaitement et à un bon prix.",
+    "rider-3": "À Munich, nous sommes tombés sur le listnride et avons trouvé deux vélos de ville élégants à un prix approprié. Le propriétaire était un gars sympathique nous invitant sur un café. Il a donné quelques bons conseils, vraiment sympa!",
+    "rider-4": "Je travaille régulièrement à Berlin. Depuis que j'ai découvert le listnride, je loue souvent un beau vélo. La sélection de vélos est excellente et facile et sûre.",
+    "lister-1": "J'ai découvert listnride récemment, et j'ai enregistré mes3 vélos de route, et les loue maintenant régulièrement. Ce qu'est bien c'est de rencontrer des gens sympas, avec qui je vais aussi parfois faire un tour.",
+    "lister-2": "Je suis un grand fan de listnride. Quand je fais des courses, je loue toujours un excellent vélo. À la maison, je propose mes vélos à mes invités Airbnb. Super facile et bon argent."
   },
   "cyclingworld": {
     "event": {
@@ -257,7 +257,7 @@
   "events": {
     "berlin-triathlon": {
       "description": "Quoi: <b>Berlin Triathlon</b> | Où: <b>Berlin</b> | Quand: <b>6-7 Juin 2020</b>",
-      "meta-title": "Louez un vélo de route pour le Triathlon de Berlin 2020 | listnride",
+      "meta-title": "Location de vélo de route pour le Triathlon de Berlin 2020 | listnride",
       "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour le Triathlon de Berlin 2020. Choisissez le vélo parfait qui vous convient le mieux!"
     },
     "msr": {
@@ -300,13 +300,13 @@
       "meta-description": "Testen Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!"
     },
     "paris-brest-paris": {
-      "meta-title": "Louez un vélo de route pour Paris-Brest-Paris 2019 | listnride",
+      "meta-title": "Location de vélo de route pour Paris-Brest-Paris 2019 | listnride",
       "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour Paris-Brest-Paris 2019. Choisissez le vélo parfait qui correspond à vos besoins."
     },
     "8bar-clubride": {
-      "meta-title": "Louez un vélo de route pour les sorties de 8bar",
+      "meta-title": "Location de vélo de route pour les sorties de 8bar",
       "meta-description": "Rejoignez notre Clubride 8bar et essayez l’un de nos vélos 8bar.\nPour seulement 8 €, vous pouvez tester le vélo pendant la Clubride et vous recevrez un bidon 8bar gratuit!",
-      "calendar-title": "Louez un vélo de route pour les sorties de 8bar",
+      "calendar-title": "Location de vélo de route pour les sorties de 8bar",
       "calendar-subtitle": "Réservez votre vélo 8bar gratuit pour notre Club Ride hebdomadaire"
     },
     "cyclingworld": {
@@ -321,31 +321,31 @@
       }
     },
     "epicgrancanaria": {
-      "meta-title": "Louez un vélo de route pour l'Epic Gran Canaria | listnride",
+      "meta-title": "Location de vélo de route pour l'Epic Gran Canaria | listnride",
       "meta-description": "L’Epic Gran Canaria a pour objectif de fournir aux cyclistes amateurs une expérience professionnelle à vélo"
     },
     "velorace-dresden": {
-      "meta-title": "Louez un vélo de route pour la Velorace de Dresden 2019 | listnride",
+      "meta-title": "Location de vélo de route pour la Velorace de Dresden 2019 | listnride",
       "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour la Velorace de Dresden 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "berlin-triathlon-xl": {
       "meta-description": "Louez un vélo de route en ligne facilement et en toute sécurité avec listnride pour le Triathlon de Berlin 2020. Choisissez le vélo parfait qui vous convient le mieux!",
-      "meta-title": "Louez un vélo de route pour le Triathlon XL de Berlin 2019 | listnride"
+      "meta-title": "Location de vélo de route pour le Triathlon XL de Berlin 2019 | listnride"
     },
     "vatternrundan": {
       "meta-title": "Louer un vélo de route pour Vätternrundan 2020 | listnride",
       "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour le Vätternrundan 2020. Choisissez le vélo qui correspond à vos besoins!"
     },
     "lardita-arezzo": {
-      "meta-title": "Louez un vélo de route vintage pour l'Ardita | listnride",
+      "meta-title": "Location de vélo de route vintage pour l'Ardita | listnride",
       "meta-description": "Avec listnride, vous pouvez louer en ligne un vélo de route en toute sécurité pour le l'Ardita 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Louez un vélo de route pour Granfondo Via del Sale 2019 | listnride",
+      "meta-title": "Location de vélo de route pour Granfondo Via del Sale 2019 | listnride",
       "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour la Granfondo Via del Sale 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "giro-sardegna": {
-      "meta-title": "Louez un vélo de route pour le Giro Sardegna 2019 | listnride",
+      "meta-title": "Location de vélo de route pour le Giro Sardegna 2019 | listnride",
       "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour le Giro Sardegna 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     }
   },
@@ -562,7 +562,7 @@
         "meta-descr": "Le vélo électrique design - Leaos"
       },
       "brompton": {
-        "meta-title": "Louez un vélo Brompton avec listnride",
+        "meta-title": "Location vélo Brompton avec listnride",
         "meta-description": "Test ride a Brompton bike today! These urban folding bikes are available on listnride. Rent one in Berlin, Munich, Hamburg, Düsseldorf or Frankfurt."
       },
       "veloheld": {
@@ -648,7 +648,7 @@
     },
     "imprint": {
       "meta-title": "listnride | Imprint",
-      "meta-description": "Location de vélo sur listnride. Louez un vélo qui correspond à votre style et à vos besoins."
+      "meta-description": "Location vélo sur listnride. Louez un vélo qui correspond à votre style et à vos besoins."
     },
     "privacy": {
       "meta-title": "Politique de confidentialité de listnride",
@@ -1122,7 +1122,7 @@
     "list-a-bike-subheader": "Louez votre vélo, rencontrez de nouvelles personnes et gagnez de l'argent.",
     "newsletter-header": "Abonnez-vous à notre newsletter et restez au courant",
     "newsletter-subheader": "Recevez nos courriels concernant les nouveaux événements que nous soutenons, les nouvelles fonctionnalités de notre site et les remises sur la location!",
-    "meta-title": "Location de vélos: Louez un vélo de route, un VTT ou un vélo électrique | listnride",
+    "meta-title": "Location vélos: Louez un vélo de route, un VTT ou un vélo électrique | listnride",
     "meta-description": "Louez le parfait vélo qui correspond à votre style et à vos besoins. Réservez confortablement en ligne, en toute sécurité."
   },
   "autocomplete": {

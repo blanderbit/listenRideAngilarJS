@@ -8,6 +8,7 @@
     "frame-size": "Rider height | Framesize",
     "show-all-bikes": "Show all bikes",
     "available": "available",
+    "brands": "Brands",
     "label_new": "New",
     "booking-calendar": "Booking Calendar",
     "month": "Month",
@@ -217,13 +218,13 @@
   },
   "testimonials": {
     "jetske-amsterdam": "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺",
-    "john-potsdam": "I have a few bikes standing around and think it's great to rent them out and offer visitors to my city a cool bike. We have always had great tenants so far!",
+    "john-potsdam": "I have a few bikes standing around and think it's great to rent them out and offer a cool bike to the visitors of my city. We have always had great renters so far!",
     "cornelia-basel": "We visited Berlin and wanted to try out a nice e-bike this time. We found Ampler e-bikes on listnride and rented two of them. It turned out perfectly and at a good price!",
     "rider-1": "Visited Vienna and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!",
-    "rider-2": "I was visiting a friend in Berlin and didn't want to bring my own bike with me. Instead I rented a nice bike - very close to her. It worked out perfectly and at a good price.",
+    "rider-2": "I was visiting a friend in Berlin and didn't want to bring my own bike with me. Instead I rented a nice bike with listnrdie - very close to her. It worked out perfectly and at a good price.",
     "rider-3": "In Munich we came across listnride and found two elegant city bikes for an appropriate price. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!",
     "rider-4": "I work regularly in Berlin. Since I discovered listnride, I often rent a nice bike. The selection of bikes is great and it is easy and safe.",
-    "lister-1": "Recently discovered listnride, uploaded 3 road bikes and now regularly rent them out. The great thing about it is meeting nice people, with whom I also go for a ride sometimes.",
+    "lister-1": "I recently discovered listnride, listed 3 road bikes and now regularly rent them out. The great thing about it is meeting nice people, with whom I also go for a ride sometimes.",
     "lister-2": "I'm a big listnride fan. When I go to races, I hire myself an excellent bike. At home I offer my bikes to my Airbnb guests. Super easy and good money."
   },
   "cyclingworld": {
@@ -557,7 +558,7 @@
         "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
       },
       "swytch": {
-        "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
+        "meta-title": "Rent and test ride Swytch eBike Kit in Berlin and Cologne| listnride",
         "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
@@ -1554,6 +1555,12 @@
   },
   "footer": {
     "language": "Language",
+    "top-countries": "Top Countries",
+    "subscribe-title": "Subscribe to our newsletter",
+    "recapcha-text": "This site is protected by reCAPTCHA",
+    "keep-in-touch": "Keep in touch with us",
+    "term-of-service": "Terms of Service",
+    "privacy-policy": "Privacy Policy",
     "languages": {
       "dutch": "Dutch",
       "french": "French",
