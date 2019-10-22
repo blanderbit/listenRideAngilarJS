@@ -137,7 +137,7 @@ angular
                   id: bikeVariant.id,
                   availabilities: Object.values(get(bikeVariant, 'availabilities', {}))
                 })
-              )
+              );
 
               // add variant bike
               bikeResource.children.push(
@@ -147,6 +147,7 @@ angular
                     requests: variantRequests
                   }),
                   id: bikeVariant.id,
+                  bikeNumber: bikeVariant.bicycle_number,
                   size: bikeVariant.size,
                   isCluster: false,
                   isVariant: true,
