@@ -8,6 +8,8 @@
     "frame-size": "Rider height | Framesize",
     "show-all-bikes": "Alle Räder anzeigen",
     "available": "verfügbar",
+    "brands": "Marken",
+    "your-email": "Deine E-Mail Adresse",
     "label_new": "Neu",
     "booking-calendar": "Buchungskalender",
     "month": "Monat",
@@ -1551,6 +1553,13 @@
   },
   "footer": {
     "language": "Sprache",
+    "top-countries": "Top Länder",
+    "subscribe-title": "Melde dich zu unserem Newsletter an",
+    "recapcha-text": "Geschützt durch reCAPTCHA",
+    "keep-in-touch": "Bleib in Kontakt!",
+    "term-of-service": "Allgemeine Geschäftsbedingungen",
+    "privacy-policy": "Datenschutzerklärung",
+    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
     "languages": {
       "dutch": "Niederländisch",
       "french": "Französisch",

@@ -8,6 +8,8 @@
     "frame-size": "Rider height | Framesize",
     "show-all-bikes": "Todas las bicis",
     "available": "Disponible",
+    "brands": "Marcas",
+    "your-email": "Correo electrónico",
     "label_new": "Nuevo",
     "booking-calendar": "Calendrier des réservations",
     "month": "Mois",
@@ -1548,6 +1550,13 @@
   },
   "footer": {
     "language": "Idioma",
+    "top-countries": "Principales países",
+    "subscribe-title": "Suscríbete a nuestro boletín",
+    "recapcha-text": "Protegido por reCAPTCHA",
+    "keep-in-touch": "¡Síganos!",
+    "term-of-service": "Términos y condiciones",
+    "privacy-policy": "Política de Privacidad",
+    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
     "languages": {
       "dutch": "Holandés",
       "french": "Francés",

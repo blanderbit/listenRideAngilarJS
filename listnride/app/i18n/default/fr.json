@@ -8,6 +8,8 @@
     "frame-size": "Hauteur du coureur | Taille du cadre",
     "show-all-bikes": "Tous les vélos",
     "available": "disponible",
+    "brands": "Marques",
+    "your-email": "Votre adresse e-mail",
     "label_new": "Nouveau",
     "booking-calendar": "Calendrier des réservations",
     "month": "Mois",
@@ -1551,6 +1553,13 @@
   },
   "footer": {
     "language": "Langue",
+    "top-countries": "Principaux pays",
+    "subscribe-title": "Abonnez-vous à notre newsletter",
+    "recapcha-text": "Protégé par reCAPTCHA",
+    "keep-in-touch": "Suivez nous!",
+    "term-of-service": "Termes et conditions",
+    "privacy-policy": "Politique de confidentialité",
+    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
     "languages": {
       "dutch": "Néerlandais",
       "french": "Français",

@@ -8,6 +8,8 @@
     "frame-size": "Rider height | Framesize",
     "show-all-bikes": "Tutte le bici",
     "available": "Disponibile",
+    "brands": "Marchi",
+    "your-email": "Il tuo indirizzo email",
     "label_new": "Nuovo",
     "booking-calendar": "Calendario delle prenotazioni",
     "month": "Mese",
@@ -1545,6 +1547,13 @@
   },
   "footer": {
     "language": "Lingua",
+    "top-countries": "Top paesi",
+    "subscribe-title": "Iscriviti alla nostra newsletter",
+    "recapcha-text": "Protetto da reCAPTCHA",
+    "keep-in-touch": "Seguici!",
+    "term-of-service": "Termini e Condizioni ",
+    "privacy-policy": "Informativa sulla privacy",
+    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
     "languages": {
       "dutch": "Olandese",
       "french": "Francese",

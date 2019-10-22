@@ -8,6 +8,8 @@
     "frame-size": "Rider height | Framesize",
     "show-all-bikes": "Toon alle fietsen",
     "available": "beschikbaar",
+    "brands": "Merken",
+    "your-email": "Jouw emailadres",
     "label_new": "Nieuw",
     "booking-calendar": "Boekingskalender",
     "month": "Maand",
@@ -1539,6 +1541,13 @@
   },
   "footer": {
     "language": "Taal",
+    "top-countries": "Meest Populaire Landen",
+    "subscribe-title": "Meld je aan voor onze nieuwsbrief",
+    "recapcha-text": "Beveiligd door reCAPTCHA",
+    "keep-in-touch": "Volg ons!",
+    "term-of-service": "Algemene Voorwaarden",
+    "privacy-policy": "Privacybeleid",
+    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
     "languages": {
       "dutch": "Nederlands",
       "french": "Frans",
