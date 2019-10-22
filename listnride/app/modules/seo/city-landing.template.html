@@ -7,7 +7,9 @@
      <div flex-gt-xs="50" flex="100" layout-gt-xs="row" layout-align="end none" layout-padding class="lnr-city-landing-promo">
       <div layout="column" layout-padding class="lnr-city-landing-col">
         <div flex-gt-xs="90" flex="100" layout="column" layout-align="center none">
-          <h1 class="lnr-city-landing__title">{{cityLanding.data.explore.title}}</h1>
+          <h1 class="lnr-city-landing__title">
+            {{cityLanding.data.explore.title}}
+          </h1>
           <p class="lnr-city-landing__descr">{{cityLanding.data.explore.description}} </p>
           <form class="lnr-search-bar lnr-search-bar_city-landing" md-whiteframe="3" layout="row" md-theme="default">
             <autocomplete
@@ -104,15 +106,18 @@
     </div>
   </section>
 
-  <section ng-if="cityLanding.group['highest-rated-bikes'].bikes.length"
-           layout="column"
-           layout-align="start center"
-           layout-padding>
-    <bike-cards-list title="cityLanding.group['highest-rated-bikes'].title"
-                     subtitle="cityLanding.group['highest-rated-bikes'].description"
-                     bikes="cityLanding.group['highest-rated-bikes'].bikes"
-                     city="cityLanding.city"
-                     subcategories="cityLanding.group['highest-rated-bikes'].subcategories">
+  <section
+    ng-if="cityLanding.data.blocks[0].bikes.length"
+    layout="column"
+    layout-align="start center"
+    layout-padding>
+    <bike-cards-list
+      title="cityLanding.data.blocks[0].title"
+      subtitle="cityLanding.data.blocks[0].description"
+      bikes="cityLanding.data.blocks[0].bikes"
+      city="cityLanding.city"
+      btn-text="cityLanding.data.blocks[0].btn_text"
+      subcategories="cityLanding.data.blocks[0].subcategories">
     </bike-cards-list>
   </section>
 
@@ -131,19 +136,20 @@
      </div>
    </section>
 
-   <section
-     ng-if="cityLanding.group['road'].bikes.length"
-     layout="column"
-     layout-align="start center"
-     layout-padding>
-     <bike-cards-list
-             title="cityLanding.group['road'].title"
-             subtitle="cityLanding.group['road'].description"
-             bikes="cityLanding.group['road'].bikes"
-             city="cityLanding.city"
-             subcategories="cityLanding.group['road'].subcategories">
-     </bike-cards-list>
-   </section>
+    <section
+      ng-if="cityLanding.data.blocks[1].bikes.length"
+      layout="column"
+      layout-align="start center"
+      layout-padding>
+        <bike-cards-list
+          title="cityLanding.data.blocks[1].title"
+          subtitle="cityLanding.data.blocks[1].description"
+          bikes="cityLanding.data.blocks[1].bikes"
+          city="cityLanding.city"
+          btn-text="cityLanding.data.blocks[1].btn_text"
+          subcategories="cityLanding.data.blocks[1].subcategories">
+        </bike-cards-list>
+    </section>
 
    <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg min-height-400"
             ng-if="cityLanding.data.brands_block.brands.length">
@@ -176,17 +182,20 @@
      </div>
    </section>
 
-   <section ng-if="cityLanding.group['urban'].bikes.length"
-            layout="column"
-            layout-align="start center"
-            layout-padding>
-     <bike-cards-list title="cityLanding.group['urban'].title"
-                      subtitle="cityLanding.group['urban'].description"
-                      bikes="cityLanding.group['urban'].bikes"
-                      city="cityLanding.city"
-                      subcategories="cityLanding.group['urban'].subcategories">
-     </bike-cards-list>
-   </section>
+    <section
+      ng-if="cityLanding.data.blocks[2].bikes.length"
+      layout="column"
+      layout-align="start center"
+      layout-padding>
+        <bike-cards-list
+          title="cityLanding.data.blocks[2].title"
+          subtitle="cityLanding.data.blocks[2].description"
+          bikes="cityLanding.data.blocks[2].bikes"
+          city="cityLanding.city"
+          btn-text="cityLanding.data.blocks[2].btn_text"
+          subcategories="cityLanding.data.blocks[2].subcategories">
+        </bike-cards-list>
+    </section>
 
    <section layout="column" layout-align="center center" layout-padding class="lnr-city-landing-bg" ng-if="cityLanding.data.testimonials_block.testimonials.length">
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.testimonials_block.title}}</h2>
@@ -209,7 +218,27 @@
      </div>
    </section>
 
-   <section layout="column" ayout-align="center center" layout-padding ng-if="cityLanding.data.categories_block.categories">
+    <section
+      ng-if="cityLanding.data.blocks[3].bikes.length"
+      layout="column"
+      layout-align="start center"
+      layout-padding>
+        <bike-cards-list
+          title="cityLanding.data.blocks[3].title"
+          subtitle="cityLanding.data.blocks[3].description"
+          bikes="cityLanding.data.blocks[3].bikes"
+          city="cityLanding.city"
+          btn-text="cityLanding.data.blocks[3].btn_text"
+          subcategories="cityLanding.data.blocks[3].subcategories">
+        </bike-cards-list>
+    </section>
+
+   <section
+           layout="column"
+           ayout-align="center center"
+           layout-padding ng-if="cityLanding.data.categories_block.categories"
+           class="lnr-city-landing-bg"
+           >
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.categories_block.title}}</h2>
      <div class="lnr-city-landing-content">
        <md-grid-list
@@ -249,26 +278,27 @@
      </div>
    </section>
 
-   <section
-     ng-if="cityLanding.group['e_bike'].bikes.length"
-     layout="column"
-     layout-align="start center"
-     layout-padding
-     class="lnr-city-landing-bg"
-   >
-     <bike-cards-list title="cityLanding.group['e_bike'].title"
-                      subtitle="cityLanding.group['e_bike'].description"
-                      bikes="cityLanding.group['e_bike'].bikes"
-                      city="cityLanding.city"
-                      subcategories="cityLanding.group['e_bike'].subcategories">
-     </bike-cards-list>
-   </section>
+    <section
+      ng-if="cityLanding.data.blocks[4].bikes.length"
+      layout="column"
+      layout-align="start center"
+      layout-padding>
+        <bike-cards-list
+          title="cityLanding.data.blocks[4].title"
+          subtitle="cityLanding.data.blocks[4].description"
+          bikes="cityLanding.data.blocks[4].bikes"
+          city="cityLanding.city"
+          btn-text="cityLanding.data.blocks[4].btn_text"
+          subcategories="cityLanding.data.blocks[4].subcategories">
+        </bike-cards-list>
+    </section>
 
-   <section class="min-height-400"
-            layout="column"
-            layout-align="center center"
-            layout-padding
-            ng-if="cityLanding.data.table.info.length">
+   <section
+    class="min-height-400 lnr-city-landing-bg"
+    layout="column"
+    layout-align="center center"
+    layout-padding
+    ng-if="cityLanding.data.table.info.length">
      <h2 class="lnr-city-landing__title lnr-center">{{cityLanding.data.table.title}}</h2>
      <div class="lnr-m lnr-city-landing-hints">
        <md-grid-list
@@ -291,22 +321,26 @@
      </div>
    </section>
 
-   <section
-     ng-if="cityLanding.group['all_terrain'].bikes.length"
-     layout="column"
-     layout-align="start center"
-     layout-padding
-     class="lnr-city-landing-bg"
-   >
-     <bike-cards-list title="cityLanding.group['all_terrain'].title"
-                      subtitle="cityLanding.group['all_terrain'].description"
-                      bikes="cityLanding.group['all_terrain'].bikes"
-                      city="cityLanding.city"
-                      subcategories="cityLanding.group['all_terrain'].subcategories">
-     </bike-cards-list>
-   </section>
+    <section
+      ng-if="cityLanding.data.blocks[5].bikes.length"
+      layout="column"
+      layout-align="start center"
+      layout-padding>
+        <bike-cards-list
+          title="cityLanding.data.blocks[5].title"
+          subtitle="cityLanding.data.blocks[5].description"
+          bikes="cityLanding.data.blocks[5].bikes"
+          city="cityLanding.city"
+          btn-text="cityLanding.data.blocks[5].btn_text"
+          subcategories="cityLanding.data.blocks[5].subcategories">
+        </bike-cards-list>
+    </section>
 
-   <section layout="column" layout-align="center center" layout-padding ng-if="cityLanding.data.tips_block.length">
+   <section layout="column"
+            layout-align="center center"
+            layout-padding
+            ng-if="cityLanding.data.tips_block.length"
+           >
      <h2 class="lnr-city-landing__title lnr-center">listnride’s insider tips</h2>
      <div class="lnr-city-landing-content" layout="row">
        <div class="swiper-container lnr-fade-slider" flex-gt-xs="80" id="slider-fading">
@@ -319,7 +353,7 @@
                </div>
                <div flex-gt-xs="10"></div>
                <div flex-gt-xs="40" class="lnr-fade-slider-image">
-                 <img class="md-card-image" src="{{ content.image }}" alt=""/>
+                 <img class="md-card-image" src="{{ content.image }}" alt=""/>
                </div>
              </div>
            </div>
@@ -332,9 +366,7 @@
          </div>
          <div class="swiper-pagination lnr-fade-slider-pagination"></div>
        </div>
-
      </div>
    </section>
-
    <footer></footer>
 </md-content>
