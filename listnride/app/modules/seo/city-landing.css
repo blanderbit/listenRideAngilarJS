@@ -660,3 +660,19 @@
 .min-height-400 {
   min-height: 400px !important;
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .lnr-city-landing__descr {
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .lnr-city-landing-promo .lnr-city-landing__title {
+    font-size: 54px;
+    line-height: 1;
+  }
+
+  .lnr-search-bar_city-landing {
+    margin: 24px 0;
+  }
+}
