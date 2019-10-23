@@ -132,9 +132,6 @@ angular.module('user',[]).component('user', {
           .then(function(translations) {
             ngMeta.setTitle(translations[title]);
             ngMeta.setTag("description", translations[description]);
-            if (isCompany) {
-              ngMeta.setTag("noindex", false);
-            }
           });
       }
 

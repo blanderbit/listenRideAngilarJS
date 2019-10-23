@@ -1,18 +1,26 @@
-'use strict';
-
 angular.module('footer',['pascalprecht.translate']).component('footer', {
   templateUrl: 'app/modules/footer/footer.template.html',
   controllerAs: 'footer',
-  controller: [
-    '$scope',
-    '$window',
-    '$location',
-    '$localStorage',
-    '$translate',
-    '$stateParams',
-    function FooterController($scope, $window, $location, $localStorage, $translate, $stateParams) {
-      var footer = this;
+  controller: function FooterController(
+    $scope,
+    $window,
+    $location,
+    $localStorage,
+    $translate,
+    $stateParams,
+    api,
+    applicationHelper,
+    notification
+  ) {
+      const footer = this;
+
+      // variables
       footer.hideFooter = $stateParams.hideFooter;
+      footer.year = moment().year();
+      footer.language = getLanguage($translate.preferredLanguage());
+      footer.emailPattern = applicationHelper.emailPattern;
+
+      footer.onNewsletterSubmit = onNewsletterSubmit;
 
       $scope.$watch(
         function() { return $stateParams.hideFooter; },
@@ -23,6 +31,8 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         }
       );
 
+      // TODO: wrap to function expression
+      // TODO: check do we need an url here
       var url = "";
       var host = $location.host().split('.');
       if (host[host.length - 1] === "localhost") {
@@ -36,7 +46,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         }
       }
 
-      footer.language = getLanguage($translate.preferredLanguage());
+
 
       // switch url based on language
       footer.switchDomain = function (language) {
@@ -73,8 +83,6 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         $window.open('https://itunes.apple.com/de/app/list-n-ride/id992114091?l=' + $translate.use(), '_blank');
       };
 
-      footer.year = moment().year();
-
       function getLanguage(locale) {
         switch (locale) {
           case 'de': return 'footer.languages.german';
@@ -86,6 +94,19 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
           default: return 'footer.languages.english';
         }
       }
+
+      function onNewsletterSubmit() {
+        if (!footer.email) return;
+        api.post(`/subscribe?email=${footer.email}`, {})
+          .then((success) => {
+            notification.show(success, null, 'footer.newsletter-subscribe-success');
+            footer.email = '';
+            // TODO: read how to make clear form
+            // $scope.footerSubscribe.$setPristine();
+            // $scope.footerSubscribe.$setUntouched();
+          }, (error) => {
+            notification.show(error, 'error');
+          })
+      }
     }
-  ]
 });

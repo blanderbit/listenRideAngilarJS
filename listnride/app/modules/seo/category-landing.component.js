@@ -43,18 +43,23 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         categoryLanding.allBikes = [];
         categoryLanding.headerTranslation = 'seo.header';
         categoryLanding.defaultProfilePicture = applicationHelper.defaultProfilePicture;
-        categoryLanding.breadcrumbs = [
-          {
-            title:'Home',
-            route: 'home'
-          },
-          {
-            title:`${categoryLanding.city}`,
-            route: `cityLanding({ city: '${$stateParams.city}'})`
-          },
-          {
-            title: 'Road bike'
-          }];
+        $translate([categoryLanding.category]).then(
+            function (translations) {
+              categoryLanding.breadcrumbs = [{
+                  title: 'Home',
+                  route: 'home'
+                },
+                {
+                  title: categoryLanding.city,
+                  route: `cityLanding({ city: '${$stateParams.city}'})`
+                },
+                {
+                  title: translations[categoryLanding.category]
+                }
+              ];
+            }
+        );
+
         categoryLanding.colorScheme = mapConfigs.colorScheme();
         categoryLanding.mapOptions = mapConfigs.mapOptions;
 

@@ -5,9 +5,9 @@ angular.module('listnride')
 
     const insuranceCountries = ['DE', 'AT'];
 
-    let getBikeEditUrl = bike => bike.is_cluster ? '/clusters/' + bike.cluster_id + '/update_rides/' : '/rides/' + bike.id;
+    const getBikeEditUrl = bike => bike.is_cluster ? '/clusters/' + bike.cluster_id + '/update_rides/' : '/rides/' + bike.id;
 
-    let changeBikeAvailableTo = (bike, changeTo) => {
+    const changeBikeAvailableTo = (bike, changeTo) => {
       let data = {
         "ride": {
           "id": bike.id,
@@ -16,15 +16,16 @@ angular.module('listnride')
       }
       return api.put(getBikeEditUrl(bike), data);
     }
-    let createBikeAvailability = ({id, isCluster, data}) => {
-      let availabilityUrl = (isCluster ? '/clusters/' : '/rides/') + id + '/availabilities';
+    const createBikeAvailability = ({id, isCluster, data}) => {
+      const availabilityUrl = `${isCluster ? '/clusters' : '/rides'}/${id}/availabilities`;
+      data = { 'availabilities': [...data] };
 
       return api.post(availabilityUrl, data);
     }
-    let removeBikeAvailability = (id, availabilityId) => {
+    const removeBikeAvailability = (id, availabilityId) => {
       return api.delete(`/rides/${id}/availabilities/${availabilityId}`)
     }
-    let isBikeCountryInsuranced = (bike) => _.includes(insuranceCountries, bike.country_code);
+    const isBikeCountryInsuranced = (bike) => _.includes(insuranceCountries, bike.country_code);
 
     return {
       changeBikeAvailableTo,

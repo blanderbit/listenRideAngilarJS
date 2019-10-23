@@ -8,6 +8,8 @@
     "frame-size": "Rider height | Framesize",
     "show-all-bikes": "Toon alle fietsen",
     "available": "beschikbaar",
+    "brands": "Merken",
+    "your-email": "Jouw emailadres",
     "label_new": "Nieuw",
     "booking-calendar": "Boekingskalender",
     "month": "Maand",
@@ -549,7 +551,7 @@
         "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
       },
       "swytch": {
-        "meta-title": "Rent and test ride Swytch ebikes in Berlin | listnride",
+        "meta-title": "Rent and test ride Swytch eBike Kit in Berlin and Cologne| listnride",
         "meta-description": "Test ride a Swytch ebike today! The ebikes from Swytch are available to rent on listnride in Berlin!"
       },
       "leaos": {
@@ -1539,6 +1541,13 @@
   },
   "footer": {
     "language": "Taal",
+    "top-countries": "Meest Populaire Landen",
+    "subscribe-title": "Meld je aan voor onze nieuwsbrief",
+    "recapcha-text": "Beveiligd door reCAPTCHA",
+    "keep-in-touch": "Volg ons!",
+    "term-of-service": "Algemene Voorwaarden",
+    "privacy-policy": "Privacybeleid",
+    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
     "languages": {
       "dutch": "Nederlands",
       "french": "Frans",

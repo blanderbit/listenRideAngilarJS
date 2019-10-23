@@ -1,5 +1,3 @@
-'use strict';
-
 angular.module('seoGrid', []).component('seoGrid', {
   templateUrl: 'app/modules/footer/seo-grid/seo-grid.template.html',
   controllerAs: 'seoGrid',

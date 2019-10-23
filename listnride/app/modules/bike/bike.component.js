@@ -16,7 +16,8 @@ angular.module('bike',[]).component('bike', {
     bikeCluster,
     bikeEventHelper,
     userHelper,
-    ENV
+    ENV,
+    $location
   ) {
     const bike = this;
 
@@ -49,7 +50,7 @@ angular.module('bike',[]).component('bike', {
         coview('hideChatButton');
         $state.params.hideCoview = true;
       }
-    }
+    };
 
 
     // TODO: Refactor image savings (.jpg / .JPG)
@@ -151,13 +152,19 @@ angular.module('bike',[]).component('bike', {
         openFrom: angular.element(document.body),
         closeTo: angular.element(document.body),
         clickOutsideToClose: true,
-        fullscreen: true // Changed in CSS to only be for XS sizes
-      })
-      .then(function(answer) {
-        //
-      }, function() {
-        //
+        focusOnOpen: false,
+        escapeToClose: false,
+        fullscreen: true, // Changed in CSS to only be for XS sizes
+        onComplete: function () {
+          $('.md-dialog-container').addClass('fullscreen');
+          $location.hash("bikes-image");
+        }
       });
+      window.onpopstate = function () {
+        if (window.location.hash == "") {
+          $mdDialog.cancel();  // Cancel the active dialog
+        }
+      }
     }
 
     function showCalendarDialog(event) {
@@ -170,7 +177,6 @@ angular.module('bike',[]).component('bike', {
         targetEvent: event,
         openFrom: angular.element(document.body),
         closeTo: angular.element(document.body),
-        clickOutsideToClose: true,
         fullscreen: true // Only for -xs, -sm breakpoints.
       });
     }
@@ -197,11 +203,12 @@ angular.module('bike',[]).component('bike', {
 
     function GalleryDialogController($mdDialog, bikeData) {
       var galleryDialog = this;
-      galleryDialog.images = bikeData.images;
 
+      galleryDialog.images = bikeData.images;
       galleryDialog.hide = function() {
         $mdDialog.hide();
-      };
+    };
+
       galleryDialog.slickConfig = {
         enabled: true,
         autoplay: true,

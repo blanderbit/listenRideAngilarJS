@@ -8,6 +8,8 @@
     "frame-size": "Rider height | Framesize",
     "show-all-bikes": "Alle Räder anzeigen",
     "available": "verfügbar",
+    "brands": "Marken",
+    "your-email": "Deine E-Mail Adresse",
     "label_new": "Neu",
     "booking-calendar": "Buchungskalender",
     "month": "Monat",
@@ -216,15 +218,15 @@
     }
   },
   "testimonials": {
-    "jetske-amsterdam": "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺",
-    "john-potsdam": "Ich habe einige Räder rumstehen und finde es toll diese zu vermieten und Besuchern meiner Stadt ein cooles Rad anzubieten. Immer sehr tolle Mieter gehabt!",
-    "cornelia-basel": "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-Bike testfahren. Auf listnride haben wir E-Bikes der Marke Ampler gefunden und zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!",
-    "rider-1": "Visited Berlin and wanted to actively discover the city and country side. We found 2 great rental bikes on listnride, we had an awesome time, a great discovery!",
-    "rider-2": "Ich war zu Besuch bei einer Freundin in Berlin und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis.",
-    "rider-3": "In Munich we came across listnride and found two elegant city bikes for an appropriate price. The owner was a friendly guy inviting us on a coffee. He gave some cool tips, really nice!",
-    "rider-4": "Ich bin regelmäßig in Berlin tätig. Seitdem ich listnride entdeckt habe, leihe ich mir öfter ein schönes Rad. Die Auswahl ist super und es ist einfach und sicher.",
-    "lister-1": "Neulich listnride entdeckt, 3 Rennräder hochgeladen und vermiete mittlerweile regelmäßig. Das Tolle an der Sache ist, coole Leute zu treffen, mit den ich auch mal eine Runde drehe.",
-    "lister-2": "Ich bin großer listnride Fan. Wenn ich zu Rennen fahre, leihe ich mir ein optimales Rad. Zu Hause verleihe ich meine Fahrräder u.a. an meine Airbnb-Gäste. Super einfach und gutes Geld."
+    "jetske-amsterdam": "Ich vermiete über listnride meine Fahrräder und biete Familien so eine einfache Lösung, um meine Heimatstadt zu entdecken. Ich treffe nicht nur nette Leute, sondern verdiene auch ein bisschen Taschengeld nebenher :) ",
+    "john-potsdam": "Ich habe einige Räder rumstehen und finde es toll diese zu vermieten und Besuchern meiner Stadt ein cooles Rad anzubieten. Bisher haben wir immer sehr tolle Mieter gehabt!",
+    "cornelia-basel": "Wir waren zu Besuch in Berlin und wollten diesmal ein schönes E-Bike testen. Auf listnride haben wir E-Bikes der Marke Ampler gefunden und zwei davon gemietet. Klappte einwandfrei und auch noch zu einem guten Preis!",
+    "rider-1": "Wir waren in Wien und wollten die Stadt und das Land aktiv entdecken. Wir fanden 2 tolle Leihräder auf listnride und hatten eine tolle Zeit, eine super Entdeckung!",
+    "rider-2": "Ich habe eine Freundin in Berlin besucht und wollte nicht mein eigenes Rad mitschleppen. Stattdessen hab ich ein schönes Fahrrad gemietet - ganz in ihrer Nähe. Klappte einwandfrei und auch noch zu einem guten Preis.",
+    "rider-3": "In München sind wir auf listnride gestoßen und haben zwei elegante Citybikes zu einem angemessenen Preis gefunden. Der Besitzer war ein freundlicher Typ, der uns auf einen Kaffee einlud. Er hat auch noch ein paar coole Tipps gegeben, wirklich nett!",
+    "rider-4": "Ich arbeite regelmäßig in Berlin. Seitdem ich listnride entdeckt habe, leihe ich mir öfters ein schönes Rad. Die Auswahl ist super und es ist einfach und sicher.",
+    "lister-1": "Habe neulich listnride entdeckt, 3 Rennräder hochgeladen und vermiete mittlerweile regelmäßig. Das Tolle an der Sache ist, coole Leute zu treffen, mit den ich auch mal eine Runde drehe.",
+    "lister-2": "Ich bin großer listnride Fan. Wenn ich zu Rennen fahre, leihe ich mir ein optimales Rad. Zu Hause verleihe ich meine Fahrräder u. a. an meine Airbnb-Gäste. Super einfaches und gutes Geld."
   },
   "cyclingworld": {
     "event": {
@@ -554,7 +556,7 @@
         "meta-description": "Test ride a Felt bike today! The road bikes from Felt Bicycles are available to rent on listnride in Munich. "
       },
       "swytch": {
-        "meta-title": "Miete und teste Swytch E-bikes in Berlin | listnride",
+        "meta-title": "Miete und teste Swytch eBike Kit in Berlin und Köln | listnride",
         "meta-description": "Teste noch heute ein Switch E-Bike! Die E-Bikes von Swytch stehen zum Testen in Berlin zur Verfügung!"
       },
       "leaos": {
@@ -1551,6 +1553,13 @@
   },
   "footer": {
     "language": "Sprache",
+    "top-countries": "Top Länder",
+    "subscribe-title": "Melde dich zu unserem Newsletter an",
+    "recapcha-text": "Geschützt durch reCAPTCHA",
+    "keep-in-touch": "Bleib in Kontakt!",
+    "term-of-service": "Allgemeine Geschäftsbedingungen",
+    "privacy-policy": "Datenschutzerklärung",
+    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
     "languages": {
       "dutch": "Niederländisch",
       "french": "Französisch",

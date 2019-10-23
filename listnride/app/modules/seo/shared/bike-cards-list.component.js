@@ -4,6 +4,7 @@ angular.module('bikeCardsList', []).component('bikeCardsList', {
   bindings: {
     title: '<',
     subtitle: '<',
+    btnText: '<',
     bikes: '<',
     city: '<',
     subcategories: '<'

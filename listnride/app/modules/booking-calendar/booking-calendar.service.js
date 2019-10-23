@@ -57,7 +57,7 @@ angular
           'message.accept',
           'booking-calendar.event.view-booking',
           'booking-calendar.add-non-availability',
-          'booking-calendar.add-remove-non-availability',
+          'booking-calendar.remove-non-availability',
           'booking-calendar.reasons.booked-in-store',
           'booking-calendar.reasons.service-repair',
           'booking-calendar.reasons.event-other',
@@ -71,25 +71,26 @@ angular
           .get(`/users/${$localStorage.userId}/rides?detailed=true`)
           .then(({ data }) => data.bikes)
           .then(bikes => parseBikes(bikes));
-      }
+      },
+
+      createAvailabilityEvent
     };
 
     function parseBikes(bikes) {
       bikes = bikes.filter((bike) => bike.available);
       return bikes.reduce(
         (acc, bike) => {
-          const bikeId = bike.is_cluster ? bike.cluster_id : bike.id;
-
           // bike boilerplate
           const bikeResource = getResource({
-            id: bikeId,
+            id: bike.is_cluster ? bike.cluster_id : bike.id,
+            bikeNumber: bike.bicycle_number,
             name: `${bike.brand} ${bike.name}`,
             location: bike.location,
             isCluster: bike.is_cluster,
             category: bike.category,
             imageUrl: bike.image_file,
             size: bike.size,
-            humanizeSize: bikeOptions.getHumanReadableSize(bike.size) + (bike.frame_size ? ' | ' + bike.frame_size : '')
+            sizeLabel: bikeOptions.getSizeLabel(bike.size, bike.frame_size)
           });
 
           const bikeRequests = parseRequests({
@@ -136,7 +137,7 @@ angular
                   id: bikeVariant.id,
                   availabilities: Object.values(get(bikeVariant, 'availabilities', {}))
                 })
-              )
+              );
 
               // add variant bike
               bikeResource.children.push(
@@ -146,12 +147,13 @@ angular
                     requests: variantRequests
                   }),
                   id: bikeVariant.id,
+                  bikeNumber: bikeVariant.bicycle_number,
                   size: bikeVariant.size,
                   isCluster: false,
                   isVariant: true,
                   variantIndex: index + 1,
                   cls: 'variant-row',
-                  humanizeSize: bikeOptions.getHumanReadableSize(bikeVariant.size) + (bikeVariant.frame_size ? ' | ' + bikeVariant.frame_size : '')
+                  sizeLabel: bikeOptions.getSizeLabel(bikeVariant.size, bikeVariant.frame_size)
                 })
               );
             });
@@ -287,22 +289,24 @@ angular
 
     function parseAvailabilities({ id, availabilities }) {
       return availabilities.reduce((acc, availability) => {
-        const { start_date, duration, reason, comment } = availability;
-
-        acc.push(
-          getEvent({
-            resourceId: id,
-            startDate: moment.utc(start_date).format('YYYY-MM-DD HH:mm'),
-            duration: duration + 1,
-            durationUnit: 's',
-            isNotAvailable: true,
-            reason: reason,
-            comment: comment,
-            resourceEventId: availability.id
-          })
-        );
+        acc.push(createAvailabilityEvent({id, availability}));
         return acc;
       }, []);
+    }
+
+    function createAvailabilityEvent({id, availability}) {
+      const { start_date, duration, reason, comment } = availability;
+
+      return getEvent({
+        resourceId: id,
+        startDate: moment.utc(start_date).format('YYYY-MM-DD HH:mm'),
+        duration: duration + 1,
+        durationUnit: 's',
+        isNotAvailable: true,
+        reason: reason,
+        comment: comment,
+        resourceEventId: availability.id
+      })
     }
 
     function parseRequestsWithMewMessages({ requests }) {
@@ -320,6 +324,7 @@ angular
       return Object.assign(
         {
           id: null,
+          bikeNumber: null,
           name: null,
           location: null,
           isCluster: false,
@@ -327,7 +332,7 @@ angular
           category: null,
           imageUrl: null,
           size: null,
-          humanizeSize: null,
+          sizeLabel: null,
           variantIndex: null,
           cls: null,
           requestsWithNewMessages: [],

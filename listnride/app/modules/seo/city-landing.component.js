@@ -40,7 +40,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
         route: 'home'
       },
       {
-        title:`Rent bikes in ${cityLanding.city}`,
+        title:`${cityLanding.city}`,
         route: `cityLanding({ city: '${$stateParams.city}'})`
       }];
       cityLanding.colorScheme = mapConfigs.colorScheme();
