@@ -128,6 +128,7 @@ angular.module('booking', [])
             booking.hasTimeSlots = userHelper.hasTimeSlots(booking.bike.user);
             booking.timeslots = booking.hasTimeSlots ? userHelper.getTimeSlots(booking.bike.user) : [];
             booking.bike.is_cluster ? setSizeFromState() : booking.bike.size;
+            booking.showLogin = true;
             getLister();
             updatePrices();
 

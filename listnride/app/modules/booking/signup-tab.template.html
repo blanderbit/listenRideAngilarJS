@@ -21,7 +21,7 @@
           name="signupForm"
           novalidate
           ng-submit="signup.parent.emailSignup()"
-          ng-show="!signup.parent.showLogin"
+          ng-if="!signup.parent.showLogin"
         >
           <div class="md-dialog-content">
             <div layout="column">
@@ -160,7 +160,7 @@
           ng-cloak
           name="signup.parent.loginForm"
           novalidate
-          ng-show="signup.parent.showLogin"
+          ng-if="signup.parent.showLogin"
           ng-submit="signup.parent.authentication.loginGlobal(signup.parent.loginForm)">
           <div class="md-dialog-content" layout="column">
             <div layout="row" layout-xs="column">
