@@ -4127,6 +4127,8 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .footer-subscribe input {
@@ -4135,7 +4137,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   border: 1px solid #4E5156;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  max-width: 200px;
+  width: 170px;
   color: white;
   font-size: 14px;
 }
@@ -4153,6 +4155,15 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   width: 40px;
   line-height: 40px;
 }
+.footer-subscribe .invalid-error {
+  top: 44px;
+  position: absolute;
+  min-width: 220px;
+  color: #FF8080;
+  font-size: 12px;
+  left: 0;
+}
+
 .md-no-sticky .text-color--white {
   color: white;
 }
@@ -4179,8 +4190,50 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 .footer-recapcha {
   font-size: 12px;
-}
-.footer-recapcha span {
+  margin-top: 16px;
+  max-width: 256px;
   padding: 0 8px 0 16px;
+}
+/*.footer-recapcha .recapcha-title {*/
+  /*padding: 0 8px 0 0px;*/
+/*}*/
+.footer-recapcha span {
   color: #949A9F;
+}
+.social-media-icon {
+  background: #2B3036;
+  border-radius: 4px;
+  margin: 0 8px;
+}
+
+.social-media-icon:hover {
+  background: #1F252C;
+}
+.footer {
+  padding: 10px 0 40px 0px;
+}
+
+/*TODO delete it when we will add scss file with variables and helpers*/
+.p-b-12 {
+  padding-bottom: 12px;
+}
+
+@media (min-width: 1020px) {
+  .wrap-footer-lists {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 768px)and (max-width: 1020px) {
+  .wrap-footer-lists {
+    justify-content: start;
+  }
+  .wrap-footer-lists md-list {
+    padding-left: 16px;
+  }
+}
+
+/*hide recapcha*/
+.grecaptcha-badge {
+  opacity:0;
 }

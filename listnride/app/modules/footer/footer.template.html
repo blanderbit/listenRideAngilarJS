@@ -1,7 +1,11 @@
 <md-content id="footer" class="md-scroll-shrink" md-theme="lnr-dark" ng-hide="footer.hideFooter">
   <div class="content" layout="column">
-    <div layout="row" layout-xs="column">
-      <div layout="row" flex layout-wrap layout-align="space-between start">
+    <div layout="row" layout-xs="column" class="footer">
+      <div class="wrap-footer-lists"
+           layout="row"
+           flex
+           layout-wrap
+           layout-align="space-between start">
         <div layout="column" flex-xs="50">
           <md-list>
             <md-subheader class="md-no-sticky">listnride</md-subheader>
@@ -161,37 +165,39 @@
               <div layout="row"
                    layout-xs="row"
                    layout-align="start start"
-                   layout-align-xs="start start"
                    class="footer__partners lnr-pl">
-                <img style="max-width: 60px;" ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-white.png">
-                <img style="max-width: 76px; padding-left: 8px;" ng-src="app/assets/ui_images/static/lnr_hepster_logo.png">
+                <img style="max-width: 60px;" ng-src="app/assets/ui_images/static/lnr-insurance-gothaer-white.svg">
+                <img style="max-width: 76px; padding-left: 8px;" ng-src="app/assets/ui_images/static/lnr_hepster_logo.svg">
               </div>
             </div>
-            <div>
+            <div class="wrap-subscribe-icons">
               <md-subheader class="md-no-sticky">
                   {{'footer.keep-in-touch' | translate}}
               </md-subheader>
               <div layout="row"
-                    layout-xs="row"
-                    layout-align="space-around space-around"
-                    layout-align-xs="space-around space-around"
+                   layout-xs="row"
+                   layout-align="start start"
+                   layout-align-xs="space-between start"
                     class="footer__partners lnr-pl">
                   <a href="https://www.facebook.com/listnride/"
                       target="_blank">
-                      <img ng-src="app/assets/ui_icons/fb.svg">
+                          <img class="social-media-icon" ng-src="app/assets/ui_icons/fb.svg">
                   </a>
                   <a href="https://www.instagram.com/listnride/"
                       target="_blank">
-                      <img ng-src="app/assets/ui_icons/inst.svg">
+                          <img class="social-media-icon" ng-src="app/assets/ui_icons/inst.svg">
                   </a>
                   <a href="mailto:hello@listnride.com">
-                      <img ng-src="app/assets/ui_icons/mail.svg">
+                          <img class="social-media-icon" ng-src="app/assets/ui_icons/mail.svg">
                   </a>
               </div>
             </div>
         </div>
           </md-list>
           <div layout="column"
+               layout-wrap
+               layout-align="start start"
+               layout-align-xs="start start"
                flex-xs="100">
               <md-list>
                   <md-subheader class="md-no-sticky">
@@ -203,9 +209,9 @@
                       <form
                         ng-cloak
                         name="footerSubscribe"
-                        class="footer-subscribe"
                         novalidate
                         ng-submit="footer.onNewsletterSubmit()">
+                          <div class="footer-subscribe">
                           <input
                             ng-model="footer.email"
                             type="email"
@@ -215,13 +221,15 @@
                             placeholder="{{'shared.your-email' | translate}}" />
                           <button type="submit"><img src="app/assets/ui_icons/arrow.svg" alt=">"/></button>
                           <div
-                            ng-if="false"
+                            ng-if="true"
                             ng-messages="footerSubscribe.email.$error"
                             role="alert"
-                            ng-show="footerSubscribe.email.$dirty">
+                            class="invalid-error"
+                            ng-show="footerSubscribe.email.$invalid && !footerSubscribe.email.$pristine">
                             <div ng-message="required">{{ 'forms.errors.empty-email' | translate }}</div>
                             <div ng-message="email">{{ 'forms.errors.valid-email' | translate }}</div>
                             <div ng-message="pattern">{{ 'forms.errors.valid-email' | translate }}</div>
+                          </div>
                           </div>
                       </form>
                   </md-list-item>
@@ -234,25 +242,27 @@
                        class="footer-recapcha"
                       >
                   <span class="recapcha-title">
-                      {{ 'footer.recapcha-text' | translate }}:
+                      {{ 'footer.recapcha-text' | translate }}:&nbsp
                   </span>
                   <a class="lnr-link"
                      href="https://www.google.com/intl/uk/policies/privacy/"
                      target="_blank">
                       {{ 'footer.privacy-statement' | translate }}
                   </a>
-                  &nbsp; & &nbsp;
+                  <span>&nbsp;&&nbsp;</span>
                   <a class="lnr-link"
                      href="https://www.google.com/intl/uk/policies/terms/"
                      target="_blank">
-                          {{ 'footer.terms-and-conditions' | translate }}
+                      {{ 'footer.terms-and-conditions' | translate }}
                   </a>
               </md-list>
           </div>
         </div>
       </div>
       <md-divider></md-divider>
-      <div layout="row" layout-align="space-between center" layout-padding>
+      <seo-grid class="lnr-sm-content-padding p-b-12"></seo-grid>
+      <md-divider></md-divider>
+      <div layout="row" layout-xs="column" layout-align-xs="start start" layout-align="space-between center" layout-padding>
           <div layout-align="center center" layout="row">
               <img class="footer-logo" src="app/assets/ui_icons/mini-logo.svg"/>
               © {{footer.year}} List and Ride GmbH.
@@ -264,10 +274,10 @@
                 <md-menu md-position-mode="target bottom" class="lnr-pl select-language">
               <md-button
                 class="lnr-btn-lang md-lined md-right-arrow"
-                              md-no-ink
-                              translate="{{ footer.language }}"
-                              ng-click="$mdOpenMenu($event)">
-                      </md-button>
+                md-no-ink
+                translate="{{ footer.language }}"
+                ng-click="$mdOpenMenu($event)">
+              </md-button>
                       <md-menu-content width="2">
                           <md-menu-item>
                               <md-button md-no-ink ng-click="footer.switchLanguage('de')">
