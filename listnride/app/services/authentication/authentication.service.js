@@ -79,6 +79,14 @@ angular.
         return language;
       };
 
+      let getInviteCode = function() {
+        let url = '' + window.location;
+        let inviteCode = url.substring(url.lastIndexOf('/')+1);
+
+        return inviteCode;
+      };
+
+
       // methods for signup controller
       // defined outside so that can be used out of sign up controller
       // used in request booking flow
@@ -207,6 +215,7 @@ angular.
         });
       };
 
+
       // CONTROLLERS
 
       var LoginDialogController = function($mdDialog, sha256, ezfb, loginObj) {
@@ -300,7 +309,7 @@ angular.
               'password': signupDialog.password,
               'first_name': signupDialog.firstName,
               'last_name': signupDialog.lastName,
-              'ref_code': inviteCode,
+              'ref_code':  getInviteCode(),
               'language': retrieveLocale()
             },
             'notification_preference' : {
@@ -397,8 +406,6 @@ angular.
         return deferredRecaptcha.promise;
       }
 
-      /////////////////
-
       var connectFb = function(inviteCode, requestFlow) {
         ezfb.getLoginStatus(function(response) {
           if (response.status === 'connected') {
@@ -425,7 +432,7 @@ angular.
       };
 
       var showSignupDialog = function(inviteCode, requesting, event, business) {
-        $mdDialog.show({
+         $mdDialog.show({
           controller: ['$mdDialog', SignupDialogController],
           controllerAs: 'signupDialog',
           templateUrl: 'app/services/authentication/signupDialog.template.html',
@@ -442,11 +449,6 @@ angular.
             signupObj: null
           }
         })
-        .then(function(answer) {
-          //
-        }, function() {
-          //
-        });
       };
 
       var showLoginDialog = function(event) {
@@ -498,7 +500,7 @@ angular.
         var isAgreeCookiesInfo = $localStorage.isAgreeCookiesInfo;
         $localStorage.$reset();
         if (isAgreeCookiesInfo) $localStorage.isAgreeCookiesInfo = true;
-      }
+      };
 
       var checkTokenExpiration = function() {
         if (!$localStorage.accessToken) return;
@@ -507,7 +509,7 @@ angular.
 
         // JavaScript works in milliseconds, so you'll first have to convert the UNIX timestamp from seconds to milliseconds.
         var expiredDate = $localStorage.createdAt + $localStorage.expiresIn;
-        expiredDate = new Date(expiredDate * 1000)
+        expiredDate = new Date(expiredDate * 1000);
         expiredDate = moment(expiredDate, "DD/MM/YYYY, h:mm:ss");
         var now = moment();
 
@@ -551,6 +553,7 @@ angular.
         loginGlobal,
         forgetGlobal,
         isBusiness,
+        getInviteCode,
         retrieveLocale
       };
     }
