@@ -685,3 +685,25 @@
     margin: 24px 0;
   }
 }
+
+.wrap-country-list a {
+  color: rgba(0, 0, 0, 0.8);
+}
+.wrap-country-list a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.wrap-country-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 100vh;
+}
+.wrap-country-list md-list-item.md-no-proxy {
+  align-items: start ;
+  flex: none;
+}
+.country-landing .md-subheader{
+  font-size: 16px !important;
+}

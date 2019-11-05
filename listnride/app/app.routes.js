@@ -20,6 +20,7 @@
   angular.
   module('listnride').
   config(['$stateProvider', '$urlRouterProvider', '$urlServiceProvider',
+
     function ($stateProvider, $urlRouterProvider, $urlServiceProvider) {
 
       // Custom type
@@ -1722,6 +1723,20 @@
           'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg',
           'noindex': false
         }
+      });
+
+      $stateProvider.state({
+        name: 'countryName',
+        url: '/countries/{country:underscoreEncodedSpaces}',
+        template: '<country-landing></country-landing>',
+        reloadOnSearch: false,
+      });
+
+      $stateProvider.state({
+        name: 'countries',
+        url: '/countries',
+        template: '<country-landing></country-landing>',
+        reloadOnSearch: false,
       });
 
       /* ------------------------------------ */

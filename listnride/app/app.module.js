@@ -54,6 +54,7 @@ angular.module('listnride', [
   'jobs',
   'seoLanding',
   'cityLanding',
+  'countryLanding',
   'categoryLanding',
   'filter',
   'bikeSorter',

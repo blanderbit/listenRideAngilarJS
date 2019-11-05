@@ -4218,6 +4218,10 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   padding-bottom: 12px;
 }
 
+.m-t-24 {
+  margin-top: 24px;
+}
+
 @media (min-width: 1020px) {
   .wrap-footer-lists {
     flex-wrap: nowrap;
