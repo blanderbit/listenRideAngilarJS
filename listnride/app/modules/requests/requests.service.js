@@ -98,11 +98,6 @@ angular
                 });
                 ga('ecommerce:send');
 
-                $analytics.eventTrack('Request Received', {
-                  category: 'Rent Bike',
-                  label: 'Accept'
-                });
-
                 return requestsService.updateStatus({
                   request,
                   statusId: MESSAGE_STATUSES.CONFIRMED,
