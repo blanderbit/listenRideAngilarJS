@@ -90,7 +90,7 @@
       "berlin-description": "Au cœur de Berlin-Mitte, en face du Hackescher Markt, notre <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center </a>propose des vélos de démo de marques telles que Argon18, Brompton, BZEN et Cowboy. Nous organisons régulièrement des événements, tels que <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">des sorties sociales </a> tous les vendredis matin. Cliquez <a href=\"brands\" target=\"_blank\">ici </a> pour en savoir plus sur nos vélos et marques de démo disponibles à Berlin.",
       "munich-description": "Situé centralement, à Maxvorstadt, notre <a href=\"users/6511\" target=\"_blank\">Munich Experience Center </a> propose des vélos de marques telles que 8bar, Bonvelo, Rossignol, Urwahn et Yuba. Nous proposons également les derniers vélos de route Felt et les vélos électriques urbains de BZEN, Cowboy, Leaos et Vello. Cliquez <a href=\"brands\" target=\"_blank\">ici </a> pour en savoir plus sur nos vélos de démo et marques à Munich.",
       "berlin-address": "<b>Notre adresse </b>\n<br>\nOranienburger Strasse 1-3\n<br>\n10178 Berlin\n<br>\nAllemagne",
-      "munich-address": "<b>Notre adresse </b>\n<br>\nNymphenburger Str. 86\n<br>\n80335 Munich\n<br>\nAllemagne"
+      "munich-address": "Nymphenburger Str. 86, 80335 Munich, Allemagne"
     },
     "no-brands-found": "Malheureusement, il n'y a pas encore de marques dans cette catégorie.",
     "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Tell me more about that\" target=\"_self\">Rejoignez-nous à notre programme avec votre marque </a>",
@@ -486,10 +486,10 @@
       "text": "Le légendaire <a target=\"_blank\" href=\"//inveloveritas.at\">In Velo Veritas </a>a lieu cette année pour la 7e fois le 16 juin 2019 à Poysdorf. Pour ceux qui veulent participer mais ont besoin d'un vélo conforme aux directives, nous avons rassemblé des vélos adaptés à nos membres de la communauté.  Il suffit Juste de le louer! Nous vous proposons les différents vélos ci-dessous. Si vous avez un vélo vintage mais ne pouvez pas participer, vous pouvez aider l'organisation en louant votre vélo sur notre plateforme! Devenez membre de notre communauté grandissante!"
     },
     "velothon-bikerental": {
-      "meta-title": "Location vélo de route pour le Velothon Berlin",
-      "meta-description": "Participez au Velothon Berlin 2017! Louez un vélo de route depuis la communauté listnride!",
-      "title": "Location vélo pour le Velothon Berlin",
-      "text": "Sur listnride, vous pouvez louer un vélo de route à long terme. Il suffit de cliquer sur l’un des vélos ci-dessous, de le demander pour la période souhaitée et de le récupérer le moment venu. Aussi simple que cela.\n<br>\nSaviez-vous que vous pouvez louer votre propre vélo? <a href=\"/#/listing-a-bike\">Inscrivez votre moto </a>et laissez votre vélo générer de l'argent pour vous!",
+      "meta-title": "Louez un vélo de route pour le VeloCity Berlin 2020!",
+      "meta-description": "Louez des vélos de course de haute qualité pour le VeloCity Berlin 2020 sur listnride! Choisissez parmi plus de 50 vélos de route!",
+      "title": "Louez le vélo de route idéal pour le VeloCity Berlin 2020!",
+      "text": "Louez un vélo de route pour le <a href='\"https://velocity.berlin/“'>VeloCity Berlin 2020 </a>! <br>\n\nListnride est le fournisseur officiel de location de vélos de route pour l'événement! Sélectionnez le vélo qui vous convient le mieux, demandez-le aussi longtemps que vous en avez besoin et récupérez-le le moment venu. Aussi simple que cela! <br>\n\nSaviez-vous que vous pouvez également louer votre propre vélo? <a href='\"https://www.listnride.com/listing-a-bike“'>Inscrivez votre vélo </a> et laissez-le gagner de l'argent pour vous!",
       "coffeespin": {
         "meta-title": "listnride au Velothon de Berlin",
         "title": "Préparez-vous pour le Velothon!",
@@ -1187,7 +1187,7 @@
   "about-us": {
     "title": "À propos de nous",
     "header": "À propos de listnride",
-    "subheader": "Nous vous aidons à trouver le vélo de location idéal pour chaque occasion, à tout moment et partout. Sur listnride, des milliers de vélos sont disponibles à la location: vélos de route, VTT, vélos électriques - nous avons tout. Louez un vélo avec nous partout en Europe.",
+    "subheader": "Nous vous aidons à trouver le vélo de location idéal pour chaque occasion, à tout moment et partout. Sur listnride, des milliers de vélos sont disponibles à la location: vélos de route, VTT, vélos électriques - nous avons tout. Louez un vélo avec nous partout en Europe!",
     "community": {
       "title": "Comment tout a commencé",
       "content": "Chez listnride, nous formons une équipe de cyclistes passionnés: nous aimons toutes les opportunités qui se présentent lorsque nous explorons de nouveaux lieux, rencontrons de nouveaux amis, tout en contribuant à notre santé et à notre environnement."

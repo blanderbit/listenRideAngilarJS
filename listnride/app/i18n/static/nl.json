@@ -90,7 +90,7 @@
       "berlin-description": "In het hart van Berlin-Mitte, tegenover de Hackescher Markt, bieden wij in ons <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center</a>testritten aan voor fietsen van merken als Argon18, Bonvelo, Brompton, BZEN en Cowboy. Wij organiseren regelmatig evenementen, zoals <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">social rides</a> elke vrijdagochtend. Klik <a href=\"brands\" target=\"_blank\">hier</a> om meer te weten te komen over onze beschikbare testfietsen en merken in Berlijn.",
       "munich-description": "Centraal gelegen in Maxvorstadt, presenteren wij in ons <a href=\"users/6511\" target=\"_blank\">München Experience Center</a> fietsen van merken als 8bar, Bonvelo, Rossignol, Urwahn en Yuba. We bieden ook de nieuwste Felt racefietsen en urban e-bikes van BZEN, Cowboy, Leaos en Vello aan. Klik <a href=\"brands\" target=\"_blank\">hier</a> om meer te weten te komen over onze testfietsen en merken in München.",
       "berlin-address": "<b>Ons adres </b><br>\nOranienburger Strasse 1-3 <br>\n10178 Berlijn\n<br>\nDuitsland",
-      "munich-address": "<b>Ons adres </b>\n<br>Nymphenburger Str. 86\n<br>\n80335 München\n<br>\nDuitsland"
+      "munich-address": "Nymphenburger Str. 86, 80335 München, Duitsland"
     },
     "no-brands-found": "Er zijn helaas nog geen merken in deze categorieën.",
     "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Tell me more about that\" target=\"_self\">Meld je nu aan voor ons merkenprogramma</a>",
@@ -486,10 +486,10 @@
       "text": "De legendarische <a target=\"_blank\" href=\"//inveloveritas.at\">In Velo Veritas</a>  vindt dit jaar de 7e keer plaats op 16 juni 2019 in Poysdorf. Voor degenen die willen deelnemen, maar een fiets met richtlijnen nodig hebben, hebben we een aantal geschikte fietsen van onze communityleden verzameld om je dag te redden. Gewoon huren! Fietsliefhebbers zoals jij bieden de verschillende fietsen hieronder. Als je niet kunt deelnemen, meer vintage fietsen hebt, of gewoon gelijkgestemden wilt ontmoeten, kun je je fiets op ons platform delen met anderen! Word een deel van onze groeiende gemeenschap en verdien wat extra geld met je passie!"
     },
     "velothon-bikerental": {
-      "meta-title": "Boek eenvoudig the perfekte racefiets voor de Velothon in Berlijn",
-      "meta-description": "Neem deel aan de Velothon Berlin 2017! Huur een racefiets via de listnride community en geniet van de wielerkoers!",
-      "title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
-      "text": "We helpen je! Samen met de listnride community bieden we vele racefietsen, waarbij er zeker enige zijn die voldoen aan je wensen. Je kan die eenvoudig zo lang als je die nodig hebt huren. Je hoeft slechts één van de onderstaande fietsen te kiezen, aan te vragen voor de gewenste periode en ophalen wanneer de huur start. Zo simpel is het.\n<br>\nKan je niet deelnemen? Help iemand in nood, en <a href=\"/#/listing-a-bike\">plaats je fiets</a> en verdien zo wat extra zakgeld!",
+      "meta-title": "Huur een racefiets voor de VeloCity Berlin 2020!",
+      "meta-description": "Huur hoogwaardige racefietsen voor de VeloCity Berlin 2020 op listnride! Kies uit 50+ racefietsen!",
+      "title": "Huur de ideale racefiets voor de VeloCity Berlin 2020!",
+      "text": "Huur een racefiets voor de <a href='\"https://velocity.berlin/“'>VeloCity Berlin 2020</a>! <br>\n\nListnride is de officiële aanbieder van racefietsverhuur voor het evenement! Selecteer de fiets die het beste bij je past, vraag hem aan zolang je hem nodig hebt en haal hem op wanneer de tijd daar is. <br>>\n\nWist je dat je ook je eigen fiets kunt huren? <a href='\"https://www.listnride.com/listing-a-bike“'>Lijst je fiets</a> en laat hem voor jou geld verdienen!",
       "coffeespin": {
         "meta-title": "listnride at the Velothon Berlin",
         "title": "Get ready for the Velothon!",
@@ -1186,7 +1186,7 @@
   "about-us": {
     "title": "Over ons",
     "header": "Over listnride",
-    "subheader": "Wij helpen je bij het vinden van de perfecte huurfiets voor elke gelegenheid, altijd en overal. Op de listnride zijn duizenden fietsen te huur: racefietsen, mountainbikes, e-bikes - het kan allemaal. Huur een fiets via ons in heel Europa.",
+    "subheader": "Wij helpen je bij het vinden van de perfecte huurfiets voor elke gelegenheid, altijd en overal. Op de listnride zijn duizenden fietsen te huur: racefietsen, mountainbikes, e-bikes - het kan allemaal. Huur een fiets via ons in heel Europa!",
     "community": {
       "title": "Hoe het allemaal begon",
       "content": "Wij van listnride zijn een team van gepassioneerde fietsers: we houden van alle mogelijkheden die zich voordoen bij het ontdekken van nieuwe bestemmingen, het ontmoeten van nieuwe mensen, en dat terwijl we tegelijkertijd bijdragen aan een betere gezondheid en een beter milieu."

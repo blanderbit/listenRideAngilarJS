@@ -208,11 +208,17 @@
   },
   "about-us": {
     "community": {
-      "content-paragraph": "Tuttavia, ci siamo chiesti: perché non possiamo sempre noleggiare la bici giusta quando e dove ne abbiamo bisogno? Dovrebbe essere sempre una di quelle biciclette a noleggio usate e trascurate dalle stazioni di bike sharing? E' nata l'idea della listnride."
+      "content-paragraph": "Tuttavia, ci siamo chiesti: perché non possiamo sempre noleggiare la bici giusta quando e dove ne abbiamo bisogno? Dovrebbe essere sempre una di quelle biciclette a noleggio usate e trascurate dalle stazioni di bike sharing? E' nata l'idea della listnride.",
+      "content-munich-showroom": "In posizione centrale a Maxvorstadt, presentiamo nel nostro <a href=\"users/6511\" target=\"_blank\">Munich Experience Center</a> biciclette di marche come 8bar, Bonvelo, Rossignol, Urwahn e Yuba. Offriamo anche le ultime bici da corsa Felt e biciclette elettriche urbane di Cowboy, Leaos e Vello. Clicca <a href=\"brands\">qui </a>per saperne di più sulle nostre bici di prova e marche a Monaco di Baviera.",
+      "content-berlin-showroom": "Nel cuore di Berlin-Mitte, di fronte all'Hackescher Markt, nel nostro <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center</a> offriamo giri di prova per biciclette di marche come Argon18, Bonvelo, Brompton, BZEN e Cowboy. Organizziamo regolarmente eventi come <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">giri sociali</a> ogni venerdì mattina. Clicca <a href=\"brands\" target=\"_blank\">qui</a>> per saperne di più sulle nostre bici di prova e marche disponibili a Berlino"
     },
     "future": {
       "content-paragraph": "Siamo orgogliosi dei nostri partner che ci offrono le loro biciclette, siano essi rivenditori professionali, proprietari di parchi o privati. Infine, in alcune località europee, è possibile conoscere marchi innovativi che, insieme a noi, offrono test ride esclusivi."
-    }
+    },
+    "showroom": {
+      "subtitle": "Vieni a conoscerci a Berlino o Monaco e prova le ultime biciclette alla moda e molto altro!"
+    },
+    "content-title": "Vi aiuteremo a trovare la bicicletta a noleggio perfetta per ogni occasione, in qualsiasi momento e ovunque. Ci sono migliaia di biciclette a noleggio sulla listnride: bici da strada, mountain bike, bici elettriche - tutto è possibile. Noleggia una bicicletta da noi in tutta Europa!"
   },
   "testimonials": {
     "jetske-amsterdam": "Su listnride noleggio le mie biciclette fornendo alle famiglie una soluzione semplice per scoprire la mia città natale. Oltre ad incontrare persone simpatiche, guadagno un po 'di soldi in più ☺",
@@ -224,6 +230,10 @@
     "rider-4": "Lavoro regolarmente a Berlino. Da quando ho scoperto listnride, noleggio spesso una bella bici. La selezione di biciclette è ottima ed è facile e sicura.",
     "lister-1": "Recentemente scoperto listnride, elencate 3 biciclette da corsa e ora regolarmente noleggiate. La cosa bella è incontrare persone simpatiche, con le quali a volte vado a fare un giro.",
     "lister-2": "Sono un grande fan dei listnride. Quando vado alle corse, mi noleggio una bici eccellente. A casa offro le mie biciclette ai miei ospiti Airbnb. Super facile e con un ottimo rapporto qualità-prezzo."
+  },
+  "countries": {
+    "title": "Tutti i paesi",
+    "country_title": "Tutte le città in {{country-name}}"
   },
   "cyclingworld": {
     "event": {
@@ -270,6 +280,9 @@
     "cwd": {
       "calendar-title": "Testbikes for Cyclingworld",
       "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    },
+    "velothon-bikerental": {
+      "description": "Cosa: <b0>VeloCity Berlin 2020 </b0>| Dove: <b1>Berlino </b1>| Quando: <b2>13-14 giugno 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
@@ -471,8 +484,8 @@
         "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
       },
       "velothon-bikerental": {
-        "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+        "meta-title": "Noleggia una bici da strada per il VeloCity Berlin 2020!",
+        "meta-description": "Stiamo offrendo il noleggio di bici da strada per VeloCity Berlin 2020! Noleggia una bici da strada dalla community di listnride e divertiti!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -1550,10 +1563,10 @@
     "top-countries": "Top paesi",
     "subscribe-title": "Iscriviti alla nostra newsletter",
     "recapcha-text": "Protetto da reCAPTCHA",
-    "keep-in-touch": "Seguici!",
+    "keep-in-touch": "Mettiti in contatto con noi!",
     "term-of-service": "Termini e Condizioni ",
     "privacy-policy": "Informativa sulla privacy",
-    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
+    "newsletter-subscribe-success": "Grazie per esserti iscritto!",
     "languages": {
       "dutch": "Olandese",
       "french": "Francese",

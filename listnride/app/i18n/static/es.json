@@ -90,7 +90,7 @@
       "berlin-description": "En el corazón de Berlin-Mitte, frente al Hackescher Markt, nuestro <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center </a> ofrece paseos de prueba con bicicletas de marcas como Argon18, Bonvelo, Brompton, BZEN y Cowboy. Regularmente organizamos eventos, como <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">atracciones sociales </a> todos los viernes por la mañana. Haz clic <a href=\"brands\" target=\"_blank\">aquí </a> para obtener más información sobre nuestras bicicletas de prueba y marcas disponibles en Berlín.",
       "munich-description": "Ubicado en el centro de Maxvorstadt, nuestro <a href=\"users/6511\" target=\"_blank\">Munich Experience Center </a>presenta bicicletas de marcas como 8bar, Bonvelo, Rossignol, Urwahn y Yuba. También ofrecemos las últimas bicicletas de carretera Felt y bicicletas eléctricas urbanas de BZEN, Cowboy, Leaos y Vello. Haz clic <a href=\"brands\" target=\"_blank\">aquí </a>para obtener más información sobre nuestras bicicletas y marcas de prueba en Munich.",
       "berlin-address": "<b>Nuestra dirección</b>\n<br>\nOranienburger Strasse 1-3\n<br>\n10178 Berlín\n<br>\nAlemania",
-      "munich-address": "<b>Nuestra dirección</b>\n<br>\nNymphenburger Str. 86\n<br>\n80335 Múnich\n<br>\nAlemania"
+      "munich-address": "Nymphenburger Str. 86, 80335 Múnich, Alemania"
     },
     "no-brands-found": "Desafortunadamente todavía no hay marcas en esta categoría.",
     "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Quiero más información sobre el programa de marcas\" target=\"_self\">Únete a nuestro programa con tu marca</a>",
@@ -486,10 +486,10 @@
       "text": "El legendario <a target=\"_blank\" href=\"//inveloveritas.at\">In Velo Veritas</a> ocurre este año por séptima vez el 16 de junio de 2019 en Poysdorf. Para aquellos que desean participar pero necesitan una bicicleta que coincida con las pautas, recopilamos algunas de las bicicletas de nuestros miembros de la comunidad para salvar su día. ¡Solo alquilalo! Los entusiastas de la bicicleta como usted están ofreciendo las diferentes bicicletas a continuación. Si no puedes participar, tienes más bicicletas antiguas, o simplemente quieres conocer a personas con ideas similares, ¡puedes compartir tu bicicleta en nuestra plataforma con otros! ¡Forma parte de nuestra comunidad en crecimiento y gana dinero extra con tu pasión!"
     },
     "velothon-bikerental": {
-      "meta-title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
-      "meta-description": "¡Participa en la Velothon de Berlín 2017! ¡Alquila una bici de carretera en la comunidad para compartir bicis de listnride y únete a la diversión!",
-      "title": "Simplemente alquila la bici de carretera perfecta para la Velothon de Berlín",
-      "text": "¡Podemos hacer que te enganches! Junto con la comunidad listnride, ofrecemos bicis de carretera adecuadas que puedes alquilar fácilmente el tiempo que quieras. Elige una de las bicicletas siguientes, solicítala para el período requerido y recógela cuando llegue el momento. Tan fácil como eso.\n<br>\n¿No puedes participar? Ayuda a alguien que lo necesite <a href=\"/#/listing-a-bike\">Anuncia tu bici</a>y gana dinero extra.\nJunto a las bicis que puedes alquilar a continuación, te invitamos a dar un paseo el día anterior para socializar y aclimatarnos. Únete a nosotros,  el ritmo será llevadero y te invitamos a comer después. Más información e inscripción .",
+      "meta-title": "¡Alquile una bicicleta de carretera para VeloCity Berlin 2020!",
+      "meta-description": "¡Alquile bicicletas de carrera de alta calidad para VeloCity Berlin 2020 en listnride! ¡Elige entre más de 50 bicicletas de carretera!",
+      "title": "¡Alquile la bicicleta de carretera ideal para VeloCity Berlin 2020!",
+      "text": "¡Alquile una bicicleta de carretera para el <a href='\"https://velocity.berlin/“'>VeloCity Berlin 2020 </a>! <br>\n\n¡Listnride es el proveedor oficial de alquiler de bicicletas de carretera para el evento! Seleccione la bicicleta que más le convenga, solicítela durante el tiempo que la necesite y recójala cuando llegue el momento. ¡Simple como eso! <br>\n\n¿Sabías que también puedes alquilar tu propia bicicleta? <a href='\"https://www.listnride.com/listing-a-bike“'>¡Incluya su bicicleta </a> y deje que le haga dinero!",
       "coffeespin": {
         "meta-title": "listnride en la Velothon Berlin",
         "title": "¡Prepárate para la Velothon!",
@@ -1185,7 +1185,7 @@
   "about-us": {
     "title": "Sobre nosotros",
     "header": "Sobre listnride",
-    "subheader": "Te ayudamos a encontrar la bicicleta de alquiler perfecta para cada ocasión, en cualquier momento y en cualquier lugar. Con listnride, se pueden alquilar miles de bicicletas: bicicletas de carretera, bicicletas de montaña, bicicletas eléctricas: lo tenemos todo. Alquile una bicicleta con nosotros en toda Europa.",
+    "subheader": "Te ayudamos a encontrar la bicicleta de alquiler perfecta para cada ocasión, en cualquier momento y en cualquier lugar. Con listnride, se pueden alquilar miles de bicicletas: bicicletas de carretera, bicicletas de montaña, bicicletas eléctricas: lo tenemos todo. Alquile una bicicleta con nosotros en toda Europa!",
     "community": {
       "title": "Cómo todo empezó",
       "content": "Aquí en listnride, somos un equipo de ciclistas verdaderamente apasionados: amamos todas las oportunidades que surgen al explorar nuevos lugares, conocer nuevos amigos y, al mismo tiempo, contribuir a nuestra salud y al medio ambiente."

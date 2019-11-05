@@ -211,11 +211,17 @@
   },
   "about-us": {
     "community": {
-      "content-paragraph": "Wir haben uns jedoch gefragt: Warum haben wir nicht immer das richtige Leihrad, wann und wo immer wir es brauchen? Muss es immer eine der von Bikesharing-Stationen ausgenutzten und missbrauchten sein? Die Idee von listnride war geboren."
+      "content-paragraph": "Wir haben uns jedoch gefragt: Warum haben wir nicht immer das richtige Leihrad, wann und wo immer wir es brauchen? Muss es immer eines von den verwaisten Bikesharing-Stationen sein? Die Idee zu listnride war geboren.",
+      "content-munich-showroom": "Zentral in der Münchner Maxvorstadt gelegen, bietet unser <a href=\"users/6511\" target=\"_blank\">Münchner Experience Center</a> Fahrräder von Marken wie Bonvelo, Rossignol, Urwahn und Yuba. Wir haben außerdem die neuesten Felt Rennräder im Angebot und urbane E-Bikes von Cowboy und Vello. Klicke <a href=\"brands\">hier</a> um mehr über unsere Testräder und Marken in München zu erfahren.",
+      "content-berlin-showroom": "Im Herzen von Berlin Mitte, gegenüber dem Hackeschen Markt, bietet unser <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Belin Experience Center</a> Testfahrten mit Rädern von Marken wie Argon18, Bonvelo, Brompton und Cowboy, sowie Aktiv Bekleidung von Biehler. Wir organisieren regelmäßig Veranstaltungen wie den freitäglichen <a href=\"users/7351\" target=\"_blank\">Coffee Spin</a>. Klicke <a href=\"brands\" target=\"_blank\">hier</a> um mehr über verfügbare Testräder und Marken in Berlin zu erfahren."
     },
     "future": {
       "content-paragraph": "Wir sind stolz auf unsere starken Partner die bei uns ihre Räder gelistet haben - seien es gewerbliche Händler, Fahrradflottenbesitzer oder Privatpersonen. Mit uns kannst du außerdem in ausgewählten Orten angesagte Marken entdecken, welche sich mit uns zusammengeschlossen haben um einen exklusiven Testfahrten Service anzubieten."
-    }
+    },
+    "showroom": {
+      "subtitle": "Triff uns in Berlin oder München und erlebe die neuesten angesagten Fahrräder und mehr!"
+    },
+    "content-title": "Wir helfen dir das perfekte Mietrad für jede Gelegenheit zu finden, immer und überall. Auf listnride stehen tausende Räder zum Verleih: Rennräder, Mountainbikes, E-Bikes - wir haben sie alle. Miete dir mit uns ein passendes Rad in ganz Europa!"
   },
   "testimonials": {
     "jetske-amsterdam": "Ich vermiete über listnride meine Fahrräder und biete Familien so eine einfache Lösung, um meine Heimatstadt zu entdecken. Ich treffe nicht nur nette Leute, sondern verdiene auch ein bisschen Taschengeld nebenher :) ",
@@ -227,6 +233,10 @@
     "rider-4": "Ich arbeite regelmäßig in Berlin. Seitdem ich listnride entdeckt habe, leihe ich mir öfters ein schönes Rad. Die Auswahl ist super und es ist einfach und sicher.",
     "lister-1": "Habe neulich listnride entdeckt, 3 Rennräder hochgeladen und vermiete mittlerweile regelmäßig. Das Tolle an der Sache ist, coole Leute zu treffen, mit den ich auch mal eine Runde drehe.",
     "lister-2": "Ich bin großer listnride Fan. Wenn ich zu Rennen fahre, leihe ich mir ein optimales Rad. Zu Hause verleihe ich meine Fahrräder u. a. an meine Airbnb-Gäste. Super einfaches und gutes Geld."
+  },
+  "countries": {
+    "title": "Alle Länder",
+    "country_title": "Alle Städte in {{country-name}}"
   },
   "cyclingworld": {
     "event": {
@@ -273,6 +283,9 @@
     "cwd": {
       "calendar-title": "Testbikes for Cyclingworld",
       "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    },
+    "velothon-bikerental": {
+      "description": "Was: <b0>VeloCity Berlin 2020 </b0>| Wo: <b1>Berlin </b1>| Wann: <b2>13.-14. Juni 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren ",
@@ -474,8 +487,8 @@
         "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs."
       },
       "velothon-bikerental": {
-        "meta-title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
-        "meta-description": "Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!"
+        "meta-title": "Miete dir ein Rennrad für den VeloCity 2020 in Berlin!",
+        "meta-description": "Wir bieten hochwertige Miet-Rennräder für den VeloCity Berlin 2020! Schnapp dir einfach ein passendes Rennrad von der listnride Community und los geht's!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -623,21 +636,21 @@
     },
     "press": {
       "meta-title": "listnride Pressebereich",
-      "meta-description": "Wir lieben Bike-Sharing. Und beantworten gerne Ihre Fragen."
+      "meta-description": "Wir lieben es Räder zu vermitteln. Und beantworten gerne Ihre Fragen."
     },
     "invest": {
-      "meta-title": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
+      "meta-title": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Fahrrad-Verleih Community.",
       "meta-description": "Besuche Seedrs und erfahre wie du in listnride investieren kannst."
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Website Nutzungsbedingungen",
-      "meta-description": "Die Nutzungsbedingungen der Bike-Sharing-Community listnride beziehen sich auf die Nutzung der Online-Plattform."
+      "meta-description": "Die Nutzungsbedingungen von listnride beziehen sich auf die Nutzung der Online-Plattform."
     },
     "trust-and-safety": {
       "meta-title": "Fahrrad ausleihen mit Versicherung"
     },
     "how-it-works": {
-      "meta-title": "Unkompliziertes Bike-Sharing",
+      "meta-title": "Unkomplizierte Mieträder",
       "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!"
     },
     "jobs": {
@@ -654,7 +667,7 @@
     },
     "privacy": {
       "meta-title": "Datenschutzerklärung von listnride",
-      "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform.",
+      "meta-description": "Die Datenschutzerklärung von listnride bezieht sich auf die Nutzung der Onlineplattform.",
       "use-opt-in": "Um dir mit listnride einen perfekten Service zu bieten, setzen wir Cookies gemäß unserer <a target=\"_blank\" href=\"/#/privacy\">Cookie-Richtlinie ein</a>.",
       "use-opt-in-button": "Hab ich verstanden."
     }
@@ -746,7 +759,7 @@
       "choose-duration": "Wähle die Buchungsdauer",
       "pickup-time": "Abholzeit",
       "return-time": "Rückgabezeit",
-      "intro-description": "Deine Buchung wird von listnride, Europas größter Bike-Sharing-Community, sicher bearbeitet."
+      "intro-description": "Deine Buchung wird von listnride, Europas größter Fahrrad Verleih Community, sicher bearbeitet."
     }
   },
   "toasts": {
@@ -901,7 +914,7 @@
     "1": {
       "text1": "Willkommen bei listnride!",
       "text-invited": "Du wurdest von einem Freund eingeladen, dein Account hat daher automatisch einen Gutschein bekommen, der bei der ersten Fahrt eingelöst wird.",
-      "text2": "Herzlich willkommen in unserer Bike-Sharing-Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle."
+      "text2": "Herzlich willkommen in unserer Community mit vielen tollen Bikes und begeisterten Fahrradliebhabern aus aller Welt. In unserer Community dreht sich alles darum, sein geliebtes Zweirad mit anderen zu teilen – gegenseitiges Vertrauen und Sicherheit für Dich und die anderen User stehen daher für uns an erster Stelle."
     },
     "2": {
       "title": "Lade ein Profilbild hoch",
@@ -1428,11 +1441,11 @@
     },
     "search-section": {
       "header": "Wo solls hingehen?",
-      "subheader": "Bike-Sharing per listnride erreicht immer mehr Orte."
+      "subheader": "listnrides Fahrradverleih Service erreicht immer mehr Orte."
     },
     "testmonials-section": {
       "header": "Was sagen die Rider über uns?",
-      "subheader": "Immer mehr Menschen haben Bike-Sharing per listnride für sich entdeckt. Lies hier einige Kommentare:"
+      "subheader": "Immer mehr Menschen entdecken die Vorteile des Fahrradleihens und -verleihens über listnride für sich. Lies hier einige Kommentare:"
     }
   },
   "list-a-bike": {
@@ -1452,7 +1465,7 @@
       "header": "Safety first!",
       "subheader": "listnride gibt Dir Rückendeckung.",
       "precautions-title": "Wir sorgen vor.",
-      "precautions-content": "Du willst dein geliebtes Fahrrad verleihen – aber nicht irgendjemandem. Deshalb verifizieren wir alle User für Dich. Und über die User-Ratings erfährst du mehr über ihr Fairplay im Bike Sharing.",
+      "precautions-content": "Du willst dein geliebtes Fahrrad verleihen – aber nicht einfach an irgendjemandem. Deshalb verifizieren wir alle User für Dich. Und über die User-Ratings erfährst du mehr über ihr Verhalten beim Fahrradverleih.",
       "control-title": "Du behältst die Kontrolle.",
       "control-content": "Du bestimmst die individuelle Tages- oder Wochenrate. Dir steht es komplett frei, Anfragen anzunehmen oder auch ganz einfach abzulehnen, wenn du dein Fahrrad nicht verleihen willst.",
       "covered-title": "Du bist abgesichert.",
@@ -1467,7 +1480,7 @@
     },
     "testmonials-section": {
       "header": "Fahrradvermietung: Was sagen die Lister über uns?",
-      "subheader": "Viele Menschen sind schon ein teilender Teil unserer Bike-Sharing-Community. Lies hier, welche Erfahrungen sie gemacht haben:"
+      "subheader": "Viele Menschen sind schon ein Teil unserer Community geworden. Lies hier, welche Erfahrungen sie gemacht haben:"
     }
   },
   "invoices": {
@@ -1493,11 +1506,11 @@
     "meta-title": "listnride | 10€ für dich!",
     "meta-description": "Lade deine Freunde per E-Mail ein, oder teile deinen Link auf Facebook und schenke ihnen dadurch 10€. Für jede Anmeldung über deinen Link, erhälst du 10€ Gutschrift, sobald deine Freunde aktiv werden! (Leihen und Verleihen)",
     "header": "hat dir 10€ geschenkt",
-    "subheader": "Willkommen bei listnride, der Bike Sharing Community",
+    "subheader": "Willkommen bei listnride, der Fahrradverleih Plattform.",
     "subsubheader": "listnride ist eine Community die passionierte Radfahrer zusammen bringt um sich gegenseitig zu unterstützen. Du benötigst ein Fahrrad für ein bestimmtes Terrain? Du wirst es hier finden! Du möchtest deine Räder mit anderen teilen? Biete Sie an und verdiene zusätzliches Taschengeld!",
     "subsubsubheader": "{{ name }} hat dich eingeladen. Melde dich einfach kurz an um deine 10€ zu erhalten! Der Gutschein wird deinem Nutzerkonto sofort gutgeschrieben und kann sofort genutzt werden.",
     "sign-up-get-voucher": "Registrieren und Gutschein erhalten",
-    "how-lnr-works": "Bike-Sharing völlig unkompliziert",
+    "how-lnr-works": "Fahrradverleih völlig unkompliziert",
     "explanation-1-title": "1. Suchen und Anfragen",
     "explanation-1-description": "Finde ein passendes Rad und frage es an.",
     "explanation-2-title": "2. Buchen und abholen",
@@ -1559,7 +1572,7 @@
     "keep-in-touch": "Bleib in Kontakt!",
     "term-of-service": "Allgemeine Geschäftsbedingungen",
     "privacy-policy": "Datenschutzerklärung",
-    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
+    "newsletter-subscribe-success": "Danke fürs Abonnieren!",
     "languages": {
       "dutch": "Niederländisch",
       "french": "Französisch",
