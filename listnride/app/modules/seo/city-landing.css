@@ -544,11 +544,6 @@
     text-align: center;
   }
 
-  .lnr-city-landing__title.lnr-center,
-  .lnr-city-landing__descr {
-    width: 100%;
-  }
-
   .lnr-bikes-slider-title .md-title,
   .lnr-bikes-slider-title .md-subhead {
     max-width: 100%;
@@ -646,6 +641,11 @@
     max-height: initial;
   }
 
+  .lnr-city-landing-content {
+    padding: 0;
+    margin: 0 auto;
+  }
+
   .lnr-city-landing .lnr-icn-big-rounded {
     margin: 0 auto 25px;
   }
@@ -653,6 +653,10 @@
   .lnr-city-landing-content {
     padding: 0;
     margin: 0 auto;
+  }
+
+  .lnr-city-landing .md-xlrg {
+    min-width: 264px !important;
   }
 }
 
