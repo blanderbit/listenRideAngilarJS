@@ -675,6 +675,9 @@
     font-size: 16px;
     line-height: 1;
   }
+  .lnr-city-landing-content {
+    width: 96%;
+  }
 
   .lnr-city-landing-promo .lnr-city-landing__title {
     font-size: 54px;
