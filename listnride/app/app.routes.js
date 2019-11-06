@@ -1726,10 +1726,15 @@
       });
 
       $stateProvider.state({
-        name: 'countryName',
+        name: 'countryPage',
         url: '/countries/{country:underscoreEncodedSpaces}',
         template: '<country-landing></country-landing>',
-        reloadOnSearch: false,
+        onEnter: redirectHook,
+        meta: {
+          disableUpdate: false,
+          'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg',
+          'noindex': false
+        }
       });
 
       $stateProvider.state({

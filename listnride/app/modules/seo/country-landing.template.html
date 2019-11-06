@@ -2,7 +2,7 @@
     <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
 <md-content class="country-landing single-column" ng-hide="countryLanding.loading">
-    <section layout="row" layout-align="start start" flex>
+        <section layout="row" layout-align="start start" flex>
         <div layout-gt-xs="column" layout-align="end none" layout-padding>
             <!-- all countries page -->
             <div ng-if="!countryLanding.countryName">
@@ -15,7 +15,7 @@
                 </h1>
                 <md-list class="wrap-country-list">
                     <md-list-item ng-repeat="country in countryLanding.countryData">
-                        <a href="countries/{{country.name.en}}">
+                        <a href="countries/{{country.name.en.toLowerCase()}}">
                             <p>
                                 {{ country.name[countryLanding.languageCode] }}
                             </p>
@@ -37,8 +37,9 @@
                     ></breadcrumbs>
                     <h1 layout="column" layout-gt-sm="row"
                         layout-align="start stretch" class="m-t-24 md-headline"
-                        translate="country.country_title"
-                        translate-value="{country-name: countryLanding.currentCountry.name[countryLanding.languageCode]}">
+                        translate="countries.country_title"
+                        translate-values="{country_name: countryLanding.currentCountry.name[countryLanding.languageCode]}"
+                        >
                     </h1>
                     <md-list class="wrap-country-list" ng-if="countryLanding.currentCountry.seo_cities.length">
                         <md-list-item

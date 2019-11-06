@@ -43,22 +43,6 @@ angular.module('categoryLanding', []).component('categoryLanding', {
         categoryLanding.allBikes = [];
         categoryLanding.headerTranslation = 'seo.header';
         categoryLanding.defaultProfilePicture = applicationHelper.defaultProfilePicture;
-        $translate([categoryLanding.category]).then(
-            function (translations) {
-              categoryLanding.breadcrumbs = [{
-                  title: 'Home',
-                  route: 'home'
-                },
-                {
-                  title: categoryLanding.city,
-                  route: `cityLanding({ city: '${$stateParams.city}'})`
-                },
-                {
-                  title: translations[categoryLanding.category]
-                }
-              ];
-            }
-        );
 
         categoryLanding.colorScheme = mapConfigs.colorScheme();
         categoryLanding.mapOptions = mapConfigs.mapOptions;
@@ -105,6 +89,27 @@ angular.module('categoryLanding', []).component('categoryLanding', {
             _.forEach(categoryLanding.categories, function (category) {
               category.formattedName = category.url.replace(/-/i, '_')
             });
+
+            $translate([categoryLanding.category]).then(
+              function (translations) {
+                categoryLanding.breadcrumbs = [{
+                  title: 'Home',
+                  route: 'home'
+                },
+                {
+                  title:  categoryLanding.data.country,
+                  route: `countryPage({ country: '${categoryLanding.data.country_en}'})`
+                },
+                {
+                  title: categoryLanding.city,
+                  route: `cityLanding({ city: '${$stateParams.city}'})`
+                },
+                {
+                  title: translations[categoryLanding.category]
+                }
+                ];
+              }
+            );
 
             if(!categoryLanding.mobileScreen) initializeGoogleMap();
 

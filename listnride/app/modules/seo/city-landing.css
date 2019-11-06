@@ -707,3 +707,10 @@
 .country-landing .md-subheader{
   font-size: 16px !important;
 }
+.country-landing footer {
+  display: block;
+  width: 100%;
+  height: auto;
+  bottom: 0px;
+  position: fixed;
+}

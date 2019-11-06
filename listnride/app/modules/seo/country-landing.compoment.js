@@ -6,6 +6,7 @@ angular.module('countryLanding', []).component('countryLanding', {
     $state,
     $scope,
     $stateParams,
+    authentication,
     api
   ){
     const countryLanding = this;
@@ -13,7 +14,7 @@ angular.module('countryLanding', []).component('countryLanding', {
     countryLanding.$onInit = function() {
       // variables
       countryLanding.countryData = [];
-      countryLanding.languageCode = $localStorage.selectedLanguage;
+      countryLanding.languageCode = authentication.retrieveLocale();
       countryLanding.citiesNames = [];
       countryLanding.breadcrumbs = [
         {
@@ -34,10 +35,11 @@ angular.module('countryLanding', []).component('countryLanding', {
     function getCountryData() {
       api.get('/seo_countries').then(function(response) {
         countryLanding.countryData = response.data;
-
         countryLanding.currentCountry = _.find(response.data, (country) => {
-          return country.name.en == $stateParams.country;
+          const countryName = country.name.en.toLowerCase();
+          return countryName == $stateParams.country;
         });
+
         if (countryLanding.currentCountry) {
           countryLanding.breadcrumbsCountry = [
             {
@@ -45,7 +47,7 @@ angular.module('countryLanding', []).component('countryLanding', {
               route: 'home'
             },
             {
-              title:`Countries`,
+              title: `Countries`,
               route: 'countries'
             },
             {

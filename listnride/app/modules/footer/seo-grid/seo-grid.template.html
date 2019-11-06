@@ -5,7 +5,7 @@
     <div ng-repeat="country in seoGrid.countries">
         <md-list class="lnr-p-0">
             <md-list-item class="md-body-1">
-                <a class="lnr-link" href="countries/{{ country.name }}">
+                <a class="lnr-link" href="countries/{{ country.name.toLowerCase()}}">
                     {{country.name}}
                 </a>
             </md-list-item>

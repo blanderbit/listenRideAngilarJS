@@ -13,10 +13,8 @@ angular.module('seoGrid', []).component('seoGrid', {
         { name: "Italy", locations: ["Florence", "Bologna", "Milan", "Turin", "Olbia", "Palermo", "Rome"]},
         { name: "Spain", locations: ["Seville", "Barcelona", "Madrid", "Mallorca", "Lanzarote", "Tenerife", "Gran Canaria", "Valencia"]},
         { name: "Netherlands", locations: ["Amsterdam", "Utrecht"]},
-        { name: "Switzerland", locations: ["Zurich"]},
-        { name: "Portugal", locations: ["Lisbon"]},
-        { name: "South Africa", locations: ["Cape Town"]}
-      ]
+        { name: "Switzerland", locations: ["Zurich"]}
+        ]
     }
   ]
 });
