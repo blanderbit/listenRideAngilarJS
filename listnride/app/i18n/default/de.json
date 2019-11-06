@@ -207,7 +207,11 @@
     }
   },
   "request": {
-    "payment-failed": "Oops.. Leider ist deine Zahlung fehlgeschlagen. Bitte prüfe die von dir eingegebenen Daten sowie die Zahlungseinstellungen des Zahlungsdienstleisters nochmals!"
+    "payment-failed": "Oops.. Leider ist deine Zahlung fehlgeschlagen. Bitte prüfe die von dir eingegebenen Daten sowie die Zahlungseinstellungen des Zahlungsdienstleisters nochmals!",
+    "waiting_for_capture": "Vielen Dank für deine Buchungsanfrage! Die Zahlung wird derzeit bearbeitet. Du erhältst eine E-Mail, sobald sie bestätigt ist.",
+    "payment-failed-lister": "Uh-oh, die Zahlung des Mieters ist fehlgeschlagen. Bitte warte, bis der Vermieter die Zahlung erneut versucht.",
+    "waiting_for_capture_lister": "Danke, dass du die Buchungsanfrage angenommen hast! Die Zahlung wird derzeit bearbeitet, du erhältst eine E-Mail, wenn sie bestätigt wird.",
+    "payment-failed-after-accept": "Deine Buchungsanfrage ist in Bearbeitung, da die Zahlung fehlgeschlagen ist! \n\nBitte überprüfe deine Zahlungsdaten und versuche es erneut. Sobald die Zahlung erfolgt ist, wird deine Buchung bestätigt!"
   },
   "about-us": {
     "community": {
@@ -221,7 +225,7 @@
     "showroom": {
       "subtitle": "Triff uns in Berlin oder München und erlebe die neuesten angesagten Fahrräder und mehr!"
     },
-    "content-title": "Wir helfen dir das perfekte Mietrad für jede Gelegenheit zu finden, immer und überall. Auf listnride stehen tausende Räder zum Verleih: Rennräder, Mountainbikes, E-Bikes - wir haben sie alle. Miete dir mit uns ein passendes Rad in ganz Europa!"
+    "content-title": "Wir helfen dir das perfekte Mietrad für jede Gelegenheit zu finden, immer und überall"
   },
   "testimonials": {
     "jetske-amsterdam": "Ich vermiete über listnride meine Fahrräder und biete Familien so eine einfache Lösung, um meine Heimatstadt zu entdecken. Ich treffe nicht nur nette Leute, sondern verdiene auch ein bisschen Taschengeld nebenher :) ",
@@ -236,7 +240,7 @@
   },
   "countries": {
     "title": "Alle Länder",
-    "country_title": "Alle Städte in {{country-name}}"
+    "country_title": "Alle Städte in {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -1573,6 +1577,7 @@
     "term-of-service": "Allgemeine Geschäftsbedingungen",
     "privacy-policy": "Datenschutzerklärung",
     "newsletter-subscribe-success": "Danke fürs Abonnieren!",
+    "sitemap": "Sitemap",
     "languages": {
       "dutch": "Niederländisch",
       "french": "Französisch",

@@ -89,7 +89,7 @@
       "sub-header": "Experimenta una selección premium de marcas de bicicletas en Berlín y Munich.",
       "berlin-description": "En el corazón de Berlin-Mitte, frente al Hackescher Markt, nuestro <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center </a> ofrece paseos de prueba con bicicletas de marcas como Argon18, Bonvelo, Brompton, BZEN y Cowboy. Regularmente organizamos eventos, como <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">atracciones sociales </a> todos los viernes por la mañana. Haz clic <a href=\"brands\" target=\"_blank\">aquí </a> para obtener más información sobre nuestras bicicletas de prueba y marcas disponibles en Berlín.",
       "munich-description": "Ubicado en el centro de Maxvorstadt, nuestro <a href=\"users/6511\" target=\"_blank\">Munich Experience Center </a>presenta bicicletas de marcas como 8bar, Bonvelo, Rossignol, Urwahn y Yuba. También ofrecemos las últimas bicicletas de carretera Felt y bicicletas eléctricas urbanas de BZEN, Cowboy, Leaos y Vello. Haz clic <a href=\"brands\" target=\"_blank\">aquí </a>para obtener más información sobre nuestras bicicletas y marcas de prueba en Munich.",
-      "berlin-address": "<b>Nuestra dirección</b>\n<br>\nOranienburger Strasse 1-3\n<br>\n10178 Berlín\n<br>\nAlemania",
+      "berlin-address": "Oranienburger Strasse 1-3, 10178 Berlín, Alemania",
       "munich-address": "Nymphenburger Str. 86, 80335 Múnich, Alemania"
     },
     "no-brands-found": "Desafortunadamente todavía no hay marcas en esta categoría.",
@@ -466,7 +466,7 @@
     "vatternrundan": {
       "title": "Alquila una bici de carretera para el Vätternrundan",
       "description": "Qué: <b>Vätternrundan </b>| Dónde: <b>Motala, Suecia </b>| Cuándo: <b>5 al 12 de junio de 2020 </b>",
-      "text": "Logística, logística, logística. A menos que ya estés viviendo en la península escandinava, llevar tu bicicleta a Motala será un desafío logístico. Entonces, ¿por qué no simplemente alquilas una bicicleta?\n<br>\nPara abrir la oportunidad de montar este hermoso evento a más personas que nunca, estamos alquilando bicicletas de carretera de alta calidad de FARA, Simplon y otras marcas. <br>\n\nAhorre tiempo, problemas y dinero simplemente alquilando una bicicleta. Estarán listos para salir en la línea de salida en Motala. Todo lo que necesita traer es su juego de luces, casco, pedales, y por supuesto: ¡usted y su entusiasmo!"
+      "text": "Logística, logística, logística. A menos que ya estés viviendo en la península escandinava, llevar tu bicicleta a Motala será un desafío logístico. Entonces, ¿por qué no simplemente alquilas una bicicleta?\n<br>\n\nAhorre tiempo, problemas y dinero simplemente alquilando una bicicleta. Estarán listos para salir en la línea de salida en Motala. Todo lo que necesita traer es su juego de luces, casco, pedales, y por supuesto: ¡usted y su entusiasmo! <br>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Motala\">¡Reservas grupales disponibles aquí!</a>"
     },
     "toros-de-gravel": {
       "title": "Alquila una bicicleta de gravel para Toros de Gravel",

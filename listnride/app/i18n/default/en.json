@@ -207,7 +207,11 @@
     }
   },
   "request": {
-    "payment-failed": "Uh-oh. Unfortunately, your payment failed. Please double check the data you have entered, as well as the payment settings of your payment provider!"
+    "payment-failed": "Uh-oh. Unfortunately, your payment failed. Please double check the data you have entered, as well as the payment settings of your payment provider!",
+    "waiting_for_capture": "Thank you for your booking request! The payment is currently being processed, you'll receive an email when it is confirmed.",
+    "payment-failed-lister": "Uh-oh, the payment of the Rider failed. Please wait while the Rider tries the payment again.",
+    "waiting_for_capture_lister": "Thank you for accepting the booking request! The payment is now being processed, you'll receive an email when it is confirmed.",
+    "payment-failed-after-accept": "Your booking request is on hold as the payment failed!\n\nPlease check your payment details and try again. As soon as the payment has succeeded, your booking will be confirmed!"
   },
   "about-us": {
     "community": {
@@ -221,7 +225,7 @@
     "showroom": {
       "subtitle": "Get to know us in Berlin or Munich, and experience the latest fashionable bikes and more!"
     },
-    "content-title": "We help you find the perfect rental bike for every occasion, anytime and everywhere. On listnride, thousands of bicycles are available to hire: road bikes, mountain bikes, e-bikes - we have it all. Rent a bike with us all across Europe!"
+    "content-title": "We help you find the perfect rental bike for every occasion, anytime and everywhere"
   },
   "testimonials": {
     "jetske-amsterdam": "On listnride I rent out my bikes providing families a simple solution to discover my home town. Besides meeting nice people I make some extra pocket money ☺",
@@ -236,7 +240,7 @@
   },
   "countries": {
     "title": "All countries",
-    "country_title": "All cities in {{country-name}}"
+    "country_title": "All cities in {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -1576,6 +1580,7 @@
     "term-of-service": "Terms and Conditions",
     "privacy-policy": "Privacy Policy",
     "newsletter-subscribe-success": "Thank you for subscribing! ",
+    "sitemap": "Sitemap",
     "languages": {
       "dutch": "Dutch",
       "french": "French",

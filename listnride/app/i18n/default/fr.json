@@ -207,7 +207,11 @@
     }
   },
   "request": {
-    "payment-failed": "Uh-oh. Malheureusement, votre paiement a échoué. Veuillez vérifier les données que vous avez saisies, ainsi que les paramètres de paiement de votre fournisseur de paiement !"
+    "payment-failed": "Uh-oh. Malheureusement, votre paiement a échoué. Veuillez vérifier les données que vous avez saisies, ainsi que les paramètres de paiement de votre fournisseur de paiement !",
+    "waiting_for_capture": "Merci pour votre demande de réservation! Le paiement est en cours de traitement, vous recevrez un email lors de sa confirmation.",
+    "payment-failed-lister": "Uh-oh, le paiement du Rider a échoué. Veuillez patienter pendant que le Rider tente à nouveau de payer.",
+    "waiting_for_capture_lister": "Merci d'avoir accepté la demande de réservation! Le paiement est en cours de traitement, vous recevrez un email lors de sa confirmation.",
+    "payment-failed-after-accept": "Votre demande de réservation est en attente car le paiement a échoué!\n\nVeuillez vérifier vos informations de paiement et réessayer. Dès que le paiement est réussi, votre réservation sera confirmée!"
   },
   "about-us": {
     "community": {
@@ -221,7 +225,7 @@
     "showroom": {
       "subtitle": "Faites notre connaissance à Berlin ou à Munich et découvrez les derniers vélos à la mode et plus !"
     },
-    "content-title": "Nous vous aidons à trouver le vélo de location idéal pour chaque occasion, à tout moment et partout. Sur listnride, des milliers de vélos sont disponibles à la location: vélos de route, VTT, vélos électriques - nous avons tout. Louez un vélo avec nous partout en Europe!"
+    "content-title": "Nous vous aidons à trouver le vélo de location idéal pour chaque occasion, à tout moment et partout"
   },
   "testimonials": {
     "jetske-amsterdam": "Avec listnride, je loue mes vélos, offrant aux familles une solution simple pour découvrir ma ville natale. En plus de rencontrer des gens sympas, je gagne de l'argent de poche!",
@@ -236,7 +240,7 @@
   },
   "countries": {
     "title": "Tous les pays",
-    "country_title": "Toutes les villes en {{country-name}}"
+    "country_title": "Toutes les villes en {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -1573,6 +1577,7 @@
     "term-of-service": "Termes et conditions",
     "privacy-policy": "Politique de confidentialité",
     "newsletter-subscribe-success": "Merci de vous être abonné!",
+    "sitemap": "Plan du site",
     "languages": {
       "dutch": "Néerlandais",
       "french": "Français",

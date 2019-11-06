@@ -202,7 +202,11 @@
     }
   },
   "request": {
-    "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!"
+    "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!",
+    "waiting_for_capture": "Bedankt voor je boekingsaanvraag! De betaling wordt momenteel verwerkt. Je ontvangt een e-mail, zodra deze is bevestigd.",
+    "payment-failed-lister": "Uh-oh, de betaling van de Rider is mislukt. Een ogenblik geduld. De Rider probeert de betaling opnieuw.",
+    "waiting_for_capture_lister": "Bedankt voor het accepteren van de boekingsaanvraag! De betaling wordt nu verwerkt, je ontvangt een e-mail, zodra deze is bevestigd.",
+    "payment-failed-after-accept": "Je boekingsaanvraag is (nog) niet verzonden, omdat de betaling is mislukt! \n\nControleer je betalingsgegevens en probeer het opnieuw. Zodra de betaling is geslaagd, wordt je boeking bevestigd!"
   },
   "about-us": {
     "community": {
@@ -216,7 +220,7 @@
     "showroom": {
       "subtitle": "Leer ons kennen in Berlijn of München en ervaar de nieuwste modieuze fietsen en meer!"
     },
-    "content-title": "Wij helpen je bij het vinden van de perfecte huurfiets voor elke gelegenheid, altijd en overal. Op de listnride zijn duizenden fietsen te huur: racefietsen, mountainbikes, e-bikes - het kan allemaal. Huur een fiets via ons in heel Europa!"
+    "content-title": "Wij helpen je bij het vinden van de perfecte huurfiets voor elke gelegenheid, altijd en overal"
   },
   "testimonials": {
     "jetske-amsterdam": "Op listnride verhuur ik mijn fietsen om gezinnen een simpele oplossing te bieden om mijn woonplaats te leren kennen. Naast het ontmoeten van aardige mensen verdien ik wat extra zakgeld ☺",
@@ -231,7 +235,7 @@
   },
   "countries": {
     "title": "Alle Landen",
-    "country_title": "Alle steden in {{country-name}}"
+    "country_title": "Alle steden in {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -1561,6 +1565,7 @@
     "term-of-service": "Algemene Voorwaarden",
     "privacy-policy": "Privacybeleid",
     "newsletter-subscribe-success": "Bedankt voor het inschrijven!",
+    "sitemap": "Sitemap",
     "languages": {
       "dutch": "Nederlands",
       "french": "Frans",
