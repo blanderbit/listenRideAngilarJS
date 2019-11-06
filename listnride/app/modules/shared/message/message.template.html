@@ -203,3 +203,11 @@
     {{ 'message.retry-payment' | translate }}
   </md-button>
 </div>
+
+<!-- WAITING FOR CAPTURE (FROM BANK) -->
+<div
+  ng-if="message.request.payment_status === message.PAYMENT_STATUSES.WAITING_FOR_CAPTURE && message.status == message.WAITING_FOR_CAPTURE"
+  layout="column" layout-align="center center">
+  <p ng-if="message.request.rideChat" translate="request.waiting_for_capture"></p>
+  <p ng-if="!message.request.rideChat" translate="request.waiting_for_capture-lister"></p>
+</div>
