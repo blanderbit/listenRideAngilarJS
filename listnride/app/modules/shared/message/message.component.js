@@ -40,14 +40,21 @@ angular.module('message',[]).component('message', {
       message.PAYMENT_STATUSES = PAYMENT_STATUSES;
 
       // Dont display messages with following statuses to Rider;
-      var riderNotDisplayableMessages = [message.STATUSES.ACCEPTED, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE, message.STATUSES.PAYMENT_FAILED, message.WAITING_FOR_CAPTURE];
+      var riderNotDisplayableMessages = [
+        message.STATUSES.ACCEPTED,
+        message.STATUSES.RATE_RIDE,
+        message.STATUSES.ONE_SIDE_RATE,
+        message.STATUSES.PAYMENT_FAILED,
+        message.STATUSES.WAITING_FOR_CAPTURE
+      ];
       // Dont display messages with following statuses to Lister;
       var listerNotDisplayableMessages = [
+        message.STATUSES.ACCEPTED,
         message.STATUSES.COMPLETE,
         message.STATUSES.RATE_RIDE,
         message.STATUSES.ONE_SIDE_RATE,
         message.STATUSES.PAYMENT_FAILED,
-        message.WAITING_FOR_CAPTURE
+        message.STATUSES.WAITING_FOR_CAPTURE
       ];
 
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
