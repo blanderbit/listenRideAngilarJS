@@ -35,5 +35,15 @@ angular
     LISTER_CANCELED: 8, // Lister cancelled
     RIDER_CANCELED: 9, // Rider cancelled
     SYSTEM_CANCELED: 10, // Passed due date
-    MANUALLY_CANCELED: 11 // Canceled manually by us because of various reasons
+    MANUALLY_CANCELED: 11, // Canceled manually by us because of various reasons
+    PAYMENT_FAILED: 12, // Rider tried to pay with his payment method and it failed with any reason (bank, no money, wrong 3dsecure code)
+    WAITING_FOR_CAPTURE: 13 // Adyen created a request to rider bank account to charge money
+  })
+  .constant('PAYMENT_STATUSES', {
+    REQUIRED: 1, // Waiting for money freeze, can be stack only with our server error
+    REDIRECTED: 2, // Redirected for 3d secure code, will be automatically moved to failed after 30 minutes waiting
+    AUTHORIZED: 3, // Money is freezed
+    APPROVED: 4, // Transaction captured || Not credit card payment method
+    FAILED: 5, // Error happend, equal to PAYMENT_FAILED in MESSAGE.STATUSES
+    WAITING_FOR_CAPTURE: 6, // Adyen created a request to rider bank account to charge money
   });

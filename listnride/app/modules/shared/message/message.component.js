@@ -25,23 +25,41 @@ angular.module('message',[]).component('message', {
     $mdDialog,
     api,
     ENV,
-    MESSAGE_STATUSES
+    MESSAGE_STATUSES,
+    PAYMENT_STATUSES
   ) {
-      var message = this;
+      const message = this;
+
       var messageDate = moment(message.time);
       var todayDate = moment(new Date());
       var hasInsurance = !!message.request.insurance;
 
+      message.isPaymentFailed = isPaymentFailed;
+
       message.STATUSES = MESSAGE_STATUSES;
+      message.PAYMENT_STATUSES = PAYMENT_STATUSES;
 
       // Dont display messages with following statuses to Rider;
-      var riderNotDisplayableMessages = [message.STATUSES.ACCEPTED, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
+      var riderNotDisplayableMessages = [message.STATUSES.ACCEPTED, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE, message.STATUSES.PAYMENT_FAILED, message.WAITING_FOR_CAPTURE];
       // Dont display messages with following statuses to Lister;
-      var listerNotDisplayableMessages = [message.STATUSES.COMPLETE, message.STATUSES.RATE_RIDE, message.STATUSES.ONE_SIDE_RATE];
+      var listerNotDisplayableMessages = [
+        message.STATUSES.COMPLETE,
+        message.STATUSES.RATE_RIDE,
+        message.STATUSES.ONE_SIDE_RATE,
+        message.STATUSES.PAYMENT_FAILED,
+        message.WAITING_FOR_CAPTURE
+      ];
 
       // var yesterdayDate = moment(new Date()).add(-1, 'days');
 
-      // Request statuses, unused in this controller commented
+      // TODO: move to request helper
+      function isPaymentFailed(paymentStatus) {
+        // PAYMENT_STATUS
+        // 1 - nothing happend
+        // 2 - redirected but failed
+        // 5 - failed, because not enough money on card
+        return _.indexOf([1, 2, 5], paymentStatus) !== -1;
+      }
 
       if (messageDate.format('LL') === todayDate.format('LL')){
         $translate(["shared.today"]).then(
