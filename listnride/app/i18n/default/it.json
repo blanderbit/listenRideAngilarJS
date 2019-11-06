@@ -204,7 +204,11 @@
     }
   },
   "request": {
-    "payment-failed": "Uh Oh. Sfortunatamente, il tuo pagamento non è riuscito. Per favore ricontrolla i dati che hai inserito, così come le impostazioni di pagamento del tuo fornitore di servizi di pagamento!"
+    "payment-failed": "Uh Oh. Sfortunatamente, il tuo pagamento non è riuscito. Per favore ricontrolla i dati che hai inserito, così come le impostazioni di pagamento del tuo fornitore di servizi di pagamento!",
+    "waiting_for_capture": "Grazie per la tua richiesta di prenotazione! Il pagamento è in fase di elaborazione, riceverai un'email quando viene confermata.",
+    "payment-failed-lister": "Uh-oh, il pagamento del ciclista è fallito. Si prega di attendere mentre il ciclista riprova.",
+    "waiting_for_capture_lister": "Grazie per aver accettato la richiesta di prenotazione! Il pagamento è in fase di elaborazione, riceverai un'email quando viene confermata.",
+    "payment-failed-after-accept": "La tua richiesta di prenotazione è in attesa perché il pagamento non è andato a buon fine!\n\nControlla i dettagli di pagamento e riprova. Non appena il pagamento sarà andato a buon fine, la tua prenotazione sarà confermata!"
   },
   "about-us": {
     "community": {
@@ -218,7 +222,7 @@
     "showroom": {
       "subtitle": "Vieni a conoscerci a Berlino o Monaco e prova le ultime biciclette alla moda e molto altro!"
     },
-    "content-title": "Vi aiuteremo a trovare la bicicletta a noleggio perfetta per ogni occasione, in qualsiasi momento e ovunque. Ci sono migliaia di biciclette a noleggio sulla listnride: bici da strada, mountain bike, bici elettriche - tutto è possibile. Noleggia una bicicletta da noi in tutta Europa!"
+    "content-title": "Vi aiuteremo a trovare la bicicletta a noleggio perfetta per ogni occasione, in qualsiasi momento e ovunque"
   },
   "testimonials": {
     "jetske-amsterdam": "Su listnride noleggio le mie biciclette fornendo alle famiglie una soluzione semplice per scoprire la mia città natale. Oltre ad incontrare persone simpatiche, guadagno un po 'di soldi in più ☺",
@@ -233,7 +237,7 @@
   },
   "countries": {
     "title": "Tutti i paesi",
-    "country_title": "Tutte le città in {{country-name}}"
+    "country_title": "Tutte le città in {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -1567,6 +1571,7 @@
     "term-of-service": "Termini e Condizioni ",
     "privacy-policy": "Informativa sulla privacy",
     "newsletter-subscribe-success": "Grazie per esserti iscritto!",
+    "sitemap": "Mappa del sito",
     "languages": {
       "dutch": "Olandese",
       "french": "Francese",
