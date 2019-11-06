@@ -100,7 +100,7 @@ angular
 
                 return requestsService.updateStatus({
                   request,
-                  statusId: MESSAGE_STATUSES.CONFIRMED,
+                  statusId: MESSAGE_STATUSES.ACCEPTED,
                   paymentWarning: true
                 });
               } else {

@@ -165,14 +165,33 @@
   </div>
 </div>
 
+
+<!-- PAYMENT FAILED AFTER LISTER ACCEPTED -->
+<div
+  ng-if="message.request.rideChat && message.isPaymentFailed(message.request.payment_status) && message.status ==
+  message.STATUSES.ACCEPTED"
+  layout="column" layout-align="center center">
+  <p>{{ 'request.payment-failed-after-accept' | translate }}</p>
+</div>
+
 <!-- RETRY FLOW -->
 <div
-  ng-if="message.request.rideChat && message.status == message.STATUSES.REQUESTED && message.paymentFailed"
+  ng-if="message.isPaymentFailed(message.request.payment_status) && message.status == message.STATUSES.PAYMENT_FAILED "
   layout="column" layout-align="center center">
-  <p>{{ 'request.payment-failed' | translate }}</p>
+  <p>{{ message.request.rideChat ? 'request.payment-failed' : 'request.payment-failed-lister' | translate }}</p>
   <md-button
+    ng-if="message.request.rideChat"
     class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
-    ng-disabled="message.retryClicked" ng-click="message.retryPayment()">
+    ng-disabled="message.retryClicked"
+    ng-click="message.retryPayment()">
     {{ 'message.retry-payment' | translate }}
   </md-button>
+</div>
+
+<!-- WAITING FOR CAPTURE (FROM BANK) -->
+<div
+  ng-if="message.request.payment_status === message.PAYMENT_STATUSES.WAITING_FOR_CAPTURE && message.status == message.WAITING_FOR_CAPTURE"
+  layout="column" layout-align="center center">
+  <p ng-if="message.request.rideChat" translate="request.waiting_for_capture"></p>
+  <p ng-if="!message.request.rideChat" translate="request.waiting_for_capture-lister"></p>
 </div>
