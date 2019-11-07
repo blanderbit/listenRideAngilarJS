@@ -205,6 +205,7 @@
   ng-if="message.request.rideChat && message.isPaymentFailed(message.request.payment_status) && message.status ==
   message.STATUSES.PAYMENT_FAILED "
   layout="column" layout-align="center center">
+  <p>{{ 'request.payment-failed' | translate }}</p>
   <md-button
     ng-if="message.request.rideChat"
     class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
