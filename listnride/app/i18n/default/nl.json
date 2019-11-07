@@ -235,7 +235,7 @@
   },
   "countries": {
     "title": "Alle Landen",
-    "country_title": "Alle steden in {{country_name}}"
+    "country_title": "Alle steden en regio's in {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -283,7 +283,7 @@
       "calendar-title": "Testbikes for Cyclingworld",
       "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
     },
-    "velothon-bikerental": {
+    "velocity-bikerental": {
       "description": "Wat: <b0>VeloCity Berlin 2020 </b0>| Waar: <b1>Berlijn </b1>| Wanneer: <b2>13-14 juni 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
@@ -459,7 +459,7 @@
       "city-title": "Huur de perfecte fiets in {{location}} | listnride",
       "city-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op de fiets, die zeker en vast is geboekt op listnride.",
       "category-title": "Huur de perfecte {{category}} fiets in {{location}} | listnride",
-      "category-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op een {{category}}, die zeker en vast is geboekt op listnride."
+      "category-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op een {{category}}, die zeker en vast is geboekt op listnride!"
     },
     "business-community": {
       "meta-title": "De listnride business community",
@@ -485,7 +485,7 @@
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
         "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
       },
-      "velothon-bikerental": {
+      "velocity-bikerental": {
         "meta-title": "Huur een racefiets voor de Berlin Triathlon 2020!",
         "meta-description": "We leveren racefietsverhuur voor de VeloCity Berlin 2020! Huur een racefiets van de listnride community en doe mee!"
       },
@@ -1199,7 +1199,7 @@
       "urban": "Urban",
       "e-bike": "Elektrische fiets",
       "road": "Racefiets - Tourfiets",
-      "transport": "Transport"
+      "transport": "Bakfiets"
     },
     "details": {
       "header": "Welke naam geef je jouw fiets en welk Merk en grootte is het?",

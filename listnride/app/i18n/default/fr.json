@@ -240,7 +240,7 @@
   },
   "countries": {
     "title": "Tous les pays",
-    "country_title": "Toutes les villes en {{country_name}}"
+    "country_title": "Toutes les villes et régions de {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -288,7 +288,7 @@
       "calendar-title": "Testbikes for Cyclingworld",
       "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
     },
-    "velothon-bikerental": {
+    "velocity-bikerental": {
       "description": "Quoi: <b0>VeloCity Berlin 2020 </b0>| Où: <b1>Berlin </b1>| Quand: <b2>13-14 juin 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
@@ -490,7 +490,7 @@
         "meta-title": "In Velo Veritas - Louer un vélo avec listnride",
         "meta-description": "Louez un vélo vintage en acier pour In Velo Veritas. listnride propose une sélection de vélos classiques à louer pour ce beau circuit dans la région viticole autrichienne."
       },
-      "velothon-bikerental": {
+      "velocity-bikerental": {
         "meta-title": "Louez un vélo de route pour le VeloCity Berlin 2020!",
         "meta-description": "Nous assurons la location de vélos de route pour le VeloCity Berlin 2020! Louez un vélo de route dans la communauté listnride et profitez-en!"
       },
