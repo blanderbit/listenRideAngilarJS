@@ -1510,7 +1510,11 @@ footer .lnr-link {
   background-size: cover;
   background-position: 50% 50%;
 }
-
+.lnr-velocity-bikerental #hero-shot {
+  height: 44vh;
+  background-size: cover;
+  background-position: 50% 100%;
+}
 /*-----------------------------------------------------------------------------------*/
 /* BRAND INTEGRATION
 /*-----------------------------------------------------------------------------------*/

@@ -1828,11 +1828,11 @@
 
       $stateProvider.state({
         name: 'velothonBikerental',
-        url: '/velothon-bikerental',
+        url: '/events/velothon-bikerental',
         controller: ['$scope', '$state',
           function ($scope, $state) {
             $state.go('event', {
-              'event_name': 'velothon-bikerental'
+              'event_name': 'velocity-bikerental'
             })
           }
         ]
