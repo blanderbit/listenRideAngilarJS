@@ -1,11 +1,11 @@
 <div ng-show="countryLanding.loading" flex layout="column" layout-align="center center">
     <md-progress-circular md-mode="indeterminate"></md-progress-circular>
 </div>
-<md-content class="country-landing single-column" ng-hide="countryLanding.loading">
+<md-content flex-xs="100" class="country-landing single-column" ng-hide="countryLanding.loading">
         <section layout="row" layout-align="start start" flex>
         <div layout-gt-xs="column" layout-align="end none" layout-padding>
             <!-- all countries page -->
-            <div ng-if="!countryLanding.countryName">
+            <div class="country-landing-l-height" ng-if="!countryLanding.countryName">
                 <breadcrumbs
                     data="countryLanding.breadcrumbs"
                     class="lnr-city-landing-breadcrumbs"
@@ -28,8 +28,9 @@
             <div
                  layout="column"
                  layout-align="start start"
+                 class="country-landing-l-height"
                  ng-if="countryLanding.currentCountry"
-                 flex-xs="50">
+                 flex-xs="100">
                 <div class="md-body-1" >
                     <breadcrumbs
                             data="countryLanding.breadcrumbsCountry"

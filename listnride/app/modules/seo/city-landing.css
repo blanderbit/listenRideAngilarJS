@@ -707,13 +707,13 @@
   align-items: start ;
   flex: none;
 }
+
 .country-landing .md-subheader{
   font-size: 16px !important;
 }
-.country-landing footer {
-  display: block;
-  width: 100%;
-  height: auto;
-  bottom: 0px;
-  position: fixed;
+
+@media (min-width: 1600px) {
+    .country-landing-l-height {
+        height: 80vh;
+    }
 }
