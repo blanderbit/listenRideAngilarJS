@@ -14,7 +14,7 @@ angular.module('event', []).component('event', {
 
       event.$onInit = function() {
         event.object = {
-          'berlin-triathlon': getRequestUrl('30', 'Berlin', '', '2019-06-02'),
+          'berlin-triathlon': getRequestUrl('30', 'Berlin', '', '2019-06-02', '932,379,15970,17446,7626,195,11021,11020,1038,17585,19,1265'),
           'cyclassics-hamburg': getRequestUrl('30', 'Hamburg', 'cyclassics-hamburg', '2018-08-19'),
           'triathlon-hamburg': getRequestUrl('30', 'Hamburg', '', '2018-07-14'),
           'toros-de-gravel': getRequestUrl('42,43', 'Mallorca', '', '2018-10-13'),
