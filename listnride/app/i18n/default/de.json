@@ -240,7 +240,7 @@
   },
   "countries": {
     "title": "Alle Länder",
-    "country_title": "Alle Städte in {{country_name}}"
+    "country_title": "Alle Städte und Regionen in {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -288,7 +288,7 @@
       "calendar-title": "Testbikes for Cyclingworld",
       "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
     },
-    "velothon-bikerental": {
+    "velocity-bikerental": {
       "description": "Was: <b0>VeloCity Berlin 2020 </b0>| Wo: <b1>Berlin </b1>| Wann: <b2>13.-14. Juni 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
@@ -464,7 +464,7 @@
       "city-title": "Miete das perfekte Fahrrad in {{location}} | listnride",
       "city-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem Fahrrad, das du über listnride sicher gemietet hast.",
       "category-title": "Miete das perfekte {{category}}-Rad in {{location}} | listnride",
-      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast."
+      "category-description": "Wähle ab {{ minPrice }}€ das Fahrrad aus, das deinen Anforderungen entspricht. Genieße {{location}} mit einem {{category}}, das du über listnride sicher gemietet hast!"
     },
     "business-community": {
       "meta-title": "Die listnride Business Community",
@@ -490,7 +490,7 @@
         "meta-title": "Klassikerausfahrt: In Velo Veritas mit listnride",
         "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs."
       },
-      "velothon-bikerental": {
+      "velocity-bikerental": {
         "meta-title": "Miete dir ein Rennrad für den VeloCity 2020 in Berlin!",
         "meta-description": "Wir bieten hochwertige Miet-Rennräder für den VeloCity Berlin 2020! Schnapp dir einfach ein passendes Rennrad von der listnride Community und los geht's!"
       },
