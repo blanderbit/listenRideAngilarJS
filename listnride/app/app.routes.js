@@ -20,6 +20,7 @@
   angular.
   module('listnride').
   config(['$stateProvider', '$urlRouterProvider', '$urlServiceProvider',
+
     function ($stateProvider, $urlRouterProvider, $urlServiceProvider) {
 
       // Custom type
@@ -1724,6 +1725,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'countryPage',
+        url: '/countries/{country:underscoreEncodedSpaces}',
+        template: '<country-landing></country-landing>',
+        onEnter: redirectHook,
+        meta: {
+          disableUpdate: false,
+          'og:image': 'https://www.listnride.com/app/assets/ui_images/opengraph/landing.jpg',
+          'noindex': false
+        }
+      });
+
+      $stateProvider.state({
+        name: 'countries',
+        url: '/countries',
+        template: '<country-landing></country-landing>',
+        reloadOnSearch: false,
+      });
+
       /* ------------------------------------ */
       /* 404_PAGE */
       /* ------------------------------------ */
@@ -1808,11 +1828,11 @@
 
       $stateProvider.state({
         name: 'velothonBikerental',
-        url: '/velothon-bikerental',
+        url: '/events/velothon-bikerental',
         controller: ['$scope', '$state',
           function ($scope, $state) {
             $state.go('event', {
-              'event_name': 'velothon-bikerental'
+              'event_name': 'velocity-bikerental'
             })
           }
         ]

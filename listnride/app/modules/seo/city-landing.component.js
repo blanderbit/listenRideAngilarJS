@@ -34,15 +34,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
       cityLanding.group = {};
       cityLanding.headerTranslation = 'seo.header';
       cityLanding.defaultProfilePicture = applicationHelper.defaultProfilePicture;
-      cityLanding.breadcrumbs = [
-      {
-        title:'Home',
-        route: 'home'
-      },
-      {
-        title:`${cityLanding.city}`,
-        route: `cityLanding({ city: '${$stateParams.city}'})`
-      }];
+
       cityLanding.colorScheme = mapConfigs.colorScheme();
       cityLanding.mapOptions = mapConfigs.mapOptions;
       cityLanding.mobileScreen = $mdMedia('xs');
@@ -87,6 +79,19 @@ angular.module('cityLanding',[]).component('cityLanding', {
               item.dataName = item.url.replace(/-/i, '_')
             });
           });
+           cityLanding.breadcrumbs = [
+              {
+                title:'Home',
+                route: 'home'
+              },
+              {
+                title:  cityLanding.data.country,
+                route: `countryPage({ country: '${cityLanding.data.country_en}'})`
+              },
+              {
+                title: `${cityLanding.city}`,
+                route: `cityLanding({ city: '${$stateParams.city}'})`
+              }];
 
           // TODO: emporary monkeypatch for backend not returning nil values
           if (cityLanding.data.explore.title.startsWith("Main explore title")) {

@@ -277,9 +277,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
           eventContextMenu: {
             processItems({date, resourceRecord, items}) {
               if (resourceRecord.isCluster) return false;
-              items = {
-                addEvent: false,
-                deleteEvent: {
+              items.deleteEvent = {
                   text: translations['booking-calendar.remove-non-availability'],
                   icon: "b-icon b-icon-trash",
                   onItem({
@@ -315,7 +313,7 @@ angular.module('bookingCalendar', []).component('bookingCalendar', {
                   }
                 }
               }
-            }
+
           },
           timeRanges: {
             showCurrentTimeLine: true,

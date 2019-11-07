@@ -536,17 +536,12 @@
   }
 
   .lnr-city-landing__descr {
-     font-size: 16px;
+    font-size: 16px;
     text-align: center;
   }
 
   .lnr-city-landing__title.lnr-center {
     text-align: center;
-  }
-
-  .lnr-city-landing__title.lnr-center,
-  .lnr-city-landing__descr {
-    width: 100%;
   }
 
   .lnr-bikes-slider-title .md-title,
@@ -646,8 +641,22 @@
     max-height: initial;
   }
 
+  .lnr-city-landing-content {
+    padding: 0;
+    margin: 0 auto;
+  }
+
   .lnr-city-landing .lnr-icn-big-rounded {
     margin: 0 auto 25px;
+  }
+
+  .lnr-city-landing-content {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .lnr-city-landing .md-xlrg {
+    min-width: 264px !important;
   }
 }
 
@@ -666,6 +675,9 @@
     font-size: 16px;
     line-height: 1;
   }
+  .lnr-city-landing-content {
+    width: 96%;
+  }
 
   .lnr-city-landing-promo .lnr-city-landing__title {
     font-size: 54px;
@@ -675,4 +687,33 @@
   .lnr-search-bar_city-landing {
     margin: 24px 0;
   }
+}
+
+.wrap-country-list a {
+  color: rgba(0, 0, 0, 0.8);
+}
+.wrap-country-list a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.wrap-country-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 100vh;
+}
+.wrap-country-list md-list-item.md-no-proxy {
+  align-items: start ;
+  flex: none;
+}
+
+.country-landing .md-subheader{
+  font-size: 16px !important;
+}
+
+@media (min-width: 1600px) {
+    .country-landing-l-height {
+        height: 80vh;
+    }
 }

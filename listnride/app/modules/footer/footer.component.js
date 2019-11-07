@@ -20,6 +20,7 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
       footer.language = getLanguage($translate.preferredLanguage());
       footer.emailPattern = applicationHelper.emailPattern;
 
+      // methods
       footer.onNewsletterSubmit = onNewsletterSubmit;
 
       $scope.$watch(
@@ -99,13 +100,15 @@ angular.module('footer',['pascalprecht.translate']).component('footer', {
         if (!footer.email) return;
         api.post(`/subscribe?email=${footer.email}`, {})
           .then((success) => {
-            notification.show(success, null, 'footer.newsletter-subscribe-success');
+            notification.show(success, null, success.data.message);
             footer.email = '';
-            // TODO: read how to make clear form
-            // $scope.footerSubscribe.$setPristine();
-            // $scope.footerSubscribe.$setUntouched();
+
+            $scope.footerSubscribe.$setPristine();
+            $scope.footerSubscribe.$setUntouched();
+            $scope.footerSubscribe.$submitted = false;
+
           }, (error) => {
-            notification.show(error, 'error');
+            notification.show(error, null, error.data.message);
           })
       }
     }

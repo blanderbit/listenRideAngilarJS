@@ -9,7 +9,7 @@
     "show-all-bikes": "Toon alle fietsen",
     "available": "beschikbaar",
     "brands": "Merken",
-    "your-email": "Jouw emailadres",
+    "your-email": "Vul je e-mailadres in",
     "label_new": "Nieuw",
     "booking-calendar": "Boekingskalender",
     "month": "Maand",
@@ -202,15 +202,25 @@
     }
   },
   "request": {
-    "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!"
+    "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!",
+    "waiting_for_capture": "Bedankt voor je boekingsaanvraag! De betaling wordt momenteel verwerkt. Je ontvangt een e-mail, zodra deze is bevestigd.",
+    "payment-failed-lister": "Uh-oh, de betaling van de Rider is mislukt. Een ogenblik geduld. De Rider probeert de betaling opnieuw.",
+    "waiting_for_capture_lister": "Bedankt voor het accepteren van de boekingsaanvraag! De betaling wordt nu verwerkt, je ontvangt een e-mail, zodra deze is bevestigd.",
+    "payment-failed-after-accept": "Je boekingsaanvraag is (nog) niet verzonden, omdat de betaling is mislukt! \n\nControleer je betalingsgegevens en probeer het opnieuw. Zodra de betaling is geslaagd, wordt je boeking bevestigd!"
   },
   "about-us": {
     "community": {
-      "content-paragraph": "We hadden ons echter afgevraagd: waarom kunnen we niet altijd de juiste fiets huren waar en wanneer we die nodig hebben? Moet het altijd één van die gebruikte en verwaarloosde huurfietsen zijn van bike-sharing stations? Het idee van listnride was geboren."
+      "content-paragraph": "We hadden ons echter afgevraagd: waarom kunnen we niet altijd de juiste fiets huren waar en wanneer we die nodig hebben? Moet het altijd één van die gebruikte en verwaarloosde huurfietsen zijn van bike-sharing stations? Het idee van listnride was geboren.",
+      "content-munich-showroom": "Centraal gelegen in Maxvorstadt, presenteren wij in ons <a href=\"users/6511\" target=\"_blank\">München Experience Center</a> fietsen van merken als 8bar, Bonvelo, Rossignol, Urwahn en Yuba. We bieden ook de nieuwste Felt racefietsen en urban e-bikes van BZEN, Cowboy, Leaos en Vello aan. Klik <a href=\"brands\">hier</a> om meer te weten te komen over onze testfietsen en merken in München.",
+      "content-berlin-showroom": "In het hart van Berlin-Mitte, tegenover de Hackescher Markt, bieden wij in ons <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center</a>testritten aan voor fietsen van merken als Argon18, Bonvelo, Brompton, BZEN en Cowboy. Wij organiseren regelmatig evenementen, zoals <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">social rides</a> elke vrijdagochtend. Klik <a href=\"brands\" target=\"_blank\">hier</a> om meer te weten te komen over onze beschikbare testfietsen en merken in Berlijn."
     },
     "future": {
       "content-paragraph": "Wij zijn trots op onze partners die hun fietsen bij ons aanbieden - of het nu gaat om professionele retailers, eigenaren van een fietsenpark of particulieren. Tenslotte kan je op bepaalde locaties in Europa kennismaken met innovatieve merken die samen met ons exclusieve testritten aanbieden."
-    }
+    },
+    "showroom": {
+      "subtitle": "Leer ons kennen in Berlijn of München en ervaar de nieuwste modieuze fietsen en meer!"
+    },
+    "content-title": "Wij helpen je bij het vinden van de perfecte huurfiets voor elke gelegenheid, altijd en overal"
   },
   "testimonials": {
     "jetske-amsterdam": "Op listnride verhuur ik mijn fietsen om gezinnen een simpele oplossing te bieden om mijn woonplaats te leren kennen. Naast het ontmoeten van aardige mensen verdien ik wat extra zakgeld ☺",
@@ -222,6 +232,10 @@
     "rider-4": "Ik werk regelmatig in Berlijn. Sinds ik listnride heb ontdekt, huur ik vaak een mooie fiets. De keuze is goed en het is eenvoudig en veilig.",
     "lister-1": "Onlangs ontdekte listnride, plaatste 3 racefietsen online en verhuur ze nu regelmatig. Het mooie is dat ik leuke mensen ontmoet, met wie ik ook soms een ritje maak.",
     "lister-2": "Ik ben een grote lijstnride fan. Als ik naar wielerkoersen ga, huur ik de optimale fiets. Thuis verhuur ik mijn fietsen aan mijn Airbnb gasten. Super gemakkelijk en gemakkelijk verdiend."
+  },
+  "countries": {
+    "title": "Alle Landen",
+    "country_title": "Alle steden en regio's in {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -268,6 +282,9 @@
     "cwd": {
       "calendar-title": "Testbikes for Cyclingworld",
       "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    },
+    "velocity-bikerental": {
+      "description": "Wat: <b0>VeloCity Berlin 2020 </b0>| Waar: <b1>Berlijn </b1>| Wanneer: <b2>13-14 juni 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
@@ -442,7 +459,7 @@
       "city-title": "Huur de perfecte fiets in {{location}} | listnride",
       "city-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op de fiets, die zeker en vast is geboekt op listnride.",
       "category-title": "Huur de perfecte {{category}} fiets in {{location}} | listnride",
-      "category-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op een {{category}}, die zeker en vast is geboekt op listnride."
+      "category-description": "Kies de fiets die aan uw wensen voldoet online, vanaf {{ minPrice }}€. Geniet van {{location}} op een {{category}}, die zeker en vast is geboekt op listnride!"
     },
     "business-community": {
       "meta-title": "De listnride business community",
@@ -468,9 +485,9 @@
         "meta-title": "In Velo Veritas - Rent a bike with listnride",
         "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
       },
-      "velothon-bikerental": {
-        "meta-title": "Simply rent the perfect road bike for the Velothon Berlin",
-        "meta-description": "Take part in the Velothon Berlin 2018! Rent a road bike from the listnride bike sharing community and join in on the fun!"
+      "velocity-bikerental": {
+        "meta-title": "Huur een racefiets voor de Berlin Triathlon 2020!",
+        "meta-description": "We leveren racefietsverhuur voor de VeloCity Berlin 2020! Huur een racefiets van de listnride community en doe mee!"
       },
       "constance-spin": {
         "meta-title": "Rent the perfect road bike during Eurobike",
@@ -1182,7 +1199,7 @@
       "urban": "Urban",
       "e-bike": "Elektrische fiets",
       "road": "Racefiets - Tourfiets",
-      "transport": "Transport"
+      "transport": "Bakfiets"
     },
     "details": {
       "header": "Welke naam geef je jouw fiets en welk Merk en grootte is het?",
@@ -1544,10 +1561,11 @@
     "top-countries": "Meest Populaire Landen",
     "subscribe-title": "Meld je aan voor onze nieuwsbrief",
     "recapcha-text": "Beveiligd door reCAPTCHA",
-    "keep-in-touch": "Volg ons!",
+    "keep-in-touch": "Neem contact op met ons!",
     "term-of-service": "Algemene Voorwaarden",
     "privacy-policy": "Privacybeleid",
-    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
+    "newsletter-subscribe-success": "Bedankt voor het inschrijven!",
+    "sitemap": "Sitemap",
     "languages": {
       "dutch": "Nederlands",
       "french": "Frans",

@@ -89,8 +89,8 @@
       "sub-header": "Erlebe eine Premium-Auswahl an Fahrradmarken in Berlin und München.",
       "berlin-description": "Im Herzen von Berlin Mitte, gegenüber dem Hackeschen Markt, bietet unser<a href=\"users/7351\" target=\"_blank\">Belin Experience Center</a> Testfahrten mit Rädern von Marken wie Argon18, Bonvelo, Brompton, BZEN und Cowboy. Wir organisieren regelmäßig <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">Veranstaltungen</a> wie den freitäglichen Coffee Spin. Klicke <a href=\"brands\" target=\"_blank\">hier</a> um mehr über verfügbare Testräder und Marken in Berlin zu erfahren.",
       "munich-description": "Zentral in der Münchner Maxvorstadt gelegen, bietet unser<a href=\"users/6511\" target=\"_blank\">Münchner Experience Center</a> Fahrräder von Marken wie 8bar, Bonvelo, Rossignol, Urwahn und Yuba. Wir haben außerdem die neuesten Felt Rennräder im Angebot und urbane E-Bikes von BZEN, Cowboy und Vello. Klick <a href=\"brands\" target=\"_blank\">hier</a> um mehr über unsere Testräder und Marken in München zu erfahren.",
-      "berlin-address": "<b>Unsere Adresse </b>\n<br>\nOranienburger Straße 1-3\n<br>\n10178 Berlin\n<br>\nDeutschland",
-      "munich-address": "<b>Unsere Adresse </b>\n<br>\nNymphenburger Str. 86\n<br>\n80335 München\n<br>\nDeutschland"
+      "berlin-address": "Oranienburger Straße 1-3, 10178 Berlin, Deutschland",
+      "munich-address": "Nymphenburger Str. 86, 80335 München, Deutschland"
     },
     "no-brands-found": "Es gibt leider noch keine Marken in dieser Kategorie.",
     "join-program-link": "<a href=\"mailto:contact@listnride.com?subject=Informationen zum Testprogramm\" target=\"_self\">Werde Teil unseres Markenprogramms</a>",
@@ -114,7 +114,7 @@
     "faq": {
       "group-1": {
         "title": "Erste Schritte",
-        "description": "Hier sind alle Infos wie du das perfekte Fahrrad für dich zu findest und wie du Teil unserer Bike-Sharing-Community wirst.",
+        "description": "Hier sind alle Infos wie du dein perfektes Fahrrad findest.",
         "answer-1": "Gib einfach ein wo du ein Fahrrad suchst. Klicke auf ein beliebiges Fahrrad, um weitere Details wie Rahmengröße, empfohlene Mieterhöhe, mitgeliefertes Zubehör und Bewertungen des Fahrrads zu sehen.\n",
         "answer-2": "Um Suchergebnisse einzugrenzen, kannst du Filter verwenden. Du kannst nach Zeitspanne, Anzahl der Fahrräder, Fahrradtyp und Marke filtern.",
         "answer-3": "Auf der Detailseite gibt es einen Kalender: Schwarze Zahlen zeigen buchbare Tage, graue Tage repräsentieren nicht verfügbare Tage, beispielsweise Sonntage. An roten Tagen ist das Rad bereits gebucht.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
@@ -373,7 +373,7 @@
   },
   "events": {
     "rapha-super-cross": {
-      "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über listnride ein Rad mieten. Die listnride bike sharing community bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
+      "text": "Der Rapha Super Cross ist wieder zurück in München, zum dritten Mal. Wenn du gerne dabei sein möchtest aber kein geeignetes Rad hast, kannst du über List and Ride ein Rad mieten. Die List and RideCommunity bietet verschiedene Crossräder zum Verleih an. Die Räder können vor der Veranstaltung bei den einzelnen Anbietern angefragt und gebucht werden. Die Übergabe wird direkt mit dem Vermieter vereinbart. Zusätzlich verfügbare Räder können auch noch zur Vermietung angeboten werden, um damit etwas zu verdienen und interessante Leute zu treffen, welche an der Veranstaltung teilnehmen. Werde Teil der wachsenden Community!"
     },
     "msr": {
       "title": "Miete ein Rennrad für die Mecklenburger Seenrunde 2020",
@@ -466,7 +466,7 @@
     "vatternrundan": {
       "title": "Miete ein Rennrad für die Vätternrundan",
       "description": "Was: <b> Vätternrundan </b>| Wo: <b> Motala, Schweden </b>| Wann: <b> 5.– 12. Juni 2020 </b>",
-      "text": "Logistik, Planung, Logistik. Wenn du nicht bereits auf der skandinavischen Halbinsel wohnst, ist der Transport deines Fahrrads nach Motala eine große logistische Herausforderung. Warum also nicht einfach ein Fahrrad mieten? \n<br> Um diese großartige Veranstaltung für mehr Menschen denn je zugänglich zu machen, vermieten wir hochwertige Rennräder von FARA, Simplon und anderen Marken. \n<br>Spar dir Zeit, Mühe und Geld, indem du dir einfach ein Fahrrad ausleihst. Es kann sofort in Motala beginnen. Alles, was du mitbringen müsstest, ist ein Beleuchtungsset, Helm, Pedale und natürlich: dich selbst und deine Leidenschaft!"
+      "text": "Logistik, Planung, Logistik. Wenn du nicht bereits auf der skandinavischen Halbinsel wohnst, ist der Transport deines Fahrrads nach Motala eine große logistische Herausforderung. Warum also nicht einfach ein Fahrrad mieten? \n<br> \n\nSpar dir Zeit, Mühe und Geld, indem du dir einfach ein Fahrrad ausleihst. Es kann sofort in Motala beginnen. Alles, was du mitbringen müsstest, ist ein Beleuchtungsset, Helm, Pedale und natürlich: dich selbst und deine Leidenschaft! <br>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Motala\">Gruppenbuchungen hier verfügbar!</a>"
     },
     "toros-de-gravel": {
       "title": "Miet ein Gravelbike für Toros de Gravel",
@@ -485,11 +485,11 @@
       "title": "Miete ein Klassik Rennrad für In Velo Veritas",
       "text": "Die legendäre <a target=\"_blank\" href=\"//inveloveritas.at\">In Velo Veritas </a> findet nun zum 7. Mal statt. Am 16. Juni 2019  versammeln sich Fahrradliebhaber in Poysdorf (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und du kannst sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad-Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
     },
-    "velothon-bikerental": {
-      "meta-title": "Miete Dir das perfekte Rennrad für den Velothon Berlin",
-      "meta-description": "Das Rennrad Event des Jahres in Berlin! Nimm teil und miete dir das passende Rennrad!",
-      "title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
-      "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist.\n<br>\nDu kannst leider nicht am Velothon teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und <a href=\"/#/listing-a-bike\">vermiete dein Rad</a>.",
+    "velocity-bikerental": {
+      "meta-title": "Miete ein Rennrad für den VeloCity Berlin 2020!",
+      "meta-description": "Miete ein erstklassiges Rennrad für den VeloCity Berlin 2020! Mach mit  und wähle von über 50 Rennrädern.",
+      "title": "Miete dir das perfekte Rennrad für den VeloCity 2020 in Berlin!",
+      "text": "Miete dir ein Rennrad für den <a href='\"https://velocity.berlin/“'>VeloCity Berlin 2020 </a>! <br>\n\nListnride ist der offizielle Anbieter von Rennrädern für die Veranstaltung! Wähle das Fahrrad aus, das am besten zu das passt, frage es für die benötigte Dauer an und hole es rechtzeitig zum Rennen vor Ort ab. So einfach ist das! <br>\n\nWusstest du, dass du auch dein eigenes Fahrrad vermieten kannst? <a href='\"https://www.listnride.com/listing-a-bike“'>Liste dein Fahrrad auf </a>und lasse es für dich Geld verdienen!",
       "coffeespin": {
         "meta-title": "listnride beim Velothon Berlin",
         "title": "Mach dich bereit für den Velothon!",
@@ -1187,7 +1187,7 @@
   "about-us": {
     "title": "Über uns",
     "header": "Über listnride",
-    "subheader": "Wir helfen dir das perfekte Mietrad für jede Gelegenheit zu finden, immer und überall. Auf listnride stehen tausende Räder zum Verleih: Rennräder, Mountainbikes, E-Bikes - wir haben sie alle. Miete dir mit uns ein passendes Rad in ganz Europa.",
+    "subheader": "Wir helfen dir das perfekte Mietrad für jede Gelegenheit zu finden, immer und überall. Auf listnride stehen tausende Räder zum Verleih: Rennräder, Mountainbikes, E-Bikes - wir haben sie alle. Miete dir mit uns ein passendes Rad in ganz Europa!",
     "community": {
       "title": "Wie alles begann",
       "content": "Hier bei listnride sind wir ein Team von wirklich leidenschaftlichen Radfahrern: Wir lieben alle Gelegenheiten, die sich ergeben, wenn wir neue Orte erkunden, neue Freunde treffen und gleichzeitig zu unserer Gesundheit und Umwelt beitragen."
@@ -1273,7 +1273,7 @@
     },
     "contact-section": {
       "header": "Keine Antwort für Dich dabei?",
-      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Bike-Sharing über listnride auftauchen:",
+      "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Verleihprozess über listnride auftauchen:",
       "title": "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle:",
       "list-1": "Ich möchte eine verdächtige Anfrage melden",
       "list-2": "Ich möchte eine verdächtige Listung melden",
@@ -1289,7 +1289,7 @@
     "comm-and-pr": "Kommunikation und PR",
     "kit": {
       "title": "Pressemappe",
-      "content": "Andere nennen sich Fahrradverleihsystem. Wir sind eine Bike-Sharing-Community. Erfahre mehr in unserer Pressemappe,",
+      "content": "List and Ride das aufstrebendes Start-Up für Online Fahrradverleih. Erfahre mehr in unserer Pressemappe,",
       "download": "die wir Ihnen hier bereitgestellt haben",
       "link": "https://docs.google.com/forms/d/e/1FAIpQLScjTUbiBpo4SIPoG_skeF6mFYfVYblLcEvCbQAur7lrWgdd4Q/viewform?usp=pp_url"
     },
@@ -1298,12 +1298,12 @@
       "content": "Sie haben weitere Fragen zu listnride oder brauchen einen Ansprechpartner für Themen rund um Fahrradverleihsystem, Mieträder und Mobilitätskonzepte? Dann kontaktieren Sie uns direkt:"
     },
     "meta-title": "listnride Pressebereich",
-    "meta-description": "Wir lieben Bike-Sharing. Und beantworten gerne Ihre Fragen."
+    "meta-description": "Wir lieben Fahrräder und wir lieben es zu teilen. gerne beantworten wir all Ihre Fragen."
   },
   "invest": {
-    "meta-title": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
+    "meta-title": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Fahrradverleih Plattform.",
     "meta-description": "Besuche Seedrs und erfahre wie du in listnride investieren kannst.",
-    "description": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Bike Sharing Community.",
+    "description": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Fahrradverleih Plattform.",
     "subdescription": "Erfahre mehr über listnride in unserer <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">Investoren Präsentation</a> und warum es sich lohnt zu investieren.",
     "subsubdescription": "In Kürze startet die listnride Crowdfunding Kampagne auf <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, der führenden Equity Crowdfunding Plattform in Europa. Als Mitgliedern der ersten Stunde, Geschäftspartner oder Freunde, bieten wir euch vorzeitigen Zugriff bevor wir die Kampagne der Öffentlichkeit zugänglich machen. Sag uns wie hoch Deine Investition wäre und merke sie unverbindlich vor.",
     "learn-more": "Crowdfunding FAQ",
@@ -1320,7 +1320,7 @@
     "faq-question-4": "GIBT ES EINEN MINDESTBETRAG, DEN ICH INVESTIEREN MUSS?",
     "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter 10€ (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
     "faq-question-5": "WAS HAT LISTNRIDE BISHER ERREICHT?",
-    "faq-answer-5": "Seit unserem offiziellen Start im September 2016 mit Launch ein funktionsfähigen Web Plattform: Ist listnride zur größten Community Bike-Sharing Plattform in der DACH region, mit über 1.100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden und 5 innovative Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat eine starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
+    "faq-answer-5": "Seit unserem offiziellen Start im September 2016 als wir unsere Web Plattform gelauncht haben: ist listnride zur größten Fahrrad Verleih Plattform in der DACH Region, mit über 1.100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden und 5 innovative Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat eine starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
     "faq-question-6": "WIE KANN ICH MIT MEINEM INVESTMENT GELD VERDIENEN?",
     "faq-answer-6": "Es handelt sich um eine langfristige Investition und du kannst damit Gewinne erzielen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride einen Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
     "faq-question-7": "WIE WIRD DAS EINGESAMMELTE GELD VERWENDET?",
@@ -1335,7 +1335,7 @@
     "subtitle": "Bitte lies die Allgemeinen Geschäftsbedingungen sorgfältig durch, da sie wichtige Informationen zu deinen vertraglichen Rechten und Pflichten enthalten. Durch die Nutzung der listnride-Plattform stimmst du diesen Bedingungen zu.<br><br><a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/de/listnride_terms_2019.pdf\" target=\"_BLANK\">Hier kannst du die Allgemeinen Geschäftsbedingungen</a> zur Einsicht herunter laden.<br><br>Vielen Dank, dass du listnride nutzt!"
   },
   "trust-and-safety": {
-    "meta-description": "Vertrauen ist das A und O einer Sharing-Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete.",
+    "meta-description": "Vertrauen ist das A und O einer Community. Wir unterstützten Fairness und Sicherheit durch Verifizierung und Versicherung bei jeder Miete.",
     "title": "Vertrauen & Sicherheit",
     "description": "listnride ist eine Community aus Veloliebhabern und Fahrradenthusiasten. Leute wie du und ich. Deswegen wollen wir Dir Ärger vom Leib und den Fahrspaß hoch halten.",
     "header": "Sorgenfrei in die Pedale treten",
@@ -1365,13 +1365,13 @@
       "description": "Mietest du ein Fahrrad in Deutschland oder Österreich, ist eine Basis-Versicherung bereits in der Miete inkludiert. Mit \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\n und der \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Gruppe</a>\n haben wir zwei starke Partner an unserer Seite, die Dir im Fall der Fälle helfen.\n<p>\nWähle bei der Buchung Deines Rades einfach das für Dich passende Versicherungspaket und schon kann es losgehen."
     },
     "outro": {
-      "description": "listnride ist Europas größte Bike-Sharing-Plattform. Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern. Jederzeit das perfekte Rad. Einfach online verfügbar."
+      "description": "listnride ist Europas größte Fahrradverleih Plattform. Wir bieten Veloisten einfachen Zugang zu hochwertigen Rädern. Jederzeit das perfekte Rad. Einfach online verfügbar."
     }
   },
   "how-it-works": {
-    "meta-title": "Unkompliziertes Bike-Sharing",
+    "meta-title": "Unkomplizierter Fahrradverleih",
     "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!",
-    "title": "Bike-Sharing völlig unkompliziert",
+    "title": "Fahrradverleih völlig unkompliziert",
     "header": "Mit listnride kommst du ganz leicht in die Gänge",
     "subheader": "Bei uns ist Fahrrad(ver-)leihen so einfach wie eine Verabredung zum Kaffee:",
     "lister-section": {
@@ -1467,7 +1467,7 @@
     "subtitle": "Datum des Inkrafttretens: 24. Mai 2018",
     "description": "List and Ride verpflichtet sich zu starkem und transparentem Datenschutz. Unsere Datenschutzerklärung beschreibt, welche Nutzerinformationen wir über unseren Service erfassen. Wie wir diese Informationen verarbeiten und gegebenenfalls weitergeben. Die Maßnahmen, die wir ergreifen, um diese Informationen zu schützen. Die Möglichkeiten auf Zugriff, Aktualisierung und Entfernung personenbezogener Daten, falls erforderlich.<br>Hier kannst du unsere <a href=\"http://cdn.listnride.com/de/listnride-data-protection-regulations.pdf\" target=\"_blank\">Datenschutzerklärung</a> zur Einsicht herunter laden.<br><br>Wenn du Fragen oder Anmerkungen zu unseren Datenschutzpraktiken oder dieser Datenschutzerklärung hast, kannst du uns unter <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a> erreichen.",
     "meta-title": "Datenschutzerklärung von listnride",
-    "meta-description": "Die Datenschutzerklärung der Bike-Sharing-Community listnride bezieht sich auf die Nutzung der Onlineplattform."
+    "meta-description": "Die Datenschutzerklärung der Community listnride bezieht sich auf die Nutzung der Onlineplattform."
   },
   "seo": {
     "cities-title": "Du planst zu reisen? Schau dir mehr Städte an:"

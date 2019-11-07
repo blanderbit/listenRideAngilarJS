@@ -103,9 +103,11 @@ import './modules/business-community/business-community.component.js';
 import './modules/jobs/jobs.component.js';
 import './modules/seo/city-landing.component.js';
 import './modules/seo/category-landing.component.js';
+import './modules/seo/country-landing.compoment.js';
 import './modules/shared/filter/filter.component.js';
 import './modules/shared/bike-sorter/bike-sorter.component.js';
 import './modules/shared/cardgrid/cardgrid.component.js';
+
 // brand integration
 import './modules/brand-integration/ampler.component.js';
 import './modules/brand-integration/vello.component.js';

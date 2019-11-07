@@ -14,12 +14,12 @@ angular.module('event', []).component('event', {
 
       event.$onInit = function() {
         event.object = {
-          'berlin-triathlon': getRequestUrl('30', 'Berlin', '', '2019-06-02'),
+          'berlin-triathlon': getRequestUrl('30', 'Berlin', '', '2019-06-02', '932,379,15970,17446,7626,195,11021,11020,1038,17585,19,1265'),
           'cyclassics-hamburg': getRequestUrl('30', 'Hamburg', 'cyclassics-hamburg', '2018-08-19'),
           'triathlon-hamburg': getRequestUrl('30', 'Hamburg', '', '2018-07-14'),
           'toros-de-gravel': getRequestUrl('42,43', 'Mallorca', '', '2018-10-13'),
           'riderman-rothaus': getRequestUrl('20', 'Bad Dürrheim', '', ''),
-          'velothon-bikerental': getRequestUrl('30', 'Berlin', 'velothon', '2018-05-13'),
+          'velocity-bikerental': getRequestUrl('30', 'Berlin', 'velothon', '2018-05-13'),
           'vatternrundan': getRequestUrl('30,31', 'Motala,Sweden', '', ''),
           'epicgrancanaria': getRequestUrl('30,31,32,33', 'Gran Canaria, Provinz Las Palmas, Spanien', '', '2019-04-05'),
           'velorace-dresden': getRequestUrl('30', 'Dresden', '', '2019-08-11'),
@@ -77,7 +77,7 @@ angular.module('event', []).component('event', {
 
         // INVOCATIONS
         event.getEvents();
-      }
+      };
 
       function getRequestUrl(categoryIds, location, priority, date, excludeFrom){
         var queryParams = {

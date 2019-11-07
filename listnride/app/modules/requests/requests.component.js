@@ -182,6 +182,7 @@ angular.module('requests', ['infinite-scroll'])
           })
       }
 
+      // TODO: move to request helper
       function isPaymentFailed(paymentStatus) {
         // PAYMENT_STATUS
         // 1 - nothing happend

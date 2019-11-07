@@ -207,15 +207,25 @@
     }
   },
   "request": {
-    "payment-failed": "Uh-oh. Malheureusement, votre paiement a échoué. Veuillez vérifier les données que vous avez saisies, ainsi que les paramètres de paiement de votre fournisseur de paiement !"
+    "payment-failed": "Uh-oh. Malheureusement, votre paiement a échoué. Veuillez vérifier les données que vous avez saisies, ainsi que les paramètres de paiement de votre fournisseur de paiement !",
+    "waiting_for_capture": "Merci pour votre demande de réservation! Le paiement est en cours de traitement, vous recevrez un email lors de sa confirmation.",
+    "payment-failed-lister": "Uh-oh, le paiement du Rider a échoué. Veuillez patienter pendant que le Rider tente à nouveau de payer.",
+    "waiting_for_capture_lister": "Merci d'avoir accepté la demande de réservation! Le paiement est en cours de traitement, vous recevrez un email lors de sa confirmation.",
+    "payment-failed-after-accept": "Votre demande de réservation est en attente car le paiement a échoué!\n\nVeuillez vérifier vos informations de paiement et réessayer. Dès que le paiement est réussi, votre réservation sera confirmée!"
   },
   "about-us": {
     "community": {
-      "content-paragraph": "Cependant, nous nous sommes posé la question suivante: pourquoi ne pouvons-nous pas toujours avoir le bon vélo de location où et quand nous en avons besoin? Doit-on toujours louer des vélos bien usés et maltraités des stations de vélopartage? L'idée de listnride était née."
+      "content-paragraph": "Cependant, nous nous sommes posé la question suivante: pourquoi ne pouvons-nous pas toujours avoir le bon vélo de location où et quand nous en avons besoin? Doit-on toujours louer des vélos bien usés et maltraités des stations de vélopartage? L'idée de listnride était née.",
+      "content-munich-showroom": "Situé centralement, à Maxvorstadt, notre <a href=\"users/6511\" target=\"_blank\">Munich Experience Center </a> propose des vélos de marques telles que 8bar, Bonvelo, Rossignol, Urwahn et Yuba. Nous proposons également les derniers vélos de route Felt et les vélos électriques urbains de BZEN, Cowboy, Leaos et Vello. Cliquez <a href=\"brands\">ici </a> pour en savoir plus sur nos vélos de démo et marques à Munich.",
+      "content-berlin-showroom": "Au cœur de Berlin-Mitte, en face du Hackescher Markt, notre <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center </a>propose des vélos de démo de marques telles que Argon18, Brompton, BZEN et Cowboy. Nous organisons régulièrement des événements, tels que <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">des sorties sociales </a> tous les vendredis matin. Cliquez <a href=\"brands\" target=\"_blank\">ici </a> pour en savoir plus sur nos vélos et marques de démo disponibles à Berlin."
     },
     "future": {
       "content-paragraph": "Nous sommes fiers de nos partenaires qui ont répertorié leurs vélos, qu’il s’agisse de détaillants professionnels, de propriétaires de parcs de vélos ou de particuliers. Enfin, vous pouvez découvrir sur des sites sélectionnés à travers l’Europe des marques novatrices qui se sont associées à nous pour offrir des services de test rides exclusifs."
-    }
+    },
+    "showroom": {
+      "subtitle": "Faites notre connaissance à Berlin ou à Munich et découvrez les derniers vélos à la mode et plus !"
+    },
+    "content-title": "Nous vous aidons à trouver le vélo de location idéal pour chaque occasion, à tout moment et partout"
   },
   "testimonials": {
     "jetske-amsterdam": "Avec listnride, je loue mes vélos, offrant aux familles une solution simple pour découvrir ma ville natale. En plus de rencontrer des gens sympas, je gagne de l'argent de poche!",
@@ -227,6 +237,10 @@
     "rider-4": "Je travaille régulièrement à Berlin. Depuis que j'ai découvert le listnride, je loue souvent un beau vélo. La sélection de vélos est excellente et facile et sûre.",
     "lister-1": "J'ai découvert listnride récemment, et j'ai enregistré mes3 vélos de route, et les loue maintenant régulièrement. Ce qu'est bien c'est de rencontrer des gens sympas, avec qui je vais aussi parfois faire un tour.",
     "lister-2": "Je suis un grand fan de listnride. Quand je fais des courses, je loue toujours un excellent vélo. À la maison, je propose mes vélos à mes invités Airbnb. Super facile et bon argent."
+  },
+  "countries": {
+    "title": "Tous les pays",
+    "country_title": "Toutes les villes et régions de {{country_name}}"
   },
   "cyclingworld": {
     "event": {
@@ -273,6 +287,9 @@
     "cwd": {
       "calendar-title": "Testbikes for Cyclingworld",
       "calendar-subtitle": "For the Gravel ride on Sunday and during the whole weekend of the cyclingworld you can book a 2 hour test ride."
+    },
+    "velocity-bikerental": {
+      "description": "Quoi: <b0>VeloCity Berlin 2020 </b0>| Où: <b1>Berlin </b1>| Quand: <b2>13-14 juin 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Louez et testez d'excellents vélos à Eschborn",
@@ -473,9 +490,9 @@
         "meta-title": "In Velo Veritas - Louer un vélo avec listnride",
         "meta-description": "Louez un vélo vintage en acier pour In Velo Veritas. listnride propose une sélection de vélos classiques à louer pour ce beau circuit dans la région viticole autrichienne."
       },
-      "velothon-bikerental": {
-        "meta-title": "Louer un vélo de route pour le Velothon Berlin",
-        "meta-description": "Participez au Velothon Berlin 2018! Louez un vélo de route depuis la communauté listnride et amusez-vous!"
+      "velocity-bikerental": {
+        "meta-title": "Louez un vélo de route pour le VeloCity Berlin 2020!",
+        "meta-description": "Nous assurons la location de vélos de route pour le VeloCity Berlin 2020! Louez un vélo de route dans la communauté listnride et profitez-en!"
       },
       "constance-spin": {
         "meta-title": "Louez un vélo de route pendant l'Eurobike",
@@ -1556,10 +1573,11 @@
     "top-countries": "Principaux pays",
     "subscribe-title": "Abonnez-vous à notre newsletter",
     "recapcha-text": "Protégé par reCAPTCHA",
-    "keep-in-touch": "Suivez nous!",
+    "keep-in-touch": "Restez en contact avec nous!",
     "term-of-service": "Termes et conditions",
     "privacy-policy": "Politique de confidentialité",
-    "newsletter-subscribe-success": "Thank you for your subscribe ! ",
+    "newsletter-subscribe-success": "Merci de vous être abonné!",
+    "sitemap": "Plan du site",
     "languages": {
       "dutch": "Néerlandais",
       "french": "Français",
