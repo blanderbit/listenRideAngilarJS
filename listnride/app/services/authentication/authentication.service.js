@@ -79,14 +79,6 @@ angular.
         return language;
       };
 
-      let getInviteCode = function() {
-        let url = '' + window.location;
-        let inviteCode = url.substring(url.lastIndexOf('/')+1);
-
-        return inviteCode;
-      };
-
-
       // methods for signup controller
       // defined outside so that can be used out of sign up controller
       // used in request booking flow
@@ -309,7 +301,7 @@ angular.
               'password': signupDialog.password,
               'first_name': signupDialog.firstName,
               'last_name': signupDialog.lastName,
-              'ref_code':  getInviteCode(),
+              'ref_code': $state.params.inviteCode,
               'language': retrieveLocale()
             },
             'notification_preference' : {
@@ -553,7 +545,6 @@ angular.
         loginGlobal,
         forgetGlobal,
         isBusiness,
-        getInviteCode,
         retrieveLocale
       };
     }

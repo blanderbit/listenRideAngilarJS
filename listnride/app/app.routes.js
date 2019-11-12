@@ -709,7 +709,7 @@
       // invitation/{invideCode}
       $stateProvider.state({
         name: 'inviteLanding',
-        url: '/invitation/{inviteCode: string}',
+        url: '/invitation?inviteCode',
         template: '<invite-landing></invite-landing>',
         resolve: {
           data: ['ngMeta', function (ngMeta) {
@@ -718,6 +718,12 @@
         },
         meta: {
           disableUpdate: true
+        },
+        params: {
+          inviteCode: {
+            value: "",
+            squash: true
+          },
         }
       });
 
