@@ -16,7 +16,7 @@ angular.module('invite').component('referralLink', {
     function ReferralLinkController($localStorage, $translate, Socialshare, authentication) {
       var referral = this;
       referral.authentication = authentication;
-      referral.inviteUrl = "www.listnride.com/invitation/" + $localStorage.referenceCode;
+      referral.inviteUrl = "www.listnride.com/invitation?inviteCode=" + $localStorage.referenceCode;
 
       $translate('invite.invite-form.copy').then(
         function (translation) {
