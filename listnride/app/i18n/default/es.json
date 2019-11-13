@@ -242,6 +242,9 @@
     "title": "Todos los países",
     "country_title": "Todas las ciudades y regiones en en {{country_name}}"
   },
+  "prepositions": {
+    "in": " en "
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Cyclingworld event bike",
@@ -463,8 +466,8 @@
     "seo": {
       "city-title": "Alquila la bicicleta perfecta en {{location}} | listnride",
       "city-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una bicicleta alquilada de forma segura en listnride.",
-      "category-title": "Alquila una {{category}} bici en {{location}} | listnride",
-      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}}  con una {{category}} alquilada de forma segura en listnride."
+      "category-title": "Alquila una {{category}} en {{location}} | listnride",
+      "category-description": "Alquila la bicicleta que se ajuste a tus necesidades en línea, a partir de {{ minPrice }}€. Disfruta {{location}} con una {{category}} alquilada de forma segura en listnride."
     },
     "business-community": {
       "meta-title": "La comunidad empresarial de listnride",
@@ -503,12 +506,12 @@
         "meta-description": "Una de las rutas favoritas de los ciclistas de la zona a través de Holledau. listnride visita Velosoph, el Cycling Café de Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Alquila una bicicleta de carretera en listnride para la Clásica de Hamburgo ",
-        "meta-description": "Alquila con facilidad la bicicleta de carretera perfecta para la Clásica de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi."
+        "meta-title": "¡Alquile una bicicleta de carretera para el EuroEyes Cyclassics en Hamburgo! | listnride",
+        "meta-description": "¡Alquile la bicicleta de carretera perfecta para el EuroEyes Cyclassics en Hamburgo y elija entre marcas como Specialized, Ridley, Cervelo y Bianchi!"
       },
       "triathlon-hamburg": {
-        "meta-title": "Alquila una bicicleta de carretera en listnride para el Triatlón de Hamburgo ",
-        "meta-description": "Alquila con facilidad la bici de carretera perfecta para el Triatlón de Hamburgo online y elige entre marcas como Specialized, Ridley, Cervelo y Bianchi."
+        "meta-title": "Alquile una bicicleta de carreras para el Hamburg Wasser World Triathlon | listnride",
+        "meta-description": "¡Alquile la bicicleta de carretera perfecta para el Hamburg Wasser World Triathlon y elija entre marcas como Specialized, Ridley, Cervelo y Bianchi!"
       },
       "riderman-rothaus": {
         "meta-title": "Alquila una bici de carretera para la RiderMan de Bad Dürrheim",
@@ -715,7 +718,7 @@
     "payment": {
       "tab": "Formas de pago",
       "current-method": "Forma de pago actual",
-      "getting-saved": "Payment method saving in progress",
+      "getting-saved": "Sus detalles de pago se están guardando",
       "select-method": "Selecciona tu forma de pago",
       "subtitle": "Sólo te cobraremos después de que el anunciante de la bici haya aceptado tu solicitud.",
       "credit-card": "Tarjeta de crédito",
@@ -1129,7 +1132,7 @@
       "logo-description": "En cooperación con Hepster y asegurado por"
     },
     "landing-section-subheader": " Únete a listnride y encuentra la bici adecuada para ti.",
-    "featured-bikes-header": "Alquiler de bicis: estas son las favoritas de nuestra comunidad",
+    "featured-bikes-header": "Alquiler de bicis: estas son las favoritas de nuestra comunidad!",
     "featured-bikes-subheader": "Ya sean bicis de carretera, de montaña, de carga, de ciudad o eléctricas, puedes alquilarlas todas. Estas son las bicis de alquiler favoritas de la comunidad.",
     "featured-tiles-header": "¡Anímate a probar bicicletas innovadoras!",
     "featured-tiles-subheader": "Estamos asociados a marcas disruptivas las cuales ofrecen sus últimos modelos para tú puedas probarlos. Para poder probar las bicicletas solo debes seleccionar la marca, ciudad, modelo y listo. La bicicleta de tus sueños está más cerca de lo que imaginas. ",
@@ -1200,14 +1203,14 @@
       "label": "Categoría",
       "city": "Ciudad",
       "race": "Carretera",
-      "all-terrain": "Todo terreno",
+      "all-terrain": "Montaña",
       "kids": "Infantil",
-      "electro": "Eléctricas",
+      "electro": "E-Bikes",
       "special": "Especial",
-      "urban": "Urban",
+      "urban": "Urbana",
       "e-bike": "E-Bike",
       "road": "Bici de carretera",
-      "transport": "Transporte"
+      "transport": "Carga / Transporte"
     },
     "details": {
       "header": "¿Cuál es el nombre, tamaño y marca de tu bici?",
@@ -1324,19 +1327,19 @@
         "city-bike": "Bicicleta urbana"
       },
       "2": {
-        "road-bike": "Bici de carretera",
+        "road-bike": "Bicicleta de carretera",
         "triathlon": "Triatlón",
         "indoor": "Bicicleta de pista",
-        "e-city-bike": "Bici eléctrica urbana",
-        "e-touring-bike": "Bici eléctrica de turismo",
-        "e-cargo-bike": "Bici de carga eléctrica",
-        "e-mountain-bike": "Bici eléctrica de montaña",
-        "e-road-bike": "Bici eléctrica de carretera",
-        "e-folding-bike": "Bici eléctrica plegable",
-        "e-scooter": "Scooter eléctrico"
+        "e-city-bike": "Bicicleta eléctrica urbana",
+        "e-touring-bike": "Bicicleta eléctrica de turismo",
+        "e-cargo-bike": "Bicicleta de carga eléctrica",
+        "e-mountain-bike": "Bicicleta eléctrica de montaña",
+        "e-road-bike": "Bicicleta eléctrica de carretera",
+        "e-folding-bike": "Bicicleta eléctrica plegable",
+        "e-scooter": "E-Scooter"
       },
       "3": {
-        "tracking": "Tracking",
+        "tracking": "Trekking",
         "enduro": "Enduro",
         "freeride": "Freeride",
         "cross-country": "Cross Country",
@@ -1375,7 +1378,7 @@
         "mono-bike": "Monociclo",
         "trailer": "Remolque de bicicleta",
         "city-bike": "Bicicleta urbana",
-        "all-terrain-bike": "Bicicleta todo terreno",
+        "all-terrain-bike": "Bicicleta Montaña",
         "road-bike": "Bicicleta de carretera",
         "bogie-wheel": "Bicicleta sin pedales"
       },

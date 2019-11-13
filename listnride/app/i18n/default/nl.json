@@ -237,6 +237,9 @@
     "title": "Alle Landen",
     "country_title": "Alle steden en regio's in {{country_name}}"
   },
+  "prepositions": {
+    "in": " in "
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes voor de Cyclingworld",
@@ -498,12 +501,12 @@
         "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
-        "meta-description": "Huur de perfekte racefiets voor de Cyclassics in Hamburg van merken zoals Specialized, Ridley, Cervelo en Bianchi"
+        "meta-title": "Huur een racefiets voor de EuroEyes Cyclassics in Hamburg! | listnride",
+        "meta-description": "Huur de perfecte racefiets voor de EuroEyes Cyclassics in Hamburg en kies uit merken zoals Specialized, Ridley, Cervelo en Bianchi!"
       },
       "triathlon-hamburg": {
-        "meta-title": "Boek eenvoudig the perfekte racefiets voor de Cyclassics Hamburg",
-        "meta-description": "Huur eenvoudig de perfecte racefiets voor de Triathlon in Hamburg en kies uit merken als Specialized, Ridley, Cervelo en Bianchi"
+        "meta-title": "Huur een racefiets voor de Hamburg Wasser World Triathlon | listnride",
+        "meta-description": "Huur de perfecte racefiets voor de Hamburg Wasser World Triathlon en kies uit merken zoals Specialized, Ridley, Cervelo en Bianchi!"
       },
       "riderman-rothaus": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",

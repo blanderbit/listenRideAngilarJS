@@ -242,6 +242,9 @@
     "title": "All countries",
     "country_title": "All cities and regions in {{country_name}}"
   },
+  "prepositions": {
+    "in": " in "
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes for Cyclingworld",
@@ -467,7 +470,7 @@
       "city-title": "Bike rental in {{location}} | listnride",
       "city-description": "Rent the bike that fits you best, starting from {{ minPrice }}€. Enjoy {{location}} with a bike securely hired on listnride.",
       "category-title": "Rent a {{category}} bike in {{location}} | listnride",
-      "category-description": "Rent a {{category}} bike, starting from {{ minPrice }}€. Enjoy {{location}} with listnride!"
+      "category-description": "Rent a {{category}}, starting from {{ minPrice }}€. Enjoy {{location}} with listnride!"
     },
     "business-community": {
       "meta-title": "The listnride business community",
@@ -506,12 +509,12 @@
         "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
-        "meta-description": "Rent a road bike for the Cyclassics in Hamburg easily and online!"
+        "meta-title": "Rent a road bike for the EuroEyes Cyclassics in Hamburg! | listnride",
+        "meta-description": "Rent the perfect road bike for the EuroEyes Cyclassics in Hamburg and choose from brands such as Specialized, Ridley, Cervelo and Bianchi!"
       },
       "triathlon-hamburg": {
-        "meta-title": "Rent a road bike for the Triathlon Hamburg on listnride",
-        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Rent a racing bike for the Hamburg Wasser World Triathlon | listnride",
+        "meta-description": "Rent the perfect road bike for the Hamburg Wasser World Triathlon and choose from brands such as Specialized, Ridley, Cervelo and Bianchi!"
       },
       "riderman-rothaus": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -719,7 +722,7 @@
     "payment": {
       "tab": "Payment Method",
       "current-method": "Current payment method",
-      "getting-saved": "We're saving your payment method...",
+      "getting-saved": "Your payment details are being saved",
       "select-method": "Select your Payment Method",
       "subtitle": "Please select your favorite payment method. We only charge you after the lister accepted your request.",
       "credit-card": "Credit Card",

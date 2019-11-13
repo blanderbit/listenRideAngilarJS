@@ -242,6 +242,9 @@
     "title": "Alle Länder",
     "country_title": "Alle Städte und Regionen in {{country_name}}"
   },
+  "prepositions": {
+    "in": " im "
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Testbikes für die Cyclingworld",
@@ -503,12 +506,12 @@
         "meta-description": "Eine Herbstausfahrt durch die Holledau. listnride zu Besuch bei Velosoph, dem Radsportcafé in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Miete dir einfach das perfekte Rennrad für den Cyclassics Hamburg",
-        "meta-description": "Fahre die Cyclassics Hamburg auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. "
+        "meta-title": "Miete dir einfach das perfekte Rennrad für den EuroEyes Cyclassics in Hamburg | listnride",
+        "meta-description": "Miete dir ein Rennrad für den EuroEyes Cyclassics in Hamburg! Wähle Specialized, Ridley, Cervelo, Bianchi und miete es ganz bequem und einfach von Zuhause."
       },
       "triathlon-hamburg": {
-        "meta-title": "Miete dir einfach das perfekte Rennrad für den Triathlon Hamburg",
-        "meta-description": "Fahre den Triathlon Hamburg auf dem perfekten Rennrad! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. "
+        "meta-title": "Miete dir das perfekte Rennrad für Hamburg Wasser World Triathlon",
+        "meta-description": "Miete dir ein Rennrad für den Hamburg Wasser World Triathlon! Wähle Specialized, Ridley, Cervelo, Bianchi und miete es ganz bequem und einfach von Zuhause!"
       },
       "riderman-rothaus": {
         "meta-title": "Miete dir einfach das perfekte Rennrad für die RiderMan in Bad Dürrheim",
