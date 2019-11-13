@@ -123,7 +123,7 @@ angular
       },
 
       checkHalfDayEnabled(startDate, endDate, timeslots) {
-        if (dateHelper.durationDaysNew(startDate, endDate) > 0) return false;
+        if (dateHelper.durationDays(startDate, endDate) > 1) return false;
 
         const dayTimeRange = _.range(startDate.getHours(), endDate.getHours() + 1);
         const { isHalfDay } = dateHelper.isOnlyOneSlotPicked({

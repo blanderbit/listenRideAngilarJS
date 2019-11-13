@@ -173,7 +173,7 @@ angular
         _.forEach(bikeAvailabilities, function (slot) {
           let m_startDate = moment.utc(slot.start_date);
           let m_endDate = m_startDate.clone().add(slot.duration, 'seconds');
-          let differenceInDays = dateHelper.durationDaysNew(m_startDate, m_endDate);
+          let differenceInDays = dateHelper.durationDays(m_startDate, m_endDate);
 
           if (m_date.isBetween(m_startDate, m_endDate, 'day', '[]')) {
             // if difference in days more than 1 day we set all days as unavailable
@@ -229,7 +229,7 @@ angular
     function transformToDatesArray({startDate, duration}) {
       let m_startDate = moment.utc(startDate);
       let m_endDate = m_startDate.clone().add(duration, 's');
-      let differenceInDays = dateHelper.durationDaysNew(m_startDate, m_endDate);
+      let differenceInDays = dateHelper.durationDays(m_startDate, m_endDate);
       let dates = [];
 
       for (let i = 0; i <= differenceInDays; i++) {

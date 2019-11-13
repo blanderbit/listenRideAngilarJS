@@ -55,12 +55,17 @@ angular.module('receipt', []).component('receipt', {
           timeslots: receipt.timeslots
         });
 
-        receipt.duration = dateHelper.duration(receipt.startDate, receipt.endDate, receipt.invalidDays);
         receipt.durationDays = dateHelper.durationDays(receipt.startDate, receipt.endDate);
 
         if (receipt.startDate) {
           receipt.isHalfDayBook = price.checkHalfDayEnabled(receipt.startDate, receipt.endDate, receipt.timeslots);
           receipt.halfDayPrice = price.getPriceFor('1/2 day', receipt.prices);
+        }
+
+        if (receipt.isHalfDayBook) {
+          receipt.displayableDuration = dateHelper.durationHoursPretty(receipt.startDate, receipt.endDate);
+        } else {
+          receipt.displayableDuration = dateHelper.durationDaysPretty(receipt.startDate, receipt.endDate);
         }
 
         receipt.discount = prices.subtotal - prices.subtotalDiscounted;
@@ -80,7 +85,7 @@ angular.module('receipt', []).component('receipt', {
       function setDefaultPrices() {
         receipt.durationDays = "0";
         receipt.subtotalDiscounted = "0";
-        receipt.duration = " --- ";
+        receipt.displayableDuration = " --- ";
         receipt.subtotal = 0;
         receipt.lnrFee = 0;
         receipt.total = 0;
