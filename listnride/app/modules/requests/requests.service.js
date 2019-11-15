@@ -77,26 +77,6 @@ angular
 
                 ga('set', 'userId', request.user.id); //set unique userID (riderID)
                 ga('send', 'pageview');
-                ga('require', 'ecommerce');
-                ga('ecommerce:addTransaction', {
-                  id: request.id,
-                  affiliation: request.lister.id,
-                  revenue: request.total,
-                  tax: '0' // vat tax
-                });
-                ga('ecommerce:addItem', {
-                  id: request.id,
-                  name: [
-                    request.ride.brand,
-                    request.ride.name,
-                    request.ride.size
-                  ].join(', '),
-                  sku: request.ride.id,
-                  category: request.ride.category.name,
-                  price: request.total,
-                  quantity: '1'
-                });
-                ga('ecommerce:send');
 
                 return requestsService.updateStatus({
                   request,
