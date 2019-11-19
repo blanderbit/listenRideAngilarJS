@@ -17,13 +17,13 @@
     </div>
 
     <div class="content" layout="column" layout-padding>
+
         <div class="lnr-section-title" layout="column" layout-align="center center">
             <h1 class="md-headline" translate="events.{{event.name}}.title"></h1>
             <p class="md-body-1" translate="events.{{event.name}}.description"></p>
-            <div class="md-body-1 lnr-left">
-                <p translate="events.{{event.name}}.text"></p>
-            </div>
+            <div class="md-body-1 lnr-left" translate="events.{{event.name}}.text"></div>
         </div>
+
         <div ng-if="event.bikes.length">
             <md-divider></md-divider>
 
