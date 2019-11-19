@@ -105,7 +105,7 @@ angular.module('categoryLanding', []).component('categoryLanding', {
                   route: `cityLanding({ city: '${$stateParams.city}'})`
                 },
                 {
-                  title: translations[categoryLanding.category]
+                  title: translations[categoryLanding.category] + ' ' + ($translate.instant("prepositions.in")) + ' ' + categoryLanding.city
                 }
                 ];
               }
