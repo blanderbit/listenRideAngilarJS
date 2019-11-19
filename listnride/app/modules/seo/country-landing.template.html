@@ -46,7 +46,7 @@
                         <md-list-item
                             ng-repeat="city in countryLanding.currentCountry.seo_cities"
                             class="md-body-1">
-                            <a class="lnr-link" href="/{{city.name.en}}">
+                            <a class="lnr-link" href="/{{city.name.en.toLowerCase()}}">
                                 {{ city.name[countryLanding.languageCode] }}
                             </a>
                         </md-list-item>

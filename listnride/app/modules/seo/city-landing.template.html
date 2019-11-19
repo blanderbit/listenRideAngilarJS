@@ -41,7 +41,6 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide" ng-repeat="bike in cityLanding.data.blocks[0].bikes">
                 <a ui-sref="bike({bikeId: bike.id})"
-                   target="_blank"
                    layout="row"
                    class="lnr-bikes-slider-content">
                   <div flex="30"
@@ -158,7 +157,6 @@
        <div class="swiper-wrapper">
          <div class="swiper-slide" ng-repeat="brand in cityLanding.data.brands_block.brands">
            <a ui-sref="search({location: cityLanding.data.city, brand: brand})"
-              target="_blank"
               layout-padding
               layout="column"
               layout-align="center center"
@@ -256,8 +254,7 @@
            style="background-image: url({{category.imgFilePathNew}})"
            md-colspan-gt-sm="{{cityLanding.tileColspan($index)}}"
            md-rowspan-gt-sm="{{cityLanding.tileRowspan($index)}}">
-           <a ui-sref="categoryLanding({city: cityLanding.data.city, category: category.url})"
-              target="_blank"
+           <a ui-sref="categoryLanding({city: cityLanding.lowerCaseCity, category: category.url})"
               layout="column"
               layout-align="center center"
            >
