@@ -239,6 +239,9 @@
     "title": "Tutti i paesi",
     "country_title": "Tutte le città e le regioni in {{country_name}}"
   },
+  "prepositions": {
+    "in": " nel "
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Prova bici per il Cyclingworld ",
@@ -388,7 +391,7 @@
       "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
     },
     "bzen": {
-      "item1-description": "Lightweight, Only 14.4 k<br>Battery & smart electronics all hidden inside<br> Comfort geometry, saddle and handgrips<br>Easy to carry up stairs"
+      "item1-description": "Leggero, solo 14,4 kg <br>\nBatteria ed elettronica intelligente nascoste all'interno <br>\nGeometria, sella e impugnature comfort <br>\nFacile da trasportare su per le scale"
     }
   },
   "faq": {
@@ -460,8 +463,8 @@
     "seo": {
       "city-title": "Noleggia la bicicletta perfetta a {{location}}.",
       "city-description": "Scegli online la bici più adatta alle tue esigenze, a partire da {{ minPrice }}€. Goditi {{location}}con una bicicletta noleggiata in modo sicuro su listnride.",
-      "category-title": "Noleggia {{category}} la bicicletta perfetta a {{location}}.",
-      "category-description": "Scegli online la bici più adatta alle tue esigenze, a partire da {{ minPrice }}€. Goditi {{location}}con una bicicletta noleggiata in modo sicuro su listnride."
+      "category-title": "Noleggia {{category}} la bicicletta perfetta a {{location}} con listnride!",
+      "category-description": "Scegli online la {{category}} più adatta alle tue esigenze, a partire da {{ minPrice }}€. Goditi {{location}} con una bicicletta noleggiata in modo sicuro su listnride."
     },
     "business-community": {
       "meta-title": "La comunità business di listnride",
@@ -500,12 +503,12 @@
         "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Rent a road bike for the Cyclassics Hamburg on listnride",
-        "meta-description": "Rent the perfect road bike for the Cyclassics in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Noleggia una bici da strada per la EuroEyes Cyclassics ad Amburgo! | listnride",
+        "meta-description": "Noleggia la bici da strada perfetta per la EuroEyes Cyclassics ad Amburgo e scegli tra marchi come Specialized, Ridley, Cervelo e Bianchi!"
       },
       "triathlon-hamburg": {
-        "meta-title": "Rent a road bike for the Triathlon Hamburg on listnride",
-        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Noleggia una bici da corsa per il Hamburg Wasser World Triathlon | listnride",
+        "meta-description": "Noleggia la bici da strada perfetta per il Hamburg Wasser World Triathlon e scegli tra marchi come Specialized, Ridley, Cervelo e Bianchi!"
       },
       "riderman-rothaus": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -711,7 +714,7 @@
     "payment": {
       "tab": "Metodi di Pagamento",
       "current-method": "Attuale metodo di pagamento",
-      "getting-saved": "Payment method saving in progress",
+      "getting-saved": "I tuoi dettagli di pagamento vengono salvati",
       "select-method": "Seleziona il tuo metodo di pagamento",
       "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
       "credit-card": "Carta di credito",
@@ -1196,14 +1199,14 @@
       "label": "Categoria",
       "city": "Città",
       "race": "Gara",
-      "all-terrain": "Ogni tipo di terreno",
+      "all-terrain": "Mountain Bike",
       "kids": "Bambini",
-      "electro": "Elettrica",
+      "electro": "e-bikes",
       "special": "Speciale",
-      "urban": "Urban",
-      "e-bike": "Bici Elettrica",
+      "urban": "Bicicletta urbana",
+      "e-bike": "bicicletta elettrica",
       "road": "Bici da strada ",
-      "transport": "Per il trasporto"
+      "transport": "Bici da Carico"
     },
     "details": {
       "header": "Qual è il nome, dimensione e marca della tua bicicletta?",
@@ -1315,7 +1318,7 @@
     "subcategory": {
       "1": {
         "dutch-bike": "Bicicletta olandesina",
-        "touring-bike": "Bicicletta turistica",
+        "touring-bike": "Bicicletta da Turismo",
         "fixie": "A scatto fisso",
         "single-speed": "Single Speed",
         "city-bike": "Bici da Città"
@@ -1381,7 +1384,7 @@
         "recumbent-bike": "Bici Reclinate",
         "tandem-bike": "Tandem ",
         "longtail-bike": "Bici Longtail ",
-        "scooter": "Rooler"
+        "scooter": "Scooter"
       }
     }
   },

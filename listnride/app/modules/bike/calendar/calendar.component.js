@@ -255,7 +255,7 @@ angular.module('bike').component('calendar', {
     };
 
     calendar.isFormInvalid = function() {
-      return !calendar.bikeId || !calendar.isDateValid()  || !isTimeValid();
+      return !calendar.bikeId || !calendar.isDateValid() || !isTimeValid();
     };
 
     function validClusterSize() {
@@ -618,7 +618,6 @@ angular.module('bike').component('calendar', {
     }
 
     function initOverview() {
-      calendar.duration = dateHelper.duration(undefined, undefined, 0);
       calendar.subtotal = 0;
       calendar.lnrFee = 0;
       calendar.total = 0;
@@ -631,13 +630,16 @@ angular.module('bike').component('calendar', {
     function dateChange(startDate, endDate) {
       resetSizePicker();
       if (calendar.isDateValid()) {
-        var invalidDays = countInvalidDays(startDate, endDate);
-        calendar.duration = dateHelper.duration(startDate, endDate, invalidDays);
         calendar.durationDays = dateHelper.durationDays(startDate, endDate);
-        calendar.durationDaysNew = dateHelper.durationDaysNew(startDate, endDate);
+        calendar.durationDaysNew = dateHelper.durationDays(startDate, endDate);
         if (calendar.hasTimeSlots && calendar.durationDays <= 1) {
           calendar.isHalfDayBook = price.checkHalfDayEnabled(startDate, endDate, calendar.timeslots);
           calendar.halfDayPrice = price.getPriceFor('1/2 day', calendar.prices);
+        }
+        if (calendar.hasTimeSlots && calendar.isHalfDayBook) {
+          calendar.displayableDuration = dateHelper.durationHoursPretty(startDate, endDate);
+        } else {
+          calendar.displayableDuration = dateHelper.durationDaysPretty(startDate, endDate);
         }
         var prices = price.calculatePrices({
           startDate: startDate,
@@ -683,7 +685,7 @@ angular.module('bike').component('calendar', {
         });
 
       } else {
-        calendar.duration = dateHelper.duration(undefined, undefined, 0);
+        calendar.displayableDuration = dateHelper.durationDaysPretty(startDate, endDate);
         calendar.durationDays = 0;
         calendar.durationDaysNew = 0;
         calendar.subtotal = 0;

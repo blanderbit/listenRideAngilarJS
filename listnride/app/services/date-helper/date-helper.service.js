@@ -3,9 +3,23 @@ angular
   .factory('dateHelper', function(
     $translate
   ) {
+    let m_getDateUTC = function(dateObject) {
+      return moment.utc([dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate()]);
+    };
     let calculateDays = function(startDate, endDate) {
-        var hours = Math.abs(endDate - startDate) / (1000*60*60);
-        return Math.max(1, Math.ceil(hours / 24));
+      if (!startDate || !endDate)
+        return 0;
+
+      let m_startDate = moment.isMoment(startDate) ? startDate : m_getDateUTC(startDate);
+      let m_endDate = moment.isMoment(endDate) ? endDate : m_getDateUTC(endDate);
+
+      m_startDate = moment(m_startDate).startOf('day');
+      m_endDate = moment(m_endDate).startOf('day');
+
+      return m_endDate.diff(m_startDate, 'days') + 1;
+    };
+    let calculateHours = function(startDate, endDate) {
+      return Math.abs(endDate - startDate) / (1000 * 60 * 60);
     };
     const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
@@ -13,16 +27,6 @@ angular
       getMonthLangKey: (monthIndex) => monthNames[monthIndex],
       durationDays: function(startDate, endDate) {
         return calculateDays(startDate, endDate);
-      },
-      durationDaysNew: function(startDate, endDate) {
-        // to count difference only by 'days' we need reset time there
-        let m_startDate = moment.isMoment(startDate) ? startDate : this.m_getDateUTC(startDate);
-        let m_endDate = moment.isMoment(endDate) ? endDate : this.m_getDateUTC(endDate);
-
-        m_startDate = moment(m_startDate).startOf('day');
-        m_endDate = moment(m_endDate).startOf('day');
-
-        return m_endDate.diff(m_startDate, 'days');
       },
       durationDaysPretty: function(startDate, endDate) {
         var days = calculateDays(startDate, endDate);
@@ -34,8 +38,14 @@ angular
         if (weeks > 0)
           output += weeks + " " + weeksLabel;
         if (days > 0)
-                output += (weeks > 0) ? (", " + days + " " + daysLabel) : (days + " " + daysLabel);
+          output += (weeks > 0) ? (", " + days + " " + daysLabel) : (days + " " + daysLabel);
         return output;
+      },
+      durationHoursPretty: function(startDate, endDate) {
+        var hours = calculateHours(startDate, endDate);
+        var hours_label = hours == 1 ? $translate.instant("shared.hour") : $translate.instant("shared.hours");
+
+        return hours + ' ' + hours_label;
       },
       duration: function(startDate, endDate, invalidDays) {
         if (startDate === undefined || endDate === undefined) {
@@ -78,9 +88,6 @@ angular
         return new Date(
           Date.UTC(dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate(), dateObject.getHours())
         );
-      },
-      m_getDateUTC(dateObject) {
-        return moment.utc([dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate(), dateObject.getHours()]);
       },
       isOnlyOneSlotPicked({
         timeslots,

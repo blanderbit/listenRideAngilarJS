@@ -59,6 +59,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
           cityLanding.translatedCity = cityLanding.data.city_names[lang] ? cityLanding.data.city_names[lang] : cityLanding.city;
           cityLanding.loading = false;
           cityLanding.allBikes = [];
+          cityLanding.lowerCaseCity = cityLanding.data.city.toLowerCase();
 
           ngMeta.setTitle($translate.instant(cityLanding.data.explore.meta_title));
           ngMeta.setTag("description", $translate.instant(cityLanding.data.explore.meta_description));
@@ -85,11 +86,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
                 route: 'home'
               },
               {
-                title:  cityLanding.data.country,
+                title:  cityLanding.data.breadcrumbs.country,
                 route: `countryPage({ country: '${cityLanding.data.country_en}'})`
               },
               {
-                title: `${cityLanding.city}`,
+                title: cityLanding.data.breadcrumbs.city,
                 route: `cityLanding({ city: '${$stateParams.city}'})`
               }];
 

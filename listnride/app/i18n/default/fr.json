@@ -242,6 +242,9 @@
     "title": "Tous les pays",
     "country_title": "Toutes les villes et régions de {{country_name}}"
   },
+  "prepositions": {
+    "in": " dans "
+  },
   "cyclingworld": {
     "event": {
       "calendar-title": "Vélos à tester à Cyclingworld",
@@ -464,7 +467,7 @@
       "city-title": "Location de vélos à {{location}}| listnride",
       "city-description": "Louez le vélo qui vous convient le mieux, à partir de {{ minPrice }}€. Profitez de {{location}} avec un vélo loué en toute sécurité sur listnride.",
       "category-title": "Louez un vélo {{category}} à {{location}}| listnride",
-      "category-description": "Louez un vélo {{category}} à partir de {{ minPrice }}€. Profitez de {{location}} avec listnride."
+      "category-description": "Louez un {{category}} à partir de {{ minPrice }}€. Profitez de {{location}} avec listnride."
     },
     "business-community": {
       "meta-title": "La communeauté business de listnride",
@@ -503,12 +506,12 @@
         "meta-description": "A local riders' favourite route through Holledau. listnride pays a visit to Velosoph, the Cycling Café in Freising."
       },
       "cyclassics-hamburg": {
-        "meta-title": "Louez un vélo de route pour le Cyclassics de Hamburg sur listnride",
-        "meta-description": "Louez un vélo de route pour le Cyclassics de Hambourg facilement en ligne!"
+        "meta-title": "Louez un vélo de route pour l'EuroEyes Cyclassics à Hambourg! | listnride",
+        "meta-description": "Louez le vélo de route parfait pour les EuroEyes Cyclassics de Hambourg et choisissez des marques telles que Specialized, Ridley, Cervelo et Bianchi!"
       },
       "triathlon-hamburg": {
-        "meta-title": "Louez un vélo de route pour le Triathlon de Hamburg sur listnride",
-        "meta-description": "Rent the perfect road bike for the Triathlon in Hamburg easily online and choose from brands such as Specialized, Ridley, Cervelo and Bianchi"
+        "meta-title": "Louez un vélo de route pour le Hamburg Wasser World Triathlon | listnride",
+        "meta-description": "Louez le vélo de route idéal pour le Hamburg Wasser World Triathlon et choisissez des marques telles que Specialized, Ridley, Cervelo et Bianchi!"
       },
       "riderman-rothaus": {
         "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
@@ -716,7 +719,7 @@
     "payment": {
       "tab": "Mode de paiement",
       "current-method": "Mode de paiement actuel",
-      "getting-saved": "Nous enregistrons votre mode de paiement ...",
+      "getting-saved": "Vos détails de paiement sont sauvegardés",
       "select-method": "Sélectionnez votre mode de paiement",
       "subtitle": "Veuillez sélectionner votre mode de paiement préféré. Nous ne vous facturerons que lorsque le Lister aura accepté votre demande.",
       "credit-card": "Carte de crédit",
@@ -1204,7 +1207,7 @@
       "race": "Vélo de course",
       "all-terrain": "Tout terrain",
       "kids": "Pour enfants",
-      "electro": "Électrique",
+      "electro": "Vélos électriques",
       "special": "Spécial",
       "urban": "Urbain",
       "e-bike": "Vélo électrique",
