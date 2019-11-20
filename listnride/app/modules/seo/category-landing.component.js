@@ -97,15 +97,15 @@ angular.module('categoryLanding', []).component('categoryLanding', {
                   route: 'home'
                 },
                 {
-                  title:  categoryLanding.data.country,
+                  title:  categoryLanding.data.breadcrumbs.country,
                   route: `countryPage({ country: '${categoryLanding.data.country_en}'})`
                 },
                 {
-                  title: categoryLanding.city,
+                  title: categoryLanding.data.breadcrumbs.city,
                   route: `cityLanding({ city: '${$stateParams.city}'})`
                 },
                 {
-                  title: translations[categoryLanding.category] + ' ' + ($translate.instant("prepositions.in")) + ' ' + categoryLanding.city
+                  title: categoryLanding.data.breadcrumbs.category_title
                 }
                 ];
               }

@@ -86,11 +86,11 @@ angular.module('cityLanding',[]).component('cityLanding', {
                 route: 'home'
               },
               {
-                title:  cityLanding.data.country,
+                title:  cityLanding.data.breadcrumbs.country,
                 route: `countryPage({ country: '${cityLanding.data.country_en}'})`
               },
               {
-                title: `${cityLanding.city}`,
+                title: cityLanding.data.breadcrumbs.city,
                 route: `cityLanding({ city: '${$stateParams.city}'})`
               }];
 
