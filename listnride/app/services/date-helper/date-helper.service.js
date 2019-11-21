@@ -89,6 +89,9 @@ angular
           Date.UTC(dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate(), dateObject.getHours())
         );
       },
+      m_getDateUTC(dateObject) {
+        return moment.utc([dateObject.getFullYear(), dateObject.getMonth(), dateObject.getDate(), dateObject.getHours()]);
+      },
       isOnlyOneSlotPicked({
         timeslots,
         dayTimeRange
