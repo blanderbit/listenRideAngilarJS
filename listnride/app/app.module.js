@@ -189,6 +189,8 @@ angular.module('listnride', [
       // default and available languages
       var defaultLanguage = "en";
       var availableLanguages = ["de", "en", "nl", "it", "es", "fr"];
+      var specialDomains = { at: "de" };
+
       // host and domains
       var host = window.location.host;
       var domain = host.split(".");
@@ -205,7 +207,7 @@ angular.module('listnride', [
         // select the language
         // either get from top domain or select the english version
         if (availableLanguages.indexOf(topLevelDomain) >= 0) retrievedLanguage = topLevelDomain;
-        else retrievedLanguage = defaultLanguage;
+        else retrievedLanguage = specialDomains[topLevelDomain] || defaultLanguage;
       }
 
       return retrievedLanguage;
