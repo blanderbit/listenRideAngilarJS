@@ -180,9 +180,9 @@
     "required": "Questo è richiesto",
     "update": "Aggiornare",
     "load-more": "Carica altro",
-    "confirm": "Confermare",
-    "confirmation": "Conferma",
-    "confirmation-text": "Sei sicuro?",
+    "confirm": "Cancella richiesta",
+    "confirmation": "Cancellazione",
+    "confirmation-text": "Sei sicuro di voler annullare la richiesta? Questo non può essere annullato.",
     "loading": "Caricamento",
     "today": "Oggi",
     "yesterday": "Ieri",
@@ -1432,12 +1432,12 @@
     "info-section": {
       "header": "Noleggia la bicicletta perfetta per te",
       "subheader": "Una che si abbini al tuo stile e soddisfi le tue esigenze. Da persone come te e me.",
-      "choice-title": "Super scelta",
-      "choice-content": "La gamma delle biciclette offerte su listnride è varia come i nostri utenti. Qui troverai tutto, dalle biciclette da corsa di alta qualità a quelle da città fino ai rimorchi per biciclette e quelle per bambini. Noleggia una bicicletta che si adatti al tuo stile e soddisfi le tue esigenze.",
-      "price-title": "Super prezzo",
-      "price-content": "Le biciclette registrate sulla nostra piattaforma sono noleggiate da proprietari privati, ma anche da rivenditori specializzati e servizi di noleggio. Cosa c'è per te: la bicicletta perfetta con un'ottimo rapporto qualità / prezzo.",
-      "easy-title": "Super semplice",
-      "easy-content": "Trova e prenota la tua bicicletta a noleggio prima di metterti in viaggio o semplicemente in viaggio utilizzando il nostro sito web mobile.",
+      "choice-title": "Noleggio bici, reso facile.",
+      "choice-content": "Cerca e noleggia una bici in pochi secondi.\nNiente più denaro, telefonate o email.",
+      "price-title": "Teniamo molto alla qualità.",
+      "price-content": "Bici da strada premium, bici elettriche affidabili e bici da città robuste: siamo molto più di un semplice servizio di noleggio biciclette!",
+      "easy-title": "Varietà di scelta, ovunque.",
+      "easy-content": "Siamo orgogliosi di offrire migliaia di biciclette a noleggio in Germania, Italia, Spagna, Paesi Bassi e Austria!",
       "covered-content": "In caso di danni e / o furto, la nostra assicurazione ti aiuterà. Con\n<a href=\"http: //www.hepster.com\" target=\"_blank\" >hepster </a>\n e il\n<a href=\"http: //www.gothaer.de\" target=\"_blank\" >Gruppo Gothaer </a>\n abbiamo due partner forti al nostro fianco, per aiutarti in caso di emergenza."
     },
     "search-section": {
@@ -1525,11 +1525,11 @@
     "title": "Invita gli amici e guadagna 10 €",
     "login": "Accedi per ottenere link di invito",
     "info-section": {
-      "header": "Guadagna 10 € di credito quando un tuo amico accetta il tuo invito e noleggia una bicicletta o registra la sua.",
-      "subheader": "Sei entusiasta di listnride e vuoi diffondere il passaparola? Quindi invita i tuoi amici a diventare parte della comunità bike sharing.",
-      "invite-friends": "Invita i tuoi amici",
-      "community": "Aiuta a far crescere la comunità",
-      "earn-credit": "Guadagna credito listnride"
+      "header": "Più è bello il listnride!",
+      "subheader": "Aiuta i nostri movimenti a semplificare il noleggio di biciclette invitando i tuoi amici e i negozi di biciclette locali sulla nostra piattaforma. Condividi semplicemente il tuo codice di invito e quando noleggiano una bicicletta riceverai un buono da € 10 da noi!",
+      "invite-friends": "Condividi il tuo codice di invito",
+      "community": "Aiuta il tuo amico a iniziare con listnride",
+      "earn-credit": "Quando il tuo amico noleggia una bicicletta riceverai un buono di € 10 per il tuo prossimo noleggio!"
     },
     "invite-form": {
       "header": "Condividi il tuo link personale",

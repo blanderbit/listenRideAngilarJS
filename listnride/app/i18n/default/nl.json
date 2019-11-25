@@ -180,9 +180,9 @@
     "required": "Dit is verplicht",
     "update": "Bijwerken",
     "load-more": "Load more",
-    "confirm": "Bevestigen",
-    "confirmation": "Bevestiging",
-    "confirmation-text": "Weet je het zeker?",
+    "confirm": "Annuleer verzoek",
+    "confirmation": "Annulering",
+    "confirmation-text": "Weet je zeker dat je het verzoek wilt annuleren? Dit kan niet ongedaan worden gemaakt.",
     "loading": "Het laden",
     "clear": "Clear",
     "clear-all": "Clear All",
@@ -1428,12 +1428,12 @@
     "info-section": {
       "header": "Huur de perfecte fiets",
       "subheader": "Naar jouw smaak en gebruik. Van mensen zoals jij en ik.",
-      "choice-title": "Super Keuze.",
-      "choice-content": "De fietsen op listnride zijn zo divers als onze gebuikers. Van een edele racer tot een chique urban roller, van een sterke bakfiets tot een stoere e-bike alles vind je er. Huur een fiets naar jouw smaak en gebruik.",
-      "price-title": "Super Prijs.",
-      "price-content": "Op listnride verhuren particulieren als ook zakelijke aanbieders, zoals fietswinkels, hun fietsen. Jouw voordeel: De perfecte fiets voor een faire prijs.",
-      "easy-title": "Super eenvoudig.",
-      "easy-content": "Zoek en boek een mooie huurfiets, vóórdat je op vakantie gaat, of simple onderweg: online met onze mobile website",
+      "choice-title": "Fietsverhuure envoudig gemaakt.",
+      "choice-content": "Zoek en boek een fiets in enkele seconden.\nGeen contant geld, telefoontjes of e-mails meer nodig!",
+      "price-title": "Wij vinden kwaliteit belangrijk.",
+      "price-content": "Hoogwaardige racefietsen, betrouwbare e-bikes en robuuste stadsfietsen - wij zijn meer dan een eenvoudige fietsverhuurservice!",
+      "easy-title": "Veelzijdige keuze, overal en altijd",
+      "easy-content": "We zijn er trots op duizenden huurfietsen aan te bieden in Duitsland, Italië, Spanje, Nederland en Oostenrijk!",
       "covered-content": "Als u een fiets huurt in Duitsland of Oostenrijk, is de verzekering inbegrepen in de huurprijs. Met \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a> \nen de \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nhebben wij twee sterke partners aan onze zijde om u te helpen in noodgevallen."
     },
     "search-section": {
@@ -1519,11 +1519,11 @@
     "title": "Nodig vrieden uit en verdien 10€",
     "login": "log in en ontvang je persoonlijke link",
     "info-section": {
-      "header": "Ontvang 10€ tegoed, als één van je vrienden je uitnodiging aanneemt en een fiets huurt of zijn fiets aanbiedt op listnride.",
-      "subheader": "Ben je een fan van bike sharing en de listnride service? nodig dan je vrienden uit om deel uit te maken van onze community.",
-      "invite-friends": "Vrienden uitnodigen",
-      "community": "Wordt deel van de community",
-      "earn-credit": "Ontvang listnride toegoed"
+      "header": "Hoe meer, hoe beter op listnride!",
+      "subheader": "Help onze beweging om fietsverhuur gemakkelijker te maken door uw vrienden en lokale fietswinkels uit te nodigen voor ons platform. Deel eenvoudig uw uitnodigingscode en als ze een fiets huren, ontvangt u van ons een tegoedbon van € 10!",
+      "invite-friends": "Deel je uitnodigingscode",
+      "community": "Help je vriend aan de slag met listnride",
+      "earn-credit": "Zodra je vriend of vriendin een fiets huurt, ontvang je een voucher van 10 euro voor je volgende huurperiode! "
     },
     "invite-form": {
       "header": "Deel jouw persoonlijke link",

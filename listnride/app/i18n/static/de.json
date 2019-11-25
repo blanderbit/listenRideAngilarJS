@@ -114,7 +114,7 @@
     "faq": {
       "group-1": {
         "title": "Erste Schritte",
-        "description": "Hier sind alle Infos wie du dein perfektes Fahrrad findest.",
+        "description": "Wir helfen dir das perfekte Fahrrad für deine Ansprüche zu finden.",
         "answer-1": "Gib einfach ein wo du ein Fahrrad suchst. Klicke auf ein beliebiges Fahrrad, um weitere Details wie Rahmengröße, empfohlene Mieterhöhe, mitgeliefertes Zubehör und Bewertungen des Fahrrads zu sehen.\n",
         "answer-2": "Um Suchergebnisse einzugrenzen, kannst du Filter verwenden. Du kannst nach Zeitspanne, Anzahl der Fahrräder, Fahrradtyp und Marke filtern.",
         "answer-3": "Auf der Detailseite gibt es einen Kalender: Schwarze Zahlen zeigen buchbare Tage, graue Tage repräsentieren nicht verfügbare Tage, beispielsweise Sonntage. An roten Tagen ist das Rad bereits gebucht.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
@@ -214,11 +214,11 @@
         "question-2": "Wie lange nach der Annahme einer Anfrage ist es möglich, eine Buchung als Mieter zu stornieren?",
         "question-3": "Bekomme ich den gesamten Mietpreis zurück, wenn ich meine Buchung storniere?",
         "question-4": "Ist die listnride Servicegebühr erstattungsfähig?",
-        "question-5": "Wie lange nach der Annahme ist es möglich, eine Buchung als Vermieter zu stornieren?"
+        "question-5": "Wie lange nach der Annahme der Anfrage ist es möglich, eine Buchung als Vermieter zu stornieren?"
       },
       "group-7": {
         "title": "Gutscheine & Guthaben",
-        "description": "Nutze Gutscheine und Guthaben für Fahrradmieten. Hier erfährst du, wie du Gutscheine einlösen kannst. Außerdem kannst du Freunde zu listnride einladen und so Guthaben aufbauen",
+        "description": "Nutze Gutscheine und Guthaben für Fahrradmieten. Hier erfährst du, wie du Gutscheine einlösen kannst. Außerdem kannst du Freunde zu listnride einladen und so Guthaben hinzuverdienen.",
         "answer-1": "Du kannst Guthaben aufbauen, indem du Freunde via facebook oder E-Mail einlädst, Teil der listnride-Community zu werden. Melde dich in deinem Profil an, gehe zu \n<a href=\"http://www.listnride.de/invite-friends\" target=\"_blank\">Freunde einladen</a> \nund teile den Link mit anderen. Wenn deine Freunde ein Fahrrad über den Link mieten oder listen, erhältst du automatisch 10€, die du für deinen nächsten Verleih nutzen kannst.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-7.answer-1.jpg\">",
         "answer-2": "Um Gutscheine einlösen zu können, musst deren Code einfach im Feld „<b>Gutschein einlösen</b>” eingeben wenn du ein Fahrrad anfrägst. Alternativ kannst du Codes in deinem Konto unter der Rubrik „<b>Gutscheine</b>” eingeben. \n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-7.answer-2.jpg\">",
         "answer-3": "Wann immer du ein Fahrrad anfrägst, kannst du einen Gutschein nutzen, allerdings ist jeder Code nur ein einziges mal gültig. \nWird der Gutschein bei der Miete nicht komplett aufgebraucht, speichern wir dir den restlichen Betrag in deinem lisntride-Konto als Guthaben, das dir für die nächste Buchung erhalten bleibt.\n",
@@ -249,16 +249,16 @@
         "answer-5": "Klick auf „<b>Meine Räder</b>” im Menü und anschließend auf Rad einstellen. Der Dialog führt dich durch alle nötigen Schritte. Hier kannst du Informationen über dein Fahrrad wie Marke, Beschreibung, Bilder, Mietpreis und Zubehör angeben.",
         "answer-6": "Du kannst den Mietpreis frei wählen. Der Wochenpreis darf nicht niedriger sein als der Tagespreis. Um den Mietpreis zu bestimmen, kannst du dein Fahrrad mit ähnlichen verfügbaren Fahrrädern auf listnride vergleichen.",
         "answer-7": "Du erhälst eine E-Mail und SMS-Benachrichtigung, die dich über eine neue Buchungsanfrage informiert und alle relevanten Details enthält.\nMelde dich an und gehe zu \"Anfragen\", um die Buchung zu akzeptieren oder abzulehnen und einen Chat mit dem Rider zu beginnen, wenn etwas zu klären ist.\nWenn du die Anfrage annimmst, ist die Buchung abgeschlossen und die Miete bezahlt. Du erhälst eine Buchungsbestätigung mit allen relevanten Informationen und Kontaktdaten des Riders per E-Mail.",
-        "answer-8": "Das Einstellen eines Fahrrads ist kostenlos. Es entstehen keine fixen oder laufenden Kosten.",
+        "answer-8": "Das Einstellen eines Fahrrads ist kostenlos. Es entstehen weder fixe noch laufende Kosten.",
         "answer-9": "Wir unterstützen verschiedene Zahlungsmethoden, je nachdem, in welchem Land sich dein Auszahlungskonto befindet. Wir unterstützen in der Regel alle Arten von Kreditkarten und Paypal-Konten. Offline- oder Barzahlungen sind ein Verstoß gegen unsere Allgemeinen Geschäftsbedingungen, was zu einer Deaktivierung deines listnride-Kontos führen kann. \nEs sollte in deinem eigenen Interesse liegen, Zahlungen außerhalb von listnride zu vermeiden, da so kein gültiger Mietvertrag zustande kommt, du leicht beklaut oder betrogen werden kannst und auch die listnride-Versicherung nicht greift.",
         "answer-10": "Die Zahlung erfolgt erst, nachdem der Vermieter deine Anfrage akzeptiert hat. Stornierst du deine Anfrage oder wird sie von Vermietern nicht angenommen, wird keine Zahlung ausgelöst.",
         "question-1": "Wie suche ich ein Fahrrad?",
         "question-2": "Woher weiß ich, ob das Fahrrad verfügbar ist?",
-        "question-3": "Ein listnride-Konto erstellen",
+        "question-3": "Wie erstelle ich ein listnride-Konto?",
         "question-4": "Wie kann ich ein Fahrrad mieten?",
         "question-5": "Wie liste ich mein Fahrrad?",
-        "question-6": "Wie kann ich den Mietpreis festlegen?",
-        "question-7": "Wie erfahre ich, wenn mein Fahrrad angefragt wird?",
+        "question-6": "Wie lege ich den Mietpreis fest?",
+        "question-7": "Wie erfahre ich, dass mein Fahrrad angefragt wurde?",
         "question-8": "Was kostet es, mein Fahrrad zu listen?",
         "question-9": "Welche Zahlungsarten werden akzeptiert?",
         "question-10": "Wann bezahle ich meine Fahrradmiete?"
@@ -282,7 +282,7 @@
         "title": "Premium-Versicherung",
         "price": "3€",
         "price-description": "pro Tag",
-        "description": "<ul>\n<li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n<li>Schutz gegen Vandalismus\n<li>Schutz von Elektronik und Akku bei Pedelecs\n<li>Diebstahlschutz\n<li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n<li>Rücktransport nach Diebstahl oder Beschädigung\n<li>Ersatzrad nach Diebstahl oder Beschädigung\n<li>die Premium Versicherung hat keine Eigenbeteiligung\n</ul>"
+        "description": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>Keine Eigenbeteiligung\n</ul>"
       }
     },
     "faqs": {
@@ -309,11 +309,11 @@
         "question-2": "Wieviel kostet die Premium Versicherung?",
         "answer-2": "Drei Euro pro Tag zusätzlich zum Mietpreis und den listnride-<a href=\"https://www.listnride.com/terms\" target=\"_blank\">Gebühren</a>",
         "question-3": "Was deckt die Basis-Versicherung ab?",
-        "answer-3": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Selbstbeteiligung 250€\n</ul>",
+        "answer-3": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- oder Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Selbstbeteiligung 250€\n</ul>",
         "question-4": "Was deckt die Premium Versicherung ab?",
         "answer-4": "<ul>\n <li>Schutz bei unbeabsichtigter Eigen- und Fremdbeschädigung\n <li>Schutz gegen Vandalismus\n <li>Schutz von Elektronik und Akku bei Pedelecs\n <li>Diebstahlschutz\n <li>24/7 Notfallnummer bei Diebstahl oder Beschädigung\n <li>Rücktransport nach Diebstahl oder Beschädigung\n <li>Ersatzrad nach Diebstahl oder Beschädigung\n <li>die Premium Versicherung hat keine Eigenbeteiligung\n</ul>",
         "question-5": "Gibt es eine Eigenbeteiligung im Schadensfall? Wie hoch ist diese?",
-        "answer-5": "Die Eigenbeteiligung beträgt 250€ für die Basisversicherung.\n<br>\nDie Premium-Versicherung hat keine Eigenbeteiligung.",
+        "answer-5": "Die Selbstbeteiligung beträgt 250€ für die Basisversicherung.\n<br>\nDie Premium-Versicherung hat keine Eigenbeteiligung.",
         "question-6": "Wie beende ich die Versicherung nachdem meine Radmiete endet?",
         "answer-6": "Mit jeder bestätigten Fahrradvermietung bekommst du ein individuelles Versicherungszertifikat. Es ist \n<b>ausschließlich</b> \nfür diese Buchung und für den von Dir \n<b>gewählten Zeitraum</b> \ngültig und endet automatisch.\n<p>\nDas Zertifikat kannst du direkt herunterladen und bekommst es via E-Mail zugesandt. Du musst nichts weiter machen.",
         "question-7": "An wen wende ich mich, wenn ich meine Versicherung in Anspruch nehmen muss?",
@@ -335,7 +335,7 @@
     },
     "bike-page": {
       "title": "Fahrräder an erster Stelle ",
-      "description": "Jedes Fahrrad hat ein eigenes Profil mit detaillierten Infos, die es dem Mieter ermöglicht, das Rad seiner Wahl in wenigen Sekunden zu buchen."
+      "description": "Jedes Fahrrad hat ein eigenes Profil mit detaillierten Infos, die es dem Mieter ermöglichen, das Rad seiner Wahl in wenigen Sekunden zu buchen."
     },
     "companies": {
       "title": "Andere Firmen, die sich unserer Listnride Community angeschlossen haben."
@@ -344,7 +344,7 @@
       "title": "Listnride Buchungsplug-in ",
       "description": "Wir haben ein kostenloses Buchungs-Plugin entwickelt, damit deine Kunden die Fahrräder rund um die Uhr direkt von deiner Website aus buchen können.",
       "install": "In Wordpress installieren",
-      "link": "Bitte nutze unsere <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">Installationsdokumentation</a>, wenn du nicht Wordpress verwendest."
+      "link": "Bitte nutze unsere <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">Installationsdokumentation</a>, wenn du kein Wordpress verwendest."
     },
     "meta-description": "Werde Teil des gewerblichen listnride Fahrradverleihs.",
     "title": "Werde noch heute Teil der listnride-Community",
@@ -356,7 +356,7 @@
     },
     "feature-2": {
       "title": "Vereinfachter Mietvorgang ",
-      "description": "Keine E-Mails und Telefonate mehr, die dir die ganze Zeit wegnehmen. Du erhältst einfach eine Buchungsanfrage, die du akzeptieren kannst."
+      "description": "Keine E-Mails und Telefonate mehr, die dich deine wertvolle Zeit kosten. Erhalte online deine Buchungsanfragen, die du ganz einfach beantworten kannst."
     },
     "feature-3": {
       "title": "Mehr Vermietungen erhalten",
@@ -364,10 +364,10 @@
     },
     "text-2": {
       "title": "Werde auch du Teil der listnride Business Community",
-      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne hilft dir Tobi weiter, kontaktiere ihn via<br><a href=\"mailto:tk@listnride.com\">tk@listnride.com</a> "
+      "description": "Registriere dich jetzt und richte sofort deine eigene Shop Seite ein. Oder kontaktiere uns persönlich. Gerne helfen wir dir weiter: <br><a href=\"mailto:tk@listnride.com\">contact@listnride.com</a> "
     },
     "text-3": {
-      "column-1": "listnride ist bereits jetzt schon Europas größte Bikesharing Community und so Spezialist für den privaten und gewerblichen Fahrradverleih.  Deshalb wissen wir wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten und ihnen den Weg in deinen Laden so einfach wie möglich machen.",
+      "column-1": "listnride ist bereits jetzt schon Europas größte Community für Fahrradvermietungen und so auch Spezialist für den privaten und gewerblichen Fahrradverleih.  Wir wissen wonach unsere KundInnen suchen und können sie direkt auf deine listnride Shop Seite leiten damit sie dort ganz einfach deine Räder buchen können. ",
       "column-2": "Uns ist wichtig, dass wir unserer fahrradbegeisterten Community ein breites Angebot an Fahrrädern anbieten können, dies reicht vom Crosser, übers Rennrad zum Hollandrad und Cargo-Bike. Mit dir zusammen können wir unseren Usern nicht nur das perfekte Leihrad für den Urlaub bieten, sondern ihnen auch bei Suche nach einem neuen, eigenen Fahrrad helfen."
     }
   },
@@ -391,7 +391,7 @@
       "text": "Paris-Brest-Paris ist eine 1.200 km lange selbsttragende Fahrt von Paris nach Brest in der Bretagne und zurück. Sie wurde 1891 erstmals durchgeführt, findet jede 4 Jahre statt und ist nach den meisten Beschreibungen die älteste noch heute existierende Radsportveranstaltung und der Höhepunkt des Audaxkalenders. </br></br>\n \nDie Geschichte, das Prestige und die Herausforderung von PBP zieht Fahrer aus der ganzen Welt an, und die Tatsache, dass es nur alle vier Jahre stattfindet, trägt nur dazu bei, den Anlass zu verstärken. In diesem Jahr werden mehr als 6.000 weitere Fahrer ihre Chance erhalten, diese historischste aller Langstreckenfahrten zu absolvieren.</br></br>\n \nDie Rennräder werden für eingestellt (bike-fitting) und sind direkt Im Schlosspark Rambouillet, Expo-Bereich abzuholen. Das Team vor Ort fährt teils die Strecke mit und sind erfahrener PBP-fahrer.</br></br>Photographie: James Robertson"
     },
     "costadelsol": {
-      "title": "Miete ein Rennrad für das Epic Gran Canaria",
+      "title": "Miete ein Rennrad für den Gran Fondo Costa del Sol",
       "description": "Was: <b>Gran Fondo Costa del Sol</b> | Wann: <b>14 September 2019</b> | Wo: <b>Estepona,  Málaga</b>",
       "text": "<a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\">Gran Fondo Costa del Sol</a> ist eine wunderschöne Radsportveranstaltung mit Abfahrt und Ankunft in Estepona, Malaga (Costa del Sol). Ein internationaler Test, mit zwei Routen, dem ersten Gran Fondo von 133 km und 3400 Höhenmeter und dem Medium Fondo von 94 km und 2400 Höhenmeter. Du wirst den berühmten <b>Alto Cortes de la Frontera</b> und den kolossalen <b>Peñas Blancas</b>steigen und den Reichtum der Umgebung in vollen Zügen genießen!<br> Leih dir jetzt dein Rennrad! Wähle das Fahrrad, das zu dir passt und genieße den Gran Fondo.",
       "meta-title": "Miete einfach das perfekte Rennrad für den Gran Fondo Costa del Sol!",
@@ -410,7 +410,7 @@
       "meta-description": "Nach der Teilnahme am wichtigsten Granfondo in Italien und im Ausland wurde 2015 die erste Granfondo Bike Division geboren. Ein sofortiger Erfolg mit mehr als 1000 Startern in malerischer Lage inmitten der atemberaubenden Landschaft des Gardasees, ein erfahrenes und spezialisiertes Personal, eine spannende Route mit einem Ausstellungsbereich in einzigartiger Umgebung: All dies und vieles mehr wird die 5. <a href=\"http://www.gfbikedivisionpeschiera.com\"> Granfondo Bike Division Peschiera del Garda</a>, Sonntag, 22. September 2019, ein immer spannenderes Rennen dank des spektakulären Eintritts der gefürchteten MURO DEL GARDA sein, das nur die Erfahrensten bewältigen können. Eine Veranstaltung, die für Fans konzipiert und gebaut wurde, die aus dem Wunsch geboren wurde, Radfahren und nachhaltigen Tourismus zu verbinden. Ein Tag, der den Werten des Sports gewidmet ist, um zwischen Spaß, Leidenschaft und dem Wunsch nach neuen Herausforderungen zu leben"
     },
     "cyclingworld": {
-      "title": "Buche dir ein Gravel-Bike der Marken 8bar, Salsa, Veloheld oder Genesis für die Gravel-ausfahrt auf der Cyclingworld Düsseldorf",
+      "title": "Buche dir ein Gravel-Bike der Marken 8bar, Salsa, Veloheld oder Genesis für die Gravelausfahrt auf der Cyclingworld Düsseldorf",
       "description": "Was: <b>CyclingWorld </b>| Wann: <b>23.-24. März 2019 </b>| Wo: <b>Düsseldorf, Deutschland </b>",
       "text": "Gemeinsam mit unserem Partner SCHICKEMÜTZE und Partnermarken 8Bar, Salsa, Veloheld und Genesis laden wir im Rahmen der Cyclingworld Düsseldorf zur Gravelrunde ins Düsseldorfer Umland. </br>Euch stehen zwei Strecken zur Verfügung, eine flache Runde von 50 Kilometern, die der tollen Tour vom letzten Jahr entspricht, oder eine Runde von 70 Kilometern, die über den Rhein führt und ein paar kleine Anstiege und ruppige Abschnitte rund um Ratingen beinhaltet. Ihr startet in kleinen Teams von 2 bis 6 Personen, navigiert wird per gpx-Datei, die alle Starter/innen im Vorfeld der Tour per Mail bekommen. Die Wahl, welche Tour ihr fahrt, könnt ihr Morgens vorm Start treffen.Nach der Rückkehr zum Areal Böhler erwarten wir euch vor der Cyclingworld mit ein paar Snacks und Drinks, um die Kalorienspeicher wieder aufzufüllen. Ihr könnt im Anschluss an die Tour euer Rad auf einem bewachten Parkplatz abgeben, um stressfrei über die Messe zu bummeln. Eine Eintrittskarte zur Cyclingworld ist im Starterpaket enthalten, genau wie ein paar weitere Kleinigkeiten.LISTNRIDE werden euch über ihre Community Testräder unterschiedlicher Marken anbieten, falls ihr also ein Gravelbike von 8Bar oder anderen fahren möchtet, bucht bitte im Vorfeld dein Wunschrad unter <a href=\"www.listnride.com/events/cyclingworld\" target=\"_blank\">www.listnride.com/events/cyclingworld </a>Wir werden euch via Mail über Updates und alles Wissenswerte zu den Ausfahrten informieren. Wir freuen uns auf eine spannende Cyclingworld und ein paar tolle Stunden mit euch auf und neben dem Rad."
     },
@@ -436,7 +436,7 @@
     },
     "lardita-arezzo": {
       "title": "Miete ein Vintage-Rennrad für die L’ Ardita\n",
-      "description": "Was: <b>  L’ Ardita </b>| Wann: <b> 24.3.2019</b>| Wo: <b> Arezzo, Toskana </b>",
+      "description": "Was: <b>  L’Ardita cyclostoric of the Alpe di Poti </b>| Wann: <b> 24.3.2019</b>| Wo: <b> Arezzo, Toskana </b>",
       "text": "Herzstück des Festivals ist \"L'Ardita\", der Alpe di Poti für Vintage-Rennräder. \nAm Sonntag, den 24. März 2019, trifft man wieder auf die Alpe di Poti , Etappe des Giro d'Italia 2016, aber auch vieler wichtiger Rennen in den 70er und 80er Jahren.  \nErinnert die L’ Ardita and das Radfahren der Vergangenheit. Suchst du ein Rennrad für <a href=\"https://www.lardita.com/eng\" target=\"_blank\">L’ Ardita? </a> Zusammen mit der listnride-Community stellen wir hier passenden Leihrennräder zur Verfügung. Wähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
     },
     "granfondo-via-del-sale": {
@@ -459,7 +459,7 @@
       "text": "Du brauchst ein Rad für den <a href=\"http://www.berlin-triathlon.de/\" target=\"_blank\">Berlin Triathlon 2020</a>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br><br>\n Du kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und <a href=\"/listing-a-bike\" target=\"_blank\">vermiete dein Rad</a>."
     },
     "berlin-triathlon-xl": {
-      "title": "Miete dir das perfekte Rennrad für den Berlin Triathlon XL 2019",
+      "title": "Miete dir ein Rennrad für den Berlin Triathlon XL 2019",
       "description": "Was: <b>Berlin Triathlon XL</b>  |  Wo: <b>Berlin</b>  |  Wann: <b>23. Juni 2019</b>",
       "text": "Du brauchst noch ein Rad für den <a href=\"http://www.berlintriathlon-xl.de/\" target=\"_blank\">Berlin Triathlon 2019 XL</a>? Die listnride Community bietet dir passende Rennräder, die du ganz einfach für deinen Wunschzeitraum mieten kannst. Einfach ein Rad unten auswählen, Wunschzeitraum im Kalender angeben und bequem abholen, wenn es soweit ist.\n<br><br>\nDu kannst leider nicht am Triathlon teilnehmen und dein Rennrad steht gerade mehr rum, als dass es gefahren wird? Dann hilf jemandem: verdiene dir nebenbei etwas Kleingeld und  <a href=\"/listing-a-bike\" target=\"_blank\">vermiete dein Rad</a>."
     },
@@ -469,12 +469,12 @@
       "text": "Logistik, Planung, Logistik. Wenn du nicht bereits auf der skandinavischen Halbinsel wohnst, ist der Transport deines Fahrrads nach Motala eine große logistische Herausforderung. Warum also nicht einfach ein Fahrrad mieten? \n<br> \n\nSpar dir Zeit, Mühe und Geld, indem du dir einfach ein Fahrrad ausleihst. Es kann sofort in Motala beginnen. Alles, was du mitbringen müsstest, ist ein Beleuchtungsset, Helm, Pedale und natürlich: dich selbst und deine Leidenschaft! <br>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Motala\">Gruppenbuchungen hier verfügbar!</a>"
     },
     "toros-de-gravel": {
-      "title": "Miet ein Gravelbike für Toros de Gravel",
+      "title": "Miet ein Gravelbike für die Toros de Gravel",
       "description": "Was: <b>Toros de Gravel </b>| wann: <b>13. Oktober </b>| Wo: <b>Sineu - Mallorca </b>",
       "text": "Toros de Gravel ist die erste Gravelveranstaltung auf Mallorca.  Diese herausfordernde aber entspannte Route erkundet kleine, unbekannte Ecken der Insel mit Checkpoints und Race-Segmenten, bevor sie in Sineus Velodrom endet, wo die Party im Anschluss rockt.  Passende Gravelbikes kannst du hier direkt ausleihen, indem du auf das Bike klickst und es anfragst."
     },
     "eroica-gaiole": {
-      "title": "Miete dein Vintage-Rennrad für die Eroica",
+      "title": "Miete dein Vintage-Rennrad für die Eroica auf listnride",
       "description": "wo: <b>Gaiole in Chianti, Toskana </b>| was: <b> L' Eroica,  Historisches Radrennen mit Vintage-Rennrädern </b>>| wann: <b>7.10.2018 </b>",
       "text": "Die Eroica ist ein weltbekanntes Radsportevent. Mit Routen entlang unbefestigter Strassen, auf historischen Stahlrennrädern, in Vintage-Bekleidung, erinnert die Eroica and das Radfahren der Vergangenheit.\nSuchst du ein Eroica-Rennrad? Zusammen mit der listnride-Community stellen wir hier passenden Leihrennräder zur Verfügung.\nWähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
     },
@@ -515,7 +515,7 @@
       "text-2": "Melde Dich an um dabei zu sein:<br><br><b>Wann</b> Sonntag, 24. September, ab 9:30 Kaffee<br><br><b>Wo</b> <a href=\"https://goo.gl/maps/QUoZoMcSQYk\">Velosoph Ziegelgasse 19, 85354 Freising</a><br><br><b>Departure</b> Start 10 Uhr<br><br><b>Strecke</b> Ca. 60 KM <br><br><b>Geschwindigkeit</b> 25-27 KMH",
       "sign-up": "Anmeldung",
       "home-page-1": "listnride x Velosoph",
-      "home-page-2": "Herbstausfahrt 24. Sep."
+      "home-page-2": "Herbstausfahrt"
     },
     "cyclassics-hamburg": {
       "meta-title": "Miete dir ein Rennrad für die EuroEyes Cyclassics in Hamburg auf listnride!",
@@ -534,7 +534,7 @@
     "riderman-rothaus": {
       "meta-title": "Miete dir einfach das perfekte Rennrad für die RiderMan in Bad Dürrheim",
       "meta-description": "Fahre die RiderMan Bad Dürrheim auf dem Rennrad deiner Träume! Wähle  Specialized, Ridley, Cervelo, Bianchi, sowie Simplon und miete es ganz bequem und einfach von Zuhause. ",
-      "title": "Miete dir einfach das perfekte Rennrad für den RiderMan Bad Dürrheim",
+      "title": "Miete dir einfach ein Rennrad für den RiderMan Bad Dürrheim",
       "text": "Die listnride Community bietet euch passende Rennräder an, die man ohne weiteres für den Wunschzeitraum mieten kann. Einfach eines der unten aufgeführten Räder auswählen, Leihzeitraum angeben und bequem abholen wenn es soweit ist. <br><br> Du kannst leider nicht bei den RiderMan teilnehmen und dein Rennrad steht gerade mehr rum als dass es gefahren wird? Dann hilf jemand anderes und verdiene dir nebenbei etwas Taschengeld und vermiete dein Rad.",
       "description": "Wo: <b>Bad Dürrheim</b>  |  Was: <b>RiderMan - 3-Etappenrennen</b>  |  Wann: <b>29.09 - 01-10.2017</b>"
     },
@@ -542,11 +542,11 @@
       "meta-title": "Miete dir einfach das perfekte Rennrad für den Velothon Berlin",
       "meta-description": "Radel mit listnride und Schicke Mütze  zum Grand Depart und miete dir hochwertige Rennräder aus der Community",
       "text-1": "Eine Ausfahrt für alle Radenthusiasten die Lust haben gemeinsam den Beginn der Tour de France in Düsseldorf zu zelebrieren. <br><br>Zusammen mit unseren Freunden und Lokalhelden von der <a href=\"http://schickemuetze.de\">Schicke Mütze </a> laden wir euch zu einer entspannten Ausfahrt ein. Mit entspannten Tempo werden wir eine schöne Runde durch die Hügellandschaft Düsseldorfs fahren.<br>Falls du noch ein Rennrad für die Ausfahrt benötigst, bist du herzlich willkommen dir ein hochwertiges Rennrad aus der listnride Bikesharing Community zu mieten. Wir sehen uns auf dem Rad :)",
-      "title": "Der Social Ride zum Grand Depart der Tour de France in Düsseldorf!",
+      "title": "Begleite uns auf der nächsten Ausfahrt und entdecke Düsseldorfs malerische Umgebung.!",
       "text-2": "<b>Am Freitag, 30. Juni 2017</b><br><br><b>Start mit Kaffee bei der Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Abfahrt um 10:00 Uhr <br><br>Distanz bis 60 km <br><br>Tempo 24-27 kmh, locker <br><br>Nach der Fahrt ab 18:00 - BBQ & Drinks @Schicke Mütze  - Untere Talstraße 22-24, Düsseldorf <br><br>Voraussetzungen Rennrad, Helm und Klickpedale</b>",
       "sign-up": "Kostenlos Anmelden",
       "description": "Brauchst du noch ein Rennrad für das Wochenende?",
-      "subdescription": "Du bist herzlich willkommen dir ein hochwertiges Rennrad aus der listnride Bikesharing Community zu mieten. Wir sehen uns auf dem Rad!"
+      "subdescription": "Zögere nicht dir ein hochwertiges Rennrad von der listnride Community zu mieten. "
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -554,24 +554,24 @@
     },
     "mcbw": {
       "description": "Erkunde München mit einem Rad von listnride",
-      "subdescription": "Zusammen mit Munix Finest Bicycles und Ampler bieten wir traumhafte Räder zum Verleih",
+      "subdescription": "Zusammen mit Munix Finest Bicycles und Ampler bieten wir fantastische Räder zum Verleih.",
       "subhead-1": "Der neue Fahrradverleih",
-      "subhead-2": "Leih dir ein kostenloses Rad",
+      "subhead-2": "Leih dir ein Rad",
       "text-1": "Konzipiert als Airbnb für Fahrräder, bietet listnride eine Alternative zum klassischen Fahrradverleih: Privatleute, Händler oder Hersteller bieten bei listnride ihre Fahrräder zum Verleih an. Touristen, Mitbürger, Familien, Sportler und Geschäftsreisende mieten je nach Bedarf genau das richtige Rad für ihren Stil und Zweck.",
       "text-2": "Während der MCBW können Besucher nun exklusiv an zwei Standorten Räder der Marken <b>Urban Arrow</b>, <b>Stromer</b>, <b>I:sy</b>, <b>Brompton</b> und <b>Ampler</b> vergünstigt <b>(Gutschein Code: 10FORU)</b> für einen Tag leihen. listnride verfolgt die Vision, möglichst vielen Menschen überall auf der Welt unkomplizierten und bedarfsgerechten Zugang zu hochwertigen, stilvollen Fahrrädern zu ermöglichen.",
-      "location-description": "Wähle einen der zwei Standorte",
-      "location-text": "Die zwei Standorte sind <b>① Munix Finest Bicycles</b> in der Wörthstraße 11, <b>② listnride</b> am Pündterplatz 1"
+      "location-description": "Wähle deinen Standort",
+      "location-text": "Die zwei Standorte sind <b>① Munix Finest Bicycles</b> in der Wörthstraße 11 und <b>② listnride</b> am Pündterplatz 1"
     },
     "cwd": {
       "home": {
-        "title": "listnride auf der Cycling World Düsseldorf",
+        "title": "listnride bei der Cycling World Düsseldorf",
         "description": "Deutschland bekommt mit der Cycling World eine neue, innovative Messe rund ums Fahrrad. Wir, listnride werden mit ausgewählten Marken und Herstellern wie Ampler und Cervélo vor Ort sein, unsere Online Plattform präsentieren und euch spontane Testfahrten anbieten. Zusätzlich wollen wir mit euch auf zwei geführten Rennrad Touren das Umland erkunden um die auf der Messe gewonnene Motivation direkt auf die Straße zu bringen!",
         "pp-title": "Samstag",
         "kr-title": "Sonntag",
         "pp-description": "Egal ob du ein erfahrener Roadbiker oder ein brandneuer Rooky bist, der Push'n'Post Ride bietet die perfekte Gelegenheit für eine Ausfahrt mit Gleichgesinnten in der schönen Umgebung Düssseldorfs während der CWD. Die Ausfahrt wird von unseren Partnern Cervelo und Cycle Cafe unterstützt.",
-        "kr-description": "Gemeinsam mit der Schicke Mütze  wird diese social Ride während der Cycling World stattfinden. Es wird eine sehr schöne Tour, welche unter anderem zu einer ehemaligen Raketenstation führt. Leihräder werden freundlicherweise von Cervélo und Ridley angeboten.",
+        "kr-description": "Zusammen mit Schicke Mütze organisieren wir eine gemeinsame Ausfahrt. Es wird eine landschaftlich sehr schöne Tour, welche unter anderem zu einer ehemaligen Raketenstation führt. Leihräder werden von Cervélo und Ridley angeboten.",
         "title2": "Wir bringen euch perfekte Räder zum Testen, von Ampler und Cervélo",
-        "subtitle2": "Ob nur für ein paar Minuten oder ein paar Stunden - einfach umsonst buchen",
+        "subtitle2": "Ob du das Rad nur für ein paar Stunden oder mehrere Tage testen willst- buche es einfach kostenlos ",
         "ampler": "Innovative, urbane E-Bikes aus Estland. Wähle zwischen Hawk, einem dynamischen Single-Speed, und Bilberry, dem komfortablen City-Bike und entdecke E-Bikes neu.",
         "cervelo": "Die kanadische Edelrennrad-Schmiede Cervélo gibt euch die Chance die neuesten Modelle an unserem Stand ausgiebig auf Herz und Nieren zu testen.",
         "our-bikes": "Unsere Räder auf der Messe"
@@ -589,8 +589,8 @@
     },
     "supercross-munich": {
       "meta-title": "Miete dir das perfekte Cyclocross Bike für den Supercross München bei listnride",
-      "meta-description": "Fahre den Supercross München auf dem Cyclocross Bike deiner Träume! Wähle BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus und anderen Marken.",
-      "title": "Miete das perfekte Cyclocross Bike für den Supercross München",
+      "meta-description": "Fahre den Supercross München auf dem Cyclocross Bike deiner Träume! Wähle zwischen BMC, Votec, Ridley, SRAM, Specialized, Bianchi, Pasculli, Focus und weiteren Marken.",
+      "title": "Miete das perfekte Rad für den Supercross München",
       "text": "Die listnride Community bietet dir die passenden Cyclocross Bikes für den Supercross München. Leihe dir ein Bike für das Rennen einen der Cross Social Rides oder um an den Cyclocross Workshops teilzunehmen.<br><br>Scrolle durch das Angebot und klicke auf ein Inserat, um es zu öffnen. Um mehr darüber zu erfahren, lies die Beschreibung und prüfe die verfügbare Ausstattung. Über den Buchungskalender kannst du dann das gewünschte Rad buchen."
     },
     "cape-argus": {
@@ -604,56 +604,56 @@
   },
   "how-to-shoot-bike-photo": {
     "header": "Tipps für gute Fotos",
-    "title": "Ein paar Foto-Tipps für ein attraktives Inserat",
+    "title": "Ein paar Foto-Tipps für eine herausragende Anzeige",
     "subtitle": "Das erste, was sich potentielle Mieter ansehen, wenn sie ein Mietrad auf listnride suchen, sind die Fotos im Überblick der Angebote. Leihräder mit guten Fotos bekommen mehr Interesse und werden öfter gebucht. ",
     "headline-1": "Beleuchtung",
-    "content-1": "Nutze natürliches Licht und mach deine Fotos draußen im Tageslicht oder innen in der Nähe eines Fensters oder einer weißen Wand. Licht am Morgen oder später am Nachmittag sorgt für die besten  Ergebnisse.",
+    "content-1": "Nutze natürliches Licht und mach deine Fotos draußen im Tageslicht oder drinnen in der Nähe eines Fensters oder einer weißen Wand. Licht am Morgen oder später am Nachmittag sorgt für die besten  Ergebnisse.",
     "headline-2": "Hintergrund",
     "content-2": "Gestalte deinen Hintergrund so einfach wie möglich. Versuche einen Kontrast mit deinem Fahrrad zu erzeugen. Du kannst es zum Beispiel vor eine Betonmauer stellen.",
     "headline-3": "Aufnahme",
     "content-3": "Zeige verschiedene Perspektiven deines Fahrrads, mach das Foto z.B. aus einem Winkel als ausschließlich direkt von vorne. Die Auflösung ist wichtig: Nimm Fotos auf, die mindestens 1500 x 1000 Pixel groß sind. Im Zweifel ist ein größeres Foto immer besser.",
-    "headline-4": "Motiv",
+    "headline-4": "Highlights",
     "content-4": "Hebe die Besonderheiten hervor. Nicht auf allen Bildern muss das Fahrrad komplett zu sehen sein. Es ist besser, einige Detailaufnahmen zu machen, wie vom Markennamen, der Farbe, den Lichtern, Schloss etc. Bilder sagen oft mehr als Worte. Nimm deine Fotos im Querformat auf: Vertikale Bilder zeigen deine Räder nicht so gut."
   },
   "brand-integration": {
     "shared": {
-      "choose-location": "Choose a test location",
+      "choose-location": "Wähle einen Test-Ort.",
       "no-bikes-found": "Ups ... hier werden leider noch keine Fahrräder angeboten.",
       "faq": "Die häufigsten Fragen"
     },
     "rossignol": {
-      "title": "Rent and test ride Rossignol bikes",
+      "title": "Miete und teste Räder von Rossignol ",
       "description": "The leading brand in winter sports is extending its reach beyond winterized products. Today, the new Rossignol 2019 bike collection includes an offer of Mountain Bikes and E-Bikes to let you enjoy your riding experience, whether you are cruising with your family or racing with friends. #anotherbestday",
       "item1-title": "Design",
       "item1-description": "Now with the support, collaboration, and expertise of our friends at Felt, we’re producing a very focused and credible product offering. One that’s unique in its construction, geometry, and components.",
       "item2-title": "E-Track",
       "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
-      "item3-title": "Another Best Day",
+      "item3-title": "Noch ein bester Tag",
       "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
-      "find-out-more": "Learn more about Rossignol bikes",
+      "find-out-more": "Erfahre mehr über Räder von Rossignol",
       "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"https://www.rossignol.com/int-en/rossignol-bike/rossignol-rike-mountain-bikes.html\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "yuba": {
-      "title": "Miete und teste Yuba Bikes bei listnride. Yuba - das Lastenrad mit dem großem Gepäckträger. ",
+      "title": "Miete und teste Yuba Bikes bei listnride. ",
       "description": "Yuba - das Lastenrad mit dem großem Gepäckträger. Das Besondere an einem Yuba ist zum einen der extra lange Gepäckträger, auf dem Platz für bis zu zwei Kindersitze oder drei Kinder ist. Andererseits gibt es vielseitige Stauräume an der Seite des Rahmens. Trotz einer maximalen Nutzlast von bis zu 200 kg sind die Yubas dynamisch und leicht zu lenken. Den Unterschied zu einem normalen Fahrrad merkt man kaum!",
       "item1-title": "Kompakt",
       "item1-description": "Alle Yuba Modelle sind nur so groß wie nötig. Dadurch sind sie wendig, leicht zu fahren und platzsparend zu parken.",
       "item2-title": "Vielseitig",
-      "item2-description": "Aus der bunten Zubehörvielfalt kannst du dir für den Personen- sowie Lastentransport die passende Erweiterung aussuchen.",
+      "item2-description": "Aus der bunten Zubehörsvielfalt kannst du dir für den Personen- sowie Lastentransport die passende Erweiterung aussuchen.",
       "item3-title": "Spaßfaktor",
-      "item3-description": "Der Yuba Spaßfaktor ist so hoch, dass du es nach kurzer Zeit auch als Alltagsrad sowie als Freizeit- und Ausflugsrad verwenden wirst!",
+      "item3-description": "Ein Yuba Bike macht so viel Spaß, dass du es nach kurzer Zeit auch als Alltagsrad sowie als Freizeit- und Ausflugsrad verwenden wirst!",
       "find-out-more": "Erfahre mehr über Yuba Bikes ",
       "order-online": "Besuche den List and Ride Experience Center um Yuba kennenzulernen und vor deiner Kaufentscheidung ausführlich zu testen. Hier findest Du die <a href=\"https://www.yubaeurope.com/\" target=\"_blank\">gesamte Auswahl an Yuba Bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49 030 120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "urwahn": {
-      "title": "#MadewithLove #Germany #SteelisReal",
-      "description": "Buche dir eine Probefahrt für das <a href=\"https://www.urwahnbikes.com\" target=\"_blank\">Urwahn</a> Stadtfuchs heute! Das stilvolle urban bike kannst du einfach buchen und probefahren in München!",
+      "title": "MadewithLove #Germany #SteelisReal",
+      "description": "Buche dir noch heute eine Probefahrt für den <a href=\"https://www.urwahnbikes.com\" target=\"_blank\">Urwahn</a> Stadtfuchs! Das stilvolle urbane Rad kannst du einfach online buchen und Probe fahren in München!",
       "item1-title": "Stahl neu interpretiert",
       "item2-title": "Integriertes LED-Lichtsystem ",
       "item3-title": "Qualität aus Deutschland",
-      "item3-description": "Stahlrahmen vollständig</br>\nin Deutschland gefertigt</br>\nvon ausgewählten regionalen Partnern",
-      "find-out-more": "Mehr Erfahren über Urwahn Engineering",
-      "order-online": "Bestelle dein <a href=\"https://www.urwahnbikes.com/\" target=\"_blank\">Urwahn</a> und wir erstatten Dir die Miete für deine Testfahrt!\nSiehe unten die häufigsten Fragen und Antworten.",
+      "item3-description": "Stahlrahmen </br>\nkomplett in Deutschland gefertigt</br>\nvon ausgewählten regionalen Partnern",
+      "find-out-more": "Erfahre mehr über Urwahn ",
+      "order-online": "Bestelle dein <a href=\"https://www.urwahnbikes.com/\" target=\"_blank\">Urwahn</a> und wir erstatten Dir die Miete für deine Testfahrt! Weiter unten findest du die häufigsten Fragen und Antworten.",
       "faq-question-1": "Warum diese Rahmenstruktur?",
       "faq-answer-1": "Mit dieser neuartige Rahmenstruktur haben wir einen elastischen Hinterbau geschaffen, der Fahrbahnunebenheiten durch die spezielle Form des Hinterbaus ausgleicht, ohne an Tretlagersteifigkeit und Pedalkraft einzubüßen. Mehr Komfort bei gleichzeitig hoher Performance wird bei dir ein gänzlich neues Fahrgefühl hervorrufen.",
       "faq-question-2": "Ist der filigrane Stahlrahmen sicher?",
@@ -662,7 +662,7 @@
       "faq-answer-3": "Das LED-Licht wird es autark und steckerlos über einen der stärksten Nabendynamos auf dem Markt dauerhaft mit Strom versorgt. Du kannst dich wieder auf das Wesentliche konzentrieren ohne befürchten zu müssen, dass dir der Saft ausgeht. Fest mit dem Stahlrahmen vereint, führst du dein Front- und Rücklicht immer mit dir. ",
       "faq-question-4": "Wie funktioniert das Tracking?",
       "faq-answer-4": "Du verbindest dein Smartphone per Bluetooth mit deinem Urwahn Bike und lockst es über die Urwahn App. Die eingebaute Sensorik misst grobe Erschütterungen bei Diebstahlversuchen und benachrichtigt dich umgehend mit einer Push-Benachrichtigung. Im Rahmen verbaut, kann das Tracking-System weder zerstört, entfernt noch abgeschaltet werden.",
-      "faq-question-5": "Was ist bei euch Made in Germany?",
+      "faq-question-5": "Was Teile sind \"Made in Germany\"?",
       "faq-answer-5": "Entgegen dem Branchenstandard wird der innovative Urwahn Stahlrahmen vollständig in Deutschland gefertigt. Der finale Zusammenbau unserer Urwahn Bikes unterliegt sehr hohen Qualitätsansprüchen und findet in der Nähe unseres Unternehmenssitzes in Magdeburg statt.",
       "faq-question-6": "Warum eigentlich Stadtfuchs?",
       "faq-answer-6": "Mit viel Raffinesse und Ideenreichtum erobert dieser meisterhafte Anpassungskünstler unsere Städte und schlängelt sich auf der Jagd mühe- sowie lautlos durch die kleinsten Winkel. Ähnlich der Hinterläufe eines Fuchses garantiert der elastische Hinterbau dynamische Wendigkeit und gleicht Fahrbahnunebenheiten zu Gunsten deines Fahrkomforts aus.",
@@ -702,11 +702,11 @@
       "item1-description": "Keine Knöpfe, keine Zahnräder. \n</br>Intuitive Motorassistenz adaptiert </br>automatisch, zum Antreiben der benötigten Geschwindigkeit. ",
       "description": "Designed, um die Straße zu beherrschen und den Pendelverkehr zu bezwingen</br>\nFahren Sie mit einem preisgekrönten Fahrrad durch Ihre Stadt.",
       "item1-title": "Die Straße gehört dir",
-      "item2-title": "Sicherheit groß geschrieben",
+      "item2-title": "Sicherheit geht vor",
       "item2-description": "Auf der Pirsch in der Dämmerung oder im Morgengrauen. </br>Verstärkende Lichter und hydraulische Bremsen immer da, wo man langsamer wird. </br>Und dann verschwindest du.",
       "item3-title": "Verfolge jede Spur",
       "item3-description": "Eingebautes GPS-Tracking sichert, dass dein Fahrrad immer griffbereit ist. </br>Bleibe verbunden, wenn es in der Nähe gesperrt ist, keine Bewegung ohne dich.</br>",
-      "find-out-more": "Miete und teste Cowboy Bikes noch heute! Cowboy - Das Elektrofahrrad für Stadtfahrer.",
+      "find-out-more": "Miete und teste Cowboy Bikes noch heute! Cowboy - Das Elektrofahrrad für urbane Radler.",
       "order-online": "Das Cowboy Bike ist das erste Fahrrad, das dir die Freiheit gibt, die Straße zu beherrschen.. Durch eine Leidenschaft für Design und Technologie, die in Einklang steht, um einen neuen Weg für Menschen und Systeme zu erschließen, schaffen wir eine neue Erfahrung für Menschen, sich frei in Städten zu bewegen.</br><a href=\"https://cowboy.com/\" target=\"_blank\">Lernen mehr auf Cowboy.com</a>>",
       "faq-question-1": "Verkaufen Sie verschiedene Rahmengrößen?",
       "faq-answer-1": "Aktuell verkaufen wir ein universales Modell, dass bei Menschen mit einer Körpergröße zwischen 170cm und 195cm passt. Der Sattel lässt sich ganz einfach mit Hilfe eines Inbus-Schlüssels anpassen (detaillierte Anweisungen lassen sich in der Anleitung nachlesen). Falls du unsicher über die für dich passende Höhe bist, vereinbare gerne eine Probefahrt mit deinem Bike und wir helfen dir bei der Feinabstimmung ",
@@ -748,10 +748,10 @@
       }
     },
     "felt": {
-      "title": "Rent and test ride Felt road bikes in Munich",
+      "title": "Miete und teste Felt Rennräder in Berlin & München",
       "description": "As countless frame makers experimented with new materials and unorthodox aesthetics, Felt Bicycles focused on function over form, on a painstakingly iterative design process, and on adapting the bike’s characteristics to the fit needs of the rider, rather than the other way around. Felt’s goal is to produce the best bicycle possible, regardless of how long it takes.",
       "feature-1": {
-        "title": "Design Methodology",
+        "title": "Design Methode",
         "description": "The introduction of a new Felt bicycle comes at the conclusion of a long, thoughtful, and rigorous process. The amount of time from initial concept to a new bike can take years to complete."
       },
       "feature-2": {
@@ -763,7 +763,7 @@
         "description": "Felt aero bikes are wind tunnel developed. They are bringing prototypes to the wind tunnel, making changes, and then going back and refining the design before the carbon fiber molds are ever cut."
       },
       "find-out-more": {
-        "title": "Learn more about Felt Bicycles",
+        "title": "Erfahre mehr über Felt Räder",
         "description": "Find a dealer and buy your <a href=\"https://eu-en.feltbicycles.com/pages/dealers\" target=\"_blank\">Felt Bicycle</a>, and get your listnride rental reimbursed. Check out their <a href=\"https://eu-en.feltbicycles.com/pages/faq\" target=\"_blank\">FAQ</a> and learn more about Felt Bicycles. "
       }
     },
@@ -778,7 +778,7 @@
       "item2-description": "Der Goldstandard im Radfahren durch Attitude und Stolz; Wir beweisen täglich, dass wir in der Lage sind, das Beste zu leisten.",
       "item3-title": "Best Performance",
       "item3-description": "Komfort, Steifheit und Gewicht in einer optimalen Balance",
-      "find-out-more": "Buche dir eine Probefahrt für Argon 18.",
+      "find-out-more": "Buche dir eine Testfahrt für Argon 18 Rennräder und Gravelbikes!",
       "order-online": "Weltweit führend in der High-End-Fahrradherstellung</br></br>Exzellenz ist keine Frage des reinen Glücks. Es ist das Ergebnis sorgfältiger und meisterhafter Handwerksarbeit. Argon 18 ist bekannt für die Integration intensiver Forschung in das Design und die Entwicklung seiner Fahrräder, die innovativ und doch klassisch, spektakulär und elegant sind. Mehr erfahren auf Argon18</br>\nDein Argon18 kann direkt online unter <a href=\"https://www.argon18bike.com/\" target=\"_blank\">https://www.argon18bike.com</a> bestellt werden.",
       "faq-question-1": "Wo kann man kaufen und seinen Service durchführen lassen? ",
       "faq-answer-1": "Bei unserem Händler in Berlin - List and Ride - kannst du dein Fahrrad konfigurieren und direkt online bestellen. Das Fahrrad wird in den List and Ride Showroom ausgeliefert und steht sofort für dich zum Ausrollen bereit. Weitere Händler findest du unter <a href=\"https://www.argon18bike.com/\" target=\"_blank\">  www.argon18bike.com</a>",
@@ -1014,7 +1014,7 @@
       "subdescription": "Das Singlespeed/Fixie-Bike \"bonvelo BLIZZ\" ist in vier unterschiedlichen Rahmengrößen zum Test in Berlin verfügbar ",
       "item1-title": "Passt zu Dir!",
       "item1-description": "4 unterschiedliche Rahmengrößen<br>8 stylische Farbvarianten<br>Individuelles Zubehör erhältlich",
-      "item2-title": "Dein Bike für deinen Kiez",
+      "item2-title": "Dein Rad für deinen Kiez",
       "item2-description": "Wendiges Fahrverhalten<br>Unempfindliche Pulverbeschichtung<br>Hochwertige, belastbare Komponenten<br>Purer Vortrieb & langanhaltender Fahrspaß",
       "item3-title": "Tolles Preis-/Leistungserlebnis",
       "item3-description": "Singlespeed Bikes schon ab €349<br>Hohe Kundenzufriedenheit<br>Persönlicher Service<br>Schnelle Lieferung nach Berlin ",
@@ -1200,7 +1200,7 @@
     "meta-description": "listnride - wie wir die Plattform für online Fahrradverleih aufgebaut haben"
   },
   "contact-and-help": {
-    "title": "Hilfe",
+    "title": "Hilfe & Kontakt",
     "meta-title": "listnride ist für dich da",
     "meta-description": "Kontaktiere uns, wenn du spezielle Fragen oder Probleme hast.",
     "faq-section": {
@@ -1216,7 +1216,7 @@
         "answer-3": "Fahrraddiebstähle kommen vor – allerdings nicht oft, wenn das Rad ordnungsgemäß abgesperrt oder in einem Gebäude abgestellt wird. Helf mit, Diebstählen vorzubeugen, indem du das Mietrad mit einem guten Fahrradschloss ausstattet. Falls doch mal etwas schiefgeht, ist der Rider für alle möglicherweise entstandenen Schäden oder auch einen Diebstahl und die damit verbundenen Kosten verantwortlich. Wird dein Mietrad während des Mietzeitraums gestohlen bzw. beschädigt, ist es erforderlich, dass du und der Rider euch über unsere Webseite unter „Kontakt“ mit uns in Verbindung setzt. Nachdem wir uns einen Überblick über die Situation verschafft haben, melden wir uns bei Dir und suchen eine Lösung. Wurde das Mietrad gestohlen und der Rider kann keinen Schadensersatz leisten, ist über die listnride-Garantie gewährleistet, dass alles abgedeckt ist! Wurde dein Mietrad jedoch gestohlen, als es gerade nicht über listnride verliehen wurde, können wir nicht zu einer Problemlösung beitragen. In diesen Fällen musst du die Sachlage direkt mit dem Rider klären.",
         "question-4": "Was tun, wenn im Mietzeitraum der Fahrer oder eine andere Person zu Schaden kommt oder ein Sachschaden entsteht? ",
         "answer-4": "Stell immer sicher, dass das Mietrad bei Übergabe in einem guten Zustand ist. Davon profitieren beide Seiten: Der Rider hat mehr Spaß beim Fahren, und du erhältst nach Rückgabe eine positive Bewertung. Leiht er sich ein Rad über listnride, erklärt sich der Mieter mit den jeweils geltenden Bestimmungen einverstanden. Diese Bestimmungen schützen dich, wenn der Rider verletzt oder das Eigentum Dritter beschädigt wird – als Lister/Anbieter bist du nie dafür verantwortlich, wenn der Mieter während einer Fahrt mit deinem Rad zu Schaden kommt.",
-        "question-5": "Was tun, wenn der Rider nicht wie vereinbart zum Abholen des Rads erscheint?",
+        "question-5": "Was tun, wenn der Mieter nicht wie vereinbart zum Abholen des Rades erscheint?",
         "answer-5": "Es kann einmal vorkommen, dass die Rider Probleme haben, an den vereinbarten Übergabeort zu gelangen. Daher ist es wichtig, hier zumindest ein bisschen flexibel zu sein. Dauert es jedoch übermäßig lang und du hast bereits über den Chat in der listnride-App oder auch direkt telefonisch versucht, den Rider zu erreichen und dieser meldet sich nicht, kannst du den Mietvorgang über eine Nachricht im Chat stornieren. Hierfür musts du den Stornierungsgrund angeben. ",
         "question-6": "Wie biete ich mein Fahrrad zum Verleih an?",
         "answer-6": "Um ein Mietrad anzubieten, musst du dich zunächst registrieren. Klick dazu einfach auf „Registrieren“ und mach alle notwendigen Angaben. Hast du dich registriert, meldest du dich einfach mit deiner E-Mail-Adresse und deinem Passwort an. Klick oben rechts auf deinen Account und dann auf „Mietrad anbieten“. Mach detaillierte Angaben zum Mietrad und füge noch einige gute, scharfe Fotos hinzu. Leg einen Preis fest und klick auf „Mietrad anbieten“. Nach ein paar Sekunden sind deine Angaben hochgeladen. Du findest dein Mietrad dann im Menü deines Accounts unter „Angebotene Mieträder“. Dort kannst du deine Mieträder auch bearbeiten oder entfernen.",
@@ -1228,11 +1228,11 @@
         "answer-9": "Die Zahlung des Gesamtmietpreises abzüglich der listnride-Provision in Höhe von 7,5 % erfolgt innerhalb von 5 Werktagen nach Ende des Mietzeitraums. Die Zahlung wird entweder über PayPal oder per Banküberweisung durchgeführt. Unter „Profil bearbeiten“ in deinem Account kannst du Deine Kontodaten eingeben bzw. ändern. ",
         "question-10": "Kann ich mein Mietrad auch an anderen Standorten anbieten, die nicht auf der Webseite aufgeführt sind?",
         "answer-10": "Ja, listnride ist eine internationale Plattform, auf der Mieträder an jedem Standort weltweit gelistet werden können. ",
-        "question-11": "Wie kann ich eine Listung vorübergehend aussetzen oder ein Mietrad deaktivieren?",
+        "question-11": "Wie kann ich eine Anzeige vorübergehend aussetzen oder ein Mietrad deaktivieren?",
         "answer-11": "Wenn dein Mietrad eine Zeit lang nicht zur Verfügung steht, musst du deine Listung nicht löschen. Über „Angebotene Mieträder“ im Menü deines Accounts kannst du das entsprechende Mietrad einfach deaktivieren. In diesem Untermenü findest du all deine Mieträder. Klick einfach auf „Mietrad deaktivieren“ für das Rad, das du gerne deaktivieren würdet. ",
-        "question-12": "Wie ändere ich die Bilder oder Infos zu einem Mietrad?",
+        "question-12": "Wie ändere ich die Bilder oder Infos zu meinem Rad?",
         "answer-12": "Um die Bilder oder Detailangaben zu einem Mietrad zu ändern, klick einfach auf „Angebotene Mieträder“ im Menü Deines Accounts. Klick dann auf „Mietrad bearbeiten“, um Deine Änderungen durchzuführen. Bestätige Deine Änderungen durch einen Klick auf „Mietrad aktualisieren“.",
-        "question-13": "Wie lösche ich mein Mietrad?",
+        "question-13": "Wie lösche ich mein angebotenes Rad?",
         "answer-13": "Willst du ein bestimmtes Mietrad nicht mehr anbieten, kannst du es unter „Angebotene Mieträder“ im Menü Deines Accounts löschen. In der iPhone-App wischt du dazu einfach nach links über das Mietrad, das du löschen möchtest und klickst auf „Löschen“. Auf der Webseite klickst du einfach auf „Mietrad löschen“. Nach einigen Sekunden erhältst du die Bestätigung „Mietrad erfolgreich gelöscht“. ",
         "question-14": "Wie verleihe ich über listnride ein Fahrrad?",
         "answer-14": "Wenn du eine Anfrage für eines Deiner Mieträder erhalten hast, geh einfach in die App oder auf die Webseite und melde Dich mit deinem Account an. In der Accountübersicht klickst du oben rechts und gehst dann auf „Anfrage an mich“ im Menü Deines Accounts. Hier findest du die Anfrage, die du erhalten hast. Klick auf die Anfrage und antworte dem Interessenten und nehm die Anfrage entweder an oder lehn sie ab. Gleichzeitig kannst du auch mit dem Interessenten chatten, um alle Details zu klären. Wenn du die Anfrage annimmst, muss der Interessent seine Anfrage noch bestätigen und per Vorkasse bezahlen. Sobald er bestätigt und die Zahlung getätigt hat, erhältst du per E-Mail eine Benachrichtigung und der Status in deinem Account wird aktualisiert. ",
@@ -1240,7 +1240,7 @@
         "answer-15": "Wenn sich der Mietzeitraum im Laufe Deiner Kommunikation mit dem Interessenten geändert hat, solltest du ihn darum bitten, Dir eine neue Anfrage mit den korrekten Datum und der richtigen Uhrzeit zu senden, damit die listnride-Garantie für den Verleih gilt. ",
         "question-16": "Was tun, wenn der angefragte Zeitraum für mich ungünstig ist?",
         "answer-16": "Passt der Angefragte Mietzeitraum bei Dir nicht, könntest du entweder jemanden bitten, ob er für Dich das Mietrad und die Schlüssel übergeben kann, oder, falls das nicht möglich ist, die Anfrage einfach ablehnen. Wir würden uns freuen, wenn du kurz begründest, warum die Anfrage abgelehnt werden muss. ",
-        "question-17": "Wie kontaktiere ich den Rider sobald das Mietrad bestätigt wurde?",
+        "question-17": "Wie kontaktiere ich den Mieter sobald das Mietrad bestätigt wurde?",
         "answer-17": "Hierfür kannst du wieder den In-App-Chat verwenden, den du auch schon für die Klärung der Mietanfrage genutzt hast. Geh einfach auf „Anfragen an mich“ im Menü deines Accounts und klick auf das entsprechende Mietrad. In der Bestätigungsmail zum Verleih findest du alle Angaben über den Mieter – einschließlich seiner Handynummer. ",
         "question-18": "Wie erhalte ich Bewertungen für meine Listung?",
         "answer-18": "Nach Rückgabe des Fahrrads wird der Rider gebeten, Dich als Lister und dein Mietrad zu bewerten. Sobald eine Bewertung abgegeben wurde, wird bei deinem Mietrad ein Bewertungsscore angezeigt. Um gute Bewertungen zu erhalten, empfehlen wir Dir, das Mietrad und den jeweiligen Zustand wahrheitsgemäß zu beschreiben. "
@@ -1250,16 +1250,16 @@
         "question-1": "Wie leihe ich mir ein Fahrrad aus?",
         "answer-1": "Bevor du dir ein Fahrrad ausleihen kannst, musst du dich zunächst registrieren. Klick dazu einfach auf „Registrieren“ und mach alle erforderlichen Angaben. Sobald du registriert bist, kannst du dich mit deiner E-Mail-Adresse und deinem Passwort anmelden. Such dir ein Fahrrad aus, das dir gefällt und deine Anforderungen erfüllt, und wähle ein Startdatum, eine Abholzeit, ein Enddatum und eine Rückgabezeit, und klick dann auf „Mietrad anfragen“. Wurde deine Anfrage angenommen, kannst du über die Schaltfläche „Anfrage bestätigen“ fest zusagen und die Zahlung durchführen. Sobald der Zahlungsvorgang erfolgreich abgeschlossen wurde, erhältst du eine Bestätigung mit allen Einzelheiten zum Verleih.",
         "question-2": "Wie storniere ich eine Anfrage?",
-        "answer-2": "In der Statusanzeige für Deine Anfrage kannst du die Anfrage vor durchführung der Zahlung jederzeit stornieren. Klick dazu im Anfragefenster auf „Anfrage stornieren“. ",
+        "answer-2": "In der Statusanzeige für Deine Anfrage kannst du die Anfrage vor Durchführung der Zahlung jederzeit stornieren. Klicke dazu im Anfragefenster auf „Anfrage stornieren“. ",
         "question-3": "Kann ich mehr als eine Anfrage gleichzeitig senden?",
         "answer-3": "Ja, du kannst für mehrere Mieträder gleichzeitig eine Anfrage senden, wenn du möglichst schnell eine Rückmeldung von einem der Anbieter erhalten möchtest. Sobald einer der Besitzer eines Mietrads Deine Anfrage angenommen hat, kannst du die Anfrage bestätigen. Solange du eine Anfrage nicht bestätigt hast, kommt keine Buchung und damit auch keine Transaktion zustande. Sagst du jedoch eines der angefragten Mieträder zu, möchten wir Dich bitten, daran zu denken, die anderen Anfragen zu stornieren, damit die anderen Anbieter Bescheid wissen.",
         "question-4": "Was mache ich, wenn der Lister nicht reagiert?",
         "answer-4": "Leider kann aus verschiedenen Gründen nicht jeder Anbieter immer direkt antworten – beispielsweise, wenn er gerade kein Internet zur Verfügung hat. Wir tun unser Bestes, um die Reaktionszeiten so kurz wie möglich zu halten. Wenn du kurzfristig ein Fahrrad ausleihen willst, empfehlen wir, mehrere Anfragen gleichzeitig zu stellen, um Deine Chancen zu erhöhen, ein Fahrrad zu finden, das Dir gefällt und Deinen Anforderungen entspricht. ",
         "question-5": "Wie bezahle ich das Mietrad?",
-        "answer-5": "Du kannst entweder über die App oder unsere Webseite eine Anfrage bestätigen und die entsprechende Zahlung tätigen. Mögliche Zahlungsmethoden sind Kreditkarte oder PayPal. Wir erweitern derzeit jedoch die angebotenen Zahlungsmöglichkeiten – wir halten euch auf dem Laufenden!",
+        "answer-5": "Mögliche Zahlungsmethoden sind Kreditkarte oder PayPal. Wir erweitern derzeit jedoch die angebotenen Zahlungsmöglichkeiten – wir halten dich auf dem Laufenden!",
         "question-6": "Was mache ich, wenn ich einen Platten habe?",
         "answer-6": "Ein platter Reifen kommt immer mal wieder vor. Du bist dafür verantwortlich, das Fahrrad in dem Zustand wieder zurückzubringen, in dem du es bei Übergabe erhalten hast. Daher solltest du entweder ein Fahrradgeschäft aufsuchen, um den Platten reparieren lassen, oder bereit sein, den Schaden entsprechend zu begleichen. Wir sind der Auffassung, dass eine Zahlung von etwa 15 € hierfür angemessen wäre.",
-        "question-7": "Wie schließe ich mein Rad sicher ab, und wie kann ich einen Diebstahl verhindern?",
+        "question-7": "Wie schließe ich mein Rad sicher ab um Diebstahl zu verhindern?",
         "answer-7": "Um einen Diebstahl zu verhindern, empfehlen wir, den Lister danach zu fragen, wie man sich vor Ort am besten verhält. Wir empfehlen normalerweise, das Fahrrad an einen festen Gegenstand anzuschließen (Laternenpfahl, Baum, o. Ä.) und dabei das Schloss durch Vorderreifen und Rahmen zu ziehen, damit das Rad nicht einfach wegbewegt werden kann. Über Nacht empfehlen wir, das Fahrrad immer in einem geschlossenen Bereich oder in einem Gebäude abzustellen.",
         "question-8": "Was tun, wenn mir das Rad während der Mietdauer gestohlen wird?",
         "answer-8": "Ein Diebstahl des Mietrads ist immer sehr ungünstig. Bitte nutze den Helpdesk, um uns unverzüglich davon in Kenntnis zu setzen. Wir teilen Dir dann mit, was zu tun ist. Denk immer daran, dass du alleine während der Mietdauer für das Fahrrad verantwortlich bist, und das Fahrrad unter Umständen ersetzen musst. ",
@@ -1272,24 +1272,24 @@
       }
     },
     "contact-section": {
-      "header": "Keine Antwort für Dich dabei?",
+      "header": "Nicht die richtige Antwort für Dich dabei?",
       "subheader": "Kontaktiere uns zu speziellen Fragen oder falls Unstimmigkeiten beim Verleihprozess über listnride auftauchen:",
-      "title": "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle:",
+      "title": "Unsere FAQs haben nicht die richtige Antwort für Dich parat? Dann wähle eins der folgenden:",
       "list-1": "Ich möchte eine verdächtige Anfrage melden",
-      "list-2": "Ich möchte eine verdächtige Listung melden",
+      "list-2": "Ich möchte eine verdächtige Anzeige melden",
       "list-3": "Ich möchte Schwierigkeiten mit meinem Mieter/Vermieter melden",
-      "list-4": "Ich habe eine Frage zu Zahlungen",
+      "list-4": "Ich habe eine Frage zu den Zahlungen",
       "list-5": "Ich habe eine allgemeine Frage"
     }
   },
   "press": {
-    "title": "Press",
+    "title": "Presse",
     "header": "Pressebereich",
-    "subheader": "Infos bereit zum Download. listnride bereit zum Gespräch.",
+    "subheader": "Infos bereit zum Download. ",
     "comm-and-pr": "Kommunikation und PR",
     "kit": {
       "title": "Pressemappe",
-      "content": "List and Ride das aufstrebendes Start-Up für Online Fahrradverleih. Erfahre mehr in unserer Pressemappe,",
+      "content": "List and Ride: das aufstrebende Start-Up für Online Fahrradverleih. Erfahre mehr in unserer Pressemappe,",
       "download": "die wir Ihnen hier bereitgestellt haben",
       "link": "https://docs.google.com/forms/d/e/1FAIpQLScjTUbiBpo4SIPoG_skeF6mFYfVYblLcEvCbQAur7lrWgdd4Q/viewform?usp=pp_url"
     },
@@ -1313,17 +1313,17 @@
     "form-feedback": "Vielen Dank! Du hast dich erfolgreich für eine Investition vorgemerkt.",
     "faq-question-1": "WARUM STARTET LISTNRIDE EINE CROWDFUNDING-KAMPAGNE?",
     "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage bieten.",
-    "faq-question-2": "WIE KANN ICH IN LISTNRIDE INVESTIEREN?",
+    "faq-question-2": "Wie kann ich in listnride investieren?",
     "faq-answer-2": "Wir arbeiten mit Seedrs, der führende Crowdfunding-Plattform in Europa, um unsere Crowdfunding-Kampagne durchzuführen. Um zu investieren, musst du lediglich auf der Website <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> einen Account erstellen.",
-    "faq-question-3": "WELCHE RISIKEN SIND DAMIT VERBUNDEN?",
+    "faq-question-3": "Welche Risiken sind damit verbunden?",
     "faq-answer-3": "In ein Startup zu investieren birgt auch immer einige Risiken, wie z.B. den Verlust von Kapital, Zahlungsunfähigkeit, das Ausbleiben von Dividenden und Kapitalverwässerung. Daher sollte es immer Teil eines diversifizierten Portfolios sein. Falls du mehr erfahren möchtest, bietet Seedrs eine detaillierte Beschreibung der <a href=\"https://www.seedrs.com/risk_warning\" target=\"_blank\">Risiken</a>",
-    "faq-question-4": "GIBT ES EINEN MINDESTBETRAG, DEN ICH INVESTIEREN MUSS?",
+    "faq-question-4": "Was ist der Mindestbetrag den ich investieren muss?",
     "faq-answer-4": "Da wir so viele Personen wie möglich involvieren wollen, halten wir das Mindestinvestment niedrig, bei unter 10€ (exakter Betrag hängt von den Wechselkursen ab). Wir freuen uns über jeden Beitrag!",
-    "faq-question-5": "WAS HAT LISTNRIDE BISHER ERREICHT?",
+    "faq-question-5": "Was hat listnride bisher erreicht?",
     "faq-answer-5": "Seit unserem offiziellen Start im September 2016 als wir unsere Web Plattform gelauncht haben: ist listnride zur größten Fahrrad Verleih Plattform in der DACH Region, mit über 1.100 Räder und 1.600 registrierten Usern, gewachsen. listnride hat über 100 Fahrradläden und 5 innovative Fahrradmarken für ein Testride Program auf der Plattform integriert. listnride hat eine starke Präsenz in Berlin, München, Wien, Amsterdam und Mallorca aufgebaut und wächst in weiteren Großstädten wie Hamburg, Zürich und Düsseldorf.",
-    "faq-question-6": "WIE KANN ICH MIT MEINEM INVESTMENT GELD VERDIENEN?",
+    "faq-question-6": "Wie kann ich mit meinem Investment Geld verdienen?",
     "faq-answer-6": "Es handelt sich um eine langfristige Investition und du kannst damit Gewinne erzielen, wenn du deine Anteile für mehr Geld verkaufst, als du bezahlt hast. Wenn listnride einen Exit macht und zum Beispiel von einem anderen Unternehmen übernommen wird, ist es wahrscheinlich, dass du deine Anteile zu diesem Zeitpunkt verkaufen kannst. Seedrs hat eine ausführliche Erklärung hier: <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">Seedrs Campaign</a>",
-    "faq-question-7": "WIE WIRD DAS EINGESAMMELTE GELD VERWENDET?",
+    "faq-question-7": "Wie wird das gesammelte Geld eingesetzt?",
     "faq-answer-7": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones.",
     "faq-question-8": "WEITERE FRAGEN?",
     "faq-answer-8": "Wir freuen uns über dein Interesse. Wenn du weitere Fragen hast, kontaktiere uns einfach unter contact@listnride.com und wir werden uns schnellstmöglich melden."
@@ -1341,22 +1341,22 @@
     "header": "Sorgenfrei in die Pedale treten",
     "subheader": "Wir handeln in deinem Sinne",
     "cover": {
-      "logo": "insert logo here",
+      "logo": "Logo hier einfügen",
       "header": "Schäden sind kein Ruin",
       "description": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones."
     },
     "control": {
-      "logo": "hier logo einfügen",
+      "logo": "Hier logo einfügen",
       "header": "Deine Daten in guten Händen",
       "description": "Deine Adresse und der Standort Deines Fahrrades sind nicht im öffentlichen Profil. Sie können nicht eingesehen werden. Erst zur Vermietung bekommen beide Seiten die Kontaktdaten."
     },
     "safe": {
-      "logo": "insert logo here",
-      "header": "Zeig‘ Dich – wenn du willst",
+      "logo": "Logo hier einfügen",
+      "header": "Zeig‘ dich ",
       "description": "Verknüpfe dein Profil mit Facebook zeig Dich der \n<i>listnride</i>\n-Community. Mieter wissen so, von wem sie leihen. Vermieter wissen sofort, wer fahren möchte."
     },
     "alone": {
-      "logo": "insert logo here",
+      "logo": "Hier logo einfügen",
       "header": "Sterne weisen den Weg",
       "description": "Nach der Miete bewerten Beide Einander mit Sternen. So stärken wir das Vertrauen in die Community und halten die Qualität hoch – damit du überall hochwertige Räder mieten und vermieten kannst."
     },
@@ -1370,38 +1370,38 @@
   },
   "how-it-works": {
     "meta-title": "Unkomplizierter Fahrradverleih",
-    "meta-description": "listnride ist so simpel wie eine Verabredung zum Kaffee. Probier’s aus!",
+    "meta-description": "Wie du mit listnride ein Fahrrad mietest.",
     "title": "Fahrradverleih völlig unkompliziert",
-    "header": "Mit listnride kommst du ganz leicht in die Gänge",
+    "header": "listnride macht Fahrradmieten ganz einfach. ",
     "subheader": "Bei uns ist Fahrrad(ver-)leihen so einfach wie eine Verabredung zum Kaffee:",
     "lister-section": {
-      "header": "Rad vermieten",
-      "step-1-title": "Rad vermieten",
-      "step-1-content": "Unter Angabe von Details, Fotos, Preis und Ort des Rads",
-      "step-2-title": "Anfrage erhalten",
+      "header": "Wie du ein Rad anbietest",
+      "step-1-title": "Rad anbieten",
+      "step-1-content": "Füge Details, Fotos, Preis und Ort des Rades hinzu",
+      "step-2-title": "Anfragen erhalten",
       "step-2-content": "Für ein bestimmtes Datum und Uhrzeit",
       "step-3-title": "Anfrage annehmen",
-      "step-3-content": "Oder Alternativvorschlag machen",
-      "step-4-title": "Fahrer treffen",
+      "step-3-content": "Oder mache einen Alternativvorschlag ",
+      "step-4-title": "Triff den Fahrer",
       "step-4-content": "Fahrradübergabe, Plaudern und Insider- Tipps geben",
       "step-5-title": "Bezahlung erhalten",
       "step-5-content": "Geld wird auf deinem Konto gut geschrieben"
     },
     "rider-section": {
-      "header": "Rad mieten",
-      "step-1-title": "Rad finden",
+      "header": "Wie du ein Fahrrad mietest",
+      "step-1-title": "Finde ein Rad",
       "step-1-content": "Suche nach Ort und Radtyp",
       "step-2-title": "Anfragen & reservieren",
-      "step-2-content": "Kontakt aufnehmen und Übergabetermin ausmachen",
+      "step-2-content": "Für ein bestimmtes Datum und Uhrzeit",
       "step-3-title": "Rad abholen",
-      "step-3-content": "Plaudern und Insider- tipps erhalten",
+      "step-3-content": "Plaudern und Insider-Tipps erhalten",
       "step-4-title": "Los geht's!",
       "step-4-content": "Genieße deine Fahrt!",
       "step-5-title": "Rückgabe",
       "step-5-content": "Rad zum vereinbarten Zeitpunkt und Ort zurückbringen"
     },
     "handover-section": {
-      "header": "Persönliche oder flexible Bike-Übergabe",
+      "header": "Persönliche oder flexible Bike-Übergabe: die Wahl liegt bei dir",
       "content": "Wir behaupten mal: Gerade nette Leute fahren Fahrrad. Und verleihen es sogar. Deshalb finden wir:  eine persönliche Übergabe lohnt sich – schon wegen toller neuer Kontakte und nützlicher Tipps zur Stadt. Da aber die Zeit dafür nicht immer mitspielt, habt ihr bei listnride drei Möglichkeiten zur Fahrradübergabe:",
       "list-1": "Der Mieter (Rider) holt das Rad beim Vermieter (Lister) ab.",
       "list-2": "Der Lister übergibt das Rad an einem vereinbarten Ort an den Rider.",
@@ -1421,7 +1421,7 @@
     },
     "view": "Anzeigen",
     "meta-title": "Jobs | listnride",
-    "meta-description": "Werde Teil des Teams und unterstütze die globale Fahrrad Community!",
+    "meta-description": "Werde Teil des Teams in Berlin oder München und unterstütze die globale Fahrrad Community",
     "apply": "Jetzt bewerben",
     "see-all": "Weitere Jobs anzeigen",
     "open": "Stellenangebote",
@@ -1443,7 +1443,7 @@
       "title": "Mehr Zeit für dein Geschäft",
       "description": "Die listnride Nutzungsbedingungen enthalten alle wichtigen Details eines Mietvertrages. Hier wird erklärt, dass in dem Moment, in dem das Fahrrad an den Fahrer übergeben wird, jegliche Haftung und Verantwortung bei ihm liegt. Also, kein Papierkram mehr nötig. Darüber hinaus verfügst du über ein übersichtliches Dashboard mit den notwendigen Übersichten über deine offenen Anfragen, Mieten, Rechnungen und getätigten Einnahmen. Melde dich einfach in deinem Konto an."
     },
-    "join-now": "Mach mit. Das Plugin ist kostenlos.",
+    "join-now": "Mach mit, es ist kostenlos.",
     "join-now-description": "Willst du mehr erfahren?",
     "contact-us": "Kontaktiere uns"
   },
