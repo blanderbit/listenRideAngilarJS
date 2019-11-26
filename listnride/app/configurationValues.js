@@ -17,3 +17,4 @@ export const ADYEN_ORIGIN_KEY_NL = process.env.LNR_ADYEN_ORIGIN_KEY_NL;
 export const ADYEN_ORIGIN_KEY_ES = process.env.LNR_ADYEN_ORIGIN_KEY_ES;
 export const ADYEN_ORIGIN_KEY_IT = process.env.LNR_ADYEN_ORIGIN_KEY_IT;
 export const ADYEN_ORIGIN_KEY_FR = process.env.LNR_ADYEN_ORIGIN_KEY_FR;
+export const ADYEN_ORIGIN_KEY_AT = process.env.LNR_ADYEN_ORIGIN_KEY_AT;
