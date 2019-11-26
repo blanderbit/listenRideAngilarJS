@@ -62,6 +62,12 @@ angular.
         }
       };
 
+      var getCountryDomain = function () {
+        const url = window.location.host.split('.');
+        const urlDomain = url[url.length-1];
+        return urlDomain === "localhost:8080" ? "" : urlDomain;
+      };
+
       var retrieveLocale = function() {
         // Set default language to english
         var language = "";
@@ -75,7 +81,7 @@ angular.
         var urlLanguage = url[url.length-1];
 
         // If we're outside localhost, use tld-language (if part of available languages)
-        if (url.indexOf("localhost:8080") < 0 && availableLanguages.indexOf(urlLanguage) >= 0) {
+        if ( urlLanguage !== ("localhost:8080") && availableLanguages.indexOf(urlLanguage) >= 0) {
           language = urlLanguage;
         } else language = specialLanguages[urlLanguage] || defaultLanguage;
         return language;
@@ -547,6 +553,7 @@ angular.
         loginGlobal,
         forgetGlobal,
         isBusiness,
+        getCountryDomain,
         retrieveLocale
       };
     }
