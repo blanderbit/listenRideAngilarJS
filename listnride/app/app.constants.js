@@ -17,12 +17,13 @@ angular
     adyen_origin_key: config.ADYEN_ORIGIN_KEY,
     adyen_env: config.ADYEN_ENV,
     googleRecaptchaPublicKey: config.API_KEY_RECAPTCHA_PUBLIC,
-    adyen_origin_key_en: config.ADYEN_ORIGIN_KEY_EN,
+    adyen_origin_key_com: config.ADYEN_ORIGIN_KEY_COM,
     adyen_origin_key_de: config.ADYEN_ORIGIN_KEY_DE,
     adyen_origin_key_nl: config.ADYEN_ORIGIN_KEY_NL,
     adyen_origin_key_es: config.ADYEN_ORIGIN_KEY_ES,
     adyen_origin_key_it: config.ADYEN_ORIGIN_KEY_IT,
-    adyen_origin_key_fr: config.ADYEN_ORIGIN_KEY_FR
+    adyen_origin_key_fr: config.ADYEN_ORIGIN_KEY_FR,
+    adyen_origin_key_at: config.ADYEN_ORIGIN_KEY_AT
   })
   .constant('MESSAGE_STATUSES', {
     REQUESTED: 1, // Rider requested your Ride ACCEPT / REJECT || You requested a Ride

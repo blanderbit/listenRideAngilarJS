@@ -65,7 +65,7 @@ angular.
       var getCountryDomain = function () {
         const url = window.location.host.split('.');
         const urlDomain = url[url.length-1];
-        return urlDomain === "localhost:8080" ? "" : urlDomain;
+        return urlDomain === "localhost:8080" ? "com" : urlDomain;
       };
 
       var retrieveLocale = function() {
