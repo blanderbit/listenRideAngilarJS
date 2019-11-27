@@ -181,9 +181,7 @@
     "required": "Ceci est requis",
     "update": "Mettre à jour",
     "load-more": "Charger plus",
-    "confirm": "Annuler la demande",
-    "confirmation": "Annulation",
-    "confirmation-text": "Êtes-vous sûr de vouloir annuler la demande? Cela ne peut être défait.",
+    "confirm": "Confirmer",
     "loading": "Chargement",
     "clear": "Effacer",
     "clear-all": "Effacer tout",
@@ -985,6 +983,12 @@
   },
   "requests": {
     "booking-overview": "Aperçu de la réservation",
+    "cancelation_modal": {
+      "title": "Annulation",
+      "body": "Êtes-vous sûr de vouloir annuler la demande? Cela ne peut être défait.",
+      "cancel-btn": "Annuler la demande",
+      "keep-btn": "Garder la demande"
+    },
     "booking-failed": "La réservation a échoué",
     "booking": "Réservation",
     "price": "Prix",

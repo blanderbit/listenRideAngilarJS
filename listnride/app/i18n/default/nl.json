@@ -180,9 +180,7 @@
     "required": "Dit is verplicht",
     "update": "Bijwerken",
     "load-more": "Load more",
-    "confirm": "Annuleer verzoek",
-    "confirmation": "Annulering",
-    "confirmation-text": "Weet je zeker dat je het verzoek wilt annuleren? Dit kan niet ongedaan worden gemaakt.",
+    "confirm": "Bevestigen",
     "loading": "Het laden",
     "clear": "Clear",
     "clear-all": "Clear All",
@@ -978,6 +976,12 @@
   },
   "requests": {
     "booking-overview": "Bookingsoverzicht",
+    "cancelation_modal": {
+      "title": "Annulering",
+      "body": "Weet je zeker dat je het verzoek wilt annuleren? Dit kan niet ongedaan worden gemaakt.",
+      "cancel-btn": "Annuleer verzoek",
+      "keep-btn": "Verzoek bewaren"
+    },
     "booking-failed": "Boeking mislukt",
     "booking": "Boeking",
     "price": "Prijs",

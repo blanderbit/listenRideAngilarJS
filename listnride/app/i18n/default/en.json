@@ -181,9 +181,9 @@
     "required": "This is required",
     "update": "Update",
     "load-more": "Load more",
-    "confirm": "Cancel request",
-    "confirmation": "Cancellation",
-    "confirmation-text": "Are you sure you want to cancel the request? This cannot be undone.",
+    "confirm": "Confirm",
+    "confirmation": "Confirmation",
+    "confirmation-text": "Are you sure?",
     "loading": "Loading",
     "clear": "Clear",
     "clear-all": "Clear All",
@@ -988,6 +988,12 @@
   },
   "requests": {
     "booking-overview": "Booking Overview",
+    "cancelation_modal": {
+      "title": "Cancellation",
+      "body": "Are you sure you want to cancel the request? This cannot be undone.",
+      "cancel-btn": "Cancel request",
+      "keep-btn": "Keep request"
+    },
     "booking-failed": "Booking failed",
     "booking": "Booking",
     "price": "Price",

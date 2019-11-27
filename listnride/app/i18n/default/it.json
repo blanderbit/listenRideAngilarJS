@@ -180,9 +180,7 @@
     "required": "Questo è richiesto",
     "update": "Aggiornare",
     "load-more": "Carica altro",
-    "confirm": "Cancella richiesta",
-    "confirmation": "Cancellazione",
-    "confirmation-text": "Sei sicuro di voler annullare la richiesta? Questo non può essere annullato.",
+    "confirm": "Confermare",
     "loading": "Caricamento",
     "today": "Oggi",
     "yesterday": "Ieri",
@@ -979,6 +977,12 @@
   },
   "requests": {
     "booking-overview": "Panoramica sulla prenotazione",
+    "cancelation_modal": {
+      "title": "Cancellazione",
+      "body": "Sei sicuro di voler annullare la richiesta? Questo non può essere annullato.",
+      "cancel-btn": "Cancella richiesta",
+      "keep-btn": "Mantieni richiesta"
+    },
     "booking-failed": "La prenotazione non è riuscita",
     "booking": "Prenotazione",
     "price": "Prezzo",
