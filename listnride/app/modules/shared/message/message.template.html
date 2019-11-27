@@ -109,8 +109,7 @@
     <!-- Insurance Certificates Download -->
     <div ng-if="message.request.rideChat && message.status == message.STATUSES.CONFIRMED && message.request.insurance.items_uid">
       <md-divider></md-divider>
-      <p
-        class="lnr-center">
+      <p class="lnr-center">
         <b>{{ 'message.documents-title' | translate }}</b>
         <br>{{ 'message.documents-description' | translate }}<br>
         <div ng-if="message.request.insurance.items_uid.thing" class="lnr-center">
@@ -130,7 +129,12 @@
             button-text="'message.reject'"
             button-disable="message.request.status != 1 || message.buttonClicked"
             on-submit="message.handleRejectionSubmission(promise)"
-            request="message.request">
+            request="message.request"
+            modal-title="'requests.cancelation_modal.title'"
+            modal-body="'requests.cancelation_modal.body'"
+            modal-ok-btn-text="'requests.cancelation_modal.cancel_btn'"
+            modal-cancel-btn-text="'requests.cancelation_modal.keep_btn'"
+            button-cancel-class="'message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple'">
         </confirmation>
         <md-button
           class="message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple"
@@ -161,7 +165,12 @@
             button-text="'shared.cancel'"
             button-disable="message.request.status != message.STATUSES.REQUESTED"
             on-submit="message.handleRejectionSubmission(promise)"
-            request="message.request">
+            request="message.request"
+            modal-title="'requests.cancelation_modal.title'"
+            modal-body="'requests.cancelation_modal.body'"
+            modal-ok-btn-text="'requests.cancelation_modal.cancel_btn'"
+            modal-cancel-btn-text="'requests.cancelation_modal.keep_btn'"
+            button-cancel-class="'message-button md-raised md-primary lnr-m-0 md-button md-ink-ripple'">
         </confirmation>
       </div>
     </div>
