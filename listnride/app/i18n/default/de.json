@@ -989,8 +989,8 @@
     "cancelation_modal": {
       "title": "Stornierung",
       "body": "Möchtest du die Anfrage wirklich stornieren? Das kann nicht rückgängig gemacht werden.",
-      "cancel-btn": "Anfrage abbrechen",
-      "keep-btn": "Anfrage behalten"
+      "cancel_btn": "Anfrage abbrechen",
+      "keep_btn": "Anfrage behalten"
     },
     "booking-failed": "Buchung fehlgeschlagen",
     "booking": "Buchung",

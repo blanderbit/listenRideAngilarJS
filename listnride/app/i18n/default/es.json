@@ -984,8 +984,8 @@
     "cancelation_modal": {
       "title": "Cancelación",
       "body": "¿Seguro que quieres cancelar la solicitud? Esto no se puede deshacer.",
-      "cancel-btn": "Cancelar la solicitud",
-      "keep-btn": "Mantener la solicitud"
+      "cancel_btn": "Cancelar la solicitud",
+      "keep_btn": "Mantener la solicitud"
     },
     "booking-failed": "Error en la reserva",
     "booking": "Reserva",

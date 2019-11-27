@@ -980,8 +980,8 @@
     "cancelation_modal": {
       "title": "Cancellazione",
       "body": "Sei sicuro di voler annullare la richiesta? Questo non può essere annullato.",
-      "cancel-btn": "Cancella richiesta",
-      "keep-btn": "Mantieni richiesta"
+      "cancel_btn": "Cancella richiesta",
+      "keep_btn": "Mantieni richiesta"
     },
     "booking-failed": "La prenotazione non è riuscita",
     "booking": "Prenotazione",

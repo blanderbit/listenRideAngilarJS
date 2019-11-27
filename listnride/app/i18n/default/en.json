@@ -991,8 +991,8 @@
     "cancelation_modal": {
       "title": "Cancellation",
       "body": "Are you sure you want to cancel the request? This cannot be undone.",
-      "cancel-btn": "Cancel request",
-      "keep-btn": "Keep request"
+      "cancel_btn": "Cancel request",
+      "keep_btn": "Keep request"
     },
     "booking-failed": "Booking failed",
     "booking": "Booking",
