@@ -165,7 +165,7 @@ angular.module('message',[]).component('message', {
       }
 
       message.isReturnable = function () {
-        var rentalStarted = moment().diff(message.request.start_date) >= 0;
+        var rentalStarted = moment.utc().diff(message.request.start_date) >= 0;
         if (message.request.returnable && rentalStarted) {
           if (message.request.rideChat) {
             return message.status == message.STATUSES.BOTH_SIDES_RATE

@@ -272,7 +272,7 @@ angular.module('requests', ['infinite-scroll'])
               requests.request.started = (new Date(requests.request.start_date).getTime() < Date.now());
               var startDate = new Date(requests.request.start_date_tz);
               var endDate = new Date(requests.request.end_date_tz);
-              requests.request.returnable = (endDate.getTime() < Date.now());
+              requests.request.returnable = moment.utc().diff(requests.request.end_date) >= 0;
               // these timespans we use in localizations only
               requests.request.timespan_short = moment.utc(startDate).format('DD.MM, HH:mm') + ' - ' + moment.utc(endDate).format('DD.MM, HH:mm');
               requests.request.timespan = moment.utc(startDate).format('DD.MM.YY, HH:mm') + ' - ' + moment.utc(endDate).format('DD.MM.YY, HH:mm');
