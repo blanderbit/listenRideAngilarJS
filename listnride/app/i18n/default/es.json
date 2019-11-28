@@ -182,8 +182,6 @@
     "update": "Actualizar",
     "load-more": "Cargar más",
     "confirm": "Confirmar",
-    "confirmation": "Confirmación",
-    "confirmation-text": "¿Estás seguro?",
     "loading": "Cargando",
     "clear": "Borrar ",
     "clear-all": "Borrar todas",
@@ -983,6 +981,12 @@
   },
   "requests": {
     "booking-overview": "Resumen de la reserva",
+    "cancelation_modal": {
+      "title": "Cancelación",
+      "body": "¿Seguro que quieres cancelar la solicitud? Esto no se puede deshacer.",
+      "cancel_btn": "Cancelar la solicitud",
+      "keep_btn": "Mantener la solicitud"
+    },
     "booking-failed": "Error en la reserva",
     "booking": "Reserva",
     "price": "Precio",
@@ -1435,12 +1439,12 @@
     "info-section": {
       "header": "Alquila una bici que sea perfecta para ti",
       "subheader": "Una que complemente tu estilo y satisfaga tus necesidades. De gente como tú y yo.",
-      "choice-title": "Súper selección.",
-      "choice-content": "La gama de bicis que se ofrecen en listnride es tan diversa como nuestros usuarios. Aquí encontrarás de todo, desde bicis de carretera de alta gama y bicis urbanas de moda hasta bicis de carga y remolques para bicicletas para niños. Alquila una bici que se adapte a tu estilo y satisfaga tus necesidades.",
-      "price-title": "Súper precio",
-      "price-content": "Las bicis que figuran en nuestra plataforma las alquilan propietarios particulares, distribuidores especializados y servicios de alquiler. ¿Qué encontrarás aquí? La bicicleta perfecta a buen precio.",
-      "easy-title": "Súper fácil.",
-      "easy-content": "Encuentra y reserva tu bici de alquiler antes de irte de viaje o sobre la marcha usando nuestro sitio web móvil.",
+      "choice-title": "Alquiler de bicicletas, hecho fácil.",
+      "choice-content": "Busca y alquila una bicicleta en cuestión de segundos.\n¡No se necesitan más llamadas telefónicas o correos electrónicos!",
+      "price-title": "Nos importa la calidad.",
+      "price-content": "Bicicletas de carretera premium, bicicletas eléctricas fiables y bicicletas urbanas resistentes: somos más que un simple servicio de alquiler de bicicletas!",
+      "easy-title": "Variedad de elección, en todas partes.",
+      "easy-content": "¡Estamos orgullosos de ofrecer miles de bicicletas de alquiler en Alemania, Italia, España, Países Bajos y Austria!",
       "covered-content": "Si alquila una bicicleta en Alemania o Austria, el seguro está incluido en el alquiler. Con\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\ny el\n<a href=\"http: //www.gothaer.de\" target=\"_blank\" >Grupo de Gothaer </a>\ntenemos dos socios fuertes a nuestro lado para ayudarlo en caso de emergencia."
     },
     "search-section": {
@@ -1528,11 +1532,11 @@
     "title": "Invita a tus amigos y gana 10€",
     "login": "Inicia sesión para obtener un enlace de invitación",
     "info-section": {
-      "header": "Gana 10 € de crédito cuando un amigo acepte tu invitación y alquile una bicicleta o anuncie la suya propia.",
-      "subheader": "¿Estás entusiasmado con listnride y quieres correr la voz? Entonces, invita a tus amigos a que formen parte de la comunidad de compartir bicis de listnride.",
-      "invite-friends": "Invita a tus amigos",
-      "community": "Ayuda a que la comunidad crezca",
-      "earn-credit": "Gana crédito en listnride"
+      "header": "¡Cuantos más, mejor en listnride!",
+      "subheader": "Ayude a nuestro movimiento a facilitar el alquiler de bicicletas al invitar a sus amigos y tiendas de bicicletas locales a nuestra plataforma. Simplemente comparta su código de invitación, y cuando alquilen una bicicleta, ¡recibirán un cupón de € 10 de nosotros!",
+      "invite-friends": "Comparte tu código de invitación",
+      "community": "Ayuda a tus amigos a comenzar con listnride",
+      "earn-credit": "¡Una vez que tu amigo alquile una bicicleta, recibirás un vale de 10 € para tu próximo alquiler!"
     },
     "invite-form": {
       "header": "Comparte tu enlace personal",

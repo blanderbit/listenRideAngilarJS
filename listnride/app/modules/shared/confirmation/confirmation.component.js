@@ -6,12 +6,17 @@ angular.module('confirmation', []).component('confirmation', {
     buttonDisable: '<',
     buttonText: '<',
     request: '<',
-    onSubmit: '&'
+    onSubmit: '&',
+    modalTitle: '<',
+    modalBody: '<',
+    modalOkBtnText: '<',
+    modalCancelBtnText: '<',
+    buttonCancelClass: '<'
   },
 
   template: `
-    <md-button 
-      class="{{confirmation.buttonClass}}" 
+    <md-button
+      class="{{confirmation.buttonClass}}"
       ng-disabled="confirmation.buttonDisable"
       ng-click="confirmation.openDialog($event)">
       {{ confirmation.buttonText | translate }}
@@ -28,7 +33,12 @@ angular.module('confirmation', []).component('confirmation', {
         request: confirmation.request,
         clickEvent,
         options: {
-          buttonClass: confirmation.buttonClass
+          buttonClass: confirmation.buttonClass,
+          modalTitle: confirmation.modalTitle,
+          modalBody: confirmation.modalBody,
+          modalOkBtnText: confirmation.modalOkBtnText,
+          modalCancelBtnText: confirmation.modalCancelBtnText,
+          buttonCancelClass: confirmation.buttonCancelClass
         }
       });
       confirmation.onSubmit({ promise });

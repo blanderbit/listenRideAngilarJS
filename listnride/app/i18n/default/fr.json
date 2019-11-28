@@ -182,8 +182,6 @@
     "update": "Mettre à jour",
     "load-more": "Charger plus",
     "confirm": "Confirmer",
-    "confirmation": "Confirmation",
-    "confirmation-text": "Êtes-vous sûr?",
     "loading": "Chargement",
     "clear": "Effacer",
     "clear-all": "Effacer tout",
@@ -985,6 +983,12 @@
   },
   "requests": {
     "booking-overview": "Aperçu de la réservation",
+    "cancelation_modal": {
+      "title": "Annulation",
+      "body": "Êtes-vous sûr de vouloir annuler la demande? Cela ne peut être défait.",
+      "cancel_btn": "Annuler la demande",
+      "keep_btn": "Garder la demande"
+    },
     "booking-failed": "La réservation a échoué",
     "booking": "Réservation",
     "price": "Prix",
@@ -1438,12 +1442,12 @@
     "info-section": {
       "header": "Louez un vélo parfait pour vous",
       "subheader": "Celui qui complète votre style et répond à vos besoins.",
-      "choice-title": "Super sélection.",
-      "choice-content": "La gamme de vélos proposés sur listnride est aussi variée que nos utilisateurs. Vous y trouverez tout, des vélos de route haut de gamme et des vélos urbains à la mode aux vélos cargo et aux remorques pour enfants. Louez un vélo qui correspond à votre style et à vos besoins.",
-      "price-title": "Super price.",
-      "price-content": "Les vélos répertoriés sur notre plate-forme sont loués par des particuliers, des revendeurs spécialisés et des services de location. L’avantage pour vous: le vélo parfait au bon rapport qualité-prix.",
-      "easy-title": "Super facile.",
-      "easy-content": "Recherchez et réservez votre vélo de location avant de partir en voyage ou simplement en utilisant notre site web sur mobile.",
+      "choice-title": "La location de vélo rendue facile.",
+      "choice-content": "Cherchez et louez un vélo en quelques secondes.\nPlus besoin d'appels téléphoniques ou de courriels!",
+      "price-title": "Nous apprecions la qualité.",
+      "price-content": "Vélos de route haut de gamme, vélos électriques fiables et vélos de ville robustes: nous sommes plus qu'un simple service de location de vélos!",
+      "easy-title": "Variété de choix, partout.",
+      "easy-content": "Nous sommes fiers d'offrir des milliers de vélos de location en Allemagne, en Italie, en Espagne, aux Pays-Bas et en Autriche!",
       "covered-content": "Si vous louez un vélo en Allemagne ou en Autriche, l'assurance est comprise dans le loyer. Avec\n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster </a>\net le\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Groupe Gothaer </a>\nnous avons deux partenaires solides à nos côtés pour vous aider en cas d'urgence."
     },
     "search-section": {
@@ -1531,11 +1535,11 @@
     "title": "Invite Friends and Earn 10€",
     "login": "Log in to get your invite link",
     "info-section": {
-      "header": "Earn 10€ credit when a friend accepts your invite and rents a bike or lists one of their own.",
-      "subheader": "Êtes-vous enthousiaste à propos de listnride et souhaitez-vous passer le mot? Invitez ensuite vos amis à faire partie de la communauté listnride.",
-      "invite-friends": "Inviter des amis",
-      "community": "Aidez à développer la communauté",
-      "earn-credit": "Gagnez du crédit listnride"
+      "header": "Plus nous serons, meilleur ce sera! ",
+      "subheader": "Aidez notre mouvement à faciliter la location de vélos en invitant vos amis et les magasins de vélos locaux sur notre plateforme. Partagez simplement votre code d'invitation, et quand ils loueront un vélo, vous recevrez un bon d'achat de 10 €!",
+      "invite-friends": "Partagez votre code d'invitation",
+      "community": "Aidez votre ami à démarrer avec listnride",
+      "earn-credit": "Une fois que votre ami aura loué un vélo, vous recevrez un bon de 10 € pour votre prochaine location!"
     },
     "invite-form": {
       "header": "Partagez votre lien personnel",

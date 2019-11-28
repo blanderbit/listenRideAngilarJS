@@ -17,7 +17,7 @@
                    flex-gt-sm="25">
         </bike-card>
     </div>
-    <a ui-sref="search({location: bikeCardsList.city, categories: bikeCardsList.subcategories})"
+    <a ui-sref="{{bikeCardsList.btnUrl()}}"
        class="md-button md-raised md-primary md-xlrg lnr-city-landing__button">
         {{ bikeCardsList.btnText ? bikeCardsList.btnText : 'shared.show-more' | translate }}
     </a>

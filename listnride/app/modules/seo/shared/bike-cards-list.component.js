@@ -7,7 +7,18 @@ angular.module('bikeCardsList', []).component('bikeCardsList', {
     btnText: '<',
     bikes: '<',
     city: '<',
-    subcategories: '<'
+    subcategories: '<',
+    ref: '<'
   },
-  controller: function BikeCardsListController() {}
+  controller: function BikeCardsListController() {
+    const bikeCardsList = this;
+
+    bikeCardsList.btnUrl = function() {
+      if (bikeCardsList.ref) {
+        return 'categoryLanding({city: bikeCardsList.city.toLowerCase(), category: bikeCardsList.ref})'
+      } else {
+        return 'search({location: bikeCardsList.city, categories: bikeCardsList.subcategories})'
+      }
+    };
+  }
 });

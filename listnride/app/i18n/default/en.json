@@ -61,7 +61,7 @@
     },
     "notifications": {
       "404": "Page doesn't exist",
-      "406": "The information you entered is incorrect. please check your information and try again",
+      "406": "The information you entered is incorrect. Please check your information and try again",
       "422": "Wrong data format entered",
       "500": "Internal server error",
       "200": "Success"
@@ -988,6 +988,12 @@
   },
   "requests": {
     "booking-overview": "Booking Overview",
+    "cancelation_modal": {
+      "title": "Cancellation",
+      "body": "Are you sure you want to cancel the request? This cannot be undone.",
+      "cancel_btn": "Cancel request",
+      "keep_btn": "Keep request"
+    },
     "booking-failed": "Booking failed",
     "booking": "Booking",
     "price": "Price",
@@ -1441,12 +1447,12 @@
     "info-section": {
       "header": "Rent a bike that is perfect for you",
       "subheader": "One that complements your style and meets your needs. From people like you and me.",
-      "choice-title": "Super selection.",
-      "choice-content": "The range of bikes offered on listnride is as diverse as our users. Here you will find everything from high-end road bikes and trendy urban bikes to cargo bicycles and bike trailers for kids. Rent a bike that suits your style and meets your needs.",
-      "price-title": "Super price.",
-      "price-content": "The bikes listed on our platform are rented out by private owners as well as specialist dealers and rental services. What’s in it for you: the perfect bike at good value for money.",
-      "easy-title": "Super easy.",
-      "easy-content": "Find and book your rental bike before going on a trip or simply on the go by using our mobile website.",
+      "choice-title": "Bike rental, made easy.",
+      "choice-content": "Search and rent a bike in mere seconds.\nNo more phone calls or emails needed!",
+      "price-title": "We care about quality.",
+      "price-content": "Premium road bikes, reliable e-bikes, and sturdy city bikes - we're more than just a simple bike rental service!",
+      "easy-title": "Variety of choice, everywhere.",
+      "easy-content": "We're proud to offer thousands of rental bikes across Germany, Italy, Spain, Netherlands, and Austria!",
       "covered-content": "If you rent a bike in Germany or Austria, insurance is included in the rent. With \n<a href=\"http://www.hepster.com\" target=\"_blank\">hepster</a>\nand the \n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gothaer Group</a> \nwe have two strong partners at our side to help you in case of emergency."
     },
     "search-section": {
@@ -1531,14 +1537,14 @@
   "invite": {
     "meta-title": "listnride | Invite your friends",
     "meta-description": "Give the gift of cycling! When you invite a friend to listnride, they’ll get a 10€ voucher as soon as they join. When they rent a bike or list their own, you’ll get 10€ too!",
-    "title": "Invite Friends and Earn 10€",
+    "title": "Invite your friends to listnride and get a 20€ credit!",
     "login": "Log in to get your invite link",
     "info-section": {
-      "header": "Earn 10€ credit when a friend accepts your invite and rents a bike or lists one of their own.",
-      "subheader": "Are you enthusiastic about listnride and want to spread the word? Then invite your friends to become part of the listnride community.",
-      "invite-friends": "Invite friends",
-      "community": "Help grow the community",
-      "earn-credit": "Earn listnride credit"
+      "header": "The more the merrier on listnride!",
+      "subheader": "Help our movement in making bike rental easier by inviting your friends and local bike shops to our platform. Simply share your invite code, and when they rent a bike, you’ll get a €10 voucher from us!",
+      "invite-friends": "Share your invite code",
+      "community": "Help your friend get started with listnride",
+      "earn-credit": "Once your friend rents a bike you will receive a €10 voucher for your next rental! "
     },
     "invite-form": {
       "header": "Share your personal link",

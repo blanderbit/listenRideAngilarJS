@@ -72,7 +72,7 @@ angular.module('cityLanding',[]).component('cityLanding', {
             _.forEach(cityLanding.data.blocks, function(value) {
               cityLanding.allBikes = cityLanding.allBikes.concat(value.bikes);
               getHumanReadableBikeGroup(value);
-              pushSubcategoriesToBikesBlocks(value, cityLanding.categories);
+              setBtnReference(value, cityLanding.categories);
             });
 
             // parse url names to data names (change '-' to '_')
@@ -116,12 +116,10 @@ angular.module('cityLanding',[]).component('cityLanding', {
       );
     }
 
-    function pushSubcategoriesToBikesBlocks(targetBikesObj, currentCategories) {
-      cityLanding.categoryName = targetBikesObj.key.replace(/_/i, '-');
-      //pushed subcategories to to each bikes block of response
+    function setBtnReference(targetBikesObj, currentCategories) {
       _.filter(currentCategories, function(category) {
-        if(category.url === cityLanding.categoryName) {
-          targetBikesObj.subcategories = category.subcategories;
+        if(category.url === targetBikesObj.key.replace(/_/i, '-')) {
+          targetBikesObj.ref = category.url;
         }
       });
     }
