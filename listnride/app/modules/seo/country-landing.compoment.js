@@ -34,7 +34,17 @@ angular.module('countryLanding', []).component('countryLanding', {
 
     function getCountryData() {
       api.get('/seo_countries').then(function(response) {
-        countryLanding.countryData = response.data;
+        let sortedCountries = _.sortBy(response.data, (country) => {
+          return country.name[countryLanding.languageCode];
+        });
+
+        countryLanding.countryData = _.map(sortedCountries, (country) => {
+          country.seo_cities = _.sortBy(country.seo_cities, (city) => {
+            return city.name[countryLanding.languageCode];
+          });
+          return country;
+        });
+
         countryLanding.currentCountry = _.find(response.data, (country) => {
           const countryName = country.name.en.toLowerCase();
           return countryName == $stateParams.country;
