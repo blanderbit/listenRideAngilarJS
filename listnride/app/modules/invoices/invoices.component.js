@@ -28,15 +28,17 @@ angular.module('invoices',[]).component('invoices', {
           }
         );
 
-        invoices.parseDate = function (milliseconds) {
-          var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-          var date = new Date(milliseconds);
-          var day = date.getUTCDate();
-          var hours = date.getUTCHours();
-          // var ampm = hours >= 12 ? 'pm' : 'am';
-          var monthIndex = date.getUTCMonth();
-          var monthName = $translate.instant("shared." + monthNames[monthIndex]);
-          return day + ' ' + monthName + ', ' + hours + ':00'
+        invoices.parseDate = function (date) {
+          return moment(date).locale('de').format('L');
+        };
+
+        invoices.parseAmount = function (amount) {
+          var formatter = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR',
+          });
+
+          return formatter.format(amount);
         };
 
         invoices.getCsv = function (target) {

@@ -33,11 +33,12 @@
             <md-list-item class="md-2-line">
               <div class="md-list-item-text" layout="row" layout-align="start center">
                 <span flex="10">{{ 'invoices.request_id' | translate }}</span>
+                <span flex="10">{{ 'invoices.invoice_number' | translate }}</span>
                 <span flex="20">{{ 'invoices.bike' | translate }}</span>
-                <span flex="15">{{ 'invoices.start_date' | translate }}</span>
-                <span flex="15">{{ 'invoices.end_date' | translate }}</span>
+                <span flex="10">{{ 'invoices.start_date' | translate }}</span>
+                <span flex="10">{{ 'invoices.end_date' | translate }}</span>
                 <span flex="15">{{ 'shared.rider' | translate }}</span>
-                <span flex="10"layout="row" layout-align="end center">{{ 'invoices.payout' | translate }}</span>
+                <span flex="10">{{ 'invoices.payout' | translate }}</span>
                 <span flex layout="row" layout-align="center center">{{ 'invoices.credit-notes' | translate }}</span>
               </div>
             </md-list-item>
@@ -50,16 +51,17 @@
           <div class="repeated-billing-items" ng-repeat="year in invoices.yearsLister" ng-style="{'display': invoices.ridesAsListerAny ? '' : 'none'}">
             <h1>{{year}}</h1>
             <md-list-item class="secondary-button-padding lnr-billing-list-item" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asLister[year]">
-                <span flex="10" class="lnr-list-button">
-                  <md-button md-no-ink ui-sref="requests({requestId: item.request_id})"> {{item.id}} </md-button>
-                </span>
+              <span flex="10" class="lnr-list-button">
+                <md-button md-no-ink ui-sref="requests({requestId: item.request_id})"> {{item.request_id}} </md-button>
+              </span>
+              <span flex="10">{{item.id}}</span>
               <span flex="20" class="lnr-list-button billing-bike-title">
                   <md-button md-no-ink ui-sref="bike({bikeId: item.bike_id})"> {{item.bike}} </md-button>
                 </span>
-              <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
-              <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
+              <span flex="10">{{invoices.parseDate(item.start_date)}}</span>
+              <span flex="10">{{invoices.parseDate(item.end_date)}}</span>
               <span flex="15">{{item.lister}}</span>
-              <span flex="10" layout="row" layout-align="end center">{{item.payout}}</span>
+              <span flex="10">{{invoices.parseAmount(item.payout)}}</span>
               <span flex class="lnr-list-button" layout="row" layout-align="center center">
                 <md-button
                   md-no-ink
@@ -96,7 +98,7 @@
             <div class="md-list-item-text">
               <div layout="row" layout-align="space-between center" flex>
                 <div ui-sref="requests({requestId: item.request_id})" class="lnr-green-text">
-                  <h4>#{{item.id}}</h4>
+                  <h4>#{{item.request_id}}</h4>
                 </div>
                 <div>
                   <span flex class="lnr-list-button" layout="row" layout-align="center center">
@@ -106,12 +108,13 @@
                   </span>
                 </div>
               </div>
+              <p>{{ 'invoices.invoice_number' | translate }}: {{item.id}}</p>
               <p>{{invoices.parseDate(item.start_date)}} - {{invoices.parseDate(item.end_date)}}</p>
               <div layout="row" layout-align="space-between center" flex>
                 <div ui-sref="bike({bikeId: item.bike_id})" class="lnr-green-text lnr-mobile-bike">
                   <h3><b>{{item.bike}}</b></h3>
                 </div>
-                <div><h3><b>{{item.payout}}</b></h3></div>
+                <div><h3><b>{{invoices.parseAmount(item.payout)}}</b></h3></div>
               </div>
             </div>
             <md-divider></md-divider>
@@ -128,11 +131,12 @@
             <md-list-item class="md-2-line">
               <div class="md-list-item-text" layout="row" layout-align="start center">
                 <span flex="10">{{ 'invoices.request_id' | translate }}</span>
+                <span flex="10">{{ 'invoices.invoice_number' | translate }}</span>
                 <span flex="20">{{ 'invoices.bike' | translate }}</span>
-                <span flex="15">{{ 'invoices.start_date' | translate }}</span>
-                <span flex="15">{{ 'invoices.end_date' | translate }}</span>
+                <span flex="10">{{ 'invoices.start_date' | translate }}</span>
+                <span flex="10">{{ 'invoices.end_date' | translate }}</span>
                 <span flex="15">{{ 'shared.lister' | translate }}</span>
-                <span flex="10" layout="row" layout-align="end center">{{ 'invoices.you_paid' | translate }}</span>
+                <span flex="10">{{ 'invoices.you_paid' | translate }}</span>
                 <span flex layout="row" layout-align="center center">{{ 'invoices.invoice' | translate }}</span>
               </div>
             </md-list-item>
@@ -146,15 +150,16 @@
             <h1>{{year}}</h1>
             <md-list-item class="secondary-button-padding lnr-billing-list-item" ng-click="doPrimaryAction($event)" ng-repeat="item in invoices.asRider[year]">
               <span flex="10" class="lnr-list-button">
-                <md-button md-no-ink ui-sref="requests({requestId: item.request_id})"> {{item.id}} </md-button>
+                <md-button md-no-ink ui-sref="requests({requestId: item.request_id})"> {{item.request_id}} </md-button>
               </span>
+              <span flex="10">{{item.id}}</span>
               <span flex="20" class="lnr-list-button billing-bike-title">
                 <md-button md-no-ink ui-sref="bike({bikeId: item.bike_id})"> {{item.bike}} </md-button>
               </span>
-              <span flex="15">{{invoices.parseDate(item.start_date)}}</span>
-              <span flex="15">{{invoices.parseDate(item.end_date)}}</span>
+              <span flex="10">{{invoices.parseDate(item.start_date)}}</span>
+              <span flex="10">{{invoices.parseDate(item.end_date)}}</span>
               <span flex="15">{{item.lister}}</span>
-              <span flex="10" layout="row" layout-align="end center">{{item.payout}}</span>
+              <span flex="10">{{invoices.parseAmount(item.payout)}}</span>
               <span flex class="lnr-list-button" layout="row" layout-align="center center">
                 <md-button md-no-ink class="md-primary lnr-green-text" ng-click="invoices.getPdf(item.id, 'rider')">{{ 'shared.download' | translate }}</md-button>
               </span>
@@ -185,7 +190,7 @@
             <div class="md-list-item-text">
               <div layout="row" layout-align="space-between center" flex>
                 <div ui-sref="requests({requestId: item.request_id})" class="lnr-green-text">
-                  <h4>#{{item.id}}</h4>
+                  <h4>#{{item.request_id}}</h4>
                 </div>
                 <div>
                   <span flex class="lnr-list-button" layout="row" layout-align="center center">
@@ -195,10 +200,11 @@
                   </span>
                 </div>
               </div>
+              <p>{{ 'invoices.invoice_number' | translate }}: {{item.id}}</p>
               <p>{{invoices.parseDate(item.start_date)}} - {{invoices.parseDate(item.end_date)}}</p>
               <div layout="row" layout-align="space-between center" flex>
                 <div ui-sref="bike({bikeId: item.bike_id})" class="lnr-green-text lnr-mobile-bike"><h3><b>{{item.bike}}</b></h3></div>
-                <div><h3><b>{{item.payout}}</b></h3></div>
+                <div><h3><b>{{invoices.parseAmount(item.payout)}}</b></h3></div>
               </div>
             </div>
             <md-divider></md-divider>
