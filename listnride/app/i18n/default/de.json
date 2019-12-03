@@ -182,6 +182,8 @@
     "update": "Aktualisiert",
     "load-more": "Mehr laden",
     "confirm": "Bestätigen",
+    "confirmation": "Bestätigung",
+    "confirmation-text": "Bist du dir sicher?",
     "loading": "Laden",
     "clear": "Clear",
     "clear-all": "Clear All",
@@ -988,7 +990,7 @@
     "booking-overview": "Buchungsübersicht",
     "cancelation_modal": {
       "title": "Stornierung",
-      "body": "Möchtest du die Anfrage wirklich stornieren? Das kann nicht rückgängig gemacht werden.",
+      "body": "Möchtest du die Anfrage wirklich stornieren? Dies kann nicht rückgängig gemacht werden.",
       "cancel_btn": "Anfrage abbrechen",
       "keep_btn": "Anfrage behalten"
     },
@@ -1086,7 +1088,7 @@
     "sign-up-divider-text": "Akzeptiere unsere Nutzungsbedingungen",
     "agree-terms-and-policy": "Stimme Nutzungsbedingungen & Datenschutzerklärung zu",
     "member-already": "Bereits registriert?",
-    "business": "Arbeitest du für ein Fahrradgeschäft?",
+    "business": "Gewerblicher Anbieter?",
     "description": "Beschreibung",
     "description_min_100": "Beschreibung sollte min. 100 Buchstaben lang sein",
     "address": "Adresse",
@@ -1159,7 +1161,7 @@
   },
   "search": {
     "no-bikes": "Leider sind an diesem Ort noch keine Räder vorhanden. Aber wir wachsen schnell, vielleicht gibt es bald schon welche! Wenn du magst, kannst du auch dein eigenes Rad einstellen oder alternativ nach einer anderen Stadt oder Adresse in der Nähe suchen.\n<br><br>\nHilf anderen, tolle Fahrräder zu finden, indem du dein eigenes Fahrrad auflisten oder sich an dein örtlichen Fahrradladen wenden, um sie mit uns an Bord zu nehmen! ",
-    "unisize": "Einheitsgröße",
+    "unisize": "Unisize",
     "book-multiple-bikes": "Gruppenbuchungen",
     "bikes-found": "Gefundene Räder:",
     "all-sizes": "Alle Größen",
