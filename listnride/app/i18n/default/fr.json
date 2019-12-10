@@ -361,12 +361,12 @@
       "meta-description": "Avec listnride, vous pouvez louer en ligne un vélo de route en toute sécurité pour le l'Ardita 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Location de vélo de route pour Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour la Granfondo Via del Sale 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
+      "meta-title": "Location de vélo de route pour Granfondo Via del Sale 2020 | listnride",
+      "meta-description": "Location de vélos pour Granfondo Via del Sale 2020 | Louez un vélo de course parfait sur listnride!"
     },
     "giro-sardegna": {
-      "meta-title": "Location de vélo de route pour le Giro Sardegna 2019 | listnride",
-      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour le Giro Sardegna 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
+      "meta-title": "Location de vélo de route pour le Giro Sardegna | listnride",
+      "meta-description": "Location de vélos pour le Giro Sardegna | Louez un vélo de course qui vous convient le mieux sur listnride!"
     }
   },
   "lister": {
@@ -1437,7 +1437,7 @@
   },
   "rent-a-bike": {
     "meta-title": "Louez un vélo via listnride!",
-    "meta-description": "Sélection fantastique. Excellent rapport qualité / prix. Service en ligne facile.",
+    "meta-description": "Louez parmi notre grande sélection de vélos de route, vélos électriques, vélos de montagne et vélos cargo! Cherchez, sélectionner et réserver tout facilement en ligne.",
     "title": "Ne louez pas n'importe quel vieux vélo. Louez-en un qui ressemble au vôtre.",
     "info-section": {
       "header": "Louez un vélo parfait pour vous",
@@ -1495,7 +1495,9 @@
     }
   },
   "invoices": {
-    "request_id": "Request ID",
+    "request_id": "N° de réservation",
+    "invoice_number": "Facture n°",
+    "payout_date": "Date de remboursement",
     "credit-notes": "Notes de crédit",
     "bike": "Vélo",
     "start_date": "Date de début",

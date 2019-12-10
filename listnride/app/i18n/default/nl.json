@@ -356,12 +356,12 @@
       "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor l'Ardita 2019. Kies de perfecte fiets die bij u past!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Huur een racefiets voor de Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Granfondo Via del Sale 2019. Kies de perfecte fiets die bij u past!"
+      "meta-title": "Huur een racefiets voor de Granfondo Via del Sale 2020 | listnride",
+      "meta-description": "Fietsverhuur voor de Granfondo Via del Sale 2020 | Kies de perfecte racefiets die bij u past!"
     },
     "giro-sardegna": {
-      "meta-title": "Huur een racefiets voor de Giro Sardegna 2019 | listnride",
-      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor de Giro Sardegna 2019. Kies de perfecte fiets die bij u past!"
+      "meta-title": "Huur een racefiets voor de Giro Sardegna | listnride",
+      "meta-description": "Fietsverhuur voor de Giro Sardegna | Huur een racefiets die het beste bij u past op listnride!"
     }
   },
   "lister": {
@@ -1427,7 +1427,7 @@
   },
   "rent-a-bike": {
     "meta-title": "Huur een fiets via listnride!",
-    "meta-description": "Super Keuze. Super prijs. Eenvoudig online boeken.",
+    "meta-description": "Huur uit ons grote aanbod aan racefietsen, e-bikes, mountainbikes en bakfietsen! Eenvoudig zoeken en online boeken.",
     "title": "Fiets huren. Niet zomaar één. Maar één, als ware het je eigen fiets.",
     "info-section": {
       "header": "Huur de perfecte fiets",
@@ -1485,7 +1485,9 @@
     }
   },
   "invoices": {
-    "request_id": "Aanvraag ID",
+    "request_id": "Boeking ID",
+    "invoice_number": "Factuur nr.",
+    "payout_date": "Uitbetaald op",
     "credit-notes": "Creditnota's",
     "bike": "Fiets",
     "start_date": "Start datum",

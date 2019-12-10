@@ -358,12 +358,12 @@
       "meta-description": "Con listnride puoi noleggiare una bici da corsa vintage online per l'Ardita 2019 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Noleggia una bici da corsa per la Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per la Granfondo Via del Sale 2019. Scegli la bici perfetta per le tue esigenze!"
+      "meta-title": "Noleggia una bici da corsa per la Granfondo Via del Sale 2020 | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per la Granfondo Via del Sale 2020. Scegli la bici ideale per le tue esigenze!"
     },
     "giro-sardegna": {
-      "meta-title": "Noleggia una bici da corsa per il Giro Sardegna  | listnride",
-      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per il Giro Sardegna 2019. Scegli la bici perfetta per le tue esigenze!"
+      "meta-title": "Noleggia una bici da corsa per il Giro Sardegna | listnride",
+      "meta-description": "Noleggio bici per il Giro Sardegna | Noleggia una bici da corsa adatta a te su listnride!"
     }
   },
   "lister": {
@@ -1431,7 +1431,7 @@
   },
   "rent-a-bike": {
     "meta-title": "Noleggia una bicicletta con listnride!",
-    "meta-description": "Un'ampia e fantastica scelta. Ottimo rapporto qualità / prezzo. Semplice servizio online.",
+    "meta-description": "Noleggia dalla nostra fantastica selezione di bici da strada, e-bike, mountain bike e bici da carico! Basta cercare, selezionare e prenotare online.",
     "title": "Non noleggiare solo una vecchia bicicletta. Noleggia quella che senti più giusta per te.",
     "info-section": {
       "header": "Noleggia la bicicletta perfetta per te",
@@ -1490,6 +1490,8 @@
   },
   "invoices": {
     "request_id": "Richiesta ID",
+    "invoice_number": "Fattura  numero",
+    "payout_date": "Data del rimborso",
     "credit-notes": "Note di credito",
     "bike": "Bicicletta",
     "start_date": "Data d'inizio",

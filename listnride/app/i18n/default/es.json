@@ -361,12 +361,12 @@
       "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para l'Ardita 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Alquiler de una bicicleta de carretera para el Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para la Granfondo Via del Sale 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+      "meta-title": "Alquila una bicicleta de carretera para el Granfondo Via del Sale 2020 | listnride",
+      "meta-description": "Con listnride, puedes alquilar fácilmente una bicicleta para el Granfondo Via del Sale 2020. ¡Elije la bicicleta perfecta que se adapte a tus necesidades!"
     },
     "giro-sardegna": {
-      "meta-title": "Alquiler de una bicicleta de carretera para el Giro Sardegna 2019 | listnride",
-      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para el Giro Sardegna 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+      "meta-title": "Alquile una bicicleta de carretera para el Giro Sardegna | listnride",
+      "meta-description": "Alquiler de bicicletas para el Giro Sardegna | ¡Alquile una bicicleta de carrera que le quede mejor en listnride!"
     }
   },
   "lister": {
@@ -1434,7 +1434,7 @@
   },
   "rent-a-bike": {
     "meta-title": "Alquila una bici a través de listnride!",
-    "meta-description": "Estupenda selección. Gran relación calidad-precio. Servicio online sencillo.",
+    "meta-description": "¡Alquila de nuestra gran selección de bicicletas de carretera, bicicletas eléctricas, bicicletas de montaña y bicicletas de carga! Simplemente busca, selecciona y reserva en línea.",
     "title": "No alquiles cualquier bici vieja. Alquile uno que sientas como tuya.",
     "info-section": {
       "header": "Alquila una bici que sea perfecta para ti",
@@ -1493,6 +1493,8 @@
   },
   "invoices": {
     "request_id": "Solicitar identificación",
+    "invoice_number": "n.º Factura ",
+    "payout_date": "Fecha de pago",
     "credit-notes": "Notas de credito",
     "bike": "Bici",
     "start_date": "Fecha de inicio",

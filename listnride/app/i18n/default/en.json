@@ -366,12 +366,12 @@
       "meta-description": "With listnride you can easily rent a road bike online for l'Ardita 2019. Choose the perfect bike that fits your needs!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Rent a road bike for the Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for the Granfondo Via del Sale 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Rent a road bike for the Granfondo Via del Sale 2020|listnride",
+      "meta-description": "Bike rental for the Granfondo Via del Sale 2020 | Rent a race bike that fits you best on listnride!"
     },
     "giro-sardegna": {
-      "meta-title": "Rent a road bike for the Giro Sardegna 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for the Giro Sardegna 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Rent a road bike for the Giro Sardegna | listnride",
+      "meta-description": "Bike rental for the Giro Sardegna | Rent a race bike that fits you best on listnride!"
     }
   },
   "lister": {
@@ -827,6 +827,13 @@
   },
   "settings": {
     "settings": "Settings",
+    "payout": {
+      "entity_type": {
+        "label": "Please select if your bank account is personal or company",
+        "natural_person": "Personal",
+        "company": "Company"
+      }
+    },
     "accept_request_reminder": {
       "subscribe": "Reminder notifications"
     },
@@ -1060,6 +1067,15 @@
   },
   "forms": {
     "first-name": "First Name",
+    "account_holder_name": "Account holder name",
+    "bank_country": "Bank country",
+    "dob": "Date of birth",
+    "gender": "Gender",
+    "nationality": "Nationality",
+    "gender_select": {
+      "male": "Male",
+      "female": "Female"
+    },
     "newsletter-privacy-policy": "Privacy Policy Newsletter",
     "sign-up-today": "Sign up today ",
     "already-registered": "You have already signed up",
@@ -1441,8 +1457,8 @@
     "dialog-subtitle": "The bike will get permanently removed from the platform. Current requests are not affected by this."
   },
   "rent-a-bike": {
-    "meta-title": "Rent a bike via listnride!",
-    "meta-description": "Fantastic selection. Great value for money. Easy online service.",
+    "meta-title": "Rent a bike with listnride!",
+    "meta-description": "Rent from our great selection of road bikes, e-bikes, mountain bikes and cargo bikes! Simply search, select and book online.",
     "title": "Don’t just rent any old bike. Rent one that feels like your own.",
     "info-section": {
       "header": "Rent a bike that is perfect for you",

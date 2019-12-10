@@ -243,7 +243,7 @@
     "country_title": "Alle Städte und Regionen in {{country_name}}"
   },
   "prepositions": {
-    "in": " im "
+    "in": " in"
   },
   "cyclingworld": {
     "event": {
@@ -298,7 +298,7 @@
       "description": "Was: <b0>VeloCity Berlin 2020 </b0>| Wo: <b1>Berlin </b1>| Wann: <b2>13.-14. Juni 2020 </b2>"
     },
     "radfahren-neu-entdecken-eschborn": {
-      "title": "Miete und teste tolle Räder mit Eschborn.",
+      "title": "Miete und teste tolle Räder in Eschborn.",
       "description": "Was: <b>Radfahren neu entdecken</b>  |  Wo: <b>In Eschborn</b>  |  Wann: <b>In Kassel</b> 1.6. - 31.08. 2019",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
       "calendar-title": "E-Bikes einfach kostenlos Probefahren",
@@ -366,12 +366,12 @@
       "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Mieten Sie ein Rennrad für die Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "Mit listnride können Sie bequem ein Rennrad für die Granfondo Via del Sale 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
+      "meta-title": "Miete ein Rennrad für die Granfondo Via del Sale 2020! | listnride",
+      "meta-description": "Fahrradverleih für die Granfondo Via del Sale 2020 | Miete ein Rennrad, das am besten zu dir passt!"
     },
     "giro-sardegna": {
-      "meta-title": "Miete ein Rennrad für den Giro Sardegna 2019 I listnride\n",
-      "meta-description": "Mit listnride können Sie einfach ein Rennrad für den Giro Sardegna 2019 online mieten. Wählen Sie das perfekte Fahrrad, das Ihren Bedürfnissen entspricht!"
+      "meta-title": "Miete ein Rennrad für den Giro Sardegna I listnride\n",
+      "meta-description": "Fahrradverleih für den Giro Sardegna | Leih dich ein Rennrad, das am besten zu dir passt!"
     }
   },
   "lister": {
@@ -481,16 +481,16 @@
         "meta-title": "Rapha Super Cross - Miete ein Fahrrad mit listnride"
       },
       "black-friday": {
-        "meta-title": "Black Friday 2018 Rabatt  bei listnride",
+        "meta-title": "Black Friday Fahrradverleih Rabatt | listnride",
         "meta-description": "Black Friday Rabatt bei listnride! Riesiger Nachlass auf deine nächste Fahrradmiete, nur dieses Wochenende."
       },
       "eroica-gaiole": {
-        "meta-title": "Miete dein Vintage-Rennrad für die Eroica auf listnride",
+        "meta-title": "Miete dein Vintage-Rennrad für die L'Eroica auf listnride",
         "meta-description": "Miete dein Vintage-Rennrad für die Eroica"
       },
       "toros-de-gravel": {
         "meta-title": "Miet das perfekte Fahrrad für den Toros de Gravel",
-        "meta-description": "Auf listnride findest du Gravel- und Mountainbikes, die du für das Event in Sineu, Mallorca ausleihen kannst."
+        "meta-description": "Auf listnride findest du Gravel- und Mountainbikes, die du für dieses spezielle Gravel-Event in Sineu auf Mallorca ausleihen kannst."
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas: miete ein Rad mit listnride",
@@ -522,7 +522,7 @@
       },
       "depart": {
         "meta-title": "Miete dir einfach das perfekte Rennrad für die Velothon Berlin",
-        "meta-description": "Radel mit listnride und Schicke Mütze  zum Grand Depart und miete dir hochwertige Rennräder aus der Community"
+        "meta-description": "Radel mit listnride und Schicke Mütze zum Grand Depart und miete dir hochwertige Rennräder aus der Community"
       },
       "supercross-munich": {
         "meta-title": "Miete dir das perfekte Cyclocross Bike für den Supercross München bei listnride",
@@ -646,7 +646,7 @@
     },
     "press": {
       "meta-title": "listnride Pressebereich",
-      "meta-description": "Wir lieben es Räder zu vermitteln. Und beantworten gerne deine Fragen."
+      "meta-description": "Wir lieben es Räder zu vermitteln. Und beantworten dir gerne jede Frage."
     },
     "invest": {
       "meta-title": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Fahrrad-Verleih Community.",
@@ -714,7 +714,7 @@
       "check-phone": "Bitte prüfe dein Telefon.",
       "send-code": "Code senden",
       "confirm-code": "Bestätigungscode",
-      "enter-code": "Gib die Pin ein, die wir dir gerade geschickt haben.",
+      "enter-code": "Gib die Pin ein, die wir dir gerade auf dein Handy geschickt haben.",
       "success-code": "Sehr gut. Dein Account ist verifiziert.",
       "fail-code": "Der Code ist leider nicht korrekt. Versuche es noch erneut oder schicke eine neue SMS",
       "resend": "Nochmal senden"
@@ -750,7 +750,7 @@
       "invoice-address": "Rechnungsadresse",
       "premium-insurance": "Premium-Versicherung",
       "premium-insurance-title": "Abdeckung der Premium-Versicherung",
-      "premium-insurance-subtitle": "Wähle unsere Premium-Versicherung für deine Miete und fahre vollkommen sorgenfrei",
+      "premium-insurance-subtitle": "Wähle unsere Premium-Versicherung und fahre vollkommen sorgenfrei",
       "thats-included": "Zusätzlich zur Basis-Versicherung ist dies enthalten:",
       "premium-feature-1": "Diebstahlschutz",
       "premium-feature-2": "Ersatzrad nach Diebstahl oder Beschädigung",
@@ -791,9 +791,9 @@
       "retry": "Erneut versuchen"
     },
     "profile-verified": "Glückwunsch, Dein Profil ist nun verifiziert!",
-    "profile-updated": "Deine Beschreibung wurde erfolgreich aktualisiert",
+    "profile-updated": "Deine Beschreibung wurde aktualisiert",
     "error-upload-profile-picture": "Fehler beim Hochladen des Profilbildes",
-    "sms-was-sent": "Wir haben die sieben eine SMS mit Bestätigungscode geschickt.",
+    "sms-was-sent": "Wir haben dir eine SMS mit dem Bestätigungscode geschickt.",
     "phone-verified": "Telefonnummer erfolgreich bestätigt.",
     "cluster-deleted": "Zusammengehörige Räder erfolgreich gelöscht",
     "cluster-unmerged": "Bike-Cluster erfolgreich aufgehoben",
@@ -833,7 +833,7 @@
     "booking_overview_lister": "Buchungsübersicht Vermieter",
     "confirm_return": "Rückgabe Nachrichten",
     "return_reminder": "Return reminder",
-    "request_created": "Request created (SMS)",
+    "request_created": "Buchungsbezogene SMS",
     "notifications": "Benachrichtigungen",
     "notification-preferences": {
       "receive-all": "Erhalte alle Benachrichtigungen",
@@ -843,7 +843,7 @@
       "accept_request_reminder": "Accept request reminder",
       "confirm_return": "Confirm return messages",
       "request_created": "Buchungsbezogene Erinnerungen (SMS)",
-      "booking_overview_lister": "Buchungsübersicht",
+      "booking_overview_lister": "Buchungsübersicht Informationen",
       "return_reminder": "Return reminder messages"
     },
     "newsletter-subscribe": "Ja, bitte sendet mir den monatlichen listnride-Newsletter",
@@ -866,7 +866,7 @@
     "profile": "Profil",
     "invite": "Freunde einladen",
     "account": "Konto",
-    "contact-to-update": "Um deinen Namen oder deine E-Mail Adresse zu ändern, schreib uns einfach eine E-Mail an: contact@listnride.com",
+    "contact-to-update": "Um deinen Namen oder deine E-Mail Adresse zu ändern, schreib' uns einfach eine E-Mail an: contact@listnride.com",
     "delete-account": "Konto deaktivieren",
     "delete-account-description": "Hier kannst du dein listnride-Konto deaktivieren. Dieser Schritt kann nicht rückgängig gemacht werden.",
     "delete-account-sure": "Bist du dir wirklich sicher?",
@@ -879,7 +879,7 @@
     "from": "Von",
     "to": "Bis",
     "mark-as-closed": "Alle Tage als geschlossen markieren",
-    "change-address-info": "Wenn du deine Adresse aktualisierst wird dadurch die Adresse deiner Fahrräder NICHT automatisch aktualisiert.",
+    "change-address-info": "Wenn du deine Adresse aktualisierst, wird dadurch die Adresse deiner Fahrräder NICHT automatisch aktualisiert.",
     "payment-method": "Zahlungsart",
     "payout-method": "Auszahlungsmethode",
     "add-payout-method": "Füge eine Auszahlungsmethode hinzu",
@@ -1097,7 +1097,7 @@
     "profile-picture-info-policy": "Durch das Hochladen eines Bildes stimme ich zu, dass listnride das Bild wie in der <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Datenschutzerklärung </a>beschrieben speichert. Ich kann es jederzeit löschen.",
     "profile-picture-pattern-error": "Dein Bildformat stimmt nicht",
     "profile-picture-size-error": "Die Größe deines Bildes überschreitet die maximal erlaubte Bildgröße",
-    "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
+    "profile-picture-dimension-error": "Deine Bildgröße ist kleiner als die Mindestgröße",
     "general": "Allgemein",
     "street": "Straße",
     "streetnumber": "Hausnr.",
@@ -1149,10 +1149,10 @@
     "featured-tiles-subheader": "Wir arbeiten mit innovativen Fahrradmarken zusammen, die ihre neuesten Modelle zum Test anbieten. Die Fahrräder können exklusiv an verschiedenen Standorten getestet oder gemietet werden. Perfekte Hilfe für eine fundierte Kaufentscheidung.",
     "featured-cities-header": "Mit listnride bist du nie ohne dein perfektes Rad",
     "featured-cities-subheader": "In immer mehr Metropolen und Urlaubsregionen in Europa gibt es den listnride Fahrradverleih. Hier einige unserer Tipps für dich: ",
-    "list-a-bike-header": "Dein Bike ist zu schön um nur rumzustehen?",
+    "list-a-bike-header": "Du hast ein gute Rad, aber es steht nur rum und fängt Staub?",
     "list-a-bike-subheader": "Liste dein Fahrrad zum Verleih, lerne tolle neue Leute kennen und verdien dir was dazu.",
     "newsletter-header": "Erhalte unseren Newsletter und bleib informiert",
-    "newsletter-subheader": "Erhalte unseren Newsletter über neue Räder, Touren und Gutscheine für deine Fahrten.",
+    "newsletter-subheader": "Erhalte unseren Newsletter und erfahre mehr über Veranstaltungen die wir unterstützen, neue Funktionen auf unserer Seite und Rabatte.",
     "meta-title": "Fahrradverleih: Miete ein Rennrad, MTB oder E-Bike | listnride",
     "meta-description": "Miete das perfekte Fahrrad zu deinem Stil und Zweck. Einfach online buchen, bequem und sicher."
   },
@@ -1167,7 +1167,7 @@
     "all-sizes": "Alle Größen",
     "bikes-in": "Fahrräder in",
     "meta-title": "Miete das perfekte Rad in {{location}}.",
-    "meta-description": "listnride bietet viele verschiedene Räder in {{location}} zur Miete an.",
+    "meta-description": "listnride bietet eine große AUswahl an tollen Rädern in {{location}} zur Miete an.",
     "number-of-bikes": "Anzahl der Fahrräder",
     "bike": "Fahrrad",
     "bikes": "Fahrräder",
@@ -1263,7 +1263,7 @@
       "select-images": "Bilder auswählen",
       "remove": "Löschen",
       "upload-bike-header": "Lade ein paar Fotos von deinem Fahrrad hoch",
-      "under-min-size": "Einige deiner Bilder sind kleiner als 1500x1000:",
+      "under-min-size": "Einige deiner Bilder sind kleiner als das Minimum 1500x1000:",
       "invalid-images": "Bildgröße ungültig"
     },
     "location": {
@@ -1442,8 +1442,8 @@
   },
   "rent-a-bike": {
     "meta-title": "Fahrrad mieten über listnride!",
-    "meta-description": "Grandiose Auswahl. Top Preis-Leistungsverhältnis. Einfach online.",
-    "title": "Fahrrad mieten. Nicht irgendeins. Sondern eins als wär’s genau Deins.",
+    "meta-description": "Miete aus unserem breiten Angebot an Rennrädern, E-Bikes, Mountainbikes und Cargo-Bikes! Suche und buche einfach online.",
+    "title": "Miete nicht einfach irgendein altes Rad. Miete eins, dass sich wie dein eigenes anfühlt.",
     "info-section": {
       "header": "Miete dein perfektes Rad",
       "subheader": "Für Deinen Stil, für Deinen Zweck. Von Leuten wie du und ich.",
@@ -1466,7 +1466,7 @@
   },
   "list-a-bike": {
     "meta-title": "Vermiete dein Fahrrad!",
-    "meta-description": "Lerne tolle neue Leute kennen und kurble nebenbei dein Konto an.",
+    "meta-description": "Lerne tolle neue Leute kennen und  verdiene dir nebenher etwas dazu.",
     "title": "Fahrrad vermieten, Konto aufbessern",
     "subtitle": "Lerne tolle neue Leute kennen und verdiene nebenbei Geld, z.B. für dein nächstes Traum-Rad.",
     "calculator-section": {
@@ -1500,7 +1500,9 @@
     }
   },
   "invoices": {
-    "request_id": "Anfrage ID",
+    "request_id": "Buchungs-ID",
+    "invoice_number": "Rechnungsnummer",
+    "payout_date": "Auszahlungsdatum",
     "credit-notes": "Gutschriften",
     "bike": "Rad",
     "start_date": "Startdatum",
@@ -1513,10 +1515,10 @@
     "billing": "Rechnungen",
     "download-csv": "CSV herunterladen",
     "download-pdf": "PDF herunterladen",
-    "no-rentals": "Es gab noch keine Vermietungen",
+    "no-rentals": "Du hattest noch keine Vermietungen",
     "as-lister": "Als Vermieter",
     "as-rider": "Als Mieter",
-    "no-rides": "Noch keine Räder gemietet"
+    "no-rides": "Du hast noch keine Räder gemietet"
   },
   "invite-landing": {
     "meta-title": "listnride | 10€ für dich!",
@@ -1639,7 +1641,7 @@
       "accepted": "Akzeptiert",
       "request-waiting": "Ausstehende Anfrage",
       "not-available": "Nicht verfügbar",
-      "waiting": "Waiting",
+      "waiting": "Ausstehend",
       "not-available-header": "Das Fahrrad ist nicht verfügbar",
       "not-available-text": "Das Fahrrad ist für diesen Zeitraum nicht verfügbar. Einstellungen der Verfügbarkeit sind unter Fahrradeinstellungen zu ändern.",
       "see-settings": "Zu Einstellungen",
@@ -1657,7 +1659,7 @@
       "service-repair": "Service",
       "event-other": "Sonstige"
     },
-    "reason": "grund",
+    "reason": "Grund",
     "previous-month": "Vormonat",
     "next-month": "Nächsten Monat",
     "previous-week": "Vorige Woche",
@@ -1668,6 +1670,6 @@
     "bike-variants": "Anzahl der Fahrräder",
     "meta-title": "Buchungskalender",
     "meta-description": "Kalenderansicht für einfache Buchungs- und Bestandsverwaltung",
-    "not-available-on-mobile": "Sorry, Booking Calendar isn't available on mobile"
+    "not-available-on-mobile": "Entschuldige, leider ist der Buchungskalender für Handys nicht verfügbar"
   }
 }
