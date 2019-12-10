@@ -5,59 +5,116 @@
       <p class="md-headline lnr-center">{{ 'settings.add-payout-method' | translate }}</p>
       <p>{{ 'settings.payout-method-description' | translate }}</p>
       <p ng-if="!settings.user.payout_method">{{ 'settings.no-payout-method' | translate }}</p>
-      <br>
       <div layout="column">
-        <md-radio-group ng-model="settings.payoutMethod.payment_type" layout="row">
-          <md-radio-button value="credit-card">{{ 'settings.bank-account' | translate }}</md-radio-button>
-          <md-radio-button value="paypal-account">{{ 'settings.paypal' | translate }}</md-radio-button>
+        <div class="lnr-mh-x2">{{ 'settings.payout.entity_type.label' | translate }}</div>
+        <md-radio-group class="lnr-mb-x2" ng-model="settings.payoutMethod.entity_type" layout="row">
+          <md-radio-button value="NaturalPerson">{{ 'settings.payout.entity_type.natural_person' | translate }}</md-radio-button>
+          <md-radio-button value="Company">{{ 'settings.payout.entity_type.company' | translate }}</md-radio-button>
         </md-radio-group>
         <form name="settings.payoutForm">
-          <div ng-if="settings.payoutMethod.payment_type == 'paypal-account'">
-            <p class="md-caption">{{ 'settings.enter-paypal-info' | translate }}</p>
-            <div layout="row" layout-margin>
-              <md-input-container>
-                <label>{{ 'forms.email-address' | translate }}</label>
-                <input
-                  required
-                  name="email"
-                  ng-model="settings.payoutMethod.formData.email"
-                  ng-pattern="settings.emailFormat">
+          <div ng-if="settings.payoutMethod.entity_type == 'NaturalPerson'">
+            <div layout="row" layout-xs="column">
+              <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
+                <label>IBAN</label>
+                <input required ng-model="settings.payoutMethod.iban">
+              </md-input-container>
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
+                <label>BIC</label>
+                <input required ng-model="settings.payoutMethod.bic">
+              </md-input-container>
+            </div>
+            <div layout="row" layout-xs="column">
+              <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
+                <label>{{ 'forms.account_holder_name' | translate }}</label>
+                <input required ng-model="settings.payoutMethod.account_holder_name">
+              </md-input-container>
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
+                <label>{{ 'forms.bank_country' | translate }}</label>
+                <md-select required ng-model="settings.payoutMethod.country_code" class="md-no-underline">
+                  <md-option ng-repeat="country_code in settings.payoutSupportedCountries" value="{{country_code}}">
+                    {{settings.getCountryName(country_code)}}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+            <div layout="row" class="lnr-mh">
+              <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
+                <label>{{ 'forms.first-name' | translate }}</label>
+                <input required ng-model="settings.payoutMethod.first_name">
+              </md-input-container>
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
+                <label>{{ 'forms.last-name' | translate }}</label>
+                <input required ng-model="settings.payoutMethod.last_name">
+              </md-input-container>
+            </div>
+            <div layout="row" layout-xs="column">
+              <md-input-container class="lnr-gt-xs-mr settings-payout-method-input" flex-gt-xs="50">
+                <label>{{ 'forms.dob' | translate }}</label>
+                <input required class="settings-payout-method-input" type="date" ng-model="settings.payoutMethod.date_of_birth">
+              </md-input-container>
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
+                <label>{{ 'forms.gender' | translate }}</label>
+                <md-select required ng-model="settings.payoutMethod.gender" class="md-no-underline">
+                  <md-option selected value="male">{{ 'forms.gender_select.male' | translate }}</md-option>
+                  <md-option value="female">{{ 'forms.gender_select.female' | translate }}</md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+            <div layout="row" layout-xs="column">
+              <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
+                <label>{{ 'forms.nationality' | translate }}</label>
+                <md-select required ng-model="settings.payoutMethod.nationality" class="md-no-underline">
+                  <md-option ng-repeat="country_code in settings.getCountryCodes()" value="{{country_code}}">
+                    {{settingsAccount.parent.getCountryName(country_code)}}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
               </md-input-container>
             </div>
           </div>
-          <div ng-if="settings.payoutMethod.payment_type == 'credit-card'">
-            <p class="md-caption">{{ 'settings.enter-bank-info' | translate }}</p>
-            <div layout="row" layout-margin>
-              <md-input-container flex="50">
-                <label>{{ 'forms.first-name' | translate }}</label>
-                <input
-                  required
-                  ng-model="settings.payoutMethod.formData.first_name">
+          <div ng-if="settings.payoutMethod.entity_type == 'Company'">
+            <div layout="row" layout-xs="column">
+              <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
+                <label>IBAN</label>
+                <input required ng-model="settings.payoutMethod.iban">
               </md-input-container>
-              <md-input-container flex="50">
-                <label>{{ 'forms.last-name' | translate }}</label>
-                <input
-                  required
-                  ng-model="settings.payoutMethod.formData.last_name">
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
+                <label>BIC</label>
+                <input required ng-model="settings.payoutMethod.bic">
               </md-input-container>
             </div>
-            <div layout="row" layout-margin>
-              <md-input-container flex="50">
-                <label>IBAN</label>
-                <input
-                  required
-                  ng-model="settings.payoutMethod.formData.iban">
+            <div layout="row" layout-xs="column">
+              <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
+                <label>{{ 'forms.account_holder_name' | translate }}</label>
+                <input required ng-model="settings.payoutMethod.account_holder_name">
               </md-input-container>
-              <md-input-container flex="50">
-                <label>BIC</label>
-                <input
-                  required
-                  ng-model="settings.payoutMethod.formData.bic">
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
+                <label>{{ 'forms.bank_country' | translate }}</label>
+                <md-select required ng-model="settings.payoutMethod.country_code" class="md-no-underline">
+                  <md-option ng-repeat="country_code in settings.payoutSupportedCountries" value="{{country_code}}">
+                    {{settings.getCountryName(country_code)}}
+                  </md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+            <div layout="row" class="lnr-mh">
+              <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
+                <label>{{ 'forms.company-name' | translate }}</label>
+                <input required ng-model="settings.payoutMethod.last_name">
+              </md-input-container>
+              <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
+                <label>{{ 'forms.nationality' | translate }}</label>
+                <md-select required ng-model="settings.payoutMethod.nationality" class="md-no-underline">
+                  <md-option ng-repeat="country_code in settings.getCountryCodes()" value="{{country_code}}">
+                    {{settings.getCountryName(country_code)}}
+                  </md-option>
+                </md-select>
               </md-input-container>
             </div>
           </div>
           <div
-            ng-if="settings.payoutMethod.payment_type"
+            ng-if="settings.payoutMethod.entity_type"
             layout="row"
             layout-align="end">
             <md-button

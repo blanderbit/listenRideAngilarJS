@@ -4283,3 +4283,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 .wrap-showroom-address {
   align-items: center;
 }
+
+.settings-payout-method-input input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}

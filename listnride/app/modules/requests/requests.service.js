@@ -1,3 +1,5 @@
+import { getCodes, getName } from 'country-list';
+
 angular
   .module('requests')
   .factory('requestsService', function(
@@ -7,7 +9,8 @@ angular
     $mdDialog,
     payoutHelper,
     api,
-    MESSAGE_STATUSES
+    MESSAGE_STATUSES,
+    PAYOUT_SUPPORTED_COUNTRIES
   ) {
     const requestsService = {
       updateStatus({ request, statusId, paymentWarning }) {
@@ -99,21 +102,7 @@ angular
       },
 
       validPayoutMethod(user) {
-        if (!user.payout_method) return false;
-
-        if (
-          user.payout_method &&
-          user.payout_method.payment_type === 'credit-card'
-        ) {
-          return (
-            user.payout_method.iban &&
-            user.payout_method.bic &&
-            user.payout_method.first_name &&
-            user.payout_method.last_name
-          );
-        }
-
-        return true;
+        user.payout_method && user.payout_method.payment_type == 'bank-account'
       },
 
       showRejectConfirmationDialog({ clickEvent, options = {} }) {
@@ -163,12 +152,13 @@ angular
       const payoutDialog = this;
 
       payoutDialog.user = user;
-      payoutDialog.emailFormat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      payoutDialog.payoutSupportedCountries = PAYOUT_SUPPORTED_COUNTRIES;
+      payoutDialog.getCountryCodes = getCodes;
+      payoutDialog.getCountryName = getName;
 
       payoutDialog.addPayoutMethod = function() {
         payoutHelper.postPayout(
-          payoutDialog.payoutMethod.formData,
-          payoutDialog.payoutMethod.payment_type,
+          payoutDialog.payoutMethod,
           onSuccessPayoutUpdate
         );
 
