@@ -102,7 +102,7 @@ angular
       },
 
       validPayoutMethod(user) {
-        user.payout_method && user.payout_method.payment_type == 'bank-account'
+        return user.payout_method && user.payout_method.payment_type == 'bank-account'
       },
 
       showRejectConfirmationDialog({ clickEvent, options = {} }) {
