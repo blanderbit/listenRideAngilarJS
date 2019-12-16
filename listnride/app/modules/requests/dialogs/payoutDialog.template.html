@@ -40,17 +40,23 @@
             <div layout="row" class="lnr-mh">
               <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
                 <label>{{ 'forms.first-name' | translate }}</label>
-                <input required ng-model="settings.payoutMethod.first_name">
+                <input required minlength="2" ng-model="settings.payoutMethod.first_name">
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                 <label>{{ 'forms.last-name' | translate }}</label>
-                <input required ng-model="settings.payoutMethod.last_name">
+                <input required minlength="2" ng-model="settings.payoutMethod.last_name">
               </md-input-container>
             </div>
             <div layout="row" layout-xs="column">
               <md-input-container class="lnr-gt-xs-mr settings-payout-method-input" flex-gt-xs="50">
                 <label>{{ 'forms.dob' | translate }}</label>
-                <input required class="settings-payout-method-input" type="date" ng-model="settings.payoutMethod.date_of_birth">
+                <input
+                  required
+                  type="text"
+                  placeholder="DD/MM/YYYY"
+                  class="settings-payout-method-input"
+                  pattern="(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[012])[\/\-]\d{4}"
+                  ng-model="settingsAccount.parent.payoutMethod.date_of_birth"/>
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                 <label>{{ 'forms.gender' | translate }}</label>
@@ -101,7 +107,7 @@
             <div layout="row" class="lnr-mh">
               <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
                 <label>{{ 'forms.company-name' | translate }}</label>
-                <input required ng-model="settings.payoutMethod.last_name">
+                <input required minlength="2" ng-model="settings.payoutMethod.last_name">
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                 <label>{{ 'forms.nationality' | translate }}</label>
