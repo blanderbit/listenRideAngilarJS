@@ -157,7 +157,7 @@
                   </md-input-container>
                   <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                     <label>{{ 'forms.bank_country' | translate }}</label>
-                    <md-select required ng-model="settingsAccount.parent.payoutMethod.country_code" class="md-no-underline">
+                    <md-select required ng-model="settingsAccount.parent.payoutMethod.country_code" class="md-no-underline payout-method-select">
                       <md-option ng-repeat="country_code in settingsAccount.parent.payoutSupportedCountries" value="{{country_code}}">
                         {{settingsAccount.parent.getCountryName(country_code)}}
                       </md-option>
@@ -196,7 +196,7 @@
                 <div layout="row" layout-xs="column">
                   <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
                     <label>{{ 'forms.nationality' | translate }}</label>
-                    <md-select required ng-model="settingsAccount.parent.payoutMethod.nationality" class="md-no-underline">
+                    <md-select required ng-model="settingsAccount.parent.payoutMethod.nationality" class="md-no-underline payout-method-select">
                       <md-option ng-repeat="country_code in settingsAccount.parent.getCountryCodes()" value="{{country_code}}">
                         {{settingsAccount.parent.getCountryName(country_code)}}
                       </md-option>
@@ -224,7 +224,7 @@
                   </md-input-container>
                   <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                     <label>{{ 'forms.bank_country' | translate }}</label>
-                    <md-select required ng-model="settingsAccount.parent.payoutMethod.country_code" class="md-no-underline">
+                    <md-select required ng-model="settingsAccount.parent.payoutMethod.country_code" class="md-no-underline payout-method-select">
                       <md-option ng-repeat="country_code in settingsAccount.parent.payoutSupportedCountries" value="{{country_code}}">
                         {{settingsAccount.parent.getCountryName(country_code)}}
                       </md-option>
@@ -238,7 +238,7 @@
                   </md-input-container>
                   <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                     <label>{{ 'forms.nationality' | translate }}</label>
-                    <md-select required ng-model="settingsAccount.parent.payoutMethod.nationality" class="md-no-underline">
+                    <md-select required ng-model="settingsAccount.parent.payoutMethod.nationality" class="md-no-underline payout-method-select">
                       <md-option ng-repeat="country_code in settingsAccount.parent.getCountryCodes()" value="{{country_code}}">
                         {{settingsAccount.parent.getCountryName(country_code)}}
                       </md-option>

@@ -4283,3 +4283,7 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 .wrap-showroom-address {
   align-items: center;
 }
+
+.payout-method-select md-select-value {
+  width: 10rem;
+}
