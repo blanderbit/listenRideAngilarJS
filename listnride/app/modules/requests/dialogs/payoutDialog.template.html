@@ -71,7 +71,7 @@
                 <label>{{ 'forms.nationality' | translate }}</label>
                 <md-select required ng-model="settings.payoutMethod.nationality" class="md-no-underline payout-method-select">
                   <md-option ng-repeat="country_code in settings.getCountryCodes()" value="{{country_code}}">
-                    {{settingsAccount.parent.getCountryName(country_code)}}
+                    {{settings.getCountryName(country_code)}}
                   </md-option>
                 </md-select>
               </md-input-container>
