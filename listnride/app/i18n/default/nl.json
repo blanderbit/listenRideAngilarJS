@@ -483,8 +483,8 @@
         "meta-description": "Op listnride vind je een selectie van gravel- en mountainbikes te huur voor dit speciale gravel evenement in Sineu, Mallorca."
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Rent a bike with listnride",
-        "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
+        "meta-title": "Huur een vintage fiets voor l'Eroica in Oostenrijk: in Velo Veritas! | listnride",
+        "meta-description": "Huur een vintage racefiets voor In Velo Veritas! listnride heeft een prachtige selectie klassieke fietsen te huur voor deze prachtige tour door het Oostenrijkse wijnland."
       },
       "velocity-bikerental": {
         "meta-title": "Huur een racefiets voor de Berlin Triathlon 2020!",
@@ -817,6 +817,13 @@
   },
   "settings": {
     "settings": "Instellingen",
+    "payout": {
+      "entity_type": {
+        "label": "Geef aan of je een particuliere- of zakelijke bankrekening hebt:",
+        "natural_person": "particuliere rekening",
+        "company": "Zakelijke rekening"
+      }
+    },
     "accept_request_reminder": {
       "subscribe": "Herinneringsmeldingen"
     },
@@ -1047,6 +1054,15 @@
   },
   "forms": {
     "first-name": "Voornaam",
+    "account_holder_name": "Naam rekeninghouder",
+    "bank_country": "Land",
+    "dob": "Geboortedatum",
+    "gender": "Wat is je geslacht?",
+    "nationality": "Wat is je nationaliteit",
+    "gender_select": {
+      "male": "Man",
+      "female": "Vrouw"
+    },
     "newsletter-privacy-policy": "Je kan ten aller tijde je voor de nieuwsletter afmelden. Het privacybeleid van listnride is van toepassing",
     "sign-up-today": "Meld je nu aan",
     "already-registered": "Je bent al geregistreerd",

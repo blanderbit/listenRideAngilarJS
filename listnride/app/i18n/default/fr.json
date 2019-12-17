@@ -488,8 +488,8 @@
         "meta-description": "Sur listnride, vous trouverez une sélection de gravel bikes et de VTT que vous pourrez louer pour cet événement spécial dédié au gravier à Sineu, à Majorque."
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Louer un vélo avec listnride",
-        "meta-description": "Louez un vélo vintage en acier pour In Velo Veritas. listnride propose une sélection de vélos classiques à louer pour ce beau circuit dans la région viticole autrichienne."
+        "meta-title": "Louez un vélo vintage pour l'Autriche l'Eroica: In Velo Veritas! | listnride",
+        "meta-description": "Louez un vélo de route vintage pour In Velo Veritas! listnride a une belle sélection de vélos classiques à louer pour ce beau tour du pays du vin autrichien."
       },
       "velocity-bikerental": {
         "meta-title": "Louez un vélo de route pour le VeloCity Berlin 2020!",
@@ -822,6 +822,13 @@
   },
   "settings": {
     "settings": "Paramètres",
+    "payout": {
+      "entity_type": {
+        "label": "Veuillez sélectionner si vous avez un compte bancaire privé ou professionnel:",
+        "natural_person": "Compte privé",
+        "company": "Compte professionnel"
+      }
+    },
     "accept_request_reminder": {
       "subscribe": "Notifications de rappel"
     },
@@ -1055,6 +1062,15 @@
   },
   "forms": {
     "first-name": "Prénom",
+    "account_holder_name": "Account holder name",
+    "bank_country": "Pays",
+    "dob": "Date d'anniversaire",
+    "gender": "Quel est votre sexe ?",
+    "nationality": "Quelle est votre nationalité?",
+    "gender_select": {
+      "male": "Masculin",
+      "female": "Féminin"
+    },
     "newsletter-privacy-policy": "Politique de confidentialité",
     "sign-up-today": "Inscrivez-vous aujourd'hui",
     "already-registered": "Vous êtes déjà inscrit",

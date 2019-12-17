@@ -335,7 +335,7 @@
       "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
     },
     "cyclingworld": {
-      "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
+      "meta-title": "Rent a gravel bike for the  Cyclingworld",
       "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
     },
     "black-friday": {
@@ -493,8 +493,8 @@
         "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Mallorca. "
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Rent a bike with listnride",
-        "meta-description": "Rent a steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
+        "meta-title": "Rent a vintage bike for Austria's l'Eroica: In Velo Veritas! | listnride",
+        "meta-description": "Rent a vintage road bike for In Velo Veritas! listnride has a beautiful selection of classic bikes to rent for this beautiful tour of the Austrian wine country."
       },
       "velocity-bikerental": {
         "meta-title": "Rent a road bike for the VeloCity Berlin 2020!",
@@ -829,9 +829,9 @@
     "settings": "Settings",
     "payout": {
       "entity_type": {
-        "label": "Please select if your bank account is personal or company",
-        "natural_person": "Personal",
-        "company": "Company"
+        "label": "Please select if you have a private or business bank account:",
+        "natural_person": "Private account",
+        "company": "Business account"
       }
     },
     "accept_request_reminder": {
@@ -1068,10 +1068,10 @@
   "forms": {
     "first-name": "First Name",
     "account_holder_name": "Account holder name",
-    "bank_country": "Bank country",
+    "bank_country": "Country",
     "dob": "Date of birth",
-    "gender": "Gender",
-    "nationality": "Nationality",
+    "gender": "What is your gender?",
+    "nationality": "What is your nationality?",
     "gender_select": {
       "male": "Male",
       "female": "Female"

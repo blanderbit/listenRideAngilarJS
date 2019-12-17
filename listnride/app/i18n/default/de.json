@@ -494,7 +494,7 @@
       },
       "in-velo-veritas": {
         "meta-title": "In Velo Veritas: miete ein Rad mit listnride",
-        "meta-description": "Miete dir mit listnride ein klassisches Stahl Rennrad für die In Velo Veritas Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs."
+        "meta-description": "Miete dir ein Rennrad für In Velo Veritas! listnride vermietet eine schöne Auswahl an klassischen Fahrrädern für diese schöne Tour durch das österreichische Weinland."
       },
       "velocity-bikerental": {
         "meta-title": "Miete dir ein Rennrad für den VeloCity 2020 in Berlin!",
@@ -827,6 +827,13 @@
   },
   "settings": {
     "settings": "Einstellungen",
+    "payout": {
+      "entity_type": {
+        "label": "Bitte wähle aus, ob du ein privates oder ein geschäftliches Konto hast",
+        "natural_person": "Privates Konto",
+        "company": "Geschäftliches Konto"
+      }
+    },
     "accept_request_reminder": {
       "subscribe": "Erinnerungs-Benachrichtigungen"
     },
@@ -1060,6 +1067,15 @@
   },
   "forms": {
     "first-name": "Vorname",
+    "account_holder_name": "Name des Kontoinhabers",
+    "bank_country": "Land",
+    "dob": "Geburtstag",
+    "gender": "Geschlecht",
+    "nationality": "Nationalität",
+    "gender_select": {
+      "male": "Männlich",
+      "female": "Weiblich"
+    },
     "newsletter-privacy-policy": "Privacy Policy News letter",
     "sign-up-today": "Heute anmelden",
     "already-registered": "Du hast dich bereits angemeldet",
