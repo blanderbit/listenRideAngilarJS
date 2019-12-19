@@ -1,4 +1,4 @@
-import { getCodes, getName } from 'country-list';
+import { getCodes, getName, getNames, getCode } from 'country-list';
 
 angular.module('settings',[])
 .component('settings', {
@@ -96,6 +96,8 @@ angular.module('settings',[])
         settings.toggleNotifications = toggleNotifications;
         settings.getCountryCodes = getCodes;
         settings.getCountryName = getName;
+        settings.getCountryCode = getCode;
+        settings.getCountryNames = getNames;
 
         // invocations
         userApi.getUserData().then(function (response) {

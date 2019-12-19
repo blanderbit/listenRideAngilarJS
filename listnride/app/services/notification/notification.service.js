@@ -13,22 +13,28 @@ angular
 
 function notificationController($mdToast, $translate) {
  return {
-  show: function (response, originalType, translateKey) {
+  show: function (response, originalType, translateKey, showPointer) {
     var self = this;
     var type = originalType || 'success';
 
     if (translateKey) {
       convertToKey(translateKey)
     } else {
-      getMessage();
+      getMessage(showPointer);
     }
 
-    function getMessage() {
+    function getMessage(showPointer) {
       var responseText;
 
       if (type === 'error' && response.data && response.data.errors && response.data.errors.length) {
         // TODO: Add multiply errors
-        return self.showToast(response.data.errors[0].detail)
+        if (showPointer) {
+          var pointer = response.data.errors[0].source.pointer;
+          var displayablePointer = pointer === 'base' ? '' : beautifyPointer(pointer) + ': ';
+          return self.showToast(displayablePointer + response.data.errors[0].detail);
+        } else {
+          return self.showToast(response.data.errors[0].detail);
+        }
       } else if (response.status != -1) {
         responseText = 'shared.notifications.'+ response.status
       } else {
@@ -44,6 +50,10 @@ function notificationController($mdToast, $translate) {
       }, function (error) {
         self.showToast(error)
       });
+    }
+
+    function beautifyPointer(pointer) {
+      return pointer == 'iban' ? 'IBAN' : pointer.replace(/_/g, ' ').toUpperCase();
     }
   },
   showToast: function (text) {

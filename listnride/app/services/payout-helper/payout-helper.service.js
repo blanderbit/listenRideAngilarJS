@@ -35,7 +35,7 @@ function PayoutHelperController(api, authentication, notification) {
           notification.show(success, null, 'toasts.add-payout-success');
         },
         function (error) {
-          notification.show(error, 'error');
+          notification.show(error, 'error', false, true);
           if (typeof cbError == 'function') cbError();
         }
       );
