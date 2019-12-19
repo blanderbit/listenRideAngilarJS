@@ -197,8 +197,8 @@
                   <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
                     <label>{{ 'forms.nationality' | translate }}</label>
                     <md-select required ng-model="settingsAccount.parent.payoutMethod.nationality" class="md-no-underline payout-method-select">
-                      <md-option ng-repeat="country_code in settingsAccount.parent.getCountryCodes()" value="{{country_code}}">
-                        {{settingsAccount.parent.getCountryName(country_code)}}
+                      <md-option ng-repeat="country_name in settingsAccount.parent.getCountryNames().sort()" value="{{settingsAccount.parent.getCountryCode(country_name)}}">
+                        {{country_name}}
                       </md-option>
                     </md-select>
                   </md-input-container>
@@ -239,8 +239,8 @@
                   <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                     <label>{{ 'forms.nationality' | translate }}</label>
                     <md-select required ng-model="settingsAccount.parent.payoutMethod.nationality" class="md-no-underline payout-method-select">
-                      <md-option ng-repeat="country_code in settingsAccount.parent.getCountryCodes()" value="{{country_code}}">
-                        {{settingsAccount.parent.getCountryName(country_code)}}
+                      <md-option ng-repeat="country_name in settingsAccount.parent.getCountryNames().sort()" value="{{settingsAccount.parent.getCountryCode(country_name)}}">
+                        {{country_name}}
                       </md-option>
                     </md-select>
                   </md-input-container>

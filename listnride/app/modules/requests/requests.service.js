@@ -1,4 +1,4 @@
-import { getCodes, getName } from 'country-list';
+import { getCodes, getName, getNames, getCode } from 'country-list';
 
 angular
   .module('requests')
@@ -155,6 +155,8 @@ angular
       payoutDialog.payoutSupportedCountries = PAYOUT_SUPPORTED_COUNTRIES;
       payoutDialog.getCountryCodes = getCodes;
       payoutDialog.getCountryName = getName;
+      payoutDialog.getCountryCode = getCode;
+      payoutDialog.getCountryNames = getNames;
 
       payoutDialog.addPayoutMethod = function() {
         payoutHelper.postPayout(
