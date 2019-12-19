@@ -30,7 +30,7 @@ function notificationController($mdToast, $translate) {
         // TODO: Add multiply errors
         if (showPointer) {
           var pointer = response.data.errors[0].source.pointer;
-          var displayablePointer = pointer === 'base' ? '' : pointer + ': ';
+          var displayablePointer = pointer === 'base' ? '' : beautifyPointer(pointer) + ': ';
           return self.showToast(displayablePointer + response.data.errors[0].detail);
         } else {
           return self.showToast(response.data.errors[0].detail);
@@ -50,6 +50,10 @@ function notificationController($mdToast, $translate) {
       }, function (error) {
         self.showToast(error)
       });
+    }
+
+    function beautifyPointer(pointer) {
+      return pointer == 'iban' ? 'IBAN' : pointer.replace(/_/g, ' ').toUpperCase();
     }
   },
   showToast: function (text) {
