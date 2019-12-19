@@ -20,5 +20,11 @@ angular.module('bikeCardsList', []).component('bikeCardsList', {
         return 'search({location: bikeCardsList.city, categories: bikeCardsList.subcategories})'
       }
     };
+
+    bikeCardsList.btnRel = function() {
+      // search links have to be nofollow
+      // if ref is present we redirect to category seo page
+      return bikeCardsList.ref ? '' : 'nofollow'
+    };
   }
 });

@@ -1,3 +1,5 @@
+import { getCodes, getName } from 'country-list';
+
 angular.module('settings',[])
 .component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
@@ -21,7 +23,8 @@ angular.module('settings',[])
     paymentHelper,
     payoutHelper,
     ENV,
-    $scope
+    $scope,
+    PAYOUT_SUPPORTED_COUNTRIES
   ) {
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -29,7 +32,6 @@ angular.module('settings',[])
       // meta information
       ngMeta.setTitle($translate.instant("settings.meta-title"));
       ngMeta.setTag("description", $translate.instant("settings.meta-description"));
-
 
       var settings = this;
 
@@ -54,6 +56,7 @@ angular.module('settings',[])
         settings.business = {};
         settings.user.business = false;
         settings.user.has_billing = false;
+        settings.payoutSupportedCountries = PAYOUT_SUPPORTED_COUNTRIES;
 
         // payment
         settings.showPaymentChangeForm = showPaymentChangeForm;
@@ -91,6 +94,8 @@ angular.module('settings',[])
         settings.showResponseMessage = showResponseMessage;
         settings.updateNewsletter = updateNewsletter;
         settings.toggleNotifications = toggleNotifications;
+        settings.getCountryCodes = getCodes;
+        settings.getCountryName = getName;
 
         // invocations
         userApi.getUserData().then(function (response) {
@@ -125,7 +130,7 @@ angular.module('settings',[])
         if (!_.isEmpty(settings.user.business)) {
           settings.business = settings.user.business;
         }
-        if (settings.user.payout_method && settings.user.payout_method.payment_type === 'credit-card') {
+        if (settings.user.payout_method && settings.user.payout_method.iban) {
           settings.payoutMethod.short_iban = getShortIban();
         }
 
@@ -485,13 +490,15 @@ angular.module('settings',[])
 
       function addPayoutMethod () {
         settings.payoutMethod.loading = true;
-        payoutHelper.postPayout(settings.payoutMethod.formData, settings.payoutMethod.payment_type, onSuccessPayoutUpdate, onErrorPayoutUpdate);
+        payoutHelper.postPayout(
+          settings.payoutMethod,
+          onSuccessPayoutUpdate,
+          onErrorPayoutUpdate
+        );
 
         function onSuccessPayoutUpdate(data) {
           settings.user.payout_method = data.payout_method;
-          if (settings.payoutMethod.payment_type === 'credit-card') {
-            settings.payoutMethod.short_iban = getShortIban();
-          }
+          settings.payoutMethod.short_iban = getShortIban();
           settings.payoutMethod.loading = false;
           // clear payout form
           settings.payoutMethod.formData = {};
@@ -512,10 +519,8 @@ angular.module('settings',[])
       function isPayoutExist() {
         if (!settings.user.payout_method) return false;
         switch (settings.user.payout_method.payment_type) {
-          case 'credit-card':
-            return !!(settings.user.payout_method.iban && settings.user.payout_method.bic)
-          case 'paypal-account':
-            return !!settings.user.payout_method.email;
+          case 'bank-account':
+            return true;
           default:
             notification.show(null, null, 'shared.errors.unexpected-payment-type');
             return false;

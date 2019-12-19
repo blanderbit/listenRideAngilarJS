@@ -361,12 +361,12 @@
       "meta-description": "Avec listnride, vous pouvez louer en ligne un vélo de route en toute sécurité pour le l'Ardita 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Location de vélo de route pour Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour la Granfondo Via del Sale 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
+      "meta-title": "Location de vélo de route pour Granfondo Via del Sale 2020 | listnride",
+      "meta-description": "Location de vélos pour Granfondo Via del Sale 2020 | Louez un vélo de course parfait sur listnride!"
     },
     "giro-sardegna": {
-      "meta-title": "Location de vélo de route pour le Giro Sardegna 2019 | listnride",
-      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route pour le Giro Sardegna 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
+      "meta-title": "Location de vélo de route pour le Giro Sardegna | listnride",
+      "meta-description": "Location de vélos pour le Giro Sardegna | Louez un vélo de course qui vous convient le mieux sur listnride!"
     }
   },
   "lister": {
@@ -488,8 +488,8 @@
         "meta-description": "Sur listnride, vous trouverez une sélection de gravel bikes et de VTT que vous pourrez louer pour cet événement spécial dédié au gravier à Sineu, à Majorque."
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Louer un vélo avec listnride",
-        "meta-description": "Louez un vélo vintage en acier pour In Velo Veritas. listnride propose une sélection de vélos classiques à louer pour ce beau circuit dans la région viticole autrichienne."
+        "meta-title": "Louez un vélo vintage pour l'Autriche l'Eroica: In Velo Veritas! | listnride",
+        "meta-description": "Louez un vélo de route vintage pour In Velo Veritas! listnride a une belle sélection de vélos classiques à louer pour ce beau tour du pays du vin autrichien."
       },
       "velocity-bikerental": {
         "meta-title": "Louez un vélo de route pour le VeloCity Berlin 2020!",
@@ -822,6 +822,13 @@
   },
   "settings": {
     "settings": "Paramètres",
+    "payout": {
+      "entity_type": {
+        "label": "Veuillez sélectionner si vous avez un compte bancaire privé ou professionnel:",
+        "natural_person": "Compte privé",
+        "company": "Compte professionnel"
+      }
+    },
     "accept_request_reminder": {
       "subscribe": "Notifications de rappel"
     },
@@ -1055,6 +1062,15 @@
   },
   "forms": {
     "first-name": "Prénom",
+    "account_holder_name": "Account holder name",
+    "bank_country": "Pays",
+    "dob": "Date d'anniversaire",
+    "gender": "Quel est votre sexe ?",
+    "nationality": "Quelle est votre nationalité?",
+    "gender_select": {
+      "male": "Masculin",
+      "female": "Féminin"
+    },
     "newsletter-privacy-policy": "Politique de confidentialité",
     "sign-up-today": "Inscrivez-vous aujourd'hui",
     "already-registered": "Vous êtes déjà inscrit",
@@ -1156,7 +1172,7 @@
   },
   "search": {
     "no-bikes": "Il n'y a malheureusement pas encore de vélos à cet endroit. Comme nous grandissons rapidement, veuillez vérifier à nouveau dans quelque temps, nous aurons probablement des vélos enregistrés d'ici là! Sinon, essayez de chercher un autre endroit à proximité.\n<br><br>\nAidez les autres à trouver d'excellents vélos en inscrivant votre propre vélo ou en communiquant avec votre magasin de vélo pour les embarquer avec nous ! ",
-    "unisize": "Unisize",
+    "unisize": "Taille unique",
     "book-multiple-bikes": "Location de vélos pour les grands groupes",
     "bikes-found": "Vélos trouvés:",
     "all-sizes": "Toutes les tailles",
@@ -1437,7 +1453,7 @@
   },
   "rent-a-bike": {
     "meta-title": "Louez un vélo via listnride!",
-    "meta-description": "Sélection fantastique. Excellent rapport qualité / prix. Service en ligne facile.",
+    "meta-description": "Louez parmi notre grande sélection de vélos de route, vélos électriques, vélos de montagne et vélos cargo! Cherchez, sélectionner et réserver tout facilement en ligne.",
     "title": "Ne louez pas n'importe quel vieux vélo. Louez-en un qui ressemble au vôtre.",
     "info-section": {
       "header": "Louez un vélo parfait pour vous",
@@ -1495,7 +1511,9 @@
     }
   },
   "invoices": {
-    "request_id": "Request ID",
+    "request_id": "N° de réservation",
+    "invoice_number": "Facture n°",
+    "payout_date": "Date de remboursement",
     "credit-notes": "Notes de crédit",
     "bike": "Vélo",
     "start_date": "Date de début",

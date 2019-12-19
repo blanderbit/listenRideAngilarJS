@@ -358,12 +358,12 @@
       "meta-description": "Con listnride puoi noleggiare una bici da corsa vintage online per l'Ardita 2019 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Noleggia una bici da corsa per la Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per la Granfondo Via del Sale 2019. Scegli la bici perfetta per le tue esigenze!"
+      "meta-title": "Noleggia una bici da corsa per la Granfondo Via del Sale 2020 | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per la Granfondo Via del Sale 2020. Scegli la bici ideale per le tue esigenze!"
     },
     "giro-sardegna": {
-      "meta-title": "Noleggia una bici da corsa per il Giro Sardegna  | listnride",
-      "meta-description": "Con listnride puoi noleggiare una bici da corsa online per il Giro Sardegna 2019. Scegli la bici perfetta per le tue esigenze!"
+      "meta-title": "Noleggia una bici da corsa per il Giro Sardegna | listnride",
+      "meta-description": "Noleggio bici per il Giro Sardegna | Noleggia una bici da corsa adatta a te su listnride!"
     }
   },
   "lister": {
@@ -485,8 +485,8 @@
         "meta-description": "Su listnride troverai una selezione di Gravel e Mtb da noleggiare per questo speciale evento Gravel a Sineu a Maiorca."
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Rent a bike with listnride",
-        "meta-description": "Rent the perfect steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
+        "meta-title": "Noleggia una bici vintage per l'Eroica austriaca: In Velo Veritas! | listnride",
+        "meta-description": "Noleggia una bici da strada vintage per In Velo Veritas! listnride ha una bellissima selezione di biciclette classiche da noleggiare per questo bellissimo tour nella regione vinicola austriaca."
       },
       "velocity-bikerental": {
         "meta-title": "Noleggia una bici da strada per il VeloCity Berlin 2020!",
@@ -817,6 +817,13 @@
   },
   "settings": {
     "settings": "Impostazioni",
+    "payout": {
+      "entity_type": {
+        "label": "Seleziona se hai un conto bancario privato o aziendale:",
+        "natural_person": "Conto privato",
+        "company": "Conto commerciale"
+      }
+    },
     "accept_request_reminder": {
       "subscribe": "Accept request reminder"
     },
@@ -1049,6 +1056,15 @@
   },
   "forms": {
     "first-name": "Nome",
+    "account_holder_name": "Account holder name",
+    "bank_country": "Nazione",
+    "dob": "Data di nascita",
+    "gender": "Qual è il tuo sesso?",
+    "nationality": "Qual è la tua nazionalità?",
+    "gender_select": {
+      "male": "Maschio",
+      "female": "Femminile"
+    },
     "newsletter-privacy-policy": "Privacy Policy News letter",
     "sign-up-today": "Iscriviti oggi",
     "already-registered": "Sei già iscritto",
@@ -1431,7 +1447,7 @@
   },
   "rent-a-bike": {
     "meta-title": "Noleggia una bicicletta con listnride!",
-    "meta-description": "Un'ampia e fantastica scelta. Ottimo rapporto qualità / prezzo. Semplice servizio online.",
+    "meta-description": "Noleggia dalla nostra fantastica selezione di bici da strada, e-bike, mountain bike e bici da carico! Basta cercare, selezionare e prenotare online.",
     "title": "Non noleggiare solo una vecchia bicicletta. Noleggia quella che senti più giusta per te.",
     "info-section": {
       "header": "Noleggia la bicicletta perfetta per te",
@@ -1490,6 +1506,8 @@
   },
   "invoices": {
     "request_id": "Richiesta ID",
+    "invoice_number": "Fattura  numero",
+    "payout_date": "Data del rimborso",
     "credit-notes": "Note di credito",
     "bike": "Bicicletta",
     "start_date": "Data d'inizio",

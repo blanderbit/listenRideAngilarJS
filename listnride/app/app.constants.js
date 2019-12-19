@@ -47,4 +47,8 @@ angular
     APPROVED: 4, // Transaction captured || Not credit card payment method
     FAILED: 5, // Error happend, equal to PAYMENT_FAILED in MESSAGE.STATUSES
     WAITING_FOR_CAPTURE: 6, // Adyen created a request to rider bank account to charge money
-  });
+  })
+  .constant('PAYOUT_SUPPORTED_COUNTRIES', [
+    'AT', 'BE', 'CY', 'EE', 'FI', 'FR', 'DE', 'GR', 'IE', 'IT', 'LV', 'LI', 'LT',
+    'LU', 'MT', 'MC', 'NL', 'PL', 'PT', 'SM', 'SK', 'SI', 'ES', 'CH', 'GB'
+  ]);

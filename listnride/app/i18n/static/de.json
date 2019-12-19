@@ -249,7 +249,7 @@
         "answer-5": "Klick auf „<b>Meine Räder</b>” im Menü und anschließend auf Rad einstellen. Der Dialog führt dich durch alle nötigen Schritte. Hier kannst du Informationen über dein Fahrrad wie Marke, Beschreibung, Bilder, Mietpreis und Zubehör angeben.",
         "answer-6": "Du kannst den Mietpreis frei wählen. Der Wochenpreis darf nicht niedriger sein als der Tagespreis. Um den Mietpreis zu bestimmen, kannst du dein Fahrrad mit ähnlichen verfügbaren Fahrrädern auf listnride vergleichen.",
         "answer-7": "Du erhälst eine E-Mail und SMS-Benachrichtigung, die dich über eine neue Buchungsanfrage informiert und alle relevanten Details enthält.\nMelde dich an und gehe zu \"Anfragen\", um die Buchung zu akzeptieren oder abzulehnen und einen Chat mit dem Rider zu beginnen, wenn etwas zu klären ist.\nWenn du die Anfrage annimmst, ist die Buchung abgeschlossen und die Miete bezahlt. Du erhälst eine Buchungsbestätigung mit allen relevanten Informationen und Kontaktdaten des Riders per E-Mail.",
-        "answer-8": "Das Einstellen eines Fahrrads ist kostenlos. Es entstehen weder fixe noch laufende Kosten.",
+        "answer-8": "Nichts! Das Einstellen eines oder mehrerer Fahrräder ist kostenlos. ",
         "answer-9": "Wir unterstützen verschiedene Zahlungsmethoden, je nachdem, in welchem Land sich dein Auszahlungskonto befindet. Wir unterstützen in der Regel alle Arten von Kreditkarten und Paypal-Konten. Offline- oder Barzahlungen sind ein Verstoß gegen unsere Allgemeinen Geschäftsbedingungen, was zu einer Deaktivierung deines listnride-Kontos führen kann. \nEs sollte in deinem eigenen Interesse liegen, Zahlungen außerhalb von listnride zu vermeiden, da so kein gültiger Mietvertrag zustande kommt, du leicht beklaut oder betrogen werden kannst und auch die listnride-Versicherung nicht greift.",
         "answer-10": "Die Zahlung erfolgt erst, nachdem der Vermieter deine Anfrage akzeptiert hat. Stornierst du deine Anfrage oder wird sie von Vermietern nicht angenommen, wird keine Zahlung ausgelöst.",
         "question-1": "Wie suche ich ein Fahrrad?",
@@ -258,7 +258,7 @@
         "question-4": "Wie kann ich ein Fahrrad mieten?",
         "question-5": "Wie liste ich mein Fahrrad?",
         "question-6": "Wie lege ich den Mietpreis fest?",
-        "question-7": "Wie erfahre ich, dass mein Fahrrad angefragt wurde?",
+        "question-7": "Wie erfahre ich ob mein Fahrrad angefragt wurde?",
         "question-8": "Was kostet es, mein Fahrrad zu listen?",
         "question-9": "Welche Zahlungsarten werden akzeptiert?",
         "question-10": "Wann bezahle ich meine Fahrradmiete?"
@@ -395,7 +395,7 @@
       "description": "Was: <b>Gran Fondo Costa del Sol</b> | Wann: <b>14 September 2019</b> | Wo: <b>Estepona,  Málaga</b>",
       "text": "<a href=\"http://www.granfondocostadelsol.com/\" target=\"_blank\">Gran Fondo Costa del Sol</a> ist eine wunderschöne Radsportveranstaltung mit Abfahrt und Ankunft in Estepona, Malaga (Costa del Sol). Ein internationaler Test, mit zwei Routen, dem ersten Gran Fondo von 133 km und 3400 Höhenmeter und dem Medium Fondo von 94 km und 2400 Höhenmeter. Du wirst den berühmten <b>Alto Cortes de la Frontera</b> und den kolossalen <b>Peñas Blancas</b>steigen und den Reichtum der Umgebung in vollen Zügen genießen!<br> Leih dir jetzt dein Rennrad! Wähle das Fahrrad, das zu dir passt und genieße den Gran Fondo.",
       "meta-title": "Miete einfach das perfekte Rennrad für den Gran Fondo Costa del Sol!",
-      "meta-description": "Enjoy the beautiful mountains of the Gran Fondo Costa del Sol by renting a carbon road bike from listnride!"
+      "meta-description": "Genieße die wunderschönen Berge beim Gran Fondo Costa del Sol mit einem Carbon Rennrad von listnride!"
     },
     "8bar-clubride": {
       "title": "Nehme teil an unserer 8bar Clubride und fahre kostenlos mit einer 8bar Rennrad!",
@@ -411,7 +411,7 @@
     },
     "cyclingworld": {
       "title": "Buche dir ein Gravel-Bike der Marken 8bar, Salsa, Veloheld oder Genesis für die Gravelausfahrt auf der Cyclingworld Düsseldorf",
-      "description": "Was: <b>CyclingWorld </b>| Wann: <b>23.-24. März 2019 </b>| Wo: <b>Düsseldorf, Deutschland </b>",
+      "description": "Was: <b>CyclingWorld </b>| Wann: <b>21.-22. März 2020 </b>| Wo: <b>Düsseldorf, Deutschland </b>",
       "text": "Gemeinsam mit unserem Partner SCHICKEMÜTZE und Partnermarken 8Bar, Salsa, Veloheld und Genesis laden wir im Rahmen der Cyclingworld Düsseldorf zur Gravelrunde ins Düsseldorfer Umland. </br>Euch stehen zwei Strecken zur Verfügung, eine flache Runde von 50 Kilometern, die der tollen Tour vom letzten Jahr entspricht, oder eine Runde von 70 Kilometern, die über den Rhein führt und ein paar kleine Anstiege und ruppige Abschnitte rund um Ratingen beinhaltet. Ihr startet in kleinen Teams von 2 bis 6 Personen, navigiert wird per gpx-Datei, die alle Starter/innen im Vorfeld der Tour per Mail bekommen. Die Wahl, welche Tour ihr fahrt, könnt ihr Morgens vorm Start treffen.Nach der Rückkehr zum Areal Böhler erwarten wir euch vor der Cyclingworld mit ein paar Snacks und Drinks, um die Kalorienspeicher wieder aufzufüllen. Ihr könnt im Anschluss an die Tour euer Rad auf einem bewachten Parkplatz abgeben, um stressfrei über die Messe zu bummeln. Eine Eintrittskarte zur Cyclingworld ist im Starterpaket enthalten, genau wie ein paar weitere Kleinigkeiten.LISTNRIDE werden euch über ihre Community Testräder unterschiedlicher Marken anbieten, falls ihr also ein Gravelbike von 8Bar oder anderen fahren möchtet, bucht bitte im Vorfeld dein Wunschrad unter <a href=\"www.listnride.com/events/cyclingworld\" target=\"_blank\">www.listnride.com/events/cyclingworld </a>Wir werden euch via Mail über Updates und alles Wissenswerte zu den Ausfahrten informieren. Wir freuen uns auf eine spannende Cyclingworld und ein paar tolle Stunden mit euch auf und neben dem Rad."
     },
     "black-friday": {
@@ -440,14 +440,14 @@
       "text": "Herzstück des Festivals ist \"L'Ardita\", der Alpe di Poti für Vintage-Rennräder. \nAm Sonntag, den 24. März 2019, trifft man wieder auf die Alpe di Poti , Etappe des Giro d'Italia 2016, aber auch vieler wichtiger Rennen in den 70er und 80er Jahren.  \nErinnert die L’ Ardita and das Radfahren der Vergangenheit. Suchst du ein Rennrad für <a href=\"https://www.lardita.com/eng\" target=\"_blank\">L’ Ardita? </a> Zusammen mit der listnride-Community stellen wir hier passenden Leihrennräder zur Verfügung. Wähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
     },
     "granfondo-via-del-sale": {
-      "title": "Miete ein Rennrad für die Granfondo Via del Sale",
-      "description": "Was: <b>23ª Granfondo Via del Sale </b>| Wann: <b>5.5.2019 </b>| Wo: <b>Fantini Club-Cervia (RA), Emilia Romagna </b>",
-      "text": "Mit der 23. Edition ist die Via del Sale mit 6.000 Teilnehmern und mehr als 28.000 Besuchern eines der führenden Granfondo in Italien. \nNeben diesen Rekordzahlen entscheiden sich jedes Jahr mehr als 100 Unternehmen für die Teilnahme an der größten Outdoor-Messe Italiens. \nEs gibt 3 verschiedene Routen: Größte Strecke: 174 km. Mittlere Strecke: 118 Km, Kurze Strecke: 77 Km\nDer berühmteste Aufstieg? Besonders der Montevecchio, der legendäre \"Cima Pantani\". Ein Ort, der uns am Herzen liegt, ist das wichtigste Symbol unseres Granfondo. Eine einzigartige Erinnerung an den unvergesslichen Piraten, der hierher kam, um sich auf seine großen Siege vorzubereiten.\nBrauchst du ein Rennrad für die <a target=\"_blank\" href=\"http://granfondoviadelsale.com/index.php?langsito=en&amp;utm_source=listnride&amp;utm_medium=newsletter%26social\"> Granfondo Via del Sale ? </a> In Zusammenarbeit mit der listnride Community stellen wir Ihnen hochwertige Rennräder zur Verfügung, die du problemlos für die Veranstaltung mieten kannst. Wähle eines der unterstehenden Fahrräder, frage es für den gewünschten Zeitraum an und hole es zum richtigen Zeitpunkt ab. \nFoto: Sportograf"
+      "title": "Miete ein Rennrad für die Granfondo Via del Sale!",
+      "description": "Was: <b>Granfondo Via del Sale </b>| Wann: <b>17-19 April 2020 </b>| Wo: <b>Fantini Club-Cervia (RA), Emilia Romagna</b>",
+      "text": "Bei ihrer 24. Ausgabe ist die Via del Sale mit 6.000 Teilnehmern und über 28.000 Besuchern eine der bekanntesten Granfondos in Italien!\n\nWenn man nicht in der Nähe wohnt, ist es eine logistische Herausforderung, sein eigenes Fahrrad nach <a target=\"_blank\" href=\"http://granfondoviadelsale.com/\">Granfondo Via del Sale</a> zu transportieren. Warum leih dir nicht einfach ein Fahrrad?\n\nSpar Zeit, Ärger und Geld: Die Räder werden an der Startlinie in Cervia einsatzbereit sein. Alles, was du mitbringen müsst, ist dein Lichtset, Helm, Pedale und natürlich: dich selbst!"
     },
     "giro-sardegna": {
-      "title": "Miete ein Rennrad für den Giro Sardegna.",
-      "description": "Was:  <b>Giro Sardegna</b> | Wann: <b>21.4 - 26.4.2019 </b> | Wo: <b>Cagliari, Sardinia</b>",
-      "text": "Das 6-stufige Radrennen, geeignet für alle fitness-levels von Radfahrern...\nJeden Tag eine neue Herausforderung, 6 Tage 6 Rennen auf der schönsten Insel des Mittelmeers. Giro Sardegna\nOsterspecial: an den Küsten Süd-Sardiniens\".\nVillasimius, Chia, Chia, Pula, Portoscuso, Nebida, Buggerru, Buggerru, Buggerru, etc.\nEs ist wunderbar, zu dieser Jahreszeit mit dem Fahrrad in der Schönheit der Natur zu fahren (Sardinien im späten Frühjahr ist ein Aufstand von Farben und Gerüchen!). \nDie Start- und Zielpunkte sind zu günstigen Zeiten und in der Nähe des Hotels; die Straßen sind perfekt asphaltiert; die Natur ist wie eine Postkarte: Alle diese Elemente haben eine Veranstaltung geschaffen, die weltweit einzigartig ist, mit der richtigen Philosophie und einer gut durchdachten Organisation!\nSuchst du ein Rennrad für den <a target=\"_blank\" href=\"https://www.girosardegna.com/\"> Giro Sardegna ? </a> Zusammen mit der listnride-Community stellen wir hier passenden Leihrennräder zur Verfügung. Wähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
+      "title": "Miete ein Rennrad für den Giro Sardegna!",
+      "description": "Was:  <b>Giro Sardegna</b> | Wann: <b>25. April - 1. Mai 2020</b> | Wo: <b>Alghero, Sardinia</b>",
+      "text": "Der Giro Sardegna ist ein Sechs-Etappen-Rennen um eine der schönsten Mittelmeerinseln. Wenn du nicht in der Nähe wohnst, ist es eine logistische Herausforderung, dein Fahrrad zu <a target=\"_blank\" href=\"https://www.girosardegna.com/\">Giro Sardegna</a> zu bringen. Warum leihst du nicht einfach ein Fahrrad mit uns? <br>\n\nSpar dich Zeit, Ärger und Geld: Die Räder werden an der Startlinie in Alghero einsatzbereit sein. Alles, was du mitbringen müsst, ist dein Helm, deine Pedale und natürlich: du!"
     },
     "velorace-dresden": {
       "title": "Miete ein Rennrad für Velorace Dresden 2019",
@@ -466,7 +466,7 @@
     "vatternrundan": {
       "title": "Miete ein Rennrad für die Vätternrundan",
       "description": "Was: <b> Vätternrundan </b>| Wo: <b> Motala, Schweden </b>| Wann: <b> 5.– 12. Juni 2020 </b>",
-      "text": "Logistik, Planung, Logistik. Wenn du nicht bereits auf der skandinavischen Halbinsel wohnst, ist der Transport deines Fahrrads nach Motala eine große logistische Herausforderung. Warum also nicht einfach ein Fahrrad mieten? \n<br> \n\nSpar dir Zeit, Mühe und Geld, indem du dir einfach ein Fahrrad ausleihst. Es kann sofort in Motala beginnen. Alles, was du mitbringen müsstest, ist ein Beleuchtungsset, Helm, Pedale und natürlich: dich selbst und deine Leidenschaft! <br>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Motala\">Gruppenbuchungen hier verfügbar!</a>"
+      "text": "<p>Logistik, Planung, Logistik. Wenn du nicht bereits auf der skandinavischen Halbinsel wohnst, ist der Transport deines Fahrrads nach Motala eine große logistische Herausforderung. Warum also nicht einfach ein Fahrrad mieten? </p>\n\n\n<p>Spar dir Zeit, Mühe und Geld, indem du dir einfach ein Fahrrad ausleihst. Es kann sofort in Motala beginnen. Alles, was du mitbringen müsstest, ist ein Beleuchtungsset, Helm, Pedale und natürlich: dich selbst und deine Leidenschaft! </p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Motala\">Gruppenbuchungen hier verfügbar!</a>"
     },
     "toros-de-gravel": {
       "title": "Miet ein Gravelbike für die Toros de Gravel",
@@ -479,11 +479,11 @@
       "text": "Die Eroica ist ein weltbekanntes Radsportevent. Mit Routen entlang unbefestigter Strassen, auf historischen Stahlrennrädern, in Vintage-Bekleidung, erinnert die Eroica and das Radfahren der Vergangenheit.\nSuchst du ein Eroica-Rennrad? Zusammen mit der listnride-Community stellen wir hier passenden Leihrennräder zur Verfügung.\nWähle einfach das für dich passende Rennrad, gib den gwünschten Zeitraum ein und schick die Anfrage ab."
     },
     "in-velo-veritas": {
-      "meta-title": "Klassikerausfahrt: In Velo Veritas mit listnride",
-      "description": "Was: <b>In Velo Veritas</b> | Wann: <b>16. Juni 2019</b> | Wo: <b>Poysdorf, Österreich</b>",
-      "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs.",
-      "title": "Miete ein Klassik Rennrad für In Velo Veritas",
-      "text": "Die legendäre <a target=\"_blank\" href=\"//inveloveritas.at\">In Velo Veritas </a> findet nun zum 7. Mal statt. Am 16. Juni 2019  versammeln sich Fahrradliebhaber in Poysdorf (Österreich) um dort gemeinsam die Touren zu bestreiten. Für alle die gerne teilnehmen würden, allerdings kein zugelassenes Rennrad besitzen, haben wir passende Vintage-Räder von unserer Community zusammengestellt. Alle unten aufgeführten Räder entsprechen dem Reglement und du kannst sie einfach über listnride mieten. Falls du nicht teilnehmen kannst, vielleicht sogar mehrer Rennräder hast oder einfach einem gleichgesinnten Fahrrad-Enthusiasten aushelfen möchtest: Mach mit und verleihe dein Fahrrad an Gleichgesinnte über listnride."
+      "meta-title": "Miete ein Vintagerad für In Velo Veritas mit listnride!",
+      "description": "Was: <b>In Velo Veritas </b>| Wann: <b>7. Juni 2020 </b>| Dabei gilt: <b>Poysdorf, Österreich </b>",
+      "meta-description": "Miete dir ein klassisches Stahl Rennrad für die Ausfahrt durch eines der schönsten Weinanbaugebiete Österreichs!",
+      "title": "Miete ein klassisches Rennrad für In Velo Veritas",
+      "text": "Die legendäre Veranstaltung <a target=\"_blank\" href=\"//inveloveritas.at\">in Velo Veritas </a> läuft dieses Jahr über zwei Tage, und zwar vom 6. bis 7. Juni 2020 in Poysdorf! Für diejenigen, die teilnehmen möchten, aber ein Vintage-Bike benötigen, haben wir einige passende von unseren Community-Mitgliedern zusammengestellt!"
     },
     "velocity-bikerental": {
       "meta-title": "Miete ein Rennrad für den VeloCity Berlin 2020!",
@@ -630,7 +630,7 @@
       "item2-description": "2019 marks the inaugural launch of Rossignol E-Bikes in Europe with the full-suspension E Track Trail that combines the fun of a downhill bike with the ease of electric-assist for those long climbs and the E Track 27+ designed for climbing or descending, delivering outstanding performance and comfort.",
       "item3-title": "Noch ein bester Tag",
       "item3-description": "Extending its promise of “Another Best Day” beyond the winter months, Rossignol is committed to elevating the outdoor experience through premium technology and innovation. The bikes deliver the experience consumers expect from the Rossignol brand.",
-      "find-out-more": "Erfahre mehr über Räder von Rossignol",
+      "find-out-more": "Erfahre mehr über Rossignol Räder",
       "order-online": "Visit the listnride Experience Center Munich to discover, try, and buy your Rossignol bike. Here you can find the <a href=\"https://www.rossignol.com/int-en/rossignol-bike/rossignol-rike-mountain-bikes.html\" target=\"_blank\">whole range of Rossignol bikes</a>. List and Ride GmbH, Nymphenburger Straße 86, 80636 Munich, +49030120870330, <a href=\"mailto:contact@listnride.com\">contact@listnride.com</a>"
     },
     "yuba": {
@@ -1306,12 +1306,12 @@
     "description": "listnride startet ein Crowdfunding! Sei Teil davon und investiere in den Aufbau von Europas führender Fahrradverleih Plattform.",
     "subdescription": "Erfahre mehr über listnride in unserer <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">Investoren Präsentation</a> und warum es sich lohnt zu investieren.",
     "subsubdescription": "In Kürze startet die listnride Crowdfunding Kampagne auf <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, der führenden Equity Crowdfunding Plattform in Europa. Als Mitgliedern der ersten Stunde, Geschäftspartner oder Freunde, bieten wir euch vorzeitigen Zugriff bevor wir die Kampagne der Öffentlichkeit zugänglich machen. Sag uns wie hoch Deine Investition wäre und merke sie unverbindlich vor.",
-    "learn-more": "Crowdfunding FAQ",
+    "learn-more": "Häufige Fragen zum Crowdfunding ",
     "known-from": "listnride in den Medien",
     "investment": "Investition",
     "submit": "Vormerken",
     "form-feedback": "Vielen Dank! Du hast dich erfolgreich für eine Investition vorgemerkt.",
-    "faq-question-1": "WARUM STARTET LISTNRIDE EINE CROWDFUNDING-KAMPAGNE?",
+    "faq-question-1": "Warum startet listnride eine Crowdfunding-Kampagne?",
     "faq-answer-1": "Wir sind ein junges Unternehmen mit einem gut entwickelten Produkt, einer wachsenden Community von Mietern und Fahrradbesitzern. Um weiteres Wachstum voranzutreiben eröffnen wir der Community und der Öffentlichkeit die Möglichkeit, neben weiteren Investoren, in unser Unternehmen zu investieren. Mit diesen zusätzlichen Ressourcen werden wir weitere Verbesserungen an unserem Produkt vornehmen, so wie weiterhin geografisch expandieren. Damit können wir die Community entwickeln, Mietern eine größere Auswahl an Fahrrädern und Fahrradbesitzern eine größere Nachfrage bieten.",
     "faq-question-2": "Wie kann ich in listnride investieren?",
     "faq-answer-2": "Wir arbeiten mit Seedrs, der führende Crowdfunding-Plattform in Europa, um unsere Crowdfunding-Kampagne durchzuführen. Um zu investieren, musst du lediglich auf der Website <a href=\"https://seedrs.com\" target=\"_blank\">www.seedrs.com</a> einen Account erstellen.",
@@ -1346,13 +1346,13 @@
       "description": "Wir werden euer investiertes Geld für zwei primäre Zwecke einsetzen: Um unser Wachstum zu finanzieren und neue Nutzer, vornehmlich in den vorhandenen Märkten, zu gewinnen. Unsere Community kann mit höheren Nutzerzahlen den Mietern eine größere Auswahl, und Vermietern eine höhere Nachfrage bieten, was den Service für alle attraktiver macht. Um unsere Plattform stetig durch neue Funktionen zu verbessern die das Miet-Erlebnis so einfach und effizient wie möglich macht. Intergration einer Versicherung und neue mobile Apps sind dabei die größten Milestones."
     },
     "control": {
-      "logo": "Hier logo einfügen",
+      "logo": "Logo hier einfügen",
       "header": "Deine Daten in guten Händen",
       "description": "Deine Adresse und der Standort Deines Fahrrades sind nicht im öffentlichen Profil. Sie können nicht eingesehen werden. Erst zur Vermietung bekommen beide Seiten die Kontaktdaten."
     },
     "safe": {
       "logo": "Logo hier einfügen",
-      "header": "Zeig‘ dich ",
+      "header": "Stell dich vor",
       "description": "Verknüpfe dein Profil mit Facebook zeig Dich der \n<i>listnride</i>\n-Community. Mieter wissen so, von wem sie leihen. Vermieter wissen sofort, wer fahren möchte."
     },
     "alone": {
@@ -1372,11 +1372,11 @@
     "meta-title": "Unkomplizierter Fahrradverleih",
     "meta-description": "Wie du mit listnride ein Fahrrad mietest.",
     "title": "Fahrradverleih völlig unkompliziert",
-    "header": "listnride macht Fahrradmieten ganz einfach. ",
+    "header": "listnride macht es ganz einfach ein Fahrrad zu mieten",
     "subheader": "Bei uns ist Fahrrad(ver-)leihen so einfach wie eine Verabredung zum Kaffee:",
     "lister-section": {
       "header": "Wie du ein Rad anbietest",
-      "step-1-title": "Rad anbieten",
+      "step-1-title": "Ein Rad anbieten",
       "step-1-content": "Füge Details, Fotos, Preis und Ort des Rades hinzu",
       "step-2-title": "Anfragen erhalten",
       "step-2-content": "Für ein bestimmtes Datum und Uhrzeit",
@@ -1432,7 +1432,7 @@
     "subtitle": "Mit dem listnride Plug-in kannst du einfach deine Leihräder/Testräder in deine Online Präsenz integrieren und anbieten.",
     "description": "Einfach vermieten! Kunden wählen auf deiner Website ihren Wunschzeitraum aus, bezahlen bequem online und holen das Rad ab. Die komplette Logistik, wie Bezahlung, Rechnung und Verfügbarkeit bleibt bei listnride.",
     "feature-1": {
-      "title": "Verleih mehr Räder",
+      "title": "Vermiete noch mehr",
       "description": "Mit unserem Plugin sehen deine Kunden sofort welche Räder du anbietest, wann sie verfügbar sind und was sie kosten. Die komplette Buchungsabwicklung passiert umkompliziert online und mit nur wenigen Klicks!"
     },
     "feature-2": {

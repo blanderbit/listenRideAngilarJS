@@ -335,8 +335,8 @@
       "calendar-subtitle": "Book your free 8bar bike for our weekly Club Ride"
     },
     "cyclingworld": {
-      "meta-title": "Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld",
-      "meta-description": "Möchtest du ein neues Gravelbike mal probefahren? Buche dir ein Gravelbike von 8bar, Salsa oder Veloheld für die Gravelrunde auf der Cyclingworld"
+      "meta-title": "Rent a gravel bike for Cyclingworld Düsseldorf!",
+      "meta-description": "Tempted in test riding a gravel bike? Rent yours from 8bar, Salsa or Veloheld for an epic gravel ride at Cyclingworld!"
     },
     "black-friday": {
       "banner": {
@@ -366,12 +366,12 @@
       "meta-description": "With listnride you can easily rent a road bike online for l'Ardita 2019. Choose the perfect bike that fits your needs!"
     },
     "granfondo-via-del-sale": {
-      "meta-title": "Rent a road bike for the Granfondo Via del Sale 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for the Granfondo Via del Sale 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Rent a road bike for the Granfondo Via del Sale 2020|listnride",
+      "meta-description": "Bike rental for the Granfondo Via del Sale 2020 | Rent a race bike that fits you best on listnride!"
     },
     "giro-sardegna": {
-      "meta-title": "Rent a road bike for the Giro Sardegna 2019 | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for the Giro Sardegna 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Rent a road bike for the Giro Sardegna | listnride",
+      "meta-description": "Bike rental for the Giro Sardegna | Rent a race bike that fits you best on listnride!"
     }
   },
   "lister": {
@@ -493,8 +493,8 @@
         "meta-description": "On listnride you'll find a selection of gravel and mountainbikes for you to rent for this special gravel event in Sineu on Mallorca. "
       },
       "in-velo-veritas": {
-        "meta-title": "In Velo Veritas - Rent a bike with listnride",
-        "meta-description": "Rent a steel vintage bike for In Velo Veritas. listnride has a selection of classic bikes for rent for this beautiful tour of the Austrian wine country."
+        "meta-title": "Rent a vintage bike for Austria's l'Eroica: In Velo Veritas! | listnride",
+        "meta-description": "Rent a vintage road bike for In Velo Veritas! listnride has a beautiful selection of classic bikes to rent for this beautiful tour of the Austrian wine country."
       },
       "velocity-bikerental": {
         "meta-title": "Rent a road bike for the VeloCity Berlin 2020!",
@@ -827,6 +827,13 @@
   },
   "settings": {
     "settings": "Settings",
+    "payout": {
+      "entity_type": {
+        "label": "Please select if you have a private or business bank account:",
+        "natural_person": "Private account",
+        "company": "Business account"
+      }
+    },
     "accept_request_reminder": {
       "subscribe": "Reminder notifications"
     },
@@ -1060,6 +1067,15 @@
   },
   "forms": {
     "first-name": "First Name",
+    "account_holder_name": "Account holder name",
+    "bank_country": "Country",
+    "dob": "Date of birth",
+    "gender": "What is your gender?",
+    "nationality": "What is your nationality?",
+    "gender_select": {
+      "male": "Male",
+      "female": "Female"
+    },
     "newsletter-privacy-policy": "Privacy Policy Newsletter",
     "sign-up-today": "Sign up today ",
     "already-registered": "You have already signed up",
@@ -1441,8 +1457,8 @@
     "dialog-subtitle": "The bike will get permanently removed from the platform. Current requests are not affected by this."
   },
   "rent-a-bike": {
-    "meta-title": "Rent a bike via listnride!",
-    "meta-description": "Fantastic selection. Great value for money. Easy online service.",
+    "meta-title": "Rent a bike with listnride!",
+    "meta-description": "Rent from our great selection of road bikes, e-bikes, mountain bikes and cargo bikes! Simply search, select and book online.",
     "title": "Don’t just rent any old bike. Rent one that feels like your own.",
     "info-section": {
       "header": "Rent a bike that is perfect for you",
@@ -1500,7 +1516,9 @@
     }
   },
   "invoices": {
-    "request_id": "Request ID",
+    "request_id": "Booking ID",
+    "invoice_number": "Invoice No",
+    "payout_date": "Payout date",
     "credit-notes": "Credit notes",
     "bike": "Bike",
     "start_date": "Start date",

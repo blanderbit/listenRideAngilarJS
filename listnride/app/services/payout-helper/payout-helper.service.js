@@ -12,15 +12,20 @@ angular
 // authentication.userId()
 function PayoutHelperController(api, authentication, notification) {
   return {
-    postPayout: function (formData, payment_type, cb, cbError) {
+    postPayout: function (payoutMethod, cb, cbError) {
       var data = {
-        "payout_method": {
-          'payment_type': payment_type,
-          'first_name': formData.first_name,
-          'last_name': formData.last_name,
-          'email': formData.email,
-          'iban': formData.iban,
-          'bic': formData.bic
+        'payout_method': {
+          'payment_type': payoutMethod.payment_type || 'bank-account',
+          'first_name': payoutMethod.first_name,
+          'last_name': payoutMethod.last_name,
+          'iban': payoutMethod.iban,
+          'bic': payoutMethod.bic,
+          'country_code': payoutMethod.country_code,
+          'account_holder_name': payoutMethod.account_holder_name,
+          'gender': payoutMethod.gender,
+          'nationality': payoutMethod.nationality,
+          'date_of_birth': payoutMethod.date_of_birth ? moment(payoutMethod.date_of_birth, 'DD/MM/YYYY').format('YYYY-MM-DD') : '',
+          'entity_type': payoutMethod.entity_type
         }
       };
 
