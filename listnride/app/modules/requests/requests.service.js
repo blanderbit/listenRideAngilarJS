@@ -1,4 +1,4 @@
-import { getCodes, getName, getNames, getCode } from 'country-list';
+import { getName, getNames, getCode } from 'country-list';
 
 angular
   .module('requests')
@@ -9,8 +9,7 @@ angular
     $mdDialog,
     payoutHelper,
     api,
-    MESSAGE_STATUSES,
-    PAYOUT_SUPPORTED_COUNTRIES
+    MESSAGE_STATUSES
   ) {
     const requestsService = {
       updateStatus({ request, statusId, paymentWarning }) {
@@ -152,8 +151,6 @@ angular
       const payoutDialog = this;
 
       payoutDialog.user = user;
-      payoutDialog.payoutSupportedCountries = PAYOUT_SUPPORTED_COUNTRIES;
-      payoutDialog.getCountryCodes = getCodes;
       payoutDialog.getCountryName = getName;
       payoutDialog.getCountryCode = getCode;
       payoutDialog.getCountryNames = getNames;

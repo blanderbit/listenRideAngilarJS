@@ -1,4 +1,4 @@
-import { getCodes, getName, getNames, getCode } from 'country-list';
+import { getName, getNames, getCode } from 'country-list';
 
 angular.module('settings',[])
 .component('settings', {
@@ -23,8 +23,7 @@ angular.module('settings',[])
     paymentHelper,
     payoutHelper,
     ENV,
-    $scope,
-    PAYOUT_SUPPORTED_COUNTRIES
+    $scope
   ) {
       // should be an authenticated user
       if (accessControl.requireLogin()) return;
@@ -56,7 +55,6 @@ angular.module('settings',[])
         settings.business = {};
         settings.user.business = false;
         settings.user.has_billing = false;
-        settings.payoutSupportedCountries = PAYOUT_SUPPORTED_COUNTRIES;
 
         // payment
         settings.showPaymentChangeForm = showPaymentChangeForm;
@@ -94,7 +92,6 @@ angular.module('settings',[])
         settings.showResponseMessage = showResponseMessage;
         settings.updateNewsletter = updateNewsletter;
         settings.toggleNotifications = toggleNotifications;
-        settings.getCountryCodes = getCodes;
         settings.getCountryName = getName;
         settings.getCountryCode = getCode;
         settings.getCountryNames = getNames;
