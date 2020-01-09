@@ -52,10 +52,8 @@
                 <label>{{ 'forms.dob' | translate }}</label>
                 <input
                   required
-                  type="text"
-                  placeholder="DD/MM/YYYY"
+                  type="date"
                   class="settings-payout-method-input"
-                  pattern="(0?[1-9]|[12][0-9]|3[01])[\/](0?[1-9]|1[012])[\/\-]\d{4}"
                   ng-model="settings.payoutMethod.date_of_birth"/>
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
