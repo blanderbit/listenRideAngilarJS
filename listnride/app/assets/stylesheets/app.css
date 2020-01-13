@@ -2723,6 +2723,11 @@ button.md-primary.md-cancel-button {
 /*-----------------------------------------------------------------------------------*/
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
+.lnr-granfondo-via-del-sale #hero-shot {
+  height: 60vh;
+  background-position: 50% 0%;
+}
+
 .lnr-frankfurt-city-triathlon #hero-shot {
   background-position: 50% 100%;
 }
