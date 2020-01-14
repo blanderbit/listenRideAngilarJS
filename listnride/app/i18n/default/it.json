@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Per saperne di più",
-    "request": "Request",
+    "request": "Richiesta",
     "non-availability-type": "Tipo di indisponibilità ",
     "event": "Event",
     "events": "Events",
@@ -48,25 +48,25 @@
     "sardinia": "Sardegna",
     "sicily": "Sicilia",
     "tuscany": "Toscana",
-    "please-select": "Per favore seleziona",
+    "please-select": "Seleziona",
     "errors": {
       "email-required": "Si prega di inserire un indirizzo email valido",
       "three-d-secure-failed": "Autenticazione sicura 3D fallita",
       "payment-cancelled": "Pagamento annullato",
-      "payment-paypal-error": "Siamo spiacenti, il tuo pagamento PayPal non è andato a buon fine",
-      "unexpected-payment-type": "Tipo di pagamento non previsto",
+      "payment-paypal-error": "Spiacenti, il tuo pagamento PayPal non è andato a buon fine",
+      "unexpected-payment-type": "Modalitá di pagamento non valida",
       "email-not-valid": "Si prega di inserire un indirizzo email valido",
       "phone-not-valid": "Si prega di inserire un numero di telefono valido",
-      "phone-required": "Per favore inserisci il tuo numero di telefono, questo campo è obbligatorio"
+      "phone-required": "Si prega di inserire un numero di telefono, questo campo è obbligatorio"
     },
     "notifications": {
       "404": "La pagina non esiste",
-      "406": "The information you entered is incorrect. please check your information and try again",
-      "422": "Entità non processabile",
+      "406": "Le informazioni che hai inserito non sono corrette. Sei pregato di controllare le informazioni e di riprovare. ",
+      "422": "Il formato dei dati inseriti non é corretto",
       "500": "Errore interno del server",
       "200": "Successo"
     },
-    "basic-fee": "Assicurazione base inclusa",
+    "basic-fee": "Il costo del servizion include una assicurazione di base ",
     "how-it-works": "Come funziona",
     "list-a-bike": "Registra una bicicletta",
     "renting-a-bike": "Noleggiare una bicicletta",
@@ -100,6 +100,7 @@
     "lanzarote": "Lanzarote",
     "mallorca": "Mallorca",
     "sylt": "Sylt",
+    "stuttgart": "Stoccarda",
     "per": "per ",
     "hour": "ora",
     "hours": "ore",
@@ -155,7 +156,7 @@
     "Sat": "Sab",
     "Sun": "Dom",
     "join": "Partecipa",
-    "voucher": "Buono",
+    "voucher": "Voucher ",
     "download": "Scarica",
     "Jan": "Gen",
     "Feb": "Feb",
@@ -175,13 +176,17 @@
     "privacy-policy": "Informativa sulla Privacy",
     "booking-accept-tac": "Con la prenotazione accetto il",
     "already-booked": "Già prenotato",
-    "for-shops": "Per i  negozi di biciclette",
-    "contact-us": "Per favore mettiti in contatto con noi via",
+    "for-shops": "Per i negozi ",
+    "contact-us": "Ti preghiamo di metterti in contatto con noi",
     "required": "Questo è richiesto",
     "update": "Aggiornare",
     "load-more": "Carica altro",
     "confirm": "Confermare",
+    "confirmation": "Conferma ",
+    "confirmation-text": "Sei sicuro",
     "loading": "Caricamento",
+    "clear": "Cancella",
+    "clear-all": "Cancella tutto",
     "today": "Oggi",
     "yesterday": "Ieri",
     "press": {
@@ -198,39 +203,39 @@
     },
     "rent-your-bike": {
       "header": "Noleggia la tua bici",
-      "subheader": "Incontra persone che condividono la tua stessa passione. Guadagna qualcosa in più"
+      "subheader": "Incontra persone che condividono la tua stessa passione e guadagna qualcosa in più"
     }
   },
   "request": {
-    "payment-failed": "Uh Oh. Sfortunatamente, il tuo pagamento non è riuscito. Per favore ricontrolla i dati che hai inserito, così come le impostazioni di pagamento del tuo fornitore di servizi di pagamento!",
+    "payment-failed": "Ops! Sfortunatamente, il tuo pagamento non è riuscito. Per favore ricontrolla i dati che hai inserito e le impostazioni di pagamento del tuo fornitore di pagamento!",
     "waiting_for_capture": "Grazie per la tua richiesta di prenotazione! Il pagamento è in fase di elaborazione, riceverai un'email quando viene confermata.",
     "payment-failed-lister": "Uh-oh, il pagamento del ciclista è fallito. Si prega di attendere mentre il ciclista riprova.",
-    "waiting_for_capture_lister": "Grazie per aver accettato la richiesta di prenotazione! Il pagamento è in fase di elaborazione, riceverai un'email quando viene confermata.",
-    "payment-failed-after-accept": "La tua richiesta di prenotazione è in attesa perché il pagamento non è andato a buon fine!\n\nControlla i dettagli di pagamento e riprova. Non appena il pagamento sarà andato a buon fine, la tua prenotazione sarà confermata!"
+    "waiting_for_capture_lister": "Grazie per aver accettato la richiesta di prenotazione! Il pagamento è in fase di elaborazione, riceverai un'email quando viene confermato.",
+    "payment-failed-after-accept": "La tua richiesta di prenotazione è in sospeso perché il pagamento non è andato a buon fine.\n\nControlla i dettagli di pagamento e riprova. Non appena il pagamento va a buon fine, la tua prenotazione verrà confermata!"
   },
   "about-us": {
     "community": {
-      "content-paragraph": "Tuttavia, ci siamo chiesti: perché non possiamo sempre noleggiare la bici giusta quando e dove ne abbiamo bisogno? Dovrebbe essere sempre una di quelle biciclette a noleggio usate e trascurate dalle stazioni di bike sharing? E' nata l'idea della listnride.",
-      "content-munich-showroom": "In posizione centrale a Maxvorstadt, presentiamo nel nostro <a href=\"users/6511\" target=\"_blank\">Munich Experience Center</a> biciclette di marche come 8bar, Bonvelo, Rossignol, Urwahn e Yuba. Offriamo anche le ultime bici da corsa Felt e biciclette elettriche urbane di Cowboy, Leaos e Vello. Clicca <a href=\"brands\">qui </a>per saperne di più sulle nostre bici di prova e marche a Monaco di Baviera.",
-      "content-berlin-showroom": "Nel cuore di Berlin-Mitte, di fronte all'Hackescher Markt, nel nostro <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center</a> offriamo giri di prova per biciclette di marche come Argon18, Bonvelo, Brompton, BZEN e Cowboy. Organizziamo regolarmente eventi come <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">giri sociali</a> ogni venerdì mattina. Clicca <a href=\"brands\" target=\"_blank\">qui</a>> per saperne di più sulle nostre bici di prova e marche disponibili a Berlino"
+      "content-paragraph": "Ci siamo, peró, chiesti perché non sempre é facile noleggiare la bici giusta quando e dove ne abbiamo bisogno? Perché dovremmo noleggiare una bicicletta usata e in pessime condizioni proveniente da una stazione di bike sharing? Per risolvere questi problemi é nata listnride.",
+      "content-munich-showroom": "In posizione centrale nel quartiere di Maxvorstadt, presentiamo nel nostro <a href=\"users/6511\" target=\"_blank\">Munich Experience Center</a> biciclette di marche come 8bar, Bonvelo, Rossignol, Urwahn e Yuba. Offriamo anche le ultime bici da corsa Felt e biciclette elettriche di Cowboy, Leaos e Vello. Clicca <a href=\"brands\">qui </a>per saperne di più sulle nostre bici di prova e marche a Monaco di Baviera.",
+      "content-berlin-showroom": "Nel cuore di Berlin-Mitte, di fronte all'Hackescher Markt, nel nostro <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center</a> offriamo giri di prova per biciclette di marche come Argon18, Bonvelo, Brompton, BZEN e Cowboy. Organizziamo regolarmente eventi come <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">gite in bicicletta di gruppo</a>, che hanno luogo ogni venerdì mattina. Clicca <a href=\"brands\" target=\"_blank\">qui</a>> per saperne di più sulle nostre bici di prova e marche disponibili a Berlino"
     },
     "future": {
-      "content-paragraph": "Siamo orgogliosi dei nostri partner che ci offrono le loro biciclette, siano essi rivenditori professionali, proprietari di parchi o privati. Infine, in alcune località europee, è possibile conoscere marchi innovativi che, insieme a noi, offrono test ride esclusivi."
+      "content-paragraph": "Siamo grati ai nostri partner che ci offrono le loro biciclette, siano essi rivenditori professionali o privati. In aggiunta, in alcune località europee avrai la possibilitá di conoscere marchi innovativi che offrono test ride esclusivi attraverso listnride. "
     },
     "showroom": {
       "subtitle": "Vieni a conoscerci a Berlino o Monaco e prova le ultime biciclette alla moda e molto altro!"
     },
-    "content-title": "Vi aiuteremo a trovare la bicicletta a noleggio perfetta per ogni occasione, in qualsiasi momento e ovunque"
+    "content-title": "Ti aiuteremo a trovare la bicicletta a noleggio perfetta per ogni occasione, momento e luogo"
   },
   "testimonials": {
     "jetske-amsterdam": "Su listnride noleggio le mie biciclette fornendo alle famiglie una soluzione semplice per scoprire la mia città natale. Oltre ad incontrare persone simpatiche, guadagno un po 'di soldi in più ☺",
     "john-potsdam": "Ho un paio di bici in giro e penso che sia fantastico noleggiarle e offrire una bici interessante ai visitatori della mia città. Finora abbiamo sempre avuto grandi affittuari!",
     "cornelia-basel": "Abbiamo visitato Berlino e questa volta abbiamo voluto provare una bella e-bike. Abbiamo trovato le bici elettriche Ampler su listnride e ne abbiamo noleggiate due. Si è rivelato perfettamente e ad un buon prezzo!",
-    "rider-1": "Abbiamo visitato Vienna e volevo scoprire attivamente la città e la campagna. Abbiamo trovato 2 fantastiche biciclette a noleggio su listnride, ci siamo trovati benissimo, una grande scoperta!",
+    "rider-1": "Abbiamo visitato Vienna e volevamo scoprire attivamente la città e la campagna. Abbiamo trovato 2 fantastiche biciclette a noleggio su listnride, ci siamo trovati benissimo, una grande successo!",
     "rider-2": "Stavo visitando un amico a Berlino e non volevo portare la mia bici con me. Invece ho noleggiato una bella bici con listnrdie - molto vicino a lei. Ha funzionato perfettamente e ad un buon prezzo.",
     "rider-3": "A Monaco ci siamo imbattuti in listnride e abbiamo trovato due eleganti city bike a un prezzo adeguato. Il proprietario era un ragazzo gentile che ci invitava a prendere un caffè. Ha dato alcuni consigli interessanti, davvero belli!",
     "rider-4": "Lavoro regolarmente a Berlino. Da quando ho scoperto listnride, noleggio spesso una bella bici. La selezione di biciclette è ottima ed è facile e sicura.",
-    "lister-1": "Recentemente scoperto listnride, elencate 3 biciclette da corsa e ora regolarmente noleggiate. La cosa bella è incontrare persone simpatiche, con le quali a volte vado a fare un giro.",
+    "lister-1": "Recentemente ho scoperto listnride e registrato 3 biciclette da corsa, che ora noleggio regolarmente. La cosa bella è incontrare persone simpatiche, con le quali a volte vado a fare un giro.",
     "lister-2": "Sono un grande fan dei listnride. Quando vado alle corse, mi noleggio una bici eccellente. A casa offro le mie biciclette ai miei ospiti Airbnb. Super facile e con un ottimo rapporto qualità-prezzo."
   },
   "countries": {
@@ -255,7 +260,7 @@
       "step-2-title": "2. Pacchetti interessanti",
       "step-2-content": "Prezzi per biciclette singole o multiple\nUna bicicletta che si adatta alle tue necessità e al tuo stile (eBike, cargo, bambini)\nAccessori appropriati, ad es. Rimorchio per bambini, lucchetto, casco\nAssicurazione contro danni e furto",
       "step-3-title": "3. Procedura di prenotazione semplice",
-      "step-3-content": "Il nostro efficiente processo di prenotazione parte dalla tua richiesta fino a quando il pagamento non viene elaborato. Verrà fornita una fattura e una conferma di prenotazione."
+      "step-3-content": "Il nostro efficiente processo di prenotazione parte dalla tua richiesta termina quando il pagamento viene elaborato. Ti verrano fornite una conferma della prenotazione e una fattura. "
     },
     "meta-title": "Se stai pianificando un soggiorno a lungo termine, listnride può fornirti una bicicletta a noleggio adatta alle tue esigenze e stile. Trova la giusta soluzione per te",
     "meta-description": "listnride, il tuo esperto locale per il noleggio di biciclette",
@@ -273,6 +278,20 @@
       "description": "Cosa: <b>Triathlon di Berlino</b> | Dove: <b>Berlino</b> | Quando: <b>6-7 Giugno 2020</b>",
       "meta-title": "Noleggia una bici da strada per il Triathlon di Berlino 2020 | listnride",
       "meta-description": "Noleggia una bici da corsa online in sicurezza con listnride per il Triathlon di Berlino 2020. Scegli la bici perfetta per te!"
+    },
+    "la-chouffe": {
+      "title": "Noleggia una bici da corsa per La Chouffe Classic!",
+      "description": "Cosa: <b>La Chouffe Classic</b> | Dove: <b>Houffalize, Belgio</b> | Quando: <b>16 Maggio 2020</b>",
+      "text": "<p>Conosci la Wallonia, regione belga dalla natura incontaminata e con una ricca storia ciclistica! La prossima <a href=\"https://www.lachouffeclassic.be/nl/\" target=\"_blank\"> \"La Chouffe Classic\"</a> è un evento fantastico per chi ama le salite ripide! Ci sono tre diversi percorsi (85 km, 120 km e 157 km), che rendono questo evento tanto accessibile quanto stimolante!\n\nVivi al meglio questa esperienza con una delle nostre migliori bici da corsa, che puoi facilmente trovare alla linea di partenza!</p>\n\n<p>Risparmia tempo, problemi e denaro noleggiando una bici. Le biciclette saranno pronte alla linea di partenza a Houffalize. Tutto quello che ti serve è il tuo casco, i pedali e ovviamente, tu!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Houffalize\" target=\"_blank\">Noleggi di gruppo sono disponibili qui!</a>",
+      "meta-title": "Noleggia una bici da corsa per \"La Chouffe Classic\" | listnride ",
+      "meta-description": "Noleggia una bici da corsa di ottima qualità per \"La Chouffe Classic\" con listnride! Le nostre biciclette saranno pronte alla linea di partenza. Esplora le colline belghe con la nostra fantastica selezione di biciclette a noleggio!"
+    },
+    "gent-wevelgem": {
+      "title": "Noleggia una bici da corsa per Il Gent-Wevelgem Sportive",
+      "description": "Cosa: <b>Gent-Wevelgem Sportive</b> | Dove: <b>Wevelgem, Belgio</b> | Quando: <b>28 Marzo 2020</b>",
+      "text": "<p>Conosci le fiandre belghe, regione dalle caratteristiche ripide strade acciottolate e ricca di storia ciclistica! Il <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Sportive</a> è un evento fanatastico per chi ama le salite ripide. Ci sono quattro diversi percorsi 865 km, 95 km, 140 km e 220 km), che rendono questo evento tanto accessibile quanto stimolante!\n\nVivi al meglio questa esperienza con una delle nostre migliori bici da corsa, che puoi trovare direttamente alla linea di partenza!</p>\n\n<p>Risparmia tempo, problemi e denaro noleggiando una bicicletta. Le biciclette saranno pronte alla linea di partenza a Houffalize. Tutto quello che ti serve è il casco, i pedali e, ovviamente, tu!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Noleggi di gruppo disponibili qui</a>",
+      "meta-title": "Noleggia una bici da corsa per Il Gent-Wevelgem Sportive | listnride",
+      "meta-description": "Noleggia una bici da corsa di ottima qualità per il Gent-Wevelgem Sportive\" con listnride. Le biciclette saranno pronte alla linea du partenza. Esplora le colline belghe con la nostra fantastica selezione di biciclette da corsa!"
     },
     "msr": {
       "meta-title": "Rent a road bike for MSR 2020 | listnride",
@@ -532,7 +551,7 @@
     "brand-integration": {
       "ampler": {
         "meta-title": "E-Bike Test ",
-        "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggia uno a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
+        "meta-descr": "Prova a guidare una e-bike oggi! Le ebikes di Ampler sono disponibili su listnride. Noleggiane una a Amsterdam, Berlino, Düsseldorf, Monaco o Zurigo."
       },
       "rossignol": {
         "meta-title": "Rent and test ride Rossignol bikes. Rossignol bikes are available to rent on listnride.",
@@ -668,7 +687,7 @@
     },
     "privacy": {
       "meta-title": "Informativa sulla Privacy di listnride",
-      "meta-description": "La Politica sulla Privacy della comunità bike sharing di listnride riguarda l'utilizzo della piattaforma online.",
+      "meta-description": "L´informativa sulla Privacy della comunità di listnride riguarda l'utilizzo della piattaforma online.",
       "use-opt-in": "Per offrirti con listnride un servizio perfetto, utilizziamo dei Cookies conformemente alla nostra <a target=\"_blank\" href=\"/#/privacy\">Normativa sui Cookies</a>.",
       "use-opt-in-button": "Ho capito."
     }
@@ -710,11 +729,11 @@
       "resend": "Inviare di nuovo"
     },
     "payment": {
-      "tab": "Metodi di Pagamento",
+      "tab": "Metodo di Pagamento",
       "current-method": "Attuale metodo di pagamento",
-      "getting-saved": "I tuoi dettagli di pagamento vengono salvati",
+      "getting-saved": "I tuoi dettagli di pagamento sono stati salvati",
       "select-method": "Seleziona il tuo metodo di pagamento",
-      "subtitle": "Ti addebitiamo il costo solo dopo che il noleggiatore ha accettato la tua richiesta.",
+      "subtitle": "Scegli il tuo metodo di pagamento. Ti addebitiamo i costi solo dopo che il noleggiatore ha accettato la tua richiesta.",
       "credit-card": "Carta di credito",
       "card-name": "Nome e Cognome titolare carta",
       "invalid-name": "Si prega di fornire un nome valido",
@@ -771,7 +790,7 @@
     "password-not-match": "Le password non corrispondono",
     "verification-code-error": "Errore: il codice di verifica non è valido.",
     "address-save-error": "L'indirizzo non può essere salvato",
-    "request-create-rider": "Non ti preoccupare, non abbiamo ancora addebitato: il pagamento avviene solo se e quando la tua richiesta viene accettata!",
+    "request-create-rider": "Non ti preoccupare, non ti abbiamo ancora addebitato i costi: il pagamento avviene solo quando la tua richiesta viene accettata!",
     "request-created": "La richiesta di prenotazione è stata inviata con successo!",
     "request-failed": "Oops, qualcosa non va.",
     "request-failed-rider": "Qualcosa è andato storto nel pagamento. Verifica di aver inserito correttamente i dettagli di pagamento e riprova!",
@@ -794,7 +813,7 @@
     "bike-edit-successful": "Le modifiche sono state salvate",
     "error": "Si è verificato un errore. Assicurati che la connessione a Internet funzioni e riprova.",
     "add-payout-success": "Il metodo di pagamento è stato aggiunto con successo.",
-    "add-voucher-success": "Complimenti, il buono è stato aggiunto al tuo conto.",
+    "add-voucher-success": "Complimenti, il voucher è stato aggiunto al tuo conto.",
     "add-voucher-error": "Sfortunatamente, il codice voucher non è valido.",
     "verification-email-sent": "Una e-mail con un link di conferma è stata inviata al tuo indirizzo. Questo potrebbe richiedere alcuni minuti. Se non hai ricevuto nulla, dai un'occhiata alla tua cartella spam.",
     "could-not-sign-up": "Impossibile registrarsi. Sembra che l'indirizzo email fornito sia già in uso.",
@@ -894,9 +913,9 @@
     "save-payout-method": "Salva il metodo di pagamento",
     "payout-paypal": "Il tuo metodo di pagamento è con conto paypal con indirizzo email",
     "payout-bank": "Il tuo metodo di pagamento è con conto bancario che termina con",
-    "voucher-code": "Codice promozionale",
+    "voucher-code": "Codice promozionale del voucher",
     "current-vouchers": "Il tuo saldo attuale è",
-    "add-voucher": "Aggiungi il buono",
+    "add-voucher": "Aggiungi voucher",
     "meta-title": "Impostazioni profilo",
     "meta-description": "Modificare le impostazioni del profilo e del pagamento.",
     "company-name": "Nome dell'azienda",
@@ -919,12 +938,12 @@
     "public-tip": "Queste informazioni saranno visibili nella tua pagina profilo",
     "1": {
       "text1": "Benvenuto nella nostra comunità appassionata per il bike sharing. Tantissime biciclette e appassionati da tutto il mondo.",
-      "text-invited": "Dato che sei stato invitato da un'amico, abbiamo inserito un buono nel tuo conto che sarà utilizzabile dal tuo primo noleggio.",
-      "text2": "Benvenuto nella nostra comunità di bike sharing, dove troverai un infinità di eccellenti biciclette e di appassionati da tutto il mondo. La fiducia e la sicurezza di te e degli altri utenti è la nostra più importante priorità. Quindi ti chiediamo gentilmente di verificare il tuo profilo attraverso semplici passaggi. Migliori saranno le informazioni e maggiore sarà la possibilità che le tue richieste saranno accettate e che le biciclette saranno richieste."
+      "text-invited": "Dato che sei stato invitato da un'amico, abbiamo aggiunto un buono sconto sul tuo profilo che sarà utilizzabile dal tuo primo noleggio.",
+      "text2": "Siamo una comunitá di appassionati e la nostra prioritá e quella di garantire fiducia e sicurezza ai nostri utenti. Per questo motivo, ti chiediamo di verificare il tuo profilo in due semplici passi. Piú informazioni aggiungi, piú probabilitá hai che le tue richieste di noleggio vengano accettate."
     },
     "2": {
       "title": "Carica la tua immagine profilo",
-      "description": "Mostra agli altri utenti chi è la persona dietro il tuo profilo.",
+      "description": "Carica una foto e mostra agli altri utenti che sei",
       "business-description": "Mostrare il tuo logo in listnride è un ottimo modo per attirare ulteriori richieste.",
       "business-title": "Carica il logo del tuo negozio"
     },
@@ -986,7 +1005,7 @@
     "booking-overview": "Panoramica sulla prenotazione",
     "cancelation_modal": {
       "title": "Cancellazione",
-      "body": "Sei sicuro di voler annullare la richiesta? Questo non può essere annullato.",
+      "body": "Sei sicuro di voler annullare la richiesta? Questo processo non puó essere annullato. ",
       "cancel_btn": "Cancella richiesta",
       "keep_btn": "Mantieni richiesta"
     },
@@ -995,7 +1014,7 @@
     "price": "Prezzo",
     "book": "Prenota",
     "rating": "Valutazione",
-    "listChat": "Richiesta di {{user.first_name}}",
+    "listChat": "Richiesta da parte di {{user.first_name}}",
     "rideChat": "Richiesta a {{lister.first_name}}",
     "ratings": {
       "title": "Come valuti complessivamente questa esperienza ?",
@@ -1012,7 +1031,7 @@
     "complete-profile": "Completa il tuo profilo",
     "add-payment": "Metodo di pagamento",
     "complete-profile-description": "Per prenotare la bicicletta, inserisci i tuoi dati di pagamento. Tutte le informazioni vengono trasmesse tramite una connessione protetta.",
-    "no-requests-yet": "Appena hai fatto o hai ricevuto richieste, queste appariranno qui.",
+    "no-requests-yet": "Non appena fai o ricevi una richiesta, appariranno qui. ",
     "filters": {
       "all-requests": "Tutte le richieste",
       "current-rentals": "Noleggi in corso",
@@ -1029,29 +1048,29 @@
     "reject": "Rifiuta",
     "rate": "Voto",
     "confirm": "Confermare",
-    "confirm_return": "Conferma ritorno",
+    "confirm_return": "Conferma consegna",
     "documents-title": "Certificati di assicurazione",
     "documents-description": "Qui puoi scaricare i certificati di assicurazione. Questi documenti ti sono stati inviati anche via email.",
     "insurance-bike": "Certificato di assicurazione bici",
     "insurance-bike-assist": "Certificato di assicurazione Bike Assist"
   },
   "listChat": {
-    "1": "{{user.first_name}} {{user.last_name}} da {{user.city}} vorrebbe noleggiare la tua <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}.<br>Taglia bici: {{ride.frame_size ? ride.frame_size: 'non specificata'}}.<br>Periodo: {{timespan_short}}.<br><br><br>Si prega di accettare la prenotazione e concordare ulteriori dettagli utilizzando la chat qui sotto. Se non è possibile, si prega di respingere.",
+    "1": "{{user.first_name}} {{user.last_name}} da {{user.city}} vorrebbe noleggiare la tua bicicletta <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a>.<br><br>Bike ID: {{ride.bicycle_number}}.<br>Grandezza del telaio: {{ride.frame_size ? ride.frame_size : 'not specified'}}.<br>Periodo: {{timespan_short}}.<br><br><br> Ti preghiamo di accettare o rifiutare la prenotazione e concordare ulteriori dettagli utilizzando la chat qui sotto.",
     "11": "La prenotazione è stata cancellata.",
-    "3": "Hai accettato la richiesta. La bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
-    "5": "Grazie per aver confermato il recupero della tua bicicletta e della tua valutazione su {{user.first_name}}. Il noleggio è riuscito e i soldi verranno trasferiti al conto bancario fornito durante i prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o commenti, scrivi a <a mailto:=\"hello@listnride.com\">ciao @ listnride.com </a>",
-    "8": "Hai respinto la richiesta. Prego scrivi al noleggiante perché non puoi noleggiare la bicicletta.",
+    "3": "Hai accettato la richiesta. La tua bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, te li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
+    "5": "Grazie per aver confermato la consegna della tua bicicletta ed aver lasciato una recensione su {{user.first_name}}. Il tuo noleggio ha avuto successo e l´importo verrá trasferito su tuo conto bancario nei prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o suggerimenti, scrivi a <a mailto:=\"hello@listnride.com\">hello@ listnride.com </a>",
+    "8": "Hai rifiutato la richiesta di noleggio. Ti preghiamo di spiegare al noleggiante perché non puoi noleggiare la bicicletta.",
     "9": "Sfortunatamente, il Rider ha annullato la richiesta.",
     "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
-    "1": "Hai richiesto il <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> da {{lister.display_name}} dal {{timespan}}. Puoi chattare con {{lister.display_name}}di seguito. Il pagamento viene effettuato solo quando la tua richiesta è accettata e la bicicletta è prenotata.",
+    "1": "Hai richiesto la bicicletta <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di {{lister.display_name}} dal {{timespan}}. Puoi chattare con {{lister.display_name}} di seguito. Il pagamento verrá effettuato solo quando la tua richiesta verrá accettata e la bicicletta sará prenotata.",
     "11": "La prenotazione è stata annullata.",
-    "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta, quindi la bicicletta è stata prenotata con successo. Come d'accordo incontra il noleggiatore e ritira la bicicletta. I recapiti sono i seguenti, li abbiamo mandati via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
+    "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta e la bicicletta è stata prenotata con successo. Incontra il noleggiatore segondo gli accordi da voi stabiliti e ritira la tua bici. Di seguito trovi le informazioni necessarie per contattare il noleggiatore, te le abbiamo mandate anche via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
-    "7": "Grazie per la valutazione, il noleggio è stato completato con successo.",
-    "8": "Purtroppo il noleggiatore non poteva accettare la tua richiesta. Richiedi altre belle biciclette.",
-    "9": "Hai annullato la richiesta, ti preghiamo di informare il noleggiatore del motivo per cui non è possibile confermare la prenotazione.",
+    "7": "Grazie per aver lasciato una recensione, il noleggio è stato completato con successo.",
+    "8": "Purtroppo il noleggiatore non ha potuto accettare la tua richiesta. Non arrenderti e richiedi altre biciclette.",
+    "9": "Hai rifiutato la richiesta di noleggio. Ti preghiamo di spiegare al Lister perché non hi potuto confermare la prenotazione.",
     "10": "La richiesta è stata annullata."
   },
   "forms": {
@@ -1065,7 +1084,7 @@
       "male": "Maschio",
       "female": "Femminile"
     },
-    "newsletter-privacy-policy": "Privacy Policy News letter",
+    "newsletter-privacy-policy": "Newletter per l´Informativa sulla Privacy",
     "sign-up-today": "Iscriviti oggi",
     "already-registered": "Sei già iscritto",
     "check-inbox": "Controlla la tua casella e-mail",
@@ -1099,7 +1118,7 @@
     "address": "Indirizzo",
     "profile-picture": "Immagine del profilo",
     "profile-picture-info": "Si prega di caricare solo i formati come jpg, jpeg, png. La dimensione massima è 20mb. La dimensione minima è 100 px x 100 px.",
-    "profile-picture-info-policy": "Caricando un'immagine, accosento che listnride salvi l'immagine come descritto nelle <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Norme sulla Privacy</a>. Posso cancellarla in qualsiasi momento.",
+    "profile-picture-info-policy": "Caricando un'immagine, accosenti che listnride salvi l'immagine come descritto nelle <a style=\"pointer-events: auto;\" href=\"/#/privacy\" target=\"_blank\">Norme sulla Privacy</a>. Potrai cancellarla in qualsiasi momento.",
     "profile-picture-pattern-error": "Your picture format is wrong",
     "profile-picture-size-error": "La dimensione dell'immagine è superiore alla dimensione massima consentita",
     "profile-picture-dimension-error": "Your picture dimension is lower than minimum",
@@ -1113,8 +1132,8 @@
     "update-contact": "Aggiorna contatto",
     "update-contact-mobile": "Contatto",
     "company-contact-info": "Si prega di compilare il modulo con le informazioni relative alla persona di contatto dell'azienda.",
-    "signing-up-accept-tac": "Accetto i <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Termini e Condizioni </a>e acconsento alla raccolta, all'elaborazione e all'utilizzo dei miei dati personali come ulteriormente descritto nella <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>.",
-    "signing-up-accept-newsletter": "Desidero ricevere la newsletter via e-mail di listnride con contenuti interessanti su nuove bici, tour e sconti esclusivi. Si applica l' <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla privacy </a>di listnride. Posso revocare il mio consenso in qualsiasi momento.",
+    "signing-up-accept-tac": "Accetto i <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/terms\">Termini e Condizioni </a>e acconsento alla raccolta, all'elaborazione e all'utilizzo dei miei dati personali come ulteriormente descritto nell´ <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>.",
+    "signing-up-accept-newsletter": "Desidero ricevere la newsletter via e-mail di listnride con contenuti interessanti su nuove bici, tour e sconti esclusivi. Ad essa si applica l' <a target=\"_blank\" style=\"pointer-events: auto;\" href=\"/#/privacy\"> Informativa sulla Privacy </a>di listnride. Potrai revocare il tuo consenso in qualsiasi momento.",
     "privacy-policy": "Si applica <a style=\"pointer-events: auto;\" href=\"/#/privacy\">l'Informativa sulla Privacy</a> di listnride.",
     "errors": {
       "password-length": "La password deve essere tra i 6-30 caratteri",
@@ -1143,7 +1162,7 @@
     "landing-section-header": "La bicicletta perfetta. Noleggiala subito.",
     "see-all-brands-and-bikes": "Scopri tutti i brand e bici",
     "insurance": {
-      "description": "Non importa se una fixie o una bici da triathlon di alta gamma: ogni noleggio in Germania o in Austria è assicurato! Semplice. In ogni momento.",
+      "description": "Non importa che sia una poco costosa city bike o una bici da triathlon di alta gamma: ogni noleggio in Germania o in Austria è assicurato! ",
       "header": "Copertura assicurativa per il tuo noleggio su listnride",
       "logo-description": "In collaborazione con hepster e assicurato da"
     },
@@ -1151,9 +1170,9 @@
     "featured-bikes-header": "Noleggio bicicletta: Le preferite dalla nostra comunità",
     "featured-bikes-subheader": "Sia che si tratti di biciclette da strada, mountain bike, biciclette da città o e-bike, è possibile noleggiarle tutte. Queste sono le biciclette a noleggio preferite della comunità.",
     "featured-tiles-header": "Bici test",
-    "featured-tiles-subheader": "Collaboriamo con marchi di biciclette innovativi, che offrono i loro ultimi modelli per i test. Le biciclette possono essere testate o noleggiate esclusivamente in varie località. Perfetto per una decisione d'acquisto ben ponderata.",
+    "featured-tiles-subheader": "Collaboriamo con marchi di biciclette innovativi, che offrono i loro ultimi modelli per i test. Le biciclette possono essere provate o noleggiate in diverse località. Soluzione perfetta per una decisione d'acquisto ben ponderata.",
     "featured-cities-header": "Con listnride ovunque in Europa con la tua bici perfetta",
-    "featured-cities-subheader": "Il servizio di noleggio biciclette di listnride sta diventando disponibile sempre in più città in tutto il mondo. Scopri qui alcuni suggerimenti:",
+    "featured-cities-subheader": "Il servizio di noleggio di biciclette di listnride sta diventando disponibile in sempre più città e regioni turistiche europee. Di seguito trovi le cittá piú popolari: ",
     "list-a-bike-header": "Hai una bella bicicletta e vuoi che la gente la veda?",
     "list-a-bike-subheader": "Inserisci la tua bicicletta per il noleggio, incontra nuove persone divertenti e guadagna qualche soldo extra.",
     "newsletter-header": "Subscribe to our newsletter and stay in the loop",
@@ -1414,7 +1433,7 @@
     "unmerge-title": "Sei sicuro di voler dividere {{bikes_count}} biciclette?",
     "merge-yes": "Sì",
     "merge-no": "No",
-    "merge": "Raggruppare",
+    "merge": "Raggruppare le biciclette",
     "unmerge": "Unmerge bikes",
     "no-bikes": "Non hai ancora registrato nessuna delle tue biciclette",
     "list-a-bike": "Registra una bicicletta",
@@ -1486,7 +1505,7 @@
       "header": "Prima di tutto la sicurezza!",
       "subheader": "listnride ti tutela",
       "precautions-title": "Prendiamo le necessarie precauzioni.",
-      "precautions-content": "Vuoi noleggiare la tua bicicletta ma non ad uno sconosciuto. Ecco perché verifichiamo l'identità di tutti i nostri utenti per te. Le nostre valutazioni degli utenti aiutano a scoprire se si comportano in modo corretto nel mondo del bike sharing",
+      "precautions-content": "Vuoi noleggiare la tua bicicletta ma non a chiunque? Ecco perché verifichiamo l'identità di tutti i nostri utenti per te. Inoltre, le recensioni degli utenti ti aiuteranno a capire se sono onesti nel noleggio di biciclette. ",
       "control-title": "Tu hai il controllo",
       "control-content": "Tu decidi la tariffa giornaliera o settimanale per la tua bicicletta. È tua la decisione se vuoi accettare una richiesta di noleggio o semplicemente rifiutarti perché non puoi o non vuoi prestarla a qualcuno in questo momento.",
       "covered-title": "Noi ti copriamo",
@@ -1527,12 +1546,12 @@
   },
   "invite-landing": {
     "meta-title": "listnride | 10 € per te!",
-    "meta-description": "Dona la passione per il ciclismo! Quando inviti un amico a listnride, avrà un buono di 10 € non appena si iscrive. Quando noleggerà una bicicletta o registrerà la sua, otterrai anche te un buono di 10 €!",
+    "meta-description": "Regala la passione per il ciclismo! Quando inviti un amico su listnride, avrà un buono di 10 € all´iscrizione. Quando noleggerà una bicicletta o registrerà la sua, otterrai anche tu un buono di 10 €!",
     "header": "ti ha inviato 10 €",
     "subheader": "Benvenuto a listnride, la comunità Bike Sharing",
     "subsubheader": "listnride è una comunità Bike Sharing  che riunisce gli appassionati di ciclismo di tutti i tipi. I membri possono noleggiare le proprie biciclette  attraverso il nostro sito web o app, o noleggiare una bicicletta che si adatta perfettamente al loro stile e alle loro esigenze.",
-    "subsubsubheader": "Sei stato invitato da {{name}}. Iscriviti ora e riceverai un buono di 10 € che verrà aggiunto al tuo conto. Può essere utilizzato per il prossimo noleggio.",
-    "sign-up-get-voucher": "Iscriviti per ottenere il buono",
+    "subsubsubheader": "Sei stato invitato da {{ name }}. Iscriviti ora e riceverai un buono di 10 € che verrà caricato sul tuo conto. Puoi usarlo per il prossimo noleggio.",
+    "sign-up-get-voucher": "Iscriviti per ottenere il voucher",
     "how-lnr-works": "Bike Sharing senza problemi",
     "explanation-1-title": "1. Trovare e richiedere",
     "explanation-1-description": "Trova la bicicletta giusta vicino a te e richiedila.",
@@ -1543,19 +1562,19 @@
   },
   "invite": {
     "meta-title": "listnride | Invita i tuoi amici",
-    "meta-description": "Dona la passione per il ciclismo! Quando inviti un amico a listnride, avrà un buono di 10 € non appena si iscrive. Quando noleggerà una bicicletta o registrerà la sua, otterrai anche te un buono di 10 €!",
+    "meta-description": "Regala la passione per il ciclismo! Quando inviti un amico a listnride, avrà un buono di 10 € all´iscrizione. Quando noleggerà una bicicletta o registrerà la sua, otterrai anche tu un buono di 10 €!",
     "title": "Invita gli amici e guadagna 10 €",
     "login": "Accedi per ottenere link di invito",
     "info-section": {
-      "header": "Più è bello il listnride!",
-      "subheader": "Aiuta i nostri movimenti a semplificare il noleggio di biciclette invitando i tuoi amici e i negozi di biciclette locali sulla nostra piattaforma. Condividi semplicemente il tuo codice di invito e quando noleggiano una bicicletta riceverai un buono da € 10 da noi!",
+      "header": "Su listnride piú siamo e meglio é!",
+      "subheader": "Aiutaci a rendere piú semplice il noleggio di biciclette invitando i tuoi amici e i negozi di biciclette della tua zona ad iscriversi sulla nostra piattaforma. Condividi il tuo codice di invito e quando noleggiano una bicicletta riceverai un buono sconto da € 10!",
       "invite-friends": "Condividi il tuo codice di invito",
-      "community": "Aiuta il tuo amico a iniziare con listnride",
-      "earn-credit": "Quando il tuo amico noleggia una bicicletta riceverai un buono di € 10 per il tuo prossimo noleggio!"
+      "community": "Aiuta i tuoi amici a creare un profilo su listnride",
+      "earn-credit": "Quando uno dei tuoi amici noleggia una bicicletta riceverai un buono sconto di €10 da utilizzare sul tuo prossimo noleggio!"
     },
     "invite-form": {
-      "header": "Condividi il tuo link personale",
-      "subheader": "Invia questo link ai tuoi amici e potrai attivare il buono. Sarai ricompensato con un credito di 10 € non appena registreranno o noleggeranno una bicicletta.",
+      "header": "Condividi il tuo codice di invito",
+      "subheader": "Invia questo link ai tuoi amici per attivare il buono. Riceverai il tuo buono sconto da 10€ non appena uno dei tuoi amici noleggia o registra una bicicletta. ",
       "copy": "Copia",
       "copied": "Copiato!"
     },
@@ -1579,7 +1598,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} ti ha invitato a iscriverti a listnride!",
-      "email-body": "{{first_name}} ti ha regalato 10 € per la tua prima avventura sulla bicicletta che preferisci! Unisciti a listnride, la comunità di bike sharing che sta crescendo sempre di più e otterrai accesso a innumerevoli biciclette per ogni scopo! Iscriviti e riceverai immediatamente un credito di 10 €  {{voucher_url}}  Desideri ringraziare {{first_name}}? Noleggia una bicicletta o registra la tua e {{first_name}} riceverà un credito di 10 €!  Buon divertimento e goditi la corsa!"
+      "email-body": "{{first_name}} ti ha regalato 10 € per la tua prima avventura su una  bicicletta a tua scelta! Unisciti a listnride, piattaforma per il noleggio di biciclette in continua crescita, e ad innumerevoli biciclette adatte in ogni occasione! Iscriviti ora e riceverai un buono sconto di 10 €  {{voucher_url}}  Vuoi ringraziare {{first_name}}? Noleggia una bicicletta o registra la tua e {{first_name}} riceverà a sua volta un buono dal valore di 10 €!  Buon divertimento!"
     }
   },
   "error-404": {
