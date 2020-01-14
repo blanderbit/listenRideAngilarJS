@@ -1905,6 +1905,30 @@
       });
 
       $stateProvider.state({
+        name: '/laChouffe',
+        url: '/la-chouffe',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': '/la-chouffe'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
+        name: '/gentWevelgem',
+        url: '/gent-wevelgem',
+        controller: ['$scope', '$state',
+          function ($scope, $state) {
+            $state.go('event', {
+              'event_name': '/gent-wevelgem'
+            })
+          }
+        ]
+      });
+
+      $stateProvider.state({
         name: 'giroSardegna',
         url: '/giro-sardegna',
         controller: ['$scope', '$state',

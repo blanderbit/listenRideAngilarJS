@@ -23,6 +23,8 @@ angular.module('event', []).component('event', {
           'vatternrundan': getRequestUrl('30,31', 'Motala,Sweden', '', '', '17071,18121,18134,18135,18129,18178,18196'),
           'epicgrancanaria': getRequestUrl('30,31,32,33', 'Gran Canaria, Provinz Las Palmas, Spanien', '', '2019-04-05'),
           'velorace-dresden': getRequestUrl('30', 'Dresden', '', '2019-08-11'),
+          'la-chouffe': getRequestUrl('30', 'Houffalize', '', ''),
+          'gent-wevelgem': getRequestUrl('30', 'Wevelgem', '', ''),
           'lardita-arezzo': getRequestUrl('30', 'Arezzo, Tuscany', '', '2019-03-24'),
           'granfondo-via-del-sale': getRequestUrl('30', 'Cesenatico', '', '2019-05-05'),
           'giro-sardegna': getRequestUrl('30', 'Cagliari', '', '2019-04-21'),
@@ -59,6 +61,12 @@ angular.module('event', []).component('event', {
         // VARIABLES
         event.sizes = [];
         event.bikes = [];
+        event.eventWithLogo = [
+          'vatternrundan',
+          'gent-wevelgem',
+          'la-chouffe',
+          'granfondo-via-del-sale'
+        ];
         event.hasLogo = false;
         event.path = event.object[event.name];
         event.imagePath = 'app/assets/ui_images/events/' + event.name + '_hero.jpg';
@@ -66,8 +74,7 @@ angular.module('event', []).component('event', {
           event.sizes = resolve;
         });
 
-        // TODO: maybe we should delete this, because it's only one event with logo
-        if (event.name === 'vatternrundan') {
+        if (event.eventWithLogo.indexOf(event.name)) {
           event.hasLogo = true;
           event.logoPath = 'app/assets/ui_images/events/' + event.name + '_logo.png';
         }

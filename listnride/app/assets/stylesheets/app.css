@@ -1497,6 +1497,7 @@ footer .lnr-link {
   height: 44vh;
   background-size: cover;
   background-position: 50% 50%;
+  position: relative;
 }
 
 #hero-shot-large {
@@ -2744,6 +2745,11 @@ button.md-primary.md-cancel-button {
   align-items: flex-end;
   background-position: 50% 100%;
   padding-bottom: 10px;
+}
+
+.event-logo {
+  position: absolute;
+  bottom: 24px;
 }
 
 rapha-super-cross img.event-logo {
