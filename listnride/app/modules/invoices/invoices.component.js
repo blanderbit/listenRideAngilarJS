@@ -8,7 +8,6 @@ angular.module('invoices',[]).component('invoices', {
         if (accessControl.requireLogin()) { return }
 
         var invoices = this;
-        invoices.ridesAsListerAny = true;
         invoices.ridesAsRiderAny = true;
         invoices.loadingRequests = true;
         invoices.filtersType = 'lister';
@@ -16,9 +15,11 @@ angular.module('invoices',[]).component('invoices', {
         api.get('/users/' + $localStorage.userId + "/reports").then(
           function(response) {
             invoices.asLister = response.data.as_lister;
+            invoices.settlementHistory = response.data.settlement;
             invoices.asRider = response.data.as_rider;
             invoices.yearsRider = Object.keys(invoices.asRider).reverse();
             invoices.yearsLister = Object.keys(invoices.asLister).reverse();
+            invoices.yearsSettlement = Object.keys(invoices.settlementHistory).reverse();
             invoices.ridesAny('rider');
             invoices.ridesAny('lister');
             invoices.loadingRequests = false;
@@ -52,6 +53,17 @@ angular.module('invoices',[]).component('invoices', {
             );
         };
 
+        invoices.getSettlementCsv = function (batchId) {
+          var fileName = 'settlement_detail_report_batch_' + batchId + '.csv';
+          api.get('/users/' + $localStorage.userId + "/batches/" + batchId, 'blob').then(
+            function(response) {
+              downloadAttachment(fileName, response.data, 'application/csv');
+            },
+            function(error) {
+            }
+          );
+        };
+
         invoices.getPdf = function(id, target) {
           invoices.loadingRequests = true;
           var title = target === 'lister' ? 'Credit note' : 'Invoice';
@@ -66,6 +78,14 @@ angular.module('invoices',[]).component('invoices', {
           });
         };
 
+        invoices.getDateFormat = function(date){
+          return moment(date).format('YYYY MM DD');
+        };
+
+        invoices.getTotal = function (arr) {
+          return arr.reduce((accumulator,currentValue) => accumulator + currentValue.amount, 0)
+        };
+
         function downloadAttachment(fileName, data, type) {
           var a = document.createElement('a');
           document.body.appendChild(a);
@@ -78,7 +98,7 @@ angular.module('invoices',[]).component('invoices', {
         }
 
         invoices.ridesAny = function(target) {
-          if (target == 'rider') {
+          if (target ==='rider') {
             invoices.ridesAsRiderAny = !_.isEmpty(invoices.asRider)
           } else {
             invoices.ridesAsListerAny = !_.isEmpty(invoices.asLister)

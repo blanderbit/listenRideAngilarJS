@@ -4292,3 +4292,9 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 .payout-method-select md-select-value {
   width: 10rem;
 }
+
+.wrap-total {
+  display: flex;
+  flex-direction: row;
+  padding-left: 14px;
+}
