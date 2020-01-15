@@ -73,7 +73,7 @@ angular.module('event', []).component('event', {
           event.sizes = resolve;
         });
 
-        if (event.eventWithLogo.indexOf(event.name)) {
+        if (event.eventWithLogo.indexOf(event.name) >= 0) {
           event.hasLogo = true;
           event.logoPath = 'app/assets/ui_images/events/' + event.name + '_logo.png';
         }
