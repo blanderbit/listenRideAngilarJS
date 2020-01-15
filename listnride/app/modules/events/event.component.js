@@ -64,8 +64,7 @@ angular.module('event', []).component('event', {
         event.eventWithLogo = [
           'vatternrundan',
           'gent-wevelgem',
-          'la-chouffe',
-          'granfondo-via-del-sale'
+          'la-chouffe'
         ];
         event.hasLogo = false;
         event.path = event.object[event.name];

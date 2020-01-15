@@ -313,6 +313,11 @@
             </div>
             <md-divider></md-divider>
           </md-list-item>
+          <div class="wrap-total">
+            <h3 class="lnr-green-text" flex="85">{{'shared.total' | translate}}</h3>
+            <span><b>{{invoices.parseAmount(invoices.getTotal(invoices.settlementHistory[year]))}}</b></span>
+          </div>
+        </div>
         </div>
       </div>
     </div>

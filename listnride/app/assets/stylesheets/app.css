@@ -2724,10 +2724,6 @@ button.md-primary.md-cancel-button {
 /*-----------------------------------------------------------------------------------*/
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
-.lnr-granfondo-via-del-sale #hero-shot {
-  height: 60vh;
-  background-position: 50% 0%;
-}
 
 .lnr-frankfurt-city-triathlon #hero-shot {
   background-position: 50% 100%;
@@ -4302,5 +4298,16 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 .wrap-total {
   display: flex;
   flex-direction: row;
-  padding-left: 14px;
+  align-items: center;
+  padding-top: 14px;
+}
+
+.wrap-total h3 {
+  padding-left: 16px;
+}
+
+.lnr-granfondo-via-del-sale #hero-shot {
+  height: 54vh;
+  position: relative;
+  background-position: 50% 0%;
 }
