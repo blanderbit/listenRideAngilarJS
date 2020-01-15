@@ -12,11 +12,21 @@ angular.module('bikeCard',[]).component('bikeCard', {
     urlParams:'<'
   },
   controller: function BikeCardController(
-    $mdMedia
+    $mdMedia,
+    $translate
     ) {
       var bikeCard = this;
       bikeCard.showIcon = !bikeCard.seo && bikeCard.bike.category;
       bikeCard.from = Math.ceil(bikeCard.bike.price_from);
       bikeCard.isPhoneScreen = $mdMedia('xs');
+
+      $translate(["shared.img-alt"],
+        { bikeBrand: bikeCard.bike.brand, bikeName: bikeCard.bike.name, bikeCity: bikeCard.bike.city}).then(
+        function (translations) {
+          bikeCard.imageAlt = translations[
+            "shared.img-alt"
+            ];
+        }
+      );
     }
 });
