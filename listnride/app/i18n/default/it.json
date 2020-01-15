@@ -5,7 +5,7 @@
     "non-availability-type": "Tipo di indisponibilità ",
     "event": "Event",
     "events": "Events",
-    "frame-size": "Rider height | Framesize",
+    "frame-size": "Altezza del ciclista| Grandezza del telaio",
     "show-all-bikes": "Tutte le bici",
     "available": "Disponibile",
     "brands": "Marchi",
@@ -135,8 +135,8 @@
     "show-less": "Mostra di meno",
     "phone-number": "Numero di telefono",
     "wait": "Caricamento, questo potrebbe richiedere qualche secondo.",
-    "lister": "Noleggiatore",
-    "rider": "Noleggiante",
+    "lister": "Lister",
+    "rider": "Rider",
     "reviews": "Recensioni",
     "for": "per",
     "per-day": "al giorno",
@@ -206,10 +206,13 @@
       "subheader": "Incontra persone che condividono la tua stessa passione e guadagna qualcosa in più"
     }
   },
+  "invoice": {
+    "settlement_history": "Settlement History"
+  },
   "request": {
     "payment-failed": "Ops! Sfortunatamente, il tuo pagamento non è riuscito. Per favore ricontrolla i dati che hai inserito e le impostazioni di pagamento del tuo fornitore di pagamento!",
     "waiting_for_capture": "Grazie per la tua richiesta di prenotazione! Il pagamento è in fase di elaborazione, riceverai un'email quando viene confermata.",
-    "payment-failed-lister": "Uh-oh, il pagamento del ciclista è fallito. Si prega di attendere mentre il ciclista riprova.",
+    "payment-failed-lister": "Uh-oh, il pagamento del Rider non è andato a buon fine. Ti preghiamo di attendere mentre il Rider riprova. ",
     "waiting_for_capture_lister": "Grazie per aver accettato la richiesta di prenotazione! Il pagamento è in fase di elaborazione, riceverai un'email quando viene confermato.",
     "payment-failed-after-accept": "La tua richiesta di prenotazione è in sospeso perché il pagamento non è andato a buon fine.\n\nControlla i dettagli di pagamento e riprova. Non appena il pagamento va a buon fine, la tua prenotazione verrà confermata!"
   },
@@ -723,7 +726,7 @@
       "send-sms": "Ti invieremo un SMS sul tuo telefono ",
       "check-phone": "Per favore controlla il tuo telefono ",
       "send-code": "Inviare",
-      "enter-code": "Inserisci il PIN che abbiamo appena inviato al tuo telefono",
+      "enter-code": "Inserisci il PIN che ti abbiamo appena inviato per messaggio",
       "success-code": "Perfetto, sei pronto.",
       "fail-code": "Il PIN inserito non è corretto",
       "resend": "Inviare di nuovo"
@@ -733,7 +736,7 @@
       "current-method": "Attuale metodo di pagamento",
       "getting-saved": "I tuoi dettagli di pagamento sono stati salvati",
       "select-method": "Seleziona il tuo metodo di pagamento",
-      "subtitle": "Scegli il tuo metodo di pagamento. Ti addebitiamo i costi solo dopo che il noleggiatore ha accettato la tua richiesta.",
+      "subtitle": "Scegli il tuo metodo di pagamento che preferisci. Ti addebitiamo i costi solo quando il Lister accetta la tua richiesta.",
       "credit-card": "Carta di credito",
       "card-name": "Nome e Cognome titolare carta",
       "invalid-name": "Si prega di fornire un nome valido",
@@ -759,7 +762,7 @@
       "invoice-address": "Indirizzo di fatturazione",
       "premium-insurance": "Assicurazione Premium",
       "premium-insurance-title": "Protezione assicurativa Premium",
-      "premium-insurance-subtitle": "Scegli la nostra assicurazione premium per la tua sicurezza",
+      "premium-insurance-subtitle": "Scegli la nostra assicurazione premium per stare al sicuro",
       "thats-included": "Anche questo è incluso oltre all'assicurazione di base.",
       "premium-feature-1": "Protezione anche contro il furto",
       "premium-feature-2": "Sostituzione bici dopo danni, incidenti o furti",
@@ -778,7 +781,7 @@
       "choose-duration": "Scegli la durata del tuo noleggio",
       "pickup-time": "Orario di ritiro",
       "return-time": "Orario di consegna",
-      "intro-description": "La tua prenotazione viene elaborata in sicurezza da listnride, la più grande bike sharing d'Europa"
+      "intro-description": "La tua prenotazione viene elaborata in sicurezza da listnride, la più grande comunitá di noleggio biciclette d'Europa."
     }
   },
   "toasts": {
@@ -821,7 +824,7 @@
     "successfully-logged-in": "Accesso avvenuto. Bentornato!",
     "successfully-logged-out": "Ti sei disconnesso.",
     "could-not-log-in": "Impossibile accedere. Assicurati di essere già iscritto e controlla se le tue credenziali sono valide.",
-    "reset-password-success": "Ti abbiamo appena inviato una nuova password al tuo indirizzo email! Dovrebbe arrivare nei prossimi minuti.",
+    "reset-password-success": "Ti abbiamo appena inviato una nuova password per email! Dovrebbe arrivare nei prossimi minuti.",
     "opening-hours-success": "Orari di disponibilità modificati con successo.",
     "opening-hours-error": "Non puoi salvare l'orario di disponibilità.",
     "uniq-phone": "Numero telefonico già registrato nel nostro sistema.",
@@ -899,7 +902,7 @@
     "payout-method": "Metodo di pagamento",
     "add-payout-method": "Aggiungi un metodo di pagamento",
     "payment-method-description": "Il tuo metodo di pagamento sarà utilizzato per i tuoi noleggi. Può essere eseguito con carta di credito o con conto paypal.",
-    "payout-method-description": "Il tuo metodo di pagamento è quello dove ti inviamo il tuo guadagno per il noleggio. Perciò dovrai aggiungere il più recente quando accetti una richiesta come noleggiatore.",
+    "payout-method-description": "Il tuo metodo di pagamento è quello dove ti inviamo il tuo guadagno per il noleggio. Per questo, devi aggiungere queste informazioni almeno prima di accettare la richiesta. ",
     "add-payment-method": "Aggiungi il metodo di pagamento",
     "vouchers": "Buoni",
     "payment-credit-card": "Il tuo metodo di pagamento corrente è con carta di credito",
@@ -1024,8 +1027,8 @@
       "3": "Accettabile",
       "4": "Buona",
       "5": "Eccellente",
-      "rating_text_rider": "Si prega di riassumere la tua esperienza di noleggio in poche frasi. Il noleggiatore farà lo stesso.",
-      "rating_text_lister": "Si prega di riassumere la tua esperienza di noleggio in poche frasi.\nIl noleggiante farà lo stesso."
+      "rating_text_rider": "Ti invitiamo a riassumere la tua esperienza di noleggio in qualche riga. Il Lister farà lo stesso. ",
+      "rating_text_lister": "Ti preghiamo di riassumere la tua esperienza di noleggio in qualche linea. Il ciclista farà lo stesso. "
     },
     "write-message": "Scrivi un messaggio...",
     "complete-profile": "Completa il tuo profilo",
@@ -1059,17 +1062,17 @@
     "11": "La prenotazione è stata cancellata.",
     "3": "Hai accettato la richiesta. La tua bicicletta è ora prenotata e la noleggerai dal {{timespan}}! I dettagli di contatto sono i seguenti, te li abbiamo anche inviati via email.\n<br>\nNome: {{user.first_name}}{{user.last_name}}\n<br>\nTelefono: {{user.pretty_phone_number}}\n<br>Indirizzo: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Grazie per aver confermato la consegna della tua bicicletta ed aver lasciato una recensione su {{user.first_name}}. Il tuo noleggio ha avuto successo e l´importo verrá trasferito su tuo conto bancario nei prossimi 7 giorni lavorativi. <br><br>In caso di ulteriori domande o suggerimenti, scrivi a <a mailto:=\"hello@listnride.com\">hello@ listnride.com </a>",
-    "8": "Hai rifiutato la richiesta di noleggio. Ti preghiamo di spiegare al noleggiante perché non puoi noleggiare la bicicletta.",
+    "8": "Hai rifiutato la richiesta di noleggio. Ti preghiamo di spiegare al ciclista perché non puoi noleggiare la bicicletta.",
     "9": "Sfortunatamente, il Rider ha annullato la richiesta.",
     "10": "La tua prenotazione è stata cancellata dal sistema"
   },
   "rideChat": {
     "1": "Hai richiesto la bicicletta <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> di {{lister.display_name}} dal {{timespan}}. Puoi chattare con {{lister.display_name}} di seguito. Il pagamento verrá effettuato solo quando la tua richiesta verrá accettata e la bicicletta sará prenotata.",
     "11": "La prenotazione è stata annullata.",
-    "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta e la bicicletta è stata prenotata con successo. Incontra il noleggiatore segondo gli accordi da voi stabiliti e ritira la tua bici. Di seguito trovi le informazioni necessarie per contattare il noleggiatore, te le abbiamo mandate anche via e-mail. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
+    "3": "Congratulazioni, {{lister.first_name}} ha accettato la tua richiesta e la bicicletta è stata prenotata con successo. Incontra il Lister secondo gli accordi da voi stabiliti e ritira la tua bici. Di seguito trovi le informazioni necessarie per contattare il Lister, te le abbiamo mandate anche per email. <br><br>Nome: {{lister.first_name}} {{lister.last_name}}, <br>Telefono: {{lister.pretty_phone_number}}, <br>Indirizzo: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}} {{ride.city}}, {{ride.country}}</a>",
     "5": "Hai avuto una grande esperienza sulla bicicletta che hai noleggiato da {{lister.first_name}}? Condividi la tua esperienza lasciando una breve recensione. Questo aiuterà i futuri ciclisti a capire meglio cosa aspettarsi.",
     "7": "Grazie per aver lasciato una recensione, il noleggio è stato completato con successo.",
-    "8": "Purtroppo il noleggiatore non ha potuto accettare la tua richiesta. Non arrenderti e richiedi altre biciclette.",
+    "8": "Purtroppo il Lister non ha potuto accettare la tua richiesta. Non arrenderti e richiedi altre biciclette.",
     "9": "Hai rifiutato la richiesta di noleggio. Ti preghiamo di spiegare al Lister perché non hi potuto confermare la prenotazione.",
     "10": "La richiesta è stata annullata."
   },
@@ -1088,7 +1091,7 @@
     "sign-up-today": "Iscriviti oggi",
     "already-registered": "Sei già iscritto",
     "check-inbox": "Controlla la tua casella e-mail",
-    "security-text": "La sicurezza è molto importante per noi. Per mantenere sicuro il tuo account, vorremmo chiederti di cambiare la tua password.<br> <br><b>Fai clic sul link nell'email che ti abbiamo appena inviato. </b>",
+    "security-text": "La sicurezza è molto importante per noi e non si tratta solo di una frase che usiamo per farti sentire al sicuro. Per mantenere sicuro il tuo account, ti chiediamo di cambiare la tua password.<br> <br><b>Fai clic sul link che trovi nell'email che ti abbiamo appena inviato. </b>",
     "confirm-password": "Conferma password",
     "please-change-password": "Per favore cambia la tua password",
     "save-new-password": "Salva nuova password",
@@ -1511,7 +1514,7 @@
       "covered-title": "Noi ti copriamo",
       "covered-content": "In caso di danni o furti, noi siamo al tuo fianco. E, se necessario, la garanzia listnride ti copre fino a 5.000 euro.",
       "help-title": "Siamo lì per aiutarti",
-      "help-content": "Se tu e il noleggiante (ciclista) avete un problema e non riuscite a trovare una soluzione, siamo qui per te - per sostenerti o persino risolvere l'intero problema."
+      "help-content": "Se hai dei problemi con il Rider (ciclista) e non riuscite a trovare un accordo o una soluzione, siamo disponibili ad aiutarvi a risolvere la questione. "
     },
     "list-section": {
       "header": "Pronto a registrare la tua bicicletta?",
@@ -1527,12 +1530,14 @@
     "request_id": "Richiesta ID",
     "invoice_number": "Fattura  numero",
     "payout_date": "Data del rimborso",
+    "date": "Date",
+    "batch": "Batch",
     "credit-notes": "Note di credito",
     "bike": "Bicicletta",
     "start_date": "Data d'inizio",
     "end_date": "Data di fine",
-    "lister": "Noleggiatore",
-    "rider": "Noleggiante",
+    "lister": "Lister",
+    "rider": "Rider",
     "payout": "Pagamento",
     "you_paid": "Hai pagato",
     "invoice": "Fattura",
@@ -1540,8 +1545,8 @@
     "download-csv": "Scarica CSV",
     "download-pdf": "Scarica il PDF",
     "no-rentals": "Non hai ancora noleggi",
-    "as-lister": "Noleggiatore",
-    "as-rider": "Noleggiante",
+    "as-lister": "Come Lister",
+    "as-rider": "Come Rider",
     "no-rides": "Nessuna bicicletta ancora noleggiata"
   },
   "invite-landing": {
@@ -1598,7 +1603,7 @@
     },
     "share": {
       "email-subject": "{{full_name}} ti ha invitato a iscriverti a listnride!",
-      "email-body": "{{first_name}} ti ha regalato 10 € per la tua prima avventura su una  bicicletta a tua scelta! Unisciti a listnride, piattaforma per il noleggio di biciclette in continua crescita, e ad innumerevoli biciclette adatte in ogni occasione! Iscriviti ora e riceverai un buono sconto di 10 €  {{voucher_url}}  Vuoi ringraziare {{first_name}}? Noleggia una bicicletta o registra la tua e {{first_name}} riceverà a sua volta un buono dal valore di 10 €!  Buon divertimento!"
+      "email-body": "{{first_name}} ti ha regalato 10 € per la tua prima avventura su una bicicletta a tua scelta! Unisciti a listnride, piattaforma per il noleggio di biciclette in continua crescita, e ad innumerevoli biciclette adatte in ogni occasione! Iscriviti ora e riceverai un buono sconto di 10 €  {{voucher_url}}  Vuoi ringraziare {{first_name}}? Noleggia una bicicletta o registra la tua e {{first_name}} riceverà a sua volta un buono dal valore di 10 €!  Buon divertimento!"
     }
   },
   "error-404": {

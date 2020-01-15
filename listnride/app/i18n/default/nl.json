@@ -199,6 +199,9 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "invoice": {
+    "settlement_history": "Geschiedenis van nederzetting "
+  },
   "request": {
     "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!",
     "waiting_for_capture": "Bedankt voor je boekingsaanvraag! De betaling wordt momenteel verwerkt. Je ontvangt een e-mail, zodra deze is bevestigd.",
@@ -1518,6 +1521,8 @@
     "request_id": "Boeking ID",
     "invoice_number": "Factuur nr.",
     "payout_date": "Uitbetaald op",
+    "date": "Datum",
+    "batch": "Partij",
     "credit-notes": "Creditnota's",
     "bike": "Fiets",
     "start_date": "Start datum",
