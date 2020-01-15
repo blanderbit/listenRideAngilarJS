@@ -17,7 +17,7 @@
                 name="price_half_days"
                 placeholder="{{'list.pricing.set_custom_price' | translate}}"
                 type="text"
-                maxlength="3"
+                maxlength="4"
                 required>
               <div
                 ng-messages="pricingTab.parent.priceForm.price_half_days.$error"
@@ -39,7 +39,7 @@
               placeholder="{{'list.pricing.daily-price-placeholder' | translate}}"
               type="number"
               min="1"
-              maxlength="3"
+              maxlength="4"
               required>
              <div ng-messages="pricingTab.parent.priceForm.daily_price.$error"
                ng-show="pricingTab.parent.priceForm.daily_price.$dirty">
@@ -113,7 +113,7 @@
               <md-input-container class="md-block">
                 <label>{{'list.pricing.price_2_days' | translate}} </label>
                 <input type="text" name="price_2_days" ng-pattern="/^\d+$/" placeholder="{{'list.pricing.set_custom_price' | translate}}"
-                  maxlength="3" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 0].price"
+                  maxlength="4" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 0].price"
                   ng-change="pricingTab.parent.disableDiscounts()" ng-model-options='{ debounce: 300 }'
                   ng-disabled="!pricingTab.parent.form.custom_price" required>
                 <div ng-messages="pricingTab.parent.priceForm.price_2_days.$error" ng-show="pricingTab.parent.priceForm.price_2_days.$dirty">
@@ -125,7 +125,7 @@
               <md-input-container class="md-block">
                 <label>{{'list.pricing.price_3_days' | translate}}</label>
                 <input type="text" name="price_3_days" ng-pattern="/^\d+$/" placeholder="{{'list.pricing.set_custom_price' | translate}}"
-                  maxlength="3" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 1].price"
+                  maxlength="4" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 1].price"
                   ng-change="pricingTab.parent.disableDiscounts()" ng-model-options='{ debounce: 300 }'
                   ng-disabled="!pricingTab.parent.form.custom_price" required>
                 <div ng-messages="pricingTab.parent.priceForm.price_3_days.$error" ng-show="pricingTab.parent.priceForm.price_3_days.$dirty">
@@ -139,7 +139,7 @@
               <md-input-container class="md-block">
                 <label>{{'list.pricing.price_4_days' | translate}}</label>
                 <input type="text" name="price_4_days" ng-pattern="/^\d+$/" placeholder="{{'list.pricing.set_custom_price' | translate}}"
-                  maxlength="3" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 2].price"
+                  maxlength="4" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 2].price"
                   ng-change="pricingTab.parent.disableDiscounts()" ng-model-options='{ debounce: 300 }'
                   ng-disabled="!pricingTab.parent.form.custom_price" required>
                 <div ng-messages="pricingTab.parent.priceForm.price_4_days.$error" ng-show="pricingTab.parent.priceForm.price_4_days.$dirty">
@@ -151,7 +151,7 @@
               <md-input-container class="md-block">
                 <label>{{'list.pricing.price_5_days' | translate}}</label>
                 <input type="text" name="price_5_days" ng-pattern="/^\d+$/" placeholder="{{'list.pricing.set_custom_price' | translate}}"
-                  maxlength="3" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 3].price"
+                  maxlength="4" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 3].price"
                   ng-change="pricingTab.parent.disableDiscounts()" ng-model-options='{ debounce: 300 }'
                   ng-disabled="!pricingTab.parent.form.custom_price" required>
                 <div ng-messages="pricingTab.parent.priceForm.price_5_days.$error" ng-show="pricingTab.parent.priceForm.price_5_days.$dirty">
@@ -165,7 +165,7 @@
               <md-input-container class="md-block">
                 <label>{{'list.pricing.price_6_days' | translate}}</label>
                 <input type="text" name="price_6_days" ng-pattern="/^\d+$/" placeholder="{{'list.pricing.set_custom_price' | translate}}"
-                  maxlength="3" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 4].price"
+                  maxlength="4" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 4].price"
                   ng-change="pricingTab.parent.disableDiscounts()" ng-model-options='{ debounce: 300 }'
                   ng-disabled="!pricingTab.parent.form.custom_price" required>
                 <div ng-messages="pricingTab.parent.priceForm.price_6_days.$error" ng-show="pricingTab.parent.priceForm.price_6_days.$dirty">
@@ -177,7 +177,7 @@
               <md-input-container class="md-block">
                 <label>{{'list.pricing.price_7_days' | translate}}</label>
                 <input type="text" name="price_7_days" ng-pattern="/^\d+$/" placeholder="{{'list.pricing.set_custom_price' | translate}}"
-                  maxlength="3" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 5].price"
+                  maxlength="4" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 5].price"
                   ng-change="pricingTab.parent.disableDiscounts()" ng-model-options='{ debounce: 300 }'
                   ng-disabled="!pricingTab.parent.form.custom_price" required>
                 <div ng-messages="pricingTab.parent.priceForm.price_7_days.$error" ng-show="pricingTab.parent.priceForm.price_7_days.$dirty">
@@ -193,7 +193,7 @@
                 <label hide-xs>{{'list.pricing.price_8_days_long' | translate}}</label>
                 <label hide-gt-xs>{{'list.pricing.price_8_days' | translate}}</label>
                 <input type="text" name="price_8_days" ng-pattern="/^\d+$/" placeholder="{{'list.pricing.set_custom_price' | translate}}"
-                  maxlength="3" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 6].price"
+                  maxlength="4" ng-model="pricingTab.parent.form.prices[pricingTab.parent.secondDayIndex + 6].price"
                   ng-change="pricingTab.parent.disableDiscounts()" ng-model-options='{ debounce: 300 }'
                   ng-disabled="!pricingTab.parent.form.custom_price" required>
                 <div ng-messages="pricingTab.parent.priceForm.price_8_days.$error" ng-show="pricingTab.parent.priceForm.price_8_days.$dirty">

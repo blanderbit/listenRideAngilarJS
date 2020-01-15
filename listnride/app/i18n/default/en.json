@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Learn More",
+    "img-alt": "{{bikeBrand}} {{bikeName}} bike rental in {{bikeCity}}",
     "request": "Request",
     "non-availability-type": "Type of unavailability ",
     "event": "Event",
@@ -206,6 +207,9 @@
       "subheader": "Meet like-minded and make some pocket money"
     }
   },
+  "invoice": {
+    "settlement_history": "Settlement History"
+  },
   "request": {
     "payment-failed": "Uh-oh. Unfortunately, your payment failed. Please double check the data you have entered, as well as the payment settings of your payment provider!",
     "waiting_for_capture": "Thank you for your booking request! The payment is currently being processed, you'll receive an email when it is confirmed.",
@@ -281,6 +285,20 @@
       "description": "What: <b>Berlin Triathlon</b> | Where: <b>Berlin</b> | When: <b>6-7 June 2020</b>",
       "meta-title": "Rent a road bike for the Berlin Triathlon 2020 | listnride",
       "meta-description": "Rent a road bike with listnride for the Berlin Triathlon 2020. Choose a high-quality racing bike that fits you best!"
+    },
+    "la-chouffe": {
+      "title": "Rent a road bike for La Chouffe Classic!",
+      "description": "What: <b>La Chouffe Classic</b> | Where: <b>Houffalize, Belgium</b> | When: <b>May 16th, 2020</b>",
+      "text": "<p>Get familiar with the Wallonian region of Belgium, a region rich in cycling history as well as untouched nature! The <a href=\"https://www.lachouffeclassic.be/nl/\" target=\"_blank\">Proximus La Chouffe Classic</a> is a fantastic event for those who love steep climbs! There are three distances available (85km, 120km, and 157km), making this event as accessible or challenging as you fancy!\n\nMake the most out of this event with one of our top-of-the-range road bikes, which can be rented at the starting line!</p> \n\n<p>Save yourself time, trouble, and money by simply renting a bike. They will be ready-to-go at the starting line in Houffalize. All you need to bring is your helmet, pedals, and of course: you!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Houffalize\" target=\"_blank\">Group bookings available here!</a>",
+      "meta-title": "Rent a road bike for La Chouffe Classic | listnride",
+      "meta-description": "Rent a high-end racing bike for La Chouffe Classic with listnride! The well-specced bikes will be in ready for you at the starting line. Explore the Belgian hills with our fantastic selection of rental bikes!"
+    },
+    "gent-wevelgem": {
+      "title": "Rent a road bike for Gent-Wevelgem Sportive!",
+      "description": "What: <b>Gent-Wevelgem Sportive</b> | Where: <b>Wevelgem, Belgium</b> | When: <b>March 28th, 2020</b>",
+      "text": "<p>Get familiar with the Flanders region of Belgium, a region rich in cycling history, with iconic steep & cobblestoned roads! The <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Sportive</a> is a fantastic event for those who love steep climbs! There are four distances available (65km, 95km, 140km, and 220km), making this event as accessible or challenging as you fancy!\n\nMake the most out of this event with one of our top-of-the-range road bikes, which can be rented at the starting line!\n</p> \n\n<p>Save yourself time, trouble, and money by simply renting a bike. They will be ready-to-go at the starting line in Houffalize. All you need to bring is your helmet, pedals, and of course: you!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Group bookings available here!</a>",
+      "meta-title": "Rent a road bike for the Gent-Wevelgem Sportive | listnride",
+      "meta-description": "Rent a high-end racing bike for the Gent-Wevelgem sportive with listnride! The well-specced bikes will be in ready for you at the starting line. Explore the Belgian hills with our fantastic selection of rental bikes!"
     },
     "msr": {
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
@@ -1519,6 +1537,8 @@
     "request_id": "Booking ID",
     "invoice_number": "Invoice No",
     "payout_date": "Payout date",
+    "date": "Date",
+    "batch": "Batch",
     "credit-notes": "Credit notes",
     "bike": "Bike",
     "start_date": "Start date",

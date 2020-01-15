@@ -1,6 +1,7 @@
 {
   "shared": {
     "learn-more": "Meer info",
+    "img-alt": "{{bikeBrand}} {{bikeName}} fietsverhuur {{bikeCity}}",
     "request": "Request",
     "non-availability-type": "Klassificering",
     "event": "Event",
@@ -199,6 +200,9 @@
       "subheader": "Ontmoet gelijkgestemden. Verdien wat erbij."
     }
   },
+  "invoice": {
+    "settlement_history": "Geschiedenis van nederzetting "
+  },
   "request": {
     "payment-failed": "Oops.. Helaas is je betaling mislukt. Check nog eens de gegevens die je hebt ingevoerd alsook de betalingsinstellingen bij je betalingsprovider!",
     "waiting_for_capture": "Bedankt voor je boekingsaanvraag! De betaling wordt momenteel verwerkt. Je ontvangt een e-mail, zodra deze is bevestigd.",
@@ -272,6 +276,20 @@
       "meta-title": "Huur een racefiets voor de Berlin Triathlon 2020 | listnride",
       "meta-description": "Huur een racefiets online gemakkelijk en veilig met listnride voor de Berlin Triathlon 2020. Kies de perfecte fiets die bij je past!"
     },
+    "la-chouffe": {
+      "title": "Huur een racefiets voor La Chouffe Classic!",
+      "description": "Wat: <b>La Chouffe Classic</b>| Waar: <b>Houffalize, België</b> | Wanneer: <b>16 mei 2020</b>",
+      "text": "<p>Maak kennis met de Waalse regio van België, een regio rijk aan fietsgeschiedenis en ongerepte natuur! De<a href=\"https://www.lachouffeclassic.be/nl/\" target=\"_blank\">Proximus La Chouffe Classic</a>is een fantastisch evenement voor liefhebbers van steile beklimmingen! Er zijn drie afstanden beschikbaar (85 km, 120 km en 157 km), waardoor dit evenement zo toegankelijk of uitdagend is als je wilt!\n\nHaal het meeste uit dit evenement met een van onze eersteklas racefietsen, die aan de startlijn kunnen worden gehuurd! </p>\n\n<p>Bespaar jezelf tijd, moeite en geld door eenvoudig een fiets te huren. Ze zijn klaar voor vertrek aan de startlijn in Houffalize. Het enige dat jij moet meenemen, is je helm, pedalen en natuurlijk: jezelf! </p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Houffalize\" target=\"_blank\">Groepsboekingen hier beschikbaar!</a>",
+      "meta-title": "Racefiets huren voor La Chouffe Classic | listnride",
+      "meta-description": "Huur een high-end racefiets voor La Chouffe Classic met listnride! De goed gespecificeerde fietsen staan voor je klaar aan de startlijn. Verken de Belgische heuvels met onze fantastische selectie huurfietsen!"
+    },
+    "gent-wevelgem": {
+      "title": "Huur een racefiets voor Gent-Wevelgem Cyclo!",
+      "description": "Wat: <b>Gent-Wevelgem Cyclo</b>| Waar: <b>Wevelgem, België</b> | Wanneer: <b>28 maart 2020</b>",
+      "text": "<p>Raak vertrouwd met de Vlaamse regio België, een regio rijk aan fietsgeschiedenis, met iconische steile en geplaveide wegen! De <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Cyclo</a>is een fantastisch evenement voor liefhebbers van steile beklimmingen! Er zijn vier afstanden beschikbaar (65 km, 95 km, 140 km en 220 km), waardoor dit evenement zo toegankelijk of uitdagend is als je wilt!\n\nHaal het meeste uit dit evenement met een van onze eersteklas racefietsen, die aan de startlijn kunnen worden gehuurd!\n</p>\n\n<p>Bespaar jezelf tijd, moeite en geld door eenvoudig een fiets te huren. Ze zijn klaar voor vertrek aan de startlijn in Houffalize. Het enige dat jij moet meenemen is je helm, pedalen en natuurlijk: jezelf!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Groepsboekingen hier beschikbaar!</a>",
+      "meta-title": "Racefiets huren voor de Gent-Wevelgem Cyclo | listnride",
+      "meta-description": "Huur een high-end racefiets voor de Gent-Wevelgem Cyclo met listnride! De goed gespecificeerde fietsen staan voor je klaar aan de startlijn. Verken de Belgische heuvels met onze fantastische selectie huurfietsen!"
+    },
     "msr": {
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
       "meta-description": "Rent a road bike online easy and secure with listnride for the Mecklenburger Seenrunde 2020. Choose the perfect bike that fits your needs."
@@ -289,7 +307,7 @@
     },
     "radfahren-neu-entdecken-eschborn": {
       "title": "Testen attraktive Räder in Ihrem Alltag auf Herz und Nieren  | listnride",
-      "description": "Was: <b>Radfahren neu entdecken<b>  |  Where: <b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
+      "description": "Was: <b>Radfahren neu entdecken  |  Where: <b></b>In deiner Kommune</b>  |  When: <b>1.6. - 31.08. 2019</b>",
       "text": "Vielen Dank für Ihre Registrierung auf radfahren-neu-entdecken.de. Bitte suchen Sie sich nun Ihr Wunschrad sowie einen für Sie passenden Termin aus.</br>\nDie Räder stehen in Ihrer Kommune im Zeitraum vom 01. Juni bis zum 31. August 2019 zur Verfügung.</br>\nSie können die Räder insgesamt zwei Wochen gratis testen und erfahren, wie angenehm es ist, mit elektrischem Rückenwind unterwegs zu sein.\nTesten Sie attraktive Räder in Ihrem Alltag auf Herz und Nieren. Erfahren Sie die Vorteile dieser Art der Mobilität!</br>\nWeitere Informationen zu den Übergabeorten, etc. erhalten Sie ein paar Tage vor dem gewünschten Testzeitraum von uns per E-Mail.",
       "calendar-title": "E-Bikes einfach um sonst probefahren.",
       "calendar-subtitle": "Wähle den gewünschten Zeitraum aus und frage das Rad an.",
@@ -1448,7 +1466,7 @@
     "info-section": {
       "header": "Huur de perfecte fiets",
       "subheader": "Naar jouw smaak en gebruik. Van mensen zoals jij en ik.",
-      "choice-title": "Fietsverhuure envoudig gemaakt.",
+      "choice-title": "Fietsverhuur eenvoudig gemaakt.",
       "choice-content": "Zoek en boek een fiets in enkele seconden.\nGeen contant geld, telefoontjes of e-mails meer nodig!",
       "price-title": "Wij vinden kwaliteit belangrijk.",
       "price-content": "Hoogwaardige racefietsen, betrouwbare e-bikes en robuuste stadsfietsen - wij zijn meer dan een eenvoudige fietsverhuurservice!",
@@ -1504,6 +1522,8 @@
     "request_id": "Boeking ID",
     "invoice_number": "Factuur nr.",
     "payout_date": "Uitbetaald op",
+    "date": "Datum",
+    "batch": "Partij",
     "credit-notes": "Creditnota's",
     "bike": "Fiets",
     "start_date": "Start datum",

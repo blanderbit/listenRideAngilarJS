@@ -1497,6 +1497,7 @@ footer .lnr-link {
   height: 44vh;
   background-size: cover;
   background-position: 50% 50%;
+  position: relative;
 }
 
 #hero-shot-large {
@@ -2723,6 +2724,7 @@ button.md-primary.md-cancel-button {
 /*-----------------------------------------------------------------------------------*/
 /*  EVENT PAGES
 /*-----------------------------------------------------------------------------------*/
+
 .lnr-frankfurt-city-triathlon #hero-shot {
   background-position: 50% 100%;
 }
@@ -2739,6 +2741,11 @@ button.md-primary.md-cancel-button {
   align-items: flex-end;
   background-position: 50% 100%;
   padding-bottom: 10px;
+}
+
+.event-logo {
+  position: absolute;
+  bottom: 24px;
 }
 
 rapha-super-cross img.event-logo {
@@ -4286,4 +4293,21 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
 
 .payout-method-select md-select-value {
   width: 10rem;
+}
+
+.wrap-total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 14px;
+}
+
+.wrap-total h3 {
+  padding-left: 16px;
+}
+
+.lnr-granfondo-via-del-sale #hero-shot {
+  height: 54vh;
+  position: relative;
+  background-position: 50% 0%;
 }

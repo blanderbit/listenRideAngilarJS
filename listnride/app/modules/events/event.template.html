@@ -6,9 +6,12 @@
          layout="row"
          layout-align="center center">
 
-        <div ng-if="event.hasLogo" class="lnr-page-title md-color-white" layout="column" layout-align="center center">
+        <div ng-if="event.hasLogo"
+             class="event-logo lnr-page-title md-color-white"
+             layout="column"
+             layout-align="center center">
             <div>
-                <img ng-src={{event.logoPath}} flex="25">
+                <img ng-src={{event.logoPath}} flex="30">
             </div>
         </div>
         <!--<div  ng-if="event.hasCaption" class="lnr-page-title md-color-white" layout="column" layout-align="center center">-->
