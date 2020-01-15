@@ -1,7 +1,7 @@
 {
   "shared": {
     "learn-more": "Erfahre mehr",
-    "img-alt": "{{bikeBrand}} {{bikeName}} for rent in {{bikeCity}}",
+    "img-alt": "{{bikeBrand}} {{bikeName}} Verleih in {{bikeCity}}",
     "request": "Anfrage",
     "non-availability-type": "Art der Verfügbarkeit",
     "event": "Veranstaltung",
