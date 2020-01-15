@@ -206,6 +206,9 @@
       "subheader": "Triff Gleichgesinnte und verdiene dir etwas dazu."
     }
   },
+  "invoice": {
+    "settlement_history": "Settlement History"
+  },
   "request": {
     "payment-failed": "Oops.. Leider ist deine Zahlung fehlgeschlagen. Bitte prüfe die von dir eingegebenen Daten sowie die Zahlungseinstellungen des Zahlungsdienstleisters nochmals!",
     "waiting_for_capture": "Vielen Dank für deine Buchungsanfrage! Die Zahlung wird derzeit bearbeitet. Du erhältst eine E-Mail, sobald sie bestätigt ist.",
@@ -1533,6 +1536,8 @@
     "request_id": "Buchungs-ID",
     "invoice_number": "Rechnungsnummer",
     "payout_date": "Auszahlungsdatum",
+    "date": "Date",
+    "batch": "Batch",
     "credit-notes": "Gutschriften",
     "bike": "Rad",
     "start_date": "Startdatum",

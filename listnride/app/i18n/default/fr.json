@@ -204,6 +204,9 @@
       "subheader": "Rencontrez des gens qui partagent les mêmes passions et gagnez de l'argent de poche"
     }
   },
+  "invoice": {
+    "settlement_history": "Settlement History"
+  },
   "request": {
     "payment-failed": "Uh-oh. Malheureusement, votre paiement a échoué. Veuillez vérifier les données que vous avez saisies, ainsi que les paramètres de paiement de votre fournisseur de paiement !",
     "waiting_for_capture": "Merci pour votre demande de réservation! Le paiement est en cours de traitement, vous recevrez un email lors de sa confirmation.",
@@ -1528,6 +1531,8 @@
     "request_id": "N° de réservation",
     "invoice_number": "Facture n°",
     "payout_date": "Date de remboursement",
+    "date": "Date",
+    "batch": "Batch",
     "credit-notes": "Notes de crédit",
     "bike": "Vélo",
     "start_date": "Date de début",

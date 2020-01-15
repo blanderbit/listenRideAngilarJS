@@ -204,6 +204,9 @@
       "subheader": "Conoce a personas con tus mismas pasiones y gana dinero extra"
     }
   },
+  "invoice": {
+    "settlement_history": "Settlement History"
+  },
   "request": {
     "payment-failed": "Uh-oh. Desafortunadamente, tu pago falló. Por favor, comprueba los datos que has introducido, así como la configuración de pago de tu proveedor de pagos!",
     "waiting_for_capture": "Gracias por su solicitud de reserva! El pago se está procesando y recibirás un correo electrónico cuando se confirme.",
@@ -1525,6 +1528,8 @@
     "request_id": "Solicitar identificación",
     "invoice_number": "n.º Factura ",
     "payout_date": "Fecha de pago",
+    "date": "Date",
+    "batch": "Batch",
     "credit-notes": "Notas de credito",
     "bike": "Bici",
     "start_date": "Fecha de inicio",
