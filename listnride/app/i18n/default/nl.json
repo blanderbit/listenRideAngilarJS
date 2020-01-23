@@ -1076,11 +1076,12 @@
     "bank_country": "Land",
     "dob": "Geboortedatum",
     "gender": "Wat is je geslacht?",
-    "nationality": "Wat is je nationaliteit",
+    "nationality": "Wat is je nationaliteit?",
     "gender_select": {
       "male": "Man",
       "female": "Vrouw"
     },
+    "select": "Selecteer a.u.b",
     "newsletter-privacy-policy": "Je kan ten aller tijde je voor de nieuwsletter afmelden. Het privacybeleid van listnride is van toepassing",
     "sign-up-today": "Meld je nu aan",
     "already-registered": "Je bent al geregistreerd",

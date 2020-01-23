@@ -219,7 +219,7 @@
   },
   "about-us": {
     "community": {
-      "content-paragraph": "Ci siamo, peró, chiesti perché non sempre é facile noleggiare la bici giusta quando e dove ne abbiamo bisogno? Perché dovremmo noleggiare una bicicletta usata e in pessime condizioni proveniente da una stazione di bike sharing? Per risolvere questi problemi é nata listnride.",
+      "content-paragraph": "Ci siamo, però, chiesti perché è spesso difficile noleggiare la bici giusta quando e dove ne abbiamo bisogno? Perché dovremmo noleggiare una bicicletta usata e in pessime condizioni proveniente da una stazione di bike sharing? Per risolvere questi problemi é nata listnride.",
       "content-munich-showroom": "In posizione centrale nel quartiere di Maxvorstadt, presentiamo nel nostro <a href=\"users/6511\" target=\"_blank\">Munich Experience Center</a> biciclette di marche come 8bar, Bonvelo, Rossignol, Urwahn e Yuba. Offriamo anche le ultime bici da corsa Felt e biciclette elettriche di Cowboy, Leaos e Vello. Clicca <a href=\"brands\">qui </a>per saperne di più sulle nostre bici di prova e marche a Monaco di Baviera.",
       "content-berlin-showroom": "Nel cuore di Berlin-Mitte, di fronte all'Hackescher Markt, nel nostro <a href=\"users/7351\" target=\"_blank\">Berlin Experience Center</a> offriamo giri di prova per biciclette di marche come Argon18, Bonvelo, Brompton, BZEN e Cowboy. Organizziamo regolarmente eventi come <a href=\"http://www.facebook.com/pg/listnride/events/?ref=page_internal\" target=\"_blank\">gite in bicicletta di gruppo</a>, che hanno luogo ogni venerdì mattina. Clicca <a href=\"brands\" target=\"_blank\">qui</a>> per saperne di più sulle nostre bici di prova e marche disponibili a Berlino"
     },
@@ -299,7 +299,7 @@
     },
     "msr": {
       "meta-title": "Rent a road bike for MSR 2020 | listnride",
-      "meta-description": "Rent a road bike online easy and secure with listnride for MSR 2020. Choose the perfect bike that fits your needs."
+      "meta-description": "Noleggia una bici da corsa online con listnride per il Mecklenburger Seerunde 2020. Scegli la bici perfetta che meglio si adatta alle tue esigenze. "
     },
     "frankfurt-city-triathlon": {
       "meta-title": "Road bike rental for the Frankfurt City Triathlon | listnride",
@@ -488,8 +488,8 @@
       "category-description": "Scegli online la {{category}} più adatta alle tue esigenze, a partire da {{ minPrice }}€. Goditi {{location}} con una bicicletta noleggiata in modo sicuro su listnride."
     },
     "business-community": {
-      "meta-title": "La comunità business di listnride",
-      "meta-description": "Diventa parte di listnride per il noleggio online di biciclette"
+      "meta-title": "La comunità commerciale di listnride",
+      "meta-description": "Iscriviti a listnride, la comunità per il noleggio di biciclette"
     },
     "events": {
       "rapha-super-cross": {
@@ -537,7 +537,7 @@
       },
       "depart": {
         "meta-title": "Rent a road bike for the Grand Départ on listnride",
-        "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community."
+        "meta-description": "Unisciti a listnride e Schicke Mütze per un´uscita in bicicletta in onore del Grand Départ. Noleggia una bicicletta di alta gamma dalla comunità di listnride. "
       },
       "supercross-munich": {
         "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
@@ -566,8 +566,8 @@
         "meta-description": "Yuba Cargo Bicycles are cargo Utility bikes for carrying 1 to 3 kids by bike. A Perfect solution for carrying cargo and doing deliveries. Yuba bikes are available to rent and test ride on listnride."
       },
       "cowboybikes": {
-        "meta-title": "Rent and test ride Cowboy bikes, the electric Bike for Urban Riders | listnride",
-        "meta-description": "Test ride a Cowboy smart electric urban bike today! The smart electric Bike for Urban Riders. Rent it on listnride!"
+        "meta-title": "Noleggia e prova le biciclette Cowboy, le biciclette elettriche per ciclisti urbani | listnride",
+        "meta-description": "Noleggia e prova le biciclette Cowboy, le biciclette elettriche intelligenti per ciclisti urbani. Noleggiale e provale su listnride!"
       },
       "argon18": {
         "meta-title": "Rent and test ride Argon 18 road bikes and gravel bikes! World leader in high-end bicycle manufacturing",
@@ -660,26 +660,26 @@
     },
     "press": {
       "meta-title": "stampa listnride",
-      "meta-description": "Noi amiamo il bike sharing. E risponderemo con piacere a tutte le vostre domande."
+      "meta-description": "Noi amiamo il noleggio di biciclette. E risponderemo con piacere a tutte le vostre domande."
     },
     "invest": {
-      "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+      "meta-title": "listnride fa crowdfunding! Entra a farte e investi nella crescita della prima comunità di noleggio di biciclette in Europa.",
       "meta-description": "Visit Seedrs to learn more about investing in listnride."
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Termini e condizioni del sito",
-      "meta-description": "I Termini e Condizioni della comunità bike sharing di listnride si applicano all'uso della piattaforma online."
+      "meta-description": "I Termini e Condizioni della comunità di listnride si applicano all'uso della piattaforma online."
     },
     "trust-and-safety": {
       "meta-title": "Il Noleggio di biciclette è sicuro - listnride ti tutela"
     },
     "how-it-works": {
-      "meta-title": "Bike sharing in modo semplice",
+      "meta-title": "Noleggio di biciclette reso semplice e veloce",
       "meta-description": "L'utilizzo di listnride è facile come incontrarsi per un caffè. Provalo!"
     },
     "jobs": {
       "meta-title": "Lavora per listnride",
-      "meta-description": "Unisciti alla squadra bike sharing di listnride a Berlino o a Monaco di Baviera per costruire la comunità globale della bicicletta"
+      "meta-description": "Entra a far parte del Team di listnride a Belino o Monaco di Baviera e aiutaci a costruire una piattaforma di noleggio biciclette a livello globale. "
     },
     "shop-landing": {
       "meta-title": "listnride Shop Plugin- Il tuo noleggio online di biciclette ",
@@ -941,7 +941,7 @@
     "private-tip": "Queste informazioni non saranno visibili al pubblico",
     "public-tip": "Queste informazioni saranno visibili nella tua pagina profilo",
     "1": {
-      "text1": "Benvenuto nella nostra comunità appassionata per il bike sharing. Tantissime biciclette e appassionati da tutto il mondo.",
+      "text1": "Benvenuto nella nostra comunità di appassionati di ciclismo e di noleggio. Tantissime biciclette e ciclisti da tutto il mondo.",
       "text-invited": "Dato che sei stato invitato da un'amico, abbiamo aggiunto un buono sconto sul tuo profilo che sarà utilizzabile dal tuo primo noleggio.",
       "text2": "Siamo una comunitá di appassionati e la nostra prioritá e quella di garantire fiducia e sicurezza ai nostri utenti. Per questo motivo, ti chiediamo di verificare il tuo profilo in due semplici passi. Piú informazioni aggiungi, piú probabilitá hai che le tue richieste di noleggio vengano accettate."
     },
@@ -1079,7 +1079,7 @@
   },
   "forms": {
     "first-name": "Nome",
-    "account_holder_name": "Account holder name",
+    "account_holder_name": "Intestatario del conto",
     "bank_country": "Nazione",
     "dob": "Data di nascita",
     "gender": "Qual è il tuo sesso?",
@@ -1088,6 +1088,7 @@
       "male": "Maschio",
       "female": "Femminile"
     },
+    "select": "Selezionare",
     "newsletter-privacy-policy": "Newletter per l´Informativa sulla Privacy",
     "sign-up-today": "Iscriviti oggi",
     "already-registered": "Sei già iscritto",
@@ -1485,11 +1486,11 @@
     },
     "search-section": {
       "header": "Dove vorresti noleggiare una bicicletta ?",
-      "subheader": "Il servizio bike sharing di listnride sta diventando disponibile in sempre più località."
+      "subheader": "Il servizio di noleggio di biciclette di listnride sta diventando disponibile in sempre più località."
     },
     "testmonials-section": {
       "header": "Che cosa dicono i nostri ciclisti su di noi?",
-      "subheader": "Sempre più persone stanno scoprendo i vantaggi del bike sharing tramite listnride. Scopri alcune delle loro testimonianze:"
+      "subheader": "Sempre più persone stanno scoprendo i vantaggi del noleggio di biciclette tramite listnride. Scopri alcune delle loro testimonianze:"
     }
   },
   "list-a-bike": {
@@ -1554,11 +1555,11 @@
     "meta-title": "listnride | 10 € per te!",
     "meta-description": "Regala la passione per il ciclismo! Quando inviti un amico su listnride, avrà un buono di 10 € all´iscrizione. Quando noleggerà una bicicletta o registrerà la sua, otterrai anche tu un buono di 10 €!",
     "header": "ti ha inviato 10 €",
-    "subheader": "Benvenuto a listnride, la comunità Bike Sharing",
-    "subsubheader": "listnride è una comunità Bike Sharing  che riunisce gli appassionati di ciclismo di tutti i tipi. I membri possono noleggiare le proprie biciclette  attraverso il nostro sito web o app, o noleggiare una bicicletta che si adatta perfettamente al loro stile e alle loro esigenze.",
+    "subheader": "Benvenuto a listnride, la piattaforma di noleggio biciclette",
+    "subsubheader": "listnride è una comunità di noleggio di biciclette che unisce tutti gli appassionati di ciclismo. Gli utenti possono sia mettere a noleggio le loro biciclette sul nostro sito web o sulla nostra app, sia noleggiare una bicicletta che sia adatta al loro stile ed alle loro esigenze. ",
     "subsubsubheader": "Sei stato invitato da {{ name }}. Iscriviti ora e riceverai un buono di 10 € che verrà caricato sul tuo conto. Puoi usarlo per il prossimo noleggio.",
     "sign-up-get-voucher": "Iscriviti per ottenere il voucher",
-    "how-lnr-works": "Bike Sharing senza problemi",
+    "how-lnr-works": "Noleggio di biciclette senza problemi",
     "explanation-1-title": "1. Trovare e richiedere",
     "explanation-1-description": "Trova la bicicletta giusta vicino a te e richiedila.",
     "explanation-2-title": "2. Prenotare e ritirare",

@@ -22,7 +22,7 @@
       "bike-shops": "Negozi di biciclette",
       "cafes-bars": "Caffè, Bar e Ristoranti",
       "bike-routes-content": "Il <a href=\"http://www.thf-berlin.de/standortinfos/tempelhofer-feld\" target=\"_blank\">Tempelhofer Feld </a>offre un parco giochi perfetto per attività all'aperto. Le prime pista aeroportuali sono ottime per fare alcuni giri e godersi lo scenario degli sport urbani e dei giochi che si svolgono intorno a te. A <a href=\"https://www.lollapaloozade.com/en/treptower-park\">Treptower Park</a> troverai innumerevoli interessanti esperienze. C'è il monumento sovietico che ti ricorda i tempi in cui la Germania fu divisa in due nazioni. Per coloro che preferiscono, un viaggio lungo il <a href=\"https://en.wikipedia.org/wiki/Landwehr_Canal\">Landwehrkanal</a> può essere un ottimo modo per scoprire Berlino, partendo dal paesaggio verde di Treptow e andando fino in città Kreuzberg e Neukölln. Se ti piace fare lunghe passeggiate, controlla il <a href=\"http://panke.info/pages/portal-touren.php\">Panke Radweg</a> (~ 30km) che ti porta nelle zone rurali di Berlin Wedding. Più natura? Prova una parte del percorso <a href=\"http://www.germany.travel/en/leisure-and-recreation/cycling/berlin-usedom-island-cycle-route.html\">Berlino per Usedom</a> , portandoti in una natura quasi intatta e uno scenario tranquillo.",
-      "bike-shops-content": "A Berlino molte marche locali sono state recentemente fondate. Il marchio urbano <a href=\"http://www.schindelhauerbikes.com\" target=\"_blank\">Schindelhauer </a> crea biciclette molto eleganti per il ciclista urbano. Se preferisci una single-speed o una a scatto fisso, puoi guardare a <a href=\"https://8bar-bikes.com\" target=\"_blank\">8bar </a>e Bike Punk. Se preferisci una bicicletta da strada, allora <a href=\"http://www.standert.de\" target=\"_blank\">Standert </a>può sicuramente offrire qualcosa di speciale. Ci sono anche molti  concept store interessanti. <a href=\"http://www.pret-a-velo.de/en\" target=\"_blank\">Prét-á-vélo </a>offre un'ampia selezione di biciclette e accessori classici, <a href=\"http://www.wingwheels.de/?lang=en\" target=\"_blank\">Wingwheels </a> la più ampia selezione di E-bike. Se hai una passione per le biciclette piegabili e tutto ciò che lo circonda, <a href=\"http://boxbike.de\" target=\"_blank\">boxbike </a>offre un'ottima esperienza nel settore.",
+      "bike-shops-content": "A Berlino molte marche locali sono state recentemente fondate. Il marchio urbano <a href=\"http://www.schindelhauerbikes.com\" target=\"_blank\">Schindelhauer </a> progetta biciclette molto eleganti per gli sportivi ciclisti di città. Se preferisci una bicicletta single-speed o a scatto fisso, puoi provarne una di <a href=\"https://8bar-bikes.com\" target=\"_blank\">8bar </a>! Se preferisci una bicicletta da corsa, allora <a href=\"http://www.standert.de\" target=\"_blank\">Standert </a>può sicuramente offrire qualcosa di speciale. Ci sono anche molti  concept store interessanti. <a href=\"http://www.pret-a-velo.de/en\" target=\"_blank\">Prét-á-vélo </a>offre un'ampia selezione di biciclette e accessori classici, <a href=\"http://www.wingwheels.de/?lang=en\" target=\"_blank\">Wingwheels </a> la più ampia selezione di E-bike. Se hai una passione per le biciclette piegabili e tutto ciò che lo circonda, <a href=\"http://boxbike.de\" target=\"_blank\">boxbike </a>offre un'ottima esperienza nel settore.",
       "cafes-bars-content": "Dopo una giornata in giro ti consigliamo di visitare <a href=\"http://www.fiveelephant.com\" target=\"_blank\">il Cafè five elephant  </a>a Neukölln o Mitte per prendere un caffè, o magari due, e provare i loro deliziosi pasticcini in stile nord americano. Per la cena o il pranzo, ti consigliamo <a href=\"http://www.kimchiprincess.com\" target=\"_blank\">Kimchi Princess </a>a Kreuzberg, un ristorante coreano specializzato in grigliate. Visita <a href=\"http://kaschk.de\" target=\"_blank\">Kaschk </a>a Mitte che provare una grande selezione di birra artigianale scozzese e locale, e per gustare caffè appena tostato."
     },
     "munich": {
@@ -114,7 +114,7 @@
     "faq": {
       "group-1": {
         "title": "Per cominciare",
-        "description": "Di seguito puoi trovare informazioni su come trovare la bici perfetta per te e scoprire come far parte della nostra bike-sharing community.",
+        "description": "Di seguito puoi trovare informazioni su come trovare la bici perfetta per te e scoprire come far parte della nostra comunità di noleggio biciclette.",
         "answer-1": "Stai cercando una bici a Vienna? Devi solo digitare \"Vienna\" nella barra di recerca ed il nostro motore di ricerca ti mostrerá tutti i risultati con annessa una cartina della cittá per vedere dove si trovano esattamente le biciclette.",
         "answer-2": "I risultati di ricerca ti mosteranno tutte le biciclette disponibili in una data localitá. Per filtrare i risultati, usa i nostri filtri: arco temporale, taglia, tipo e marca della bicicletta. ",
         "answer-3": "Nella pagina con i dettagli della bici trovi un calendario. I giorni marcati in nero sono quelli in cui puoi noleggiare la bici, quelli grigi sono quelli in cui la bici non è disponibile e quelli in rosso sono quelli in cui la bici è già stata prenotata.\n\n<img src=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/assets/help_support/en/help-and-service.faq.group-1.answer-3.jpg\">",
@@ -328,7 +328,7 @@
     }
   },
   "business-community": {
-    "meta-title": "La comunità business di listnride",
+    "meta-title": "La comunità commerciale di listnride",
     "requests": {
       "title": "Gestisci tutti i noleggi da un'unica postazione",
       "description": "Ricevi richieste di prenotazione invece di un numero infinito di e-mail , tu hai sempre il controllo. Migliora la comunicazione con i tuoi clienti, niente più formulari o problemi di comunicazione."
@@ -338,7 +338,7 @@
       "description": "Ogni bicicletta ha un profilo unico con informazioni dettagliate che consentono ai nostri utenti di noleggiare la bici che desiderano in pochi secondi."
     },
     "companies": {
-      "title": "Altre attività commerciali che hanno aderito alla nostra community business di listnride"
+      "title": "Altre attività commerciali che hanno aderito alla nostra comunità listnride"
     },
     "plugin-wp": {
       "title": "listnride  Plug-in di prenotazione",
@@ -346,28 +346,28 @@
       "install": "Installa su Wordpress",
       "link": "Si prega di utilizzare la nostra <a href=\"https://s3.eu-central-1.amazonaws.com/listnride-cdn/listnride_shop_install_guide.pdf\" target=\"_blank\">documentazione di installazione</a> se non si utilizza Wordpress."
     },
-    "meta-description": "Diventa parte di listnride per il noleggio online di biciclette",
+    "meta-description": "Unisciti a listnride, la comunità di noleggio online",
     "title": "Unisciti oggi alla community di listnride ",
     "subtitle": "Nessun contratto, nessun canone mensile, solo una commissione per prenotazione.",
-    "description": "Con listnride puoi gestire tutto il tuo noleggio in un unico posto. Niente più formulari o problemi di comunicazione. Accetta o rifiuta le richieste di noleggio , in modo da avere sempre il controllo. Pronto per iscriverti su listnride?",
+    "description": "Con listnride puoi gestire tutti i tuoi noleggi in un´unica piattaforma. Niente più documenti o problemi di comunicazione. Accettat o rifiuta le prenotazioni online e mantieni sempre il controllo della situazione. Pronto ad unirti a listnride?",
     "feature-1": {
       "title": "Approfitta della nostra vasta rete",
       "description": "Promuoviamo le tue biciclette attraverso la nostra piattaforma e i nostri canali multimediali. Così i nostri clienti internazionali possono facilmente trovare e prenotare le vostre biciclette."
     },
     "feature-2": {
       "title": "Semplifica il processo di noleggio",
-      "description": "Niente più e-mail e telefonate che ti portano via tutto il tuo tempo. Basta ricevere la richiesta di prenotazione che tu puoi accettare."
+      "description": "Niente più email e telefonate che portano via tutto il tuo tempo. ricevi le richieste di noleggio online e accettale velocemente. "
     },
     "feature-3": {
       "title": "Ottieni più noleggi",
-      "description": "Il nostro obiettivo è aiutare a far crescere la tua attività, riducendo al contempo l'amministratore e la complessità."
+      "description": "Il nostro obiettivo è aiutare a far crescere la tua attività, semplificandone l´amministrazione."
     },
     "text-2": {
-      "title": "Diventa parte della comunità business di listnride",
+      "title": "Diventa parte della comunità commerciale di listnride",
       "description": "Iscriviti ora ed imposta subito la pagina del tuo negozio. Oppure contattaci direttamente. <br>Stefano sarà felice di aiutarti, contattalo a: <a href=\"mailto:sp@listnride.com\">sp@listnride.com</a>"
     },
     "text-3": {
-      "column-1": "listnride è già la più grande comunità di bike sharing in Europa, specializzata nel noleggio di biciclette private e commerciali. Ecco perché sappiamo cosa cercano i nostri clienti e li possiamo indirizzare direttamente alla tua pagina listnride online e al tuo negozio nel modo più semplice possibile.",
+      "column-1": "listnride è già la più grande comunità di noleggio biciclette in Europa ed è specializzata nel noleggio di biciclette di privati e negozi. Sappiamo cosa cercano i nostri clienti e li possiamo indirizzare al profilo del tuo negozio così che possano trovare e noleggiare una delle tue biciclette. ",
       "column-2": "Per noi è importante poter offrire alla nostra comunità di appassionati ciclisti una vasta gamma di biciclette, dalla crosser, alla bicicletta da strada, dalla bicicletta da carico, fino alla bicicletta  olandese. Insieme a te, non solo possiamo offrire ai nostri utenti la bicicletta perfetta per le vacanze, ma anche aiutarli a scegliere la bici che vogliono comprare."
     }
   },
@@ -435,13 +435,13 @@
       "text": "Lo scopo di Epic Gran Canaria è di far vivere un’esperienza ciclistica da professionisti a ciclisti amatoriali. Avrai totale sicurezza, comfort e qualità dei servizi e allo stesso tempo potrai testare te stesso e le tue capacità. Noleggia una bici da corsa cliccando sulla bici che preferisci e selezionando il periodo di tempo in cui desideri averla. "
     },
     "lardita-arezzo": {
-      "title": "Noleggia una bici da corsa vintage per l' Ardita ",
+      "title": "Noleggia una bici da corsa d´epoca per l' Ardita ",
       "description": "Cosa: <b>L 'Ardita Ciclostorica dell'Alpe di Poti </b>| Quando: <b>24.3.2019 </b>| Dove: <b> Arezzo, Toscana </b>",
       "text": "Cuore della festa è \"L'Ardita\" il ciclostorico dell'Alpe di Poti per bici da corsa d'epoca. \nDomenica 24 marzo 2019 si affronterà ancora una volta l'Alpe di Poti, tappa del Giro d'Italia 2016 ma anche di molte gare importanti degli anni '70 e '80. L' Ardita  ha la particolarità di rievocare il ciclismo di un tempo,. Avete bisogno di una bici per <a href=\"https://www.lardita.com/\" target=\"_blank\">L’ Ardita? </a> Insieme alla comunità di listnride, mettiamo a vostra disposizione biciclette da strada vintage, che potrete noleggiare facilmente per la manifestazione. Basta scegliere una delle biciclette qui sotto, richiederla per il periodo desiderato, e prenderla al momento opportuno."
     },
     "granfondo-via-del-sale": {
       "title": "Noleggia una bici da corsa per la Granfondo Via del Sale!",
-      "description": "Cosa: <b>24ª Granfondo Via del Sale</b>| Quando: <b>17-19 Aprile 2020</b>| Dove: <b>Fantini Club-Cervia (RA), Emilia Romagna</b>",
+      "description": "Cosa: <b>24ª Granfondo Via del Sale</b>| Quando: <b>19 Aprile 2020</b>| Dove: <b>Fantini Club-Cervia (RA), Emilia Romagna</b>",
       "text": "Alla sua 24ª edizione, la Via del Sale è una delle più famose Granfondo in Italia, capace di coinvolgere 6.000 partecipanti e generare un pubblico di oltre 28.000 visitatori. <br>\n\nTrasportare la tua bici alla <a target=\"_blank\" href=\"http://granfondoviadelsale.com/\">Granfondo Via del Sale</a> è una sfida logistica se non vivi nelle zone limitrofe. Quindi, perché non noleggiare una bicicletta? <br>\n\nRisparmia tempo e denaro: le bici saranno pronte all'uso alla linea di partenza a Cervia. Tutto quello che ti serve sono le luci, il casco, i pedali, e naturalmente, tu!<br>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Cervia,%20Emilia%20Romagna\" target=\"_blank\">Prenotazioni di gruppo disponibili qui!</a>"
     },
     "giro-sardegna": {
@@ -502,7 +502,7 @@
       "meta-title": "Rent the perfect road bike during Eurobike",
       "meta-description": "Get out and ride your bike at Eurobike with listnride and Katusha",
       "title": "The listnride Constance Spin",
-      "text-1": "Join us on the ride on Wednesday, the 30th of August to relax from a busy day at the fair.<br><br>The ride is a great opportunity to explore the countryside around Lake Constance away from the daily business at the show. We have a local guide with us.<br><br>We will stop for drinks, food and socializing towards the end of the ride at a selected local venue and then guide you back to Eurobike. <br><br>We offer complimentary bike loans to those unable to bring their own provided by Pure Cycles. Please select and reserve your bike. You will need to bring your own shoes and pedals.",
+      "text-1": "Aggregati all´uscita di mercoledì 30 Agosto per rilassarti dopo un´intensa giornata alla fiera.<br><br> La nostra uscita è un´ottima opportunità per esplorare le campagne intorno al Lago di Costanza, lontano dalle frenetiche attività della fiera. Abbiamo anche una guida locale con noi. <br><br> Ci fermeremo verso la fine della gita in una locale per un drink, mangiare e conoscerci meglio. Ti riaccompagneremo poi all´Eurobike. <br><br> Offriamo biciclette a noleggio messe a disposizione da Pure Cycles per chi non può portare la propria. Ti preghiamo di selezionare e prenotare la tua bici. Ricordati di portare le tue scarpe ed i pedali. ",
       "text-2": "<b>When</b> Wednesday 30th August<br><br><b>Where</b> <a href=\"https://goo.gl/maps/KyrZ9kpuVAU2\">Meet at the parking in front of the customs office</a><br><br><b>Departure</b> Ride from 6pm, 2 hours<br><br><b>Distance</b> Ca. 50 kmph <br><br><b>Speed</b> 25-27 kmph<br><br>To secure your spot on a ride, please pre-register before using the link below.",
       "sign-up": "RSVP"
     },
@@ -533,20 +533,20 @@
     },
     "riderman-rothaus": {
       "meta-title": "Rent a road bike for the RiderMan in Bad Duerrheim",
-      "meta-description": "Rent the perfect road bike for the RiderMan in Bad Duerrheim easily online and choose from brands such as Siplon, Specialized, Ridley, Cervelo and Bianchi",
+      "meta-description": "Noleggia una bicicletta per il RiderMan di Bad Duerrheim online in modo semplice e veloce e scegli tra diversi marchi, tra cui Simplon, Specialized, Ridley, Cervelo e Bianchi.",
       "title": "Simply rent the perfect road bike for the RiderMan in Bad Duerrheim",
       "text": "Noleggia una bicicletta per il RiderMan di Bad Duerrheim! Su listnride puoi trovare biciclette da corse da noleggiare per quanto tempo desideri. Ti basta solo cliccare su una delle biciclette qua sotto, richiederla per il periodo che desideri e ritirarla quando é il momento. Cosí semplice! Sapevi ch puoi noleggiare anche la tua bicicletta? Registrala e guadagna qualcosa in piú con il suo noleggio!",
       "description": "Where: <b>Bad Duerrheim</b>  |  What: <b>RiderMan - 3-stage race</b>  |  When: <b>29.09 - 01-10.2017</b>"
     },
     "depart": {
       "meta-title": "Rent a road bike for the Grand Départ on listnride",
-      "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community.",
-      "text-1": "Calling all cyclists in town for the start of the Tour de France in Düsseldorf - Let’s ride!<br><br>Together with our friends at <a href=\"http://schickemuetze.de\">Schicke Mütze</a>, we invite you to an easy paced social ride. We will ride a nice tour through the hilly surroundings of Düsseldorf, starting and finishing at the Schicke Mütze shop.<br><br>If you still need a road bike for the ride, you’re welcome to rent a high-end bike from the listnride bike-sharing community. See you out there :)",
+      "meta-description": "Unisciti a listnride e Schicke Mütze per un´uscita in bicicletta in onore del Grand Départ. Noleggia una bici di alta gamma dalla comunità di listnride. ",
+      "text-1": "Chiamata per tutti i ciclisti in città per l´inizio del tour de France a Düsseldorf! <br><br>Insieme ai nostri amici di <a href=\"http://schickemuetze.de\">Schicke Mütze</a>, ti invitiamo a partecipare ad una tranquilla uscita in bicicletta. Faremo un bellissimo giro tra le colline che circondano Düsseldorf, iniziando e terminando al negozio di Schicke Mütze. <br><br> Se ti serve una bici da corsa per la gita, sei il benvenuto nella comunità di listnride. Ci vediamo :)",
       "title": "Join us for a social ride and discover Düsseldorf's beautiful surroundings!",
       "text-2": "<b>On Friday, June 30, 2017</b><br><br><b>Start with coffee at the Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Departure at 10:00 hours<br><br>Distance up to 60 km<br><br>Tempo 24-27 kmh, easy going<br><br>After the ride from 18:00 - BBQ & Drinks @ Schicke Mütze - Untere Talstraße 22-24, Dusseldorf<br><br>Requirements Road bike, helmet and click pedal</b>",
       "sign-up": "Sign up for free",
       "description": "Still need a road bike for the big weekend?",
-      "subdescription": "Don't hesitate to book a great bike from our bike-sharing community."
+      "subdescription": "Non esitare a noleggiare un´eccellente bicicletta dal nostro sito. "
     },
     "crossride": {
       "title": "listnride Crossride",
@@ -557,7 +557,7 @@
       "subdescription": "Together with Brompton and Ampler we rent out fantastic bikes for free",
       "subhead-1": "The new bike rental",
       "subhead-2": "Rent a bike for free",
-      "text-1": "Conceived as the Airbnb for bicycles, listnride offers an alternative to the classic bike rental: private owners, dealers or manufacturers offer their bicycles for rent on listnride. Tourists, citizens, families, sportsmen and business travelers rent the right bike for their style and needs.",
+      "text-1": "Pensato come un Airbnb per le biciclette, listnride offre un´alternativa ai classici metodi di noleggio: privati, negozi di biciclette e marchi mettono a disposizione le loro biciclette per il noleggio su listnride. Turisti, famiglie, amanti dello sport e persone che viaggiano per lavoro possono così noleggiare la bicicletta adatta al loro stile e alle loro necessità. ",
       "text-2": "Soprattutto per le MCBW, i visitatori possono noleggiare una bicicletta dei seguenti marchi: <b>Urban Arrow</b>, <b>l:sy</b>, <b>Stromer</b>, <b>Brompton</b> e <b>Ampler</b> <b>(Vocher Code: 10FORU)</b>. L´obiettivo di listnride è di offrire a più persone possibili in tutto il mondo una modo semplice di noleggio di biciclette stilose e di qualità. Se vuoi esplorare Monaco di Baviera, affidati a listnride!",
       "location-description": "Choose your location",
       "location-text": "The two locations are <b>① Munix Finest Bicycles</b> in Wörthstraße 11 and <b>② listnride</b> at Pündterplatz 1"
@@ -565,7 +565,7 @@
     "cwd": {
       "home": {
         "title": "listnride at the Cycling World Düsseldorf",
-        "description": "Düsseldorf will host a new lifestyle trade fair around cycling: the Cycling World. We, listnride will be at the main entrance with selected brands and manufacturers such as Ampler and Cervélo, to present our bike sharing platform with exclusive of test-rides. In addition, we invite you to explore the surrounding countryside on two guided roadbike tours to bring the motivation gained at the fair straight to the road!",
+        "description": "Düsseldorf ospiterà una nuova fiera sullo stile di vita legato al ciclismo: il CyclingWorld. Noi di listnride saremo all´ingresso principale con alcuni marchi selezionati come Ampler e Cervélo, per presentare la nostra piattaforma di noleggio. Inoltre, ti invitiamo ad esplorare la campagna circostante con uno dei due tour guidati in bici da corsa in moda da portare la motivazione creatasi durante la fiera direttamente in strada!",
         "pp-title": "Saturday",
         "kr-title": "Sunday",
         "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
@@ -706,22 +706,22 @@
       "item2-description": "On the prowl at dusk, or awake at dawn. </br>\nIntensifying lights and hydraulic brakes ever there as you slow. </br>\nAnd then, you’re off",
       "item3-title": "Track every trace",
       "item3-description": "Built-in GPS tracking ensures your bike is always in range. </br>\nStay connected when it’s locked nearby, no move without you.</br>",
-      "find-out-more": "Rent and test ride Cowboy bikes today! Meet Cowboy. The electric bike for urban riders.",
-      "order-online": "Cowboy is the first connected bike that gives people the freedom to take the streets. Designed to be beautiful and agile in both mechanics and technology, one ride and you’ll want this bike to be yours too.Through a passion for design and technology working in harmony to unlock a new path for people and systems, we are creating a new experience for people to move freely around cities.</br>\n<a href=\"https://cowboy.com/\" target=\"_blank\">Learn more on Cowboy.com</a>",
+      "find-out-more": "Noleggia e prova una bicicletta Cowboy! Discopri la Cowboy, bicicletta elettrica per ciclisti urbani. ",
+      "order-online": "La Cowboy è la prima bicicletta connessa che da alle persone la libertà di conquistare le strade. Progettata per essere sia esteticamente bella sia agile. Non ti ci vorrà molto tempo per innamorartene. Appassionati di design e di tecnologia e lavorando in armonia per aprire una nuova via alle persone e ai sistemi, creaiamo una nuova esperienza permettendo alle persone di muoversi liveramente in città. </br>\n<a href=\"https://cowboy.com/\" target=\"_blank\">Scopri di più su Cowboy.com</a>",
       "faq-question-1": "Verkaufen Sie verschiedene Rahmengrößen?",
       "faq-answer-1": "Aktuell verkaufen wir ein universales Modell, dass bei Menschen mit einer Körpergröße zwischen 170cm und 195cm passt. Der Sattel lässt sich ganz einfach mit Hilfe eines Inbus-Schlüssels anpassen (detaillierte Anweisungen lassen sich in der Anleitung nachlesen). Falls du unsicher über die für dich passende Höhe bist, vereinbare gerne eine Probefahrt mit deinem Bike und wir helfen dir bei der Feinabstimmung ",
       "faq-question-2": "Was ist die maximale Geschwindigkeit des Fahrrads?",
-      "faq-answer-2": "Die Höchstgeschwindigkeit von unserem Bike ist 25km/h. Das Cowboy Bike ist also kein Pedelec, d.h. du brauchst weder ein Kennzeichen noch einen Führerschein. Trotzdem empfehlen wir dir einen Helm zu tragen. \nAuf privatem Gelände kannst du in unserer App auch den 'off-road' Modus aktivieren, in welchem du bis zu 30km/h fahren kannst. Wir müssen dich jedoch darauf aufmerksam machen, dass dieser 'off-road' Modus auf öffentlichen Straßen in Europa nicht erlaubt ist.\n",
+      "faq-answer-2": "La velocità massima delle nostre biciclette è di 25 km/h. La Cowboy non è una pedalec, ossia non per usarla non hai bisogno di una targa e di una patente di guida. Nonostante ciò ti consigliamo vivamente di indossare il casco. \n\nSu un terreno privato puoi anche attivare la modalità \"fuori strada\" dalla nostra app, con la quale puoi raggiungere il 30 km/h. Ricordati, però, che questa modalità \"fuori strada\" non è autorizzata sulle strade pubbliche in Europa. ",
       "faq-question-3": "Kann ich Zubehör an meinem Bike anbringen?",
       "faq-answer-3": "Ja, klar! Unser Bike ist kompatibel mit der Mehrheit des Standardzubehörs auf dem Markt: Schutzbleche, Kindersitze, Gepäckträger, etc.</br>Die folgenden Artikel sind in einer Zubehörbox enthalten, die mit dem Fahrrad geliefert wird:<ul><li>Zusätzliches Vorderlicht</li><li>Zusätzliches Rücklicht</li><li>Klingel</li><li>Vorderradreflektor</li><li>Hinterradreflektor</li><li>Speichenreflektoren</li></ul>",
       "faq-question-4": "Wie wird die App mit dem Fahrrad verbunden?",
       "faq-answer-4": "Die Verbindung zwischen dem Fahrrad und der App wird über Bluetooth hergestellt. Wenn das Bluetooth auf deinem Handy nicht aktiviert ist, fordert dich die App automatisch auf, es einzuschalten, um eine Verbindung mit deinem Fahrrad herzustellen.",
       "faq-question-5": "Was passiert, wenn mein Handy-Akku während der Fahrt leer wird?",
       "faq-answer-5": "Dein Smartphone wird nur benötigt, um die elektrische Unterstützung des Fahrrads einzuschalten. Das bedeutet, dass, wenn dein Smartphone während der Fahrt ausgeht, das Bike weiterhin normal funktioniert, du es aber am Ende der Fahrt nicht ausschalten kannst. Um dies zu vermeiden, kannst du in der App die automatische Abschaltung aktivieren, um sicherzustellen, dass dein Fahrrad nach einer gewissen Zeit der Inaktivität automatisch ausgeschalten wird.",
-      "faq-question-6": "Wie wird das Cowboy Bike gegen Diebstahl geschützt?",
-      "faq-answer-6": "Fahrraddiebstahl ist ein Problem, das wir bei Cowboy angehen wollen. Zwei Hauptfunktionen wurden daher in die App integriert, um dies zu verhindern.</br>\n<h4>Digitaler Schlüssel</h4>\nDu bist die einzige Person, die die elektrische Unterstützung deines Bikes durch die App einschalten kann. Jedes Fahrrad ist mit einem eindeutigem Konto in der App verknüpft.</br>\n<h4>Finde mein Fahrrad</h4>\nDu kannst dein Fahrrad nicht finden? Gehe einfach auf den Navigationsbildschirm in der App, um die letzte bekannte Position zu sehen. Klicke auf die Stecknadel, um das Datum und die Uhrzeit anzuzeigen, an dem das Fahrrad diese Position gesendet hat.\n",
-      "faq-question-7": "Wo kann ich ein Cowboy Bike kaufen?",
-      "faq-answer-7": "Wir verkaufen unsere Bikes ausschließlich online, um einen wettbewerbsfähigen Preis anbieten zu können und gleichzeitig eine direkte Beziehung zu unseren Kunden aufrechtzuerhalten. </br>Wir haben natürlich vollstes Verständnis dafür, falls du das Bike gerne vor dem Kauf im 'real life' testen möchtest. Zögere daher nicht deine und dich auf einen wilden Ritt mit unserem Bike zu wagen. Wir werden bald Testfahrten in mehreren Städten in Deutschland anbieten. Unsere Experten werden dich mit allen nötigen Informationen versorgen und dir dabei helfen eine Bestellung aufzugeben, wenn dir die Testfahrt gefallen hat.",
+      "faq-question-6": "Come è protetta la bicicletta Cowboy dai furti?",
+      "faq-answer-6": "Il furto della bicicletta è un problema che noi di Cowboy vorremmo risolvere. Per questo nella nostra app abbiamo integrato queste due funzioni principali: </br>\n<h4>Chiavi digitali</h4>\nSei lúnica persona che può attivare il supporto elettrico della tua bicicletta usando l´app. Ogni bicicletta è collegata ad un unico profilo nell´app.</br>\n<h4>Trova la mia bicicletta</h4>\nNon riesci a trovare la tua bicicletta? Ti basta solo andare sul navigatore che hai nell´app per vedere la tua ultima posizione. Clicca sullo spillo per vedere il giorno e l´orario in cui la tua bicicletta ti ha inviato quella posizione. ",
+      "faq-question-7": "Dove posso comprare una bicicletta Cowboy?",
+      "faq-answer-7": "Vendiamo le nostre biciclette esclusivamente online per offrire un prezzo competitivo e mantenere una relazione diretta con i clienti. </br> Ovviamente capiamo che prima di comprare una bicicletta ti piacerebbe provarla. Non esitare a fare un´uscita selvaggia con una delle nostre biciclette. Presto inizieremo ad offrire prove in molte città della Germania. I nostri esperti ti forniranno tutte le informazioni necessarie e ti aiuteranno a finalizzare l´ordine se ti è piaciuta la prova. ",
       "faq-question-8": "Wie läuft der Kundendienst?",
       "faq-answer-8": "Einen hervorragenden Kundenservice anzubieten ist uns sehr wichtig. \n<h4>Standardard komponenten</h4>\nFür die normale Wartung und standard Reparaturen (z.B. eine Reifenpanne) kannst du dich einfach an deinen lokalen Fahrradladen wenden. Eine Liste der empfohlenen Händler findest du weiter unten. Zögere nicht, uns zu kontaktieren, wenn du einen weiteren Shop empfehlen kannst. Wir würden uns freuen, ihn in diese Liste aufzunehmen.</br>\nDie spezifischen Komponenten für E-Bikes, d.h. die Batterie, der Motor und der Riemen, werden speziell für unser Fahrrad entwickelt. Dafür haben wir einen On-Demand-Reparaturservice in Deutschland: Kontaktiere uns einfach und wir kommen bei dir zu Hause vorbei, um das Problem zu lösen. Solltest du Fragen oder Probleme haben, schreibe uns über den Chat auf unserer Website und wir werden dafür sorgen, dass du die notwendige Hilfe erhältst.\n",
       "faq-question-9": "Was sind die technischen Daten des Bikes?",
@@ -1296,12 +1296,12 @@
       "content": "Hai altre domande su listnride o hai bisogno di ulteriori informazioni sul noleggio di biciclette o sul nostro concetto di mobilità? Contattaci direttamente:"
     },
     "meta-title": "stampa listnride",
-    "meta-description": "Noi amiamo il bike sharing. E risponderemo con piacere a tutte le vostre domande."
+    "meta-description": "Noi amiamo le biciclette ed amiamo condividere. E risponderemo con piacere a tutte le tue domande."
   },
   "invest": {
-    "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+    "meta-title": "listnride fa crowdfunding! Entra a farte e investi nella crescita della prima comunità di noleggio di biciclette in Europa.",
     "meta-description": "Visit Seedrs to learn more about investing in listnride.",
-    "description": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike sharing community.",
+    "description": "listnride fa crowdfunding! Entra a farte e investi nella crescita della prima comunità di noleggio di biciclette in Europa.",
     "subdescription": "Learn more about listnride in our <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">investor presentation</a> and why it is worth to invest.",
     "subsubdescription": "Soon, a crowdfunding campaign will start on <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, Europe's largest equity crowdfunding platform. As an early adopter, business partner or friend, we're giving you first access, before we launch to the public. Tell us your level of interest and preregister without obligation.",
     "learn-more": "Crowdfunding FAQ",
@@ -1318,7 +1318,7 @@
     "faq-question-4": "WHAT IS THE MINIMUM INVESTMENT AMOUNT?",
     "faq-answer-4": "Because we want to involve as many people as possible, we keep the minimum investment amount low, around €10 (exact amount depends on exchange rates). We are happy to receive any amount!",
     "faq-question-5": "WHAT HAS LISTNRIDE ACCOMPLISHED SO FAR?",
-    "faq-answer-5": "Since our official start in September 2016, launching a fully functional web platform: listnride has grown to be the largest community bike-sharing platform in the German speaking market (DE, AT, CH), with over 1.100 bikes listed and 1.600 registered users. listnride has already over 100 bike shops integrated and 5 innovative bike brands up and running with test ride programs. We have built up a strong presence in Berlin, Munich, Vienna, Amsterdam and Mallorca and are expanding into other large cities like Hamburg, Zurich and Düsseldorf.",
+    "faq-answer-5": "Dal nostro inizio nel settembre 2016, quando abbiamo ufficialmente lanciato un sito interamente funzionante: listnride è cresciuta fino a diventare la più grande piattaforma di noleggio biciclette nel mercato dei paesi di lingua tedesca (DE, AT; CH), con più di 10000 biciclette registrate ed oltre 15000 utenti. listnride ha già accordi con più di 450 negozi e 8 marchi di biciclette innovativi e offre anche programmi di prova delle biciclette. Abbiamo costruito una solida presenza a Berlino, Monaco di Baviera, Vienna, Amsterdam, Mallorca e ci stiamo espandendo in altre grandi città come Düsseldorf, Amburgo e Zurigo. ",
     "faq-question-6": "HOW CAN I MAKE MONEY WITH MY INVESTMENT?",
     "faq-answer-6": "To make a profit on your investment, you will generally need to sell your shares for more than the amount you invested. In a best case scenario, the value of your shares will rise in line with the growth of business you invested in, and you will be able to see your shares when the business floats on a stock exchange or is bought by another company (i.e. an exit event). More info <a href=\"https://www.seedrs.com/learn/help/how-do-i-make-a-profit-from-my-investment\" target=\"_blank\">here</a>",
     "faq-question-7": "WHAT IS THE MONEY RAISED USED FOR?",
@@ -1330,7 +1330,7 @@
     "title": "Termini e Condizioni ",
     "header": "List and Ride Termini e Condizioni generali di contratto",
     "subheader": "Ultimo aggiornamento: 9 settembre 2019",
-    "subtitle": "Ti preghiamo di leggere attentamente i presenti Termini in quanto contengono informazioni importanti sui vostri diritti, provvedimenti e obblighi legali. Utilizzando la piattaforma listnride, accetti di rispettare i presenti Termini.<br><br>Qui puoi scaricare e leggere i nostri <a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2019.pdf\" target=\"_BLANK\"> Termini e Condizioni generali di contratto.</a> Grazie per aver utilizzato listnride!"
+    "subtitle": "Ti preghiamo di leggere attentamente i presenti Termini in quanto contengono informazioni importanti sui tuoi diritti, provvedimenti e obblighi legali. Utilizzando la piattaforma listnride, accetti di rispettare i presenti Termini. \n<br>\n<a href=\"https://s3.eu-central-1.amazonaws.com/cdn.listnride.com/en/listnride_terms_2019.pdf\" target=\"_BLANK\">Qui puoi scaricare</a> e leggere i nostri Termini e Condizioni generali di contratto. \n<br>\nGrazie per aver utilizzato listnride!"
   },
   "trust-and-safety": {
     "meta-description": "La fiducia è fondamentale in comunità come la nostra. Supportiamo l'equità e la sicurezza attraverso la verifica e l'assicurazione per ogni noleggio.",
@@ -1363,15 +1363,15 @@
       "description": "Se noleggi una bicicletta in Germania o in Austria, nel canone di noleggio è inclusa un'assicurazione di base. Con\n<a href=\"http: //www.hepster.com\" target=\"_blank\">hepster</a>\ne il\n<a href=\"http://www.gothaer.de\" target=\"_blank\">Gruppo Gothaer</a>\nabbiamo due partner forti dalla nostra parte per aiutarti quando necessario.\n<p>\nBasta scegliere il pacchetto assicurativo giusto per te quando prenoti la tua bici."
     },
     "outro": {
-      "description": "listnride è la più grande piattaforma di bike sharing d'Europa. Offriamo ai ciclisti un facile accesso a bici di alta qualità. Ovunque la bici perfetta. Semplicemente disponibile online."
+      "description": "listnride è la più grande piattaforma di noleggio biciclette d'Europa. Offriamo ai ciclisti un facile accesso a bici di alta qualità. Prenota online in modo semplice."
     }
   },
   "how-it-works": {
-    "meta-title": "Un facilissimo Bike sharing",
+    "meta-title": "Noleggio di biciclette reso semplice e veloce",
     "meta-description": "L'utilizzo di listnride è facile come incontrarsi per un caffè. Provalo!",
     "title": "Condivisione di biciclette senza problemi",
     "header": "listnride ti aiuta a metterti in pista",
-    "subheader": "Noleggiare una bicicletta sulla nostra piattaforma bike sharing è facile come incontrarsi per un caffè:",
+    "subheader": "Noleggiare una bicicletta sulla nostra piattaforma di noleggio è facile come incontrarsi per un caffè:",
     "lister-section": {
       "header": "Come registrare una bicicletta",
       "step-1-title": "Registra una bicicletta",
@@ -1419,7 +1419,7 @@
     },
     "view": "Mostra",
     "meta-title": "Lavora per listnrid",
-    "meta-description": "Unisciti alla squadra bike sharing di listnride a Berlino o Monaco di Baviera per costruire la comunità globale della bicicletta",
+    "meta-description": "Entra a far parte del Team di listnride a Belino o Monaco di Baviera e aiutaci a costruire una piattaforma di noleggio biciclette a livello globale. ",
     "apply": "Candidati ora",
     "see-all": "Vedi altri lavori",
     "open": "Posizioni aperte",

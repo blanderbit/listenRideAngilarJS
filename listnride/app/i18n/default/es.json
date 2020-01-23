@@ -1078,15 +1078,16 @@
   },
   "forms": {
     "first-name": "Nombre",
-    "account_holder_name": "Account holder name",
+    "account_holder_name": "Nombre del titular de la cuenta ",
     "bank_country": "País",
     "dob": "Fecha de nacimiento",
     "gender": "¿Cuál es tu género?",
-    "nationality": "¿Cual es tu nacionalidad?",
+    "nationality": "Nacionalidad",
     "gender_select": {
       "male": "Masculino",
       "female": "Femenino"
     },
+    "select": "Selecciona",
     "newsletter-privacy-policy": "Privacy Policy News letter",
     "sign-up-today": "Sign up today",
     "already-registered": "Ya estas registrado",
