@@ -30,7 +30,8 @@
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                 <label>{{ 'forms.bank_country' | translate }}</label>
-                <md-select required ng-model="settings.payoutMethod.country_code" class="md-no-underline payout-method-select">
+                <md-select required ng-model="settings.payoutMethod.country_code"
+                  class="md-no-underline payout-method-select" placeholder="{{'forms.select' | translate}}">
                   <md-option ng-repeat="country_name in settings.getCountryNames().sort()" value="{{settings.getCountryCode(country_name)}}">
                     {{country_name}}
                   </md-option>
@@ -50,15 +51,16 @@
             <div layout="row" layout-xs="column">
               <md-input-container class="lnr-gt-xs-mr settings-payout-method-input" flex-gt-xs="50">
                 <label>{{ 'forms.dob' | translate }}</label>
-                <input
-                  required
-                  type="date"
+                <input required type="text" placeholder="DD/MM/YYYY"
+                  ui-date-mask="DD/MM/YYYY" parse="false"
                   class="settings-payout-method-input"
-                  ng-model="settings.payoutMethod.date_of_birth"/>
+                  ng-model="settings.payoutMethod.date_of_birth"
+                  pattern="^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)(([1][9][0-9][0-9])|([2][0][0-2][0-9]))$"/>
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                 <label>{{ 'forms.gender' | translate }}</label>
-                <md-select required ng-model="settings.payoutMethod.gender" class="md-no-underline">
+                <md-select required ng-model="settings.payoutMethod.gender" class="md-no-underline"
+                  placeholder="{{'forms.select' | translate}}">
                   <md-option selected value="male">{{ 'forms.gender_select.male' | translate }}</md-option>
                   <md-option value="female">{{ 'forms.gender_select.female' | translate }}</md-option>
                 </md-select>
@@ -67,7 +69,8 @@
             <div layout="row" layout-xs="column">
               <md-input-container class="lnr-gt-xs-mr" flex-gt-xs="50">
                 <label>{{ 'forms.nationality' | translate }}</label>
-                <md-select required ng-model="settings.payoutMethod.nationality" class="md-no-underline payout-method-select">
+                <md-select required ng-model="settings.payoutMethod.nationality" class="md-no-underline payout-method-select"
+                  placeholder="{{'forms.select' | translate}}">
                   <md-option ng-repeat="country_name in settings.getCountryNames().sort()" value="{{settings.getCountryCode(country_name)}}">
                     {{country_name}}
                   </md-option>
@@ -95,7 +98,8 @@
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                 <label>{{ 'forms.bank_country' | translate }}</label>
-                <md-select required ng-model="settings.payoutMethod.country_code" class="md-no-underline payout-method-select">
+                <md-select required ng-model="settings.payoutMethod.country_code" class="md-no-underline payout-method-select"
+                  placeholder="{{'forms.select' | translate}}">
                   <md-option ng-repeat="country_name in settings.getCountryNames().sort()" value="{{settings.getCountryCode(country_name)}}">
                     {{country_name}}
                   </md-option>
@@ -109,7 +113,8 @@
               </md-input-container>
               <md-input-container class="lnr-gt-xs-ml" flex-gt-xs="50">
                 <label>{{ 'forms.nationality' | translate }}</label>
-                <md-select required ng-model="settings.payoutMethod.nationality" class="md-no-underline payout-method-select">
+                <md-select required ng-model="settings.payoutMethod.nationality" class="md-no-underline payout-method-select"
+                  placeholder="{{'forms.select' | translate}}">
                   <md-option ng-repeat="country_name in settings.getCountryNames().sort()" value="{{settings.getCountryCode(country_name)}}">
                     {{country_name}}
                   </md-option>

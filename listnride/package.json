@@ -33,6 +33,7 @@
     "angular-credit-cards": "^3.1.8",
     "angular-easyfb": "~1.5.1",
     "angular-google-maps": "^2.3.4",
+    "angular-input-masks": "^4.4.1",
     "angular-input-stars": "~1.5.5",
     "angular-messages": "~1.5.8",
     "angular-mocks": "^1.7.8",

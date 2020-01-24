@@ -4311,3 +4311,11 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   position: relative;
   background-position: 50% 0%;
 }
+
+md-input-container:not(.md-input-has-value) md-select[required]:not(.md-no-asterisk) .md-select-value span:first-child:after {
+  content: none;
+}
+
+input.settings-payout-method-input::-webkit-input-placeholder {
+  color: rgb(191, 191, 191);
+}

@@ -24,7 +24,7 @@ function PayoutHelperController(api, authentication, notification) {
           'account_holder_name': payoutMethod.account_holder_name,
           'gender': payoutMethod.gender,
           'nationality': payoutMethod.nationality,
-          'date_of_birth': payoutMethod.date_of_birth ? moment(payoutMethod.date_of_birth, 'YYYY-MM-DD').format('YYYY-MM-DD') : '',
+          'date_of_birth': payoutMethod.date_of_birth ? moment(payoutMethod.date_of_birth, 'DD/MM/YYYY').format('YYYY-MM-DD') : '',
           'entity_type': payoutMethod.entity_type
         }
       };
