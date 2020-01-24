@@ -1,7 +1,7 @@
 import { getName, getNames, getCode } from 'country-list';
 
 angular
-  .module('requests', [require('angular-input-masks')])
+  .module('requests')
   .factory('requestsService', function(
     $q,
     $localStorage,
