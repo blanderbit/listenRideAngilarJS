@@ -44,7 +44,7 @@
                 <span flex="10">{{ 'invoices.start_date' | translate }}</span>
                 <span flex="10">{{ 'invoices.end_date' | translate }}</span>
                 <span flex="15">{{ 'shared.rider' | translate }}</span>
-                <span flex="10">{{ 'invoices.payout' | translate }}</span>
+                <span flex="10" layout="row" layout-align="end center">{{ 'invoices.payout' | translate }}</span>
                 <span flex layout="row" layout-align="center center">{{ 'invoices.credit-notes' | translate }}</span>
               </div>
             </md-list-item>
@@ -67,7 +67,7 @@
               <span flex="10">{{invoices.parseDate(item.start_date)}}</span>
               <span flex="10">{{invoices.parseDate(item.end_date)}}</span>
               <span flex="15">{{item.lister}}</span>
-              <span flex="10">{{invoices.parseAmount(item.payout)}}</span>
+              <span flex="10" layout="row" layout-align="end center">{{invoices.parseAmount(item.payout)}}</span>
               <span flex class="lnr-list-button" layout="row" layout-align="center center">
                 <md-button
                   md-no-ink
@@ -142,7 +142,7 @@
                 <span flex="10">{{ 'invoices.start_date' | translate }}</span>
                 <span flex="10">{{ 'invoices.end_date' | translate }}</span>
                 <span flex="15">{{ 'shared.lister' | translate }}</span>
-                <span flex="10">{{ 'invoices.you_paid' | translate }}</span>
+                <span flex="10" layout="row" layout-align="end center">{{ 'invoices.you_paid' | translate }}</span>
                 <span flex layout="row" layout-align="center center">{{ 'invoices.invoice' | translate }}</span>
               </div>
             </md-list-item>
@@ -165,7 +165,7 @@
               <span flex="10">{{invoices.parseDate(item.start_date)}}</span>
               <span flex="10">{{invoices.parseDate(item.end_date)}}</span>
               <span flex="15">{{item.lister}}</span>
-              <span flex="10">{{invoices.parseAmount(item.payout)}}</span>
+              <span flex="10" layout="row" layout-align="end center">{{invoices.parseAmount(item.payout)}}</span>
               <span flex class="lnr-list-button" layout="row" layout-align="center center">
                 <md-button md-no-ink class="md-primary lnr-green-text" ng-click="invoices.getPdf(item.id, 'rider')">{{ 'shared.download' | translate }}</md-button>
               </span>
