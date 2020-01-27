@@ -230,8 +230,8 @@
               <div class="md-list-item-text" layout="row" layout-align="start center">
                 <span flex="20">{{ 'invoices.date' | translate }}</span>
                 <span flex="20">{{ 'invoices.batch' | translate }}</span>
-                <span flex="30">{{ 'invoices.payout' | translate }}</span>
-                <span flex="30" layout="row" layout-align="center center">
+                <span flex="10" layout="row" layout-align="end center">{{ 'invoices.payout' | translate }}</span>
+                <span flex="40" layout="row" layout-align="end center">
                   {{ 'shared.download' | translate }}
                 </span>
               </div>
@@ -246,11 +246,13 @@
                           ng-repeat="item in invoices.settlementHistory[year]">
               <span flex="20">{{invoices.parseDate(item.paid_out_at)}}</span>
               <span flex="20">{{item.batch_id}}</span>
-              <span flex="30">{{invoices.parseAmount(item.amount)}}</span>
-              <span flex="30"
+              <span flex="10" layout="row" layout-align="end center">
+                {{invoices.parseAmount(item.amount)}}
+              </span>
+              <span flex="40"
                     class="lnr-list-button"
                     layout="row"
-                    layout-align="center center">
+                    layout-align="end center">
                 <md-button
                         md-no-ink
                         class="md-primary lnr-green-text"
@@ -262,7 +264,9 @@
             </md-list-item>
             <md-list-item class="secondary-button-padding lnr-billing-list-item">
               <span flex="40"><b>{{'shared.total' | translate}}</b></span>
-              <span flex="30"><b>{{invoices.parseAmount(invoices.getTotal(invoices.settlementHistory[year]))}}</b></span>
+              <span flex="10" layout="row" layout-align="end center">
+                <b>{{invoices.parseAmount(invoices.getTotal(invoices.settlementHistory[year]))}}</b>
+              </span>
             </md-list-item>
           </div>
 
