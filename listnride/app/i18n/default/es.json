@@ -375,8 +375,8 @@
       "meta-description": "Alquile una bicicleta de carretera en línea para Vätternrundan 2020. ¡Elija la bicicleta que se ajuste a sus necesidades!"
     },
     "lardita-arezzo": {
-      "meta-title": "Alquiler de una bici de carretera vintage para l'Ardita | listnride",
-      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para l'Ardita 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+      "meta-title": "Alquila una bici de carretera antigua para L'Ardita|listnride",
+      "meta-description": "Con listnride, puedes alquilar una bicicleta de carretera para l'Ardita 2019. ¡Elije la bicicleta perfecta y toma parte en esta increible carretera en Toscana!"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Alquila una bicicleta de carretera para el Granfondo Via del Sale 2020 | listnride",
@@ -424,16 +424,16 @@
     },
     "no-accessories": "Sin accesorios",
     "meta-description": "Alquila tus bicicletas con nuestro formulario de reserva grupal",
-    "title": "Alquileres grupales",
+    "title": "Reservas de grupo para el alquiler de bicicletas",
     "header": "Estamos felices de ayudarte con tu reserva grupal",
     "subheader": "Déjanos ayudarte a organizar tu próximo viaje en bicicleta. Indícanos tus preferencias y nosotros haremos el resto. Tu única preocupación es disfrutar del viaje.",
     "how-to": {
-      "step-1-title": "1. Buscar y encontrar",
-      "step-1-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. ",
-      "step-2-title": "2. Reserva en línea",
-      "step-2-content": "Te enviaremos un enlace con una propuesta de alquiler para que puedas reservar en línea de manera fácil, rápida y segura. ",
-      "step-3-title": "3. Acepta oferta y reserva online.",
-      "step-3-content": "Le enviaremos una cotización y un enlace donde puede reservar en línea o darnos una confirmación por escrito de su reserva."
+      "step-1-title": "Para grupos pequeños",
+      "step-1-content": "Para reservas de grupos de dos o tres bicicletas de alquiler, es más fácil y rápido buscar y reservar las bicicletas directamente en listnride.",
+      "step-2-title": "Para grupos más grandes",
+      "step-2-content": "Para 4 bicicletas de alquiler o más, dinos qué tipo de bicicletas y accesorios te gustaría alquilar y nos pondremos en contacto contigo con una oferta!",
+      "step-3-title": "Acepte la oferta y reserve en línea",
+      "step-3-content": "Una vez que hayamos establecido el enlace de reserva de grupo, ¡podrás pagar en línea de forma sencilla y segura!"
     },
     "your-booking-details": "Detalles de reserva",
     "what-bike-kind": "¿Qué tipo de bicicleta?",

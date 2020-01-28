@@ -377,8 +377,8 @@
       "meta-description": "Con listnride puoi noleggiare una bici da corsa online per Vätternrundan 2020 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
     },
     "lardita-arezzo": {
-      "meta-title": "Noleggia una bici da corsa vintage per l'Ardita | listnride",
-      "meta-description": "Con listnride puoi noleggiare una bici da corsa vintage online per l'Ardita 2019 in tutta sicurezza. Scegli la bici perfetta per le tue esigenze!"
+      "meta-title": "Noleggia una bici da corsa d´epoca per L'Ardita | listnride",
+      "meta-description": "Con listnride puoi noleggiare una bici da corsa d´epoca online per l'Ardita 2020. Scegli la bici perfetta per affrontare questa incredibile gara nel cuore della Toscana "
     },
     "granfondo-via-del-sale": {
       "meta-title": "Noleggia una bici da corsa per la Granfondo Via del Sale 2020 | listnride",
@@ -426,16 +426,16 @@
     },
     "no-accessories": "Senza Accessori",
     "meta-description": "Prenota le tue bici con il nostro modulo di prenotazione di gruppo",
-    "title": "Prenotazioni di gruppo",
+    "title": "Prenotazioni di gruppo per il noleggio di biciclette",
     "header": "Siamo felici di aiutarti con la tua prenotazione di gruppo",
     "subheader": "Lascia che ti supportiamo nel preparare il tuo prossimo viaggio in bicicletta. Forniscici le tue preferenze e noi faremo il resto, così potrai semplicemente goderti il viaggio.",
     "how-to": {
-      "step-1-title": "1. Cerca e trova",
-      "step-1-content": "Preparati prima dei tuoi viaggi, risparmia tempo prezioso per goderti al massimo il tuo tour. Facile e trasparente, ogni giorno in qualsiasi momento.",
-      "step-2-title": "2. Definisci e richiedi",
-      "step-2-content": "Facci sapere quali biciclette vorresti affittare e noi faremo il resto. Forniscici i dettagli e ti risponderemo!",
-      "step-3-title": "3. Accetta l'offerta e prenota online",
-      "step-3-content": "Ti invieremo un preventivo e un link dove potrai prenotare online o fornirci una conferma scritta per la tua prenotazione."
+      "step-1-title": "Per piccoli gruppi",
+      "step-1-content": "Per le prenotazioni di gruppo di due-tre biciclette a noleggio, è più facile e veloce cercare e prenotare le biciclette direttamente su listnride.",
+      "step-2-title": "Per gruppi più numerosi",
+      "step-2-content": "Per 4+ biciclette a noleggio, diteci che tipo di biciclette e accessori vorreste noleggiare e vi risponderemo con un'offerta!",
+      "step-3-title": "Accetta offerta e prenota online",
+      "step-3-content": "Una volta creato il link per la prenotazione di gruppo, potete pagare online in modo semplice e sicuro!"
     },
     "your-booking-details": "I dettagli della tua prenotazione",
     "what-bike-kind": "Che tipo di bici?",

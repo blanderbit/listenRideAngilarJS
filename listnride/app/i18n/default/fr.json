@@ -375,8 +375,8 @@
       "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour le Vätternrundan 2020. Choisissez le vélo qui correspond à vos besoins!"
     },
     "lardita-arezzo": {
-      "meta-title": "Location de vélo de route vintage pour l'Ardita | listnride",
-      "meta-description": "Avec listnride, vous pouvez louer en ligne un vélo de route en toute sécurité pour le l'Ardita 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
+      "meta-title": "Louez un vélo de route vintage pour l'Ardita, uniquement sur listnride !",
+      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route d'époque pour l'Ardita dell'Alpe di Poti. Choisissez le vélo idéal pour cette incroyable course au cœur de la Toscane !"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Location de vélo de route pour Granfondo Via del Sale 2020 | listnride",
@@ -424,16 +424,16 @@
     },
     "no-accessories": "Pas d'accessoires",
     "meta-description": "Réservez vos vélos avec notre formulaire de réservation de groupe",
-    "title": "Réservation de Groupe",
+    "title": "Réservations de groupe pour la location de vélos",
     "header": "Nous sommes heureux de vous aider avec votre réservation de groupe",
     "subheader": "Laissez-nous vous aider à vous organiser pour votre prochain voyage à vélo. Indiquez-nous vos préférences et nous ferons le reste pour que vous passiez le plus de temps possible à profiter du trajet.",
     "how-to": {
-      "step-1-title": "1. Rechercher et trouver",
-      "step-1-content": "Gagnez un temps précieux pour profiter au maximum de votre trajet à destination. Facile et transparent, tous les jours, à tout moment.",
-      "step-2-title": "2. Définir et demander",
-      "step-2-content": "Dites-nous quels vélos vous souhaitez louer et nous ferons le reste. Il suffit de nous fournir les détails et nous vous contacterons!",
-      "step-3-title": "3. Accepter l'offre et réserver en ligne",
-      "step-3-content": "Nous vous enverrons un devis et un lien vous permettant de réserver en ligne ou de nous fournir une confirmation écrite de votre réservation."
+      "step-1-title": "Pour les petits groupes",
+      "step-1-content": "Pour les réservations de groupe de deux à trois vélos de location, il est plus facile et plus rapide de rechercher et de réserver les vélos directement sur listnride.",
+      "step-2-title": "Location de vélos pour les grands groupes",
+      "step-2-content": "Pour 4 vélos de location ou plus, dites-nous quel type de vélos et les accessoires que vous souhaitez louer et nous vous recontacterons avec une offre !",
+      "step-3-title": "Accepter l'offre et réserver en ligne",
+      "step-3-content": "Une fois que nous avons mis en place le lien de réservation de groupe, vous pouvez payer en ligne facilement et en toute sécurité !"
     },
     "your-booking-details": "Les détails de votre réservation",
     "what-bike-kind": "Quel type de vélo?",

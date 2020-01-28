@@ -380,8 +380,8 @@
       "meta-description": "Mit listnride kannst du dir einfach hier ein Rennrad für die Vätternrundan 2020 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
     },
     "lardita-arezzo": {
-      "meta-title": "Miete ein Vintage Rennrad für die l'Ardita",
-      "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
+      "meta-title": "Miete ein Vintage Rennrad für die l'Ardita, nur auf listnride!",
+      "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita mieten. Wähle dein perfektes Rennrad, für dieses unglaubliche Rennen im Herzen der Toskana!"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Miete ein Rennrad für die Granfondo Via del Sale 2020! | listnride",
@@ -429,16 +429,16 @@
     },
     "no-accessories": "Kein Zubehör",
     "meta-description": "Buche deine Räder über unsere Gruppenbuchungs-Funktion",
-    "title": "Gruppenbuchungen",
+    "title": "Gruppenbuchungen für Fahrradverleih",
     "header": "Wir helfen dir gern bei deiner Gruppenbuchung",
     "subheader": "Wir übernehmen für dich die Buchung für deine nächste Radtour. Sag uns einfach, was duch suchst und für wann. Wir machen den Rest. So kannst du dich einfach nur auf die Tour konzentrieren.",
     "how-to": {
-      "step-1-title": "1. Suchen & Finden",
-      "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Einfach, transparent, jederzeit.",
-      "step-2-title": "2. Suchen & Anfragen",
-      "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach, was du suchst und wir werden uns mit ein paar Vorschlägen bei dir melden.",
-      "step-3-title": "3. Angebot annehmen & online buchen",
-      "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung."
+      "step-1-title": "Für kleine Gruppen",
+      "step-1-content": "Bei Gruppenbuchungen von zwei bis drei Mieträdern ist es einfacher und schneller, die Fahrräder direkt auf listnride zu suchen und zu buchen.",
+      "step-2-title": "Für größere Gruppen",
+      "step-2-content": "Für 4+ Leihfahrräder teile uns mit, welche Art von Fahrrädern und Zubehör du mieten möchtest, und wir werden dir ein Angebot unterbreiten!",
+      "step-3-title": "Angebot annehmen & online buchen",
+      "step-3-content": "Sobald wir den Gruppenbuchungslink eingerichtet haben, kannst du einfach und sicher online bezahlen!"
     },
     "your-booking-details": "Deine Buchungsdetails",
     "what-bike-kind": "Welcher Fahrradtyp?",
@@ -1579,11 +1579,11 @@
     "title": "Lade Freunde ein und verdiene 10 €",
     "login": "Einloggen, um deinen Einladungslink zu sehen",
     "info-section": {
-      "header": "Je mehr, umso fröhlicher!",
-      "subheader": "Hilf uns dabei, den Fahrradverleih zu erleichtern, indem du deine Freunde und örtlichen Fahrradgeschäfte auf unsere Plattform einlädst. Teile einfach deinen Einladungscode mit, und wenn sie ein Fahrrad mieten, bekommst du einen Gutschein über 10 € von uns!",
-      "invite-friends": "Teil deinen Einladungscode mit anderen",
-      "community": "Hilf deinen Freunden, mit listnride zu beginnen",
-      "earn-credit": "Sobald deine Freunde ein Fahrrad gemietet haben, erhältst du einen 10 € Gutschein für deine nächste Vermietung! "
+      "header": "Mehr Freunde, mehr Spaß!",
+      "subheader": "Mit deiner Unterstützung wird Fahrradverleih einfacher denn je! Lade einfach deine Freunde und ortsansässigen Fahrradgeschäfte auf unsere Plattform ein. Teile dazu deinen Einladungscode und sobald darüber ein Fahrrad gemietet wird, bekommst du einen 10 € Gutschein von uns!",
+      "invite-friends": "Teile deinen Einladungscode mit Freunden",
+      "community": "Hilf ihnen sich bei listnride zurechtzufinden",
+      "earn-credit": "Sobald deine Freunde ein Fahrrad gemietet haben, erhältst du einen 10 € Gutschein für dein nächstes Abenteuer"
     },
     "invite-form": {
       "header": "Teile deinen persönlichen Link",

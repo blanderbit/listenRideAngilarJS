@@ -380,8 +380,8 @@
       "meta-description": "Rent a road bike online for Vätternrundan 2020. Choose the bike that fits your needs!"
     },
     "lardita-arezzo": {
-      "meta-title": "Rent a vintage road bike for l'Ardita | listnride",
-      "meta-description": "With listnride you can easily rent a road bike online for l'Ardita 2019. Choose the perfect bike that fits your needs!"
+      "meta-title": "Rent a vintage road bike for L'Ardita, only on listnride!",
+      "meta-description": "With listnride you can easily rent a vintage road bike online for l'Ardita dell'Alpe di Poti. Choose the perfect bike for this incredible race in the heart of Tuscany!"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Rent a road bike for the Granfondo Via del Sale 2020|listnride",
@@ -429,16 +429,16 @@
     },
     "no-accessories": "No accessories",
     "meta-description": "Book your bikes with our group booking form",
-    "title": "Group bookings",
+    "title": "Group bookings for bike rental",
     "header": "We are happy to help you with your group booking",
-    "subheader": "Let us help you to get organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can spend maximum time enjoying the ride.",
+    "subheader": "Let us help you to get your bike rental organized for your next cycling trip. Provide us with your preferences and we'll do the rest, so you can focus on enjoying the ride.",
     "how-to": {
-      "step-1-title": "1. Search & find",
-      "step-1-content": "Save precious time to maximally enjoy the ride at your destination. Easy and transparent, any day, any time. ",
-      "step-2-title": "2. Define & request",
-      "step-2-content": "Tell us what bicycles you would like to rent and we will do the rest. Just provide us the details and we'll get back to you!",
-      "step-3-title": "3. Accept offer & book online",
-      "step-3-content": "We will send you a quote and a link where you can either book online or you give us a written confirmation for your booking. "
+      "step-1-title": "For small groups",
+      "step-1-content": "For group bookings of two-three rental bikes, it is easier and quicker to search and book the bikes directly on listnride.",
+      "step-2-title": "For larger groups",
+      "step-2-content": "For 4+ rental bikes, tell us what kind of bicycles and accessories you'd like to rent and we will get back to you with an offer!",
+      "step-3-title": "Accept offer & book online",
+      "step-3-content": "Once we set up the group booking link, you can simply and safely pay online!"
     },
     "your-booking-details": "Your booking details",
     "what-bike-kind": "What kind of bike?",
