@@ -1689,6 +1689,25 @@
         }
       });
 
+      $stateProvider.state({
+        name: 'matebikes',
+        url: '/brands/matebikes',
+        template: '<matebikes></matebikes>',
+        resolve: {
+          data: function ($translate, ngMeta) {
+            $translate(["meta.brand-integration.matebikes.meta-title", "meta.brand-integration.matebikes.meta-description"])
+            .then(function (translations) {
+              ngMeta.setTitle(translations["meta.brand-integration.matebikes.meta-title"]);
+              ngMeta.setTag("description", translations["meta.brand-integration.matebikes.meta-description"]);
+              ngMeta.setTag("noindex", false);
+            })
+          }
+        },
+        meta: {
+          disableUpdate: true
+        }
+      });
+
       /* ------------------------------------ */
       /* CITY_PAGES */
       /* ------------------------------------ */
