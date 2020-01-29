@@ -4324,7 +4324,7 @@ input.settings-payout-method-input::-webkit-input-placeholder {
 }
 
 .wrap-matebike-table img {
-    max-width: 600px;
+    max-width: 700px;
 }
 
 @media (max-width: 720px) {
@@ -4345,4 +4345,13 @@ input.settings-payout-method-input::-webkit-input-placeholder {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+
+.wrap-matebike-table_optional-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap-matebike-table_optional-text p {
+  text-align: left;
 }
