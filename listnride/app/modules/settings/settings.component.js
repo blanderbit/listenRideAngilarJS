@@ -1,6 +1,6 @@
 import { getName, getNames, getCode } from 'country-list';
 
-angular.module('settings',[])
+angular.module('settings', [])
 .component('settings', {
   templateUrl: 'app/modules/settings/settings.template.html',
   controllerAs: 'settings',

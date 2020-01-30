@@ -13,6 +13,7 @@ angular
 function PayoutHelperController(api, authentication, notification) {
   return {
     postPayout: function (payoutMethod, cb, cbError) {
+      var formattedDate = _.replace(payoutMethod.date_of_birth, /-|\.|\s/g, '/');
       var data = {
         'payout_method': {
           'payment_type': payoutMethod.payment_type || 'bank-account',
@@ -24,7 +25,7 @@ function PayoutHelperController(api, authentication, notification) {
           'account_holder_name': payoutMethod.account_holder_name,
           'gender': payoutMethod.gender,
           'nationality': payoutMethod.nationality,
-          'date_of_birth': payoutMethod.date_of_birth ? moment(payoutMethod.date_of_birth, 'YYYY-MM-DD').format('YYYY-MM-DD') : '',
+          'date_of_birth': payoutMethod.date_of_birth ? moment(formattedDate, 'DD/MM/YYYY').format('YYYY-MM-DD') : '',
           'entity_type': payoutMethod.entity_type
         }
       };

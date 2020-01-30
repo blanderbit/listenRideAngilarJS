@@ -375,8 +375,8 @@
       "meta-description": "Avec listnride, vous pouvez louer un vélo de route en ligne en toute sécurité pour le Vätternrundan 2020. Choisissez le vélo qui correspond à vos besoins!"
     },
     "lardita-arezzo": {
-      "meta-title": "Location de vélo de route vintage pour l'Ardita | listnride",
-      "meta-description": "Avec listnride, vous pouvez louer en ligne un vélo de route en toute sécurité pour le l'Ardita 2019. Choisissez le vélo parfait qui correspond à vos besoins!"
+      "meta-title": "Louez un vélo de route vintage pour l'Ardita, uniquement sur listnride !",
+      "meta-description": "Avec listnride, vous pouvez facilement louer en ligne un vélo de route d'époque pour l'Ardita dell'Alpe di Poti. Choisissez le vélo idéal pour cette incroyable course au cœur de la Toscane !"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Location de vélo de route pour Granfondo Via del Sale 2020 | listnride",
@@ -406,6 +406,19 @@
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
     },
+    "matebikes": {
+      "title": "Découvrez MATE: le vélo pliable le plus stylé !",
+      "description": "<a href=\"https://mate.bike/\" target=\"_blank\">Mate.bike</a> est une start-up basée à Copenhague. Fondée en 2016 par les frères et soeurs Christian, Adel, Michael et Julie Kronstrøm Carton. Ensemble, ils veulent relever les défis actuels que sont les embouteillages, le changement climatique et les problèmes de santé liés à la pollution en créant des vélos électriques uniques, sympas et à des prix abordables. ",
+      "item1-title": "Les vélos pliables les plus stylés du monde",
+      "item1-description": "MATE et MATE X sont les vélos électriques pliables les plus stylisés du monde. Ils sont conçus et développés dans la capitale mondiale du cyclisme, Copenhague, au Danemark, avec pour seule motivation l'amour du vélo. ",
+      "item2-title": "À toute vitesse : jusqu'à 750W ! ",
+      "item2-description": "Nos vélos sont équipés de puissants moteurs électriques allant de 250 à 750W. Nous les avons équipés avec les meilleures pièces comme des vitesses Shimano, des freins à disque Tektro, des ports USB et des écrans LED pour gérer les réglages. ",
+      "item3-description": "Tout le travail de réflexions pour la conception et le réglage de petits  détails sont faits pour que nos eBikes soient à la fois abordables, sympas et surtout, super esthétiques. Ils attirent l'attention partout où ils vont tout en offrant une conduite souple et agréable. Nous voulons ce qui se fait de mieux et rien d'autre pour nos MATEs. ",
+      "find-out-more": "Louez et essayez le Mate.bike aujourd'hui !",
+      "order-online": "Nous voulons fabriquer les meilleurs et les plus cool des eBikes pour tous les cyclistes, tous les voyages et toutes les situations. En rendant les eBikes cool, sexy, pratiques et abordables, nous souhaitons faire du vélo le moyen de transport préféré de bon nombre de personnes en ville. Notre mission est simple : Plus de kilomètres à vélo. En savoir plus sur <a href=\"https://mate.bike/\" target=\"_blank\">mate.bike</a> ",
+      "item3-title": "Abordable, sympa et génial",
+      "optional": "1) Mise à niveau facultative de l'accélérateur. Prix disponible sur demande. <br>2) Vitesse maximale standard limitée. Le déblocage de la vitesse maximale nécessite l'affichage couleur <br>3) Mise à niveau optionnelle vers une batterie 48V 17,5 AmpH. Prix disponible sur demande <br>"
+    },
     "urwahn": {
       "item2-description": "Conception organique avec <br>\nvaleur de reconnaissance élevée <br>\net un triangle arrière élastique <br>\npour plus de confort de conduite"
     },
@@ -424,16 +437,16 @@
     },
     "no-accessories": "Pas d'accessoires",
     "meta-description": "Réservez vos vélos avec notre formulaire de réservation de groupe",
-    "title": "Réservation de Groupe",
+    "title": "Réservations de groupe pour la location de vélos",
     "header": "Nous sommes heureux de vous aider avec votre réservation de groupe",
     "subheader": "Laissez-nous vous aider à vous organiser pour votre prochain voyage à vélo. Indiquez-nous vos préférences et nous ferons le reste pour que vous passiez le plus de temps possible à profiter du trajet.",
     "how-to": {
-      "step-1-title": "1. Rechercher et trouver",
-      "step-1-content": "Gagnez un temps précieux pour profiter au maximum de votre trajet à destination. Facile et transparent, tous les jours, à tout moment.",
-      "step-2-title": "2. Définir et demander",
-      "step-2-content": "Dites-nous quels vélos vous souhaitez louer et nous ferons le reste. Il suffit de nous fournir les détails et nous vous contacterons!",
-      "step-3-title": "3. Accepter l'offre et réserver en ligne",
-      "step-3-content": "Nous vous enverrons un devis et un lien vous permettant de réserver en ligne ou de nous fournir une confirmation écrite de votre réservation."
+      "step-1-title": "Pour les petits groupes",
+      "step-1-content": "Pour les réservations de groupe de deux à trois vélos de location, il est plus facile et plus rapide de rechercher et de réserver les vélos directement sur listnride.",
+      "step-2-title": "Location de vélos pour les grands groupes",
+      "step-2-content": "Pour 4 vélos de location ou plus, dites-nous quel type de vélos et les accessoires que vous souhaitez louer et nous vous recontacterons avec une offre !",
+      "step-3-title": "Accepter l'offre et réserver en ligne",
+      "step-3-content": "Une fois que nous avons mis en place le lien de réservation de groupe, vous pouvez payer en ligne facilement et en toute sécurité !"
     },
     "your-booking-details": "Les détails de votre réservation",
     "what-bike-kind": "Quel type de vélo?",
@@ -1089,6 +1102,7 @@
       "male": "Masculin",
       "female": "Féminin"
     },
+    "select": "Veuillez selectioner",
     "newsletter-privacy-policy": "Politique de confidentialité",
     "sign-up-today": "Inscrivez-vous aujourd'hui",
     "already-registered": "Vous êtes déjà inscrit",

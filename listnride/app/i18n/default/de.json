@@ -380,8 +380,8 @@
       "meta-description": "Mit listnride kannst du dir einfach hier ein Rennrad für die Vätternrundan 2020 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
     },
     "lardita-arezzo": {
-      "meta-title": "Miete ein Vintage Rennrad für die l'Ardita",
-      "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita 2019 mieten. Wähle dein perfektes Rennrad, für deine Bedürfnisse!"
+      "meta-title": "Miete ein Vintage Rennrad für die l'Ardita, nur auf listnride!",
+      "meta-description": "Mit listnride kannst du dir einfach online ein Vintage Rennrad für die l'Ardita mieten. Wähle dein perfektes Rennrad, für dieses unglaubliche Rennen im Herzen der Toskana!"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Miete ein Rennrad für die Granfondo Via del Sale 2020! | listnride",
@@ -411,6 +411,19 @@
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
     },
+    "matebikes": {
+      "title": "Meet MATE: das coolste faltbare E-Bike!",
+      "description": "<a href=\"https://mate.bike/\" target=\"_blank\"> Mate.bike</a> ist ein in Kopenhagen ansässiges Startup, das 2016 von den Geschwistern Christian Adel Michael und Julie Kronstrøm Carton gegründet wurde. Sie wollen sich den heutigen Herausforderungen der dichten Verkehrsstaus, des Klimawandels und der Gesundheitsprobleme im Allgemeinen stellen, indem sie einzigartige, lustige und erschwingliche Elektrofahrräder entwickeln.",
+      "item1-title": "Die coolsten faltbaren E-Bikes der Welt",
+      "item1-description": "Wir glauben, dass MATE und MATE X die coolsten, faltbaren Elektrofahrräder der Welt sind. Sie werden in der Radhauptstadt der Welt, Kopenhagen, Dänemark, mit nichts als Pedal-Liebe geplant und entwickelt.",
+      "item2-title": "Power in den Pedalen: bis zu 750W!",
+      "item2-description": "Unsere Fahrräder sind mit leistungsstarken Elektromotoren von 250 W bis 750 W ausgestattet, und wir haben die Fahrräder mit erstklassigen Spezifikationen wie Shimano-Schaltungen, Tektro-Scheibenbremsen, USB-Anschlüssen und LED-Bildschirmen zur Verwaltung der Einstellungen ausgestattet. ",
+      "item3-description": "Jeder Gedanke hinter dem Design, den Upgrades und zusätzlichen Details wurde gemacht, während gleichzeitig sichergestellt wurde, dass unsere eBikes sowohl erschwinglich sind, Spaß machen und großartig aussehen. Sie machen überall eine gute Figur und bieten gleichzeitig eine angenehme Fahrt. Nur das Beste für unsere MATEs.",
+      "find-out-more": "Miete und teste UNI Mate.bike heute!",
+      "order-online": "Wir möchten die besten und coolsten eBikes für jeden Fahrer, jede Fahrt und jede Lage herstellen. Indem wir eBikes cool, sexy, praktisch und erschwinglich machen, wollen wir das Fahrrad weltweit zum bevorzugten Verkehrsmittel für mehr Menschen in städtischen Gebieten machen. Unsere Mission ist einfach: Mehr Meilen auf dem Fahrrad. Erfahren Sie mehr auf <a href=\"https://mate.bike/\" target=\"_blank\">mate.bike</a>",
+      "item3-title": "Bezahlbar, unterhaltsam und fantastisch",
+      "optional": "1) Optionale Aufrüstung mit Drosselhebel Preis auf Anfrage erhältlich. <br> 2) Standardmäßig begrenzte Höchstgeschwindigkeit. Zum Freischalten der Höchstgeschwindigkeit ist das Farbdisplay <br>3) Optionales Upgrade auf eine 48V 17,5 Amph-Batterie erforderlich. Preis auf Anfrage erhältlich <br>"
+    },
     "urwahn": {
       "item2-description": "Organisches Design mit<br>\nhohem Wiedererkennungswert<br>\nsowie ein elastischer Hinterbau <br>\nfür mehr Fahrkomfort"
     },
@@ -429,16 +442,16 @@
     },
     "no-accessories": "Kein Zubehör",
     "meta-description": "Buche deine Räder über unsere Gruppenbuchungs-Funktion",
-    "title": "Gruppenbuchungen",
+    "title": "Gruppenbuchungen für Fahrradverleih",
     "header": "Wir helfen dir gern bei deiner Gruppenbuchung",
     "subheader": "Wir übernehmen für dich die Buchung für deine nächste Radtour. Sag uns einfach, was duch suchst und für wann. Wir machen den Rest. So kannst du dich einfach nur auf die Tour konzentrieren.",
     "how-to": {
-      "step-1-title": "1. Suchen & Finden",
-      "step-1-content": "Spar dir die Zeit der Recherche und freu dich schon mal auf deine Reise! Einfach, transparent, jederzeit.",
-      "step-2-title": "2. Suchen & Anfragen",
-      "step-2-content": "Lass uns wissen, welche Fahrräder du ausleihen möchtest. Wir kümmern uns um den Rest. Sag uns einfach, was du suchst und wir werden uns mit ein paar Vorschlägen bei dir melden.",
-      "step-3-title": "3. Angebot annehmen & online buchen",
-      "step-3-content": "Wir senden dir ein Angebot mit einem Link, über den du online buchen kannst oder du gibst uns eine schriftliche Bestätigung deiner Buchung."
+      "step-1-title": "Für kleine Gruppen",
+      "step-1-content": "Bei Gruppenbuchungen von zwei bis drei Mieträdern ist es einfacher und schneller, die Fahrräder direkt auf listnride zu suchen und zu buchen.",
+      "step-2-title": "Für größere Gruppen",
+      "step-2-content": "Für 4+ Leihfahrräder teile uns mit, welche Art von Fahrrädern und Zubehör du mieten möchtest, und wir werden dir ein Angebot unterbreiten!",
+      "step-3-title": "Angebot annehmen & online buchen",
+      "step-3-content": "Sobald wir den Gruppenbuchungslink eingerichtet haben, kannst du einfach und sicher online bezahlen!"
     },
     "your-booking-details": "Deine Buchungsdetails",
     "what-bike-kind": "Welcher Fahrradtyp?",
@@ -1094,6 +1107,7 @@
       "male": "Männlich",
       "female": "Weiblich"
     },
+    "select": "Bitte auswählen",
     "newsletter-privacy-policy": "Privacy Policy News letter",
     "sign-up-today": "Heute anmelden",
     "already-registered": "Du hast dich bereits angemeldet",
@@ -1578,11 +1592,11 @@
     "title": "Lade Freunde ein und verdiene 10 €",
     "login": "Einloggen, um deinen Einladungslink zu sehen",
     "info-section": {
-      "header": "Je mehr, umso fröhlicher!",
-      "subheader": "Hilf uns dabei, den Fahrradverleih zu erleichtern, indem du deine Freunde und örtlichen Fahrradgeschäfte auf unsere Plattform einlädst. Teile einfach deinen Einladungscode mit, und wenn sie ein Fahrrad mieten, bekommst du einen Gutschein über 10 € von uns!",
-      "invite-friends": "Teil deinen Einladungscode mit anderen",
-      "community": "Hilf deinen Freunden, mit listnride zu beginnen",
-      "earn-credit": "Sobald deine Freunde ein Fahrrad gemietet haben, erhältst du einen 10 € Gutschein für deine nächste Vermietung! "
+      "header": "Mehr Freunde, mehr Spaß!",
+      "subheader": "Mit deiner Unterstützung wird Fahrradverleih einfacher denn je! Lade einfach deine Freunde und ortsansässigen Fahrradgeschäfte auf unsere Plattform ein. Teile dazu deinen Einladungscode und sobald darüber ein Fahrrad gemietet wird, bekommst du einen 10 € Gutschein von uns!",
+      "invite-friends": "Teile deinen Einladungscode mit Freunden",
+      "community": "Hilf ihnen sich bei listnride zurechtzufinden",
+      "earn-credit": "Sobald deine Freunde ein Fahrrad gemietet haben, erhältst du einen 10 € Gutschein für dein nächstes Abenteuer"
     },
     "invite-form": {
       "header": "Teile deinen persönlichen Link",

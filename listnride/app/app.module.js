@@ -87,6 +87,7 @@ angular.module('listnride', [
   'argon18Integration',
   'rossignolIntegration',
   'yubaIntegration',
+  'matebikesIntegration',
   /* EVENTS_PAGE */
   'event',
   'capeArgus',

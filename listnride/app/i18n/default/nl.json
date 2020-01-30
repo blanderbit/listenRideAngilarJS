@@ -286,7 +286,7 @@
     "gent-wevelgem": {
       "title": "Huur een racefiets voor Gent-Wevelgem Cyclo!",
       "description": "Wat: <b>Gent-Wevelgem Cyclo</b>| Waar: <b>Wevelgem, België</b> | Wanneer: <b>28 maart 2020</b>",
-      "text": "<p>Raak vertrouwd met de Vlaamse regio België, een regio rijk aan fietsgeschiedenis, met iconische steile en geplaveide wegen! De <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Cyclo</a>is een fantastisch evenement voor liefhebbers van steile beklimmingen! Er zijn vier afstanden beschikbaar (65 km, 95 km, 140 km en 220 km), waardoor dit evenement zo toegankelijk of uitdagend is als je wilt!\n\nHaal het meeste uit dit evenement met een van onze eersteklas racefietsen, die aan de startlijn kunnen worden gehuurd!\n</p>\n\n<p>Bespaar jezelf tijd, moeite en geld door eenvoudig een fiets te huren. Ze zijn klaar voor vertrek aan de startlijn in Houffalize. Het enige dat jij moet meenemen is je helm, pedalen en natuurlijk: jezelf!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Groepsboekingen hier beschikbaar!</a>",
+      "text": "<p>Raak vertrouwd met de Vlaamse regio België, een regio rijk aan fietsgeschiedenis, met iconische steile en geplaveide wegen! De <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Cyclo</a> is een fantastisch evenement voor liefhebbers van steile beklimmingen! Er zijn vier afstanden beschikbaar (65 km, 95 km, 140 km en 220 km), waardoor dit evenement zo toegankelijk of uitdagend is als je wilt!\n\nHaal het meeste uit dit evenement met een van onze eersteklas racefietsen, die aan de startlijn kunnen worden gehuurd!\n</p>\n\n<p>Bespaar jezelf tijd, moeite en geld door eenvoudig een fiets te huren. Ze zijn klaar voor vertrek aan de startlijn in Houffalize. Het enige dat jij moet meenemen is je helm, pedalen en natuurlijk: jezelf!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Groepsboekingen hier beschikbaar!</a>",
       "meta-title": "Racefiets huren voor de Gent-Wevelgem Cyclo | listnride",
       "meta-description": "Huur een high-end racefiets voor de Gent-Wevelgem Cyclo met listnride! De goed gespecificeerde fietsen staan voor je klaar aan de startlijn. Verken de Belgische heuvels met onze fantastische selectie huurfietsen!"
     },
@@ -370,8 +370,8 @@
       "meta-description": "Met listnride huur je eenvoudig een top racefiets voor de Vätternrundan 2020. Kies de perfecte fiets die bij je past!"
     },
     "lardita-arezzo": {
-      "meta-title": "Huur een vintage racefiets voor de Eroica I listnride",
-      "meta-description": "Met listnride huurt u eenvoudig een racefiets online voor l'Ardita 2019. Kies de perfecte fiets die bij u past!"
+      "meta-title": "Huur een vintage racefiets voor l'Ardita, alleen op listnride!",
+      "meta-description": "Met listnride kunt u eenvoudig online een vintage racefiets huren voor l'Ardita dell'Alpe di Poti. Kies de perfecte fiets voor deze ongelooflijke race in het hart van Toscane!"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Huur een racefiets voor de Granfondo Via del Sale 2020 | listnride",
@@ -401,6 +401,19 @@
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
     },
+    "matebikes": {
+      "title": "Maak kennis met MATE: de coolste opvouwbare e-bike!",
+      "description": "<a href=\"https://mate.bike/\" target=\"_blank\">Mate.bike</a> is een in Kopenhagen gevestigde startup die in 2016 is opgericht door de broers en zussen Christian Adel Michael en Julie Kronstrøm Carton, die de huidige uitdagingen van dichtbevolkte verkeersopstoppingen, klimaatverandering en gezondheidskwesties in het algemeen willen aangaan door het creëren van unieke, leuke en betaalbare elektrische fietsen.",
+      "item1-title": "'s Werelds coolste opvouwbare e-bikes",
+      "item1-description": "Wij geloven dat MATE en MATE X 's werelds coolste, opvouwbare elektrische fietsen zijn. Ze zijn bedacht en ontwikkeld met niets anders dan trapliefde in de fietshoofdstad van de wereld, Kopenhagen Denemarken.",
+      "item2-title": "Vermogen naar de pedalen: tot 750W!",
+      "item2-description": "Onze fietsen hebben krachtige elektromotoren, variërend van 250W tot 750W en we hebben de fietsen voorzien van topklasse specificaties zoals Shimano versnellingen, Tektro schijfremmen, USB-poorten en LED-schermen voor het beheer van de instellingen. ",
+      "item3-description": "Elke gedachte achter het ontwerp, upgrades en extra details zijn gemaakt, terwijl we ervoor blijven zorgen dat onze eBikes zowel betaalbaar blijven en er geweldig uitzien. Men draait zich om wanneer deze fiets voorbij komt en tegelijkertijd bieden de fietsen een soepele rit. Alleen het beste voor onze MATE's.",
+      "find-out-more": "Boek vandaag nog een testrit en ervaar de Mate.bike zelf! ",
+      "order-online": "We willen de beste en coolste eBikes maken voor elke rijder, elke reis en elke situatie. Door het maken van coole, sexy, praktische en betaalbaare eBikes, willen wij fietsen wereldwijd als de voorkeurswijze voor transport voor meer mensen in stedelijke gebieden, mogelijk maken. Onze missie is eenvoudig: Meer kilometers op de fiets. Meer informatie op <a href=\"https://mate.bike/\" target=\"_blank\">mate.bike.</a>",
+      "item3-title": "Betaalbaar, leuk en geweldig...",
+      "optional": "1) Optionele gasklepupgrade. Prijs op aanvraag. <br> 2) Standaard beperkte maximum snelheid. Voor het deblokkeren van de maximum snelheid is het kleurendisplay <br> 3) nodig. Optionele upgrade naar een 48V 17,5 AmpH batterij. Prijs op aanvraag <br>"
+    },
     "urwahn": {
       "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
     },
@@ -419,16 +432,16 @@
     },
     "no-accessories": "Geen accessoires",
     "meta-description": "Boek uw fietsen met ons groepsboekingsformulier",
-    "title": "Groepsboekingen",
+    "title": "Groepsreserveringen voor fietsverhuur",
     "header": "We helpen u graag met uw groepsboeking",
     "subheader": "Laat ons je helpen om je voor te bereiden op je volgende fietsvakantie. Geef ons jouw voorkeuren door en wij doen de rest, zodat je maximaal van het fietsen kunt genieten.",
     "how-to": {
-      "step-1-title": "1. Zoeken & vinden",
-      "step-1-content": "Bereid jezelf voor op de reis, bespaar kostbare tijd en geniet maximaal van de tijd op je vakantiebestemming. Gemakkelijk en transparent, dag en nacht. ",
-      "step-2-title": "2. Definieren & aanvragen",
-      "step-2-content": "Vertel ons welke fietsen je wilt huren en wij doen de rest. Geef ons de details door en we nemen contact met je op!",
-      "step-3-title": "3. Offerte accepteren & online boeken",
-      "step-3-content": "Wij sturen je een offerte met een link waar je online kunt boeken of een schriftelijke bevestiging van je boeking kunt geven.   "
+      "step-1-title": "Voor kleine groepen",
+      "step-1-content": "Voor groepsboekingen van twee-drie huurfietsen is het eenvoudiger en sneller om de fietsen direct op listnride te zoeken en te boeken.",
+      "step-2-title": "Voor grotere groepen",
+      "step-2-content": "Voor 4+ huurfietsen, vertel ons wat voor soort fietsen en accessoires u wilt huren en wij nemen contact met u op!",
+      "step-3-title": "Aanbod accepteren & online boeken",
+      "step-3-content": "Zodra we de link voor groepsboekingen hebben opgezet, kunt u eenvoudig en veilig online betalen!"
     },
     "your-booking-details": "Uw boekingsgegevens",
     "what-bike-kind": "Wat voor soort fiets?",
@@ -1076,11 +1089,12 @@
     "bank_country": "Land",
     "dob": "Geboortedatum",
     "gender": "Wat is je geslacht?",
-    "nationality": "Wat is je nationaliteit",
+    "nationality": "Wat is je nationaliteit?",
     "gender_select": {
       "male": "Man",
       "female": "Vrouw"
     },
+    "select": "Selecteer a.u.b",
     "newsletter-privacy-policy": "Je kan ten aller tijde je voor de nieuwsletter afmelden. Het privacybeleid van listnride is van toepassing",
     "sign-up-today": "Meld je nu aan",
     "already-registered": "Je bent al geregistreerd",

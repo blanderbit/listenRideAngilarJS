@@ -375,8 +375,8 @@
       "meta-description": "Alquile una bicicleta de carretera en línea para Vätternrundan 2020. ¡Elija la bicicleta que se ajuste a sus necesidades!"
     },
     "lardita-arezzo": {
-      "meta-title": "Alquiler de una bici de carretera vintage para l'Ardita | listnride",
-      "meta-description": "Con listnride, puede alquilar fácilmente una bicicleta de carretera en línea para l'Ardita 2019. ¡Elija la bicicleta perfecta que se adapte a sus necesidades!"
+      "meta-title": "Alquila una bici de carretera antigua para L'Ardita|listnride",
+      "meta-description": "Con listnride, puedes alquilar una bicicleta de carretera para l'Ardita 2019. ¡Elije la bicicleta perfecta y toma parte en esta increible carretera en Toscana!"
     },
     "granfondo-via-del-sale": {
       "meta-title": "Alquila una bicicleta de carretera para el Granfondo Via del Sale 2020 | listnride",
@@ -406,6 +406,19 @@
       "subdescription-not-used": "Design. Art. Passion.",
       "subdescription-not-use": "Design. Art. Passion."
     },
+    "matebikes": {
+      "title": "Descubre MATE: la más bella bicicleta eléctrica plegable ",
+      "description": "<a href=\"https://mate.bike/\" target=\"_blank\">Mate.bike</a> es una start-up de Copenhagen fundada en 2016 por los hermanos Christian Adel Michael y Julie Kronstrøm Carton. Los dos quieren desafiar el tránsito ciudadano, los cambiamentos climáticos y los problemas de salud en general, con una bicicleta electrica única, divertida y  barata. ",
+      "item1-title": "La más bella bicicleta eléctrica plegable",
+      "item1-description": "MATE y MATE X son las bicicletas eléctricas plegables más bellas del mundo. se pensaron y construyeron en la capital mundial del ciclismo, Copenhagen en Dinamarca, por amor de las bicicletas. ",
+      "item2-title": "A toda velocidad: hasta 750W!",
+      "item2-description": "La potencia del nuestros motores varia entre 250W y 750W. Nuestras bicicletas tienen también las mejores componentes, como los engranajes Shimano, los frenos a disco Tektro, las puertas USB y las pantallas LED para administrar las configuraciones. ",
+      "item3-description": "El trabajo de realización ha sido pensado para asegurar que nuestras bicicletas eléctricas sean baratas, divertidas y bellas. Nuestras bicicletas llaman la atención en cualquier lugar y aseguran una condicción cómoda. Queremos lo mejor para nuestros MATEs. ",
+      "find-out-more": "Alquila y prueba una Mate.bike!",
+      "order-online": "Queremos construir las mejores y más bella bicicletas eléctricas, que sean aptas para cualquier ciclista, situación y lugar. Creando bicicletas bellas, sensuales, prácticas y baratas, queremos convertir las bicicleta en el medio de transporte preferido para quien vive en areas urbanas. Nuestra misión es muy simple: más kilometros con nuestras bicicletas. \nDescubre más en <a href=\"https://mate.bike/\" target=\"_blank\">Mate.bike</a>",
+      "item3-title": "Baratas, divertidas y fantasticas",
+      "optional": "1) Posibilidad de incrementar la aceleración. Precio disponible bajo pedido. <br>\n2) Límite de velocidad estándar. Para desbloquer el límite máximo se necesita pantalla con colores. <br>\n3) Batería 48V 17.5 AmpH disponible. Precio disponible bajo pedido. <br>"
+    },
     "urwahn": {
       "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
     },
@@ -424,16 +437,16 @@
     },
     "no-accessories": "Sin accesorios",
     "meta-description": "Alquila tus bicicletas con nuestro formulario de reserva grupal",
-    "title": "Alquileres grupales",
+    "title": "Reservas de grupo para el alquiler de bicicletas",
     "header": "Estamos felices de ayudarte con tu reserva grupal",
     "subheader": "Déjanos ayudarte a organizar tu próximo viaje en bicicleta. Indícanos tus preferencias y nosotros haremos el resto. Tu única preocupación es disfrutar del viaje.",
     "how-to": {
-      "step-1-title": "1. Buscar y encontrar",
-      "step-1-content": "Cuéntanos qué bicicletas te gustaría alquilar y nosotros nos ocupamos del resto. ",
-      "step-2-title": "2. Reserva en línea",
-      "step-2-content": "Te enviaremos un enlace con una propuesta de alquiler para que puedas reservar en línea de manera fácil, rápida y segura. ",
-      "step-3-title": "3. Acepta oferta y reserva online.",
-      "step-3-content": "Le enviaremos una cotización y un enlace donde puede reservar en línea o darnos una confirmación por escrito de su reserva."
+      "step-1-title": "Para grupos pequeños",
+      "step-1-content": "Para reservas de grupos de dos o tres bicicletas de alquiler, es más fácil y rápido buscar y reservar las bicicletas directamente en listnride.",
+      "step-2-title": "Para grupos más grandes",
+      "step-2-content": "Para 4 bicicletas de alquiler o más, dinos qué tipo de bicicletas y accesorios te gustaría alquilar y nos pondremos en contacto contigo con una oferta!",
+      "step-3-title": "Acepte la oferta y reserve en línea",
+      "step-3-content": "Una vez que hayamos establecido el enlace de reserva de grupo, ¡podrás pagar en línea de forma sencilla y segura!"
     },
     "your-booking-details": "Detalles de reserva",
     "what-bike-kind": "¿Qué tipo de bicicleta?",
@@ -1078,15 +1091,16 @@
   },
   "forms": {
     "first-name": "Nombre",
-    "account_holder_name": "Account holder name",
+    "account_holder_name": "Nombre del titular de la cuenta ",
     "bank_country": "País",
     "dob": "Fecha de nacimiento",
     "gender": "¿Cuál es tu género?",
-    "nationality": "¿Cual es tu nacionalidad?",
+    "nationality": "Nacionalidad",
     "gender_select": {
       "male": "Masculino",
       "female": "Femenino"
     },
+    "select": "Selecciona",
     "newsletter-privacy-policy": "Privacy Policy News letter",
     "sign-up-today": "Sign up today",
     "already-registered": "Ya estas registrado",

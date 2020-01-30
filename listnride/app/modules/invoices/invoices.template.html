@@ -17,7 +17,7 @@
         </md-button>
         <md-button md-no-ink
                    ng-class="{'request-filter-switch-active':invoices.filtersType == 'rider'}"
-                   class="request-filter-switch right"
+                   class="request-filter-switch middle"
                    ng-click="invoices.filterInvoices('rider')">
           {{ 'invoices.as-rider' | translate }}
         </md-button>
@@ -44,7 +44,7 @@
                 <span flex="10">{{ 'invoices.start_date' | translate }}</span>
                 <span flex="10">{{ 'invoices.end_date' | translate }}</span>
                 <span flex="15">{{ 'shared.rider' | translate }}</span>
-                <span flex="10">{{ 'invoices.payout' | translate }}</span>
+                <span flex="10" layout="row" layout-align="end center">{{ 'invoices.payout' | translate }}</span>
                 <span flex layout="row" layout-align="center center">{{ 'invoices.credit-notes' | translate }}</span>
               </div>
             </md-list-item>
@@ -67,7 +67,7 @@
               <span flex="10">{{invoices.parseDate(item.start_date)}}</span>
               <span flex="10">{{invoices.parseDate(item.end_date)}}</span>
               <span flex="15">{{item.lister}}</span>
-              <span flex="10">{{invoices.parseAmount(item.payout)}}</span>
+              <span flex="10" layout="row" layout-align="end center">{{invoices.parseAmount(item.payout)}}</span>
               <span flex class="lnr-list-button" layout="row" layout-align="center center">
                 <md-button
                   md-no-ink
@@ -142,7 +142,7 @@
                 <span flex="10">{{ 'invoices.start_date' | translate }}</span>
                 <span flex="10">{{ 'invoices.end_date' | translate }}</span>
                 <span flex="15">{{ 'shared.lister' | translate }}</span>
-                <span flex="10">{{ 'invoices.you_paid' | translate }}</span>
+                <span flex="10" layout="row" layout-align="end center">{{ 'invoices.you_paid' | translate }}</span>
                 <span flex layout="row" layout-align="center center">{{ 'invoices.invoice' | translate }}</span>
               </div>
             </md-list-item>
@@ -165,7 +165,7 @@
               <span flex="10">{{invoices.parseDate(item.start_date)}}</span>
               <span flex="10">{{invoices.parseDate(item.end_date)}}</span>
               <span flex="15">{{item.lister}}</span>
-              <span flex="10">{{invoices.parseAmount(item.payout)}}</span>
+              <span flex="10" layout="row" layout-align="end center">{{invoices.parseAmount(item.payout)}}</span>
               <span flex class="lnr-list-button" layout="row" layout-align="center center">
                 <md-button md-no-ink class="md-primary lnr-green-text" ng-click="invoices.getPdf(item.id, 'rider')">{{ 'shared.download' | translate }}</md-button>
               </span>
@@ -230,8 +230,8 @@
               <div class="md-list-item-text" layout="row" layout-align="start center">
                 <span flex="20">{{ 'invoices.date' | translate }}</span>
                 <span flex="20">{{ 'invoices.batch' | translate }}</span>
-                <span flex="30">{{ 'invoices.payout' | translate }}</span>
-                <span flex="30" layout="row" layout-align="center center">
+                <span flex="10" layout="row" layout-align="end center">{{ 'invoices.payout' | translate }}</span>
+                <span flex="40" layout="row" layout-align="end center">
                   {{ 'shared.download' | translate }}
                 </span>
               </div>
@@ -244,24 +244,15 @@
             <md-list-item class="secondary-button-padding lnr-billing-list-item"
                           ng-click="doPrimaryAction($event)"
                           ng-repeat="item in invoices.settlementHistory[year]">
-              <span flex="20" class="lnr-list-button">
-                <md-button md-no-ink
-                           ui-sref="requests({requestId: item.request_ids})">
-                  {{invoices.getDateFormat(item.paid_out_at)}}
-                </md-button>
-              </span>
-              <span flex="20"
-                    ui-sref="requests({requestId: item.request_ids})">
-                {{item.batch_id}}
-              </span>
-              <span flex="30"
-                    ui-sref="requests({requestId: item.request_ids})">
+              <span flex="20">{{invoices.parseDate(item.paid_out_at)}}</span>
+              <span flex="20">{{item.batch_id}}</span>
+              <span flex="10" layout="row" layout-align="end center">
                 {{invoices.parseAmount(item.amount)}}
               </span>
-              <span flex="30"
+              <span flex="40"
                     class="lnr-list-button"
                     layout="row"
-                    layout-align="center center">
+                    layout-align="end center">
                 <md-button
                         md-no-ink
                         class="md-primary lnr-green-text"
@@ -271,11 +262,12 @@
                 </md-button>
               </span>
             </md-list-item>
-            <div class="wrap-total">
-              <h3 flex="40">{{'shared.total' | translate}}</h3>
-              <span><b>{{invoices.parseAmount(invoices.getTotal(invoices.settlementHistory[year]))}}</b></span>
-              </div>
-            </div>
+            <md-list-item class="secondary-button-padding lnr-billing-list-item">
+              <span flex="40"><b>{{'shared.total' | translate}}</b></span>
+              <span flex="10" layout="row" layout-align="end center">
+                <b>{{invoices.parseAmount(invoices.getTotal(invoices.settlementHistory[year]))}}</b>
+              </span>
+            </md-list-item>
           </div>
 
         </md-list>
@@ -291,8 +283,8 @@
                         ng-repeat="item in invoices.settlementHistory[year]">
             <div class="md-list-item-text">
               <div layout="row" layout-align="space-between center" flex>
-                <div ui-sref="requests({requestId: item.request_ids})" class="lnr-green-text">
-                  <h4>#{{item.batch_id}}</h4>
+                <div>
+                  <h4>{{ 'invoices.batch' | translate }}: {{item.batch_id}}</h4>
                 </div>
                 <div>
                   <span flex class="lnr-list-button" layout="row" layout-align="center center">
@@ -304,17 +296,14 @@
                 </div>
               </div>
               <div layout="row" layout-align="space-between center" flex>
-                <div ui-sref="bike({bikeId: item.bike_ids})"
-                     class="lnr-green-text lnr-mobile-bike">
-                  <h3><b>{{invoices.getDateFormat(item.paid_out_at)}}</b></h3>
-                </div>
+                <div><h3><b>{{invoices.parseDate(item.paid_out_at)}}</b></h3></div>
                 <div><h3><b>{{invoices.parseAmount(item.amount)}}</b></h3></div>
               </div>
             </div>
             <md-divider></md-divider>
           </md-list-item>
           <div class="wrap-total">
-            <h3 class="lnr-green-text" flex="85">{{'shared.total' | translate}}</h3>
+            <h3 flex="85">{{'shared.total' | translate}}</h3>
             <span><b>{{invoices.parseAmount(invoices.getTotal(invoices.settlementHistory[year]))}}</b></span>
           </div>
         </div>

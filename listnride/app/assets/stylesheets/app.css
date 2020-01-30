@@ -4311,3 +4311,48 @@ md-select.filter__selected:not([disabled]):focus .md-select-value .md-select-ico
   position: relative;
   background-position: 50% 0%;
 }
+
+md-input-container:not(.md-input-has-value) md-select[required]:not(.md-no-asterisk) .md-select-value span:first-child:after {
+  content: none;
+}
+
+input.settings-payout-method-input::-webkit-input-placeholder {
+  color: rgb(191, 191, 191);
+}
+.wrap-matebike-table {
+    text-align: center;
+}
+
+.wrap-matebike-table img {
+    max-width: 700px;
+}
+
+@media (max-width: 720px) {
+    .wrap-matebike-table img {
+      max-width: 100%;
+    }
+}
+
+.brand-slider-image {
+  position: relative;
+}
+
+.brand-slider-image img {
+  position: absolute;
+  max-width: 240px;
+  max-height: 240px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrap-matebike-table_optional-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap-matebike-table_optional-text p {
+  text-align: left;
+  margin: 0;
+}
