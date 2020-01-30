@@ -409,16 +409,17 @@
       "subdescription-not-use": "Design. Art. Passion."
     },
     "matebikes": {
-      "title": "Meet MATE: the coolest foldable e-bike!",
-      "description": "Mate.bike is a Copenhagen-based startup founded in 2016 by the siblings Christian Adel Michael and Julie Kronstrøm Carton who want to engage today’s challenges of dense traffic congestion, climate change and health issues in general by creating unique, fun and afordable electric bicycles.",
-      "item1-description": "We believe that MATE and MATE X are the world’s coolest, foldable electric bikes. They are envisioned and developed with nothing but pedal-love in the cycling capital of the world, Copenhagen Denmark.",
-      "item2-title": "Power to the pedals: up to 750W!",
-      "item2-description": "Our bikes boast powerful electric motors ranging from 250W to 750W and we’ve geared the bicycles with top-tier specs like Shimano gears, Tektro disc brakes, USB ports and LED screens for managing the settings. ",
-      "item3-description": "Every thought behind design, upgrades and additional details have been made while continuing to ensure that our eBikes are both affordable, fun and awesome looking. They turn heads wherever they go and at the same time offer a smooth ride. Only the best for our MATEs.",
-      "find-out-more": "Rent and test ride the Mate.bike today!",
-      "order-online": "We want to make the best and coolest eBikes for any rider, any journey, any situation. By making eBikes cool, sexy, practical and affordable, we wish to take bicycling global as the preferred mode of transportation for more people in urban areas. Our mission is simple: More miles on bikes.\nLearn more on mate.bike",
-      "item3-title": "Affordable, fun, and awesome",
-      "optional": "1) Optional throttle upgrade. Price available on request. <br> 2) Standard limited maximum speed. Unlocking the max speed requires the color display <br>3) Optional upgrade to a 48V 17.5 AmpH battery. Price available on request <br>"
+      "title": "Scopri MATE: la più stilosa e-bike pieghevole!",
+      "description": "<a href=\"https://mate.bike/\" target=\"_blank\">Mate.bike</a> è una start-up danese fondata a Copenhagen nel 2016 dai fratelli Christian Adel Michael e Julie Kronstrøm Carton, i quali hanno voluto sfidare il traffico cittadino, i cambiamenti climatici e i problemi di salute in generale creando una bicicletta elettrica unica, divertente ed economica. ",
+      "item1-title": "La più stilosa e-bike pieghevole del mondo ",
+      "item1-description": "MATE e MATE X  sono le biciclette elettriche pieghevoli più stilose in circolazione. Sono state pensate e costruite nella capitale mondiale del ciclismo, Copenhagen in Danimarca, con un unico amore, quello per le biciclette. ",
+      "item2-title": "Potenza nella pedalata: fino a 750W!",
+      "item2-description": "Le nostre biciclette hanno dei motori elettrici la cui potenza varia dai 250W ai 750W. Abbiamo inoltre aggiunto le migliori componenti in circolazione, come il cambio Shimano, i freni a disco Tektro, le porte USB e degli screen a LED per poter controllare le impostazioni.",
+      "item3-description": "Tutto lavoro per la progettazione e la relizzazione sono stati fatti in modo da assicurare che le nostre biciclette siano allo stesso tempo economiche, divertenti e di bell´aspetto. Attirano l´attenzione ovunque vadano e offrono una guida confortevole. Vogliamo solo il meglio per i nostri MATEs. ",
+      "find-out-more": "Noleggia e prova una Mate.bike oggi!",
+      "order-online": "Vogliamo produrre le migliori e-bike, che si adattino ad ogni ciclista, situazione e tipo di viaggio. Creando e-bikes esteticamente belle, sexy, pratiche ed economiche, vogliamo fare in modo che la bicicletta diventi il mezzo di trasporto preferito a livello mondiale per un numero sempre maggiore di persone che vivono nelle aree urbane. La nostra missione è semplice: più chilometri con le nostre biciclette. Scopri di più su <a href=\"https://mate.bike/\" target=\"_blank\">Mate.bike</a>",
+      "item3-title": "Economiche, divertenti e fantastiche",
+      "optional": "1) Possibilità di aumentare la potenza di accelerazione. Prezzo disponibile su richiesta. <br>2) Limite di velocità standard. Per sbloccare la velocità massima c´è bisogno del display a colori. <br>3) Possibiltà di avere una una batteria di 48v 17,5 AmpH. Prezzo disponibile su richiesta<br>"
     },
     "urwahn": {
       "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"

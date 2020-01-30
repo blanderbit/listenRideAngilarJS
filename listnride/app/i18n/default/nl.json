@@ -286,7 +286,7 @@
     "gent-wevelgem": {
       "title": "Huur een racefiets voor Gent-Wevelgem Cyclo!",
       "description": "Wat: <b>Gent-Wevelgem Cyclo</b>| Waar: <b>Wevelgem, België</b> | Wanneer: <b>28 maart 2020</b>",
-      "text": "<p>Raak vertrouwd met de Vlaamse regio België, een regio rijk aan fietsgeschiedenis, met iconische steile en geplaveide wegen! De <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Cyclo</a>is een fantastisch evenement voor liefhebbers van steile beklimmingen! Er zijn vier afstanden beschikbaar (65 km, 95 km, 140 km en 220 km), waardoor dit evenement zo toegankelijk of uitdagend is als je wilt!\n\nHaal het meeste uit dit evenement met een van onze eersteklas racefietsen, die aan de startlijn kunnen worden gehuurd!\n</p>\n\n<p>Bespaar jezelf tijd, moeite en geld door eenvoudig een fiets te huren. Ze zijn klaar voor vertrek aan de startlijn in Houffalize. Het enige dat jij moet meenemen is je helm, pedalen en natuurlijk: jezelf!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Groepsboekingen hier beschikbaar!</a>",
+      "text": "<p>Raak vertrouwd met de Vlaamse regio België, een regio rijk aan fietsgeschiedenis, met iconische steile en geplaveide wegen! De <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Cyclo</a> is een fantastisch evenement voor liefhebbers van steile beklimmingen! Er zijn vier afstanden beschikbaar (65 km, 95 km, 140 km en 220 km), waardoor dit evenement zo toegankelijk of uitdagend is als je wilt!\n\nHaal het meeste uit dit evenement met een van onze eersteklas racefietsen, die aan de startlijn kunnen worden gehuurd!\n</p>\n\n<p>Bespaar jezelf tijd, moeite en geld door eenvoudig een fiets te huren. Ze zijn klaar voor vertrek aan de startlijn in Houffalize. Het enige dat jij moet meenemen is je helm, pedalen en natuurlijk: jezelf!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Groepsboekingen hier beschikbaar!</a>",
       "meta-title": "Racefiets huren voor de Gent-Wevelgem Cyclo | listnride",
       "meta-description": "Huur een high-end racefiets voor de Gent-Wevelgem Cyclo met listnride! De goed gespecificeerde fietsen staan voor je klaar aan de startlijn. Verken de Belgische heuvels met onze fantastische selectie huurfietsen!"
     },
@@ -402,16 +402,17 @@
       "subdescription-not-use": "Design. Art. Passion."
     },
     "matebikes": {
-      "title": "Meet MATE: the coolest foldable e-bike!",
-      "description": "Mate.bike is a Copenhagen-based startup founded in 2016 by the siblings Christian Adel Michael and Julie Kronstrøm Carton who want to engage today’s challenges of dense traffic congestion, climate change and health issues in general by creating unique, fun and afordable electric bicycles.",
-      "item1-description": "We believe that MATE and MATE X are the world’s coolest, foldable electric bikes. They are envisioned and developed with nothing but pedal-love in the cycling capital of the world, Copenhagen Denmark.",
-      "item2-title": "Power to the pedals: up to 750W!",
-      "item2-description": "Our bikes boast powerful electric motors ranging from 250W to 750W and we’ve geared the bicycles with top-tier specs like Shimano gears, Tektro disc brakes, USB ports and LED screens for managing the settings. ",
-      "item3-description": "Every thought behind design, upgrades and additional details have been made while continuing to ensure that our eBikes are both affordable, fun and awesome looking. They turn heads wherever they go and at the same time offer a smooth ride. Only the best for our MATEs.",
-      "find-out-more": "Rent and test ride the Mate.bike today!",
-      "order-online": "We want to make the best and coolest eBikes for any rider, any journey, any situation. By making eBikes cool, sexy, practical and affordable, we wish to take bicycling global as the preferred mode of transportation for more people in urban areas. Our mission is simple: More miles on bikes.\nLearn more on mate.bike",
-      "item3-title": "Affordable, fun, and awesome",
-      "optional": "1) Optional throttle upgrade. Price available on request. <br> 2) Standard limited maximum speed. Unlocking the max speed requires the color display <br> 3) Optional upgrade to a 48V 17.5 AmpH battery. Price available on request <br>"
+      "title": "Maak kennis met MATE: de coolste opvouwbare e-bike!",
+      "description": "<a href=\"https://mate.bike/\" target=\"_blank\">Mate.bike</a> is een in Kopenhagen gevestigde startup die in 2016 is opgericht door de broers en zussen Christian Adel Michael en Julie Kronstrøm Carton, die de huidige uitdagingen van dichtbevolkte verkeersopstoppingen, klimaatverandering en gezondheidskwesties in het algemeen willen aangaan door het creëren van unieke, leuke en betaalbare elektrische fietsen.",
+      "item1-title": "'s Werelds coolste opvouwbare e-bikes",
+      "item1-description": "Wij geloven dat MATE en MATE X 's werelds coolste, opvouwbare elektrische fietsen zijn. Ze zijn bedacht en ontwikkeld met niets anders dan trapliefde in de fietshoofdstad van de wereld, Kopenhagen Denemarken.",
+      "item2-title": "Vermogen naar de pedalen: tot 750W!",
+      "item2-description": "Onze fietsen hebben krachtige elektromotoren, variërend van 250W tot 750W en we hebben de fietsen voorzien van topklasse specificaties zoals Shimano versnellingen, Tektro schijfremmen, USB-poorten en LED-schermen voor het beheer van de instellingen. ",
+      "item3-description": "Elke gedachte achter het ontwerp, upgrades en extra details zijn gemaakt, terwijl we ervoor blijven zorgen dat onze eBikes zowel betaalbaar blijven en er geweldig uitzien. Men draait zich om wanneer deze fiets voorbij komt en tegelijkertijd bieden de fietsen een soepele rit. Alleen het beste voor onze MATE's.",
+      "find-out-more": "Boek vandaag nog een testrit en ervaar de Mate.bike zelf! ",
+      "order-online": "We willen de beste en coolste eBikes maken voor elke rijder, elke reis en elke situatie. Door het maken van coole, sexy, praktische en betaalbaare eBikes, willen wij fietsen wereldwijd als de voorkeurswijze voor transport voor meer mensen in stedelijke gebieden, mogelijk maken. Onze missie is eenvoudig: Meer kilometers op de fiets. Meer informatie op <a href=\"https://mate.bike/\" target=\"_blank\">mate.bike.</a>",
+      "item3-title": "Betaalbaar, leuk en geweldig...",
+      "optional": "1) Optionele gasklepupgrade. Prijs op aanvraag. <br> 2) Standaard beperkte maximum snelheid. Voor het deblokkeren van de maximum snelheid is het kleurendisplay <br> 3) nodig. Optionele upgrade naar een 48V 17,5 AmpH batterij. Prijs op aanvraag <br>"
     },
     "urwahn": {
       "item2-description": "Organic design with<br>\nhigh recognition value<br>\nand an elastic rear triangle<br>\nfor more driving comfort"
