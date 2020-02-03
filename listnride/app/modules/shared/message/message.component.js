@@ -34,10 +34,11 @@ angular.module('message',[]).component('message', {
       var todayDate = moment(new Date());
       var hasInsurance = !!message.request.insurance;
 
-      message.isPaymentFailed = isPaymentFailed;
-
       message.STATUSES = MESSAGE_STATUSES;
       message.PAYMENT_STATUSES = PAYMENT_STATUSES;
+
+      message.isPaymentFailed = isPaymentFailed;
+      message.isDirectBooking = message.request.lister.direct_booking_scheme && requestedMessageAbsent();
 
       // Dont display messages with following statuses to Rider;
       var riderNotDisplayableMessages = [
@@ -190,5 +191,9 @@ angular.module('message',[]).component('message', {
             message.buttonClicked = false;
           });
       };
+
+      function requestedMessageAbsent(){
+        return _.findIndex(message.request.messages, function(m) { return m.status == message.STATUSES.REQUESTED; }) == -1;
+      }
     }
 });

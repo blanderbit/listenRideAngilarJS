@@ -101,7 +101,7 @@
      <p class="message-time">{{message.localTime}}</p>
     <p
       class="lnr-center"
-      translate="{{message.request.chatFlow}}.{{message.status}}"
+      translate="{{message.request.chatFlow}}{{message.isDirectBooking && message.status == message.STATUSES.CONFIRMED ? '.direct' : '' }}.{{message.status}}"
       translate-values="message.request"
       ng-click="message.closeDialog()"
       >
