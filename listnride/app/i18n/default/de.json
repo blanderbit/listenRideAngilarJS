@@ -715,6 +715,7 @@
   },
   "booking": {
     "shopping": "Sicher bezahlen",
+    "rent-bike-terms": "With 'Request Bike' you agree to the",
     "and-agree-privacy": "und unseren Datenschutzbestimmungen",
     "pay-secure": "Sicher bezahlen mit",
     "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
@@ -1228,6 +1229,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht gültig",
+    "rent-bike": "Rent the bike",
     "ability-to-pick-half-day": "Du kannst dieses Fahrrad für einen 1/2-Tag buchen. <br>\nBitte wähle dein Zeitfenster:",
     "status-closed": "geschlossen",
     "status-in-past": "in der Vergangenheit",

@@ -705,6 +705,7 @@
   },
   "booking": {
     "shopping": "Secure Shopping",
+    "rent-bike-terms": "With 'Request Bike' you agree to the",
     "and-agree-privacy": "en ons privacy beleid",
     "pay-secure": "Veilig betalen met",
     "agree-terms": "Met 'Fiets aanvragen' gaat u akkoord met de",
@@ -1214,6 +1215,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
+    "rent-bike": "Rent the bike",
     "ability-to-pick-half-day": "Je kunt deze fiets een 1/2 dag boeken. <br>\nSelecteer het tijdvak :",
     "status-closed": "Gesloten",
     "status-in-past": "in het verleden",
