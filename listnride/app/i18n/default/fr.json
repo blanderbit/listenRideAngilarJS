@@ -1075,6 +1075,9 @@
   },
   "listChat": {
     "1": "{{user.first_name}}{{user.last_name}} de {{user.city}} voudrait louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a><br><br>ID Bike:. {{ride.bicycle_number}}<br> Taille de vélo:  {{ride.frame_size? ride.frame_size:'non spécifié'}} <br> Période: {{timespan_short}}<br><br><br>Veuillez bien accepter la réservation, et vous mettre en accord sur n'importe détail en utilisant le chat ci-dessous. Si ce n'est pas possible, veuillez rejeter la demande.",
+    "direct": {
+      "3": "Félicitations ! Vous allez louer votre <a href=\"/#/bikes/{{ride.id}}\">{{ride.brand}}{{ride.name}}</a> !<br> Période de location : {{timespan_short}}.<br>ID du vélo : {{ride.bicycle_number}}.<br>Taille du vélo : {{ride.frame_size ? ride.frame_size : 'not specified'}}<br><br>Nom du Rider : {{user.first_name}}{{user.last_name}}<br>Numéro de téléphone du Rider : {{user.pretty_phone_number}}<br>Adresse du Rider : <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a> "
+    },
     "11": "La réservation a été annulée.",
     "3": "Vous avez accepté la demande, et le vélo est réservé. Vous le louerez à partir de {{timespan}}! Les coordonnées sont les suivantes, nous vous les avons également envoyées par courrier électronique.\n<br>\nNom: {{user.first_name}}{{user.last_name}}\n<br>\nTéléphone: {{user.pretty_phone_number}}\n<br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}{{user.city}}, {{user.country}}</a>",
     "5": "Merci d’avoir confirmé la récupération de votre vélo et d'avoir noté {{user.first_name}}. La location a été effectuée avec succès et l'argent sera transféré sur le compte bancaire que vous avez fourni au cours des 7 prochains jours. <br><br>Si vous avez des questions, ou des suggestions, on est toujours ravi de les recevoir à <a mailto:=\"hello@listnride.com\">hello@listnride.com</a>.",
@@ -1084,6 +1087,9 @@
   },
   "rideChat": {
     "1": "Vous avez fait une demande pour le <a style=\"pointer-events: auto;\" href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> de {{lister.display_name}} a partir de {{timespan}}. Vous pouvez parler avec {{lister.display_name}} ci-dessous. C'est seulement quand votre demande será acceptée, que le paiement será effectué et que le vélo será réservé.",
+    "direct": {
+      "3": "Félicitations ! Vous louerez le <a href=\"/#/bikes/{{ride.id}}\">{{ride.brand}} {{ride.name}}</a>.<br>Période de location :{{timespan_short}}.<br>ID du vélo :{{ride.bicycle_number}}.<br>Taille du vélo : {{ride.frame_size ? ride.frame_size : 'not specified'}}<br><br>Nom du Lister : {{lister.first_name}} {{lister.last_name}}<br>Le numéro de téléphone de Lister : {{lister.pretty_phone_number}}<br>Adresse : <a href=\"//www.google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\">{{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>"
+    },
     "11": "La réservation a été annulée.",
     "3": "Félicitations, {{lister.first_name}}a accepté votre demande. Le vélo a donc été réservé. Rencontrez le Lister comme convenu et récupérez le vélo. Les coordonnées sont ci-dessous, nous les avons aussi envoyé par e-mail <br><br>Nom:. {{lister.first_name}}{{lister.last_name}}, <br>Téléphone: {{lister.pretty_phone_number}}, <br>Adresse: <a href=\"//google.com/maps/search/?api=1&amp;query={{ride.street}}+{{ride.city}}+{{ride.zip}}+{{ride.country}}\" target=\"_blank\"> {{ride.street}}, {{ride.zip}}{{ride.city}}, {{ride.country}}</a>",
     "5": "Avez-vous eu une bonne expérience avec le vélo de {{lister.first_name}}? Partagez votre expérience en laissant un court commentaire. Cela aidera les futurs cyclistes à mieux comprendre à quoi s'attendre.",
