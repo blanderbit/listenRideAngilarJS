@@ -192,6 +192,11 @@ angular.module('message',[]).component('message', {
           });
       };
 
+      message.displayPicture = function(){
+        return message.status == message.STATUSES.REQUESTED ||
+          (message.isDirectBooking && message.status == message.STATUSES.CONFIRMED)
+      };
+
       function requestedMessageAbsent(){
         return _.findIndex(message.request.messages, function(m) { return m.status == message.STATUSES.REQUESTED; }) == -1;
       }

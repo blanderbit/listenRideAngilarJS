@@ -13,7 +13,7 @@
 </div>
 
 <div
-    ng-if="message.displayableNotification() && message.status == message.STATUSES.REQUESTED && message.request.rideChat"
+    ng-if="message.displayableNotification() && message.displayPicture() && message.request.rideChat"
     layout="column"
     layout-align="center center">
   <img
@@ -31,7 +31,7 @@
 </div>
 
 <div
-    ng-if="!message.request.rideChat && message.status == message.STATUSES.REQUESTED"
+    ng-if="!message.request.rideChat && message.displayPicture()"
     layout="column"
     layout-align="center center">
   <img
