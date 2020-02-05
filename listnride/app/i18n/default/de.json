@@ -460,7 +460,7 @@
     "how-many-bikes": "Wieviele Räder?",
     "do-you-need-accessories": "Brauchst du Zubehör?",
     "your-contact-details": "Deine Kontaktdaten",
-    "thanks-for-request": "Danke für die Radverleih-Anfrage",
+    "thanks-for-request": "Danke für die Anfrage",
     "we-will-back-shortly": "Wir kommen bald auf dich zurück",
     "take-back-to-search": "Bring mich zurück zu meiner Suche",
     "accessories": "Zubehör"
@@ -715,7 +715,7 @@
   },
   "booking": {
     "shopping": "Sicher bezahlen",
-    "rent-bike-terms": "With 'Request Bike' you agree to the",
+    "rent-bike-terms": "Mit \"Fahrrad mieten\" stimmst du Folgendem zu:",
     "and-agree-privacy": "und unseren Datenschutzbestimmungen",
     "pay-secure": "Sicher bezahlen mit",
     "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
@@ -1081,7 +1081,7 @@
   "listChat": {
     "1": "{{user.first_name}} {{user.last_name}} aus {{user.city}} möchte dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.name}}</a> mieten. <br><br>Rad Nr.: {{ride.bicycle_number}}. <br>Radgröße: {{ride.frame_size? ride.frame_size: 'nicht angegeben'}}. <br>Zeitraum: {{timespan_short}}. <br>. <br><br>Bitte klicke auf Akzeptieren um die Buchung anzunehmen oder auf Ablehnen, wenn eine Vermietung nicht möglich ist. Weitere Fragen kannst Du mit dem Mieter im Chat klären.",
     "direct": {
-      "3": "Herzlichen Glückwunsch! Du wirst dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.brand}} {{ride.name}} vermieten</a> !<br> Mietdauer:{{timespan_short}}.<br>Fahrrad-ID: {{ride.bicycle_number}}.<br>Fahrradgröße:{{ride.frame_size ? ride.frame_size : 'not specified'}}<br><br>Riders Name: {{user.first_name}} {{user.last_name}}<br>Riders Telefonnummer: {{user.pretty_phone_number}}<br>Die Riders Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}</a> "
+      "3": "Herzlichen Glückwunsch! Du wirst dein <a href=\"/#/bikes/{{ride.id}}\">{{ride.brand}} {{ride.name}} vermieten</a> !<br> Mietdauer:{{timespan_short}}.<br>Fahrrad-ID: {{ride.bicycle_number}}.<br>Fahrradgröße:{{ride.frame_size ? ride.frame_size : 'not specified'}}<br><br>Name des Riders: {{user.first_name}} {{user.last_name}}<br>Telefonnummer des Riders: {{user.pretty_phone_number}}<br>Adresse des Riders: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}} {{user.city}}, {{user.country}}</a> "
     },
     "11": "Die Buchung wurde storniert.",
     "3": "Du hast die Anfrage akzeptiert und damit die Buchung bestätigt. Du verleihst Dein Rad vom {{timespan}}! Die Kontaktdaten des Mieters sind wie folgt. Eine Buchungsbestätigung wurde dir per E-Mail gesendet.<br>Name: {{user.first_name}} {{user.last_name}} <br>Telefon: {{user.pretty_phone_number}} <br>Adresse: <a href=\"//www.google.com/maps/search/?api=1&amp;query={{user.street}}+{{user.city}}+{{user.zip}}+{{user.country}}\" target=\"_blank\">{{user.street}}, {{user.zip}}  {{user.city}}, {{user.country}}</a>",
@@ -1235,7 +1235,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht gültig",
-    "rent-bike": "Rent the bike",
+    "rent-bike": "Fahrrad mieten",
     "ability-to-pick-half-day": "Du kannst dieses Fahrrad für einen 1/2-Tag buchen. <br>\nBitte wähle dein Zeitfenster:",
     "status-closed": "geschlossen",
     "status-in-past": "in der Vergangenheit",
