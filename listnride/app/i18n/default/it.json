@@ -711,7 +711,7 @@
   },
   "booking": {
     "shopping": "Secure Shopping",
-    "rent-bike-terms": "With 'Request Bike' you agree to the",
+    "rent-bike-terms": "Cliccando \"Richiedi bicicletta\" accetti i ",
     "and-agree-privacy": "e le nostre norme sulla protezione dati",
     "pay-secure": "Pagamento sicuro con",
     "agree-terms": "Con \"Richiedi la bicicletta\" accetti i",
@@ -1229,7 +1229,7 @@
   },
   "calendar": {
     "invalid-date": "Le date non sono valide",
-    "rent-bike": "Rent the bike",
+    "rent-bike": "Noleggia la bicicletta",
     "ability-to-pick-half-day": "Puoi prenotare questa bici per mezza giornata. <br>\nSi prega di selezionare la fascia oraria:",
     "status-closed": "chiuso",
     "status-in-past": "nel passato",

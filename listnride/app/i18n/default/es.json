@@ -1228,7 +1228,7 @@
   },
   "calendar": {
     "invalid-date": "Las fechas no son válidas",
-    "rent-bike": "Rent the bike",
+    "rent-bike": "Alquila la bicicleta",
     "ability-to-pick-half-day": "Puedes reservar esta bicicleta por medio día. <br>\nPor favor seleccione su horario:",
     "status-closed": "closed",
     "status-in-past": "in past",
