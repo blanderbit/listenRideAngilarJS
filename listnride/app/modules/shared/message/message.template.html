@@ -214,7 +214,7 @@
   ng-if="message.request.rideChat && message.isPaymentFailed(message.request.payment_status) && message.status ==
   message.STATUSES.PAYMENT_FAILED && message.request.status < message.STATUSES.CONFIRMED"
   layout="column" layout-align="center center">
-  <p ng-if="message.request.status == message.STATUSES.REQUESTED">
+  <p ng-if="message.request.status == message.STATUSES.REQUESTED || message.isDirectBooking">
     {{ 'request.payment-failed' | translate }}
   </p>
   <md-button
