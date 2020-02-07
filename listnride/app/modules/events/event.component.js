@@ -19,7 +19,7 @@ angular.module('event', []).component('event', {
           'triathlon-hamburg': getRequestUrl('30', 'Hamburg', '', '2018-07-14'),
           'toros-de-gravel': getRequestUrl('42,43', 'Mallorca', '', '2018-10-13'),
           'riderman-rothaus': getRequestUrl('20', 'Bad Dürrheim', '', ''),
-          'velocity-bikerental': getRequestUrl('30', 'Berlin', 'velothon', '2018-05-13'),
+          'velocity-bikerental': getRequestUrl('30', 'Berlin', 'velothon', '2018-05-13', '17718,18007,17997,18017,18037,18027'),
           'vatternrundan': getRequestUrl('30,31', 'Motala,Sweden', '', '', '17071,18121,18134,18135,18129,18178,18196'),
           'epicgrancanaria': getRequestUrl('30,31,32,33', 'Gran Canaria, Provinz Las Palmas, Spanien', '', '2019-04-05'),
           'velorace-dresden': getRequestUrl('30', 'Dresden', '', '2019-08-11'),

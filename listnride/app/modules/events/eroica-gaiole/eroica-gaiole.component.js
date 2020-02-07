@@ -26,15 +26,17 @@ angular.module('eroicaGaiole',[]).component('eroicaGaiole', {
         $translate('search.all-sizes').then(function (translation) {
             eroicaGaiole.sizeOptions[0].label = translation;
         });
-        // TODO: add booked_at filter for 
+        // TODO: add booked_at filter for
         api.get('/users/6352').then(
-            function(response) {
-                _.each(response.data.rides, function(value){
-                    if (value.brand != "FOCUS") eroicaGaiole.bikes.push(value);
-                });
-            },
-            function(error) {
-            }
+          function(response) {
+            _.each(response.data.rides, function(value){
+              if (value.brand != "FOCUS" && !_.includes([11246, 11248, 11252], value.id)) {
+                eroicaGaiole.bikes.push(value);
+              }
+            });
+          },
+          function(error) {
+          }
         );
 
     }
