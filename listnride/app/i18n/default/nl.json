@@ -766,7 +766,7 @@
     "overview": {
       "tab": "Samenvatting",
       "direct": {
-        "success-header": "Congratulations, you have just rented a bike!"
+        "success-header": "Gefeliciteerd, je hebt een fiets gehuurd!"
       },
       "model": "Model",
       "bike-rental": "Je gekozen fiets",

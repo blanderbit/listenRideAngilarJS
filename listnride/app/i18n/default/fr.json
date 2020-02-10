@@ -771,7 +771,7 @@
     "overview": {
       "tab": "Vue d'ensemble",
       "direct": {
-        "success-header": "Congratulations, you have just rented a bike!"
+        "success-header": "Félicitations, vous venez de louer un vélo !"
       },
       "model": "Modèle",
       "bike-rental": "Votre location de vélo",

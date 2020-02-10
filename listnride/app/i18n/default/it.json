@@ -771,7 +771,7 @@
     "overview": {
       "tab": "Riepilogo",
       "direct": {
-        "success-header": "Congratulations, you have just rented a bike!"
+        "success-header": "Congratulazioni, hai noleggiato una bici!"
       },
       "model": "Modello",
       "bike-rental": "La bici selzionata",

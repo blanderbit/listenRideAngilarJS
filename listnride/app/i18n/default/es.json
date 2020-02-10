@@ -770,7 +770,7 @@
     "overview": {
       "tab": "Resumen",
       "direct": {
-        "success-header": "Congratulations, you have just rented a bike!"
+        "success-header": "¡Felicidades, has de alquilado una bicicleta!"
       },
       "model": "Modelo",
       "bike-rental": "Tu selección de bicicleta",

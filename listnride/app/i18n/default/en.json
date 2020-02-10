@@ -776,7 +776,7 @@
     "overview": {
       "tab": "Overview",
       "direct": {
-        "success-header": "Congratulations, you have just rented a bike!"
+        "success-header": "Congratulations, you've just rented a bike!"
       },
       "model": "Model",
       "bike-rental": "Your bike rental",
