@@ -25,7 +25,7 @@ angular.module('event', []).component('event', {
           'velorace-dresden': getRequestUrl('30', 'Dresden', '', '2019-08-11'),
           'la-chouffe': getRequestUrl('30', 'Houffalize', '', ''),
           'gent-wevelgem': getRequestUrl('30', 'Wevelgem', '', ''),
-          'lardita-arezzo': getRequestUrl('30', 'Arezzo, Tuscany', '', '2019-03-24'),
+          'lardita-arezzo': '/rides?ids=8799,9238,9240,9348,9355,12301,12302,12303,12304,12305,12306,12307,12308,12324,12322,12466, 8808, 12310, 12325, 8796, 12463, 12309, 12327, 12457, 12460, 12458, 12459, 12462, 9354, 9353, 9348, 12328, 8801, 8803, 12450, 8842, 9347, 9344, 8800, 8804, 8841, 9349, 12464, 12465, 12467, 12326, 12329, 8802, 8795, 12319, 8789, 8791, 8794, 12451, 12452, 12453, 12454, 12456, 12455, 12461, 9239, 9340, 9346, 9356, 9350, 9234, 9235, 8840, 9355',
           'granfondo-via-del-sale': getRequestUrl('30', 'Cesenatico', '', '2019-05-05'),
           'giro-sardegna': getRequestUrl('30', 'Cagliari', '', '2019-04-21'),
           'cyclingworld': getRequestUrl('', '', '', '', '/rides?family=35'),
