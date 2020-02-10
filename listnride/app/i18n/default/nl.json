@@ -284,11 +284,11 @@
       "meta-description": "Huur een high-end racefiets voor La Chouffe Classic met listnride! De goed gespecificeerde fietsen staan voor je klaar aan de startlijn. Verken de Belgische heuvels met onze fantastische selectie huurfietsen!"
     },
     "gent-wevelgem": {
-      "title": "Huur een racefiets voor Gent-Wevelgem Cyclo!",
+      "title": "Huur een racefiets voor de Gent-Wevelgem Cyclo!",
       "description": "Wat: <b>Gent-Wevelgem Cyclo</b>| Waar: <b>Wevelgem, België</b> | Wanneer: <b>28 maart 2020</b>",
       "text": "<p>Raak vertrouwd met de Vlaamse regio België, een regio rijk aan fietsgeschiedenis, met iconische steile en geplaveide wegen! De <a href=\"https://www.gentwevelgemcyclo.be/en/\" target=\"_blank\">Gent-Wevelgem Cyclo</a> is een fantastisch evenement voor liefhebbers van steile beklimmingen! Er zijn vier afstanden beschikbaar (65 km, 95 km, 140 km en 220 km), waardoor dit evenement zo toegankelijk of uitdagend is als je wilt!\n\nHaal het meeste uit dit evenement met een van onze eersteklas racefietsen, die aan de startlijn kunnen worden gehuurd!\n</p>\n\n<p>Bespaar jezelf tijd, moeite en geld door eenvoudig een fiets te huren. Ze zijn klaar voor vertrek aan de startlijn in Houffalize. Het enige dat jij moet meenemen is je helm, pedalen en natuurlijk: jezelf!</p>\n\n<a href=\"https://www.listnride.com/multi-booking?location=Wevelgem\" target=\"_blank\">Groepsboekingen hier beschikbaar!</a>",
       "meta-title": "Racefiets huren voor de Gent-Wevelgem Cyclo | listnride",
-      "meta-description": "Huur een high-end racefiets voor de Gent-Wevelgem Cyclo met listnride! De goed gespecificeerde fietsen staan voor je klaar aan de startlijn. Verken de Belgische heuvels met onze fantastische selectie huurfietsen!"
+      "meta-description": "Huur een high-end racefiets voor de Gent-Wevelgem Cyclo met listnride! De uitstekend gespecificeerde fietsen staan voor je klaar aan de startlijn. Verken de Belgische heuvels met onze fantastische selectie huurfietsen!"
     },
     "msr": {
       "meta-title": "Road bike rental for the Mecklenburger Seenrunde 2020 | listnride",
@@ -705,7 +705,7 @@
   },
   "booking": {
     "shopping": "Secure Shopping",
-    "rent-bike-terms": "With 'Request Bike' you agree to the",
+    "rent-bike-terms": "Met 'Nu boeken' gaat u akkoord met de",
     "and-agree-privacy": "en ons privacy beleid",
     "pay-secure": "Veilig betalen met",
     "agree-terms": "Met 'Fiets aanvragen' gaat u akkoord met de",
@@ -765,6 +765,9 @@
     },
     "overview": {
       "tab": "Samenvatting",
+      "direct": {
+        "success-header": "Congratulations, you have just rented a bike!"
+      },
       "model": "Model",
       "bike-rental": "Je gekozen fiets",
       "size": "Grootte",
@@ -1221,7 +1224,7 @@
   },
   "calendar": {
     "invalid-date": "Ingevulde Datums zijn niet correct",
-    "rent-bike": "Rent the bike",
+    "rent-bike": "Nu boeken",
     "ability-to-pick-half-day": "Je kunt deze fiets een 1/2 dag boeken. <br>\nSelecteer het tijdvak :",
     "status-closed": "Gesloten",
     "status-in-past": "in het verleden",

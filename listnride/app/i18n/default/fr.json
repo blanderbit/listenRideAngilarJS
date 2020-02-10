@@ -710,7 +710,7 @@
   },
   "booking": {
     "shopping": "Payment sécurisé",
-    "rent-bike-terms": "With 'Request Bike' you agree to the",
+    "rent-bike-terms": "En cliquant 'Réservez maintenant' vous acceptez les",
     "and-agree-privacy": "et nos règles de protection des données",
     "pay-secure": "Payer en toute sécurité avec",
     "agree-terms": "En cliquant 'Request Bike', vous acceptez les",
@@ -770,6 +770,9 @@
     },
     "overview": {
       "tab": "Vue d'ensemble",
+      "direct": {
+        "success-header": "Congratulations, you have just rented a bike!"
+      },
       "model": "Modèle",
       "bike-rental": "Votre location de vélo",
       "size": "Taille",
@@ -1230,7 +1233,7 @@
   },
   "calendar": {
     "invalid-date": "Les dates sont invalides",
-    "rent-bike": "Rent the bike",
+    "rent-bike": "Réservez maintenant",
     "ability-to-pick-half-day": "Vous pouvez réserver ce vélo pour une demi-journée. <br>\nVeuillez sélectionner votre créneau horaire:",
     "status-closed": "fermé",
     "status-in-past": "dans le passé",

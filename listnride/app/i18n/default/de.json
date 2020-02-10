@@ -715,7 +715,7 @@
   },
   "booking": {
     "shopping": "Sicher bezahlen",
-    "rent-bike-terms": "Mit \"Fahrrad mieten\" stimmst du Folgendem zu:",
+    "rent-bike-terms": "Mit \"Kostenpflichtig Buchen\" stimmst du Folgendem zu:",
     "and-agree-privacy": "und unseren Datenschutzbestimmungen",
     "pay-secure": "Sicher bezahlen mit",
     "agree-terms": "Mit \"Rad anfragen\" stimmst du zu:",
@@ -775,6 +775,9 @@
     },
     "overview": {
       "tab": "Übersicht",
+      "direct": {
+        "success-header": "Congratulations, you have just rented a bike!"
+      },
       "model": "Modell",
       "bike-rental": "Deine Fahrradmiete",
       "size": "Größe",
@@ -1235,7 +1238,7 @@
   },
   "calendar": {
     "invalid-date": "Datumsangabe nicht gültig",
-    "rent-bike": "Fahrrad mieten",
+    "rent-bike": "Kostenpflichtig Buchen",
     "ability-to-pick-half-day": "Du kannst dieses Fahrrad für einen 1/2-Tag buchen. <br>\nBitte wähle dein Zeitfenster:",
     "status-closed": "geschlossen",
     "status-in-past": "in der Vergangenheit",

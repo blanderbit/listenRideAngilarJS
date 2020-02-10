@@ -715,7 +715,7 @@
   },
   "booking": {
     "shopping": "Secure Payments",
-    "rent-bike-terms": "With 'Rent Bike' you agree to the",
+    "rent-bike-terms": "With 'Book now' you agree to the",
     "and-agree-privacy": "and our data protection regulations",
     "pay-secure": "Pay securely with",
     "agree-terms": "With 'Request Bike' you agree to the",
@@ -775,6 +775,9 @@
     },
     "overview": {
       "tab": "Overview",
+      "direct": {
+        "success-header": "Congratulations, you have just rented a bike!"
+      },
       "model": "Model",
       "bike-rental": "Your bike rental",
       "size": "Size",
@@ -1235,7 +1238,8 @@
   },
   "calendar": {
     "invalid-date": "The dates are invalid",
-    "rent-bike": "Rent the bike",
+    "rent-bike": "Book now",
+    "unavailable": "This bike is booked ",
     "ability-to-pick-half-day": "You can book this bike for a half-day. <br>\nPlease select your time slot: ",
     "status-closed": "closed",
     "status-in-past": "in the past",
