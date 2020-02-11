@@ -180,7 +180,12 @@
         <div class="lnr-list-form" ng-hide="!overview.parent.booked">
           <div ng-hide="!overview.parent.booked" layout-align="center center" flex>
             <br><br><br><br>
-            <h2 class="md-headline lnr-center lnr-green-text">{{ 'booking.overview.success-header' | translate }}</h2>
+            <h2 ng-if="!overview.parent.bike.user.direct_booking_scheme" class="md-headline lnr-center lnr-green-text">
+              {{ 'booking.overview.success-header' | translate }}
+            </h2>
+            <h2 ng-if="overview.parent.bike.user.direct_booking_scheme" class="md-headline lnr-center lnr-green-text">
+              {{ 'booking.overview.direct.success-header' | translate }}
+            </h2>
             <p class="md-subhead lnr-center">{{ 'booking.overview.success-subheader' | translate }}</p>
             <br><br>
             <div layout="row" layout-align="center center">

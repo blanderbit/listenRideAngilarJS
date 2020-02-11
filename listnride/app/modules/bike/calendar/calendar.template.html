@@ -290,7 +290,9 @@
     ng-click="calendar.onBooking()"
     ng-disabled="calendar.owner || calendar.requested || calendar.isFormInvalid() || !calendar.validClusterSize()"
   >
-    <span ng-if="!calendar.isFormInvalid()">{{ 'calendar.request-bike' | translate }}</span>
+    <span ng-if="!calendar.isFormInvalid()">
+      {{ (calendar.bike.user.direct_booking_scheme ? 'calendar.rent-bike' : 'calendar.request-bike') | translate }}
+    </span>
     <span ng-if="calendar.isFormInvalid()">{{ 'calendar.select-timespan' | translate }}</span>
   </md-button>
   <div layout-padding layout="row" ng-if="calendar.hasInsurance()">

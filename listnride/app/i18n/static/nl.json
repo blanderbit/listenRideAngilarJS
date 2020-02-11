@@ -373,7 +373,7 @@
   },
   "events": {
     "rapha-super-cross": {
-      "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride bike sharing community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
+      "text": "De Rapha Super Cross is weer terug in München, voor het derde jaar op rij. Indien je er graag bij wil zijn, maar geen geschickte fiets hebt, kann je via listnride een passende fiets huren. De listnride community biedt verschillende cyclocrossfietsen te huur aan. De fietsen kunnen voor het evenement bij de verschillende aanbieders worden aangevraagd en geboekt. De overdracht wordt direct met de verhuurder afgesproken. Indien je een fiets hebt die niet benut wordt, kan je deze gewoon aanbieden om daarmee wat geld te verdienen ein interessante mensen te leren kennen, die aan het evenement deelnemen. Sluit je aan bij de groeiende Community!"
     },
     "msr": {
       "title": "Road bike rental for the Mecklenburger Seenrunde 2020",
@@ -540,8 +540,8 @@
     },
     "depart": {
       "meta-title": "Boek eenvoudig the perfekte racefiets voor de Velothon Berlijn",
-      "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community.",
-      "text-1": "Voor alle wielerliefhebbers die voor de start van de Tour de France in Düsseldorf zijn - Zin in een opwarmronde? <br><br> Samen met onze vrienden van de <a href=\"http://schickemuetze.de\">Schicke Mütze </a> nodigen wij je uit voor deze ontspannen social ride. We zullen een mooie tour in de heuvels rond Düsseldorf rijden, in een ontspannen tempo .<br><br>Als u nog een fiets nodig heeft, kan je een hoge kwaliteit racefiets uit de lijst van onze bike-sharing community huren. Veel fietsplezier :)",
+      "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride community.",
+      "text-1": "Voor alle wielerliefhebbers die voor de start van de Tour de France in Düsseldorf zijn - Zin in een opwarmronde? <br><br> Samen met onze vrienden van de <a href=\"http://schickemuetze.de\">Schicke Mütze </a>nodigen wij je uit voor deze ontspannen social ride. We zullen een mooie tour in de heuvels rond Düsseldorf rijden, in een ontspannen tempo .<br><br>Nog geen fiets?, Huur jouw kwaliteits racefiets uit de lijst van de ListnRide community. Veel fietsplezier :)",
       "title": "Rijd met ons mee en ontdek meer van de omgeving van Düsseldorf!",
       "text-2": "<b>Op vrijdag 30 juni</b><br><br><b>09:30 - Start met vooraf koffie bij de Schicke Mütze  - Untere 22-24, Düsseldorf<br><br>Vertrek om 10.00 uur<br><br>Afstand tot 60 km<br><br>24-27 kmh tempo, relaxt<br><br>Na de tour om 18:00 - BBQ & drankjes @ de Schicke Mütze , Düsseldorf<br><br>Verplicht racefiets, helm en klikpedalen</b>",
       "sign-up": "Nü aanmelden",
@@ -565,7 +565,7 @@
     "cwd": {
       "home": {
         "title": "listnride at the Cycling World Düsseldorf",
-        "description": "Düsseldorf will host a new lifestyle trade fair around cycling: the Cycling World. We, listnride will be at the main entrance with selected brands and manufacturers such as Ampler and Cervélo, to present our bike sharing platform with exclusive of test-rides. In addition, we invite you to explore the surrounding countryside on two guided roadbike tours to bring the motivation gained at the fair straight to the road!",
+        "description": "In Düsseldorf wordt een nieuwe lifestylebeurs rond de fiets georganiseerd: de CyclingWorld. Wij, van listnride zullen bij de hoofdingang staan met geselecteerde merken en fabrikanten zoals Ampler en Cervélo, om ons fietsverhuurplatform te presenteren. Daarnaast nodigen wij je uit om de omgeving te verkennen tijdens twee begeleide fietstochten om de motivatie die je op de beurs hebt opgedaan direct naar de weg te brengen!",
         "pp-title": "Saturday",
         "kr-title": "Sunday",
         "pp-description": "Whether you’re a seasoned racer or a brand new roadie, the Push'n'Post Ride provides the perfect opportunity to join for a social ride in the beautiful surroundings of Düsseldorf during CWD. The ride is powered by Cervelo and Cycle Cafe.",
@@ -1288,7 +1288,7 @@
     "comm-and-pr": "Communications and PR",
     "kit": {
       "title": "Persmap",
-      "content": "Anderen noemen zich fietsverhuursystemen. Wij zijn een Bike-Sharing-Community. Kom meer over ons te weten in onze persmap,",
+      "content": "Kom meer te weten over onze startup en hoe het allemaal begon in onze press kit, ",
       "download": "die u hier kunt bekijken",
       "link": "https://docs.google.com/forms/d/e/1FAIpQLSdnp7SsmiDySLB_BApBqe5-V8r497ynZWHcTgGKATaIuvrKDg/viewform?usp=pp_url\n"
     },
@@ -1297,12 +1297,12 @@
       "content": "U heeft vragen omtrent listnride of u zoekt een contactpersoon voor gespreksonderwerpen als fietsverhuursystemen, huurfietsen en mobiliteitsconcepten? Dan kunt u ons gaarne direkt contacteren:"
     },
     "meta-title": "listnride perskamer",
-    "meta-description": "We houden van fietsen en geloven in de sharing economie. Graag geven wij antwoord op alle vragen."
+    "meta-description": "We houden van fietsen en geloven in de sharing economie. Graag geven wij je antwoord op al je vragen."
   },
   "invest": {
-    "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+    "meta-title": "listnride is crowdfunding! Maak er deel van uit en investeer in de bouw van het toonaangevende fietsverhuurplatform van Europa.",
     "meta-description": "Visit Seedrs to learn more about investing in listnride.",
-    "description": "listnride is crowdfunding! Be part of it and invest in building Europe’s leading bike sharing community.",
+    "description": "listnride is crowdfunding! Maak er deel van uit en investeer in de bouw van het toonaangevende fietsverhuurplatform van Europa.",
     "subdescription": "Learn more about listnride in our <a href=\"http://cdn.listnride.com/en/Seedrs_listnride+Investor+Presentation.pdf\" target=\"_blank\">investor presentation</a> and why it is worth to invest.",
     "subsubdescription": "Soon, a crowdfunding campaign will start on <a href=\"https://seedrs.com\" target=\"_blank\">Seedrs</a>, Europe's largest equity crowdfunding platform. As an early adopter, business partner or friend, we're giving you first access, before we launch to the public. Tell us your level of interest and preregister without obligation.",
     "learn-more": "Crowdfunding FAQ",
@@ -1367,9 +1367,9 @@
     }
   },
   "how-it-works": {
-    "meta-title": "Bike sharing super eenvoudig gemaakt",
+    "meta-title": "Fietsverhuur eenvoudig gemaakt.",
     "meta-description": "Bij listnride is je fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie. Probeer het zelf!",
-    "title": "Bike-Sharing super eenvoudig",
+    "title": "Fietsverhuur zonder gedoe",
     "header": "Met listnride kom je eenvoudig in beweging",
     "subheader": "Bij ons is je fiets(ver-)huren zo eenvoudig als afspreken voor een kopje koffie",
     "lister-section": {
@@ -1463,7 +1463,7 @@
     "subtitle": "Privacybeleid ",
     "description": "List and Ride committeert zich aan sterke en transparante privacypraktijken. Ons Privacybeleid beschrijft de gebruikersinformatie die we verzamelen via onze diensten. Hoe we deze informatie gebruiken en openbaar maken. De stappen die we nemen om dergelijke informatie te beschermen. De keuzes bieden wij, met inbegrip van het verkrijgen van toegang, bijwerken en verwijderen van persoonsgegevens. \n<br>Hier kunt u downloaden en lezen onze <a href=\"http://cdn.listnride.com/en/listnride-data-protection-regulations.pdf\" target=\"_blank\">Privacybeleid </a>.\n<br>Neem contact met ons op als u vragen hebt of opmerkingen over onze privacypraktijken of dit privacybeleid. U kunt ons online bereiken op <a href=\"mailto:privacy@listnride.com\">privacy@listnride.com</a>.",
     "meta-title": "Privacybeleid van listnride",
-    "meta-description": "Het privacybeleid van de Bike-Sharing-Community listnride is van toepassing bij het gebruik van het platform."
+    "meta-description": "Het privacybeleid van listnride is van toepassing bij het gebruik van het platform."
   },
   "seo": {
     "cities-title": "Plan je al je vakantie? bekijk ons aanbod in de verschillende steden"
