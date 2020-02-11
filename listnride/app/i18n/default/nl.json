@@ -543,7 +543,7 @@
       },
       "depart": {
         "meta-title": "Rent a road bike for the Grand Départ on listnride",
-        "meta-description": "Join listnride and Schicke Mütze for a social road ride in celebration of the Grand Départ. Rent a high-end road bike from the listnride bike-sharing community."
+        "meta-description": "Ga mee met listnride en Schicke Mütze voor een sociale rit ter ere van het Grand Départ. Huur een high-end racefiets bij listnride."
       },
       "supercross-munich": {
         "meta-title": "Rent the perfect cyclocross Bike for the Supercross Munich on listnride",
@@ -667,21 +667,21 @@
     },
     "press": {
       "meta-title": "listnride press",
-      "meta-description": "We love bike sharing. And we’ll gladly answer all your questions."
+      "meta-description": "We houden van huur fietsen. En we beantwoorden met plezier al je vragen."
     },
     "invest": {
-      "meta-title": "listnride is crowdfunding! Be part of it and invest in Building Europe’s leading bike sharing community.",
+      "meta-title": "listnride is crowdfunding! Maak er deel van uit en investeer in de bouw van het toonaangevende fietsverhuurplatform van Europa.",
       "meta-description": "Visit Seedrs to learn more about investing in listnride."
     },
     "terms-and-conditions": {
       "meta-title": "listnride | Website Terms & Conditions",
-      "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform."
+      "meta-description": "De voorwaarden van listnride zijn van toepassing op het gebruik van het online platform."
     },
     "trust-and-safety": {
       "meta-title": "Fietsverhuur met verzekering"
     },
     "how-it-works": {
-      "meta-title": "Bike sharing made easy",
+      "meta-title": "Fietsverhuur eenvoudig gemaakt.",
       "meta-description": "Using listnride is as easy as meeting up for coffee. Try for yourself!"
     },
     "jobs": {
@@ -698,7 +698,7 @@
     },
     "privacy": {
       "meta-title": "Privacybeleid van listnride",
-      "meta-description": "Het privacybeleid van de Bike Sharing-Community listnride is van toepassing op het gebruik van het online platform.",
+      "meta-description": "Het privacybeleid van listnride is van toepassing op het gebruik van het online platform.",
       "use-opt-in": "Om u met listnride een optimale service te bieden, gebruiken wij cookies in conform ons <a target=\"_blank\" href=\"/#/privacy\">Cookie-beleid</a>.",
       "use-opt-in-button": "Ik heb het begrepen."
     }
@@ -955,7 +955,7 @@
     "1": {
       "text1": "Welkom bij listnride!",
       "text-invited": "Aangezien je door een vriend bent uitgenodigd, hebben we voucher van 10€ aan je account toegevoegd. Deze kan je direct bij je eerste fietshuur verzilveren.",
-      "text2": "Hartelijk welkom tot onze Bike-Sharing-Community met veel mooie fietsen en enthousiaste fietsliefhebbers vanuit de hele wereld. Onze community biedt een omgeving waar je jouw geliefde tweewieler zorgenloos aan anderen kan uitlenen – wederzijds vertrouwen en zekerheid voor jou en andere gebruikers staat daarom bij ons op de eerste plaats."
+      "text2": "Wij zijn een hechte gemeenschap, dus het vertrouwen en de veiligheid van jou en de andere gebruikers hebben de hoogste prioriteit. We vragen je daarom vriendelijk om uw profiel te verifiëren door middel van een paar eenvoudige stappen. Hoe meer informatie je invoert, hoe groter de kans dat uw huuraanvragen worden geaccepteerd."
     },
     "2": {
       "title": "Foto toevoegen",
@@ -1501,11 +1501,11 @@
     },
     "search-section": {
       "header": "Waar gaan we heen?",
-      "subheader": "Bike-Sharing met listnride bereikt steeds meer locaties."
+      "subheader": "listnride's fietsverhuur service wordt op steeds meer locaties beschikbaar."
     },
     "testmonials-section": {
       "header": "Wat zeggen onze gebruikers?",
-      "subheader": "Steed meer mensen hebben bike-sharing via listnride ontdekt. Lees hier een paar recensies:"
+      "subheader": "Steeds meer mensen ontdekken de voordelen van fietsverhuur via listnride. Bekijk enkele van hun getuigenissen:"
     }
   },
   "list-a-bike": {
@@ -1568,11 +1568,11 @@
     "meta-title": "listnride | 10€ voor jou!",
     "meta-description": "Deel het genot van het fietsen! nodig je vrienden uit, en schenk ze 10 euro tegoed bij aanmelding. Als zij en fiets huren of een fiets plaatsen, ontvangt u ook een 10 euro tegoed!",
     "header": "heeft je 10€ geschenkt!",
-    "subheader": "Welkom bij listnride, de Bike Sharing Community",
+    "subheader": "Welkom bij List and Ride, het platform voor fietsverhuur",
     "subsubheader": "listnride is een Community die fietsvrienden bij elkaar brengt en zich wederzijds ondersteunen. Heb je een fiets voor een bepaald doeleinde nodig? Die vind je zeker hier! Wil je jouw fiets verhuren? Plaats je fiets en verdien wat extra zakgeld.",
     "subsubsubheader": "Je bent uitgenodigd door {{ name }}. Meld je eenvoudig aan en ontvang een 10 € toegoed op je account bijgeschreven. Bij de eerste fietshuur kan je deze direk gebruiken.",
     "sign-up-get-voucher": "Sign up to get the Voucher",
-    "how-lnr-works": "Bike Sharing super eenvoudig",
+    "how-lnr-works": "Fietsverhuur zonder gedoe",
     "explanation-1-title": "1. Zoeken en aanvragen",
     "explanation-1-description": "vind de fiets naar wens en vraag het aan.",
     "explanation-2-title": "2. Boeken en ophalen",
